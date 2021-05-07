@@ -1,0 +1,761 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "index.mapping.ignore_malformed": true,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "actionNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "borderGain": {
+        "type": "boolean"
+      },
+      "borderGainNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "countOfOccurrencesMax": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "countOfOccurrencesMin": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "countOfOccurrencesNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaA": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaANotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaB": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaBNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaC": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaCNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaD": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaDNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaE": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaENotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaForStatus": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaForStatusNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "criteriaNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "ddReason": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "ddReasonNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "decreaseDuringPeriod": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "decreaseDuringPeriodNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "distributionAreaMax": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "distributionAreaMin": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "distributionAreaNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "editNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "endangermentReasonNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "evaluatedTaxon": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "evaluationPeriodLength": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "evaluationPeriodLengthNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "evaluationYear": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "externalPopulationImpactOnRedListStatus": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "externalPopulationImpactOnRedListStatusNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "fragmentedHabitats": {
+        "type": "boolean"
+      },
+      "fragmentedHabitatsNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "generationAge": {
+        "type": "float"
+      },
+      "generationAgeNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "groundsForEvaluationNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "habitatGeneralNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "habitatNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "hasEndangermentReason": {
+        "type": "keyword"
+      },
+      "hasOccurrence": {
+        "type": "keyword"
+      },
+      "hasThreat": {
+        "type": "keyword"
+      },
+      "individualCountMax": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "individualCountMin": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "individualCountNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lastModified": {
+        "type": "date"
+      },
+      "lastModifiedBy": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lastSightingNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "legacyPublications": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "locked": {
+        "type": "boolean"
+      },
+      "lsaRecommendation": {
+        "type": "boolean"
+      },
+      "lsaRecommendationNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "occurrenceAreaMax": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "occurrenceAreaMin": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "occurrenceAreaNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "occurrenceNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "occurrenceRegionsNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "occurrenceRegionsPrivateNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "otherSources": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "percentageOfGlobalPopulation": {
+        "type": "float"
+      },
+      "percentageOfGlobalPopulationNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "populationSizePeriodBeginning": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "populationSizePeriodEnd": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "populationSizePeriodNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "populationVaries": {
+        "type": "boolean"
+      },
+      "populationVariesNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "possiblyRE": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "possiblyRENotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "primaryHabitat": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "publication": {
+        "type": "keyword"
+      },
+      "reasonForStatusChange": {
+        "type": "keyword"
+      },
+      "reasonForStatusChangeNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "redListIndexCorrection": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "redListIndexCorrectionNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "redListStatus": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "redListStatusAccuracyNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "redListStatusMax": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "redListStatusMin": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "redListStatusNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "regionallyThreatenedNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "regionallyThreatenedPrivateNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "remarks": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "secondaryHabitat": {
+        "type": "keyword"
+      },
+      "state": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "statusA": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "statusANotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "statusB": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "statusBNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "statusC": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "statusCNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "statusD": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "statusDNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "statusE": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "statusENotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "taxonomicNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "threatNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "typeOfOccurrenceInFinland": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "typeOfOccurrenceInFinlandNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

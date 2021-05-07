@@ -1,0 +1,310 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "index.mapping.ignore_malformed": true,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "DNAExtractionInstrument": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "additionalIDs": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "bold": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "collectionID": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "condition": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "datasetID": {
+        "type": "keyword"
+      },
+      "elutionMedium": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "event": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "genbank": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "individualsInPreparation": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "material": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "notes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "preparationType": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "preservation": {
+        "type": "keyword"
+      },
+      "publication": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "quality": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "qualityCheckDate": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "qualityCheckMethod": {
+        "type": "keyword"
+      },
+      "qualityNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "sampleLocation": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "specimenID": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "status": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "isPartOf": {
+        "type": "keyword"
+      },
+      "measurement": {
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
+          "@context": {
+            "type": "keyword"
+          },
+          "DNAConcentrationNgPerMicroliter": {
+            "type": "float"
+          },
+          "DNARatioOfAbsorbance260And280": {
+            "type": "float"
+          },
+          "DNAVolumeMicroliters": {
+            "type": "float"
+          },
+          "beakMillimeters": {
+            "type": "float"
+          },
+          "bodyCentimeters": {
+            "type": "float"
+          },
+          "bodyMillimeters": {
+            "type": "float"
+          },
+          "earLengthMillimeters": {
+            "type": "float"
+          },
+          "embryoCount": {
+            "type": "float"
+          },
+          "follicleDiameterMillimeters": {
+            "type": "float"
+          },
+          "footLengthMillimeters": {
+            "type": "float"
+          },
+          "forearmMillimeters": {
+            "type": "float"
+          },
+          "gonadMillimeters": {
+            "type": "float"
+          },
+          "isPartOf": {
+            "type": "keyword"
+          },
+          "tailCentimeters": {
+            "type": "float"
+          },
+          "tailMillimeters": {
+            "type": "float"
+          },
+          "tarsusLengthMillimeters": {
+            "type": "float"
+          },
+          "totalLengthCentimeters": {
+            "type": "float"
+          },
+          "totalLengthMillimeters": {
+            "type": "float"
+          },
+          "uterineScarCount": {
+            "type": "float"
+          },
+          "weightGrams": {
+            "type": "float"
+          },
+          "weightKilograms": {
+            "type": "float"
+          },
+          "wingMaxMillimeters": {
+            "type": "float"
+          },
+          "wingMillimeters": {
+            "type": "float"
+          },
+          "wingMinMillimeters": {
+            "type": "float"
+          }
+        }
+      },
+      "creator": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "dateCreated": {
+        "type": "date"
+      },
+      "dateEdited": {
+        "type": "date"
+      },
+      "editor": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "owner": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

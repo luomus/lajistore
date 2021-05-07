@@ -1,0 +1,62 @@
+{
+  "formID": "JX.519",
+  "gatherings": [
+    {
+      "units": [
+        {
+          "id": "JX.5833#3",
+          "unitGathering": {
+            "@type": "MZ.unitGathering"
+          },
+          "informalTaxonGroups": ["MVL.134", "MVL.1"],
+          "@type": "MY.unit",
+          "unitFact": {
+            "autocompleteSelectedTaxonID": "MX.26727"
+          },
+          "recordBasis": "MY.recordBasisHumanObservation",
+          "count": "1",
+          "identifications": [
+            {
+              "identificationBasis": ["MY.identificationBasisSeen"],
+              "@type": "MY.identification",
+              "taxon": "maakotka"
+            }
+          ],
+          "taxonConfidence": "MY.taxonConfidenceUnsure"
+        }
+      ]
+    },
+    {
+      "units": [
+        {
+          "unitGathering": {
+            "@type": "MZ.unitGathering"
+          },
+          "informalTaxonGroups": ["MVL.134", "MVL.1"],
+          "@type": "MY.unit",
+          "unitFact": {
+            "autocompleteSelectedTaxonID": "MX.26727"
+          },
+          "recordBasis": "MY.recordBasisHumanObservation",
+          "count": "1",
+          "identifications": [
+            {
+              "identificationBasis": ["MY.identificationBasisSeen"],
+              "@type": "MY.identification",
+              "taxon": "maakotka"
+            }
+          ],
+          "taxonConfidence": "MY.taxonConfidenceSure"
+        }
+      ]
+    }
+  ],
+  "creator": "MA.97",
+  "gatheringEvent": {
+    "dateBegin": "2016-12-25T11:30",
+    "leg": ["Foobar"]
+  },
+  "dateEdited": "2016-12-25T10:25:59+00:00",
+  "id": "JX.5833",
+  "publicityRestrictions": "MZ.publicityRestrictionsPublic"
+}

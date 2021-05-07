@@ -1,0 +1,248 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "index.mapping.ignore_malformed": true,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "LTKMLoginName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "address": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "defaultLanguage": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "defaultQNamePrefix": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "description": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "emailAddress": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "facebookLoginName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "fieldjournalLoginName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "firstJoined": {
+        "type": "date"
+      },
+      "fullName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "givenNames": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "googleLoginName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "group": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "hakaLoginName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "hatikkaLoginName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "inaturalistLoginName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "inheritedName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "insectDatabaseLoginName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lajiAuthLoginName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lintuvaaraLoginName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "omariistaLoginName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "organisation": {
+        "type": "keyword"
+      },
+      "preferredName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "previousEmailAddress": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "role": {
+        "type": "keyword"
+      },
+      "roleAnnotation": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "roleKotka": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "virtuLoginName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "yearOfBirth": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "index.mapping.ignore_malformed": true,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "accessionID": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "collectionID": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "exists": {
+        "type": "boolean"
+      },
+      "location": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "notes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

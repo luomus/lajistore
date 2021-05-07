@@ -1,0 +1,150 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "index.mapping.ignore_malformed": true,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "agent": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "amount": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "amountEstimationUnit": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "branchID": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "date": {
+        "type": "date"
+      },
+      "eRH": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "estimatedSeedQuantity": {
+        "type": "integer"
+      },
+      "eventType": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "germinationConditions": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "germinationPercentage": {
+        "type": "integer"
+      },
+      "germinationRate": {
+        "type": "float"
+      },
+      "lifeStage": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "notes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "numberOfSeedsEmpty": {
+        "type": "integer"
+      },
+      "numberOfSeedsFull": {
+        "type": "integer"
+      },
+      "numberOfSeedsInfested": {
+        "type": "integer"
+      },
+      "numberOfSeedsMouldy": {
+        "type": "integer"
+      },
+      "numberOfSeedsPartFull": {
+        "type": "integer"
+      },
+      "numberOfSeedsTested": {
+        "type": "integer"
+      },
+      "percentageSeedsFull": {
+        "type": "integer"
+      },
+      "seedsExchangedInstitution": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "testPassed": {
+        "type": "boolean"
+      },
+      "viabilityPercentage": {
+        "type": "integer"
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

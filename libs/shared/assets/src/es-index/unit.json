@@ -1,0 +1,1369 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "index.mapping.ignore_malformed": true,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "DBH": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "DNASampleLocation": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "abundanceString": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "abundanceUnit": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "additionalIDs": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "adultIndividualCount": {
+        "type": "integer"
+      },
+      "age": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "ageNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "alive": {
+        "type": "boolean"
+      },
+      "ankleInMillimeters": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "areaInSquareMeters": {
+        "type": "integer"
+      },
+      "atlasCode": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "batBehavior": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "beakInMillimeters": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "birdAge": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "birdBehavior": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "birdPlumage": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "breeding": {
+        "type": "boolean"
+      },
+      "broodSize": {
+        "type": "integer"
+      },
+      "causeOfDeath": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "checklistID": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "chemistry": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "count": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "decayStage": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "distance": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "earliestEpochOrLowestSeries": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "femaleIndividualCount": {
+        "type": "integer"
+      },
+      "fruitType": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "genotype": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "gonadInMillimeters": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "growthMediumName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "growthOtherConditions": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "growthTemperature": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "hasIdentification": {
+        "type": "keyword"
+      },
+      "hasSubUnit": {
+        "type": "keyword"
+      },
+      "hostID": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "hostInformalNameString": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "indirectObservationType": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "individualCount": {
+        "type": "integer"
+      },
+      "infestation": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "informalNameString": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "informalTaxonGroup": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "informalTaxonGroups": {
+        "type": "keyword"
+      },
+      "infrasubspecificSubdivision": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "isPartOf": {
+        "type": "keyword"
+      },
+      "juvenileIndividualCount": {
+        "type": "integer"
+      },
+      "keywords": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "larvaIndividualCount": {
+        "type": "integer"
+      },
+      "latestEpochOrHighestSeries": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lengthInMillimeters": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lifeStage": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lifeStageDescription": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "likelyMigrant": {
+        "type": "boolean"
+      },
+      "macroscopy": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "maleIndividualCount": {
+        "type": "integer"
+      },
+      "measurement": {
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
+          "@context": {
+            "type": "keyword"
+          },
+          "DNAConcentrationNgPerMicroliter": {
+            "type": "float"
+          },
+          "DNARatioOfAbsorbance260And280": {
+            "type": "float"
+          },
+          "DNAVolumeMicroliters": {
+            "type": "float"
+          },
+          "beakMillimeters": {
+            "type": "float"
+          },
+          "bodyCentimeters": {
+            "type": "float"
+          },
+          "bodyMillimeters": {
+            "type": "float"
+          },
+          "earLengthMillimeters": {
+            "type": "float"
+          },
+          "embryoCount": {
+            "type": "float"
+          },
+          "follicleDiameterMillimeters": {
+            "type": "float"
+          },
+          "footLengthMillimeters": {
+            "type": "float"
+          },
+          "forearmMillimeters": {
+            "type": "float"
+          },
+          "gonadMillimeters": {
+            "type": "float"
+          },
+          "isPartOf": {
+            "type": "keyword"
+          },
+          "tailCentimeters": {
+            "type": "float"
+          },
+          "tailMillimeters": {
+            "type": "float"
+          },
+          "tarsusLengthMillimeters": {
+            "type": "float"
+          },
+          "totalLengthCentimeters": {
+            "type": "float"
+          },
+          "totalLengthMillimeters": {
+            "type": "float"
+          },
+          "uterineScarCount": {
+            "type": "float"
+          },
+          "weightGrams": {
+            "type": "float"
+          },
+          "weightKilograms": {
+            "type": "float"
+          },
+          "wingMaxMillimeters": {
+            "type": "float"
+          },
+          "wingMillimeters": {
+            "type": "float"
+          },
+          "wingMinMillimeters": {
+            "type": "float"
+          }
+        }
+      },
+      "microbiologicalRiskGroup": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "microscopy": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "movingDirection": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "movingStatus": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "mutant": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "nativeStatus": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "nestCount": {
+        "type": "integer"
+      },
+      "nestNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "nestType": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "notes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "pairCount": {
+        "type": "integer"
+      },
+      "pairCountOpinion": {
+        "type": "integer"
+      },
+      "plantLifeStage": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "plantStatusCode": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "populationAbundance": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "preparations": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "preservation": {
+        "type": "keyword"
+      },
+      "provenance": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "recordBasis": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "recordParts": {
+        "type": "keyword"
+      },
+      "ring": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "samplingMethod": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "samplingMethodNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "seedMaturity": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "seedMorphology": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "sex": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "sexNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "shortHandText": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "smell": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "smellNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "substrateClassification": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "substrateDecayStage": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "substrateNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "substrateSpecies": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "substrateSpeciesID": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "substrateSpeciesInformalNameString": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "substrateTreeClassification": {
+        "type": "keyword"
+      },
+      "tailInMillimeters": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "taste": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "tasteNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "taxonConfidence": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "twitched": {
+        "type": "boolean"
+      },
+      "unitFact": {
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
+          "@context": {
+            "type": "keyword"
+          },
+          "autocompleteSelectedTaxonID": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "glowWormMicrohabitat": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "individualCountFlock": {
+            "type": "integer"
+          },
+          "individualCountInner": {
+            "type": "integer"
+          },
+          "individualCountOuter": {
+            "type": "integer"
+          },
+          "lineTransectObsType": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "lineTransectRouteFieldType": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "lolifeDroppingsCount": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "lolifeDroppingsQuality": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "lolifeDroppingsType": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "lolifeNestTree": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "pairCountInner": {
+            "type": "integer"
+          },
+          "pairCountOuter": {
+            "type": "integer"
+          },
+          "pointCountFlock": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "runningWaterInVicinity": {
+            "type": "boolean"
+          },
+          "waterbirdFemale": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "waterbirdJuvenileAgeClass": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "waterbirdJuvenileCountAccurate": {
+            "type": "boolean"
+          },
+          "waterbirdObserverOpinionSelectedCensus": {
+            "type": "boolean"
+          },
+          "waterbirdPairCountOpinionReasoning": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "individualCountBiotopeA": {
+            "type": "integer"
+          },
+          "individualCountBiotopeB": {
+            "type": "integer"
+          },
+          "individualCountBiotopeC": {
+            "type": "integer"
+          },
+          "individualCountBiotopeD": {
+            "type": "integer"
+          },
+          "individualCountBiotopeE": {
+            "type": "integer"
+          },
+          "individualCountBiotopeF": {
+            "type": "integer"
+          },
+          "individualCountBiotopeG": {
+            "type": "integer"
+          },
+          "individualCountBiotopeH": {
+            "type": "integer"
+          }
+        }
+      },
+      "unitGathering": {
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
+          "@context": {
+            "type": "keyword"
+          },
+          "dateBegin": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "dateEnd": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "geometry": {
+            "type": "geo_shape",
+            "ignore_malformed": true,
+            "coerce": true
+          },
+          "habitatDescription": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "habitatIUCN": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "substrate": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "unitType": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "weightInGrams": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "wild": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "wingInMillimeters": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "audio": {
+        "type": "keyword"
+      },
+      "images": {
+        "type": "keyword"
+      },
+      "publicityRestrictions": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "identifications": {
+        "type": "nested",
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
+          "@context": {
+            "type": "keyword"
+          },
+          "herbo:sortOrder": {
+            "type": "integer"
+          },
+          "associatedObservationTaxa": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "author": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "det": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "detDate": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "detMethod": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "detVerbatim": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "genusQualifier": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "identificationBasis": {
+            "type": "keyword"
+          },
+          "identificationNotes": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "infraAuthor": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "infraEpithet": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "infraRank": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "infrasubspecificSubdivision": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "isPartOf": {
+            "type": "keyword"
+          },
+          "isTaxonGroup": {
+            "type": "boolean"
+          },
+          "preferredIdentification": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sec": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "speciesQualifier": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "taxon": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "taxonID": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "taxonRank": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "taxonSpecifier": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "taxonURI": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "taxonVerbatim": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "publicityRestrictions": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sortOrder": {
+            "type": "integer"
+          }
+        }
+      },
+      "typeSpecimens": {
+        "type": "nested",
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
+          "@context": {
+            "type": "keyword"
+          },
+          "isPartOf": {
+            "type": "keyword"
+          },
+          "typeAuthor": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "typeBasionymePubl": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "typeNotes": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "typePubl": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "typeSeriesID": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "typeSpecies": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "typeStatus": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "typeSubspecies": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "typeSubspeciesAuthor": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "typeVerification": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "typif": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "typifDate": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "publicityRestrictions": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

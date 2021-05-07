@@ -1,0 +1,478 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "index.mapping.ignore_malformed": true,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "annotation": {
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
+          "@context": {
+            "type": "keyword"
+          },
+          "addedTags": {
+            "type": "keyword"
+          },
+          "annotationByPerson": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "annotationBySystem": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "annotationClass": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "byRole": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "censusAnnotation": {
+            "type": "keyword"
+          },
+          "created": {
+            "type": "date"
+          },
+          "identification": {
+            "properties": {
+              "id": {
+                "type": "keyword"
+              },
+              "@type": {
+                "type": "keyword"
+              },
+              "@context": {
+                "type": "keyword"
+              },
+              "herbo:sortOrder": {
+                "type": "integer"
+              },
+              "associatedObservationTaxa": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "author": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "det": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "detDate": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "detMethod": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "detVerbatim": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "genusQualifier": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "identificationBasis": {
+                "type": "keyword"
+              },
+              "identificationNotes": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "infraAuthor": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "infraEpithet": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "infraRank": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "infrasubspecificSubdivision": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "isPartOf": {
+                "type": "keyword"
+              },
+              "isTaxonGroup": {
+                "type": "boolean"
+              },
+              "preferredIdentification": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "sec": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "speciesQualifier": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "taxon": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "taxonID": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "taxonRank": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "taxonSpecifier": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "taxonURI": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "taxonVerbatim": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "publicityRestrictions": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "sortOrder": {
+                "type": "integer"
+              }
+            }
+          },
+          "invasiveControlEffectiveness": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "lineTransectAnnotation": {
+            "type": "keyword"
+          },
+          "notes": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "occurrenceAtTimeOfAnnotation": {
+            "properties": {
+              "id": {
+                "type": "keyword"
+              },
+              "@type": {
+                "type": "keyword"
+              },
+              "@context": {
+                "type": "keyword"
+              },
+              "countryVerbatim": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "dateBegin": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "dateEnd": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "locality": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "municipalityVerbatim": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "taxonId": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "taxonVerbatim": {
+                "type": "keyword",
+                "fields": {
+                  "s": {
+                    "type": "text"
+                  }
+                }
+              },
+              "wgs84centerPointLat": {
+                "type": "float"
+              },
+              "wgs84centerPointLon": {
+                "type": "float"
+              }
+            }
+          },
+          "opinion": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "removedTags": {
+            "type": "keyword"
+          },
+          "rootID": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "targetID": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "type": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "createdBySystem": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "deleted": {
+            "type": "boolean"
+          },
+          "deletedByPerson": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "deletedDateTime": {
+            "type": "date"
+          }
+        }
+      },
+      "created": {
+        "type": "date"
+      },
+      "friendRequest": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "friendRequestAccepted": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "notificationReason": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "seen": {
+        "type": "boolean"
+      },
+      "toPerson": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "form": {
+    "sequence": "FORM_SEQ",
+    "value": "MHL.%value%"
+  },
+  "annotation": {
+    "sequence": "ANNOTATION_SEQ",
+    "value": "MAN.%value%"
+  },
+  "namedPlace": {
+    "sequence": "NAMED_PLACE_SEQ",
+    "value": "MNP.%value%"
+  },
+  "notification": {
+    "sequence": "NOTIFICATION_SEQ",
+    "value": "MHN.%value%"
+  },
+  "formPermission": {
+    "sequence": "FORM_PERMISSION_SEQ",
+    "value": "MHL.%value%"
+  },
+  "dataset": {
+    "sequence": "DATASET_SEQUENCE",
+    "value": "GX.%value%"
+  },
+  "_DEFAULT_": {
+    "sequence": "LAJISTORE_SEQ",
+    "value": "JX.%value%"
+  }
+}

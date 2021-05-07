@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: store-config
+data:
+  SOURCE_ID: KE.388
+  ID_RESOLVER: http://tun.fi/
+  PUBLIC_ADDRESS: https://store-dev.luomus.fi
+  INTERNAL_ADDRESS: http://localhost:3000
+  CONTEXT_IRI: https://store-dev.luomus.fi/json-ld-context/%type%.json
+  GLOBAL_PREFIX:
+  DB_TYPE: oracle
+  DB_USERNAME: lajistore_staging
+  ELASTICSEARCH_NODES: http://es-http:9200
+  RABBITMQ_HOST: rabbitmq
+  RABBITMQ_USERNAME_API: store-api
+  RABBITMQ_USERNAME_CLI: store-cli
+  RABBITMQ_USERNAME_WORKER: store-worker
+  LAJI_API_URL: https://apitest.laji.fi/v0
+  LAJI_API_DB_USERNAME: laji_api_staging
+  DW_SOURCES: KE.388,KE.441
+

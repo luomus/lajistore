@@ -1,0 +1,110 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: store-api
+  labels:
+    app: store-api
+    component: store-api
+spec:
+  selector:
+    matchLabels:
+      component: store-api
+  serviceName: store-api
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        component: store-api
+    spec:
+      containers:
+        - name: store-api
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/lajistore-api/store-api
+          imagePullPolicy: Always
+          env:
+            - name: PUBLIC_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  key: PUBLIC_ADDRESS
+                  name: store-config
+            - name: INTERNAL_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  key: INTERNAL_ADDRESS
+                  name: store-config
+            - name: CONTEXT_IRI
+              valueFrom:
+                configMapKeyRef:
+                  key: CONTEXT_IRI
+                  name: store-config
+            - name: DB_TYPE
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_TYPE
+                  name: store-config
+            - name: DB_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_USERNAME
+                  name: store-config
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: DB_PASSWORD
+                  name: store-config
+            - name: DB_CONNECT_STRING
+              valueFrom:
+                secretKeyRef:
+                  key: DB_CONNECT_STRING
+                  name: store-config
+            - name: ELASTICSEARCH_NODES
+              valueFrom:
+                configMapKeyRef:
+                  key: ELASTICSEARCH_NODES
+                  name: store-config
+            - name: RABBITMQ_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_HOST
+                  name: store-config
+            - name: RABBITMQ_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_USERNAME_API
+                  name: store-config
+            - name: RABBITMQ_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: RABBITMQ_PASSWORD_API
+                  name: store-config
+          resources:
+            requests:
+              cpu: "0.1"
+              memory: 500Mi
+            limits:
+              cpu: "0.5"
+              memory: 2Gi
+          ports:
+            - containerPort: 3000
+              name: http
+              protocol: TCP
+          livenessProbe:
+            failureThreshold: 5
+            httpGet:
+              path: /status
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 10
+            periodSeconds: 30
+            successThreshold: 1
+            timeoutSeconds: 6
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 60
+      dnsPolicy: ClusterFirst
+      securityContext: { }
+  podManagementPolicy: OrderedReady
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate:
+      partition: 0
+  revisionHistoryLimit: 10

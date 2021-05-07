@@ -1,0 +1,175 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "index.mapping.ignore_malformed": true,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "autocompleteSelectedTaxonID": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "glowWormMicrohabitat": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "individualCountFlock": {
+        "type": "integer"
+      },
+      "individualCountInner": {
+        "type": "integer"
+      },
+      "individualCountOuter": {
+        "type": "integer"
+      },
+      "lineTransectObsType": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lineTransectRouteFieldType": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lolifeDroppingsCount": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lolifeDroppingsQuality": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lolifeDroppingsType": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lolifeNestTree": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "pairCountInner": {
+        "type": "integer"
+      },
+      "pairCountOuter": {
+        "type": "integer"
+      },
+      "pointCountFlock": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "runningWaterInVicinity": {
+        "type": "boolean"
+      },
+      "waterbirdFemale": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "waterbirdJuvenileAgeClass": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "waterbirdJuvenileCountAccurate": {
+        "type": "boolean"
+      },
+      "waterbirdObserverOpinionSelectedCensus": {
+        "type": "boolean"
+      },
+      "waterbirdPairCountOpinionReasoning": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "individualCountBiotopeA": {
+        "type": "integer"
+      },
+      "individualCountBiotopeB": {
+        "type": "integer"
+      },
+      "individualCountBiotopeC": {
+        "type": "integer"
+      },
+      "individualCountBiotopeD": {
+        "type": "integer"
+      },
+      "individualCountBiotopeE": {
+        "type": "integer"
+      },
+      "individualCountBiotopeF": {
+        "type": "integer"
+      },
+      "individualCountBiotopeG": {
+        "type": "integer"
+      },
+      "individualCountBiotopeH": {
+        "type": "integer"
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

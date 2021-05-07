@@ -1,0 +1,706 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "index.mapping.ignore_malformed": true,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "secureLevel": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "abbreviation": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "allowedForDwStatistics": {
+        "type": "boolean"
+      },
+      "citation": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "collectionLocation": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "collectionName": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "collectionQuality": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "collectionSize": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "collectionType": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "concealmentBasis": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "contactEmail": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "coverageBasis": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "dataLocation": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "dataNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "dataQuality": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "dataQualityDescription": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "dataQuarantinePeriod": {
+        "type": "integer"
+      },
+      "dataUseTerms": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "description": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "digitizedSize": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "downloadRequestHandler": {
+        "type": "keyword"
+      },
+      "editNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "gbifDoi": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "geographicCoverage": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "intellectualDescription": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "intellectualOwner": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "intellectualRights": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "internalUseOnly": {
+        "type": "boolean"
+      },
+      "isPartOf": {
+        "type": "keyword"
+      },
+      "language": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "metadataCreator": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "metadataStatus": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "methods": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "notes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "onlineUrl": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "personResponsible": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "publicAccess": {
+        "type": "boolean"
+      },
+      "publicationDescription": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "publicationTerms": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "publisherShortname": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "shareToGbif": {
+        "type": "boolean"
+      },
+      "taxonomicCoverage": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "temporalCoverage": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "fi": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sv": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "typesSize": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "creator": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "dateCreated": {
+        "type": "date"
+      },
+      "dateEdited": {
+        "type": "date"
+      },
+      "editor": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "owner": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "publicityRestrictions": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

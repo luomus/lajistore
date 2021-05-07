@@ -1,0 +1,614 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "index.mapping.ignore_malformed": true,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "artificialLight": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "breaksDuringCensusInMinutes": {
+        "type": "integer"
+      },
+      "censusHinderedByEnviromentalFactors": {
+        "type": "boolean"
+      },
+      "censusHinderedByFog": {
+        "type": "boolean"
+      },
+      "censusHinderedByRain": {
+        "type": "boolean"
+      },
+      "censusHinderedByWind": {
+        "type": "boolean"
+      },
+      "censusPrematurelyAborted": {
+        "type": "boolean"
+      },
+      "cloudCover": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "cloudCoverEnd": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "cloudCoverStart": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "dateBegin": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "dateEnd": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "gatheringFact": {
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
+          "@context": {
+            "type": "keyword"
+          },
+          "batCollector": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "censusAreaHectares": {
+            "type": "integer"
+          },
+          "invasiveControlOtherExpensesInEuros": {
+            "type": "integer"
+          },
+          "invasiveControlWorkHours": {
+            "type": "integer"
+          },
+          "lineTransectSegmentCounted": {
+            "type": "boolean"
+          },
+          "lineTransectSegmentMetersEnd": {
+            "type": "integer"
+          },
+          "lineTransectSegmentMetersStart": {
+            "type": "integer"
+          },
+          "observedAreaHectares": {
+            "type": "integer"
+          },
+          "pointCountHabitat": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "shorelineLengthMeters": {
+            "type": "integer"
+          },
+          "sunniness": {
+            "type": "integer"
+          },
+          "sykeButterFlyCensusWind": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sykeButterFlyCensusWindEnd": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sykeButterFlyCensusWindStart": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "waterbirdCensusPeriod": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "waterbirdHabitat": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "ACAFLAonAlder": {
+            "type": "integer"
+          },
+          "ACAFLAonBirch": {
+            "type": "integer"
+          },
+          "ACAFLAonGround": {
+            "type": "integer"
+          },
+          "ACAFLAonPine": {
+            "type": "integer"
+          },
+          "ACAFLAonSpruce": {
+            "type": "integer"
+          },
+          "CARSPIonAlder": {
+            "type": "integer"
+          },
+          "CARSPIonBirch": {
+            "type": "integer"
+          },
+          "CARSPIonGround": {
+            "type": "integer"
+          },
+          "CARSPIonPine": {
+            "type": "integer"
+          },
+          "CARSPIonSpruce": {
+            "type": "integer"
+          },
+          "LOXIAonAlder": {
+            "type": "integer"
+          },
+          "LOXIAonBirch": {
+            "type": "integer"
+          },
+          "LOXIAonGround": {
+            "type": "integer"
+          },
+          "LOXIAonPine": {
+            "type": "integer"
+          },
+          "LOXIAonSpruce": {
+            "type": "integer"
+          },
+          "abundanceBOMGAR": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "abundancePINENU": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "abundanceTURPIL": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "birdFeederCount": {
+            "type": "integer"
+          },
+          "birdFeederCountBiotopeA": {
+            "type": "integer"
+          },
+          "birdFeederCountBiotopeB": {
+            "type": "integer"
+          },
+          "birdFeederCountBiotopeC": {
+            "type": "integer"
+          },
+          "birdFeederCountBiotopeD": {
+            "type": "integer"
+          },
+          "birdFeederCountBiotopeE": {
+            "type": "integer"
+          },
+          "birdFeederCountBiotopeF": {
+            "type": "integer"
+          },
+          "birdFeederCountBiotopeG": {
+            "type": "integer"
+          },
+          "birdFeederCountBiotopeH": {
+            "type": "integer"
+          },
+          "cloudAndRain": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "descriptionBiotopeF": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "feedingStationCount": {
+            "type": "integer"
+          },
+          "feedingStationCountBiotopeA": {
+            "type": "integer"
+          },
+          "feedingStationCountBiotopeB": {
+            "type": "integer"
+          },
+          "feedingStationCountBiotopeC": {
+            "type": "integer"
+          },
+          "feedingStationCountBiotopeD": {
+            "type": "integer"
+          },
+          "feedingStationCountBiotopeE": {
+            "type": "integer"
+          },
+          "feedingStationCountBiotopeF": {
+            "type": "integer"
+          },
+          "feedingStationCountBiotopeG": {
+            "type": "integer"
+          },
+          "feedingStationCountBiotopeH": {
+            "type": "integer"
+          },
+          "iceCover": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "meanTemperature": {
+            "type": "integer"
+          },
+          "observerCount": {
+            "type": "integer"
+          },
+          "observerID": {
+            "type": "integer"
+          },
+          "pineConesAtCensus": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "routeID": {
+            "type": "integer"
+          },
+          "routeLength": {
+            "type": "integer"
+          },
+          "routeLengthBiotopeA": {
+            "type": "integer"
+          },
+          "routeLengthBiotopeB": {
+            "type": "integer"
+          },
+          "routeLengthBiotopeC": {
+            "type": "integer"
+          },
+          "routeLengthBiotopeD": {
+            "type": "integer"
+          },
+          "routeLengthBiotopeE": {
+            "type": "integer"
+          },
+          "routeLengthBiotopeF": {
+            "type": "integer"
+          },
+          "routeLengthBiotopeG": {
+            "type": "integer"
+          },
+          "routeLengthBiotopeH": {
+            "type": "integer"
+          },
+          "routeLengthChange": {
+            "type": "integer"
+          },
+          "routeLengthChangeBiotopeA": {
+            "type": "integer"
+          },
+          "routeLengthChangeBiotopeB": {
+            "type": "integer"
+          },
+          "routeLengthChangeBiotopeC": {
+            "type": "integer"
+          },
+          "routeLengthChangeBiotopeD": {
+            "type": "integer"
+          },
+          "routeLengthChangeBiotopeE": {
+            "type": "integer"
+          },
+          "routeLengthChangeBiotopeF": {
+            "type": "integer"
+          },
+          "routeLengthChangeBiotopeG": {
+            "type": "integer"
+          },
+          "routeLengthChangeBiotopeH": {
+            "type": "integer"
+          },
+          "snowAndIceOnTrees": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "snowCover": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sorbusBerriesAtCensus": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "sorbusBerriesEarlyFall": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "spruceConesAtCensus": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "typeOfSnowCover": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "visibility": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "waterbodies": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "wayOfTravel": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "wayOfTravelNotes": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "wind": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "gpsUsed": {
+        "type": "boolean"
+      },
+      "leg": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "legPublic": {
+        "type": "boolean"
+      },
+      "legUserID": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "namedPlaceNotes": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "rainIntensity": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "routeDirectionAdhered": {
+        "type": "boolean"
+      },
+      "startDistanceFromNECorner": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "startPointDeviation": {
+        "type": "integer"
+      },
+      "taxonCensus": {
+        "type": "nested",
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
+          "@context": {
+            "type": "keyword"
+          },
+          "censusTaxonID": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "censusTaxonSetID": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          },
+          "taxonCensusType": {
+            "type": "keyword",
+            "fields": {
+              "s": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "temperatureEnd": {
+        "type": "float"
+      },
+      "temperatureStart": {
+        "type": "float"
+      },
+      "timeEnd": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "timeStart": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

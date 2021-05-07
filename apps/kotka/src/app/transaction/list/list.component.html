@@ -1,0 +1,19 @@
+<kui-main-content>
+  <kotka-search-form type="transaction" class="mb-3"></kotka-search-form>
+  <kotka-table-header
+    [allCols]="allCols"
+    [selectedCols]="selectedCols"
+    (selectedColsChange)="onSelectedColsChange($event)"
+    [count]="count"
+    [label]="'transactions'"
+    (download)="onDownload($event)"
+  ></kotka-table-header>
+  <kui-datatable
+    style="height: calc(100vh - 200px); min-height: 300px;"
+    [datasource]="datasource"
+    [columnDefs]="activeCols"
+    [loading]="loading"
+    (selectedColsChange)="onSelectedColsChange($event, false)"
+    (rowClicked)="onRowClick($event)"
+  ></kui-datatable>
+</kui-main-content>

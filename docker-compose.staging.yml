@@ -1,0 +1,90 @@
+version: '3'
+
+services:
+
+  rabbit:
+    env_file:
+      - .env.staging
+    environment:
+      - RABBITMQ_DEFAULT_VHOST=/
+    ports:
+      - 15672:15672
+      - 5672:5672
+    extends:
+      file: tools/docker/docker-compose.shared.yml
+      service: rabbit
+
+  elastic:
+    ports:
+      - 9200:9200
+    extends:
+      file: tools/docker/docker-compose.shared.yml
+      service: elastic-single
+
+  store:
+    depends_on:
+      rabbit:
+        condition: service_healthy
+      elastic:
+        condition: service_healthy
+    env_file:
+      - .env.staging
+    build:
+      context: ./
+      dockerfile: tools/docker/store/Dockerfile
+      target: dev
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+    restart: on-failure
+    healthcheck:
+      test: [ "CMD-SHELL", "curl --silent --fail localhost:3000/status || exit 1" ]
+      interval: 10s
+      timeout: 10s
+      retries: 7
+
+  kibana:
+    image: kibana:7.11.2
+    depends_on:
+      - elastic
+    ports:
+      - 5601:5601
+    environment:
+      SERVER_NAME: kibana
+      ELASTICSEARCH_HOSTS: http://elastic:9200
+
+  store-worker:
+    depends_on:
+      store:
+        condition: service_healthy
+    env_file:
+      - .env.staging
+    build:
+      context: ./
+      dockerfile: tools/docker/store/Dockerfile
+      target: dev
+    volumes:
+      - .:/app
+    environment:
+      IS_WORKER: 'true'
+      DW_SOURCES: 'KE.388,KE.441'
+      ID_RESOLVER: 'http://tun.fi/'
+    command: 'nx serve store-worker'
+
+  kotka:
+    env_file:
+      - .env.staging
+    build:
+      context: ./
+      dockerfile: tools/docker/node/Dockerfile
+    ports:
+      - 4200:4200
+    volumes:
+      - .:/app
+    command: 'npm run start:kotka -- --host 0.0.0.0'
+
+volumes:
+  elastic_data:
+    driver: local
+

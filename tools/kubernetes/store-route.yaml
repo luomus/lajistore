@@ -1,0 +1,27 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: store
+  labels:
+    io.kompose.service: store
+    type: external
+  annotations:
+    haproxy.router.openshift.io/timeout: 3600s
+    haproxy.router.openshift.io/disable_cookies: 'true'
+spec:
+  host: store-dev.luomus.fi
+  to:
+    kind: Service
+    name: nginx
+  port:
+    targetPort: '8080'
+  tls:
+    termination: edge
+    certificate: >-
+      [CERT]
+    key: |-
+      [PRIVATE-KEY]
+    caCertificate: >-
+      [CA-CERTs]
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None

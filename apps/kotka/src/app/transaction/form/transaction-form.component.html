@@ -1,0 +1,47 @@
+<luomus-form [inputs]="inputs" [(model)]="model" (onSubmit)="onSubmit.emit(model)" [form]="form">
+  <luomus-field [field]="inputs.owner"></luomus-field>
+  <div class="pb-2 mt-4 mb-2 border-bottom">
+    <h2>Transaction</h2>
+  </div>
+  <luomus-field [field]="inputs.transactionType"></luomus-field>
+  <luomus-field [field]="inputs.transactionRequestReceived"></luomus-field>
+  <luomus-field [field]="inputs.externalTransactionID"></luomus-field>
+  <luomus-field [field]="inputs.oldLoanID"></luomus-field>
+  <luomus-field [field]="inputs.transactionSent"></luomus-field>
+  <div class="pb-2 mt-4 mb-2 border-bottom">
+    <h2>Correspondent</h2>
+  </div>
+  <luomus-field [field]="inputs.correspondentOrganization"></luomus-field>
+  <luomus-field [field]="inputs.correspondentPerson"></luomus-field>
+  <div class="pb-2 mt-4 mb-2 border-bottom">
+    <h2>Local</h2>
+  </div>
+  <luomus-field [field]="inputs.localPerson"></luomus-field>
+  <luomus-field [field]="inputs.localPersonEmail"></luomus-field>
+  <luomus-field [field]="inputs.localResearcher"></luomus-field>
+  <luomus-field [field]="inputs.collectionID"></luomus-field>
+  <div class="pb-2 mt-4 mb-2 border-bottom">
+    <h2>Permits (Nagoya protocol etc.)</h2>
+  </div>
+  <luomus-field [field]="inputs.geneticResourceAcquisitionDate"></luomus-field>
+  <luomus-field [field]="inputs.geneticResourceAcquisitionCountry"></luomus-field>
+  <luomus-field [field]="inputs.underNagoya"></luomus-field>
+  <luomus-field [field]="inputs.availableForGeneticResearch"></luomus-field>
+  <luomus-field [field]="inputs.geneticResourceRightsAndObligations"></luomus-field>
+  <luomus-field [field]="inputs.geneticResourceType"></luomus-field>
+  <luomus-field [field]="inputs.hasIRCC"></luomus-field>
+  <luomus-field [field]="inputs.resourceImported"></luomus-field>
+  <luomus-field [field]="inputs.geneticResourceDescription"></luomus-field>
+  <luomus-field [field]="inputs.geneticResourceSource"></luomus-field>
+  <div class="pb-2 mt-4 mb-2 border-bottom">
+  </div>
+  <kotka-permits-list-form [field]="inputs.permits"></kotka-permits-list-form>
+  <div class="pb-2 mt-4 mb-2 border-bottom mb-5">
+    <h2>Items</h2>
+  </div>
+  <div class="mb-5" style="height: 100px;"></div>
+
+  <div class="fixed-bottom p-2 pl-3 bg-light border-top">
+    <button type="submit" class="btn btn-success" [disabled]="!form.valid">Save transaction</button>
+  </div>
+</luomus-form>

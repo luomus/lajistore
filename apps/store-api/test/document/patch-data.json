@@ -1,0 +1,16 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "term": { "id": "JX.5833"}}
+      ]
+    }
+  },
+  "patch": [
+    {
+      "op": "replace",
+      "path": "/gatheringEvent/leg/0",
+      "value": "Testing LEG"
+    }
+  ]
+}

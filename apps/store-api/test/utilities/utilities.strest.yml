@@ -1,0 +1,164 @@
+version: 2
+
+variables:
+  testUrl: http://store-api:3000
+  authorization: 'Basic S0UuMDA3OnBhc3N3b3Jk'
+
+requests:
+  unknown_type_returns_404:
+    request:
+      url: <$ testUrl $>/FOOBAR
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 404
+
+  not_auth_type_returns_401:
+    request:
+      url: <$ testUrl $>/FOOBAR
+      method: GET
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  json_ld_dont_require_login:
+    request:
+      url: <$ testUrl $>/json-ld-context/MY.document
+      method: GET
+    validate:
+      - jsonpath: status
+        expect: 200
+
+  can_find_type_with_json_suffix:
+    request:
+      url: <$ testUrl $>/json-ld-context/MYdocument.json
+      method: GET
+    validate:
+      - jsonpath: status
+        expect: 200
+
+  non_existsing_returns_404:
+    request:
+      url: <$ testUrl $>/json-ld-context/MYfoobar.json
+      method: GET
+    validate:
+      - jsonpath: status
+        expect: 404
+
+  json_schema_dont_require_login:
+    request:
+      url: <$ testUrl $>/json-schema/MY.unit
+      method: GET
+    validate:
+      - jsonpath: status
+        expect: 200
+
+  es_mapping_dont_require_login:
+    request:
+      url: <$ testUrl $>/es-mapping/MY.gathering.json
+      method: GET
+    validate:
+      - jsonpath: status
+        expect: 200
+
+  status_dont_require_login:
+    request:
+      url: <$ testUrl $>/status
+      method: GET
+    validate:
+      - jsonpath: status
+        expect: 200
+
+  ping_dont_require_login:
+    request:
+      url: <$ testUrl $>/status
+      method: GET
+    validate:
+      - jsonpath: status
+        expect: 200
+
+  bulk_requires_login:
+    request:
+      url: <$ testUrl $>/_bulk
+      method: POST
+      json: apps/store-api/test/utilities/bulk-data.json
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  no_invalid_bulk_1:
+    request:
+      url: <$ testUrl $>/_bulk
+      method: POST
+      json: apps/store-api/test/utilities/bulk-invalid-1.json
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 422
+
+  no_invalid_bulk_2:
+    request:
+      url: <$ testUrl $>/_bulk
+      method: POST
+      json: apps/store-api/test/utilities/bulk-invalid-2.json
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 422
+
+  adding_with_bulk:
+    request:
+      url: <$ testUrl $>/_bulk
+      method: POST
+      json: apps/store-api/test/utilities/bulk-data.json
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 201
+
+  check_data_exists:
+    request:
+      url: <$ testUrl $>/device/JX.001
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 200
+      - jsonpath: content.deviceType
+        expect: "satellite"
+
+  update_with_bulk:
+    request:
+      url: <$ testUrl $>/_bulk
+      method: POST
+      json: apps/store-api/test/utilities/bulk-updated-data.json
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 201
+
+  check_update_data:
+    request:
+      url: <$ testUrl $>/device/JX.001
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 200
+      - jsonpath: content.deviceType
+        expect: "drone"

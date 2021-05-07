@@ -1,0 +1,44 @@
+{
+  "npmScope": "luomus",
+  "affected": { "defaultBase": "master" },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+    }
+  },
+  "projects": {
+    "kotka": { "tags": ["type:app", "scope:web"], "implicitDependencies": [] },
+    "kotka-e2e": { "tags": ["type:e2e"], "implicitDependencies": [] },
+    "kotka-api": {
+      "tags": ["type:app", "scope:node"],
+      "implicitDependencies": ["kotka"]
+    },
+    "laji-client": { "tags": ["scope:node"] },
+    "kotka-ui-datatable": { "tags": ["type:ui", "scope:component"] },
+    "kotka-ui-form": { "tags": ["type:ui", "scope:component"] },
+    "kotka-ui-main-content": { "tags": ["type:ui", "scope:component"] },
+    "store-api": { "tags": ["type:app", "scope:node-app"] },
+    "store-cli": { "tags": ["type:app", "scope:cli"] },
+    "store-worker": { "tags": ["type:app", "scope:node-app"] },
+    "shared-models": { "tags": ["scope:shared"] },
+    "shared-assets": { "tags": ["scope:node-shared"] },
+    "store-core": { "tags": ["scope:node"] },
+    "store-api-core": { "tags": ["scope:node"] },
+    "store-client": { "tags": ["scope:web-shared"] },
+    "store-generate": { "tags": ["scope:node"] },
+    "store-interface": { "tags": ["scope:node-shared"] },
+    "store-config": { "tags": ["scope:node-shared"] },
+    "store-database": { "tags": ["scope:data"] },
+    "store-search": { "tags": ["scope:data"] },
+    "store-shared": { "tags": ["scope:node-shared"] }
+  }
+}

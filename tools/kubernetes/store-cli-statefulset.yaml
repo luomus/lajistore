@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: store-cli
+  labels:
+    app: store-cli
+    component: store-cli
+spec:
+  selector:
+    matchLabels:
+      component: store-cli
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        component: store-cli
+    spec:
+      containers:
+        - name: store-cli
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/lajistore-api/store-cli
+          imagePullPolicy: Always
+          env:
+            - name: PUBLIC_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  key: PUBLIC_ADDRESS
+                  name: store-config
+            - name: INTERNAL_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  key: INTERNAL_ADDRESS
+                  name: store-config
+            - name: CONTEXT_IRI
+              valueFrom:
+                configMapKeyRef:
+                  key: CONTEXT_IRI
+                  name: store-config
+            - name: DB_TYPE
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_TYPE
+                  name: store-config
+            - name: DB_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_USERNAME
+                  name: store-config
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: DB_PASSWORD
+                  name: store-config
+            - name: DB_CONNECT_STRING
+              valueFrom:
+                secretKeyRef:
+                  key: DB_CONNECT_STRING
+                  name: store-config
+            - name: ELASTICSEARCH_NODES
+              valueFrom:
+                configMapKeyRef:
+                  key: ELASTICSEARCH_NODES
+                  name: store-config
+            - name: RABBITMQ_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_HOST
+                  name: store-config
+            - name: RABBITMQ_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_USERNAME_CLI
+                  name: store-config
+            - name: RABBITMQ_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: RABBITMQ_PASSWORD_API
+                  name: store-config
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 60
+      dnsPolicy: ClusterFirst
+      securityContext: { }
+  podManagementPolicy: OrderedReady
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate:
+      partition: 0
+  revisionHistoryLimit: 10

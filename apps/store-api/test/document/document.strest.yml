@@ -1,0 +1,155 @@
+version: 2
+
+variables:
+  testUrl: http://store-api:3000/MY.document
+  authorization: 'Basic S0UuMDA3OnBhc3N3b3Jk'
+
+requests:
+  clean_up1:
+    request:
+      url: <$ testUrl $>/JX.5833
+      method: DELETE
+      json: apps/store-api/test/document/documents-data.json
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+
+  clean_up2:
+    request:
+      url: <$ testUrl $>/JX.5806
+      method: DELETE
+      json: apps/store-api/test/document/documents-data.json
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+
+  adding_multiple_documents:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/document/documents-data.json
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content[0].id
+        expect: 'JX.5833'
+      - jsonpath: content[0].gatheringEvent.id
+        expect: 'JX.5833#1'
+      - jsonpath: content[0].gatheringEvent.leg[0]
+        expect: 'MA.97'
+      - jsonpath: content[0].gatherings[0].id
+        expect: 'JX.5833#2'
+      - jsonpath: content[0].gatherings[0].units[0].id
+        expect: 'JX.5833#3'
+      - jsonpath: content[0].gatherings[0].units[0].unitFact.id
+        expect: 'JX.5833#4'
+      - jsonpath: content[0].gatherings[0].units[0].unitGathering.id
+        expect: 'JX.5833#5'
+      - jsonpath: content[0].gatherings[0].units[0].identifications[0].id
+        expect: 'JX.5833#6'
+      - jsonpath: content[0].gatherings[1].units[0].identifications[0].id
+        expect: 'JX.5833#11'
+      - jsonpath: content[0].gatherings[1].id
+        expect: 'JX.5833#7'
+      - jsonpath: content[1].id
+        type: [string]
+      - jsonpath: content[2].id
+        expect: 'JX.5806'
+      - jsonpath: content[2].gatherings[0].units[0].identifications[0].id
+        expect: 'JX.5806#5'
+
+  updating_document:
+    request:
+      url: <$ testUrl $>/JX.5833
+      method: PUT
+      json: apps/store-api/test/document/updated-document-data.json
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content.id
+        expect: 'JX.5833'
+      - jsonpath: content.gatheringEvent.id
+        expect: 'JX.5833#12'
+      - jsonpath: content.gatheringEvent.leg[0]
+        expect: 'Foobar'
+      - jsonpath: content.gatherings[0].id
+        expect: 'JX.5833#13'
+      - jsonpath: content.gatherings[0].units[0].id
+        expect: 'JX.5833#3'
+      - jsonpath: content.gatherings[0].units[0].unitFact.id
+        expect: 'JX.5833#14'
+      - jsonpath: content.gatherings[0].units[0].unitGathering.id
+        expect: 'JX.5833#15'
+      - jsonpath: content.gatherings[0].units[0].identifications[0].id
+        expect: 'JX.5833#16'
+      - jsonpath: content.gatherings[1].units[0].identifications[0].id
+        expect: 'JX.5833#21'
+      - jsonpath: content.gatherings[1].id
+        expect: 'JX.5833#17'
+
+  get_versoins:
+    request:
+      url: <$ testUrl $>/JX.5833/_ver
+      method: GET
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content[0].version
+        expect: 1
+      - jsonpath: content[1].version
+        expect: 2
+
+  get_versoins_of_nonexisting:
+    request:
+      url: <$ testUrl $>/NON:EXISTING/_ver
+      method: GET
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 200
+
+  patch_document:
+    request:
+      url: <$ testUrl $>
+      method: PATCH
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+      json: apps/store-api/test/document/patch-data.json
+    validate:
+      - jsonpath: status
+        expect: 200
+      - jsonpath: content.affected
+        expect: 1
+
+  get_versoins_with_patch:
+    request:
+      url: <$ testUrl $>/JX.5833/_ver?include_diff=true
+      method: GET
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content[0].version
+        expect: 1
+      - jsonpath: content[0].original
+        type: [ object ]
+      - jsonpath: content[0].original.gatheringEvent.leg[0]
+        expect: "MA.97"
+      - jsonpath: content[1].version
+        expect: 2
+      - jsonpath: content[1].patch
+        type: [ array ]
+      - jsonpath: content[1].patch[1].value
+        expect: "Foobar"
+      - jsonpath: content[2].version
+        expect: 3
+      - jsonpath: content[2].patch
+        type: [ array ]
+      - jsonpath: content[2].patch[0].value
+        expect: "Testing LEG"

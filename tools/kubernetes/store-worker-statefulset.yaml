@@ -1,0 +1,137 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: store-worker
+  labels:
+    app: store-worker
+    component: store-worker
+spec:
+  selector:
+    matchLabels:
+      component: store-worker
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        component: store-worker
+    spec:
+      containers:
+        - name: store-worker
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/lajistore-api/store-worker
+          imagePullPolicy: Always
+          env:
+            - name: IS_WORKER
+              value: "true"
+            - name: ID_RESOLVER
+              valueFrom:
+                configMapKeyRef:
+                  key: ID_RESOLVER
+                  name: store-config
+            - name: PUBLIC_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  key: PUBLIC_ADDRESS
+                  name: store-config
+            - name: INTERNAL_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  key: INTERNAL_ADDRESS
+                  name: store-config
+            - name: CONTEXT_IRI
+              valueFrom:
+                configMapKeyRef:
+                  key: CONTEXT_IRI
+                  name: store-config
+            - name: DB_TYPE
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_TYPE
+                  name: store-config
+            - name: DB_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_USERNAME
+                  name: store-config
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: DB_PASSWORD
+                  name: store-config
+            - name: DB_CONNECT_STRING
+              valueFrom:
+                secretKeyRef:
+                  key: DB_CONNECT_STRING
+                  name: store-config
+            - name: ELASTICSEARCH_NODES
+              valueFrom:
+                configMapKeyRef:
+                  key: ELASTICSEARCH_NODES
+                  name: store-config
+            - name: RABBITMQ_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_HOST
+                  name: store-config
+            - name: RABBITMQ_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_USERNAME_WORKER
+                  name: store-config
+            - name: RABBITMQ_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: RABBITMQ_PASSWORD_WORKER
+                  name: store-config
+            - name: DW_SOURCES
+              valueFrom:
+                configMapKeyRef:
+                  key: DW_SOURCES
+                  name: store-config
+            - name: LAJI_API_DB_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: LAJI_API_DB_USERNAME
+                  name: store-config
+            - name: LAJI_API_DB_CONNECT_STRING
+              valueFrom:
+                secretKeyRef:
+                  key: LAJI_API_DB_CONNECT_STRING
+                  name: store-config
+            - name: LAJI_API_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: LAJI_API_DB_PASSWORD
+                  name: store-config
+          resources:
+            requests:
+              cpu: "0.1"
+              memory: 500Mi
+            limits:
+              cpu: "0.5"
+              memory: 2Gi
+          livenessProbe:
+            exec:
+              command:
+                - node
+                - cli.js
+                - status
+            initialDelaySeconds: 10
+            timeoutSeconds: 10
+            periodSeconds: 60
+            successThreshold: 1
+            failureThreshold: 3
+          ports:
+            - containerPort: 3000
+              name: http
+              protocol: TCP
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: { }
+  podManagementPolicy: OrderedReady
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate:
+      partition: 0
+  revisionHistoryLimit: 10

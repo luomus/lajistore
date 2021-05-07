@@ -1,0 +1,413 @@
+{
+  "id": "MHL.83",
+  "name": "Kotka - Transaction",
+  "language": "en",
+  "title": "Kotka - Transaction",
+  "attributes": {
+    "id": "MHL.83"
+  },
+  "uiSchema": {},
+  "schema": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "title": "ID"
+      },
+      "owner": {
+        "type": "string",
+        "title": "Owner of record"
+      },
+      "transactionType": {
+        "type": "string",
+        "title": "Transaction type",
+        "enum": [
+          "HRA.transactionTypeLoanIncoming",
+          "HRA.transactionTypeGiftIncoming",
+          "HRA.transactionTypeExchangeIncoming",
+          "HRA.transactionTypeLoanOutgoing",
+          "HRA.transactionTypeGiftOutgoing",
+          "HRA.transactionTypeExchangeOutgoing",
+          "HRA.transactionTypeFieldCollection",
+          "HRA.transactionTypeImportNotice",
+          "HRA.transactionTypeABSNegotiations",
+          "HRA.transactionTypeVirtualLoanOutgoing"
+        ],
+        "enumNames": [
+          "Loan, incoming",
+          "Gift, incoming",
+          "Exchange, incoming",
+          "Loan, outgoing",
+          "Gift, outgoing",
+          "Exchange, outgoing",
+          "Field collection",
+          "Import notice only (maahantuonti-ilmoitus)",
+          "ABS negotiations",
+          "Virtual loan, outgoing"
+        ]
+      },
+      "transactionRequestReceived": {
+        "type": "string",
+        "format": "date",
+        "title": "Received date"
+      },
+      "material": {
+        "type": "string",
+        "title": "Material"
+      },
+      "externalTransactionID": {
+        "type": "string",
+        "title": "Sender's transaction ID"
+      },
+      "publicRemarks": {
+        "type": "string",
+        "title": "Public remarks"
+      },
+      "internalRemarks": {
+        "type": "string",
+        "title": "Internal remarks"
+      },
+      "oldLoanID": {
+        "type": "string",
+        "title": "Old loan number"
+      },
+      "sentParcels": {
+        "type": "string",
+        "title": "Number of parcels"
+      },
+      "transactionSent": {
+        "type": "string",
+        "format": "date",
+        "title": "Sent/Returned"
+      },
+      "dueDate": {
+        "type": "string",
+        "format": "date",
+        "title": "Due date"
+      },
+      "correspondentOrganization": {
+        "type": "string",
+        "title": "Correspondent organization"
+      },
+      "correspondentPerson": {
+        "type": "string",
+        "title": "Corresponding person"
+      },
+      "localPerson": {
+        "type": "string",
+        "title": "Person responsible"
+      },
+      "localPersonEmail": {
+        "type": "string",
+        "title": "Email"
+      },
+      "localResearcher": {
+        "type": "string",
+        "title": "Receiving researcher"
+      },
+      "collectionID": {
+        "type": "string",
+        "title": "Collection"
+      },
+      "geneticResourceAcquisitionDate": {
+        "type": "string",
+        "format": "date",
+        "title": "Acquisition date"
+      },
+      "geneticResourceAcquisitionCountry": {
+        "type": "string",
+        "title": "Acquisition country"
+      },
+      "underNagoya": {
+        "type": "boolean",
+        "title": "Does Nagoya protocol apply?"
+      },
+      "availableForGeneticResearch": {
+        "type": "string",
+        "title": "Is genetic research allowed on the genetic resource(s)?",
+        "enum": [
+          "",
+          "HRA.availableForGeneticResearchYes",
+          "HRA.availableForGeneticResearchWithRestrictions",
+          "HRA.availableForGeneticResearchNo"
+        ],
+        "enumNames": [
+          "",
+          "Yes, freely",
+          "Yes, with restrictions",
+          "No"
+        ]
+      },
+      "geneticResourceRightsAndObligations": {
+        "type": "string",
+        "title": "Rights and obligations"
+      },
+      "geneticResourceType": {
+        "type": "string",
+        "title": "Type of resource",
+        "enum": [
+          "",
+          "HRA.geneticResourceTypeAnimal",
+          "HRA.geneticResourceTypePlant",
+          "HRA.geneticResourceTypeFungus",
+          "HRA.geneticResourceTypeMicrobe",
+          "HRA.geneticResourceTypeSoil",
+          "HRA.geneticResourceTypeAqua"
+        ],
+        "enumNames": [
+          "",
+          "Animal",
+          "Plant",
+          "Fungus",
+          "Microbe",
+          "Soil",
+          "Aqua"
+        ]
+      },
+      "hasIRCC": {
+        "type": "boolean",
+        "title": "IRCC number provided?"
+      },
+      "IRCC": {
+        "type": "string",
+        "title": "IRCC number"
+      },
+      "resourceImported": {
+        "type": "string",
+        "title": "What are you importing?",
+        "enum": [
+          "",
+          "HRA.resourceImportedGeneticResources",
+          "HRA.resourceImportedTraditionalKnowledge",
+          "HRA.resourceImportedBoth"
+        ],
+        "enumNames": [
+          "",
+          "Genetic resources",
+          "Traditional knowledge",
+          "Both"
+        ]
+      },
+      "geneticResourceDescription": {
+        "type": "string",
+        "title": "Description"
+      },
+      "geneticResourceSource": {
+        "type": "string",
+        "title": "Source"
+      },
+      "transactionEvents": {
+        "type": "array",
+        "title": "",
+        "items": {
+          "type": "object",
+          "properties": {
+            "eventDate": {
+              "type": "string",
+              "format": "date",
+              "title": "Done on"
+            },
+            "eventHandler": {
+              "type": "string",
+              "title": "Handler"
+            },
+            "eventType": {
+              "type": "string",
+              "title": "Type",
+              "enum": [
+                "HRAA.eventTypeSend",
+                "HRAA.eventTypeReceive",
+                "HRAA.eventTypeOther"
+              ],
+              "enumNames": [
+                "Send",
+                "Receive",
+                "Other"
+              ]
+            },
+            "notes": {
+              "type": "string",
+              "title": "Notes"
+            },
+            "numberOfPackages": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "title": "Number of packages"
+            },
+            "sentBy": {
+              "type": "string",
+              "title": "Sent by",
+              "enum": [
+                "",
+                "HRAA.sentByPriority",
+                "HRAA.sentByEconomy",
+                "HRAA.sentByCourier",
+                "HRAA.sentByCarried",
+                "HRAA.sentByOther"
+              ],
+              "enumNames": [
+                "",
+                "Priority mail",
+                "Economy mail",
+                "Courier, see remarks",
+                "Carried, see remarks",
+                "Other, see remarks"
+              ]
+            },
+            "items": {
+              "type": "array",
+              "title": "",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "collectionID": {
+                    "type": "string",
+                    "title": "collection ID"
+                  },
+                  "itemCount": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "title": "HRAB.itemCount"
+                  },
+                  "itemID": {
+                    "type": "string",
+                    "title": "Loan item ID"
+                  },
+                  "itemLabel": {
+                    "type": "string",
+                    "title": "Loan item"
+                  },
+                  "itemType": {
+                    "type": "string",
+                    "title": "Type",
+                    "enum": [
+                      "HRAB.itemTypeSpecimen",
+                      "HRAB.itemTypeSpecimenBatch",
+                      "HRAB.itemTypeImage",
+                      "HRAB.itemTypeOther"
+                    ],
+                    "enumNames": [
+                      "Specimen",
+                      "Specimen batch",
+                      "Image",
+                      "Other"
+                    ]
+                  },
+                  "notes": {
+                    "type": "string",
+                    "title": "Notes"
+                  },
+                  "status": {
+                    "type": "string",
+                    "title": "Status",
+                    "enum": [
+                      "HRAB.statusOk",
+                      "HRAB.statusMissing",
+                      "HRAB.statusDamaged"
+                    ],
+                    "enumNames": [
+                      "Ok",
+                      "Missing",
+                      "Damaged"
+                    ]
+                  }
+                },
+                "required": [
+                  "itemCount",
+                  "itemType",
+                  "status"
+                ]
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "eventDate",
+            "eventHandler",
+            "eventType"
+          ]
+        },
+        "minItems": 0
+      },
+      "permits": {
+        "type": "array",
+        "title": "",
+        "items": {
+          "type": "object",
+          "properties": {
+            "permitType": {
+              "type": "string",
+              "title": "Permit type",
+              "enum": [
+                "",
+                "HRA.permitTypePIC",
+                "HRA.permitTypeMAT",
+                "HRA.permitTypeMTA",
+                "HRA.permitCollectingPermit",
+                "HRA.permitTypeExportPermit",
+                "HRA.permitTypeOther",
+                "HRA.permitTypeMemorandumOfUnderstanding"
+              ],
+              "enumNames": [
+                "",
+                "PIC",
+                "MAT",
+                "MTA",
+                "Collecting permit",
+                "Export permit",
+                "Other",
+                "Memorandum of Understanding (MOU)"
+              ]
+            },
+            "permitStatus": {
+              "type": "string",
+              "title": "Permit status",
+              "enum": [
+                "",
+                "HRA.permitStatusAvailable",
+                "HRA.permitStatusNotRequired"
+              ],
+              "enumNames": [
+                "",
+                "Available",
+                "Not required"
+              ]
+            },
+            "permitNotes": {
+              "type": "string",
+              "title": "Notes"
+            },
+            "permitFile": {
+              "type": "string",
+              "title": "File"
+            },
+            "permitStartDate": {
+              "type": "string",
+              "format": "date",
+              "title": "Start date"
+            },
+            "permitEndDate": {
+              "type": "string",
+              "format": "date",
+              "title": "End date"
+            }
+          },
+          "required": []
+        },
+        "minItems": 0
+      },
+      "ids": {
+        "type": "string",
+        "title": "HRA.ids"
+      }
+    },
+    "required": [
+      "transactionType",
+      "transactionRequestReceived",
+      "correspondentOrganization"
+    ]
+  },
+  "validators": {},
+  "warnings": {},
+  "excludeFromCopy": []
+}

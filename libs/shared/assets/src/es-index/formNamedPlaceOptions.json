@@ -1,0 +1,287 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "index.mapping.ignore_malformed": true,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "adminShowCopyLink": {
+        "type": "boolean"
+      },
+      "allowAddingPublic": {
+        "type": "boolean"
+      },
+      "birdAssociationAreaHelp": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "chooseDescription": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "copyLatestDocumentToNamedPlace": {
+        "type": "boolean"
+      },
+      "createDescription": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "createNewButtonLabel": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "createNewButtonPrependingTextLabel": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "documentListUseLocalDocumentViewer": {
+        "type": "boolean"
+      },
+      "documentViewerForcedFields": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "documentViewerGatheringGeometryJSONPath": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "documentViewerZoomToData": {
+        "type": "boolean"
+      },
+      "earlierLabel": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "editDescription": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "filterByBirdAssociationArea": {
+        "type": "boolean"
+      },
+      "filterByMunicipality": {
+        "type": "boolean"
+      },
+      "filterByTags": {
+        "type": "boolean"
+      },
+      "headerFields": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "hideMapTab": {
+        "type": "boolean"
+      },
+      "includeUnits": {
+        "type": "boolean"
+      },
+      "infoFields": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "lastCensusLabel": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "listColumnNameMapping": {
+        "type": "object",
+        "enabled": false
+      },
+      "listColumns": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "listColumnsMultisort": {
+        "type": "boolean"
+      },
+      "listLabel": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "mapCluster": {
+        "type": "boolean"
+      },
+      "mapOverlayNames": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "mapTileLayerName": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "myEarlierLabel": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "namedPlaceFormID": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "namedPlaceList": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "prepopulatedDocumentFields": {
+        "type": "object",
+        "enabled": false
+      },
+      "printLabel": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "releaseLabel": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "reservableLabel": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "reservationUntil": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "reservedLabel": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "showLegendList": {
+        "type": "boolean"
+      },
+      "startWithMap": {
+        "type": "boolean"
+      },
+      "useAcceptedDocument": {
+        "type": "boolean"
+      },
+      "useLabel": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "zoomToData": {
+        "type": "boolean"
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

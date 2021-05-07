@@ -1,0 +1,11 @@
+.git
+.gitignore
+.idea
+.env
+.vscode
+node_modules
+npm-debug.log
+tools
+cypress
+dist
+docker-compose.yml

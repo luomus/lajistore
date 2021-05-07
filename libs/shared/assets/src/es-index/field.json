@@ -1,0 +1,101 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "index.mapping.ignore_malformed": true,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "name": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "fields": {
+        "type": "keyword"
+      },
+      "filters": {
+        "type": "object",
+        "enabled": false
+      },
+      "formID": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "label": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "notices": {
+        "type": "object",
+        "enabled": false
+      },
+      "options": {
+        "type": "object",
+        "enabled": false
+      },
+      "required": {
+        "type": "boolean"
+      },
+      "type": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "ui": {
+        "type": "object",
+        "enabled": false
+      },
+      "validators": {
+        "type": "object",
+        "enabled": false
+      },
+      "value": {
+        "type": "keyword",
+        "fields": {
+          "s": {
+            "type": "text"
+          }
+        }
+      },
+      "warnings": {
+        "type": "object",
+        "enabled": false
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

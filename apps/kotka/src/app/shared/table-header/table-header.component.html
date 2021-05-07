@@ -1,0 +1,87 @@
+<div class="card bg-light border-bottom-0 mt-2">
+  <div class="card-body p-2">
+    <div class="row">
+      <div class="col-auto mr-auto p-2 pl-4">
+        {{ count }} {{ label }}
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-outline-secondary mr-2 download" (click)="openDownloadModal(downloadTpl)">
+          <i class="fa fa-download"></i> download
+        </button>
+        <button class="btn btn-outline-secondary settings" (click)="openSettingsModal(settingsTpl)">
+          <i class="fa fa-cog"></i> settings
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #settingsTpl>
+  <div class="modal-header bg-light">
+    <h4 class="modal-title pull-left">Table settings</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="settingsModalRef?.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div cdkDropListGroup class="row">
+      <div class="col-6 mb-3">
+        <h5>All columns</h5>
+
+        <input class="form-control" placeholder="Search..." [(ngModel)]="filterBy" type="search" />
+        <div
+          cdkDropList
+          [cdkDropListData]="_unSelectedItems"
+          class="card card-body p-2 h-100"
+          cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)">
+          <ng-container *ngFor="let item of _unSelectedItems; trackBy: trackSelection">
+            <kotka-field-item
+              (buttonClick)="addCol(item)"
+              [ngClass]="(_colLabels[item] | isFieldItemHidden:filterBy) ? 'invisible' : 'card card-body bg-light border p-2 flex-grow-0'"
+              cdkDrag>{{ _colLabels[item] }}</kotka-field-item>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="col-6 mb-3">
+        <h5>Selected columns</h5>
+
+        <div
+          cdkDropList
+          [cdkDropListData]="_selectedItems"
+          class="card card-body p-2 h-100"
+          (cdkDropListDropped)="drop($event)">
+          <kotka-field-item
+            (buttonClick)="removeCol(item)"
+            class="card card-body bg-light border p-2 flex-grow-0"
+            buttonIcon="fa-times"
+            *ngFor="let item of _selectedItems; trackBy: trackSelection" cdkDrag>{{ _colLabels[item] }}</kotka-field-item>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer bg-light">
+    <button type="button" class="btn btn-outline-primary" (click)="saveSettings()">Save changes</button>
+    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal" (click)="settingsModalRef?.hide()">Close</button>
+  </div>
+</ng-template>
+
+<ng-template #downloadTpl>
+  <div class="modal-header bg-light">
+    <h4 class="modal-title pull-left">Download {{ label }}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="downloadModalRef?.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <ul>
+      <li (click)="download.emit('simple')">Simple</li>
+    </ul>
+  </div>
+  <div class="modal-footer bg-light">
+    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal" (click)="downloadModalRef?.hide()">Close</button>
+  </div>
+</ng-template>
+

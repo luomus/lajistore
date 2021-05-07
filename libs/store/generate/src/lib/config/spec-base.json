@@ -1,0 +1,189 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Store",
+    "version": "2.0",
+    "description": "Store api documentation",
+    "contact": {
+      "name": "Suomen Lajitietokeskus",
+      "email": "helpdesk@laji.fi"
+    }
+  },
+  "paths": {
+    "%GLOBAL_PREFIX%/es-mapping/{type}": {
+      "get": {
+        "security": [{}],
+        "tags": ["Utilities"],
+        "operationId": "getESMapping",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "Enpoint name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a Elasticsearch mapping.",
+        "responses": {
+          "200": {
+            "description": "a ES mapping.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%GLOBAL_PREFIX%/json-schema/{type}": {
+      "get": {
+        "security": [{}],
+        "tags": ["Utilities"],
+        "operationId": "getJsonSchema",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "Endpoint name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a json schema.",
+        "responses": {
+          "200": {
+            "description": "a json schema.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%GLOBAL_PREFIX%/json-ld-context/{type}": {
+      "get": {
+        "security": [{}],
+        "tags": ["Utilities"],
+        "operationId": "getJsonLdContext",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "Endpoint name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a json-ld context.",
+        "responses": {
+          "200": {
+            "description": "a json-ld context.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%GLOBAL_PREFIX%/status": {
+      "get": {
+        "security": [{}],
+        "tags": ["Utilities"],
+        "operationId": "getStatus",
+        "parameters": [],
+        "description": "Heartbeat service to check that the server is working as expected",
+        "responses": {
+          "200": {
+            "description": "status response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "description": "If any health indicator failed the status will be 'error'. If the NestJS app is shutting down but still accepting HTTP requests, the health check will have the 'shutting_down' status.",
+                      "type": "string",
+                      "enum": ["error", "ok", "shutting_down"]
+                    },
+                    "info": {
+                      "type": "object",
+                      "description": "Object containing information of each health indicator which is of status 'up', or in other words \"healthy\"."
+                    },
+                    "error": {
+                      "type": "object",
+                      "description": "Object containing information of each health indicator which is of status 'down', or in other words \"unhealthy\"."
+                    },
+                    "details": {
+                      "type": "object",
+                      "description": "Object containing all information of each health indicator"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%GLOBAL_PREFIX%/ping": {
+      "get": {
+        "security": [{}],
+        "tags": ["Utilities"],
+        "operationId": "ping",
+        "parameters": [],
+        "description": "Heartbeat service to check that the server is alive",
+        "responses": {
+          "200": {
+            "description": "status response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ack": {
+                      "description": "Current time on the server",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {
+      "basic": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Utilities",
+      "description": "endpoints for misc items"
+    }
+  ]
+}

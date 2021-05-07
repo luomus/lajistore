@@ -1,0 +1,73 @@
+{
+  "GX.dataset": [
+    {
+      "@context": "http://localhost:3000/json-ld-context/GX.dataset.json",
+      "@type": "GX.dataset",
+      "datasetName": {
+        "en": "Test dataset 4",
+        "fi": "Testi datesetti 4",
+        "sv": "SV 4"
+      },
+      "datasetType": "GX.datasetTypeProject",
+      "description": {
+        "en": "description 4",
+        "fi": "kuvaus 4",
+        "sv": "sv desc 4"
+      },
+      "personsResponsible": "Ville-Matti Riihikoski",
+      "researchCollaborator": "Marko Mustonen",
+      "researchFundingDuration": "3 years",
+      "researchFundingRecipient": "Ville-Matti Riihikoski",
+      "researchFundingSource": "Kone",
+      "creator": "Viltsu",
+      "dateCreated": "2021-01-19T12:54:25.253Z",
+      "dateEdited": "2021-01-19T12:54:25.253Z",
+      "editor": "Viltsu",
+      "owner": "MOS.10",
+      "id": "GX.001"
+    },
+    {
+      "@context": "http://localhost:3000/json-ld-context/GX.dataset.json",
+      "@type": "GX.dataset",
+      "datasetName": {
+        "en": "Test dataset 5",
+        "fi": "Testi datesetti 5",
+        "sv": "SV 5"
+      },
+      "datasetType": "GX.datasetTypeProject",
+      "description": {
+        "en": "description 5",
+        "fi": "kuvaus 5",
+        "sv": "sv desc 5"
+      },
+      "personsResponsible": "Ville-Matti Riihikoski",
+      "researchCollaborator": "Marko Mustonen",
+      "researchFundingDuration": "3 years",
+      "researchFundingRecipient": "Ville-Matti Riihikoski",
+      "researchFundingSource": "Kone",
+      "creator": "Viltsu",
+      "dateCreated": "2021-01-19T12:54:25.253Z",
+      "dateEdited": "2021-01-19T12:54:25.253Z",
+      "editor": "Viltsu",
+      "owner": "MOS.10",
+      "id": "GX.002"
+    }
+  ],
+  "device": [
+    {
+      "@context": "http://localhost:3000/json-ld-context/MXC.device.json",
+      "id": "JX.001",
+      "@type": "MXC.device",
+      "deviceManufacturer": "Valmet",
+      "deviceManufacturerID": "foobar.1",
+      "deviceType": "drone",
+      "creator": "MA.97",
+      "dateCreated": "2021-04-26T11:31:12.985Z",
+      "dateEdited": "2021-04-26T11:31:12.985Z",
+      "editor": "MA.97",
+      "ownerPerson": [
+        "MA.97"
+      ]
+    }
+  ]
+}

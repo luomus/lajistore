@@ -1,0 +1,22 @@
+{
+  "id": { "type": "keyword" },
+  "@context": { "type": "keyword" },
+  "@type": { "type": "keyword" },
+  "string": { "type": "keyword", "fields": { "s": { "type": "text" } } },
+  "xsd:string": { "type": "keyword", "fields": { "s": { "type": "text" } } },
+  "xsd:integer": { "type": "integer" },
+  "xsd:decimal": { "type": "float" },
+  "xsd:boolean": { "type": "boolean" },
+  "xsd:positiveInteger": { "type": "integer" },
+  "xsd:nonNegativeInteger": { "type": "integer" },
+  "xsd:dateTime": { "type": "date" },
+  "xsd:date": { "type": "date" },
+  "xsd:time": { "type": "date" },
+  "xsd:anyURI": { "type": "keyword" },
+  "rdfs:Resource": { "type": "keyword" },
+  "MZ.keyValue": { "type": "object", "enabled": false },
+  "MZ.keyAny": { "type": "object", "enabled": false },
+  "MZ.geometry": { "type": "geo_shape", "ignore_malformed": true, "coerce": true},
+  "_NESTED_": { "type": "nested" },
+  "_DEFAULT_": { "type": "keyword" }
+}

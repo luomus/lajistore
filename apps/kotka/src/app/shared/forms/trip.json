@@ -1,0 +1,1384 @@
+{
+  "type": "object",
+  "properties": {
+    "editors": {
+      "type": "array",
+      "title": "Edit rights",
+      "items": {
+        "type": "string"
+      }
+    },
+    "secureLevel": {
+      "type": "string",
+      "title": "The observations geographic information is public in detail",
+      "default": "MX.secureLevelNone",
+      "enum": [
+        "MX.secureLevelNone",
+        "MX.secureLevelKM10"
+      ],
+      "enumNames": [
+        "None",
+        "10 km"
+      ]
+    },
+    "gatheringEvent": {
+      "type": "object",
+      "title": "",
+      "properties": {
+        "leg": {
+          "type": "array",
+          "title": "Observers",
+          "items": {
+            "type": "string"
+          }
+        },
+        "legPublic": {
+          "type": "boolean",
+          "title": "Observer names are public",
+          "default": true
+        },
+        "dateBegin": {
+          "type": "string",
+          "title": "Start date",
+          "excludeFromCopy": true
+        },
+        "dateEnd": {
+          "type": "string",
+          "title": "End date",
+          "excludeFromCopy": true
+        }
+      },
+      "required": []
+    },
+    "keywords": {
+      "type": "array",
+      "title": "Keywords",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gatherings": {
+      "type": "array",
+      "title": "Location",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dateBegin": {
+            "type": "string",
+            "title": "Start date",
+            "excludeFromCopy": true
+          },
+          "dateEnd": {
+            "type": "string",
+            "title": "End date"
+          },
+          "namedPlaceID": {
+            "type": "string",
+            "title": "Named place"
+          },
+          "geometry": {
+            "type": "object",
+            "properties": {},
+            "title": "Coordinates"
+          },
+          "coordinateRadius": {
+            "type": "string",
+            "title": "Coordinate accuracy in meters"
+          },
+          "alt": {
+            "type": "string",
+            "title": "Alt in meters"
+          },
+          "country": {
+            "type": "string",
+            "title": "Country"
+          },
+          "administrativeProvince": {
+            "type": "string",
+            "title": "Administrative province"
+          },
+          "biologicalProvince": {
+            "type": "string",
+            "title": "Biogeographical province"
+          },
+          "municipality": {
+            "type": "string",
+            "title": "Municipality"
+          },
+          "locality": {
+            "type": "string",
+            "title": "Locality names"
+          },
+          "localityDescription": {
+            "type": "string",
+            "title": "Locality description"
+          },
+          "images": {
+            "type": "array",
+            "title": "Images of the site",
+            "excludeFromCopy": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "habitat": {
+            "type": "array",
+            "title": "@biotooppiLabel",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "",
+                "MY.habitatEnumValue1",
+                "MY.habitatEnumValue2",
+                "MY.habitatEnumValue3",
+                "MY.habitatEnumValue4",
+                "MY.habitatEnumValue5",
+                "MY.habitatEnumValue6",
+                "MY.habitatEnumValue7",
+                "MY.habitatEnumValue8",
+                "MY.habitatEnumValue9",
+                "MY.habitatEnumValue10",
+                "MY.habitatEnumValue11",
+                "MY.habitatEnumValue12",
+                "MY.habitatEnumValue13",
+                "MY.habitatEnumValue14",
+                "MY.habitatEnumValue15",
+                "MY.habitatEnumValue16",
+                "MY.habitatEnumValue17",
+                "MY.habitatEnumValue18",
+                "MY.habitatEnumValue19",
+                "MY.habitatEnumValue20",
+                "MY.habitatEnumValue21",
+                "MY.habitatEnumValue22",
+                "MY.habitatEnumValue23",
+                "MY.habitatEnumValue24",
+                "MY.habitatEnumValue25",
+                "MY.habitatEnumValue26",
+                "MY.habitatEnumValue27",
+                "MY.habitatEnumValue28",
+                "MY.habitatEnumValue29",
+                "MY.habitatEnumValue30",
+                "MY.habitatEnumValue31",
+                "MY.habitatEnumValue32",
+                "MY.habitatEnumValue33",
+                "MY.habitatEnumValue34",
+                "MY.habitatEnumValue35",
+                "MY.habitatEnumValue36",
+                "MY.habitatEnumValue87",
+                "MY.habitatEnumValue37",
+                "MY.habitatEnumValue38",
+                "MY.habitatEnumValue39",
+                "MY.habitatEnumValue40",
+                "MY.habitatEnumValue41",
+                "MY.habitatEnumValue42",
+                "MY.habitatEnumValue43",
+                "MY.habitatEnumValue44",
+                "MY.habitatEnumValue45",
+                "MY.habitatEnumValue46",
+                "MY.habitatEnumValue47",
+                "MY.habitatEnumValue48",
+                "MY.habitatEnumValue49",
+                "MY.habitatEnumValue50",
+                "MY.habitatEnumValue51",
+                "MY.habitatEnumValue52",
+                "MY.habitatEnumValue53",
+                "MY.habitatEnumValue54",
+                "MY.habitatEnumValue55",
+                "MY.habitatEnumValue56",
+                "MY.habitatEnumValue57",
+                "MY.habitatEnumValue58",
+                "MY.habitatEnumValue59",
+                "MY.habitatEnumValue60",
+                "MY.habitatEnumValue61",
+                "MY.habitatEnumValue62",
+                "MY.habitatEnumValue63",
+                "MY.habitatEnumValue64",
+                "MY.habitatEnumValue65",
+                "MY.habitatEnumValue66",
+                "MY.habitatEnumValue67",
+                "MY.habitatEnumValue68",
+                "MY.habitatEnumValue69",
+                "MY.habitatEnumValue70",
+                "MY.habitatEnumValue71",
+                "MY.habitatEnumValue72",
+                "MY.habitatEnumValue73",
+                "MY.habitatEnumValue74",
+                "MY.habitatEnumValue75",
+                "MY.habitatEnumValue76",
+                "MY.habitatEnumValue77",
+                "MY.habitatEnumValue78",
+                "MY.habitatEnumValue79",
+                "MY.habitatEnumValue80",
+                "MY.habitatEnumValue81",
+                "MY.habitatEnumValue82",
+                "MY.habitatEnumValue83",
+                "MY.habitatEnumValue84",
+                "MY.habitatEnumValue85",
+                "MY.habitatEnumValue86"
+              ],
+              "enumNames": [
+                "",
+                "Forest",
+                "Heath forest",
+                "Mesic heath forest",
+                "Herb-rich heath forest",
+                "Sub-xeric heath forest",
+                "Xeric heath forest",
+                "Herb-rich forest",
+                "Dry herb-rich forest",
+                "Mesic herb-rich forest",
+                "Moist herb-rich forest",
+                "Herb-rich forest with broadleaved deciduous trees",
+                "Herb-rich mountain birch forests",
+                "Mountain birch forest (excluding herb-rich mountain birch forest)",
+                "Mire",
+                "Open mire",
+                "Rich fen",
+                "Fen",
+                "Open swamp",
+                "Wooded mire",
+                "Pine mire and bog",
+                "Spruce mire",
+                "Scrub swamp",
+                "Swamp",
+                "Water",
+                "Spring complex",
+                "Streams or a brook",
+                "Shore",
+                "Flooded forest",
+                "Shore scrub",
+                "Swamp shore",
+                "Meadow shore",
+                "Reedbred",
+                "Gravel and shingle shores",
+                "Sand beach",
+                "Unvegetated flood shore",
+                "Rock outcrop and scree",
+                "Siliceous rock outcrops",
+                "Lichen rock outcrop and scree",
+                "Graminoid dwarf shrub rock outcrop and scree",
+                "Rock outcrop and scree deficient of trees",
+                "Forest on rocky terrain",
+                "Calcareous rock outcrop and quarry, bare calcareous land",
+                "Serpentine rock outcrop or land",
+                "Rock meadow",
+                "Fell area",
+                "Mountain heath",
+                "Mountain meadow",
+                "Snowbed",
+                "Mountain heath scrub",
+                "Paljakan lähteikkö tai tihkupintaOroarctic/mountain spring complexes and habitats",
+                "Paljakan kallio tai kivikkoOroarctic/ rocky outcrop and scree",
+                "Oroarctic mountain mire",
+                "Paljakan järvi tai lampi (sis. ranta)Oroarctic/mountain lake",
+                "Paljakan virtavesi (sis. purot ja rannat)Oroarctic/mountain brookside or a stream",
+                "Rock face",
+                "Rural biotopes and cultural habitats or other human-impacted environment",
+                "Rural biotopes and cultural habitats",
+                "Dry meadow",
+                "Heath",
+                "Mesic meadow",
+                "Wooded pasture and meadow",
+                "Moist meadow (other than shore meadow)",
+                "Fen meadow",
+                "Rock meadow",
+                "Ditch or other excavation",
+                "Roadsides (verges, banks etc.)",
+                "Agricultural land",
+                "Field",
+                "Lawn or grass",
+                "Tree and bush plantation",
+                "Abandoned field",
+                "Park, courtyard or garden",
+                "Park",
+                "Manor garden",
+                "Graveyard",
+                "Courtyard",
+                "Garden",
+                "Open grass",
+                "Scrub",
+                "Secondary habitats",
+                "Roadsides (verges, banks, on the road etc.)",
+                "Dumpling area",
+                "Fill-up soil",
+                "Sand and gravel pit",
+                "Peat production area",
+                "Quarry and mine area",
+                "Ruderate habitats and areas"
+              ]
+            }
+          },
+          "habitatDescription": {
+            "type": "string",
+            "title": "Habitat description"
+          },
+          "weather": {
+            "type": "string",
+            "title": "Weather",
+            "excludeFromCopy": true
+          },
+          "notes": {
+            "type": "string",
+            "title": "Notes"
+          },
+          "samplingMethod": {
+            "type": "string",
+            "title": "Sampling method",
+            "enum": [
+              "",
+              "MY.samplingMethodLight",
+              "MY.samplingMethodLightTrap",
+              "MY.samplingMethodTrap",
+              "MY.samplingMethodMalaise",
+              "MY.samplingMethodPitfall",
+              "MY.samplingMethodWindowtrap",
+              "MY.samplingMethodYellowWindowTrap",
+              "MY.samplingMethodPantrap",
+              "MY.samplingMethodYellowpan",
+              "MY.samplingMethodYellowtrap",
+              "MY.samplingMethodFeromonetrap",
+              "MY.samplingMethodBaittrap",
+              "MY.samplingMethodBait",
+              "MY.samplingMethodNet",
+              "MY.samplingMethodSweeping",
+              "MY.samplingMethodCarnet",
+              "MY.samplingMethodMistnet",
+              "MY.samplingMethodBoard",
+              "MY.samplingMethodReared",
+              "MY.samplingMethodExovo",
+              "MY.samplingMethodElarva",
+              "MY.samplingMethodEpupa",
+              "MY.samplingMethodEclectortrap",
+              "MY.samplingMethodHand",
+              "MY.samplingMethodSifting",
+              "MY.samplingMethodSoilsample",
+              "MY.samplingMethodDropping",
+              "MY.samplingMethodWashing",
+              "MY.samplingMethodDigging",
+              "MY.samplingMethodDiving",
+              "MY.samplingMethodDrag",
+              "MY.samplingMethodTriangleDrag",
+              "MY.samplingMethodFishNet",
+              "MY.samplingMethodElectrofishing",
+              "MY.samplingMethodAngleFishing",
+              "MY.samplingMethodFishTrap",
+              "MY.samplingMethodSeine",
+              "MY.samplingMethodTrawling",
+              "MY.samplingMethodBeamTrawl",
+              "MY.samplingMethodDungTrap",
+              "MY.samplingMethodTrunkWindowTrap",
+              "MY.samplingMethodDiverInsectTrap",
+              "MY.samplingMethodAquaticEmergenceTrap",
+              "MY.samplingMethodWaterBucket",
+              "MY.samplingMethodTrampling",
+              "MY.samplingMethodOther"
+            ],
+            "enumNames": [
+              "",
+              "Light (lux)",
+              "Light trap",
+              "Trap (generic)",
+              "Malaise",
+              "Pitfall",
+              "Window trap",
+              "Yellow-window trap",
+              "Pan trap",
+              "Yellowpan",
+              "Yellowtrap",
+              "Pheromone trap",
+              "Bait trap",
+              "Bait (any kind, without trap)",
+              "Net (haavi)",
+              "Sweeping",
+              "Car net",
+              "Mistnet",
+              "Board Shelter",
+              "Reared",
+              "Reared, ex ovo",
+              "Reared, e larva",
+              "Reared, e pupa",
+              "Eclector (emergence) trap",
+              "Collecting by hand",
+              "Sifting (seulos)",
+              "Soil sample",
+              "Dropping (brushing or shaking)",
+              "Washing",
+              "Digging",
+              "Diving",
+              "Drag (hara)",
+              "Triangle drag (kolmiohara)",
+              "Fish net",
+              "Electrofishing",
+              "Angling (fishing with a hook)",
+              "Fish trap",
+              "Seine",
+              "Trawling (troolaus)",
+              "Beam trawl",
+              "Dung Trap",
+              "Trunk Window Trap",
+              "Diver Insect Trap",
+              "Aquatic Emergence Trap",
+              "Water bucket",
+              "Trampling",
+              "Other"
+            ]
+          },
+          "samplingMethodNotes": {
+            "type": "string",
+            "title": "Sampling method notes"
+          },
+          "observationDays": {
+            "type": "integer",
+            "title": "Observation days"
+          },
+          "observationMinutes": {
+            "type": "integer",
+            "title": "Observation minutes"
+          },
+          "trapCount": {
+            "type": "integer",
+            "title": "Trap count"
+          },
+          "taxonCensus": {
+            "type": "array",
+            "title": "Completely recorded taxon",
+            "items": {
+              "type": "object",
+              "properties": {
+                "censusTaxonID": {
+                  "type": "string",
+                  "title": "Censused taxon"
+                },
+                "taxonCensusType": {
+                  "type": "string",
+                  "title": "Completeness of census",
+                  "enum": [
+                    "MY.taxonCensusTypeCounted",
+                    "MY.taxonCensusTypeEstimated",
+                    "MY.taxonCensusTypeNotCounted",
+                    "MY.taxonCensusTypeUHEXCounted",
+                    "MY.taxonCensusTypeUHEXNotCounted"
+                  ],
+                  "enumNames": [
+                    "All species identified and counted",
+                    "All species identified, count estimated",
+                    "All species identified, count is not estimated",
+                    "Only endangered (UHEX) species counted",
+                    "Only endangered (UHEX) species identified, not counted"
+                  ]
+                }
+              },
+              "required": [
+                "taxonCensusType"
+              ]
+            }
+          },
+          "units": {
+            "type": "array",
+            "title": "Observations",
+            "excludeFromCopy": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "string",
+                  "title": "Count"
+                },
+                "maleIndividualCount": {
+                  "type": "integer",
+                  "title": "Male individual count"
+                },
+                "femaleIndividualCount": {
+                  "type": "integer",
+                  "title": "Female individual count"
+                },
+                "sex": {
+                  "type": "string",
+                  "title": "Sex",
+                  "enum": [
+                    "",
+                    "MY.sexM",
+                    "MY.sexF",
+                    "MY.sexW",
+                    "MY.sexU",
+                    "MY.sexN",
+                    "MY.sexX",
+                    "MY.sexE",
+                    "MY.sexC"
+                  ],
+                  "enumNames": [
+                    "",
+                    "M - Male",
+                    "F - Female",
+                    "W - Worker",
+                    "U - Unknown",
+                    "N - Not applicable",
+                    "X - Gynandromorph",
+                    "E - multiple",
+                    "C - Conflicting"
+                  ]
+                },
+                "notes": {
+                  "type": "string",
+                  "title": "Notes"
+                },
+                "taxonConfidence": {
+                  "type": "string",
+                  "title": "Confidence of determination",
+                  "default": "MY.taxonConfidenceSure",
+                  "enum": [
+                    "",
+                    "MY.taxonConfidenceSure",
+                    "MY.taxonConfidenceUnsure",
+                    "MY.taxonConfidenceSubspeciesUnsure"
+                  ],
+                  "enumNames": [
+                    "",
+                    "Sure",
+                    "Unsure",
+                    "Subspecies unsure"
+                  ]
+                },
+                "recordBasis": {
+                  "type": "string",
+                  "title": "Record type",
+                  "default": "MY.recordBasisHumanObservation",
+                  "enum": [
+                    "",
+                    "MY.recordBasisPreservedSpecimen",
+                    "MY.recordBasisHumanObservation",
+                    "MY.recordBasisHumanObservationHandled",
+                    "MY.recordBasisHumanObservationPhoto",
+                    "MY.recordBasisHumanObservationAudio",
+                    "MY.recordBasisHumanObservationIndirect"
+                  ],
+                  "enumNames": [
+                    "",
+                    "Preserved specimen",
+                    "Observation",
+                    "Handled (catched, not preserved)",
+                    "Photographed",
+                    "Audio recording",
+                    "Indirect observation (footprints, feces, etc)"
+                  ]
+                },
+                "samplingMethod": {
+                  "type": "string",
+                  "title": "Sampling method",
+                  "enum": [
+                    "",
+                    "MY.samplingMethodLight",
+                    "MY.samplingMethodLightTrap",
+                    "MY.samplingMethodTrap",
+                    "MY.samplingMethodMalaise",
+                    "MY.samplingMethodPitfall",
+                    "MY.samplingMethodWindowtrap",
+                    "MY.samplingMethodYellowWindowTrap",
+                    "MY.samplingMethodPantrap",
+                    "MY.samplingMethodYellowpan",
+                    "MY.samplingMethodYellowtrap",
+                    "MY.samplingMethodFeromonetrap",
+                    "MY.samplingMethodBaittrap",
+                    "MY.samplingMethodBait",
+                    "MY.samplingMethodNet",
+                    "MY.samplingMethodSweeping",
+                    "MY.samplingMethodCarnet",
+                    "MY.samplingMethodMistnet",
+                    "MY.samplingMethodBoard",
+                    "MY.samplingMethodReared",
+                    "MY.samplingMethodExovo",
+                    "MY.samplingMethodElarva",
+                    "MY.samplingMethodEpupa",
+                    "MY.samplingMethodEclectortrap",
+                    "MY.samplingMethodHand",
+                    "MY.samplingMethodSifting",
+                    "MY.samplingMethodSoilsample",
+                    "MY.samplingMethodDropping",
+                    "MY.samplingMethodWashing",
+                    "MY.samplingMethodDigging",
+                    "MY.samplingMethodDiving",
+                    "MY.samplingMethodDrag",
+                    "MY.samplingMethodTriangleDrag",
+                    "MY.samplingMethodFishNet",
+                    "MY.samplingMethodElectrofishing",
+                    "MY.samplingMethodAngleFishing",
+                    "MY.samplingMethodFishTrap",
+                    "MY.samplingMethodSeine",
+                    "MY.samplingMethodTrawling",
+                    "MY.samplingMethodBeamTrawl",
+                    "MY.samplingMethodDungTrap",
+                    "MY.samplingMethodTrunkWindowTrap",
+                    "MY.samplingMethodDiverInsectTrap",
+                    "MY.samplingMethodAquaticEmergenceTrap",
+                    "MY.samplingMethodWaterBucket",
+                    "MY.samplingMethodTrampling",
+                    "MY.samplingMethodOther"
+                  ],
+                  "enumNames": [
+                    "",
+                    "Light (lux)",
+                    "Light trap",
+                    "Trap (generic)",
+                    "Malaise",
+                    "Pitfall",
+                    "Window trap",
+                    "Yellow-window trap",
+                    "Pan trap",
+                    "Yellowpan",
+                    "Yellowtrap",
+                    "Pheromone trap",
+                    "Bait trap",
+                    "Bait (any kind, without trap)",
+                    "Net (haavi)",
+                    "Sweeping",
+                    "Car net",
+                    "Mistnet",
+                    "Board Shelter",
+                    "Reared",
+                    "Reared, ex ovo",
+                    "Reared, e larva",
+                    "Reared, e pupa",
+                    "Eclector (emergence) trap",
+                    "Collecting by hand",
+                    "Sifting (seulos)",
+                    "Soil sample",
+                    "Dropping (brushing or shaking)",
+                    "Washing",
+                    "Digging",
+                    "Diving",
+                    "Drag (hara)",
+                    "Triangle drag (kolmiohara)",
+                    "Fish net",
+                    "Electrofishing",
+                    "Angling (fishing with a hook)",
+                    "Fish trap",
+                    "Seine",
+                    "Trawling (troolaus)",
+                    "Beam trawl",
+                    "Dung Trap",
+                    "Trunk Window Trap",
+                    "Diver Insect Trap",
+                    "Aquatic Emergence Trap",
+                    "Water bucket",
+                    "Trampling",
+                    "Other"
+                  ]
+                },
+                "samplingMethodNotes": {
+                  "type": "string",
+                  "title": "Sampling method notes"
+                },
+                "preservation": {
+                  "type": "array",
+                  "title": "Preservation",
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "",
+                      "MY.preservationPressed",
+                      "MY.preservationDry",
+                      "MY.preservationCriticalPointDrying",
+                      "MY.preservationPinned",
+                      "MY.preservationGlued",
+                      "MY.preservationLiquid",
+                      "MY.preservationEthanol",
+                      "MY.preservationEthanolPure",
+                      "MY.preservationEthanol70",
+                      "MY.preservationEthanol80",
+                      "MY.preservationEthanol80Pure",
+                      "MY.preservationEthanol96",
+                      "MY.preservationEthanolDenatured",
+                      "MY.preservationEthanolFormalin",
+                      "MY.preservationEthanolExFormalin",
+                      "MY.preservationFormalin",
+                      "MY.preservationBouinSolution",
+                      "MY.preservationPampelsFluid",
+                      "MY.preservationGlycerol",
+                      "MY.preservationParaffin",
+                      "MY.preservationMercuricChloride",
+                      "MY.preservationCryopreserved",
+                      "MY.preservationFrozen",
+                      "MY.preservationFrozenMinus80C",
+                      "MY.preservationFreezeDried",
+                      "MY.preservationGoldPlated",
+                      "MY.preservationActiveCulture",
+                      "MY.preservationLiving",
+                      "MY.preservationSlide",
+                      "MY.preservationSlideCanadaBalsam",
+                      "MY.preservationSlideEuparal",
+                      "MY.preservationSlidePolyviol",
+                      "MY.preservationStuffed",
+                      "MY.preservationCast",
+                      "MY.preservationPlastinated",
+                      "MY.preservationFrozenMinus80CAndEthanolMinus20C"
+                    ],
+                    "enumNames": [
+                      "",
+                      "Dry and pressed",
+                      "Dry",
+                      "Critical-point drying",
+                      "Pinned",
+                      "Glued",
+                      "Liquid (unspecified)",
+                      "Ethanol (unknown %)",
+                      "Ethanol (unknown %) pure",
+                      "Ethanol 70 %",
+                      "Ethanol 80 %",
+                      "Ethanol 80 % pure",
+                      "Ethanol 96 %",
+                      "Ethanol denatured",
+                      "Ethanol and formalin",
+                      "Ethanol ex formalin",
+                      "Formalin",
+                      "Bouin's solution",
+                      "Pampel's fluid",
+                      "Glycerol",
+                      "Paraffin",
+                      "Mercuric chloride",
+                      "Cryopreserved",
+                      "Frozen",
+                      "Frozen -80 °C",
+                      "Freeze-dried",
+                      "Gold-plated",
+                      "Active culture",
+                      "Living",
+                      "Slide",
+                      "Slide Canada balsam",
+                      "Slide Euparal",
+                      "Slide Polyviol",
+                      "Stuffed",
+                      "Cast",
+                      "Plastinated",
+                      "Frozen -80 °C and ethanol -20 °C (duplicate)"
+                    ]
+                  }
+                },
+                "nativeStatus": {
+                  "type": "string",
+                  "title": "Native status",
+                  "enum": [
+                    "",
+                    "MY.native",
+                    "MY.nonNative"
+                  ],
+                  "enumNames": [
+                    "",
+                    "wild",
+                    "non-wild"
+                  ]
+                },
+                "breeding": {
+                  "type": "boolean",
+                  "title": "Breeding"
+                },
+                "hostID": {
+                  "type": "string",
+                  "title": "Host species identifier"
+                },
+                "checklistID": {
+                  "type": "string",
+                  "title": "Checklist",
+                  "default": "",
+                  "enum": [
+                    "",
+                    "MR.1"
+                  ],
+                  "enumNames": [
+                    "",
+                    "FinBIF master checklist"
+                  ]
+                },
+                "atlasCode": {
+                  "type": "string",
+                  "title": "Breeding category",
+                  "enum": [
+                    "",
+                    "MY.atlasCodeEnum1",
+                    "MY.atlasCodeEnum2",
+                    "MY.atlasCodeEnum3",
+                    "MY.atlasCodeEnum4",
+                    "MY.atlasCodeEnum5",
+                    "MY.atlasCodeEnum6",
+                    "MY.atlasCodeEnum7",
+                    "MY.atlasCodeEnum8",
+                    "MY.atlasCodeEnum61",
+                    "MY.atlasCodeEnum62",
+                    "MY.atlasCodeEnum63",
+                    "MY.atlasCodeEnum64",
+                    "MY.atlasCodeEnum65",
+                    "MY.atlasCodeEnum66",
+                    "MY.atlasCodeEnum71",
+                    "MY.atlasCodeEnum72",
+                    "MY.atlasCodeEnum73",
+                    "MY.atlasCodeEnum74",
+                    "MY.atlasCodeEnum75",
+                    "MY.atlasCodeEnum81",
+                    "MY.atlasCodeEnum82"
+                  ],
+                  "enumNames": [
+                    "",
+                    "1 Breeding unlikely; Species detected in the grid during the breeding season, but almost certainly does not breed there",
+                    "2 Possible breeding; A solitary bird detected once in suitable breeding habitat, and breeding of the species in the grid is possible",
+                    "3 Possible breeding; A pair detected once in a suitable breeding habitat, and breeding of the species in the grid is possible",
+                    "4 Probable breeding; A singing or a displaying male observed at the same site in different days",
+                    "5 Probable breeding; A female or a pair observed at the same site in different days",
+                    "6 Probable breeding; A bird or a pair observed",
+                    "7 Confirmed breeding; Indirect evidence of verified breeding detected",
+                    "8 Confirmed breeding; Direct evidence of verified breeding detected",
+                    "61 Probable breeding; A bird or a pair observed visiting frequently at the probable nest",
+                    "62 Probable breeding; A bird or a pair observed building a nest",
+                    "63 Probable breeding; A bird or a pair observed giving alarm calls because of proximity to nest or brood",
+                    "64 Probable breeding; A bird or a pair observed displaying broken wing -act",
+                    "65 Probable breeding; A bird or a pair observed attacking the observer",
+                    "66 Probable breeding; Nest found with fresh nest material or remains of food; no direct evidence of eggs or young found.",
+                    "71 Confirmed breeding; Indirect evidence of verified breeding detected: nest found with signs indicating that is has been used in the same year",
+                    "72 Confirmed breeding; Indirect evidence of verified breeding detected: a bird seen entering or coming out from the nest in a way that suggests breeding",
+                    "73 Confirmed breeding; Indirect evidence of verified breeding detected: fledglings or young detected so that they can be assumed to have hatched within the grid",
+                    "74 Confirmed breeding; Indirect evidence of verified breeding detected: a parent carrying food to nestlings or faeces of nestlings away from the nest",
+                    "75 Confirmed breeding; Indirect evidence of verified breeding detected: an incubating bird seen in the nest",
+                    "81 Confirmed breeding; Direct evidence of a verified breeding detected: begging or other calls of nestlings heard from the nest",
+                    "82 Confirmed breeding; Direct evidence of a verified breeding detected: a nest found with eggs or nestlings"
+                  ]
+                },
+                "twitched": {
+                  "type": "boolean",
+                  "title": "Twitched"
+                },
+                "plantLifeStage": {
+                  "type": "string",
+                  "title": "Plant life stage",
+                  "enum": [
+                    "",
+                    "MY.plantLifeStageSterile",
+                    "MY.plantLifeStageFertile",
+                    "MY.plantLifeStageSeed",
+                    "MY.plantLifeStageSprout",
+                    "MY.plantLifeStageBud",
+                    "MY.plantLifeStageFlower",
+                    "MY.plantLifeStageWitheredFlower",
+                    "MY.plantLifeStageRipeningFruit",
+                    "MY.plantLifeStageRipeFruit",
+                    "MY.plantLifeStageDeadSprout",
+                    "MY.plantLifeStageSubterranean",
+                    "MY.plantLifeStageLivingPlant",
+                    "MY.plantLifeStageDeadPlant"
+                  ],
+                  "enumNames": [
+                    "",
+                    "sterile",
+                    "fertile",
+                    "seed / spore / fruit",
+                    "sprout",
+                    "bud",
+                    "flower",
+                    "withered flower",
+                    "ripening seed / fruit / spore",
+                    "ripe seed / fruit / spore",
+                    "dead sprout",
+                    "subterranean",
+                    "living plant",
+                    "dead plant"
+                  ]
+                },
+                "plantStatusCode": {
+                  "type": "string",
+                  "title": "Plant status code",
+                  "enum": [
+                    "",
+                    "MY.MY.plantStatusCodeL",
+                    "MY.plantStatusCodeA",
+                    "MY.plantStatusCodeAV",
+                    "MY.plantStatusCodeAOV",
+                    "MY.plantStatusCodeAN",
+                    "MY.plantStatusCodeANV",
+                    "MY.plantStatusCodeANS",
+                    "MY.plantStatusCodeT",
+                    "MY.plantStatusCodeTV",
+                    "MY.plantStatusCodeTOV",
+                    "MY.plantStatusCodeTNV",
+                    "MY.plantStatusCodeTNS",
+                    "MY.plantStatusCodeV",
+                    "MY.plantStatusCodeOV",
+                    "MY.plantStatusCodeN",
+                    "MY.plantStatusCodeNV",
+                    "MY.plantStatusCodeNS",
+                    "MY.plantStatusCodeE",
+                    "MY.plantStatusCodeTE",
+                    "MY.plantStatusCodeTVE",
+                    "MY.plantStatusCodeTOVE",
+                    "MY.plantStatusCodeTNVE",
+                    "MY.plantStatusCodeTNSE",
+                    "MY.plantStatusCodeTN",
+                    "MY.plantStatusCodeTNE",
+                    "MY.plantStatusCodeR",
+                    "MY.plantStatusCodeC",
+                    "MY.plantStatusCodeH",
+                    "MY.plantStatusCodeG",
+                    "MY.plantStatusCodeF"
+                  ],
+                  "enumNames": [
+                    "",
+                    "L - wild",
+                    "A - spontaneous",
+                    "AV - spontaneous, resident",
+                    "AOV - spontaneous, old, resident",
+                    "AN - spontaneuous, new",
+                    "ANV - spontaneous, new, resident",
+                    "ANS - spontaneous, new, ephemeral",
+                    "T - alien",
+                    "TV - alien, resident",
+                    "TOV - alien, old, resident (archaeotype)",
+                    "TNV - alien, new, resident",
+                    "TNS - alien, new, ephemeral",
+                    "V - resident",
+                    "OV - old, resident",
+                    "N - new",
+                    "NV - new, resident",
+                    "NS - new, ephemeral",
+                    "E - spreading in the wild, cultivated origin",
+                    "TE - alien, spreading in the wild, cultivated origin",
+                    "TVE - alien, resident, spreading in the wild, cultivated origin",
+                    "TOVE - alien, old, resident (archaeotype), cultivated origin",
+                    "TNVE - alien, new, resident, cultivated origin",
+                    "TNSE - alien, new, ephemeral, cultivated origin",
+                    "TN - alien, new",
+                    "TNE - alien, new, cultivated origin",
+                    "R - relict of cultivation",
+                    "C - only as cultivated",
+                    "H - short distance escape from cultivation (inside a garden or similar)",
+                    "G - greenhouse plant",
+                    "F - subfossil, fossil"
+                  ]
+                },
+                "lifeStage": {
+                  "type": "string",
+                  "title": "Life stage",
+                  "enum": [
+                    "",
+                    "MY.lifeStageEgg",
+                    "MY.lifeStageLarva",
+                    "MY.lifeStagePupa",
+                    "MY.lifeStageJuvenile",
+                    "MY.lifeStageNymph",
+                    "MY.lifeStageSubimago",
+                    "MY.lifeStageImmature",
+                    "MY.lifeStageAdult",
+                    "MY.lifeStageFertile",
+                    "MY.lifeStageSterile",
+                    "MY.lifeStageTadpole",
+                    "MY.lifeStageDead",
+                    "MY.lifeStageAlive",
+                    "MY.lifeStageEmbryo",
+                    "MY.lifeStageSubadult",
+                    "MY.lifeStageMature",
+                    "MY.lifeStagePullus",
+                    "MY.lifeStageHatchedEgg",
+                    "MY.lifeStageHatchedPupa",
+                    "MY.lifeStageGall",
+                    "MY.lifeStageMarks"
+                  ],
+                  "enumNames": [
+                    "",
+                    "egg",
+                    "larva",
+                    "pupa",
+                    "juvenile",
+                    "nymph",
+                    "subimago",
+                    "immature",
+                    "adult",
+                    "fertile",
+                    "sterile",
+                    "tadpole",
+                    "dead",
+                    "alive",
+                    "embryo or fetus",
+                    "subadult",
+                    "mature",
+                    "pullus",
+                    "hatched egg",
+                    "hatched pupa",
+                    "gall",
+                    "Marks (feeding marks etc.)"
+                  ]
+                },
+                "hostInformalNameString": {
+                  "type": "string",
+                  "title": "Host species"
+                },
+                "substrateSpecies": {
+                  "type": "string",
+                  "title": "Substrate species"
+                },
+                "smell": {
+                  "type": "string",
+                  "title": "Smell",
+                  "enum": [
+                    "",
+                    "MY.smellNotSmelled",
+                    "MY.smellNoSmelled",
+                    "MY.smellWeak",
+                    "MY.smellModerate",
+                    "MY.smellStrong"
+                  ],
+                  "enumNames": [
+                    "",
+                    "Not sniffed",
+                    "Smell none",
+                    "Faint",
+                    "Distinct",
+                    "Strong"
+                  ]
+                },
+                "smellNotes": {
+                  "type": "string",
+                  "title": "Smell notes"
+                },
+                "taste": {
+                  "type": "string",
+                  "title": "Taste",
+                  "enum": [
+                    "",
+                    "MY.tasteNotTasted",
+                    "MY.tasteNoTaste",
+                    "MY.tasteWeak",
+                    "MY.tasteModerate",
+                    "MY.tasteStrong"
+                  ],
+                  "enumNames": [
+                    "",
+                    "Not tasted",
+                    "Taste none",
+                    "Faint",
+                    "Distinct",
+                    "Strong"
+                  ]
+                },
+                "tasteNotes": {
+                  "type": "string",
+                  "title": "Taste notes"
+                },
+                "informalTaxonGroups": {
+                  "type": "array",
+                  "title": "Informal taxon groups",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "images": {
+                  "type": "array",
+                  "title": "Images",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "identifications": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "taxon": {
+                        "type": "string",
+                        "title": "Species"
+                      },
+                      "det": {
+                        "type": "string",
+                        "title": "Det."
+                      },
+                      "detDate": {
+                        "type": "string",
+                        "title": "Det date"
+                      },
+                      "identificationBasis": {
+                        "type": "array",
+                        "title": "Identification basis",
+                        "uniqueItems": true,
+                        "items": {
+                          "type": "string",
+                          "enum": [
+                            "",
+                            "MY.identificationBasisSeen",
+                            "MY.identificationBasisHeard",
+                            "MY.identificationBasisHandled",
+                            "MY.identificationBasisMedia",
+                            "MY.identificationBasisFreshSpecimen",
+                            "MY.identificationBasisPreservedSpecimen",
+                            "MY.identificationBasisMicroscope",
+                            "MY.identificationBasisSpores",
+                            "MY.identificationBasisChemical",
+                            "MY.identificationBasisGenitals",
+                            "MY.identificationBasisGenitalPreparate",
+                            "MY.identificationBasisDNA"
+                          ],
+                          "enumNames": [
+                            "",
+                            "Seen",
+                            "Heard",
+                            "Handled",
+                            "Media",
+                            "Fresh material",
+                            "Preserved / dried material",
+                            "Microscopy",
+                            "Spores",
+                            "Chemical",
+                            "Genitals",
+                            "GenitalPreparate",
+                            "DNA"
+                          ]
+                        }
+                      }
+                    },
+                    "required": []
+                  },
+                  "minItems": 1
+                },
+                "unitGathering": {
+                  "type": "object",
+                  "properties": {
+                    "geometry": {
+                      "type": "object",
+                      "properties": {},
+                      "title": "Coordinates"
+                    },
+                    "dateBegin": {
+                      "type": "string",
+                      "title": "Start date"
+                    },
+                    "dateEnd": {
+                      "type": "string",
+                      "title": "End date"
+                    },
+                    "habitatIUCN": {
+                      "type": "string",
+                      "title": "Habitat"
+                    },
+                    "habitatDescription": {
+                      "type": "string",
+                      "title": "Habitat description"
+                    },
+                    "substrate": {
+                      "type": "string",
+                      "title": "Substrate notes"
+                    }
+                  },
+                  "required": []
+                },
+                "unitFact": {
+                  "type": "object",
+                  "properties": {
+                    "autocompleteSelectedTaxonID": {
+                      "type": "string",
+                      "title": "MY.autocompleteSelectedTaxonID"
+                    }
+                  },
+                  "required": []
+                },
+                "birdPlumage": {
+                  "type": "string",
+                  "title": "Bird plumage",
+                  "enum": [
+                    "",
+                    "MY.birdPlumageAd",
+                    "MY.birdPlumageEijp",
+                    "MY.birdPlumageImm",
+                    "MY.birdPlumageJp",
+                    "MY.birdPlumageJuv",
+                    "MY.birdPlumageNpuk",
+                    "MY.birdPlumagePull",
+                    "MY.birdPlumageSubad",
+                    "MY.birdPlumageTp",
+                    "MY.birdPlumageVp",
+                    "MY.birdPlumagePep",
+                    "MY.birdPlumageSs"
+                  ],
+                  "enumNames": [
+                    "",
+                    "ad",
+                    "eijp",
+                    "imm (immature)",
+                    "jp",
+                    "juv (juvenile)",
+                    "n-puk (female plumage)",
+                    "pull",
+                    "subad (plumage between juv and ad)",
+                    "tp (winter plumage)",
+                    "vp",
+                    "pep",
+                    "ss"
+                  ]
+                },
+                "birdAge": {
+                  "type": "string",
+                  "title": "Bird age",
+                  "enum": [
+                    "",
+                    "MY.birdAgePp",
+                    "MY.birdAgePm",
+                    "MY.birdAgeFl",
+                    "MY.birdAgePlus1kv",
+                    "MY.birdAge1Kv",
+                    "MY.birdAgePlus2Kv",
+                    "MY.birdAge2kv",
+                    "MY.birdAgePlus3Kv",
+                    "MY.birdAge3Kv",
+                    "MY.birdAgePlus4Kv",
+                    "MY.birdAge4Kv",
+                    "MY.birdAgePlus5Kv",
+                    "MY.birdAge5Kv",
+                    "MY.birdAgePlus6Kv",
+                    "MY.birdAge6Kv",
+                    "MY.birdAgePlus7Kv",
+                    "MY.birdAge7Kv",
+                    "MY.birdAgePlus8Kv",
+                    "MY.birdAge8Kv"
+                  ],
+                  "enumNames": [
+                    "",
+                    "pp",
+                    "pm",
+                    "fl",
+                    "+1kv (older than 1. calendar year)",
+                    "1kv (1. calendar year)",
+                    "+2kv (older than 2nd calendar year)",
+                    "2kv (2nd calendar year)",
+                    "+3kv",
+                    "3kv",
+                    "+4kv",
+                    "4kv",
+                    "+5kv",
+                    "5kv",
+                    "+6kv",
+                    "+6kv",
+                    "+7kv",
+                    "7kv",
+                    "+8kv",
+                    "8kv"
+                  ]
+                },
+                "movingStatus": {
+                  "type": "array",
+                  "title": "Moving status",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "distance": {
+                  "type": "string",
+                  "title": "Distance",
+                  "enum": [
+                    "",
+                    "MY.distanceOverFlight",
+                    "MY.distanceNear",
+                    "MY.distanceQuiteFar",
+                    "MY.distanceFar",
+                    "MY.distanceVeryFar"
+                  ],
+                  "enumNames": [
+                    "",
+                    "flight over or next to observer",
+                    "near",
+                    "quite far away",
+                    "far",
+                    "very far away"
+                  ]
+                },
+                "movingDirection": {
+                  "type": "string",
+                  "title": "Moving direction",
+                  "enum": [
+                    "",
+                    "MY.movingDirectionN",
+                    "MY.movingDirectionNNE",
+                    "MY.movingDirectionNE",
+                    "MY.movingDirectionENE",
+                    "MY.movingDirectionE",
+                    "MY.movingDirectionESE",
+                    "MY.movingDirectionSE",
+                    "MY.movingDirectionSSE",
+                    "MY.MovingDirectionS",
+                    "MY.movingDirectionSSW",
+                    "MY.movingDirectionSW",
+                    "MY.movingDirectionWSW",
+                    "MY.movingDirectionW",
+                    "MY.movingDirectionWNW",
+                    "MY.movingDirectionNW",
+                    "MY.movingDirectionNNW"
+                  ],
+                  "enumNames": [
+                    "",
+                    "north",
+                    "north-northeast",
+                    "north-east",
+                    "east-northeast",
+                    "east",
+                    "east-southeast",
+                    "south-east",
+                    "south-southeast",
+                    "south",
+                    "south-southwest",
+                    "south-west",
+                    "west-southwest",
+                    "west",
+                    "west-northwest",
+                    "north-west",
+                    "noth-northwest"
+                  ]
+                },
+                "batBehavior": {
+                  "type": "string",
+                  "title": "Bat behavior",
+                  "enum": [
+                    "",
+                    "MY.batBehaviorHibernating",
+                    "MY.batBehaviorRoosting",
+                    "MY.batBehaviorHunting",
+                    "MY.batBehaviorDead"
+                  ],
+                  "enumNames": [
+                    "",
+                    "hibernating",
+                    "roosting",
+                    "hunting",
+                    "dead"
+                  ]
+                },
+                "keywords": {
+                  "type": "array",
+                  "title": "Collection/Keywords",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "additionalIDs": {
+                  "type": "array",
+                  "title": "Additional ID's",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "areaInSquareMeters": {
+                  "type": "integer",
+                  "title": "Occurrence area (m²)"
+                },
+                "audio": {
+                  "type": "array",
+                  "title": "Recordings",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": []
+            },
+            "uniqueItems": false,
+            "minItems": 1
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  "required": []
+}

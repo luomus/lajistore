@@ -1,0 +1,114 @@
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: es-data
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      component: elasticsearch
+      role: data
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: es-data
+  labels:
+    app: elasticsearch
+    component: elasticsearch
+spec:
+  selector:
+    matchLabels:
+      component: elasticsearch
+      role: data
+  serviceName: es-transport
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        component: elasticsearch
+        http: enabled
+        role: data
+    spec:
+      securityContext:
+        runAsUser: 1000720000
+        fsGroup: 1000720000
+      containers:
+        - name: es-data
+          image: luomus/elasticsearch:7.11.2
+          imagePullPolicy: Always
+          env:
+            - name: ES_HOME
+              value: "/usr/share/elasticsearch"
+            - name: ES_JAVA_OPTS
+              value: "-Xms1024m -Xmx1024m"
+            - name: node.store.allow_mmap
+              value: "false"
+            - name: cluster.name
+              value: "store-es-cluster"
+            - name: discovery.seed_hosts
+              value: "es-transport"
+            - name: action.auto_create_index
+              value: ".kibana*,.logstash*,.management*,.monitoring*,.security*,.triggered_watches*,.watcher-history*,.watches*"
+            - name: index.store.type
+              value: "niofs"
+            - name: node.roles
+              value: "data,transform"
+            - name: cluster.initial_master_nodes
+              value: "es-master-0,es-master-1,es-master-2"
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: node.name
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: processors
+              valueFrom:
+                resourceFieldRef:
+                  resource: limits.cpu
+          resources:
+            requests:
+              cpu: "0.1"
+              memory: 1Gi
+            limits:
+              cpu: "0.5"
+              memory: 3Gi
+          ports:
+            - containerPort: 9200
+              name: http
+            - containerPort: 9300
+              name: transport
+          livenessProbe:
+            failureThreshold: 3
+            initialDelaySeconds: 30
+            periodSeconds: 60
+            successThreshold: 1
+            tcpSocket:
+              port: transport
+            timeoutSeconds: 3
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /_cluster/health
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 30
+            periodSeconds: 60
+            successThreshold: 1
+            timeoutSeconds: 6
+          volumeMounts:
+            - name: storage
+              mountPath: /usr/share/elasticsearch/data
+  volumeClaimTemplates:
+    - metadata:
+        name: storage
+        annotations:
+          pv.beta.kubernetes.io/gid: "1000720000"
+      spec:
+        storageClassName: pomppa25
+        accessModes: [ ReadWriteOnce ]
+        resources:
+          requests:
+            storage: 30Gi

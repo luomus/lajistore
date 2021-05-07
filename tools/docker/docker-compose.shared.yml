@@ -1,0 +1,97 @@
+version: '3'
+
+services:
+  rabbit:
+    image: 'rabbitmq:3-management-alpine'
+    hostname: 'rabbit1'
+    environment:
+      RABBITMQ_DEFAULT_VHOST: '/'
+    ports:
+      - '15672:15672'
+      - '5672:5672'
+    restart: on-failure
+    healthcheck:
+      test: [ "CMD-SHELL", "rabbitmq-diagnostics -q ping || exit 1" ]
+      interval: 10s
+      timeout: 10s
+      retries: 7
+
+  elastic-single:
+    image: 'luomus/elasticsearch:7.11.2'
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - http.max_content_length=500mb
+      - "ES_JAVA_OPTS=-Xms4096m -Xmx4096m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - elastic_data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+    restart: on-failure
+    healthcheck:
+      test: ["CMD-SHELL", "curl --silent --fail localhost:9200/_cluster/health || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 18
+
+  elastic-01:
+    image: 'luomus/elasticsearch:7.11.2'
+    environment:
+      - node.name=elastic-01
+      - cluster.name=store-cluster
+      - discovery.seed_hosts=elastic-02,elastic-03
+      - cluster.initial_master_nodes=elastic-01,elastic-02,elastic-03
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - '9200:9200'
+    volumes:
+      - data01:/usr/share/elasticsearch/data
+
+  elastic-02:
+    image: 'luomus/elasticsearch:7.11.2'
+    environment:
+      - node.name=elastic-02
+      - cluster.name=store-cluster
+      - discovery.seed_hosts=elastic-01,elastic-03
+      - cluster.initial_master_nodes=elastic-01,elastic-02,elastic-03
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - data02:/usr/share/elasticsearch/data
+
+  elastic-03:
+    image: 'luomus/elasticsearch:7.11.2'
+    environment:
+      - node.name=elastic-03
+      - cluster.name=store-cluster
+      - discovery.seed_hosts=elastic-01,elastic-02
+      - cluster.initial_master_nodes=elastic-01,elastic-02,elastic-03
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - data03:/usr/share/elasticsearch/data
+

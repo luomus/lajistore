@@ -1,0 +1,18 @@
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "/datasetName/sv",
+      "value": "Testa datasetets namn"
+    },
+    {
+      "op": "add",
+      "path": "/description",
+      "value": {
+        "en": "description",
+        "fi": "kuvaus",
+        "sv": "sv desc"
+      }
+    }
+  ]
+}

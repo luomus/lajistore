@@ -1,0 +1,12 @@
+{
+  "@context": "http://localhost:3000/json-ld-context/GX.dataset.json",
+  "@type": "GX.dataset",
+  "id": "FOOBAR:123",
+  "personsResponsible": "Joku muu",
+  "datasetName": {
+    "en": "Test dataset name",
+    "fi": "Testi datesetti nimi",
+    "sv": "SV"
+  },
+  "datasetType": "GX.datasetTypeProject"
+}

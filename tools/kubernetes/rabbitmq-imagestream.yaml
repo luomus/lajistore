@@ -1,0 +1,20 @@
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: rabbitmq
+  labels:
+    application: rabbitmq
+    template: rabbitmq
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: latest
+      annotations: null
+      from:
+        kind: DockerImage
+        name: 'rabbitmq:latest'
+      generation: 3
+      importPolicy: {}
+      referencePolicy:
+        type: Source

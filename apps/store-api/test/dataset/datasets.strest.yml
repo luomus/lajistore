@@ -1,0 +1,392 @@
+version: 2
+
+variables:
+  testUrl: http://store-api:3000/dataset
+  authorization: 'Basic S0UuMDA3OnBhc3N3b3Jk'
+  authorization_invalid_pw: 'Basic S0UuMDA3OnBhc3N3b3Jkcw=='
+  authorization_no_access: 'Basic S0UuMDA2OnBhc3N3b3Jk'
+  knownID: 'FOOBAR:123'
+
+requests:
+  datasets_list_has_all_needed_fields:
+    request:
+      url: <$ testUrl $>
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+      queryString:
+        - name: page_size
+          value: '1'
+    validate:
+      - jsonpath: content.member
+        type: [array]
+      - jsonpath: content.totalItems
+        type: [number]
+      - jsonpath: content.pageSize # new property
+        expect: 1
+      - jsonpath: content.pageSize # new property
+        type: [number]
+      - jsonpath: content.lastPage # new property
+        type: [number]
+      - jsonpath: content['@type']
+        expect: 'Collection'
+      - jsonpath: content['@context']
+        expect: 'http://www.w3.org/ns/hydra/context.jsonld'
+      - jsonpath: content.view['@id']
+        expect: '<$ testUrl $>?page=1&page_size=1'
+      - jsonpath: content.view['@type']
+        expect: 'PartialCollectionView'
+      - jsonpath: content.view.itemsPerPage
+        expect: '1'
+      - jsonpath: content.view.itemsPerPage
+        type: ['string']
+      - jsonpath: content.view.first
+        expect: '<$ testUrl $>?page=1&page_size=1'
+      - jsonpath: content.view.last
+        type: [string]
+
+  adding_dataset:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/dataset/new-data.json
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content.id
+        type: [string]
+
+  finds_added_with_search:
+    request:
+      url: <$ testUrl $>
+      method: GET
+      queryString:
+        - name: q
+          value: 'id:("1" "2" "<$ adding_dataset.content.id $>" "3" "4")'
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content.member[0].id
+        expect: <$ adding_dataset.content.id $>
+
+  finds_added_with_id:
+    request:
+      url: <$ testUrl $>/<$ adding_dataset.content.id $>
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content.id
+        type: [string]
+
+  clean_the_know_id:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: DELETE
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+
+  406_on_invalid_verb:
+    request:
+      url: <$ testUrl $>
+      method: PUT
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 406
+
+  add_with_id:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/dataset/new-with-id.json
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 201
+
+  finds_added_with_known_id:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content.id
+        expect: <$ knownID $>
+
+  finds_known_added_with_search:
+    request:
+      url: <$ testUrl $>
+      method: GET
+      queryString:
+        - name: q
+          value: 'id:"<$ knownID $>"'
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content.member[0].id
+        expect: <$ knownID $>
+
+  user_without_creaentials_cannot_find_with_id:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: GET
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  user_without_creaentials_cannot_post_search:
+    request:
+      url: <$ testUrl $>/_search
+      method: POST
+      queryString:
+        - name: q
+          value: 'id:"<$ knownID $>"'
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  user_without_creaentials_cannot_search:
+    request:
+      url: <$ testUrl $>
+      method: GET
+      queryString:
+        - name: q
+          value: 'id:"<$ knownID $>"'
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  user_without_credentials_cannot_add_dataset:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/dataset/new-data.json
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  user_without_credentials_cannot_update_dataset:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: PUT
+      json: apps/store-api/test/dataset/new-data.json
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  user_without_credentials_cannot_delete_dataset:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: DELETE
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  user_with_invalid_creaentials_cannot_find_with_id:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization_invalid_pw $>
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  user_with_invalid_creaentials_cannot_post_search:
+    request:
+      url: <$ testUrl $>/_search
+      method: POST
+      headers:
+        - name: authorization
+          value: <$ authorization_invalid_pw $>
+      queryString:
+        - name: q
+          value: 'id:"<$ knownID $>"'
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  user_with_invalid_creaentials_cannot_search:
+    request:
+      url: <$ testUrl $>
+      method: GET
+      queryString:
+        - name: q
+          value: 'id:"<$ knownID $>"'
+      headers:
+        - name: authorization
+          value: <$ authorization_invalid_pw $>
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  user_with_invalid_credentials_cannot_add_dataset:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/dataset/new-data.json
+      headers:
+        - name: authorization
+          value: <$ authorization_invalid_pw $>
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  user_with_invalid_credentials_cannot_update_dataset:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: PUT
+      json: apps/store-api/test/dataset/new-data.json
+      headers:
+        - name: authorization
+          value: <$ authorization_invalid_pw $>
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  user_with_invalid_credentials_cannot_delete_dataset:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: DELETE
+      headers:
+        - name: authorization
+          value: <$ authorization_invalid_pw $>
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  other_cannot_see_with_id:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization_no_access $>
+    validate:
+      - jsonpath: status
+        expect: 404
+
+  other_cannot_see_with_search:
+    request:
+      url: <$ testUrl $>
+      method: GET
+      queryString:
+        - name: q
+          value: 'id:"<$ knownID $>"'
+      headers:
+        - name: authorization
+          value: <$ authorization_no_access $>
+    validate:
+      - jsonpath: content.totalItems
+        expect: 0
+
+  use_patch_to_update_document:
+    request:
+      url: <$ testUrl $>
+      method: PATCH
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+      json: apps/store-api/test/dataset/patch-data.json
+      queryString:
+        - name: q
+          value: 'id:"<$ knownID $>"'
+    validate:
+      - jsonpath: status
+        expect: 200
+      - jsonpath: content.affected
+        expect: 1
+
+  patch_update_document_reflects_the_changes:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content.datasetName.sv
+        expect: 'Testa datasetets namn'
+      - jsonpath: content.datasetName.fi
+        expect: 'Testi datesetti nimi'
+      - jsonpath: content.description.fi
+        expect: 'kuvaus'
+      - jsonpath: content.description.en
+        expect: 'description'
+
+  delete_know_id:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: DELETE
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 200
+      - jsonpath: content.affected
+        expect: 1
+
+  deleted_return_not_found:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 404
+
+  deleted_known_not_found_with_search:
+    request:
+      url: <$ testUrl $>
+      method: GET
+      queryString:
+        - name: q
+          value: 'id:"<$ knownID $>"'
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content.totalItems
+        expect: 0
+
+  can_add_known_id_after_deleting:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/dataset/new-with-id.json
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 201
+
+  cat_redelete_know_id:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: DELETE
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 200
+      - jsonpath: content.affected
+        expect: 1

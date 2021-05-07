@@ -1,0 +1,24 @@
+{
+  "xsd:string": { "type": "string" },
+  "xsd:integer": { "type": "integer" },
+  "xsd:decimal": { "type": "number" },
+  "xsd:boolean": { "type": "boolean" },
+  "xsd:positiveInteger": { "type": "integer", "exclusiveMinimum": 0 },
+  "xsd:nonNegativeInteger": { "type": "integer", "minimum": 0 },
+  "xsd:dateTime": { "type": "string", "format": "date-time" },
+  "xsd:date": { "type": "string", "format": "date" },
+  "xsd:time": { "type": "string", "format": "time" },
+  "xsd:anyURI": { "type": "string" },
+  "rdfs:Resource": { "type": "string" },
+  "MZ.keyValue": {
+    "type": "object",
+    "additionalProperties": { "type": "string" }
+  },
+  "MZ.keyAny": { "type": "object" },
+  "MZ.geometry": {
+    "anyOf": [
+      { "$ref": "https://geojson.org/schema/Geometry.json" },
+      { "$ref": "https://geojson.org/schema/GeometryCollection.json" }
+    ]
+  }
+}
