@@ -21,6 +21,10 @@ oc apply -f tools/kubernetes/es-statefulset-data.yaml
 
 ## RabbitMQ
 
+Deployment configs can be found [here](https://github.com/redhat-cop/containers-quickstarts/tree/master/rabbitmq).
+Unfortunately there is a [bug](https://github.com/redhat-cop/containers-quickstarts/issues/490) that prevents using them directly.
+Luckily there is a [PR](https://github.com/redhat-cop/containers-quickstarts/pull/491) to fix it and ones it's merged the template provided there can be used instead of this:  
+
 ```shell
 # Build the image
 cd tools/docker/rabbitmq
@@ -30,6 +34,7 @@ cd ../../..
 oc apply -f tools/kubernetes/rabbitmq-configmap.yaml
 oc apply -f tools/kubernetes/rabbitmq-imagestream.yaml
 oc apply -f tools/kubernetes/rabbitmq-service.yaml
+oc apply -f tools/kubernetes/rabbitmq-rolebinding.yaml
 oc apply -f tools/kubernetes/rabbitmq-statefulset.yaml
 ```
 

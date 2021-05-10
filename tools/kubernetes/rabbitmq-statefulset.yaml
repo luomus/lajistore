@@ -76,7 +76,10 @@ spec:
             - name: K8S_HOSTNAME_SUFFIX
               value: .$(K8S_SERVICE_NAME).$(MY_POD_NAMESPACE).svc.cluster.local
             - name: RABBITMQ_ERLANG_COOKIE
-              value: sup3rS3cr1+
+              valueFrom:
+                secretKeyRef:
+                  key: RABBITMQ_ERLANG_COOKIE
+                  name: store-config
             - name: RABBITMQ_NODENAME
               value: >-
                 rabbit@$(MY_POD_NAME).$(K8S_SERVICE_NAME).$(MY_POD_NAMESPACE).svc.cluster.local

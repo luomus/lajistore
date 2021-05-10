@@ -20,8 +20,9 @@ ENV GPG_KEY="0A9AF2115F4687BD29803A206B73A36E6026DFCA" \
     RABBITMQ_HOME=/opt/rabbitmq \
     RABBITMQ_LOGS=- \
     RABBITMQ_SASL_LOGS=- \
-    LANG=en_US.UTF-8 \
-    LANGUAGE=en_US.:en
+    LANG=C.UTF-8 \
+    LANGUAGE=C.UTF-8 \
+    LC_ALL=C.UTF-8
 
 RUN set -xe && \
     microdnf install ${INSTALL_PKGS} && \
