@@ -21,3 +21,6 @@ spec:
       targetPort: 15692
   selector:
     application: rabbitmq
+  clusterIP: None
+  type: ClusterIP
+  sessionAffinity: None

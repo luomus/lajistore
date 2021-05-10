@@ -33,14 +33,17 @@ oc start-build rabbitmq --from-dir=./ --follow
 cd ../../..
 oc apply -f tools/kubernetes/rabbitmq-configmap.yaml
 oc apply -f tools/kubernetes/rabbitmq-imagestream.yaml
-oc apply -f tools/kubernetes/rabbitmq-service.yaml
 oc apply -f tools/kubernetes/rabbitmq-rolebinding.yaml
 oc apply -f tools/kubernetes/rabbitmq-statefulset.yaml
+oc apply -f tools/kubernetes/rabbitmq-service.yaml
 ```
 
 ## Store-API 
 
-Login to openshift and then run the following commands
+Login to openshift and then run the following commands.
+** PLZ note ** that if you're doing redeployment you can use the `tools/scripts/deploy-store-(staging|production).sh` script
+(only for the first deployment you need to follow these steps).
+For production replace `-test-` with `-prod-` in all the addresses bellow.
 
 ```shell
 # Create image stream
@@ -69,7 +72,7 @@ oc apply -f tools/kubernetes/store-api-service.yaml
 
 1. Run the following commands:
 ```shell
-oc create imagestream store-api
+oc create imagestream store-worker
 docker build -t store-worker -f tools/docker/store/Dockerfile --target worker --build-arg STORE_VERSION=worker .
 docker tag store-worker registry.apps.ocp-test-0.k8s.it.helsinki.fi/lajistore-api/store-worker:latest
 docker login -u `oc whoami` -p `oc whoami --show-token` registry.apps.ocp-test-0.k8s.it.helsinki.fi/lajistore-api
@@ -87,19 +90,18 @@ docker tag store-cli registry.apps.ocp-test-0.k8s.it.helsinki.fi/lajistore-api/s
 docker push registry.apps.ocp-test-0.k8s.it.helsinki.fi/lajistore-api/store-cli
 oc apply -f tools/kubernetes/store-cli-statefulset.yaml
 
-# After this there will be a pod named store-cli running and that can be used to run the cli commands
-# get the name of the CLI pod
-oc get pods | grep [c]li
+# After this there will be a pod named store-cli-0 running and that can be used to run the cli commands
+# Run the following to access cli
+oc rsh store-cli-0
+/bin/bash
 
 # get the list of all available cli commands you can run node main.js command.
-# If you run it using the oc replace the pod name with the one that you have. 
-oc exec store-cli-0 -- node main.js --help
-# store-cli-0 is the pod name here
+node main.js --help
 
 # to get the help for a specific command you can run
-oc exec store-cli-0 -- node main.js <command> --help
+node main.js <command> --help
 # ex.
-oc exec store-cli-0 -- node main.js index --help
+node main.js index --help
 
 # If you run the commands using the web interface just leave the "--" and everything before it away
 ```

@@ -12,9 +12,10 @@ spec:
   host: store-dev.luomus.fi
   to:
     kind: Service
-    name: nginx
+    name: store-api
+    weight: 100
   port:
-    targetPort: '8080'
+    targetPort: '3000'
   tls:
     termination: edge
     certificate: >-
