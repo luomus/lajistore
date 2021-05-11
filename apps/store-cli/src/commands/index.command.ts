@@ -3,12 +3,11 @@ import { Command, Console, createSpinner } from 'nestjs-console';
 import { StoreSearchService } from '@luomus/store/search';
 import type { Document } from '@luomus/store/database';
 
-const PAGE_SIZE = 1000;
-
 interface IndexOptions {
   id?: string[];
   type?: string;
   source?: string;
+  size?: string;
   removeDeleted?: boolean;
 }
 
@@ -26,12 +25,16 @@ export class IndexCommand {
     description: 'Reindex documents to search index',
     options: [
       {
-        flags: '-s, --source <source>',
+        flags: '--source <source>',
         description: 'Source id',
         required: false
       },{
-        flags: '-t, --type <type>',
+        flags: '--type <type>',
         description: 'Type of the document',
+        required: false
+      },{
+        flags: '--size <size>',
+        description: 'The size of the batch to be send for indexing at ones (defaults to 1000)',
         required: false
       },{
         flags: '--id <id...>',
@@ -45,19 +48,20 @@ export class IndexCommand {
     ],
   })
   async indexAll(command: IndexOptions) {
-    const {removeDeleted, ...where} = command;
+    const {removeDeleted, size, ...where} = command;
     const spin = createSpinner();
+    const batchSize = Math.max(Number(size) || 1000, 1);
 
     spin.start(`Indexing`);
 
     try {
       const total = await this.documentService.count({where})
-      const pages = Math.ceil(total / PAGE_SIZE);
+      const pages = Math.ceil(total / batchSize);
 
       for (let page = 0; page <= pages; page++) {
-        spin.start(`Indexing (${page * PAGE_SIZE}/${total})`);
+        spin.start(`Indexing (${page * batchSize}/${total})`);
 
-        const documents = await this.documentService.findAll({where, skip: page * PAGE_SIZE, take: PAGE_SIZE});
+        const documents = await this.documentService.findAll({where, skip: page * batchSize, take: batchSize});
         const { data, sources } = IndexCommand.extractSources(documents);
 
         for (const source of sources) {
@@ -69,12 +73,11 @@ export class IndexCommand {
       spin.fail(`Failed to index data!!! ${e.message}`);
     }
     if (removeDeleted) {
-      await this.removeDeleted(where);
+      await this.removeDeleted(where, batchSize);
     }
   }
 
-  async removeDeleted(where: Omit<IndexOptions, 'removeDeleted'>) {
-    const removeBatchSize = 1000;
+  private async removeDeleted(where: Omit<IndexOptions, 'removeDeleted'>, removeBatchSize = 1000) {
     const spin = createSpinner();
 
     spin.start(`Removing deleted`);
@@ -99,7 +102,7 @@ export class IndexCommand {
             (where.source && where.source !== document.source) ||
             (where.id && !where.id.includes(document.id))
           ) {
-            break;
+            continue;
           }
           if (!data[document.source]) {
             data[document.source] = {};
