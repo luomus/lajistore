@@ -1,6 +1,6 @@
 {
   "settings": {
-    "number_of_shards": 1,
+    "number_of_shards": 3,
     "index.mapping.ignore_malformed": true,
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000
@@ -20,27 +20,15 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
@@ -49,27 +37,15 @@
       },
       "owner": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "rootTaxon": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "rdfs:comment": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "_meta": {
         "properties": {

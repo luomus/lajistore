@@ -1,6 +1,6 @@
 {
   "settings": {
-    "number_of_shards": 1,
+    "number_of_shards": 3,
     "index.mapping.ignore_malformed": true,
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000
@@ -18,134 +18,75 @@
       },
       "URL": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "abbreviation": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "abbreviationExplanation": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "ad": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "contentContact": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "country": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "datasetID": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "dateOrdersDue": {
         "type": "date"
       },
       "editNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "email": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "fax": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "hidden": {
         "type": "boolean"
       },
       "locality": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "logo": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "notes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "organizationLevel1": {
         "properties": {
           "en": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
@@ -153,27 +94,15 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
@@ -181,27 +110,15 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
@@ -209,80 +126,45 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
       "phone": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "postOfficeBox": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "postalCode": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "region": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "streetAddress": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "contentContactID": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "creator": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "dateCreated": {
         "type": "date"
@@ -292,19 +174,11 @@
       },
       "editor": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "owner": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "_meta": {
         "properties": {

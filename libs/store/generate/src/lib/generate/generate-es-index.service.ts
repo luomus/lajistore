@@ -5,9 +5,10 @@ import { StoreSearchObject } from '@luomus/store/interface';
 import { StoreConfigService } from '@luomus/store/config';
 import { FileService, JsonSchemaService } from '@luomus/store/shared';
 
-const MULTI_LANG = '_MULTI_LANG_';
-const DEFAULT_MAPPING = '_DEFAULT_';
-const NESTED_MAPPING = '_NESTED_';
+const MAPPING_MULTI_LANG = '_MULTI_LANG_';
+const MAPPING_DEFAULT = '_DEFAULT_';
+const MAPPING_NESTED = '_NESTED_';
+const MAPPING_ENUM = '_ENUM_';
 
 @Injectable()
 export class GenerateEsIndexService extends AbstractSchemaGenerateService {
@@ -85,12 +86,16 @@ export class GenerateEsIndexService extends AbstractSchemaGenerateService {
 
   private getMapping(prop: string, property: JSONSchema4) {
     const range: string = property['range'];
-    const type: string = (Array.isArray(property.type) ? property.type[0] : property.type) || '';
+    const items: JSONSchema4 | undefined = property.items;
+    const propType = (Array.isArray(property.type) ? property.type[0] : property.type) || '';
+    const type: string = propType === 'array' && items && typeof items.type === 'string' ?
+      items.type :
+      propType;
 
     if (this.mapping[prop]) {
       return this.mapping[prop];
     } else if (JsonSchemaService.isMultiLang(property, this.languages)) {
-      const langBase = this.mapping[MULTI_LANG] ?? { properties: {} };
+      const langBase = this.mapping[MAPPING_MULTI_LANG] ?? { properties: {} };
       for (const lang of this.languages) {
         if (property?.properties?.[lang]) {
           langBase.properties[lang] = this.getMapping(
@@ -102,9 +107,11 @@ export class GenerateEsIndexService extends AbstractSchemaGenerateService {
       return langBase;
     } else if (JsonSchemaService.isEmbedded(property)) {
       const isMulti = property.type === 'array';
-      const objBase = {...(isMulti
-        ? (this.mapping[NESTED_MAPPING] ?? { properties: {} })
-        : { properties: {} })};
+      const objBase = {
+        ...(isMulti
+          ? (this.mapping[MAPPING_NESTED] ?? { properties: {} })
+          : { properties: {} })
+      };
       const properties = isMulti
         ? (property.items as JSONSchema4).properties
         : property.properties;
@@ -119,12 +126,14 @@ export class GenerateEsIndexService extends AbstractSchemaGenerateService {
         }
       }
       return objBase;
+    } else if (JsonSchemaService.isEnumeration(property)) {
+      return this.mapping[MAPPING_ENUM];
     } else if (this.mapping[range]) {
       return this.mapping[range];
     } else if (this.mapping[type]) {
       return this.mapping[type];
-    } else if (this.mapping[DEFAULT_MAPPING]) {
-      return this.mapping[DEFAULT_MAPPING];
+    } else if (this.mapping[MAPPING_DEFAULT]) {
+      return this.mapping[MAPPING_DEFAULT];
     }
   }
 }

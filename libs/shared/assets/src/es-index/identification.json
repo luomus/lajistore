@@ -1,6 +1,6 @@
 {
   "settings": {
-    "number_of_shards": 1,
+    "number_of_shards": 3,
     "index.mapping.ignore_malformed": true,
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000
@@ -21,188 +21,102 @@
       },
       "associatedObservationTaxa": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "author": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "det": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "detDate": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "detMethod": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "detVerbatim": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "genusQualifier": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "identificationBasis": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "identificationNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "infraAuthor": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "infraEpithet": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "infraRank": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "infrasubspecificSubdivision": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "isPartOf": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 100
       },
       "isTaxonGroup": {
         "type": "boolean"
       },
       "preferredIdentification": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "sec": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "speciesQualifier": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "taxon": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "taxonID": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "taxonRank": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "taxonSpecifier": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "taxonURI": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "taxonVerbatim": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "publicityRestrictions": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "sortOrder": {
         "type": "integer"

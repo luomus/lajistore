@@ -1,6 +1,6 @@
 {
   "settings": {
-    "number_of_shards": 1,
+    "number_of_shards": 3,
     "index.mapping.ignore_malformed": true,
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000
@@ -18,124 +18,68 @@
       },
       "DBH": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "DNASampleLocation": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "abundanceString": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "abundanceUnit": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "additionalIDs": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "adultIndividualCount": {
         "type": "integer"
       },
       "age": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "ageNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "alive": {
         "type": "boolean"
       },
       "ankleInMillimeters": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "areaInSquareMeters": {
         "type": "integer"
       },
       "atlasCode": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "batBehavior": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "beakInMillimeters": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "birdAge": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "birdBehavior": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "birdPlumage": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "breeding": {
         "type": "boolean"
@@ -145,238 +89,138 @@
       },
       "causeOfDeath": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "checklistID": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "chemistry": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "count": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "decayStage": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "distance": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "earliestEpochOrLowestSeries": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "femaleIndividualCount": {
         "type": "integer"
       },
       "fruitType": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "genotype": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "gonadInMillimeters": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "growthMediumName": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "growthOtherConditions": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "growthTemperature": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "hasIdentification": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hasSubUnit": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hostID": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "hostInformalNameString": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "indirectObservationType": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "individualCount": {
         "type": "integer"
       },
       "infestation": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "informalNameString": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "informalTaxonGroup": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "informalTaxonGroups": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "infrasubspecificSubdivision": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "isPartOf": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 100
       },
       "juvenileIndividualCount": {
         "type": "integer"
       },
       "keywords": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "larvaIndividualCount": {
         "type": "integer"
       },
       "latestEpochOrHighestSeries": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "lengthInMillimeters": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "lifeStage": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "lifeStageDescription": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "likelyMigrant": {
         "type": "boolean"
       },
       "macroscopy": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "maleIndividualCount": {
         "type": "integer"
@@ -429,7 +273,8 @@
             "type": "float"
           },
           "isPartOf": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 100
           },
           "tailCentimeters": {
             "type": "float"
@@ -468,78 +313,42 @@
       },
       "microbiologicalRiskGroup": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "microscopy": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "movingDirection": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "movingStatus": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "mutant": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "nativeStatus": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "nestCount": {
         "type": "integer"
       },
       "nestNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "nestType": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "notes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "pairCount": {
         "type": "integer"
@@ -549,220 +358,119 @@
       },
       "plantLifeStage": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "plantStatusCode": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "populationAbundance": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "preparations": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "preservation": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "provenance": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "recordBasis": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "recordParts": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "ring": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "samplingMethod": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "samplingMethodNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "seedMaturity": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "seedMorphology": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "sex": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "sexNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "shortHandText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "smell": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "smellNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "substrateClassification": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "substrateDecayStage": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "substrateNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "substrateSpecies": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "substrateSpeciesID": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "substrateSpeciesInformalNameString": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "substrateTreeClassification": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "tailInMillimeters": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "taste": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "tasteNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "taxonConfidence": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "twitched": {
         "type": "boolean"
@@ -780,19 +488,11 @@
           },
           "autocompleteSelectedTaxonID": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "glowWormMicrohabitat": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "individualCountFlock": {
             "type": "integer"
@@ -805,51 +505,27 @@
           },
           "lineTransectObsType": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "lineTransectRouteFieldType": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "lolifeDroppingsCount": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "lolifeDroppingsQuality": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "lolifeDroppingsType": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "lolifeNestTree": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "pairCountInner": {
             "type": "integer"
@@ -859,30 +535,18 @@
           },
           "pointCountFlock": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "runningWaterInVicinity": {
             "type": "boolean"
           },
           "waterbirdFemale": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "waterbirdJuvenileAgeClass": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "waterbirdJuvenileCountAccurate": {
             "type": "boolean"
@@ -892,11 +556,7 @@
           },
           "waterbirdPairCountOpinionReasoning": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "individualCountBiotopeA": {
             "type": "integer"
@@ -937,19 +597,11 @@
           },
           "dateBegin": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "dateEnd": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "geometry": {
             "type": "geo_shape",
@@ -958,78 +610,48 @@
           },
           "habitatDescription": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "habitatIUCN": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "substrate": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
       "unitType": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "weightInGrams": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "wild": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "wingInMillimeters": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "audio": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "images": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "publicityRestrictions": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "identifications": {
-        "type": "nested",
+        "type": "object",
         "properties": {
           "id": {
             "type": "keyword"
@@ -1045,188 +667,102 @@
           },
           "associatedObservationTaxa": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "author": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "det": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "detDate": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "detMethod": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "detVerbatim": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "genusQualifier": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "identificationBasis": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           },
           "identificationNotes": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "infraAuthor": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "infraEpithet": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "infraRank": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "infrasubspecificSubdivision": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "isPartOf": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 100
           },
           "isTaxonGroup": {
             "type": "boolean"
           },
           "preferredIdentification": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sec": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "speciesQualifier": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "taxon": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "taxonID": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "taxonRank": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "taxonSpecifier": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "taxonURI": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "taxonVerbatim": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "publicityRestrictions": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "sortOrder": {
             "type": "integer"
@@ -1234,7 +770,7 @@
         }
       },
       "typeSpecimens": {
-        "type": "nested",
+        "type": "object",
         "properties": {
           "id": {
             "type": "keyword"
@@ -1246,111 +782,60 @@
             "type": "keyword"
           },
           "isPartOf": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 100
           },
           "typeAuthor": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "typeBasionymePubl": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "typeNotes": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "typePubl": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "typeSeriesID": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "typeSpecies": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "typeStatus": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "typeSubspecies": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "typeSubspeciesAuthor": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "typeVerification": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "typif": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "typifDate": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "publicityRestrictions": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           }
         }
       },

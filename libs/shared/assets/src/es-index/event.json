@@ -1,6 +1,6 @@
 {
   "settings": {
-    "number_of_shards": 1,
+    "number_of_shards": 3,
     "index.mapping.ignore_malformed": true,
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000
@@ -18,65 +18,37 @@
       },
       "agent": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "amount": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "amountEstimationUnit": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "branchID": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "date": {
         "type": "date"
       },
       "eRH": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "estimatedSeedQuantity": {
         "type": "integer"
       },
       "eventType": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "germinationConditions": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "germinationPercentage": {
         "type": "integer"
@@ -86,19 +58,11 @@
       },
       "lifeStage": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "notes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "numberOfSeedsEmpty": {
         "type": "integer"
@@ -123,11 +87,7 @@
       },
       "seedsExchangedInstitution": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "testPassed": {
         "type": "boolean"

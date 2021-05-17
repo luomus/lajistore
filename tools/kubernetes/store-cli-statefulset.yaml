@@ -77,7 +77,7 @@ spec:
                   key: RABBITMQ_PASSWORD_API
                   name: store-config
       restartPolicy: Always
-      terminationGracePeriodSeconds: 60
+      terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
       securityContext: { }
   podManagementPolicy: OrderedReady

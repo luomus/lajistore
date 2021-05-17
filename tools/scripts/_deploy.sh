@@ -68,12 +68,21 @@ done
 
 echo ""
 echo ""
+echo "Update elasticsearch indexes"
+echo ""
+echo "plz note that if the index has changed enough for reindexing to happen"
+echo "this step can take really long time!"
+echo ""
+echo "You can follow the progress with command:"
+echo "oc exec es-master-0 curl localhost:9200/_cat/indices"
+echo ""
+oc exec -i -t store-cli-0 -- node main.js index-update
+
+echo ""
+echo ""
 echo "********************************"
 echo "*                              *"
 echo "*          DEPLOYED            *"
 echo "*                              *"
 echo "********************************"
 echo ""
-
-
-

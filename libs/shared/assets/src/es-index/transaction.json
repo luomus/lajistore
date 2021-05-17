@@ -1,6 +1,6 @@
 {
   "settings": {
-    "number_of_shards": 1,
+    "number_of_shards": 3,
     "index.mapping.ignore_malformed": true,
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000
@@ -18,270 +18,146 @@
       },
       "IRCC": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "availableForGeneticResearch": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "availableForGeneticResearchNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "away": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "collectionID": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "correspondenceHeaderOrganizationCode": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "correspondentOrganization": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "correspondentPerson": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "dueDate": {
         "type": "date"
       },
       "editNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "externalTransactionID": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "geneticResourceAcquisitionCountry": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "geneticResourceAcquisitionDate": {
         "type": "date"
       },
       "geneticResourceDescription": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "geneticResourceRightsAndObligations": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "geneticResourceSource": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "geneticResourceType": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "hasIRCC": {
         "type": "boolean"
       },
       "ids": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "internalRemarks": {
         "properties": {
           "en": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
       "localDepartment": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "localPerson": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "localPersonEmail": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "localResearcher": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "material": {
         "properties": {
           "en": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
       "missing": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "oldLoanID": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "publicRemarks": {
         "properties": {
           "en": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
@@ -290,58 +166,34 @@
       },
       "resourceImported": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "returned": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "sentParcels": {
         "properties": {
           "en": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
       "sentType": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "transactionEvents": {
-        "type": "nested",
+        "type": "object",
         "properties": {
           "id": {
             "type": "keyword"
@@ -357,22 +209,14 @@
           },
           "eventHandler": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "eventType": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "items": {
-            "type": "nested",
+            "type": "object",
             "properties": {
               "id": {
                 "type": "keyword"
@@ -385,75 +229,43 @@
               },
               "collectionID": {
                 "type": "keyword",
-                "fields": {
-                  "s": {
-                    "type": "text"
-                  }
-                }
+                "ignore_above": 200
               },
               "itemCount": {
                 "type": "integer"
               },
               "itemID": {
                 "type": "keyword",
-                "fields": {
-                  "s": {
-                    "type": "text"
-                  }
-                }
+                "ignore_above": 200
               },
               "itemLabel": {
                 "type": "keyword",
-                "fields": {
-                  "s": {
-                    "type": "text"
-                  }
-                }
+                "ignore_above": 200
               },
               "itemType": {
                 "type": "keyword",
-                "fields": {
-                  "s": {
-                    "type": "text"
-                  }
-                }
+                "ignore_above": 100
               },
               "notes": {
                 "type": "keyword",
-                "fields": {
-                  "s": {
-                    "type": "text"
-                  }
-                }
+                "ignore_above": 200
               },
               "status": {
                 "type": "keyword",
-                "fields": {
-                  "s": {
-                    "type": "text"
-                  }
-                }
+                "ignore_above": 100
               }
             }
           },
           "notes": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "numberOfPackages": {
             "type": "integer"
           },
           "sentBy": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           }
         }
       },
@@ -468,19 +280,11 @@
       },
       "transactionStatus": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "transactionType": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "underNagoya": {
         "type": "boolean"
@@ -490,11 +294,7 @@
       },
       "damaged": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "damagedOther": {
         "type": "integer"
@@ -507,11 +307,7 @@
       },
       "creator": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "dateCreated": {
         "type": "date"
@@ -521,30 +317,18 @@
       },
       "editor": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "owner": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "publicityRestrictions": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "permits": {
-        "type": "nested",
+        "type": "object",
         "properties": {
           "id": {
             "type": "keyword"
@@ -560,41 +344,26 @@
           },
           "permitFile": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "permitNotes": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "permitStartDate": {
             "type": "date"
           },
           "permitStatus": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "permitType": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 100
           },
           "isPartOf": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 100
           }
         }
       },

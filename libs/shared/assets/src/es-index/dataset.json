@@ -1,6 +1,6 @@
 {
   "settings": {
-    "number_of_shards": 1,
+    "number_of_shards": 3,
     "index.mapping.ignore_malformed": true,
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000
@@ -18,123 +18,67 @@
       },
       "benefitsDerivedAndShared": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "datasetName": {
         "properties": {
           "en": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
       "datasetType": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "description": {
         "properties": {
           "en": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
       "personsResponsible": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "researchCollaborator": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "researchFundingDuration": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "researchFundingRecipient": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "researchFundingSource": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "creator": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "dateCreated": {
         "type": "date"
@@ -144,19 +88,11 @@
       },
       "editor": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "owner": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "_meta": {
         "properties": {

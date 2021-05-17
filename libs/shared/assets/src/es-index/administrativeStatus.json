@@ -1,6 +1,6 @@
 {
   "settings": {
-    "number_of_shards": 1,
+    "number_of_shards": 3,
     "index.mapping.ignore_malformed": true,
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000
@@ -19,26 +19,32 @@
       "administrativeStatusDescription": {
         "properties": {
           "en": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           },
           "fi": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           },
           "sv": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           }
         }
       },
       "administrativeStatusLink": {
         "properties": {
           "en": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           },
           "fi": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           },
           "sv": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           }
         }
       },

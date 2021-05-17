@@ -7,8 +7,9 @@ interface IndexOptions {
   id?: string[];
   type?: string;
   source?: string;
-  size?: string;
   removeDeleted?: boolean;
+  size?: string;
+  skip?: string;
 }
 
 @Console()
@@ -19,6 +20,33 @@ export class IndexCommand {
     private readonly documentService: DocumentService,
     private readonly documentHistoryService: DocumentHistoryService,
   ) {}
+
+  @Command({
+    command: 'index-update',
+    description: 'Update all indexes to new mappings'
+  })
+  async updateIndexes() {
+    const failed = [];
+    const spin = createSpinner();
+    const indexes = await this.searchService.getAllIndexes();
+
+    for (const index of indexes) {
+      spin.start(`Updating ${index}...`);
+      try {
+        await this.searchService.updateIndex(index);
+      } catch (e) {
+        failed.push(index);
+        console.log('');
+        console.log(e);
+      }
+    }
+
+    if (failed.length) {
+      spin.fail(`Failed to update: ${failed.join(', ')}`)
+      throw new Error('Updating index failed!');
+    }
+    spin.succeed(`All updated`);
+  }
 
   @Command({
     command: 'index',
@@ -33,10 +61,6 @@ export class IndexCommand {
         description: 'Type of the document',
         required: false
       },{
-        flags: '--size <size>',
-        description: 'The size of the batch to be send for indexing at ones (defaults to 1000)',
-        required: false
-      },{
         flags: '--id <id...>',
         description: 'ID for the document',
         required: false
@@ -44,13 +68,22 @@ export class IndexCommand {
         flags: '--remove-deleted',
         description: 'Remove deleted documents from the index. Please note that this is quite slow operation',
         required: false
+      },{
+        flags: '--size <size>',
+        description: 'The size of the batch to be send for indexing at ones (defaults to 1000)',
+        required: false
+      },{
+        flags: '--skip <skip>',
+        description: 'Skips the first n documents (defaults to 0). Internally this is flooring to the batch that would have the next document',
+        required: false
       },
     ],
   })
   async indexAll(command: IndexOptions) {
-    const {removeDeleted, size, ...where} = command;
+    const {removeDeleted, size, skip, ...where} = command;
     const spin = createSpinner();
     const batchSize = Math.max(Number(size) || 1000, 1);
+    const startPage = Math.floor(Math.max(Number(skip) || 0, 0) / batchSize);
 
     spin.start(`Indexing`);
 
@@ -58,8 +91,8 @@ export class IndexCommand {
       const total = await this.documentService.count({where})
       const pages = Math.ceil(total / batchSize);
 
-      for (let page = 0; page <= pages; page++) {
-        spin.start(`Indexing (${page * batchSize}/${total})`);
+      for (let page = startPage; page <= pages; page++) {
+        spin.start(`Indexing (${Math.min(page * batchSize, total)}/${total})`);
 
         const documents = await this.documentService.findAll({where, skip: page * batchSize, take: batchSize});
         const { data, sources } = IndexCommand.extractSources(documents);

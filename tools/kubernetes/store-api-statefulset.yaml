@@ -99,7 +99,7 @@ spec:
             successThreshold: 1
             timeoutSeconds: 6
       restartPolicy: Always
-      terminationGracePeriodSeconds: 60
+      terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
       securityContext: { }
   podManagementPolicy: OrderedReady

@@ -12,7 +12,7 @@ if [[ -z "${SYSTEM_ID}" || -z "${SYSTEM_PASSWORD}" ]]; then
   echo "Both SYSTEM_ID and SYSTEM_PASSWORD are missing"
 else
   #echo "Adding system ${SYSTEM_ID}"
-  #npm run store:cli user ${SYSTEM_ID} ${SYSTEM_PASSWORD}
+  npm run store:cli user ${SYSTEM_ID} ${SYSTEM_PASSWORD}
 
   for FILENAME in ${DATA_FILES}; do
       [ -e "${FILENAME}" ] || continue

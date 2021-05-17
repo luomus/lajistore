@@ -1,6 +1,6 @@
 {
   "settings": {
-    "number_of_shards": 1,
+    "number_of_shards": 3,
     "index.mapping.ignore_malformed": true,
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000
@@ -21,320 +21,183 @@
       },
       "primaryHabitat": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "secondaryHabitat": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "additionalID": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "algalPartnerOfLichen": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "alsoKnownAs": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "alternativeVernacularName": {
         "properties": {
           "en": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           },
           "fi": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           },
           "sv": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           }
         }
       },
       "behaviour": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "birdlifeCode": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "breedingSecureLevel": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "circumscription": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "colloquialVernacularName": {
         "properties": {
           "en": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           },
           "fi": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           },
           "sv": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           }
         }
       },
       "conservationStatusDescriptionFinland": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "conservationStatusDescriptionWorld": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "cultivationText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "customReportFormLink": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionCone": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionFlower": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionFruitAndSeed": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionFruitbody": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionHostParasite": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionLeaf": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionMicroscopicIdentification": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionOrganismSize": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionReferences": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionRoot": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionSporangiumAndAsexualReproduction": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionSpore": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionStem": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionThallus": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "descriptionToxicity": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "distributionFinland": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "distributionMapFinland": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "ecology": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "economicUseText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "etymologyText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "euringCode": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "euringNumber": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "externalLinkURL": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "finnish": {
         "type": "boolean"
@@ -344,377 +207,244 @@
       },
       "growthFormAndGrowthHabit": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "habitat": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "habitatSubstrate": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "hasAdminStatus": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hasAlternativeName": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hasBasionym": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hasHeterotypicSynonym": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hasHomotypicSynonym": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hasMisappliedName": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hasMisspelledName": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hasObjectiveSynonym": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hasOrthographicVariant": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hasSubjectiveSynonym": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hasSynonym": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hasUncertainSynonym": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "hiddenTaxon": {
         "type": "boolean"
       },
       "identificationText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "ingressText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "invasiveCitizenActionsText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "invasiveEffectText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "invasivePreventionMethodsText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "invasiveSpeciesCategory": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "invasiveSpeciesClassificationDescription": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "invasiveSpeciesEarlyWarning": {
         "type": "boolean"
       },
       "invasiveSpeciesEstablishment": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "isPartOf": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "isPartOfInformalTaxonGroup": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "isPartOfSet": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "lifeCycle": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "management": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "miscText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "nameAccordingTo": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "nameDecidedBy": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "nameDecidedDate": {
         "type": "date"
       },
       "naturaAreaSecureLevel": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "nestSiteSecureLevel": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "notes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "obsoleteVernacularName": {
         "properties": {
           "en": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           },
           "fi": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           },
           "sv": {
-            "type": "keyword"
+            "type": "keyword",
+            "ignore_above": 200
           }
         }
       },
       "occurrenceInFinland": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "occurrenceInFinlandPublication": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "occurrenceInFinlandSpecimenURI": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "originAndDistributionText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "originalDescription": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "originalPublication": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "overridingTargetName": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "privateNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "productionText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "redListStatus2000Finland": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "redListStatus2010Finland": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "redListStatus2015Finland": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "redListStatus2019Finland": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "reproduction": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "reproductionFloweringTime": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "reproductionPollination": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "scientificName": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "scientificNameAuthorship": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "secureLevel": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "speciesCardAuthors": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "stopOccurrenceInFinlandPublicationInheritance": {
         "type": "boolean"
@@ -724,104 +454,63 @@
       },
       "targetName": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "taxonEditor": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "taxonExpert": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "taxonRank": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "taxonomyText": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "tradeName": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "typeOfOccurrenceInFinland": {
-        "type": "keyword"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "typeOfOccurrenceInFinlandNotes": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "typeSpecimenURI": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "vernacularName": {
         "properties": {
           "en": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
-            "fields": {
-              "s": {
-                "type": "text"
-              }
-            }
+            "ignore_above": 200
           }
         }
       },
       "winteringSecureLevel": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 100
       },
       "createdAtTimestamp": {
         "type": "keyword",
-        "fields": {
-          "s": {
-            "type": "text"
-          }
-        }
+        "ignore_above": 200
       },
       "sortOrder": {
         "type": "integer"

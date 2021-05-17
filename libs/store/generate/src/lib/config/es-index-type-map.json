@@ -2,8 +2,8 @@
   "id": { "type": "keyword" },
   "@context": { "type": "keyword" },
   "@type": { "type": "keyword" },
-  "string": { "type": "keyword", "fields": { "s": { "type": "text" } } },
-  "xsd:string": { "type": "keyword", "fields": { "s": { "type": "text" } } },
+  "string": { "type": "keyword", "ignore_above": 200 },
+  "xsd:string": { "type": "keyword", "ignore_above": 200 },
   "xsd:integer": { "type": "integer" },
   "xsd:decimal": { "type": "float" },
   "xsd:boolean": { "type": "boolean" },
@@ -12,11 +12,12 @@
   "xsd:dateTime": { "type": "date" },
   "xsd:date": { "type": "date" },
   "xsd:time": { "type": "date" },
-  "xsd:anyURI": { "type": "keyword" },
-  "rdfs:Resource": { "type": "keyword" },
+  "xsd:anyURI": { "type": "keyword", "ignore_above": 200 },
+  "rdfs:Resource": { "type": "keyword", "ignore_above": 200 },
   "MZ.keyValue": { "type": "object", "enabled": false },
   "MZ.keyAny": { "type": "object", "enabled": false },
   "MZ.geometry": { "type": "geo_shape", "ignore_malformed": true, "coerce": true},
-  "_NESTED_": { "type": "nested" },
-  "_DEFAULT_": { "type": "keyword" }
+  "_ENUM_": { "type": "keyword", "ignore_above": 200 },
+  "_NESTED_": { "type": "object" },
+  "_DEFAULT_": { "type": "keyword", "ignore_above": 200 }
 }

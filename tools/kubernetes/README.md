@@ -86,14 +86,16 @@ Run the following commands:
 oc create imagestream store-cli
 docker build -t store-cli -f tools/docker/store/Dockerfile --target cli --build-arg STORE_VERSION=cli .
 docker login -u `oc whoami` -p `oc whoami --show-token` registry.apps.ocp-test-0.k8s.it.helsinki.fi/lajistore-api
+docker login -u `oc whoami` -p `oc whoami --show-token` registry.apps.ocp-prod-0.k8s.it.helsinki.fi/lajistore-api
 docker tag store-cli registry.apps.ocp-test-0.k8s.it.helsinki.fi/lajistore-api/store-cli:latest
+docker tag store-cli registry.apps.ocp-prod-0.k8s.it.helsinki.fi/lajistore-api/store-cli:latest
 docker push registry.apps.ocp-test-0.k8s.it.helsinki.fi/lajistore-api/store-cli
+docker push registry.apps.ocp-prod-0.k8s.it.helsinki.fi/lajistore-api/store-cli
 oc apply -f tools/kubernetes/store-cli-statefulset.yaml
 
 # After this there will be a pod named store-cli-0 running and that can be used to run the cli commands
 # Run the following to access cli
 oc rsh store-cli-0
-/bin/bash
 
 # get the list of all available cli commands you can run node main.js command.
 node main.js --help

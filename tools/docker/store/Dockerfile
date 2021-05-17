@@ -41,6 +41,7 @@ RUN apt update \
  && rm -rf /var/lib/apt/lists/* \
  && ldconfig
 
+SHELL ["/bin/bash", "-c"]
 USER node
 WORKDIR /app
 

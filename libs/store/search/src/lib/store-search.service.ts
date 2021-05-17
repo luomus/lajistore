@@ -17,6 +17,7 @@ import {
 import { RequestParams } from '@elastic/elasticsearch';
 import { ResponseError } from '@elastic/elasticsearch/lib/errors';
 import { FileService, UtilityService } from '@luomus/store/shared';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class StoreSearchService extends HealthIndicator {
@@ -30,8 +31,12 @@ export class StoreSearchService extends HealthIndicator {
 
   private static getIndexName(source: string, type: string) {
     return `${UtilityService.normalize(
-      source
+      source.replace(/[^A-Za-z0-9]/g, '')
     ).toLowerCase()}_${UtilityService.normalize(type).toLowerCase()}`;
+  }
+
+  private static getSourceFromIndexName(index: string): string {
+    return index.split('_')[0];
   }
 
   constructor(
@@ -147,6 +152,40 @@ export class StoreSearchService extends HealthIndicator {
       if (e instanceof ResponseError && e.statusCode !== 404) {
         throw e;
       }
+    }
+  }
+
+  /**
+   * Returns a list of all indexes
+   */
+  async getAllIndexes(): Promise<string[]> {
+    const { body } = await this.getAliases();
+    const indexes = new Set<string>();
+    const aliases = Object.keys(body);
+
+    for (const alias of aliases) {
+      if (body[alias]?.aliases) {
+        const idx = Object.keys(body[alias].aliases);
+        idx.forEach(index => indexes.add(index));
+      }
+    }
+
+    return Array.from(indexes);
+  }
+
+  /**
+   * Update index if it's needed
+   * @param index
+   */
+  async updateIndex(index: string): Promise<void> {
+    const source = StoreSearchService.getSourceFromIndexName(index);
+    const types = await this.getAllTypes();
+
+    for (const type of types) {
+      if (StoreSearchService.getIndexName(source, type) !== index) {
+        continue;
+      }
+      await this.prepareIndex(source, type, true);
     }
   }
 
@@ -266,7 +305,7 @@ export class StoreSearchService extends HealthIndicator {
     return erroredDocuments;
   }
 
-  private async prepareIndex(source: string, type: string) {
+  private async prepareIndex(source: string, type: string, migrate = false) {
     const index = StoreSearchService.getIndexName(source, type);
 
     if (this.indexChecked[index]) {
@@ -277,7 +316,9 @@ export class StoreSearchService extends HealthIndicator {
     const [oldAlias, newAlias] = await this.getAliasNames(index);
 
     if (oldAlias) {
-      await this.migrateIndex(index, oldAlias, newAlias, idxData);
+      if (migrate) {
+        await this.migrateIndex(index, oldAlias, newAlias, idxData);
+      }
     } else {
       await this.createIndex(newAlias, idxData);
       await this.updateAlias(index, oldAlias, newAlias);
@@ -285,12 +326,27 @@ export class StoreSearchService extends HealthIndicator {
     this.indexChecked[index] = true;
   }
 
-  private deleteIndex(index: string) {
-    return this.es.indices.delete({ index });
+  private async deleteIndex(index: string): Promise<void> {
+    const { body: exists } = await this.es.indices.exists({ index });
+
+    if (exists) {
+      await this.es.indices.delete({ index });
+    }
   }
 
-  private createIndex(index: string, mapping: any) {
-    return this.es.indices.create({ index, body: mapping });
+  private async createIndex(index: string, creteIndexBody: any) {
+    const { body: exists } = await this.es.indices.exists({ index });
+
+    if (!exists) {
+      await this.es.indices.create({ index, body: creteIndexBody });
+    }
+  }
+
+  private getAllTypes() {
+    const pattern = this.configService.get('JSON_FILENAME_PATTERN').replace('%name%', '');
+    return this.fileService.listFiles(this.configService.get('ES_INDEX_PATH')).pipe(
+      map(files => files.map(file => file.replace(pattern, '')))
+    ).toPromise();
   }
 
   private getMapping(type: string) {
@@ -319,11 +375,11 @@ export class StoreSearchService extends HealthIndicator {
 
     return [
       aliases[index],
-      await this.getNextFreeIndex(index, last < 3 ? last + 1 : 1),
+      await this.getNextFreeIndex(index, (last % 2) + 1),
     ];
   }
 
-  private getAliases(index: string) {
+  private getAliases(index?: string) {
     return this.es.indices.get_alias({ index }).catch((e) => {
       if (e.meta.body.status === 404) {
         return { body: {} as any };
@@ -337,11 +393,13 @@ export class StoreSearchService extends HealthIndicator {
     oldAlias: string | null,
     newAlias: string
   ) {
+    const oldIndexAction = { remove: { alias: index, index: oldAlias } };
+
     return this.es.indices.update_aliases({
       body: {
         actions: [
-          ...(oldAlias ? [{ remove: { alias: index, index: oldAlias } }] : []),
-          { add: { alias: index, index: newAlias } },
+          ...(oldAlias ? [oldIndexAction] : []),
+          { add: { alias: index, index: newAlias, is_write_index: true } },
         ],
       },
     });
@@ -352,58 +410,46 @@ export class StoreSearchService extends HealthIndicator {
     oldAlias: string,
     newAlias: string,
     indexData: any
-  ) {
-    const { body } = await this.es.indices.get_mapping({ index: oldAlias });
-    const mappings = body[oldAlias]?.mappings;
-
-    if (this.isEqualMapping(indexData.mappings, mappings)) {
+  ): Promise<void> {
+    try {
+      await this.es.indices.put_mapping({index: oldAlias, body: indexData.mappings});
       return;
+    } catch (e) {
+      // pass
     }
-    console.log(`REINDEX ${index}`);
 
+    console.log(`\nNEED TO REINDEX ${index}`);
+    await this.deleteIndex(newAlias);
     await this.createIndex(newAlias, indexData);
     await this.es.reindex({
-      body: { source: { index: oldAlias }, dest: { index: newAlias } },
+      timeout: '2h',
+      refresh: false,
+      wait_for_completion: true,
+      body: {
+        source: { index: oldAlias },
+        dest: { index: newAlias, op_type: 'create' }
+      },
     });
     await this.updateAlias(index, oldAlias, newAlias);
+    await this.es.reindex({
+      timeout: '2h',
+      refresh: false,
+      wait_for_completion: true,
+      body: {
+        source: { index: oldAlias, query: {
+            range: {
+              "@timestamp": {
+                gte: "now-6h/h"
+              }
+            }
+          } },
+        dest: { index: newAlias, op_type: 'create' }
+      },
+    });
     await this.deleteIndex(oldAlias);
   }
 
-  private isEqualMapping(newMapping: any, oldMapping: any) {
-    if (Array.isArray(newMapping) && Array.isArray(oldMapping)) {
-      for (const idx in newMapping) {
-        if (!Object.prototype.hasOwnProperty.call(newMapping, idx)) {
-          continue;
-        }
-        if (!this.isEqualMapping(newMapping[idx], oldMapping?.[idx])) {
-          return false;
-        }
-      }
-      return true;
-    } else if (
-      typeof newMapping === 'object' &&
-      typeof oldMapping === 'object' &&
-      newMapping
-    ) {
-      const keys = Object.keys(newMapping);
-      for (const key of keys) {
-        if (!this.isEqualMapping(newMapping[key], oldMapping?.[key])) {
-          return false;
-        }
-      }
-      return true;
-    }
-    return newMapping === oldMapping;
-  }
-
   private async getNextFreeIndex(index: string, indexNumber: number) {
-    const newIndex = `${index}_${indexNumber}`;
-    const { body: exists } = await this.es.indices.exists({ index: newIndex });
-
-    if (exists) {
-      await this.deleteIndex(newIndex);
-    }
-
-    return newIndex;
+    return `${index}_${indexNumber}`;
   }
 }

@@ -36,6 +36,7 @@ export class StoreApiCoreModule {
     app.use(urlencoded({ extended: true, limit: '1000mb' }));
 
     SwaggerModule.setup('documentation', app, swagger, {
+      customSiteTitle: 'Store',
       swaggerOptions: {
         docExpansion: 'none',
       },

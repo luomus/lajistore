@@ -126,7 +126,7 @@ spec:
               name: http
               protocol: TCP
       restartPolicy: Always
-      terminationGracePeriodSeconds: 30
+      terminationGracePeriodSeconds: 10
       dnsPolicy: ClusterFirst
       securityContext: { }
   podManagementPolicy: OrderedReady

@@ -43,6 +43,10 @@ export class JsonSchemaService {
     );
   }
 
+  static isEnumeration(property: JSONSchema4): boolean {
+    return !!property.enum;
+  }
+
   static isXSDRange(range: string): boolean {
     return range.startsWith('xsd:');
   }

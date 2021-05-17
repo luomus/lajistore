@@ -14,7 +14,8 @@ import { StoreSearchService } from './store-search.service';
       imports: [StoreConfigModule],
       useFactory: async (configService: StoreConfigService) => ({
         nodes: configService.get('ELASTICSEARCH_NODES').split(','),
-        requestTimeout: 60000
+        requestTimeout: 60000,
+        maxRetries: 7,
       }),
       inject: [StoreConfigService],
     })
