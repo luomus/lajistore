@@ -138,12 +138,6 @@
           "subject": "@type",
           "title": "Type for the Identification"
         },
-        "@context": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "@context",
-          "title": "Context for the Identification"
-        },
         "herbo:sortOrder": {
           "type": "integer",
           "range": "xsd:integer",
@@ -597,12 +591,6 @@
           "range": "xsd:string",
           "subject": "@type",
           "title": "Type for the MAN.annotationOccurrenceClass"
-        },
-        "@context": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "@context",
-          "title": "Context for the MAN.annotationOccurrenceClass"
         },
         "countryVerbatim": {
           "type": "string",

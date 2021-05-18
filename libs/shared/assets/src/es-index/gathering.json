@@ -88,11 +88,11 @@
       },
       "coordinateSource": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "coordinateSystem": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "coordinatesGridYKJ": {
         "type": "keyword",
@@ -136,7 +136,7 @@
       },
       "forestVegetationZone": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "gatheringFact": {
         "properties": {
@@ -146,12 +146,9 @@
           "@type": {
             "type": "keyword"
           },
-          "@context": {
-            "type": "keyword"
-          },
           "batCollector": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "censusAreaHectares": {
             "type": "integer"
@@ -176,7 +173,7 @@
           },
           "pointCountHabitat": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "shorelineLengthMeters": {
             "type": "integer"
@@ -186,23 +183,23 @@
           },
           "sykeButterFlyCensusWind": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "sykeButterFlyCensusWindEnd": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "sykeButterFlyCensusWindStart": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "waterbirdCensusPeriod": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "waterbirdHabitat": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "ACAFLAonAlder": {
             "type": "integer"
@@ -251,15 +248,15 @@
           },
           "abundanceBOMGAR": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "abundancePINENU": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "abundanceTURPIL": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "birdFeederCount": {
             "type": "integer"
@@ -290,7 +287,7 @@
           },
           "cloudAndRain": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "descriptionBiotopeF": {
             "type": "keyword",
@@ -325,7 +322,7 @@
           },
           "iceCover": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "meanTemperature": {
             "type": "integer"
@@ -338,7 +335,7 @@
           },
           "pineConesAtCensus": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "routeID": {
             "type": "integer"
@@ -399,39 +396,39 @@
           },
           "snowAndIceOnTrees": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "snowCover": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "sorbusBerriesAtCensus": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "sorbusBerriesEarlyFall": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "spruceConesAtCensus": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "typeOfSnowCover": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "visibility": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "waterbodies": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "wayOfTravel": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "wayOfTravelNotes": {
             "type": "keyword",
@@ -439,13 +436,13 @@
           },
           "wind": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           }
         }
       },
       "gatheringType": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "geometry": {
         "type": "geo_shape",
@@ -454,7 +451,7 @@
       },
       "georeferenceSource": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "habitat": {
         "type": "keyword",
@@ -492,7 +489,7 @@
       },
       "invasiveControlEffectiveness": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "invasiveControlEffectivenessNotes": {
         "type": "keyword",
@@ -522,7 +519,7 @@
       },
       "isPartOf": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "keywords": {
         "type": "keyword",
@@ -591,7 +588,7 @@
       },
       "predominantTree": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "projectTitle": {
         "type": "keyword",
@@ -609,7 +606,7 @@
       },
       "samplingMethod": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "samplingMethodNotes": {
         "type": "keyword",
@@ -637,20 +634,17 @@
           "@type": {
             "type": "keyword"
           },
-          "@context": {
-            "type": "keyword"
-          },
           "censusTaxonID": {
             "type": "keyword",
             "ignore_above": 200
           },
           "censusTaxonSetID": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "taxonCensusType": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           }
         }
       },
@@ -686,7 +680,7 @@
       },
       "publicityRestrictions": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "units": {
         "type": "object",
@@ -695,9 +689,6 @@
             "type": "keyword"
           },
           "@type": {
-            "type": "keyword"
-          },
-          "@context": {
             "type": "keyword"
           },
           "DBH": {
@@ -714,7 +705,7 @@
           },
           "abundanceUnit": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "additionalIDs": {
             "type": "keyword",
@@ -743,11 +734,11 @@
           },
           "atlasCode": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "batBehavior": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "beakInMillimeters": {
             "type": "keyword",
@@ -755,7 +746,7 @@
           },
           "birdAge": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "birdBehavior": {
             "type": "keyword",
@@ -763,7 +754,7 @@
           },
           "birdPlumage": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "breeding": {
             "type": "boolean"
@@ -793,18 +784,18 @@
           },
           "distance": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "earliestEpochOrLowestSeries": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "femaleIndividualCount": {
             "type": "integer"
           },
           "fruitType": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "genotype": {
             "type": "keyword",
@@ -844,7 +835,7 @@
           },
           "indirectObservationType": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "individualCount": {
             "type": "integer"
@@ -871,7 +862,7 @@
           },
           "isPartOf": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "juvenileIndividualCount": {
             "type": "integer"
@@ -885,7 +876,7 @@
           },
           "latestEpochOrHighestSeries": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "lengthInMillimeters": {
             "type": "keyword",
@@ -893,7 +884,7 @@
           },
           "lifeStage": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "lifeStageDescription": {
             "type": "keyword",
@@ -915,9 +906,6 @@
                 "type": "keyword"
               },
               "@type": {
-                "type": "keyword"
-              },
-              "@context": {
                 "type": "keyword"
               },
               "DNAConcentrationNgPerMicroliter": {
@@ -958,7 +946,7 @@
               },
               "isPartOf": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "tailCentimeters": {
                 "type": "float"
@@ -997,7 +985,7 @@
           },
           "microbiologicalRiskGroup": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "microscopy": {
             "type": "keyword",
@@ -1005,7 +993,7 @@
           },
           "movingDirection": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "movingStatus": {
             "type": "keyword",
@@ -1017,7 +1005,7 @@
           },
           "nativeStatus": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "nestCount": {
             "type": "integer"
@@ -1028,7 +1016,7 @@
           },
           "nestType": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "notes": {
             "type": "keyword",
@@ -1042,11 +1030,11 @@
           },
           "plantLifeStage": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "plantStatusCode": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "populationAbundance": {
             "type": "keyword",
@@ -1062,11 +1050,11 @@
           },
           "provenance": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "recordBasis": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "recordParts": {
             "type": "keyword",
@@ -1078,7 +1066,7 @@
           },
           "samplingMethod": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "samplingMethodNotes": {
             "type": "keyword",
@@ -1086,15 +1074,15 @@
           },
           "seedMaturity": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "seedMorphology": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "sex": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "sexNotes": {
             "type": "keyword",
@@ -1106,7 +1094,7 @@
           },
           "smell": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "smellNotes": {
             "type": "keyword",
@@ -1114,11 +1102,11 @@
           },
           "substrateClassification": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "substrateDecayStage": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "substrateNotes": {
             "type": "keyword",
@@ -1146,7 +1134,7 @@
           },
           "taste": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "tasteNotes": {
             "type": "keyword",
@@ -1154,7 +1142,7 @@
           },
           "taxonConfidence": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "twitched": {
             "type": "boolean"
@@ -1167,16 +1155,13 @@
               "@type": {
                 "type": "keyword"
               },
-              "@context": {
-                "type": "keyword"
-              },
               "autocompleteSelectedTaxonID": {
                 "type": "keyword",
                 "ignore_above": 200
               },
               "glowWormMicrohabitat": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "individualCountFlock": {
                 "type": "integer"
@@ -1189,27 +1174,27 @@
               },
               "lineTransectObsType": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "lineTransectRouteFieldType": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "lolifeDroppingsCount": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "lolifeDroppingsQuality": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "lolifeDroppingsType": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "lolifeNestTree": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "pairCountInner": {
                 "type": "integer"
@@ -1226,11 +1211,11 @@
               },
               "waterbirdFemale": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "waterbirdJuvenileAgeClass": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "waterbirdJuvenileCountAccurate": {
                 "type": "boolean"
@@ -1240,7 +1225,7 @@
               },
               "waterbirdPairCountOpinionReasoning": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "individualCountBiotopeA": {
                 "type": "integer"
@@ -1274,9 +1259,6 @@
                 "type": "keyword"
               },
               "@type": {
-                "type": "keyword"
-              },
-              "@context": {
                 "type": "keyword"
               },
               "dateBegin": {
@@ -1316,7 +1298,7 @@
           },
           "wild": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "wingInMillimeters": {
             "type": "keyword",
@@ -1332,7 +1314,7 @@
           },
           "publicityRestrictions": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "identifications": {
             "type": "object",
@@ -1341,9 +1323,6 @@
                 "type": "keyword"
               },
               "@type": {
-                "type": "keyword"
-              },
-              "@context": {
                 "type": "keyword"
               },
               "herbo:sortOrder": {
@@ -1367,7 +1346,7 @@
               },
               "detMethod": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "detVerbatim": {
                 "type": "keyword",
@@ -1395,7 +1374,7 @@
               },
               "infraRank": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "infrasubspecificSubdivision": {
                 "type": "keyword",
@@ -1403,7 +1382,7 @@
               },
               "isPartOf": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "isTaxonGroup": {
                 "type": "boolean"
@@ -1430,7 +1409,7 @@
               },
               "taxonRank": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "taxonSpecifier": {
                 "type": "keyword",
@@ -1446,7 +1425,7 @@
               },
               "publicityRestrictions": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "sortOrder": {
                 "type": "integer"
@@ -1462,12 +1441,9 @@
               "@type": {
                 "type": "keyword"
               },
-              "@context": {
-                "type": "keyword"
-              },
               "isPartOf": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "typeAuthor": {
                 "type": "keyword",
@@ -1495,7 +1471,7 @@
               },
               "typeStatus": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "typeSubspecies": {
                 "type": "keyword",
@@ -1507,7 +1483,7 @@
               },
               "typeVerification": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "typif": {
                 "type": "keyword",
@@ -1519,7 +1495,7 @@
               },
               "publicityRestrictions": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               }
             }
           }

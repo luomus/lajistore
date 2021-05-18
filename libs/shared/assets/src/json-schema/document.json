@@ -309,12 +309,6 @@
           "subject": "@type",
           "title": "Type for the Global gathering event"
         },
-        "@context": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "@context",
-          "title": "Context for the Global gathering event"
-        },
         "artificialLight": {
           "type": "string",
           "enum": [
@@ -492,12 +486,6 @@
               "range": "xsd:string",
               "subject": "@type",
               "title": "Type for the Keruutapahtuman faktat"
-            },
-            "@context": {
-              "type": "string",
-              "range": "xsd:string",
-              "subject": "@context",
-              "title": "Context for the Keruutapahtuman faktat"
             },
             "batCollector": {
               "type": "string",
@@ -1577,12 +1565,6 @@
                 "subject": "@type",
                 "title": "Type for the Completeness of census"
               },
-              "@context": {
-                "type": "string",
-                "range": "xsd:string",
-                "subject": "@context",
-                "title": "Context for the Completeness of census"
-              },
               "censusTaxonID": {
                 "type": "string",
                 "range": "MX.taxon",
@@ -2141,12 +2123,6 @@
             "subject": "@type",
             "title": "Type for the Gathering event"
           },
-          "@context": {
-            "type": "string",
-            "range": "xsd:string",
-            "subject": "@context",
-            "title": "Context for the Gathering event"
-          },
           "AFEQuadrat": {
             "type": "string",
             "range": "xsd:string",
@@ -2483,12 +2459,6 @@
                 "range": "xsd:string",
                 "subject": "@type",
                 "title": "Type for the Keruutapahtuman faktat"
-              },
-              "@context": {
-                "type": "string",
-                "range": "xsd:string",
-                "subject": "@context",
-                "title": "Context for the Keruutapahtuman faktat"
               },
               "batCollector": {
                 "type": "string",
@@ -4303,12 +4273,6 @@
                   "subject": "@type",
                   "title": "Type for the Completeness of census"
                 },
-                "@context": {
-                  "type": "string",
-                  "range": "xsd:string",
-                  "subject": "@context",
-                  "title": "Context for the Completeness of census"
-                },
                 "censusTaxonID": {
                   "type": "string",
                   "range": "MX.taxon",
@@ -4460,12 +4424,6 @@
                   "range": "xsd:string",
                   "subject": "@type",
                   "title": "Type for the Specimen"
-                },
-                "@context": {
-                  "type": "string",
-                  "range": "xsd:string",
-                  "subject": "@context",
-                  "title": "Context for the Specimen"
                 },
                 "DBH": {
                   "type": "string",
@@ -5230,12 +5188,6 @@
                       "range": "xsd:string",
                       "subject": "@type",
                       "title": "Type for the MY.measurementClass"
-                    },
-                    "@context": {
-                      "type": "string",
-                      "range": "xsd:string",
-                      "subject": "@context",
-                      "title": "Context for the MY.measurementClass"
                     },
                     "DNAConcentrationNgPerMicroliter": {
                       "type": "array",
@@ -6530,12 +6482,6 @@
                       "subject": "@type",
                       "title": "Type for the Näytteen / havainnon faktat"
                     },
-                    "@context": {
-                      "type": "string",
-                      "range": "xsd:string",
-                      "subject": "@context",
-                      "title": "Context for the Näytteen / havainnon faktat"
-                    },
                     "autocompleteSelectedTaxonID": {
                       "type": "string",
                       "range": "xsd:string",
@@ -6883,12 +6829,6 @@
                       "subject": "@type",
                       "title": "Type for the Havainnon keruutiedot"
                     },
-                    "@context": {
-                      "type": "string",
-                      "range": "xsd:string",
-                      "subject": "@context",
-                      "title": "Context for the Havainnon keruutiedot"
-                    },
                     "dateBegin": {
                       "type": "string",
                       "range": "xsd:string",
@@ -7046,12 +6986,6 @@
                         "range": "xsd:string",
                         "subject": "@type",
                         "title": "Type for the Identification"
-                      },
-                      "@context": {
-                        "type": "string",
-                        "range": "xsd:string",
-                        "subject": "@context",
-                        "title": "Context for the Identification"
                       },
                       "herbo:sortOrder": {
                         "type": "integer",
@@ -7468,12 +7402,6 @@
                         "range": "xsd:string",
                         "subject": "@type",
                         "title": "Type for the Identification"
-                      },
-                      "@context": {
-                        "type": "string",
-                        "range": "xsd:string",
-                        "subject": "@context",
-                        "title": "Context for the Identification"
                       },
                       "isPartOf": {
                         "type": "string",

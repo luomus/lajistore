@@ -18,7 +18,7 @@
       },
       "areaType": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "countryCodeISOalpha2": {
         "type": "keyword",

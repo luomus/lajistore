@@ -6586,7 +6586,7 @@ enum LifeStage2 {
 
 type Field2 {
   context: String
-  fields: [JSON]
+  fields: [Field2]
   filters: JSON
   formID: String
   id: String
@@ -6628,7 +6628,7 @@ type Form2 {
   # Shown at sidebar and & as browser title
   shortTitle: String
   supportedLanguage: [SupportedLanguageListItem]
-  title: String!
+  title: String
   translations: JSON
   type: String
   uiSchema: JSON
@@ -20324,7 +20324,7 @@ input Event3Input {
 
 input Field2Input {
   context: String
-  fields: [JSON]
+  fields: [Field2Input]
   filters: JSON
   formID: String
   id: String
@@ -20366,7 +20366,7 @@ input Form2Input {
   # Shown at sidebar and & as browser title
   shortTitle: String
   supportedLanguage: [SupportedLanguageListItem]
-  title: String!
+  title: String
   translations: JSON
   type: String
   uiSchema: JSON

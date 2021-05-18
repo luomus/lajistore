@@ -18,11 +18,11 @@
       },
       "interactionType": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "objectLifeStage": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "objectTaxon": {
         "type": "keyword",
@@ -34,7 +34,7 @@
       },
       "subjectLifeStage": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "subjectTaxon": {
         "type": "keyword",

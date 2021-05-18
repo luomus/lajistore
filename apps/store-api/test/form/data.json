@@ -1,0 +1,87 @@
+{
+  "id": "MHL.15",
+  "title": "Kommentit",
+  "name": "Annotaatio",
+  "language": "fi",
+  "options": {
+    "prepopulatedDocument": {
+      "secureLevel":"MX.secureLevelNone",
+      "gatheringEvent":{"leg":["MA.97"],"legPublic":true},
+      "gatherings":[{"units":[{"informalTaxonGroups":["MVL.1"],"identifications":[{"taxon":"Parus major"}],"unitFact":{"autocompleteSelectedTaxonID":"MX.34567"}}],"geometry":{"type":"Point","coordinates":[25.063661233061076,60.223727013726105],"radius":2938.3446297199316},"dateBegin":"2021-05-18","country":"Suomi","municipality":"Vantaa, Helsinki"}],
+      "formID":"MHL.51",
+      "creator":"MA.97",
+      "publicityRestrictions":"MZ.publicityRestrictionsPublic"
+    },
+    "useNamedPlaces": true,
+    "disabled": true,
+    "namedPlaceOptions": {
+      "useLabel": "Just a test"
+    }
+  },
+  "fields": [
+    {
+      "name": "MAN.addedTags",
+      "label": "Havainnon luotettavuus"
+    },
+    {
+      "name": "MAN.annotationByPerson",
+      "label": "Annotoija"
+    },
+    {
+      "name": "MAN.created",
+      "label": "Aika"
+    },
+    {
+      "name": "MAN.opinion"
+    },
+    {
+      "name": "MAN.notes"
+    }
+  ],
+  "uiSchema": {
+    "ui:grid": {
+      "rows": [
+        [
+          "addedTags",
+          "annotationByPerson",
+          "created"
+        ]
+      ],
+      "lg": {
+        "addedTags": 4,
+        "annotationByPerson": 4,
+        "created": 4
+      },
+      "md": {
+        "addedTags": 4,
+        "annotationByPerson": 4,
+        "created": 4
+      },
+      "sm": {
+        "addedTags": 4,
+        "annotationByPerson": 4,
+        "created": 4
+      },
+      "xs": {
+        "addedTags": 4,
+        "annotationByPerson": 4,
+        "created": 4
+      }
+    },
+    "addedTags": {
+      "ui:title": "Havainnon luotettavuus",
+      "ui:field": "AnyToBooleanField",
+      "ui:options": {
+        "trueValue": [
+          "MMAN.50"
+        ],
+        "falseValue": [
+          "MMAN.51"
+        ],
+        "allowUndefined": false
+      }
+    }
+  },
+  "@type": "MHL.form",
+  "@context": "https://store-dev.luomus.fi/json-ld-context/MHL.form.json"
+}

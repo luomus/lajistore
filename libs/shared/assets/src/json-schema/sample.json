@@ -474,12 +474,6 @@
           "subject": "@type",
           "title": "Type for the MY.measurementClass"
         },
-        "@context": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "@context",
-          "title": "Context for the MY.measurementClass"
-        },
         "DNAConcentrationNgPerMicroliter": {
           "type": "array",
           "uniqueItems": false,

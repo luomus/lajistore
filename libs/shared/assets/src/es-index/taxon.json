@@ -65,7 +65,7 @@
       },
       "breedingSecureLevel": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "circumscription": {
         "type": "keyword",
@@ -290,7 +290,7 @@
       },
       "invasiveSpeciesCategory": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "invasiveSpeciesClassificationDescription": {
         "type": "keyword",
@@ -301,7 +301,7 @@
       },
       "invasiveSpeciesEstablishment": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "isPartOf": {
         "type": "keyword",
@@ -340,11 +340,11 @@
       },
       "naturaAreaSecureLevel": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "nestSiteSecureLevel": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "notes": {
         "type": "keyword",
@@ -368,7 +368,7 @@
       },
       "occurrenceInFinland": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "occurrenceInFinlandPublication": {
         "type": "keyword",
@@ -404,19 +404,19 @@
       },
       "redListStatus2000Finland": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "redListStatus2010Finland": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "redListStatus2015Finland": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "redListStatus2019Finland": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "reproduction": {
         "type": "keyword",
@@ -440,7 +440,7 @@
       },
       "secureLevel": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "speciesCardAuthors": {
         "type": "keyword",
@@ -466,7 +466,7 @@
       },
       "taxonRank": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "taxonomyText": {
         "type": "keyword",
@@ -506,7 +506,7 @@
       },
       "winteringSecureLevel": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "createdAtTimestamp": {
         "type": "keyword",

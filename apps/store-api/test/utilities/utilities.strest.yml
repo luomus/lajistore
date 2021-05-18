@@ -34,7 +34,7 @@ requests:
 
   can_find_type_with_json_suffix:
     request:
-      url: <$ testUrl $>/json-ld-context/MYdocument.json
+      url: <$ testUrl $>/json-ld-context/document.json
       method: GET
     validate:
       - jsonpath: status
@@ -42,7 +42,7 @@ requests:
 
   non_existsing_returns_404:
     request:
-      url: <$ testUrl $>/json-ld-context/MYfoobar.json
+      url: <$ testUrl $>/json-ld-context/foobar.json
       method: GET
     validate:
       - jsonpath: status

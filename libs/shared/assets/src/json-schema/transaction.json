@@ -408,12 +408,6 @@
             "subject": "@type",
             "title": "Type for the Transaction Event"
           },
-          "@context": {
-            "type": "string",
-            "range": "xsd:string",
-            "subject": "@context",
-            "title": "Context for the Transaction Event"
-          },
           "eventDate": {
             "type": "string",
             "format": "date",
@@ -464,12 +458,6 @@
                   "range": "xsd:string",
                   "subject": "@type",
                   "title": "Type for the Transaction Item"
-                },
-                "@context": {
-                  "type": "string",
-                  "range": "xsd:string",
-                  "subject": "@context",
-                  "title": "Context for the Transaction Item"
                 },
                 "collectionID": {
                   "type": "string",
@@ -778,12 +766,6 @@
             "range": "xsd:string",
             "subject": "@type",
             "title": "Type for the HRA.permitClass"
-          },
-          "@context": {
-            "type": "string",
-            "range": "xsd:string",
-            "subject": "@context",
-            "title": "Context for the HRA.permitClass"
           },
           "permitEndDate": {
             "type": "string",

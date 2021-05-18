@@ -18,7 +18,7 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
   private blackList: string[] = [];
   private languages: string[] = [];
   private written = new Set<string>();
-  private allNormalizedClasses = new Set<string>();
+  private noGeneratedToType: string[];
 
   constructor(
     configService: StoreConfigService,
@@ -26,6 +26,7 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     private lajiGraphQlService: LajiGraphQlService
   ) {
     super(configService, fileService);
+    this.noGeneratedToType = this.configService.get('NO_GENERATED_FIELDS_FOR_TYPES').split(',').map(v => v.trim());
   }
 
   /**
@@ -72,6 +73,8 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     const properties: Record<string, JSONSchema4> = {};
     const required: string[] = [];
     const classData = await this.lajiGraphQlService.getClassData(className);
+    const normalizedClassName = UtilityService.normalize(className);
+
 
     if (depth >= MAX_NESTED_DEPTH) {
       return schema;
@@ -83,35 +86,35 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     }
 
     schema.title = classData.label;
-
-    if (classData.comment) {
-      console.log('SW', classData.comment, classData.comment);
-    }
     schema.description = classData.comment ?? '';
 
-    // Add id property to all classes
-    properties[PROPERTY_ID] = await this.generateBasicPropertySchema(
-      PROPERTY_ID,
-      `Id for the ${schema['title'] || className}`,
-      required,
-      depth
-    );
+    if (depth === 0 || !this.noGeneratedToType.includes(className)) {
+      // Add id property to all classes
+      properties[PROPERTY_ID] = await this.generateBasicPropertySchema(
+        PROPERTY_ID,
+        `Id for the ${schema['title'] || className}`,
+        required,
+        depth
+      );
 
-    // Add type property to all classes
-    properties[PROPERTY_TYPE] = await this.generateBasicPropertySchema(
-      PROPERTY_TYPE,
-      `Type for the ${schema['title'] || className}`,
-      required,
-      depth
-    );
+      // Add type property to all classes
+      properties[PROPERTY_TYPE] = await this.generateBasicPropertySchema(
+        PROPERTY_TYPE,
+        `Type for the ${schema['title'] || className}`,
+        required,
+        depth
+      );
+    }
 
-    // Add context property to all classes
-    properties[PROPERTY_CONTEXT] = await this.generateBasicPropertySchema(
-      PROPERTY_CONTEXT,
-      `Context for the ${ schema['title'] || className }`,
-      required,
-      depth
-    );
+    // Add context property to all classes (context should is used only in the root)
+    if (depth === 0) {
+      properties[PROPERTY_CONTEXT] = await this.generateBasicPropertySchema(
+        PROPERTY_CONTEXT,
+        `Context for the ${ schema['title'] || className }`,
+        required,
+        depth
+      );
+    }
 
     for (const property of classData.properties) {
       if (property?.range?.length !== 1) {
@@ -137,15 +140,12 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
       schema['required'] = required;
     }
 
-    if (!this.blackList.includes(className) && !this.written.has(className)) {
-      if (depth === 0) {
-        const normalizedClassName = UtilityService.normalize(className);
-        if (this.allNormalizedClasses.has(normalizedClassName)) {
-          throw new Error(`\n\nAmbiguous normalized classname for class ${className}!\n\n`)
-        }
+    if (!this.blackList.includes(className) && depth === 0) {
+      if (this.written.has(normalizedClassName)) {
+        throw new Error(`\n\nAmbiguous normalized classname for class ${normalizedClassName}!\n\n`)
       }
 
-      this.written.add(className);
+      this.written.add(normalizedClassName);
       await this.writeToFile(
         className,
         JSON.stringify(

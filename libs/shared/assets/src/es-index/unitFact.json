@@ -22,7 +22,7 @@
       },
       "glowWormMicrohabitat": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "individualCountFlock": {
         "type": "integer"
@@ -35,27 +35,27 @@
       },
       "lineTransectObsType": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "lineTransectRouteFieldType": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "lolifeDroppingsCount": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "lolifeDroppingsQuality": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "lolifeDroppingsType": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "lolifeNestTree": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "pairCountInner": {
         "type": "integer"
@@ -72,11 +72,11 @@
       },
       "waterbirdFemale": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "waterbirdJuvenileAgeClass": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "waterbirdJuvenileCountAccurate": {
         "type": "boolean"
@@ -86,7 +86,7 @@
       },
       "waterbirdPairCountOpinionReasoning": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "individualCountBiotopeA": {
         "type": "integer"

@@ -26,7 +26,6 @@ export interface Annotation {
   identification?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     "herbo:sortOrder"?: number;
     /**
      * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -213,7 +212,6 @@ export interface Annotation {
   occurrenceAtTimeOfAnnotation?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     countryVerbatim?: string;
     dateBegin?: string;
     dateEnd?: string;

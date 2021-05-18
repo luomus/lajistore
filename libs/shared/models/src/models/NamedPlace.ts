@@ -20,7 +20,6 @@ export interface NamedPlace {
   acceptedDocument?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     /**
      * Secure level (salaus-/karkeistustaso) for the data
      */
@@ -137,7 +136,6 @@ export interface NamedPlace {
     gatheringEvent?: {
       id?: string;
       "@type"?: string;
-      "@context"?: string;
       artificialLight?:
         | "MY.artificialLightEnum1"
         | "MY.artificialLightEnum2"
@@ -188,7 +186,6 @@ export interface NamedPlace {
       gatheringFact?: {
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
         censusAreaHectares?: number;
         invasiveControlOtherExpensesInEuros?: number;
@@ -438,7 +435,6 @@ export interface NamedPlace {
       taxonCensus?: {
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         censusTaxonID?: string;
         censusTaxonSetID?:
           | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -633,7 +629,6 @@ export interface NamedPlace {
       {
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         /**
          * AFE grid name
          */
@@ -770,7 +765,6 @@ export interface NamedPlace {
         gatheringFact?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           batCollector?:
             | "MY.batCollectorAlone"
             | "MY.batCollectorWithProjectGroupMember"
@@ -1329,7 +1323,6 @@ export interface NamedPlace {
         taxonCensus?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           censusTaxonID?: string;
           censusTaxonSetID?:
             | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -1361,7 +1354,6 @@ export interface NamedPlace {
         units?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           /**
            * Diameter at breast height, in centimeters
            */
@@ -1638,7 +1630,6 @@ export interface NamedPlace {
           measurement?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             DNAConcentrationNgPerMicroliter?: number[];
             DNARatioOfAbsorbance260And280?: number[];
             DNAVolumeMicroliters?: number[];
@@ -2060,7 +2051,6 @@ export interface NamedPlace {
           unitFact?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             autocompleteSelectedTaxonID?: string;
             glowWormMicrohabitat?:
               | "MY.glowWormMicrohabitatEnum1"
@@ -2138,7 +2128,6 @@ export interface NamedPlace {
           unitGathering?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             dateBegin?: string;
             dateEnd?: string;
             geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
@@ -2168,7 +2157,6 @@ export interface NamedPlace {
           identifications?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             "herbo:sortOrder"?: number;
             /**
              * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -2348,7 +2336,6 @@ export interface NamedPlace {
           typeSpecimens?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             /**
              * Which parent or larger collection this is part of.
              */
@@ -2443,7 +2430,6 @@ export interface NamedPlace {
       ...{
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         /**
          * AFE grid name
          */
@@ -2580,7 +2566,6 @@ export interface NamedPlace {
         gatheringFact?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           batCollector?:
             | "MY.batCollectorAlone"
             | "MY.batCollectorWithProjectGroupMember"
@@ -3139,7 +3124,6 @@ export interface NamedPlace {
         taxonCensus?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           censusTaxonID?: string;
           censusTaxonSetID?:
             | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -3171,7 +3155,6 @@ export interface NamedPlace {
         units?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           /**
            * Diameter at breast height, in centimeters
            */
@@ -3448,7 +3431,6 @@ export interface NamedPlace {
           measurement?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             DNAConcentrationNgPerMicroliter?: number[];
             DNARatioOfAbsorbance260And280?: number[];
             DNAVolumeMicroliters?: number[];
@@ -3870,7 +3852,6 @@ export interface NamedPlace {
           unitFact?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             autocompleteSelectedTaxonID?: string;
             glowWormMicrohabitat?:
               | "MY.glowWormMicrohabitatEnum1"
@@ -3948,7 +3929,6 @@ export interface NamedPlace {
           unitGathering?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             dateBegin?: string;
             dateEnd?: string;
             geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
@@ -3978,7 +3958,6 @@ export interface NamedPlace {
           identifications?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             "herbo:sortOrder"?: number;
             /**
              * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -4158,7 +4137,6 @@ export interface NamedPlace {
           typeSpecimens?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             /**
              * Which parent or larger collection this is part of.
              */
@@ -4256,7 +4234,6 @@ export interface NamedPlace {
   active?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     end?: string;
     start?: string;
   };
@@ -4291,7 +4268,6 @@ export interface NamedPlace {
   prepopulatedDocument?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     /**
      * Secure level (salaus-/karkeistustaso) for the data
      */
@@ -4408,7 +4384,6 @@ export interface NamedPlace {
     gatheringEvent?: {
       id?: string;
       "@type"?: string;
-      "@context"?: string;
       artificialLight?:
         | "MY.artificialLightEnum1"
         | "MY.artificialLightEnum2"
@@ -4459,7 +4434,6 @@ export interface NamedPlace {
       gatheringFact?: {
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
         censusAreaHectares?: number;
         invasiveControlOtherExpensesInEuros?: number;
@@ -4709,7 +4683,6 @@ export interface NamedPlace {
       taxonCensus?: {
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         censusTaxonID?: string;
         censusTaxonSetID?:
           | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -4904,7 +4877,6 @@ export interface NamedPlace {
       {
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         /**
          * AFE grid name
          */
@@ -5041,7 +5013,6 @@ export interface NamedPlace {
         gatheringFact?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           batCollector?:
             | "MY.batCollectorAlone"
             | "MY.batCollectorWithProjectGroupMember"
@@ -5600,7 +5571,6 @@ export interface NamedPlace {
         taxonCensus?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           censusTaxonID?: string;
           censusTaxonSetID?:
             | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -5632,7 +5602,6 @@ export interface NamedPlace {
         units?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           /**
            * Diameter at breast height, in centimeters
            */
@@ -5909,7 +5878,6 @@ export interface NamedPlace {
           measurement?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             DNAConcentrationNgPerMicroliter?: number[];
             DNARatioOfAbsorbance260And280?: number[];
             DNAVolumeMicroliters?: number[];
@@ -6331,7 +6299,6 @@ export interface NamedPlace {
           unitFact?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             autocompleteSelectedTaxonID?: string;
             glowWormMicrohabitat?:
               | "MY.glowWormMicrohabitatEnum1"
@@ -6409,7 +6376,6 @@ export interface NamedPlace {
           unitGathering?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             dateBegin?: string;
             dateEnd?: string;
             geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
@@ -6439,7 +6405,6 @@ export interface NamedPlace {
           identifications?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             "herbo:sortOrder"?: number;
             /**
              * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -6619,7 +6584,6 @@ export interface NamedPlace {
           typeSpecimens?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             /**
              * Which parent or larger collection this is part of.
              */
@@ -6714,7 +6678,6 @@ export interface NamedPlace {
       ...{
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         /**
          * AFE grid name
          */
@@ -6851,7 +6814,6 @@ export interface NamedPlace {
         gatheringFact?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           batCollector?:
             | "MY.batCollectorAlone"
             | "MY.batCollectorWithProjectGroupMember"
@@ -7410,7 +7372,6 @@ export interface NamedPlace {
         taxonCensus?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           censusTaxonID?: string;
           censusTaxonSetID?:
             | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -7442,7 +7403,6 @@ export interface NamedPlace {
         units?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           /**
            * Diameter at breast height, in centimeters
            */
@@ -7719,7 +7679,6 @@ export interface NamedPlace {
           measurement?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             DNAConcentrationNgPerMicroliter?: number[];
             DNARatioOfAbsorbance260And280?: number[];
             DNAVolumeMicroliters?: number[];
@@ -8141,7 +8100,6 @@ export interface NamedPlace {
           unitFact?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             autocompleteSelectedTaxonID?: string;
             glowWormMicrohabitat?:
               | "MY.glowWormMicrohabitatEnum1"
@@ -8219,7 +8177,6 @@ export interface NamedPlace {
           unitGathering?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             dateBegin?: string;
             dateEnd?: string;
             geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
@@ -8249,7 +8206,6 @@ export interface NamedPlace {
           identifications?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             "herbo:sortOrder"?: number;
             /**
              * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -8429,7 +8385,6 @@ export interface NamedPlace {
           typeSpecimens?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             /**
              * Which parent or larger collection this is part of.
              */
@@ -8532,7 +8487,6 @@ export interface NamedPlace {
   reserve?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     reserver: string;
     until: string;
   };

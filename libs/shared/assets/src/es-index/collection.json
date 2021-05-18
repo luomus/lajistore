@@ -18,7 +18,7 @@
       },
       "secureLevel": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "abbreviation": {
         "type": "keyword",
@@ -65,7 +65,7 @@
       },
       "collectionQuality": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "collectionSize": {
         "type": "keyword",
@@ -73,7 +73,7 @@
       },
       "collectionType": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "concealmentBasis": {
         "properties": {
@@ -133,7 +133,7 @@
       },
       "dataQuality": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "dataQualityDescription": {
         "properties": {
@@ -240,14 +240,14 @@
       },
       "intellectualRights": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "internalUseOnly": {
         "type": "boolean"
       },
       "isPartOf": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "language": {
         "type": "keyword",
@@ -259,7 +259,7 @@
       },
       "metadataStatus": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "methods": {
         "properties": {
@@ -322,7 +322,7 @@
       },
       "publicationTerms": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "publisherShortname": {
         "properties": {
@@ -399,7 +399,7 @@
       },
       "publicityRestrictions": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "_meta": {
         "properties": {

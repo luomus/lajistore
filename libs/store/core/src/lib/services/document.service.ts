@@ -7,12 +7,19 @@ import { IdService, JsonSchemaService, UtilityService } from '@luomus/store/shar
 
 @Injectable()
 export class DocumentService {
+
+  private noGeneratedToType: string[];
+  private noGeneratedToChildren: string[];
+
   constructor(
     private readonly idService: IdService,
     private readonly configService: StoreConfigService,
     private readonly jsonSchema: JsonSchemaService,
     private readonly documentRepository: DocumentRepository
-  ) {}
+  ) {
+    this.noGeneratedToType = this.configService.get('NO_GENERATED_FIELDS_FOR_TYPES').split(',').map(v => v.trim());
+    this.noGeneratedToChildren = this.configService.get('NO_GENERATED_FIELDS_FOR_CHILDREN').split(',').map(v => v.trim());
+  }
 
   async createOrUpdate(
     source: string,
@@ -180,7 +187,8 @@ export class DocumentService {
     data: StoreObject,
     baseId: string,
     meta: { sequence: number },
-    isBase = true
+    isBase = true,
+    addGenerated = true
   ) {
     const schema = await this.jsonSchema.getSchema(type);
     const embedded = await this.jsonSchema.getEmbedded(type);
@@ -188,15 +196,23 @@ export class DocumentService {
     const embeddedProperties = <Array<KeyOfUnion<StoreObject>>>Object.keys(embedded);
     const typeProperty: keyof Pick<StoreObject, '@type'> = '@type';
     const contextProperty: keyof Pick<StoreObject, '@context'> = '@context';
+    const typeQName = schema['subject'] || type;
 
-    if (typeof data[PROPERTY_ID] === 'undefined') {
-      data[PROPERTY_ID] = isBase
-        ? baseId
-        : this.idService.getChildId(baseId, meta.sequence++);
+    if (this.noGeneratedToChildren.includes(typeQName)) {
+      addGenerated = false;
     }
-    if (schema['subject']) {
-      data[typeProperty] = schema['subject'];
+
+    if (isBase || (addGenerated && !this.noGeneratedToType.includes(typeQName))) {
+      if (typeof data[PROPERTY_ID] === 'undefined') {
+        data[PROPERTY_ID] = isBase
+          ? baseId
+          : this.idService.getChildId(baseId, meta.sequence++);
+      }
+      if (schema['subject']) {
+        data[typeProperty] = schema['subject'];
+      }
     }
+
     if (isBase) {
       data[contextProperty] = contextIri.replace('%type%', schema['subject']);
     }
@@ -215,7 +231,8 @@ export class DocumentService {
             obj,
             baseId,
             meta,
-            false
+            false,
+            addGenerated
           );
         }
       } else {
@@ -224,7 +241,8 @@ export class DocumentService {
           data[property],
           baseId,
           meta,
-          false
+          false,
+          addGenerated
         );
       }
     }

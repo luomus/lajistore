@@ -22,7 +22,7 @@
       },
       "availableForGeneticResearch": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "availableForGeneticResearchNotes": {
         "type": "keyword",
@@ -80,7 +80,7 @@
       },
       "geneticResourceType": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "hasIRCC": {
         "type": "boolean"
@@ -107,7 +107,7 @@
       },
       "localDepartment": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "localPerson": {
         "type": "keyword",
@@ -166,7 +166,7 @@
       },
       "resourceImported": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "returned": {
         "type": "keyword",
@@ -190,7 +190,7 @@
       },
       "sentType": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "transactionEvents": {
         "type": "object",
@@ -199,9 +199,6 @@
             "type": "keyword"
           },
           "@type": {
-            "type": "keyword"
-          },
-          "@context": {
             "type": "keyword"
           },
           "eventDate": {
@@ -213,7 +210,7 @@
           },
           "eventType": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "items": {
             "type": "object",
@@ -222,9 +219,6 @@
                 "type": "keyword"
               },
               "@type": {
-                "type": "keyword"
-              },
-              "@context": {
                 "type": "keyword"
               },
               "collectionID": {
@@ -244,7 +238,7 @@
               },
               "itemType": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               },
               "notes": {
                 "type": "keyword",
@@ -252,7 +246,7 @@
               },
               "status": {
                 "type": "keyword",
-                "ignore_above": 100
+                "ignore_above": 200
               }
             }
           },
@@ -265,7 +259,7 @@
           },
           "sentBy": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           }
         }
       },
@@ -280,11 +274,11 @@
       },
       "transactionStatus": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "transactionType": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "underNagoya": {
         "type": "boolean"
@@ -325,7 +319,7 @@
       },
       "publicityRestrictions": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "permits": {
         "type": "object",
@@ -334,9 +328,6 @@
             "type": "keyword"
           },
           "@type": {
-            "type": "keyword"
-          },
-          "@context": {
             "type": "keyword"
           },
           "permitEndDate": {
@@ -355,15 +346,15 @@
           },
           "permitStatus": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "permitType": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "isPartOf": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           }
         }
       },

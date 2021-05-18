@@ -37,7 +37,7 @@
     },
     "fields": {
       "@id": "default:MHLA.fields",
-      "@type": "@id"
+      "@container": "@set"
     },
     "filters": {
       "@id": "default:MHLA.filters",

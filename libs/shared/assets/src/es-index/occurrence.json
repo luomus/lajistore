@@ -30,7 +30,7 @@
       },
       "status": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "taxon": {
         "type": "keyword",

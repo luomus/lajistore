@@ -45727,13 +45727,9 @@
           },
           "fields": {
             "type": "array",
-            "uniqueItems": false,
             "items": {
-              "type": "object",
-              "additionalProperties": false
-            },
-            "minItems": 0,
-            "title": "Fields"
+              "$ref": "#/components/schemas/field"
+            }
           },
           "filters": {
             "type": "object",
@@ -45907,10 +45903,7 @@
             "type": "object",
             "title": "Specification for ui schema"
           }
-        },
-        "required": [
-          "title"
-        ]
+        }
       },
       "formFooter": {
         "type": "object",
@@ -55900,7 +55893,7 @@
   ],
   "servers": [
     {
-      "url": "https://store-dev.luomus.fi"
+      "url": "http://store-api:3000"
     }
   ]
 }

@@ -30,11 +30,11 @@
       },
       "annotationClass": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "byRole": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "censusAnnotation": {
         "type": "keyword",
@@ -49,9 +49,6 @@
             "type": "keyword"
           },
           "@type": {
-            "type": "keyword"
-          },
-          "@context": {
             "type": "keyword"
           },
           "herbo:sortOrder": {
@@ -75,7 +72,7 @@
           },
           "detMethod": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "detVerbatim": {
             "type": "keyword",
@@ -103,7 +100,7 @@
           },
           "infraRank": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "infrasubspecificSubdivision": {
             "type": "keyword",
@@ -111,7 +108,7 @@
           },
           "isPartOf": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "isTaxonGroup": {
             "type": "boolean"
@@ -138,7 +135,7 @@
           },
           "taxonRank": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "taxonSpecifier": {
             "type": "keyword",
@@ -154,7 +151,7 @@
           },
           "publicityRestrictions": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "sortOrder": {
             "type": "integer"
@@ -163,7 +160,7 @@
       },
       "invasiveControlEffectiveness": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "lineTransectAnnotation": {
         "type": "keyword",
@@ -179,9 +176,6 @@
             "type": "keyword"
           },
           "@type": {
-            "type": "keyword"
-          },
-          "@context": {
             "type": "keyword"
           },
           "countryVerbatim": {
@@ -238,7 +232,7 @@
       },
       "type": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "createdBySystem": {
         "type": "keyword",

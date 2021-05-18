@@ -42,7 +42,7 @@
       },
       "elutionMedium": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "event": {
         "type": "keyword",
@@ -54,11 +54,11 @@
       },
       "individualsInPreparation": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "material": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "notes": {
         "type": "keyword",
@@ -66,7 +66,7 @@
       },
       "preparationType": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "preservation": {
         "type": "keyword",
@@ -78,7 +78,7 @@
       },
       "quality": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "qualityCheckDate": {
         "type": "keyword",
@@ -102,11 +102,11 @@
       },
       "status": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "isPartOf": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "measurement": {
         "properties": {
@@ -114,9 +114,6 @@
             "type": "keyword"
           },
           "@type": {
-            "type": "keyword"
-          },
-          "@context": {
             "type": "keyword"
           },
           "DNAConcentrationNgPerMicroliter": {
@@ -157,7 +154,7 @@
           },
           "isPartOf": {
             "type": "keyword",
-            "ignore_above": 100
+            "ignore_above": 200
           },
           "tailCentimeters": {
             "type": "float"

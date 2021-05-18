@@ -37,7 +37,7 @@
       },
       "detMethod": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "detVerbatim": {
         "type": "keyword",
@@ -65,7 +65,7 @@
       },
       "infraRank": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "infrasubspecificSubdivision": {
         "type": "keyword",
@@ -73,7 +73,7 @@
       },
       "isPartOf": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "isTaxonGroup": {
         "type": "boolean"
@@ -100,7 +100,7 @@
       },
       "taxonRank": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "taxonSpecifier": {
         "type": "keyword",
@@ -116,7 +116,7 @@
       },
       "publicityRestrictions": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "sortOrder": {
         "type": "integer"

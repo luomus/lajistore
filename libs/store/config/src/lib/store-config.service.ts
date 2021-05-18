@@ -32,6 +32,11 @@ interface Configuration {
   MAX_PATCH_SIZE: string;
   MODELS_FILENAME_PATTERN: string;
   JSON_FILENAME_PATTERN: string;
+  // comma separated list of types that should not have generated fields when they are not the root element
+  NO_GENERATED_FIELDS_FOR_TYPES: string;
+  // comma separated list of types that will not generate any generated field for it (unless it's a root element) nor it's children
+  // generated properties are not removed from json-schema
+  NO_GENERATED_FIELDS_FOR_CHILDREN: string;
   ID_LIST_SEPARATOR: string;
   ID_SEPARATOR: string;
   CONFIG_ID_TYPE_MAP_FILE: string;
@@ -50,6 +55,8 @@ const DEFAULT_VALUES: Configuration = {
   JSON_FILENAME_PATTERN: '%name%.json',
   IS_WORKER: 'false',
   CONTEXT_IRI: 'http://tun.fi/%type%.json',
+  NO_GENERATED_FIELDS_FOR_TYPES: 'MHLA.field,MHL.formOptionsClass,MHL.formFooterClass,MHL.formNamedPlaceOptionsClass,MHL.formSeasonClass',
+  NO_GENERATED_FIELDS_FOR_CHILDREN: 'MHL.form',
   ID_LIST_SEPARATOR: ',',
   ID_SEPARATOR: '#',
   RABBITMQ_PORT: '5672',

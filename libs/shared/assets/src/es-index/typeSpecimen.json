@@ -18,7 +18,7 @@
       },
       "isPartOf": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "typeAuthor": {
         "type": "keyword",
@@ -46,7 +46,7 @@
       },
       "typeStatus": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "typeSubspecies": {
         "type": "keyword",
@@ -58,7 +58,7 @@
       },
       "typeVerification": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "typif": {
         "type": "keyword",
@@ -70,7 +70,7 @@
       },
       "publicityRestrictions": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "_meta": {
         "properties": {

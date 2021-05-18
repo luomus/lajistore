@@ -202,12 +202,6 @@
           "subject": "@type",
           "title": "Type for the Keruutapahtuman faktat"
         },
-        "@context": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "@context",
-          "title": "Context for the Keruutapahtuman faktat"
-        },
         "batCollector": {
           "type": "string",
           "enum": [
@@ -1285,12 +1279,6 @@
             "range": "xsd:string",
             "subject": "@type",
             "title": "Type for the Completeness of census"
-          },
-          "@context": {
-            "type": "string",
-            "range": "xsd:string",
-            "subject": "@context",
-            "title": "Context for the Completeness of census"
           },
           "censusTaxonID": {
             "type": "string",

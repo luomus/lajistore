@@ -16,7 +16,6 @@ export interface TransactionEvent {
     {
       id?: string;
       "@type"?: string;
-      "@context"?: string;
       collectionID?: string;
       itemCount: number;
       itemID?: string;
@@ -28,7 +27,6 @@ export interface TransactionEvent {
     ...{
       id?: string;
       "@type"?: string;
-      "@context"?: string;
       collectionID?: string;
       itemCount: number;
       itemID?: string;

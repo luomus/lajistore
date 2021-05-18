@@ -22,7 +22,7 @@
       },
       "type": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "userID": {
         "type": "keyword",

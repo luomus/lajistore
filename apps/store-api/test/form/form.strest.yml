@@ -1,0 +1,76 @@
+version: 2
+
+variables:
+  testUrl: http://store-api:3000/form
+  authorization: 'Basic S0UuMDA3OnBhc3N3b3Jk'
+  authorization_invalid_pw: 'Basic S0UuMDA3OnBhc3N3b3Jkcw=='
+  authorization_no_access: 'Basic S0UuMDA2OnBhc3N3b3Jk'
+  knownID: 'FOOBAR:123'
+  fieldsSchemaValidate:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      properties:
+        name:
+          type: string
+        label:
+          type: string
+  uiSchemaValidate:
+    type: object
+    additionalProperties: false
+    properties:
+      'ui:grid':
+        type: object
+      addedTags:
+        type: object
+  optionsSchemaValidate:
+    type: object
+    additionalProperties: false
+    properties:
+      prepopulatedDocument:
+        type: object
+        additionalProperties: false
+        properties:
+          secureLevel:
+            type: string
+          gatheringEvent:
+            type: object
+          gatherings:
+            type: array
+          formID:
+            type: string
+          creator:
+            type: string
+          publicityRestrictions:
+            type: string
+      useNamedPlaces:
+        type: boolean
+      disabled:
+        type: boolean
+      namedPlaceOptions:
+        type: object
+        additionalProperties: false
+        properties:
+          useLabel:
+            type: string
+
+requests:
+  adding_form:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/form/data.json
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content.id
+        type: [string]
+      - jsonpath: content.fields
+        jsonschema: <$ fieldsSchemaValidate | dump | safe $>
+      - jsonpath: content.options
+        jsonschema: <$ optionsSchemaValidate | dump | safe $>
+      - jsonpath: content.uiSchema
+        jsonschema: <$ uiSchemaValidate | dump | safe $>
+

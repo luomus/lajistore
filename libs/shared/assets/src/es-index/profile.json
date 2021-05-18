@@ -18,7 +18,7 @@
       },
       "birdwatchingActivityLevel": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "blocked": {
         "type": "keyword",
@@ -26,7 +26,7 @@
       },
       "finnishBirdSongRecognitionSkillLevel": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "friendRequests": {
         "type": "keyword",

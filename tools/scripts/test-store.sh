@@ -3,8 +3,6 @@
 SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 cd ${SCRIPT_PATH}/../../
 
-echo "${OC_USER}"
-
 # Clean up in case the volumes were left hanging
 docker volume rm luomus_elastic_data
 docker volume rm luomus_postgre_data

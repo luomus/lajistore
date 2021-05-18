@@ -18,7 +18,7 @@
       },
       "batCollector": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "censusAreaHectares": {
         "type": "integer"
@@ -43,7 +43,7 @@
       },
       "pointCountHabitat": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "shorelineLengthMeters": {
         "type": "integer"
@@ -53,23 +53,23 @@
       },
       "sykeButterFlyCensusWind": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "sykeButterFlyCensusWindEnd": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "sykeButterFlyCensusWindStart": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "waterbirdCensusPeriod": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "waterbirdHabitat": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "ACAFLAonAlder": {
         "type": "integer"
@@ -118,15 +118,15 @@
       },
       "abundanceBOMGAR": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "abundancePINENU": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "abundanceTURPIL": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "birdFeederCount": {
         "type": "integer"
@@ -157,7 +157,7 @@
       },
       "cloudAndRain": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "descriptionBiotopeF": {
         "type": "keyword",
@@ -192,7 +192,7 @@
       },
       "iceCover": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "meanTemperature": {
         "type": "integer"
@@ -205,7 +205,7 @@
       },
       "pineConesAtCensus": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "routeID": {
         "type": "integer"
@@ -266,39 +266,39 @@
       },
       "snowAndIceOnTrees": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "snowCover": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "sorbusBerriesAtCensus": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "sorbusBerriesEarlyFall": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "spruceConesAtCensus": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "typeOfSnowCover": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "visibility": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "waterbodies": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "wayOfTravel": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "wayOfTravelNotes": {
         "type": "keyword",
@@ -306,7 +306,7 @@
       },
       "wind": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "_meta": {
         "properties": {

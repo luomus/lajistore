@@ -18,7 +18,7 @@
       },
       "LuomusIntellectualRights": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "caption": {
         "type": "keyword",
@@ -98,11 +98,11 @@
       },
       "intellectualRights": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "publicityRestrictions": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "_meta": {
         "properties": {

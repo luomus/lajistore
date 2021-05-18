@@ -80,11 +80,11 @@
       },
       "publicity": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "state": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "transactionApiURL": {
         "type": "keyword",
@@ -92,7 +92,7 @@
       },
       "type": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "_meta": {
         "properties": {

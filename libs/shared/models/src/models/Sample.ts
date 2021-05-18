@@ -198,7 +198,6 @@ export interface Sample {
   measurement?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     DNAConcentrationNgPerMicroliter?: number[];
     DNARatioOfAbsorbance260And280?: number[];
     DNAVolumeMicroliters?: number[];

@@ -165,7 +165,6 @@ export interface Transaction {
   transactionEvents?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     eventDate: string;
     eventHandler: string;
     eventType: "HRAA.eventTypeSend" | "HRAA.eventTypeReceive" | "HRAA.eventTypeOther";
@@ -173,7 +172,6 @@ export interface Transaction {
       {
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         collectionID?: string;
         itemCount: number;
         itemID?: string;
@@ -185,7 +183,6 @@ export interface Transaction {
       ...{
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         collectionID?: string;
         itemCount: number;
         itemID?: string;
@@ -261,7 +258,6 @@ export interface Transaction {
   permits?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     permitEndDate?: string;
     permitFile?: string;
     permitNotes?: string;

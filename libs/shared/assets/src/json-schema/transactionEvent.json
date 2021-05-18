@@ -75,12 +75,6 @@
             "subject": "@type",
             "title": "Type for the Transaction Item"
           },
-          "@context": {
-            "type": "string",
-            "range": "xsd:string",
-            "subject": "@context",
-            "title": "Context for the Transaction Item"
-          },
           "collectionID": {
             "type": "string",
             "range": "MY.collection",

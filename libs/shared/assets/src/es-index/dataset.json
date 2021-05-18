@@ -38,7 +38,7 @@
       },
       "datasetType": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "description": {
         "properties": {

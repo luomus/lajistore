@@ -93,7 +93,7 @@
       },
       "ddReason": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "ddReasonNotes": {
         "type": "keyword",
@@ -145,7 +145,7 @@
       },
       "externalPopulationImpactOnRedListStatus": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "externalPopulationImpactOnRedListStatusNotes": {
         "type": "keyword",
@@ -282,7 +282,7 @@
       },
       "possiblyRE": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "possiblyRENotes": {
         "type": "keyword",
@@ -306,7 +306,7 @@
       },
       "redListIndexCorrection": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "redListIndexCorrectionNotes": {
         "type": "keyword",
@@ -314,7 +314,7 @@
       },
       "redListStatus": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "redListStatusAccuracyNotes": {
         "type": "keyword",
@@ -322,11 +322,11 @@
       },
       "redListStatusMax": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "redListStatusMin": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "redListStatusNotes": {
         "type": "keyword",
@@ -350,11 +350,11 @@
       },
       "state": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "statusA": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "statusANotes": {
         "type": "keyword",
@@ -362,7 +362,7 @@
       },
       "statusB": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "statusBNotes": {
         "type": "keyword",
@@ -370,7 +370,7 @@
       },
       "statusC": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "statusCNotes": {
         "type": "keyword",
@@ -378,7 +378,7 @@
       },
       "statusD": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "statusDNotes": {
         "type": "keyword",
@@ -386,7 +386,7 @@
       },
       "statusE": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "statusENotes": {
         "type": "keyword",
@@ -402,7 +402,7 @@
       },
       "typeOfOccurrenceInFinland": {
         "type": "keyword",
-        "ignore_above": 100
+        "ignore_above": 200
       },
       "typeOfOccurrenceInFinlandNotes": {
         "type": "keyword",
