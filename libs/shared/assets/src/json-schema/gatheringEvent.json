@@ -190,18 +190,6 @@
       "title": "gatheringFact",
       "description": "",
       "properties": {
-        "id": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "id",
-          "title": "Id for the Keruutapahtuman faktat"
-        },
-        "@type": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "@type",
-          "title": "Type for the Keruutapahtuman faktat"
-        },
         "batCollector": {
           "type": "string",
           "enum": [
@@ -1268,18 +1256,6 @@
         "title": "Completeness of census",
         "description": "",
         "properties": {
-          "id": {
-            "type": "string",
-            "range": "xsd:string",
-            "subject": "id",
-            "title": "Id for the Completeness of census"
-          },
-          "@type": {
-            "type": "string",
-            "range": "xsd:string",
-            "subject": "@type",
-            "title": "Type for the Completeness of census"
-          },
           "censusTaxonID": {
             "type": "string",
             "range": "MX.taxon",

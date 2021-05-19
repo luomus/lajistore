@@ -140,12 +140,6 @@
       },
       "gatheringFact": {
         "properties": {
-          "id": {
-            "type": "keyword"
-          },
-          "@type": {
-            "type": "keyword"
-          },
           "batCollector": {
             "type": "keyword",
             "ignore_above": 200
@@ -628,12 +622,6 @@
       "taxonCensus": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "keyword"
-          },
-          "@type": {
-            "type": "keyword"
-          },
           "censusTaxonID": {
             "type": "keyword",
             "ignore_above": 200
@@ -902,12 +890,6 @@
           },
           "measurement": {
             "properties": {
-              "id": {
-                "type": "keyword"
-              },
-              "@type": {
-                "type": "keyword"
-              },
               "DNAConcentrationNgPerMicroliter": {
                 "type": "float"
               },
@@ -1149,12 +1131,6 @@
           },
           "unitFact": {
             "properties": {
-              "id": {
-                "type": "keyword"
-              },
-              "@type": {
-                "type": "keyword"
-              },
               "autocompleteSelectedTaxonID": {
                 "type": "keyword",
                 "ignore_above": 200

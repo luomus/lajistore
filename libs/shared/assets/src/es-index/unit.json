@@ -227,12 +227,6 @@
       },
       "measurement": {
         "properties": {
-          "id": {
-            "type": "keyword"
-          },
-          "@type": {
-            "type": "keyword"
-          },
           "DNAConcentrationNgPerMicroliter": {
             "type": "float"
           },
@@ -474,12 +468,6 @@
       },
       "unitFact": {
         "properties": {
-          "id": {
-            "type": "keyword"
-          },
-          "@type": {
-            "type": "keyword"
-          },
           "autocompleteSelectedTaxonID": {
             "type": "keyword",
             "ignore_above": 200

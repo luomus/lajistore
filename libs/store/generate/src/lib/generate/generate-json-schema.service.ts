@@ -18,7 +18,7 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
   private blackList: string[] = [];
   private languages: string[] = [];
   private written = new Set<string>();
-  private noGeneratedToType: string[];
+  private addGeneratedFieldsToType: string[];
 
   constructor(
     configService: StoreConfigService,
@@ -26,7 +26,7 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     private lajiGraphQlService: LajiGraphQlService
   ) {
     super(configService, fileService);
-    this.noGeneratedToType = this.configService.get('NO_GENERATED_FIELDS_FOR_TYPES').split(',').map(v => v.trim());
+    this.addGeneratedFieldsToType = this.configService.getList('ADD_GENERATED_FIELDS_FOR_EMBEDDED_TYPES');
   }
 
   /**
@@ -88,7 +88,7 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     schema.title = classData.label;
     schema.description = classData.comment ?? '';
 
-    if (depth === 0 || !this.noGeneratedToType.includes(className)) {
+    if (depth === 0 || this.addGeneratedFieldsToType.includes(className)) {
       // Add id property to all classes
       properties[PROPERTY_ID] = await this.generateBasicPropertySchema(
         PROPERTY_ID,

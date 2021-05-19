@@ -287,9 +287,6 @@ export interface Unit {
    * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
    */
   measurement?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
     DNAConcentrationNgPerMicroliter?: number[];
     DNARatioOfAbsorbance260And280?: number[];
     DNAVolumeMicroliters?: number[];
@@ -706,9 +703,6 @@ export interface Unit {
   taxonConfidence?: "MY.taxonConfidenceSure" | "MY.taxonConfidenceUnsure" | "MY.taxonConfidenceSubspeciesUnsure";
   twitched?: boolean;
   unitFact?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
     autocompleteSelectedTaxonID?: string;
     glowWormMicrohabitat?:
       | "MY.glowWormMicrohabitatEnum1"
@@ -786,7 +780,6 @@ export interface Unit {
   unitGathering?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     dateBegin?: string;
     dateEnd?: string;
     geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
@@ -816,7 +809,6 @@ export interface Unit {
   identifications?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     "herbo:sortOrder"?: number;
     /**
      * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -996,7 +988,6 @@ export interface Unit {
   typeSpecimens?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     /**
      * Which parent or larger collection this is part of.
      */

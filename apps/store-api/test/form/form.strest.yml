@@ -16,6 +16,8 @@ variables:
           type: string
         label:
           type: string
+        '@type':
+          type: string
   uiSchemaValidate:
     type: object
     additionalProperties: false
@@ -24,6 +26,8 @@ variables:
         type: object
       addedTags:
         type: object
+      '@type':
+        type: string
   optionsSchemaValidate:
     type: object
     additionalProperties: false
@@ -32,10 +36,12 @@ variables:
         type: object
         additionalProperties: false
         properties:
+          id:
+            type: string
+          '@type':
+            type: string
           secureLevel:
             type: string
-          gatheringEvent:
-            type: object
           gatherings:
             type: array
           formID:
@@ -44,15 +50,27 @@ variables:
             type: string
           publicityRestrictions:
             type: string
+          gatheringEvent:
+            type: object
+            additionalProperties: false
+            properties:
+              leg:
+                type: array
+              legPublic:
+                type: boolean
       useNamedPlaces:
         type: boolean
       disabled:
         type: boolean
+      '@type':
+        type: string
       namedPlaceOptions:
         type: object
         additionalProperties: false
         properties:
           useLabel:
+            type: string
+          '@type':
             type: string
 
 requests:
@@ -74,3 +92,26 @@ requests:
       - jsonpath: content.uiSchema
         jsonschema: <$ uiSchemaValidate | dump | safe $>
 
+  error_when_field_has_id:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/form/error-field-id.json
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 422
+
+  error_when_field_has_type:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/form/error-field-type.json
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 422

@@ -5,13 +5,8 @@
   "language": "fi",
   "options": {
     "prepopulatedDocument": {
-      "id": "JX.123",
-      "@type": "MY.document",
       "secureLevel":"MX.secureLevelNone",
-      "gatheringEvent":{
-        "leg":["MA.97"],
-        "legPublic":true
-      },
+      "gatheringEvent":{"leg":["MA.97"],"legPublic":true},
       "gatherings":[{"units":[{"informalTaxonGroups":["MVL.1"],"identifications":[{"taxon":"Parus major"}],"unitFact":{"autocompleteSelectedTaxonID":"MX.34567"}}],"geometry":{"type":"Point","coordinates":[25.063661233061076,60.223727013726105],"radius":2938.3446297199316},"dateBegin":"2021-05-18","country":"Suomi","municipality":"Vantaa, Helsinki"}],
       "formID":"MHL.51",
       "creator":"MA.97",
@@ -25,6 +20,7 @@
   },
   "fields": [
     {
+      "id": "MHL.11#12",
       "name": "MAN.addedTags",
       "label": "Havainnon luotettavuus"
     },

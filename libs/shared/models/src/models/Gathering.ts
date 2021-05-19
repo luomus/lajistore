@@ -151,9 +151,6 @@ export interface Gathering {
     | "MY.forestVegetationZone4c"
     | "MY.forestVegetationZone4d";
   gatheringFact?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
     batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
     censusAreaHectares?: number;
     invasiveControlOtherExpensesInEuros?: number;
@@ -707,9 +704,6 @@ export interface Gathering {
    */
   substrate?: string;
   taxonCensus?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
     censusTaxonID?: string;
     censusTaxonSetID?:
       | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -741,7 +735,6 @@ export interface Gathering {
   units?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     /**
      * Diameter at breast height, in centimeters
      */
@@ -1016,9 +1009,6 @@ export interface Gathering {
      * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
      */
     measurement?: {
-      id?: string;
-      "@type"?: string;
-      "@context"?: string;
       DNAConcentrationNgPerMicroliter?: number[];
       DNARatioOfAbsorbance260And280?: number[];
       DNAVolumeMicroliters?: number[];
@@ -1435,9 +1425,6 @@ export interface Gathering {
     taxonConfidence?: "MY.taxonConfidenceSure" | "MY.taxonConfidenceUnsure" | "MY.taxonConfidenceSubspeciesUnsure";
     twitched?: boolean;
     unitFact?: {
-      id?: string;
-      "@type"?: string;
-      "@context"?: string;
       autocompleteSelectedTaxonID?: string;
       glowWormMicrohabitat?:
         | "MY.glowWormMicrohabitatEnum1"
@@ -1515,7 +1502,6 @@ export interface Gathering {
     unitGathering?: {
       id?: string;
       "@type"?: string;
-      "@context"?: string;
       dateBegin?: string;
       dateEnd?: string;
       geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
@@ -1545,7 +1531,6 @@ export interface Gathering {
     identifications?: {
       id?: string;
       "@type"?: string;
-      "@context"?: string;
       "herbo:sortOrder"?: number;
       /**
        * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -1725,7 +1710,6 @@ export interface Gathering {
     typeSpecimens?: {
       id?: string;
       "@type"?: string;
-      "@context"?: string;
       /**
        * Which parent or larger collection this is part of.
        */

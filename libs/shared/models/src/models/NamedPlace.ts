@@ -184,8 +184,6 @@ export interface NamedPlace {
       dateBegin?: string;
       dateEnd?: string;
       gatheringFact?: {
-        id?: string;
-        "@type"?: string;
         batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
         censusAreaHectares?: number;
         invasiveControlOtherExpensesInEuros?: number;
@@ -433,8 +431,6 @@ export interface NamedPlace {
       startDistanceFromNECorner?: string;
       startPointDeviation?: number;
       taxonCensus?: {
-        id?: string;
-        "@type"?: string;
         censusTaxonID?: string;
         censusTaxonSetID?:
           | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -763,8 +759,6 @@ export interface NamedPlace {
           | "MY.forestVegetationZone4c"
           | "MY.forestVegetationZone4d";
         gatheringFact?: {
-          id?: string;
-          "@type"?: string;
           batCollector?:
             | "MY.batCollectorAlone"
             | "MY.batCollectorWithProjectGroupMember"
@@ -1321,8 +1315,6 @@ export interface NamedPlace {
          */
         substrate?: string;
         taxonCensus?: {
-          id?: string;
-          "@type"?: string;
           censusTaxonID?: string;
           censusTaxonSetID?:
             | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -1628,8 +1620,6 @@ export interface NamedPlace {
            * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
            */
           measurement?: {
-            id?: string;
-            "@type"?: string;
             DNAConcentrationNgPerMicroliter?: number[];
             DNARatioOfAbsorbance260And280?: number[];
             DNAVolumeMicroliters?: number[];
@@ -2049,8 +2039,6 @@ export interface NamedPlace {
             | "MY.taxonConfidenceSubspeciesUnsure";
           twitched?: boolean;
           unitFact?: {
-            id?: string;
-            "@type"?: string;
             autocompleteSelectedTaxonID?: string;
             glowWormMicrohabitat?:
               | "MY.glowWormMicrohabitatEnum1"
@@ -2564,8 +2552,6 @@ export interface NamedPlace {
           | "MY.forestVegetationZone4c"
           | "MY.forestVegetationZone4d";
         gatheringFact?: {
-          id?: string;
-          "@type"?: string;
           batCollector?:
             | "MY.batCollectorAlone"
             | "MY.batCollectorWithProjectGroupMember"
@@ -3122,8 +3108,6 @@ export interface NamedPlace {
          */
         substrate?: string;
         taxonCensus?: {
-          id?: string;
-          "@type"?: string;
           censusTaxonID?: string;
           censusTaxonSetID?:
             | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -3429,8 +3413,6 @@ export interface NamedPlace {
            * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
            */
           measurement?: {
-            id?: string;
-            "@type"?: string;
             DNAConcentrationNgPerMicroliter?: number[];
             DNARatioOfAbsorbance260And280?: number[];
             DNAVolumeMicroliters?: number[];
@@ -3850,8 +3832,6 @@ export interface NamedPlace {
             | "MY.taxonConfidenceSubspeciesUnsure";
           twitched?: boolean;
           unitFact?: {
-            id?: string;
-            "@type"?: string;
             autocompleteSelectedTaxonID?: string;
             glowWormMicrohabitat?:
               | "MY.glowWormMicrohabitatEnum1"
@@ -4232,8 +4212,6 @@ export interface NamedPlace {
   };
   accessibility?: "MNP.accessibilityEasy" | "MNP.accessibilityModerate" | "MNP.accessibilityDifficult";
   active?: {
-    id?: string;
-    "@type"?: string;
     end?: string;
     start?: string;
   };
@@ -4432,8 +4410,6 @@ export interface NamedPlace {
       dateBegin?: string;
       dateEnd?: string;
       gatheringFact?: {
-        id?: string;
-        "@type"?: string;
         batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
         censusAreaHectares?: number;
         invasiveControlOtherExpensesInEuros?: number;
@@ -4681,8 +4657,6 @@ export interface NamedPlace {
       startDistanceFromNECorner?: string;
       startPointDeviation?: number;
       taxonCensus?: {
-        id?: string;
-        "@type"?: string;
         censusTaxonID?: string;
         censusTaxonSetID?:
           | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -5011,8 +4985,6 @@ export interface NamedPlace {
           | "MY.forestVegetationZone4c"
           | "MY.forestVegetationZone4d";
         gatheringFact?: {
-          id?: string;
-          "@type"?: string;
           batCollector?:
             | "MY.batCollectorAlone"
             | "MY.batCollectorWithProjectGroupMember"
@@ -5569,8 +5541,6 @@ export interface NamedPlace {
          */
         substrate?: string;
         taxonCensus?: {
-          id?: string;
-          "@type"?: string;
           censusTaxonID?: string;
           censusTaxonSetID?:
             | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -5876,8 +5846,6 @@ export interface NamedPlace {
            * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
            */
           measurement?: {
-            id?: string;
-            "@type"?: string;
             DNAConcentrationNgPerMicroliter?: number[];
             DNARatioOfAbsorbance260And280?: number[];
             DNAVolumeMicroliters?: number[];
@@ -6297,8 +6265,6 @@ export interface NamedPlace {
             | "MY.taxonConfidenceSubspeciesUnsure";
           twitched?: boolean;
           unitFact?: {
-            id?: string;
-            "@type"?: string;
             autocompleteSelectedTaxonID?: string;
             glowWormMicrohabitat?:
               | "MY.glowWormMicrohabitatEnum1"
@@ -6812,8 +6778,6 @@ export interface NamedPlace {
           | "MY.forestVegetationZone4c"
           | "MY.forestVegetationZone4d";
         gatheringFact?: {
-          id?: string;
-          "@type"?: string;
           batCollector?:
             | "MY.batCollectorAlone"
             | "MY.batCollectorWithProjectGroupMember"
@@ -7370,8 +7334,6 @@ export interface NamedPlace {
          */
         substrate?: string;
         taxonCensus?: {
-          id?: string;
-          "@type"?: string;
           censusTaxonID?: string;
           censusTaxonSetID?:
             | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -7677,8 +7639,6 @@ export interface NamedPlace {
            * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
            */
           measurement?: {
-            id?: string;
-            "@type"?: string;
             DNAConcentrationNgPerMicroliter?: number[];
             DNARatioOfAbsorbance260And280?: number[];
             DNAVolumeMicroliters?: number[];
@@ -8098,8 +8058,6 @@ export interface NamedPlace {
             | "MY.taxonConfidenceSubspeciesUnsure";
           twitched?: boolean;
           unitFact?: {
-            id?: string;
-            "@type"?: string;
             autocompleteSelectedTaxonID?: string;
             glowWormMicrohabitat?:
               | "MY.glowWormMicrohabitatEnum1"
@@ -8485,8 +8443,6 @@ export interface NamedPlace {
    */
   public?: boolean;
   reserve?: {
-    id?: string;
-    "@type"?: string;
     reserver: string;
     until: string;
   };

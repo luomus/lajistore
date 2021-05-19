@@ -133,7 +133,6 @@ export interface Document {
   gatheringEvent?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     artificialLight?:
       | "MY.artificialLightEnum1"
       | "MY.artificialLightEnum2"
@@ -182,9 +181,6 @@ export interface Document {
     dateBegin?: string;
     dateEnd?: string;
     gatheringFact?: {
-      id?: string;
-      "@type"?: string;
-      "@context"?: string;
       batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
       censusAreaHectares?: number;
       invasiveControlOtherExpensesInEuros?: number;
@@ -432,9 +428,6 @@ export interface Document {
     startDistanceFromNECorner?: string;
     startPointDeviation?: number;
     taxonCensus?: {
-      id?: string;
-      "@type"?: string;
-      "@context"?: string;
       censusTaxonID?: string;
       censusTaxonSetID?:
         | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -629,7 +622,6 @@ export interface Document {
     {
       id?: string;
       "@type"?: string;
-      "@context"?: string;
       /**
        * AFE grid name
        */
@@ -764,9 +756,6 @@ export interface Document {
         | "MY.forestVegetationZone4c"
         | "MY.forestVegetationZone4d";
       gatheringFact?: {
-        id?: string;
-        "@type"?: string;
-        "@context"?: string;
         batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
         censusAreaHectares?: number;
         invasiveControlOtherExpensesInEuros?: number;
@@ -1320,9 +1309,6 @@ export interface Document {
        */
       substrate?: string;
       taxonCensus?: {
-        id?: string;
-        "@type"?: string;
-        "@context"?: string;
         censusTaxonID?: string;
         censusTaxonSetID?:
           | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -1354,7 +1340,6 @@ export interface Document {
       units?: {
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         /**
          * Diameter at breast height, in centimeters
          */
@@ -1629,9 +1614,6 @@ export interface Document {
          * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
          */
         measurement?: {
-          id?: string;
-          "@type"?: string;
-          "@context"?: string;
           DNAConcentrationNgPerMicroliter?: number[];
           DNARatioOfAbsorbance260And280?: number[];
           DNAVolumeMicroliters?: number[];
@@ -2048,9 +2030,6 @@ export interface Document {
         taxonConfidence?: "MY.taxonConfidenceSure" | "MY.taxonConfidenceUnsure" | "MY.taxonConfidenceSubspeciesUnsure";
         twitched?: boolean;
         unitFact?: {
-          id?: string;
-          "@type"?: string;
-          "@context"?: string;
           autocompleteSelectedTaxonID?: string;
           glowWormMicrohabitat?:
             | "MY.glowWormMicrohabitatEnum1"
@@ -2128,7 +2107,6 @@ export interface Document {
         unitGathering?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           dateBegin?: string;
           dateEnd?: string;
           geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
@@ -2158,7 +2136,6 @@ export interface Document {
         identifications?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           "herbo:sortOrder"?: number;
           /**
            * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -2338,7 +2315,6 @@ export interface Document {
         typeSpecimens?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           /**
            * Which parent or larger collection this is part of.
            */
@@ -2433,7 +2409,6 @@ export interface Document {
     ...{
       id?: string;
       "@type"?: string;
-      "@context"?: string;
       /**
        * AFE grid name
        */
@@ -2568,9 +2543,6 @@ export interface Document {
         | "MY.forestVegetationZone4c"
         | "MY.forestVegetationZone4d";
       gatheringFact?: {
-        id?: string;
-        "@type"?: string;
-        "@context"?: string;
         batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
         censusAreaHectares?: number;
         invasiveControlOtherExpensesInEuros?: number;
@@ -3124,9 +3096,6 @@ export interface Document {
        */
       substrate?: string;
       taxonCensus?: {
-        id?: string;
-        "@type"?: string;
-        "@context"?: string;
         censusTaxonID?: string;
         censusTaxonSetID?:
           | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -3158,7 +3127,6 @@ export interface Document {
       units?: {
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         /**
          * Diameter at breast height, in centimeters
          */
@@ -3433,9 +3401,6 @@ export interface Document {
          * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
          */
         measurement?: {
-          id?: string;
-          "@type"?: string;
-          "@context"?: string;
           DNAConcentrationNgPerMicroliter?: number[];
           DNARatioOfAbsorbance260And280?: number[];
           DNAVolumeMicroliters?: number[];
@@ -3852,9 +3817,6 @@ export interface Document {
         taxonConfidence?: "MY.taxonConfidenceSure" | "MY.taxonConfidenceUnsure" | "MY.taxonConfidenceSubspeciesUnsure";
         twitched?: boolean;
         unitFact?: {
-          id?: string;
-          "@type"?: string;
-          "@context"?: string;
           autocompleteSelectedTaxonID?: string;
           glowWormMicrohabitat?:
             | "MY.glowWormMicrohabitatEnum1"
@@ -3932,7 +3894,6 @@ export interface Document {
         unitGathering?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           dateBegin?: string;
           dateEnd?: string;
           geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
@@ -3962,7 +3923,6 @@ export interface Document {
         identifications?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           "herbo:sortOrder"?: number;
           /**
            * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -4142,7 +4102,6 @@ export interface Document {
         typeSpecimens?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           /**
            * Which parent or larger collection this is part of.
            */

@@ -75,6 +75,7 @@ export function isLangObject<T>(value: unknown): value is Record<Lang, T> {
     this.prepareSchemaTitles(schema);
 
     const tsInterface = await compile(schema, normalized, {
+      unknownAny: true,
       strictIndexSignatures: true,
       ignoreMinAndMaxItems: false,
       bannerComment:

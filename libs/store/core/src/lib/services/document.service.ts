@@ -8,8 +8,8 @@ import { IdService, JsonSchemaService, UtilityService } from '@luomus/store/shar
 @Injectable()
 export class DocumentService {
 
-  private noGeneratedToType: string[];
-  private noGeneratedToChildren: string[];
+  private generatedFieldsToType: string[];
+  private noGeneratedFieldsToChildren: string[];
 
   constructor(
     private readonly idService: IdService,
@@ -17,8 +17,8 @@ export class DocumentService {
     private readonly jsonSchema: JsonSchemaService,
     private readonly documentRepository: DocumentRepository
   ) {
-    this.noGeneratedToType = this.configService.get('NO_GENERATED_FIELDS_FOR_TYPES').split(',').map(v => v.trim());
-    this.noGeneratedToChildren = this.configService.get('NO_GENERATED_FIELDS_FOR_CHILDREN').split(',').map(v => v.trim());
+    this.generatedFieldsToType = this.configService.getList('ADD_GENERATED_FIELDS_FOR_EMBEDDED_TYPES');
+    this.noGeneratedFieldsToChildren = this.configService.getList('NO_GENERATED_FIELDS_FOR_CHILDREN');
   }
 
   async createOrUpdate(
@@ -198,11 +198,11 @@ export class DocumentService {
     const contextProperty: keyof Pick<StoreObject, '@context'> = '@context';
     const typeQName = schema['subject'] || type;
 
-    if (this.noGeneratedToChildren.includes(typeQName)) {
+    if (this.noGeneratedFieldsToChildren.includes(typeQName)) {
       addGenerated = false;
     }
 
-    if (isBase || (addGenerated && !this.noGeneratedToType.includes(typeQName))) {
+    if (isBase || (addGenerated && this.generatedFieldsToType.includes(typeQName))) {
       if (typeof data[PROPERTY_ID] === 'undefined') {
         data[PROPERTY_ID] = isBase
           ? baseId

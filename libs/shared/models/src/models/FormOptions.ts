@@ -95,9 +95,6 @@ export interface FormOptions {
    * Options for footer of the observation form
    */
   footer?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
     /**
      * Text to show for footer
      */
@@ -149,9 +146,6 @@ export interface FormOptions {
    */
   mobile?: boolean;
   namedPlaceOptions?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
     /**
      * Named place viewer shows button to copy the URL for the named place viewer
      */
@@ -345,7 +339,6 @@ export interface FormOptions {
   prepopulatedDocument?: {
     id?: string;
     "@type"?: string;
-    "@context"?: string;
     /**
      * Secure level (salaus-/karkeistustaso) for the data
      */
@@ -462,7 +455,6 @@ export interface FormOptions {
     gatheringEvent?: {
       id?: string;
       "@type"?: string;
-      "@context"?: string;
       artificialLight?:
         | "MY.artificialLightEnum1"
         | "MY.artificialLightEnum2"
@@ -511,9 +503,6 @@ export interface FormOptions {
       dateBegin?: string;
       dateEnd?: string;
       gatheringFact?: {
-        id?: string;
-        "@type"?: string;
-        "@context"?: string;
         batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
         censusAreaHectares?: number;
         invasiveControlOtherExpensesInEuros?: number;
@@ -761,9 +750,6 @@ export interface FormOptions {
       startDistanceFromNECorner?: string;
       startPointDeviation?: number;
       taxonCensus?: {
-        id?: string;
-        "@type"?: string;
-        "@context"?: string;
         censusTaxonID?: string;
         censusTaxonSetID?:
           | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -958,7 +944,6 @@ export interface FormOptions {
       {
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         /**
          * AFE grid name
          */
@@ -1093,9 +1078,6 @@ export interface FormOptions {
           | "MY.forestVegetationZone4c"
           | "MY.forestVegetationZone4d";
         gatheringFact?: {
-          id?: string;
-          "@type"?: string;
-          "@context"?: string;
           batCollector?:
             | "MY.batCollectorAlone"
             | "MY.batCollectorWithProjectGroupMember"
@@ -1652,9 +1634,6 @@ export interface FormOptions {
          */
         substrate?: string;
         taxonCensus?: {
-          id?: string;
-          "@type"?: string;
-          "@context"?: string;
           censusTaxonID?: string;
           censusTaxonSetID?:
             | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -1686,7 +1665,6 @@ export interface FormOptions {
         units?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           /**
            * Diameter at breast height, in centimeters
            */
@@ -1961,9 +1939,6 @@ export interface FormOptions {
            * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
            */
           measurement?: {
-            id?: string;
-            "@type"?: string;
-            "@context"?: string;
             DNAConcentrationNgPerMicroliter?: number[];
             DNARatioOfAbsorbance260And280?: number[];
             DNAVolumeMicroliters?: number[];
@@ -2383,9 +2358,6 @@ export interface FormOptions {
             | "MY.taxonConfidenceSubspeciesUnsure";
           twitched?: boolean;
           unitFact?: {
-            id?: string;
-            "@type"?: string;
-            "@context"?: string;
             autocompleteSelectedTaxonID?: string;
             glowWormMicrohabitat?:
               | "MY.glowWormMicrohabitatEnum1"
@@ -2463,7 +2435,6 @@ export interface FormOptions {
           unitGathering?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             dateBegin?: string;
             dateEnd?: string;
             geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
@@ -2493,7 +2464,6 @@ export interface FormOptions {
           identifications?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             "herbo:sortOrder"?: number;
             /**
              * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -2673,7 +2643,6 @@ export interface FormOptions {
           typeSpecimens?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             /**
              * Which parent or larger collection this is part of.
              */
@@ -2768,7 +2737,6 @@ export interface FormOptions {
       ...{
         id?: string;
         "@type"?: string;
-        "@context"?: string;
         /**
          * AFE grid name
          */
@@ -2903,9 +2871,6 @@ export interface FormOptions {
           | "MY.forestVegetationZone4c"
           | "MY.forestVegetationZone4d";
         gatheringFact?: {
-          id?: string;
-          "@type"?: string;
-          "@context"?: string;
           batCollector?:
             | "MY.batCollectorAlone"
             | "MY.batCollectorWithProjectGroupMember"
@@ -3462,9 +3427,6 @@ export interface FormOptions {
          */
         substrate?: string;
         taxonCensus?: {
-          id?: string;
-          "@type"?: string;
-          "@context"?: string;
           censusTaxonID?: string;
           censusTaxonSetID?:
             | "MX.taxonSetSykeButterflyCensusPapilionoidea"
@@ -3496,7 +3458,6 @@ export interface FormOptions {
         units?: {
           id?: string;
           "@type"?: string;
-          "@context"?: string;
           /**
            * Diameter at breast height, in centimeters
            */
@@ -3771,9 +3732,6 @@ export interface FormOptions {
            * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
            */
           measurement?: {
-            id?: string;
-            "@type"?: string;
-            "@context"?: string;
             DNAConcentrationNgPerMicroliter?: number[];
             DNARatioOfAbsorbance260And280?: number[];
             DNAVolumeMicroliters?: number[];
@@ -4193,9 +4151,6 @@ export interface FormOptions {
             | "MY.taxonConfidenceSubspeciesUnsure";
           twitched?: boolean;
           unitFact?: {
-            id?: string;
-            "@type"?: string;
-            "@context"?: string;
             autocompleteSelectedTaxonID?: string;
             glowWormMicrohabitat?:
               | "MY.glowWormMicrohabitatEnum1"
@@ -4273,7 +4228,6 @@ export interface FormOptions {
           unitGathering?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             dateBegin?: string;
             dateEnd?: string;
             geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
@@ -4303,7 +4257,6 @@ export interface FormOptions {
           identifications?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             "herbo:sortOrder"?: number;
             /**
              * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -4483,7 +4436,6 @@ export interface FormOptions {
           typeSpecimens?: {
             id?: string;
             "@type"?: string;
-            "@context"?: string;
             /**
              * Which parent or larger collection this is part of.
              */
@@ -4608,9 +4560,6 @@ export interface FormOptions {
    * Named places page shows the places as done if they have observation inside the season
    */
   season?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
     /**
      * End of season
      */

@@ -580,18 +580,6 @@
       "title": "Occurrence at the time of annotation",
       "description": "",
       "properties": {
-        "id": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "id",
-          "title": "Id for the MAN.annotationOccurrenceClass"
-        },
-        "@type": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "@type",
-          "title": "Type for the MAN.annotationOccurrenceClass"
-        },
         "countryVerbatim": {
           "type": "string",
           "range": "xsd:string",

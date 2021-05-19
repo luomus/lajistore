@@ -196,8 +196,6 @@ export interface Sample {
    * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
    */
   measurement?: {
-    id?: string;
-    "@type"?: string;
     DNAConcentrationNgPerMicroliter?: number[];
     DNARatioOfAbsorbance260And280?: number[];
     DNAVolumeMicroliters?: number[];

@@ -210,8 +210,6 @@ export interface Annotation {
   lineTransectAnnotation?: ("MAN.birdCountError" | "MAN.innerCountError" | "MAN.otherError")[];
   notes?: string;
   occurrenceAtTimeOfAnnotation?: {
-    id?: string;
-    "@type"?: string;
     countryVerbatim?: string;
     dateBegin?: string;
     dateEnd?: string;

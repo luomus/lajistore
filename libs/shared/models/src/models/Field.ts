@@ -10,7 +10,163 @@ export interface Field {
   id?: string;
   "@type"?: string;
   name?: string;
-  fields?: {}[];
+  fields?: {
+    name?: string;
+    fields?: {
+      name?: string;
+      fields?: {
+        name?: string;
+        fields?: {
+          name?: string;
+          fields?: {
+            name?: string;
+            fields?: {
+              name?: string;
+              fields?: {}[];
+              filters?: {
+                [k: string]: unknown | undefined;
+              };
+              formID?: string;
+              label?: string;
+              notices?: {
+                [k: string]: unknown | undefined;
+              };
+              options?: {
+                [k: string]: unknown | undefined;
+              };
+              required?: boolean;
+              type?: string;
+              ui?: {
+                [k: string]: unknown | undefined;
+              };
+              validators?: {
+                [k: string]: unknown | undefined;
+              };
+              value?: string;
+              warnings?: {
+                [k: string]: unknown | undefined;
+              };
+            }[];
+            filters?: {
+              [k: string]: unknown | undefined;
+            };
+            formID?: string;
+            label?: string;
+            notices?: {
+              [k: string]: unknown | undefined;
+            };
+            options?: {
+              [k: string]: unknown | undefined;
+            };
+            required?: boolean;
+            type?: string;
+            ui?: {
+              [k: string]: unknown | undefined;
+            };
+            validators?: {
+              [k: string]: unknown | undefined;
+            };
+            value?: string;
+            warnings?: {
+              [k: string]: unknown | undefined;
+            };
+          }[];
+          filters?: {
+            [k: string]: unknown | undefined;
+          };
+          formID?: string;
+          label?: string;
+          notices?: {
+            [k: string]: unknown | undefined;
+          };
+          options?: {
+            [k: string]: unknown | undefined;
+          };
+          required?: boolean;
+          type?: string;
+          ui?: {
+            [k: string]: unknown | undefined;
+          };
+          validators?: {
+            [k: string]: unknown | undefined;
+          };
+          value?: string;
+          warnings?: {
+            [k: string]: unknown | undefined;
+          };
+        }[];
+        filters?: {
+          [k: string]: unknown | undefined;
+        };
+        formID?: string;
+        label?: string;
+        notices?: {
+          [k: string]: unknown | undefined;
+        };
+        options?: {
+          [k: string]: unknown | undefined;
+        };
+        required?: boolean;
+        type?: string;
+        ui?: {
+          [k: string]: unknown | undefined;
+        };
+        validators?: {
+          [k: string]: unknown | undefined;
+        };
+        value?: string;
+        warnings?: {
+          [k: string]: unknown | undefined;
+        };
+      }[];
+      filters?: {
+        [k: string]: unknown | undefined;
+      };
+      formID?: string;
+      label?: string;
+      notices?: {
+        [k: string]: unknown | undefined;
+      };
+      options?: {
+        [k: string]: unknown | undefined;
+      };
+      required?: boolean;
+      type?: string;
+      ui?: {
+        [k: string]: unknown | undefined;
+      };
+      validators?: {
+        [k: string]: unknown | undefined;
+      };
+      value?: string;
+      warnings?: {
+        [k: string]: unknown | undefined;
+      };
+    }[];
+    filters?: {
+      [k: string]: unknown | undefined;
+    };
+    formID?: string;
+    label?: string;
+    notices?: {
+      [k: string]: unknown | undefined;
+    };
+    options?: {
+      [k: string]: unknown | undefined;
+    };
+    required?: boolean;
+    type?: string;
+    ui?: {
+      [k: string]: unknown | undefined;
+    };
+    validators?: {
+      [k: string]: unknown | undefined;
+    };
+    value?: string;
+    warnings?: {
+      [k: string]: unknown | undefined;
+    };
+  }[];
   filters?: {
     [k: string]: unknown | undefined;
   };

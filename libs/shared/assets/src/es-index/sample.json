@@ -110,12 +110,6 @@
       },
       "measurement": {
         "properties": {
-          "id": {
-            "type": "keyword"
-          },
-          "@type": {
-            "type": "keyword"
-          },
           "DNAConcentrationNgPerMicroliter": {
             "type": "float"
           },

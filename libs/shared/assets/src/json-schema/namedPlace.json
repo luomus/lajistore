@@ -494,18 +494,6 @@
               "title": "gatheringFact",
               "description": "",
               "properties": {
-                "id": {
-                  "type": "string",
-                  "range": "xsd:string",
-                  "subject": "id",
-                  "title": "Id for the Keruutapahtuman faktat"
-                },
-                "@type": {
-                  "type": "string",
-                  "range": "xsd:string",
-                  "subject": "@type",
-                  "title": "Type for the Keruutapahtuman faktat"
-                },
                 "batCollector": {
                   "type": "string",
                   "enum": [
@@ -1572,18 +1560,6 @@
                 "title": "Completeness of census",
                 "description": "",
                 "properties": {
-                  "id": {
-                    "type": "string",
-                    "range": "xsd:string",
-                    "subject": "id",
-                    "title": "Id for the Completeness of census"
-                  },
-                  "@type": {
-                    "type": "string",
-                    "range": "xsd:string",
-                    "subject": "@type",
-                    "title": "Type for the Completeness of census"
-                  },
                   "censusTaxonID": {
                     "type": "string",
                     "range": "MX.taxon",
@@ -2467,18 +2443,6 @@
                 "title": "gatheringFact",
                 "description": "",
                 "properties": {
-                  "id": {
-                    "type": "string",
-                    "range": "xsd:string",
-                    "subject": "id",
-                    "title": "Id for the Keruutapahtuman faktat"
-                  },
-                  "@type": {
-                    "type": "string",
-                    "range": "xsd:string",
-                    "subject": "@type",
-                    "title": "Type for the Keruutapahtuman faktat"
-                  },
                   "batCollector": {
                     "type": "string",
                     "enum": [
@@ -4280,18 +4244,6 @@
                   "title": "Completeness of census",
                   "description": "",
                   "properties": {
-                    "id": {
-                      "type": "string",
-                      "range": "xsd:string",
-                      "subject": "id",
-                      "title": "Id for the Completeness of census"
-                    },
-                    "@type": {
-                      "type": "string",
-                      "range": "xsd:string",
-                      "subject": "@type",
-                      "title": "Type for the Completeness of census"
-                    },
                     "censusTaxonID": {
                       "type": "string",
                       "range": "MX.taxon",
@@ -5196,18 +5148,6 @@
                       "title": "Measurements",
                       "description": "For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "range": "xsd:string",
-                          "subject": "id",
-                          "title": "Id for the MY.measurementClass"
-                        },
-                        "@type": {
-                          "type": "string",
-                          "range": "xsd:string",
-                          "subject": "@type",
-                          "title": "Type for the MY.measurementClass"
-                        },
                         "DNAConcentrationNgPerMicroliter": {
                           "type": "array",
                           "uniqueItems": false,
@@ -6489,18 +6429,6 @@
                       "title": "unitFact",
                       "description": "",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "range": "xsd:string",
-                          "subject": "id",
-                          "title": "Id for the Näytteen / havainnon faktat"
-                        },
-                        "@type": {
-                          "type": "string",
-                          "range": "xsd:string",
-                          "subject": "@type",
-                          "title": "Type for the Näytteen / havainnon faktat"
-                        },
                         "autocompleteSelectedTaxonID": {
                           "type": "string",
                           "range": "xsd:string",
@@ -7646,18 +7574,6 @@
       "title": "Active",
       "description": "",
       "properties": {
-        "id": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "id",
-          "title": "Id for the MNP.dateRange"
-        },
-        "@type": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "@type",
-          "title": "Type for the MNP.dateRange"
-        },
         "end": {
           "type": "string",
           "format": "date",
@@ -8270,18 +8186,6 @@
               "title": "gatheringFact",
               "description": "",
               "properties": {
-                "id": {
-                  "type": "string",
-                  "range": "xsd:string",
-                  "subject": "id",
-                  "title": "Id for the Keruutapahtuman faktat"
-                },
-                "@type": {
-                  "type": "string",
-                  "range": "xsd:string",
-                  "subject": "@type",
-                  "title": "Type for the Keruutapahtuman faktat"
-                },
                 "batCollector": {
                   "type": "string",
                   "enum": [
@@ -9348,18 +9252,6 @@
                 "title": "Completeness of census",
                 "description": "",
                 "properties": {
-                  "id": {
-                    "type": "string",
-                    "range": "xsd:string",
-                    "subject": "id",
-                    "title": "Id for the Completeness of census"
-                  },
-                  "@type": {
-                    "type": "string",
-                    "range": "xsd:string",
-                    "subject": "@type",
-                    "title": "Type for the Completeness of census"
-                  },
                   "censusTaxonID": {
                     "type": "string",
                     "range": "MX.taxon",
@@ -10243,18 +10135,6 @@
                 "title": "gatheringFact",
                 "description": "",
                 "properties": {
-                  "id": {
-                    "type": "string",
-                    "range": "xsd:string",
-                    "subject": "id",
-                    "title": "Id for the Keruutapahtuman faktat"
-                  },
-                  "@type": {
-                    "type": "string",
-                    "range": "xsd:string",
-                    "subject": "@type",
-                    "title": "Type for the Keruutapahtuman faktat"
-                  },
                   "batCollector": {
                     "type": "string",
                     "enum": [
@@ -12056,18 +11936,6 @@
                   "title": "Completeness of census",
                   "description": "",
                   "properties": {
-                    "id": {
-                      "type": "string",
-                      "range": "xsd:string",
-                      "subject": "id",
-                      "title": "Id for the Completeness of census"
-                    },
-                    "@type": {
-                      "type": "string",
-                      "range": "xsd:string",
-                      "subject": "@type",
-                      "title": "Type for the Completeness of census"
-                    },
                     "censusTaxonID": {
                       "type": "string",
                       "range": "MX.taxon",
@@ -12972,18 +12840,6 @@
                       "title": "Measurements",
                       "description": "For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "range": "xsd:string",
-                          "subject": "id",
-                          "title": "Id for the MY.measurementClass"
-                        },
-                        "@type": {
-                          "type": "string",
-                          "range": "xsd:string",
-                          "subject": "@type",
-                          "title": "Type for the MY.measurementClass"
-                        },
                         "DNAConcentrationNgPerMicroliter": {
                           "type": "array",
                           "uniqueItems": false,
@@ -14265,18 +14121,6 @@
                       "title": "unitFact",
                       "description": "",
                       "properties": {
-                        "id": {
-                          "type": "string",
-                          "range": "xsd:string",
-                          "subject": "id",
-                          "title": "Id for the Näytteen / havainnon faktat"
-                        },
-                        "@type": {
-                          "type": "string",
-                          "range": "xsd:string",
-                          "subject": "@type",
-                          "title": "Type for the Näytteen / havainnon faktat"
-                        },
                         "autocompleteSelectedTaxonID": {
                           "type": "string",
                           "range": "xsd:string",
@@ -15439,18 +15283,6 @@
       "title": "Reserve",
       "description": "",
       "properties": {
-        "id": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "id",
-          "title": "Id for the MNP.reserveClass"
-        },
-        "@type": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "@type",
-          "title": "Type for the MNP.reserveClass"
-        },
         "reserver": {
           "type": "string",
           "range": "MA.person",

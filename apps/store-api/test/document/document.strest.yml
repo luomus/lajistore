@@ -42,16 +42,12 @@ requests:
         expect: 'JX.5833#2'
       - jsonpath: content[0].gatherings[0].units[0].id
         expect: 'JX.5833#3'
-      - jsonpath: content[0].gatherings[0].units[0].unitFact.id
-        expect: 'JX.5833#4'
-      - jsonpath: content[0].gatherings[0].units[0].unitGathering.id
-        expect: 'JX.5833#5'
       - jsonpath: content[0].gatherings[0].units[0].identifications[0].id
-        expect: 'JX.5833#6'
+        expect: 'JX.5833#5'
       - jsonpath: content[0].gatherings[1].units[0].identifications[0].id
-        expect: 'JX.5833#11'
+        expect: 'JX.5833#9'
       - jsonpath: content[0].gatherings[1].id
-        expect: 'JX.5833#7'
+        expect: 'JX.5833#6'
       - jsonpath: content[1].id
         type: [string]
       - jsonpath: content[2].id
@@ -71,23 +67,19 @@ requests:
       - jsonpath: content.id
         expect: 'JX.5833'
       - jsonpath: content.gatheringEvent.id
-        expect: 'JX.5833#12'
+        expect: 'JX.5833#10'
       - jsonpath: content.gatheringEvent.leg[0]
         expect: 'Foobar'
       - jsonpath: content.gatherings[0].id
-        expect: 'JX.5833#13'
+        expect: 'JX.5833#11'
       - jsonpath: content.gatherings[0].units[0].id
         expect: 'JX.5833#3'
-      - jsonpath: content.gatherings[0].units[0].unitFact.id
-        expect: 'JX.5833#14'
-      - jsonpath: content.gatherings[0].units[0].unitGathering.id
-        expect: 'JX.5833#15'
       - jsonpath: content.gatherings[0].units[0].identifications[0].id
-        expect: 'JX.5833#16'
+        expect: 'JX.5833#13'
       - jsonpath: content.gatherings[1].units[0].identifications[0].id
-        expect: 'JX.5833#21'
-      - jsonpath: content.gatherings[1].id
         expect: 'JX.5833#17'
+      - jsonpath: content.gatherings[1].id
+        expect: 'JX.5833#14'
 
   get_versoins:
     request:

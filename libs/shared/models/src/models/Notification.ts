@@ -10,8 +10,6 @@ export interface Notification {
   id?: string;
   "@type"?: string;
   annotation?: {
-    id?: string;
-    "@type"?: string;
     addedTags?: string[];
     annotationByPerson?: string;
     annotationBySystem?: string;
@@ -213,8 +211,6 @@ export interface Notification {
     lineTransectAnnotation?: ("MAN.birdCountError" | "MAN.innerCountError" | "MAN.otherError")[];
     notes?: string;
     occurrenceAtTimeOfAnnotation?: {
-      id?: string;
-      "@type"?: string;
       countryVerbatim?: string;
       dateBegin?: string;
       dateEnd?: string;

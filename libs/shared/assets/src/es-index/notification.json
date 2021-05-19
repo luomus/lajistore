@@ -18,12 +18,6 @@
       },
       "annotation": {
         "properties": {
-          "id": {
-            "type": "keyword"
-          },
-          "@type": {
-            "type": "keyword"
-          },
           "addedTags": {
             "type": "keyword",
             "ignore_above": 200
@@ -180,12 +174,6 @@
           },
           "occurrenceAtTimeOfAnnotation": {
             "properties": {
-              "id": {
-                "type": "keyword"
-              },
-              "@type": {
-                "type": "keyword"
-              },
               "countryVerbatim": {
                 "type": "keyword",
                 "ignore_above": 200

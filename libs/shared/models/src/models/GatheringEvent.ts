@@ -57,9 +57,6 @@ export interface GatheringEvent {
   dateBegin?: string;
   dateEnd?: string;
   gatheringFact?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
     batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
     censusAreaHectares?: number;
     invasiveControlOtherExpensesInEuros?: number;
@@ -307,9 +304,6 @@ export interface GatheringEvent {
   startDistanceFromNECorner?: string;
   startPointDeviation?: number;
   taxonCensus?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
     censusTaxonID?: string;
     censusTaxonSetID?:
       | "MX.taxonSetSykeButterflyCensusPapilionoidea"
