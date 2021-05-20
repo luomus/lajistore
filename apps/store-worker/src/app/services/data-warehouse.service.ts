@@ -168,13 +168,26 @@ export class DataWarehouseService {
     const sources = Object.keys(sourceData);
     for (const source of sources) {
       const accessToken = await this.lajiApiTokenService.getToken(source);
-      const payload = action === WorkerMessagePattern.documentDelete ?
-        this.prepareDeletePayload(sourceData[source]) :
-        { 'schema': 'lajistore', 'roots': sourceData[source] };
+      const deleted = action === WorkerMessagePattern.documentDelete ?
+        sourceData[source] :
+        sourceData[source].filter(d => this.isDeletePayload(d));
+      const update = action !== WorkerMessagePattern.documentDelete ?
+        sourceData[source].filter(d => !this.isDeletePayload(d)) :
+        [];
 
-      console.log('SENDING\n', payload);
-      await this.lajiApiService.sendToWarehouse(payload, accessToken).toPromise();
+      if (deleted.length) {
+        await this.lajiApiService.sendToWarehouse(this.prepareDeletePayload(deleted), accessToken).toPromise();
+      }
+      if (update.length) {
+        await this.lajiApiService.sendToWarehouse({ 'schema': 'lajistore', 'roots': update }, accessToken).toPromise();
+      }
     }
+  }
+
+  private isDeletePayload(obj: DWPayload) {
+    const type = Object.keys(obj)[0] as keyof DWPayload;
+    const keys = Object.keys(obj[type]);
+    return keys.length === 1 && keys[0] === 'id';
   }
 
   private deletePayload(obj: StoreObject) {
