@@ -28,6 +28,7 @@ import { RuntimeException } from '@nestjs/core/errors/exceptions/runtime.excepti
 import { StoreObject } from '@luomus/shared/models';
 import {
   PARAM_DRY_RUN,
+  PARAM_FIELDS,
   PARAM_INCLUDE_DIFF,
   PARAM_PAGE,
   PARAM_PAGE_SIZE,
@@ -91,6 +92,7 @@ export class DocumentController {
     @CurrentSystemID() source: string,
     @Param(PARAM_TYPE, TypeExistsPipe) type: string,
     @Query(PARAM_QUERY) query: string,
+    @Query(PARAM_FIELDS) fields: string,
     @Query(PARAM_PAGE) page: string,
     @Query(PARAM_PAGE_SIZE) pageSize: string,
     @Query(PARAM_SORT) sort: string
@@ -99,6 +101,7 @@ export class DocumentController {
       source,
       type,
       query,
+      fields,
       page: parseInt(page ?? 1, 10),
       pageSize: parseInt(pageSize ?? 20, 10),
       sort,
@@ -110,16 +113,20 @@ export class DocumentController {
     @CurrentSystemID() source: string,
     @Param(PARAM_TYPE, TypeExistsPipe) type: string,
     @Query(PARAM_QUERY) query: string,
+    @Query(PARAM_FIELDS) fields: string,
     @Query(PARAM_PAGE) page: string,
     @Query(PARAM_PAGE_SIZE) pageSize: string,
+    @Query(PARAM_SORT) sort: string,
     @Body() body: unknown
   ) {
     return this.storeService.search({
       source,
       type,
       query,
+      fields,
       page: parseInt(page ?? 1, 10),
       pageSize: parseInt(pageSize ?? 20, 10),
+      sort,
       body,
     });
   }

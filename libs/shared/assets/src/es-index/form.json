@@ -855,12 +855,10 @@
                     "ignore_above": 200
                   },
                   "dateBegin": {
-                    "type": "keyword",
-                    "ignore_above": 200
+                    "type": "date"
                   },
                   "dateEnd": {
-                    "type": "keyword",
-                    "ignore_above": 200
+                    "type": "date"
                   },
                   "gatheringFact": {
                     "properties": {
@@ -1477,12 +1475,10 @@
                     "ignore_above": 200
                   },
                   "dateBegin": {
-                    "type": "keyword",
-                    "ignore_above": 200
+                    "type": "date"
                   },
                   "dateEnd": {
-                    "type": "keyword",
-                    "ignore_above": 200
+                    "type": "date"
                   },
                   "dateVerbatim": {
                     "type": "keyword",
@@ -2604,12 +2600,10 @@
                             "type": "keyword"
                           },
                           "dateBegin": {
-                            "type": "keyword",
-                            "ignore_above": 200
+                            "type": "date"
                           },
                           "dateEnd": {
-                            "type": "keyword",
-                            "ignore_above": 200
+                            "type": "date"
                           },
                           "geometry": {
                             "type": "geo_shape",

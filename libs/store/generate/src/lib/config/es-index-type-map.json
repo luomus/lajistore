@@ -12,6 +12,8 @@
   "xsd:dateTime": { "type": "date" },
   "xsd:date": { "type": "date" },
   "xsd:time": { "type": "date" },
+  "MY.dateBegin": { "type": "date" },
+  "MY.dateEnd": { "type": "date" },
   "xsd:anyURI": { "type": "keyword", "ignore_above": 200 },
   "rdfs:Resource": { "type": "keyword", "ignore_above": 200 },
   "MZ.keyValue": { "type": "object", "enabled": false },

@@ -690,6 +690,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /BibliographicResource
   listBibliographicResource(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -707,6 +710,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /Pinkka
   listPinkka(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -724,6 +730,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /administrativeStatus
   listadministrativeStatus(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -741,6 +750,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /agent
   listagent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -758,6 +770,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /annotation
   listannotation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -775,6 +790,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /annotationOccurrence
   listannotationOccurrence(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -792,6 +810,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /area
   listarea(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -809,6 +830,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /audio
   listaudio(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -826,6 +850,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /branch
   listbranch(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -843,6 +870,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /checklist
   listchecklist(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -860,6 +890,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /checklistVersion
   listchecklistVersion(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -877,6 +910,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /collection
   listcollection(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -894,6 +930,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /contentContextDescription
   listcontentContextDescription(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -911,6 +950,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /dataset
   listdataset(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -928,6 +970,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /dateRange
   listdateRange(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -945,6 +990,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /device
   listdevice(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -962,6 +1010,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /deviceIndividual
   listdeviceIndividual(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -979,6 +1030,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /document
   listdocument(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -996,6 +1050,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /downloadRequest
   listdownloadRequest(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1013,6 +1070,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /endangerment
   listendangerment(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1030,6 +1090,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /event
   listevent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1047,6 +1110,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /field
   listfield(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1064,6 +1130,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /fieldset
   listfieldset(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1081,6 +1150,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /form
   listform(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1098,6 +1170,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /formFooter
   listformFooter(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1115,6 +1190,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /formInstructions
   listformInstructions(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1132,6 +1210,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /formNamedPlaceOptions
   listformNamedPlaceOptions(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1149,6 +1230,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /formOptions
   listformOptions(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1166,6 +1250,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /formPermission
   listformPermission(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1183,6 +1270,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /formPermissionPerson
   listformPermissionPerson(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1200,6 +1290,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /formPermissionSingle
   listformPermissionSingle(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1217,6 +1310,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /formSeason
   listformSeason(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1234,6 +1330,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /gathering
   listgathering(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1251,6 +1350,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /gatheringEvent
   listgatheringEvent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1268,6 +1370,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /gatheringFact
   listgatheringFact(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1285,6 +1390,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /habitat
   listhabitat(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1302,6 +1410,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /identification
   listidentification(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1319,6 +1430,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /image
   listimage(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1336,6 +1450,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /individual
   listindividual(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1353,6 +1470,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /informalTaxonGroup
   listinformalTaxonGroup(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1370,6 +1490,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /informationSystem
   listinformationSystem(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1387,6 +1510,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /iucnRedListEvaluation
   listiucnRedListEvaluation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1404,6 +1530,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /iucnRedListEvaluationYear
   listiucnRedListEvaluationYear(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1421,6 +1550,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /iucnRedListTaxonGroup
   listiucnRedListTaxonGroup(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1438,6 +1570,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /measurement
   listmeasurement(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1455,6 +1590,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /multimedia
   listmultimedia(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1472,6 +1610,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /namedPlace
   listnamedPlace(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1489,6 +1630,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /news
   listnews(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1506,6 +1650,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /notification
   listnotification(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1523,6 +1670,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /occurrence
   listoccurrence(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1540,6 +1690,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /organization
   listorganization(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1557,6 +1710,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /permit
   listpermit(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1574,6 +1730,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /person
   listperson(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1591,6 +1750,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /preparation
   listpreparation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1608,6 +1770,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /profile
   listprofile(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1625,6 +1790,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /publication
   listpublication(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1642,6 +1810,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /regionalStatus
   listregionalStatus(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1659,6 +1830,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /reserve
   listreserve(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1676,6 +1850,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /sample
   listsample(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1693,6 +1870,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /subUnit
   listsubUnit(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1710,6 +1890,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /tag
   listtag(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1727,6 +1910,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /taxon
   listtaxon(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1744,6 +1930,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /taxonCensus
   listtaxonCensus(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1761,6 +1950,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /taxonConcept
   listtaxonConcept(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1778,6 +1970,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /taxonGroupIucnEditors
   listtaxonGroupIucnEditors(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1795,6 +1990,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /taxonInteraction
   listtaxonInteraction(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1812,6 +2010,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /taxonSet
   listtaxonSet(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1829,6 +2030,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /transaction
   listtransaction(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1846,6 +2050,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /transactionEvent
   listtransactionEvent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1863,6 +2070,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /transactionItem
   listtransactionItem(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1880,6 +2090,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /translation
   listtranslation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1897,6 +2110,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /typeSpecimen
   listtypeSpecimen(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1914,6 +2130,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /unit
   listunit(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1931,6 +2150,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /unitFact
   listunitFact(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1948,6 +2170,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /unitGathering
   listunitGathering(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1965,6 +2190,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /validator
   listvalidator(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -1982,6 +2210,9 @@ type ViewerBasicAuth {
   #
   # Equivalent to GET /video
   listvideo(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11279,6 +11510,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /BibliographicResource
   listBibliographicResource(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11296,6 +11530,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /Pinkka
   listPinkka(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11313,6 +11550,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /administrativeStatus
   listadministrativeStatus(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11330,6 +11570,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /agent
   listagent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11347,6 +11590,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /annotation
   listannotation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11364,6 +11610,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /annotationOccurrence
   listannotationOccurrence(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11381,6 +11630,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /area
   listarea(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11398,6 +11650,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /audio
   listaudio(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11415,6 +11670,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /branch
   listbranch(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11432,6 +11690,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /checklist
   listchecklist(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11449,6 +11710,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /checklistVersion
   listchecklistVersion(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11466,6 +11730,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /collection
   listcollection(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11483,6 +11750,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /contentContextDescription
   listcontentContextDescription(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11500,6 +11770,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /dataset
   listdataset(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11517,6 +11790,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /dateRange
   listdateRange(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11534,6 +11810,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /device
   listdevice(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11551,6 +11830,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /deviceIndividual
   listdeviceIndividual(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11568,6 +11850,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /document
   listdocument(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11585,6 +11870,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /downloadRequest
   listdownloadRequest(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11602,6 +11890,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /endangerment
   listendangerment(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11619,6 +11910,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /event
   listevent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11636,6 +11930,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /field
   listfield(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11653,6 +11950,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /fieldset
   listfieldset(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11670,6 +11970,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /form
   listform(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11687,6 +11990,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /formFooter
   listformFooter(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11704,6 +12010,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /formInstructions
   listformInstructions(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11721,6 +12030,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /formNamedPlaceOptions
   listformNamedPlaceOptions(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11738,6 +12050,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /formOptions
   listformOptions(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11755,6 +12070,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /formPermission
   listformPermission(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11772,6 +12090,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /formPermissionPerson
   listformPermissionPerson(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11789,6 +12110,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /formPermissionSingle
   listformPermissionSingle(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11806,6 +12130,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /formSeason
   listformSeason(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11823,6 +12150,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /gathering
   listgathering(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11840,6 +12170,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /gatheringEvent
   listgatheringEvent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11857,6 +12190,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /gatheringFact
   listgatheringFact(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11874,6 +12210,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /habitat
   listhabitat(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11891,6 +12230,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /identification
   listidentification(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11908,6 +12250,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /image
   listimage(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11925,6 +12270,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /individual
   listindividual(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11942,6 +12290,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /informalTaxonGroup
   listinformalTaxonGroup(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11959,6 +12310,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /informationSystem
   listinformationSystem(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11976,6 +12330,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /iucnRedListEvaluation
   listiucnRedListEvaluation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -11993,6 +12350,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /iucnRedListEvaluationYear
   listiucnRedListEvaluationYear(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12010,6 +12370,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /iucnRedListTaxonGroup
   listiucnRedListTaxonGroup(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12027,6 +12390,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /measurement
   listmeasurement(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12044,6 +12410,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /multimedia
   listmultimedia(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12061,6 +12430,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /namedPlace
   listnamedPlace(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12078,6 +12450,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /news
   listnews(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12095,6 +12470,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /notification
   listnotification(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12112,6 +12490,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /occurrence
   listoccurrence(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12129,6 +12510,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /organization
   listorganization(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12146,6 +12530,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /permit
   listpermit(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12163,6 +12550,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /person
   listperson(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12180,6 +12570,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /preparation
   listpreparation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12197,6 +12590,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /profile
   listprofile(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12214,6 +12610,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /publication
   listpublication(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12231,6 +12630,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /regionalStatus
   listregionalStatus(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12248,6 +12650,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /reserve
   listreserve(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12265,6 +12670,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /sample
   listsample(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12282,6 +12690,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /subUnit
   listsubUnit(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12299,6 +12710,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /tag
   listtag(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12316,6 +12730,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /taxon
   listtaxon(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12333,6 +12750,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /taxonCensus
   listtaxonCensus(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12350,6 +12770,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /taxonConcept
   listtaxonConcept(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12367,6 +12790,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /taxonGroupIucnEditors
   listtaxonGroupIucnEditors(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12384,6 +12810,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /taxonInteraction
   listtaxonInteraction(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12401,6 +12830,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /taxonSet
   listtaxonSet(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12418,6 +12850,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /transaction
   listtransaction(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12435,6 +12870,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /transactionEvent
   listtransactionEvent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12452,6 +12890,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /transactionItem
   listtransactionItem(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12469,6 +12910,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /translation
   listtranslation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12486,6 +12930,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /typeSpecimen
   listtypeSpecimen(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12503,6 +12950,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /unit
   listunit(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12520,6 +12970,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /unitFact
   listunitFact(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12537,6 +12990,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /unitGathering
   listunitGathering(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12554,6 +13010,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /validator
   listvalidator(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -12571,6 +13030,9 @@ type ViewerAnyAuth {
   #
   # Equivalent to GET /video
   listvideo(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16229,6 +16691,9 @@ type MutationViewerBasicAuth {
   #
   # Equivalent to POST /BibliographicResource/_search
   searchBibliographicResource(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16240,15 +16705,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): BibliographicResourceSearch2
 
   # Return list of Instances of this describe one taxon description context (Pinkka eLearning enviroment) objects.
   #
   # Equivalent to POST /Pinkka/_search
   searchPinkka(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16260,15 +16725,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): PinkkaSearch2
 
   # Return list of Administrative status objects.
   #
   # Equivalent to POST /administrativeStatus/_search
   searchadministrativeStatus(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16280,15 +16745,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): AdministrativeStatusSearch2
 
   # Return list of agent objects.
   #
   # Equivalent to POST /agent/_search
   searchagent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16300,15 +16765,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): AgentSearch2
 
   # Return list of annotation objects.
   #
   # Equivalent to POST /annotation/_search
   searchannotation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16320,15 +16785,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): AnnotationSearch2
 
   # Return list of annotationOccurrence objects.
   #
   # Equivalent to POST /annotationOccurrence/_search
   searchannotationOccurrence(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16340,15 +16805,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): AnnotationOccurrenceSearch2
 
   # Return list of Area objects.
   #
   # Equivalent to POST /area/_search
   searcharea(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16360,15 +16825,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): AreaSearch2
 
   # Return list of Audio recording objects.
   #
   # Equivalent to POST /audio/_search
   searchaudio(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16380,15 +16845,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): AudioSearch2
 
   # Return list of Branch objects.
   #
   # Equivalent to POST /branch/_search
   searchbranch(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16400,15 +16865,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): BranchSearch2
 
   # Return list of Checklist objects.
   #
   # Equivalent to POST /checklist/_search
   searchchecklist(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16420,15 +16885,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ChecklistSearch2
 
   # Return list of Checklist version objects.
   #
   # Equivalent to POST /checklistVersion/_search
   searchchecklistVersion(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16440,15 +16905,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ChecklistVersionSearch2
 
   # Return list of Collection objects.
   #
   # Equivalent to POST /collection/_search
   searchcollection(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16460,15 +16925,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): CollectionSearch2
 
   # Return list of Instances of this describe one taxon description context objects.
   #
   # Equivalent to POST /contentContextDescription/_search
   searchcontentContextDescription(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16480,15 +16945,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ContentContextDescriptionSearch2
 
   # Return list of Dataset objects.
   #
   # Equivalent to POST /dataset/_search
   searchdataset(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16500,15 +16965,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): DatasetSearch2
 
   # Return list of dateRange objects.
   #
   # Equivalent to POST /dateRange/_search
   searchdateRange(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16520,15 +16985,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): DateRangeSearch2
 
   # Return list of device objects.
   #
   # Equivalent to POST /device/_search
   searchdevice(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16540,15 +17005,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): DeviceSearch2
 
   # Return list of deviceIndividual objects.
   #
   # Equivalent to POST /deviceIndividual/_search
   searchdeviceIndividual(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16560,15 +17025,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): DeviceIndividualSearch2
 
   # Return list of Submissions objects.
   #
   # Equivalent to POST /document/_search
   searchdocument(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16580,15 +17045,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): DocumentSearch2
 
   # Return list of Download request objects.
   #
   # Equivalent to POST /downloadRequest/_search
   searchdownloadRequest(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16600,15 +17065,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): DownloadRequestSearch2
 
   # Return list of Endagerment object objects.
   #
   # Equivalent to POST /endangerment/_search
   searchendangerment(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16620,15 +17085,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): EndangermentSearch2
 
   # Return list of event objects.
   #
   # Equivalent to POST /event/_search
   searchevent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16640,15 +17105,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): EventSearch2
 
   # Return list of field objects.
   #
   # Equivalent to POST /field/_search
   searchfield(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16660,15 +17125,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FieldSearch2
 
   # Return list of fieldset objects.
   #
   # Equivalent to POST /fieldset/_search
   searchfieldset(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16680,15 +17145,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FieldsetSearch2
 
   # Return list of form objects.
   #
   # Equivalent to POST /form/_search
   searchform(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16700,15 +17165,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormSearch2
 
   # Return list of formFooter objects.
   #
   # Equivalent to POST /formFooter/_search
   searchformFooter(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16720,15 +17185,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormFooterSearch2
 
   # Return list of formInstructions objects.
   #
   # Equivalent to POST /formInstructions/_search
   searchformInstructions(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16740,15 +17205,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormInstructionsSearch2
 
   # Return list of formNamedPlaceOptions objects.
   #
   # Equivalent to POST /formNamedPlaceOptions/_search
   searchformNamedPlaceOptions(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16760,15 +17225,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormNamedPlaceOptionsSearch2
 
   # Return list of formOptions objects.
   #
   # Equivalent to POST /formOptions/_search
   searchformOptions(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16780,15 +17245,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormOptionsSearch2
 
   # Return list of formPermission objects.
   #
   # Equivalent to POST /formPermission/_search
   searchformPermission(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16800,15 +17265,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormPermissionSearch2
 
   # Return list of formPermissionPerson objects.
   #
   # Equivalent to POST /formPermissionPerson/_search
   searchformPermissionPerson(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16820,15 +17285,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormPermissionPersonSearch2
 
   # Return list of formPermissionSingle objects.
   #
   # Equivalent to POST /formPermissionSingle/_search
   searchformPermissionSingle(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16840,15 +17305,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormPermissionSingleSearch2
 
   # Return list of formSeason objects.
   #
   # Equivalent to POST /formSeason/_search
   searchformSeason(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16860,15 +17325,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormSeasonSearch2
 
   # Return list of Gathering event objects.
   #
   # Equivalent to POST /gathering/_search
   searchgathering(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16880,15 +17345,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): GatheringSearch2
 
   # Return list of Global gathering event objects.
   #
   # Equivalent to POST /gatheringEvent/_search
   searchgatheringEvent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16900,15 +17365,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): GatheringEventSearch2
 
   # Return list of Keruutapahtuman faktat objects.
   #
   # Equivalent to POST /gatheringFact/_search
   searchgatheringFact(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16920,15 +17385,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): GatheringFactSearch2
 
   # Return list of IUCN Red List Evaluation Habitat objects.
   #
   # Equivalent to POST /habitat/_search
   searchhabitat(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16940,15 +17405,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): HabitatSearch2
 
   # Return list of Identification objects.
   #
   # Equivalent to POST /identification/_search
   searchidentification(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16960,15 +17425,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): IdentificationSearch2
 
   # Return list of Image objects.
   #
   # Equivalent to POST /image/_search
   searchimage(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -16980,15 +17445,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ImageSearch2
 
   # Return list of individual objects.
   #
   # Equivalent to POST /individual/_search
   searchindividual(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17000,15 +17465,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): IndividualSearch2
 
   # Return list of Informal Taxon Group objects.
   #
   # Equivalent to POST /informalTaxonGroup/_search
   searchinformalTaxonGroup(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17020,15 +17485,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): InformalTaxonGroupSearch2
 
   # Return list of Information System objects.
   #
   # Equivalent to POST /informationSystem/_search
   searchinformationSystem(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17040,15 +17505,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): InformationSystemSearch2
 
   # Return list of IUCN Red List Evaluation objects.
   #
   # Equivalent to POST /iucnRedListEvaluation/_search
   searchiucnRedListEvaluation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17060,15 +17525,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): IucnRedListEvaluationSearch2
 
   # Return list of IUCN Evaluation Year objects.
   #
   # Equivalent to POST /iucnRedListEvaluationYear/_search
   searchiucnRedListEvaluationYear(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17080,15 +17545,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): IucnRedListEvaluationYearSearch2
 
   # Return list of IUCN Red List Evaluation Informal Taxon Group objects.
   #
   # Equivalent to POST /iucnRedListTaxonGroup/_search
   searchiucnRedListTaxonGroup(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17100,15 +17565,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): IucnRedListTaxonGroupSearch2
 
   # Return list of measurement objects.
   #
   # Equivalent to POST /measurement/_search
   searchmeasurement(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17120,15 +17585,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): MeasurementSearch2
 
   # Return list of multimedia objects.
   #
   # Equivalent to POST /multimedia/_search
   searchmultimedia(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17140,15 +17605,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): MultimediaSearch2
 
   # Return list of namedPlace objects.
   #
   # Equivalent to POST /namedPlace/_search
   searchnamedPlace(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17160,15 +17625,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): NamedPlaceSearch2
 
   # Return list of News objects.
   #
   # Equivalent to POST /news/_search
   searchnews(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17180,15 +17645,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): NewsSearch2
 
   # Return list of notification objects.
   #
   # Equivalent to POST /notification/_search
   searchnotification(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17200,15 +17665,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): NotificationSearch2
 
   # Return list of Occurrence objects.
   #
   # Equivalent to POST /occurrence/_search
   searchoccurrence(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17220,15 +17685,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): OccurrenceSearch2
 
   # Return list of Organization objects.
   #
   # Equivalent to POST /organization/_search
   searchorganization(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17240,15 +17705,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): OrganizationSearch2
 
   # Return list of permit objects.
   #
   # Equivalent to POST /permit/_search
   searchpermit(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17260,15 +17725,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): PermitSearch2
 
   # Return list of Person objects.
   #
   # Equivalent to POST /person/_search
   searchperson(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17280,15 +17745,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): PersonSearch2
 
   # Return list of preparation objects.
   #
   # Equivalent to POST /preparation/_search
   searchpreparation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17300,15 +17765,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): PreparationSearch2
 
   # Return list of profile objects.
   #
   # Equivalent to POST /profile/_search
   searchprofile(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17320,15 +17785,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ProfileSearch2
 
   # Return list of Publication objects.
   #
   # Equivalent to POST /publication/_search
   searchpublication(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17340,15 +17805,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): PublicationSearch2
 
   # Return list of Instances of this class tell endangerment of a certain area and notes about the area objects.
   #
   # Equivalent to POST /regionalStatus/_search
   searchregionalStatus(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17360,15 +17825,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): RegionalStatusSearch2
 
   # Return list of reserve objects.
   #
   # Equivalent to POST /reserve/_search
   searchreserve(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17380,15 +17845,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ReserveSearch2
 
   # Return list of Specimen sample objects.
   #
   # Equivalent to POST /sample/_search
   searchsample(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17400,15 +17865,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): SampleSearch2
 
   # Return list of subUnit objects.
   #
   # Equivalent to POST /subUnit/_search
   searchsubUnit(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17420,15 +17885,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): SubUnitSearch2
 
   # Return list of tag objects.
   #
   # Equivalent to POST /tag/_search
   searchtag(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17440,15 +17905,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TagSearch2
 
   # Return list of Taxon objects.
   #
   # Equivalent to POST /taxon/_search
   searchtaxon(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17460,15 +17925,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TaxonSearch2
 
   # Return list of Completeness of census objects.
   #
   # Equivalent to POST /taxonCensus/_search
   searchtaxonCensus(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17480,15 +17945,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TaxonCensusSearch2
 
   # Return list of Taxon concept objects.
   #
   # Equivalent to POST /taxonConcept/_search
   searchtaxonConcept(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17500,15 +17965,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TaxonConceptSearch2
 
   # Return list of IUCN Editors objects.
   #
   # Equivalent to POST /taxonGroupIucnEditors/_search
   searchtaxonGroupIucnEditors(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17520,15 +17985,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TaxonGroupIucnEditorsSearch2
 
   # Return list of Taxon interaction objects.
   #
   # Equivalent to POST /taxonInteraction/_search
   searchtaxonInteraction(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17540,15 +18005,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TaxonInteractionSearch2
 
   # Return list of Instances of this class are a taxon sets objects.
   #
   # Equivalent to POST /taxonSet/_search
   searchtaxonSet(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17560,15 +18025,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TaxonSetSearch2
 
   # Return list of Transaction objects.
   #
   # Equivalent to POST /transaction/_search
   searchtransaction(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17580,15 +18045,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TransactionSearch2
 
   # Return list of Transaction Event objects.
   #
   # Equivalent to POST /transactionEvent/_search
   searchtransactionEvent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17600,15 +18065,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TransactionEventSearch2
 
   # Return list of Transaction Item objects.
   #
   # Equivalent to POST /transactionItem/_search
   searchtransactionItem(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17620,15 +18085,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TransactionItemSearch2
 
   # Return list of translation objects.
   #
   # Equivalent to POST /translation/_search
   searchtranslation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17640,15 +18105,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TranslationSearch2
 
   # Return list of Identification objects.
   #
   # Equivalent to POST /typeSpecimen/_search
   searchtypeSpecimen(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17660,15 +18125,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TypeSpecimenSearch2
 
   # Return list of Specimen objects.
   #
   # Equivalent to POST /unit/_search
   searchunit(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17680,15 +18145,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): UnitSearch2
 
   # Return list of Näytteen / havainnon faktat objects.
   #
   # Equivalent to POST /unitFact/_search
   searchunitFact(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17700,15 +18165,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): UnitFactSearch2
 
   # Return list of Havainnon keruutiedot objects.
   #
   # Equivalent to POST /unitGathering/_search
   searchunitGathering(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17720,15 +18185,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): UnitGatheringSearch2
 
   # Return list of validator objects.
   #
   # Equivalent to POST /validator/_search
   searchvalidator(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17740,15 +18205,15 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ValidatorSearch2
 
   # Return list of Video objects.
   #
   # Equivalent to POST /video/_search
   searchvideo(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -17760,9 +18225,6 @@ type MutationViewerBasicAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): VideoSearch2
 
   # Store Bibliographic Resource object(s)
@@ -22225,6 +22687,7 @@ input EsSearchObjInput {
 }
 
 type BibliographicResourceSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22236,6 +22699,7 @@ type BibliographicResourceSearch2 {
 }
 
 type PinkkaSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22247,6 +22711,7 @@ type PinkkaSearch2 {
 }
 
 type AdministrativeStatusSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22258,6 +22723,7 @@ type AdministrativeStatusSearch2 {
 }
 
 type AgentSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22269,6 +22735,7 @@ type AgentSearch2 {
 }
 
 type AnnotationSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22280,6 +22747,7 @@ type AnnotationSearch2 {
 }
 
 type AnnotationOccurrenceSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22291,6 +22759,7 @@ type AnnotationOccurrenceSearch2 {
 }
 
 type AreaSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22302,6 +22771,7 @@ type AreaSearch2 {
 }
 
 type AudioSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22313,6 +22783,7 @@ type AudioSearch2 {
 }
 
 type BranchSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22324,6 +22795,7 @@ type BranchSearch2 {
 }
 
 type ChecklistSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22335,6 +22807,7 @@ type ChecklistSearch2 {
 }
 
 type ChecklistVersionSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22346,6 +22819,7 @@ type ChecklistVersionSearch2 {
 }
 
 type CollectionSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22357,6 +22831,7 @@ type CollectionSearch2 {
 }
 
 type ContentContextDescriptionSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22368,6 +22843,7 @@ type ContentContextDescriptionSearch2 {
 }
 
 type DatasetSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22379,6 +22855,7 @@ type DatasetSearch2 {
 }
 
 type DateRangeSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22390,6 +22867,7 @@ type DateRangeSearch2 {
 }
 
 type DeviceSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22401,6 +22879,7 @@ type DeviceSearch2 {
 }
 
 type DeviceIndividualSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22412,6 +22891,7 @@ type DeviceIndividualSearch2 {
 }
 
 type DocumentSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22423,6 +22903,7 @@ type DocumentSearch2 {
 }
 
 type DownloadRequestSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22434,6 +22915,7 @@ type DownloadRequestSearch2 {
 }
 
 type EndangermentSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22445,6 +22927,7 @@ type EndangermentSearch2 {
 }
 
 type EventSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22456,6 +22939,7 @@ type EventSearch2 {
 }
 
 type FieldSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22467,6 +22951,7 @@ type FieldSearch2 {
 }
 
 type FieldsetSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22478,6 +22963,7 @@ type FieldsetSearch2 {
 }
 
 type FormSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22489,6 +22975,7 @@ type FormSearch2 {
 }
 
 type FormFooterSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22500,6 +22987,7 @@ type FormFooterSearch2 {
 }
 
 type FormInstructionsSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22511,6 +22999,7 @@ type FormInstructionsSearch2 {
 }
 
 type FormNamedPlaceOptionsSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22522,6 +23011,7 @@ type FormNamedPlaceOptionsSearch2 {
 }
 
 type FormOptionsSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22533,6 +23023,7 @@ type FormOptionsSearch2 {
 }
 
 type FormPermissionSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22544,6 +23035,7 @@ type FormPermissionSearch2 {
 }
 
 type FormPermissionPersonSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22555,6 +23047,7 @@ type FormPermissionPersonSearch2 {
 }
 
 type FormPermissionSingleSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22566,6 +23059,7 @@ type FormPermissionSingleSearch2 {
 }
 
 type FormSeasonSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22577,6 +23071,7 @@ type FormSeasonSearch2 {
 }
 
 type GatheringSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22588,6 +23083,7 @@ type GatheringSearch2 {
 }
 
 type GatheringEventSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22599,6 +23095,7 @@ type GatheringEventSearch2 {
 }
 
 type GatheringFactSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22610,6 +23107,7 @@ type GatheringFactSearch2 {
 }
 
 type HabitatSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22621,6 +23119,7 @@ type HabitatSearch2 {
 }
 
 type IdentificationSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22632,6 +23131,7 @@ type IdentificationSearch2 {
 }
 
 type ImageSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22643,6 +23143,7 @@ type ImageSearch2 {
 }
 
 type IndividualSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22654,6 +23155,7 @@ type IndividualSearch2 {
 }
 
 type InformalTaxonGroupSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22665,6 +23167,7 @@ type InformalTaxonGroupSearch2 {
 }
 
 type InformationSystemSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22676,6 +23179,7 @@ type InformationSystemSearch2 {
 }
 
 type IucnRedListEvaluationSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22687,6 +23191,7 @@ type IucnRedListEvaluationSearch2 {
 }
 
 type IucnRedListEvaluationYearSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22698,6 +23203,7 @@ type IucnRedListEvaluationYearSearch2 {
 }
 
 type IucnRedListTaxonGroupSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22709,6 +23215,7 @@ type IucnRedListTaxonGroupSearch2 {
 }
 
 type MeasurementSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22720,6 +23227,7 @@ type MeasurementSearch2 {
 }
 
 type MultimediaSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22731,6 +23239,7 @@ type MultimediaSearch2 {
 }
 
 type NamedPlaceSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22742,6 +23251,7 @@ type NamedPlaceSearch2 {
 }
 
 type NewsSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22753,6 +23263,7 @@ type NewsSearch2 {
 }
 
 type NotificationSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22764,6 +23275,7 @@ type NotificationSearch2 {
 }
 
 type OccurrenceSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22775,6 +23287,7 @@ type OccurrenceSearch2 {
 }
 
 type OrganizationSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22786,6 +23299,7 @@ type OrganizationSearch2 {
 }
 
 type PermitSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22797,6 +23311,7 @@ type PermitSearch2 {
 }
 
 type PersonSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22808,6 +23323,7 @@ type PersonSearch2 {
 }
 
 type PreparationSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22819,6 +23335,7 @@ type PreparationSearch2 {
 }
 
 type ProfileSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22830,6 +23347,7 @@ type ProfileSearch2 {
 }
 
 type PublicationSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22841,6 +23359,7 @@ type PublicationSearch2 {
 }
 
 type RegionalStatusSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22852,6 +23371,7 @@ type RegionalStatusSearch2 {
 }
 
 type ReserveSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22863,6 +23383,7 @@ type ReserveSearch2 {
 }
 
 type SampleSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22874,6 +23395,7 @@ type SampleSearch2 {
 }
 
 type SubUnitSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22885,6 +23407,7 @@ type SubUnitSearch2 {
 }
 
 type TagSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22896,6 +23419,7 @@ type TagSearch2 {
 }
 
 type TaxonSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22907,6 +23431,7 @@ type TaxonSearch2 {
 }
 
 type TaxonCensusSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22918,6 +23443,7 @@ type TaxonCensusSearch2 {
 }
 
 type TaxonConceptSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22929,6 +23455,7 @@ type TaxonConceptSearch2 {
 }
 
 type TaxonGroupIucnEditorsSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22940,6 +23467,7 @@ type TaxonGroupIucnEditorsSearch2 {
 }
 
 type TaxonInteractionSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22951,6 +23479,7 @@ type TaxonInteractionSearch2 {
 }
 
 type TaxonSetSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22962,6 +23491,7 @@ type TaxonSetSearch2 {
 }
 
 type TransactionSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22973,6 +23503,7 @@ type TransactionSearch2 {
 }
 
 type TransactionEventSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22984,6 +23515,7 @@ type TransactionEventSearch2 {
 }
 
 type TransactionItemSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -22995,6 +23527,7 @@ type TransactionItemSearch2 {
 }
 
 type TranslationSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -23006,6 +23539,7 @@ type TranslationSearch2 {
 }
 
 type TypeSpecimenSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -23017,6 +23551,7 @@ type TypeSpecimenSearch2 {
 }
 
 type UnitSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -23028,6 +23563,7 @@ type UnitSearch2 {
 }
 
 type UnitFactSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -23039,6 +23575,7 @@ type UnitFactSearch2 {
 }
 
 type UnitGatheringSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -23050,6 +23587,7 @@ type UnitGatheringSearch2 {
 }
 
 type ValidatorSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -23061,6 +23599,7 @@ type ValidatorSearch2 {
 }
 
 type VideoSearch2 {
+  aggregations: JSON
   context: String!
   currentPage: Int
   lastPage: Int!
@@ -25007,6 +25546,9 @@ type MutationViewerAnyAuth {
   #
   # Equivalent to POST /BibliographicResource/_search
   searchBibliographicResource(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25018,15 +25560,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): BibliographicResourceSearch2
 
   # Return list of Instances of this describe one taxon description context (Pinkka eLearning enviroment) objects.
   #
   # Equivalent to POST /Pinkka/_search
   searchPinkka(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25038,15 +25580,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): PinkkaSearch2
 
   # Return list of Administrative status objects.
   #
   # Equivalent to POST /administrativeStatus/_search
   searchadministrativeStatus(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25058,15 +25600,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): AdministrativeStatusSearch2
 
   # Return list of agent objects.
   #
   # Equivalent to POST /agent/_search
   searchagent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25078,15 +25620,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): AgentSearch2
 
   # Return list of annotation objects.
   #
   # Equivalent to POST /annotation/_search
   searchannotation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25098,15 +25640,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): AnnotationSearch2
 
   # Return list of annotationOccurrence objects.
   #
   # Equivalent to POST /annotationOccurrence/_search
   searchannotationOccurrence(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25118,15 +25660,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): AnnotationOccurrenceSearch2
 
   # Return list of Area objects.
   #
   # Equivalent to POST /area/_search
   searcharea(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25138,15 +25680,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): AreaSearch2
 
   # Return list of Audio recording objects.
   #
   # Equivalent to POST /audio/_search
   searchaudio(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25158,15 +25700,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): AudioSearch2
 
   # Return list of Branch objects.
   #
   # Equivalent to POST /branch/_search
   searchbranch(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25178,15 +25720,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): BranchSearch2
 
   # Return list of Checklist objects.
   #
   # Equivalent to POST /checklist/_search
   searchchecklist(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25198,15 +25740,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ChecklistSearch2
 
   # Return list of Checklist version objects.
   #
   # Equivalent to POST /checklistVersion/_search
   searchchecklistVersion(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25218,15 +25760,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ChecklistVersionSearch2
 
   # Return list of Collection objects.
   #
   # Equivalent to POST /collection/_search
   searchcollection(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25238,15 +25780,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): CollectionSearch2
 
   # Return list of Instances of this describe one taxon description context objects.
   #
   # Equivalent to POST /contentContextDescription/_search
   searchcontentContextDescription(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25258,15 +25800,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ContentContextDescriptionSearch2
 
   # Return list of Dataset objects.
   #
   # Equivalent to POST /dataset/_search
   searchdataset(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25278,15 +25820,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): DatasetSearch2
 
   # Return list of dateRange objects.
   #
   # Equivalent to POST /dateRange/_search
   searchdateRange(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25298,15 +25840,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): DateRangeSearch2
 
   # Return list of device objects.
   #
   # Equivalent to POST /device/_search
   searchdevice(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25318,15 +25860,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): DeviceSearch2
 
   # Return list of deviceIndividual objects.
   #
   # Equivalent to POST /deviceIndividual/_search
   searchdeviceIndividual(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25338,15 +25880,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): DeviceIndividualSearch2
 
   # Return list of Submissions objects.
   #
   # Equivalent to POST /document/_search
   searchdocument(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25358,15 +25900,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): DocumentSearch2
 
   # Return list of Download request objects.
   #
   # Equivalent to POST /downloadRequest/_search
   searchdownloadRequest(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25378,15 +25920,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): DownloadRequestSearch2
 
   # Return list of Endagerment object objects.
   #
   # Equivalent to POST /endangerment/_search
   searchendangerment(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25398,15 +25940,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): EndangermentSearch2
 
   # Return list of event objects.
   #
   # Equivalent to POST /event/_search
   searchevent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25418,15 +25960,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): EventSearch2
 
   # Return list of field objects.
   #
   # Equivalent to POST /field/_search
   searchfield(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25438,15 +25980,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FieldSearch2
 
   # Return list of fieldset objects.
   #
   # Equivalent to POST /fieldset/_search
   searchfieldset(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25458,15 +26000,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FieldsetSearch2
 
   # Return list of form objects.
   #
   # Equivalent to POST /form/_search
   searchform(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25478,15 +26020,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormSearch2
 
   # Return list of formFooter objects.
   #
   # Equivalent to POST /formFooter/_search
   searchformFooter(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25498,15 +26040,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormFooterSearch2
 
   # Return list of formInstructions objects.
   #
   # Equivalent to POST /formInstructions/_search
   searchformInstructions(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25518,15 +26060,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormInstructionsSearch2
 
   # Return list of formNamedPlaceOptions objects.
   #
   # Equivalent to POST /formNamedPlaceOptions/_search
   searchformNamedPlaceOptions(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25538,15 +26080,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormNamedPlaceOptionsSearch2
 
   # Return list of formOptions objects.
   #
   # Equivalent to POST /formOptions/_search
   searchformOptions(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25558,15 +26100,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormOptionsSearch2
 
   # Return list of formPermission objects.
   #
   # Equivalent to POST /formPermission/_search
   searchformPermission(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25578,15 +26120,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormPermissionSearch2
 
   # Return list of formPermissionPerson objects.
   #
   # Equivalent to POST /formPermissionPerson/_search
   searchformPermissionPerson(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25598,15 +26140,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormPermissionPersonSearch2
 
   # Return list of formPermissionSingle objects.
   #
   # Equivalent to POST /formPermissionSingle/_search
   searchformPermissionSingle(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25618,15 +26160,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormPermissionSingleSearch2
 
   # Return list of formSeason objects.
   #
   # Equivalent to POST /formSeason/_search
   searchformSeason(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25638,15 +26180,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): FormSeasonSearch2
 
   # Return list of Gathering event objects.
   #
   # Equivalent to POST /gathering/_search
   searchgathering(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25658,15 +26200,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): GatheringSearch2
 
   # Return list of Global gathering event objects.
   #
   # Equivalent to POST /gatheringEvent/_search
   searchgatheringEvent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25678,15 +26220,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): GatheringEventSearch2
 
   # Return list of Keruutapahtuman faktat objects.
   #
   # Equivalent to POST /gatheringFact/_search
   searchgatheringFact(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25698,15 +26240,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): GatheringFactSearch2
 
   # Return list of IUCN Red List Evaluation Habitat objects.
   #
   # Equivalent to POST /habitat/_search
   searchhabitat(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25718,15 +26260,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): HabitatSearch2
 
   # Return list of Identification objects.
   #
   # Equivalent to POST /identification/_search
   searchidentification(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25738,15 +26280,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): IdentificationSearch2
 
   # Return list of Image objects.
   #
   # Equivalent to POST /image/_search
   searchimage(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25758,15 +26300,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ImageSearch2
 
   # Return list of individual objects.
   #
   # Equivalent to POST /individual/_search
   searchindividual(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25778,15 +26320,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): IndividualSearch2
 
   # Return list of Informal Taxon Group objects.
   #
   # Equivalent to POST /informalTaxonGroup/_search
   searchinformalTaxonGroup(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25798,15 +26340,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): InformalTaxonGroupSearch2
 
   # Return list of Information System objects.
   #
   # Equivalent to POST /informationSystem/_search
   searchinformationSystem(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25818,15 +26360,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): InformationSystemSearch2
 
   # Return list of IUCN Red List Evaluation objects.
   #
   # Equivalent to POST /iucnRedListEvaluation/_search
   searchiucnRedListEvaluation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25838,15 +26380,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): IucnRedListEvaluationSearch2
 
   # Return list of IUCN Evaluation Year objects.
   #
   # Equivalent to POST /iucnRedListEvaluationYear/_search
   searchiucnRedListEvaluationYear(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25858,15 +26400,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): IucnRedListEvaluationYearSearch2
 
   # Return list of IUCN Red List Evaluation Informal Taxon Group objects.
   #
   # Equivalent to POST /iucnRedListTaxonGroup/_search
   searchiucnRedListTaxonGroup(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25878,15 +26420,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): IucnRedListTaxonGroupSearch2
 
   # Return list of measurement objects.
   #
   # Equivalent to POST /measurement/_search
   searchmeasurement(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25898,15 +26440,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): MeasurementSearch2
 
   # Return list of multimedia objects.
   #
   # Equivalent to POST /multimedia/_search
   searchmultimedia(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25918,15 +26460,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): MultimediaSearch2
 
   # Return list of namedPlace objects.
   #
   # Equivalent to POST /namedPlace/_search
   searchnamedPlace(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25938,15 +26480,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): NamedPlaceSearch2
 
   # Return list of News objects.
   #
   # Equivalent to POST /news/_search
   searchnews(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25958,15 +26500,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): NewsSearch2
 
   # Return list of notification objects.
   #
   # Equivalent to POST /notification/_search
   searchnotification(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25978,15 +26520,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): NotificationSearch2
 
   # Return list of Occurrence objects.
   #
   # Equivalent to POST /occurrence/_search
   searchoccurrence(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -25998,15 +26540,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): OccurrenceSearch2
 
   # Return list of Organization objects.
   #
   # Equivalent to POST /organization/_search
   searchorganization(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26018,15 +26560,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): OrganizationSearch2
 
   # Return list of permit objects.
   #
   # Equivalent to POST /permit/_search
   searchpermit(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26038,15 +26580,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): PermitSearch2
 
   # Return list of Person objects.
   #
   # Equivalent to POST /person/_search
   searchperson(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26058,15 +26600,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): PersonSearch2
 
   # Return list of preparation objects.
   #
   # Equivalent to POST /preparation/_search
   searchpreparation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26078,15 +26620,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): PreparationSearch2
 
   # Return list of profile objects.
   #
   # Equivalent to POST /profile/_search
   searchprofile(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26098,15 +26640,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ProfileSearch2
 
   # Return list of Publication objects.
   #
   # Equivalent to POST /publication/_search
   searchpublication(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26118,15 +26660,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): PublicationSearch2
 
   # Return list of Instances of this class tell endangerment of a certain area and notes about the area objects.
   #
   # Equivalent to POST /regionalStatus/_search
   searchregionalStatus(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26138,15 +26680,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): RegionalStatusSearch2
 
   # Return list of reserve objects.
   #
   # Equivalent to POST /reserve/_search
   searchreserve(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26158,15 +26700,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ReserveSearch2
 
   # Return list of Specimen sample objects.
   #
   # Equivalent to POST /sample/_search
   searchsample(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26178,15 +26720,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): SampleSearch2
 
   # Return list of subUnit objects.
   #
   # Equivalent to POST /subUnit/_search
   searchsubUnit(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26198,15 +26740,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): SubUnitSearch2
 
   # Return list of tag objects.
   #
   # Equivalent to POST /tag/_search
   searchtag(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26218,15 +26760,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TagSearch2
 
   # Return list of Taxon objects.
   #
   # Equivalent to POST /taxon/_search
   searchtaxon(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26238,15 +26780,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TaxonSearch2
 
   # Return list of Completeness of census objects.
   #
   # Equivalent to POST /taxonCensus/_search
   searchtaxonCensus(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26258,15 +26800,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TaxonCensusSearch2
 
   # Return list of Taxon concept objects.
   #
   # Equivalent to POST /taxonConcept/_search
   searchtaxonConcept(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26278,15 +26820,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TaxonConceptSearch2
 
   # Return list of IUCN Editors objects.
   #
   # Equivalent to POST /taxonGroupIucnEditors/_search
   searchtaxonGroupIucnEditors(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26298,15 +26840,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TaxonGroupIucnEditorsSearch2
 
   # Return list of Taxon interaction objects.
   #
   # Equivalent to POST /taxonInteraction/_search
   searchtaxonInteraction(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26318,15 +26860,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TaxonInteractionSearch2
 
   # Return list of Instances of this class are a taxon sets objects.
   #
   # Equivalent to POST /taxonSet/_search
   searchtaxonSet(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26338,15 +26880,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TaxonSetSearch2
 
   # Return list of Transaction objects.
   #
   # Equivalent to POST /transaction/_search
   searchtransaction(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26358,15 +26900,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TransactionSearch2
 
   # Return list of Transaction Event objects.
   #
   # Equivalent to POST /transactionEvent/_search
   searchtransactionEvent(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26378,15 +26920,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TransactionEventSearch2
 
   # Return list of Transaction Item objects.
   #
   # Equivalent to POST /transactionItem/_search
   searchtransactionItem(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26398,15 +26940,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TransactionItemSearch2
 
   # Return list of translation objects.
   #
   # Equivalent to POST /translation/_search
   searchtranslation(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26418,15 +26960,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TranslationSearch2
 
   # Return list of Identification objects.
   #
   # Equivalent to POST /typeSpecimen/_search
   searchtypeSpecimen(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26438,15 +26980,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): TypeSpecimenSearch2
 
   # Return list of Specimen objects.
   #
   # Equivalent to POST /unit/_search
   searchunit(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26458,15 +27000,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): UnitSearch2
 
   # Return list of Näytteen / havainnon faktat objects.
   #
   # Equivalent to POST /unitFact/_search
   searchunitFact(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26478,15 +27020,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): UnitFactSearch2
 
   # Return list of Havainnon keruutiedot objects.
   #
   # Equivalent to POST /unitGathering/_search
   searchunitGathering(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26498,15 +27040,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): UnitGatheringSearch2
 
   # Return list of validator objects.
   #
   # Equivalent to POST /validator/_search
   searchvalidator(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26518,15 +27060,15 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): ValidatorSearch2
 
   # Return list of Video objects.
   #
   # Equivalent to POST /video/_search
   searchvideo(
+    # Comma separated list of fields to return
+    fields: String
+
     # Page number
     page: Int
 
@@ -26538,9 +27080,6 @@ type MutationViewerAnyAuth {
 
     # Elasticsearch search query
     requestBody: JSON
-
-    # Sort by
-    sort: String
   ): VideoSearch2
 
   # Store Bibliographic Resource object(s)

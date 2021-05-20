@@ -237,6 +237,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Bibliographic Resource objects.",
@@ -442,9 +450,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -495,6 +503,9 @@
                       "items": {
                         "$ref": "#/components/schemas/BibliographicResource"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -788,6 +799,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Instances of this describe one taxon description context (Pinkka eLearning enviroment) objects.",
@@ -993,9 +1012,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -1046,6 +1065,9 @@
                       "items": {
                         "$ref": "#/components/schemas/Pinkka"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -1339,6 +1361,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Administrative status objects.",
@@ -1544,9 +1574,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -1597,6 +1627,9 @@
                       "items": {
                         "$ref": "#/components/schemas/administrativeStatus"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -1890,6 +1923,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of agent objects.",
@@ -2095,9 +2136,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -2148,6 +2189,9 @@
                       "items": {
                         "$ref": "#/components/schemas/agent"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -2441,6 +2485,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of annotation objects.",
@@ -2646,9 +2698,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -2699,6 +2751,9 @@
                       "items": {
                         "$ref": "#/components/schemas/annotation"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -2992,6 +3047,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of annotationOccurrence objects.",
@@ -3197,9 +3260,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -3250,6 +3313,9 @@
                       "items": {
                         "$ref": "#/components/schemas/annotationOccurrence"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -3543,6 +3609,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Area objects.",
@@ -3748,9 +3822,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -3801,6 +3875,9 @@
                       "items": {
                         "$ref": "#/components/schemas/area"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -4094,6 +4171,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Audio recording objects.",
@@ -4299,9 +4384,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -4352,6 +4437,9 @@
                       "items": {
                         "$ref": "#/components/schemas/audio"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -4645,6 +4733,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Branch objects.",
@@ -4850,9 +4946,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -4903,6 +4999,9 @@
                       "items": {
                         "$ref": "#/components/schemas/branch"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -5196,6 +5295,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Checklist objects.",
@@ -5401,9 +5508,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -5454,6 +5561,9 @@
                       "items": {
                         "$ref": "#/components/schemas/checklist"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -5747,6 +5857,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Checklist version objects.",
@@ -5952,9 +6070,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -6005,6 +6123,9 @@
                       "items": {
                         "$ref": "#/components/schemas/checklistVersion"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -6298,6 +6419,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Collection objects.",
@@ -6503,9 +6632,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -6556,6 +6685,9 @@
                       "items": {
                         "$ref": "#/components/schemas/collection"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -6849,6 +6981,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Instances of this describe one taxon description context objects.",
@@ -7054,9 +7194,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -7107,6 +7247,9 @@
                       "items": {
                         "$ref": "#/components/schemas/contentContextDescription"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -7400,6 +7543,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Dataset objects.",
@@ -7605,9 +7756,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -7658,6 +7809,9 @@
                       "items": {
                         "$ref": "#/components/schemas/dataset"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -7951,6 +8105,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of dateRange objects.",
@@ -8156,9 +8318,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -8209,6 +8371,9 @@
                       "items": {
                         "$ref": "#/components/schemas/dateRange"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -8502,6 +8667,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of device objects.",
@@ -8707,9 +8880,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -8760,6 +8933,9 @@
                       "items": {
                         "$ref": "#/components/schemas/device"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -9053,6 +9229,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of deviceIndividual objects.",
@@ -9258,9 +9442,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -9311,6 +9495,9 @@
                       "items": {
                         "$ref": "#/components/schemas/deviceIndividual"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -9604,6 +9791,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Submissions objects.",
@@ -9809,9 +10004,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -9862,6 +10057,9 @@
                       "items": {
                         "$ref": "#/components/schemas/document"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -10155,6 +10353,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Download request objects.",
@@ -10360,9 +10566,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -10413,6 +10619,9 @@
                       "items": {
                         "$ref": "#/components/schemas/downloadRequest"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -10706,6 +10915,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Endagerment object objects.",
@@ -10911,9 +11128,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -10964,6 +11181,9 @@
                       "items": {
                         "$ref": "#/components/schemas/endangerment"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -11257,6 +11477,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of event objects.",
@@ -11462,9 +11690,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -11515,6 +11743,9 @@
                       "items": {
                         "$ref": "#/components/schemas/event"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -11808,6 +12039,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of field objects.",
@@ -12013,9 +12252,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -12066,6 +12305,9 @@
                       "items": {
                         "$ref": "#/components/schemas/field"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -12359,6 +12601,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of fieldset objects.",
@@ -12564,9 +12814,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -12617,6 +12867,9 @@
                       "items": {
                         "$ref": "#/components/schemas/fieldset"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -12910,6 +13163,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of form objects.",
@@ -13115,9 +13376,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -13168,6 +13429,9 @@
                       "items": {
                         "$ref": "#/components/schemas/form"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -13461,6 +13725,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of formFooter objects.",
@@ -13666,9 +13938,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -13719,6 +13991,9 @@
                       "items": {
                         "$ref": "#/components/schemas/formFooter"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -14012,6 +14287,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of formInstructions objects.",
@@ -14217,9 +14500,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -14270,6 +14553,9 @@
                       "items": {
                         "$ref": "#/components/schemas/formInstructions"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -14563,6 +14849,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of formNamedPlaceOptions objects.",
@@ -14768,9 +15062,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -14821,6 +15115,9 @@
                       "items": {
                         "$ref": "#/components/schemas/formNamedPlaceOptions"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -15114,6 +15411,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of formOptions objects.",
@@ -15319,9 +15624,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -15372,6 +15677,9 @@
                       "items": {
                         "$ref": "#/components/schemas/formOptions"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -15665,6 +15973,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of formPermission objects.",
@@ -15870,9 +16186,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -15923,6 +16239,9 @@
                       "items": {
                         "$ref": "#/components/schemas/formPermission"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -16216,6 +16535,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of formPermissionPerson objects.",
@@ -16421,9 +16748,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -16474,6 +16801,9 @@
                       "items": {
                         "$ref": "#/components/schemas/formPermissionPerson"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -16767,6 +17097,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of formPermissionSingle objects.",
@@ -16972,9 +17310,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -17025,6 +17363,9 @@
                       "items": {
                         "$ref": "#/components/schemas/formPermissionSingle"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -17318,6 +17659,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of formSeason objects.",
@@ -17523,9 +17872,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -17576,6 +17925,9 @@
                       "items": {
                         "$ref": "#/components/schemas/formSeason"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -17869,6 +18221,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Gathering event objects.",
@@ -18074,9 +18434,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -18127,6 +18487,9 @@
                       "items": {
                         "$ref": "#/components/schemas/gathering"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -18420,6 +18783,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Global gathering event objects.",
@@ -18625,9 +18996,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -18678,6 +19049,9 @@
                       "items": {
                         "$ref": "#/components/schemas/gatheringEvent"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -18971,6 +19345,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Keruutapahtuman faktat objects.",
@@ -19176,9 +19558,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -19229,6 +19611,9 @@
                       "items": {
                         "$ref": "#/components/schemas/gatheringFact"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -19522,6 +19907,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of IUCN Red List Evaluation Habitat objects.",
@@ -19727,9 +20120,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -19780,6 +20173,9 @@
                       "items": {
                         "$ref": "#/components/schemas/habitat"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -20073,6 +20469,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Identification objects.",
@@ -20278,9 +20682,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -20331,6 +20735,9 @@
                       "items": {
                         "$ref": "#/components/schemas/identification"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -20624,6 +21031,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Image objects.",
@@ -20829,9 +21244,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -20882,6 +21297,9 @@
                       "items": {
                         "$ref": "#/components/schemas/image"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -21175,6 +21593,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of individual objects.",
@@ -21380,9 +21806,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -21433,6 +21859,9 @@
                       "items": {
                         "$ref": "#/components/schemas/individual"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -21726,6 +22155,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Informal Taxon Group objects.",
@@ -21931,9 +22368,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -21984,6 +22421,9 @@
                       "items": {
                         "$ref": "#/components/schemas/informalTaxonGroup"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -22277,6 +22717,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Information System objects.",
@@ -22482,9 +22930,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -22535,6 +22983,9 @@
                       "items": {
                         "$ref": "#/components/schemas/informationSystem"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -22828,6 +23279,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of IUCN Red List Evaluation objects.",
@@ -23033,9 +23492,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -23086,6 +23545,9 @@
                       "items": {
                         "$ref": "#/components/schemas/iucnRedListEvaluation"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -23379,6 +23841,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of IUCN Evaluation Year objects.",
@@ -23584,9 +24054,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -23637,6 +24107,9 @@
                       "items": {
                         "$ref": "#/components/schemas/iucnRedListEvaluationYear"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -23930,6 +24403,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of IUCN Red List Evaluation Informal Taxon Group objects.",
@@ -24135,9 +24616,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -24188,6 +24669,9 @@
                       "items": {
                         "$ref": "#/components/schemas/iucnRedListTaxonGroup"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -24481,6 +24965,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of measurement objects.",
@@ -24686,9 +25178,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -24739,6 +25231,9 @@
                       "items": {
                         "$ref": "#/components/schemas/measurement"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -25032,6 +25527,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of multimedia objects.",
@@ -25237,9 +25740,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -25290,6 +25793,9 @@
                       "items": {
                         "$ref": "#/components/schemas/multimedia"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -25583,6 +26089,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of namedPlace objects.",
@@ -25788,9 +26302,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -25841,6 +26355,9 @@
                       "items": {
                         "$ref": "#/components/schemas/namedPlace"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -26134,6 +26651,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of News objects.",
@@ -26339,9 +26864,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -26392,6 +26917,9 @@
                       "items": {
                         "$ref": "#/components/schemas/news"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -26685,6 +27213,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of notification objects.",
@@ -26890,9 +27426,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -26943,6 +27479,9 @@
                       "items": {
                         "$ref": "#/components/schemas/notification"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -27236,6 +27775,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Occurrence objects.",
@@ -27441,9 +27988,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -27494,6 +28041,9 @@
                       "items": {
                         "$ref": "#/components/schemas/occurrence"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -27787,6 +28337,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Organization objects.",
@@ -27992,9 +28550,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -28045,6 +28603,9 @@
                       "items": {
                         "$ref": "#/components/schemas/organization"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -28338,6 +28899,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of permit objects.",
@@ -28543,9 +29112,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -28596,6 +29165,9 @@
                       "items": {
                         "$ref": "#/components/schemas/permit"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -28889,6 +29461,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Person objects.",
@@ -29094,9 +29674,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -29147,6 +29727,9 @@
                       "items": {
                         "$ref": "#/components/schemas/person"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -29440,6 +30023,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of preparation objects.",
@@ -29645,9 +30236,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -29698,6 +30289,9 @@
                       "items": {
                         "$ref": "#/components/schemas/preparation"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -29991,6 +30585,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of profile objects.",
@@ -30196,9 +30798,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -30249,6 +30851,9 @@
                       "items": {
                         "$ref": "#/components/schemas/profile"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -30542,6 +31147,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Publication objects.",
@@ -30747,9 +31360,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -30800,6 +31413,9 @@
                       "items": {
                         "$ref": "#/components/schemas/publication"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -31093,6 +31709,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Instances of this class tell endangerment of a certain area and notes about the area objects.",
@@ -31298,9 +31922,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -31351,6 +31975,9 @@
                       "items": {
                         "$ref": "#/components/schemas/regionalStatus"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -31644,6 +32271,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of reserve objects.",
@@ -31849,9 +32484,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -31902,6 +32537,9 @@
                       "items": {
                         "$ref": "#/components/schemas/reserve"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -32195,6 +32833,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Specimen sample objects.",
@@ -32400,9 +33046,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -32453,6 +33099,9 @@
                       "items": {
                         "$ref": "#/components/schemas/sample"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -32746,6 +33395,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of subUnit objects.",
@@ -32951,9 +33608,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -33004,6 +33661,9 @@
                       "items": {
                         "$ref": "#/components/schemas/subUnit"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -33297,6 +33957,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of tag objects.",
@@ -33502,9 +34170,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -33555,6 +34223,9 @@
                       "items": {
                         "$ref": "#/components/schemas/tag"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -33848,6 +34519,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Taxon objects.",
@@ -34053,9 +34732,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -34106,6 +34785,9 @@
                       "items": {
                         "$ref": "#/components/schemas/taxon"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -34399,6 +35081,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Completeness of census objects.",
@@ -34604,9 +35294,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -34657,6 +35347,9 @@
                       "items": {
                         "$ref": "#/components/schemas/taxonCensus"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -34950,6 +35643,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Taxon concept objects.",
@@ -35155,9 +35856,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -35208,6 +35909,9 @@
                       "items": {
                         "$ref": "#/components/schemas/taxonConcept"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -35501,6 +36205,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of IUCN Editors objects.",
@@ -35706,9 +36418,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -35759,6 +36471,9 @@
                       "items": {
                         "$ref": "#/components/schemas/taxonGroupIucnEditors"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -36052,6 +36767,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Taxon interaction objects.",
@@ -36257,9 +36980,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -36310,6 +37033,9 @@
                       "items": {
                         "$ref": "#/components/schemas/taxonInteraction"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -36603,6 +37329,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Instances of this class are a taxon sets objects.",
@@ -36808,9 +37542,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -36861,6 +37595,9 @@
                       "items": {
                         "$ref": "#/components/schemas/taxonSet"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -37154,6 +37891,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Transaction objects.",
@@ -37359,9 +38104,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -37412,6 +38157,9 @@
                       "items": {
                         "$ref": "#/components/schemas/transaction"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -37705,6 +38453,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Transaction Event objects.",
@@ -37910,9 +38666,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -37963,6 +38719,9 @@
                       "items": {
                         "$ref": "#/components/schemas/transactionEvent"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -38256,6 +39015,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Transaction Item objects.",
@@ -38461,9 +39228,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -38514,6 +39281,9 @@
                       "items": {
                         "$ref": "#/components/schemas/transactionItem"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -38807,6 +39577,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of translation objects.",
@@ -39012,9 +39790,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -39065,6 +39843,9 @@
                       "items": {
                         "$ref": "#/components/schemas/translation"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -39358,6 +40139,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Identification objects.",
@@ -39563,9 +40352,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -39616,6 +40405,9 @@
                       "items": {
                         "$ref": "#/components/schemas/typeSpecimen"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -39909,6 +40701,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Specimen objects.",
@@ -40114,9 +40914,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -40167,6 +40967,9 @@
                       "items": {
                         "$ref": "#/components/schemas/unit"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -40460,6 +41263,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Näytteen / havainnon faktat objects.",
@@ -40665,9 +41476,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -40718,6 +41529,9 @@
                       "items": {
                         "$ref": "#/components/schemas/unitFact"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -41011,6 +41825,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Havainnon keruutiedot objects.",
@@ -41216,9 +42038,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -41269,6 +42091,9 @@
                       "items": {
                         "$ref": "#/components/schemas/unitGathering"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -41562,6 +42387,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of validator objects.",
@@ -41767,9 +42600,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -41820,6 +42653,9 @@
                       "items": {
                         "$ref": "#/components/schemas/validator"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -42113,6 +42949,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "description": "Return list of Video objects.",
@@ -42318,9 +43162,9 @@
             }
           },
           {
-            "name": "sort",
+            "name": "fields",
             "in": "query",
-            "description": "Sort by",
+            "description": "Comma separated list of fields to return",
             "schema": {
               "type": "string"
             }
@@ -42371,6 +43215,9 @@
                       "items": {
                         "$ref": "#/components/schemas/video"
                       }
+                    },
+                    "aggregations": {
+                      "type": "object"
                     }
                   },
                   "required": [
@@ -55893,7 +56740,7 @@
   ],
   "servers": [
     {
-      "url": "http://store-api:3000"
+      "url": "http://localhost:3000"
     }
   ]
 }

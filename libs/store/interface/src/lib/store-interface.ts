@@ -8,6 +8,7 @@ export const PARAM_TYPE = 'type';
 export const PARAM_SORT = 'sort';
 export const PARAM_DRY_RUN = 'dry_run';
 export const PARAM_LIMIT = 'limit';
+export const PARAM_FIELDS = 'fields';
 export const PARAM_VERSION_NUMBER = 'number';
 export const PARAM_INCLUDE_DIFF = 'include_diff';
 export const PARAM_VERSIONS = '_ver';
@@ -33,6 +34,7 @@ export interface SearchQuery {
   body?: any;
   page?: number;
   pageSize?: number;
+  fields?: string;
   searchAfter?: string; // Not yet in use but this would make deep paging more performant
 }
 
@@ -55,6 +57,7 @@ export interface PagedResponse<T> {
   currentPage: number;
   totalItems: number;
   member: T[];
+  aggregations?: any
 }
 
 export interface VersionResponse {

@@ -59,6 +59,9 @@ export class StoreService {
     query: SearchQuery
   ): Promise<PagedResponse<T>> {
     const results = await this.searchService.search(query);
+    if (UtilityService.hasSelectedFields(query)) {
+      return results as any;
+    }
     const documents = await this.documentService.findById(
       query.source,
       query.type,

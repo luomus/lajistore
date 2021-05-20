@@ -17,12 +17,10 @@
         "type": "keyword"
       },
       "dateBegin": {
-        "type": "keyword",
-        "ignore_above": 200
+        "type": "date"
       },
       "dateEnd": {
-        "type": "keyword",
-        "ignore_above": 200
+        "type": "date"
       },
       "geometry": {
         "type": "geo_shape",

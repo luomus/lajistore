@@ -4,13 +4,26 @@ import { JSONSchema4 } from 'json-schema';
 import { AbstractSchemaGenerateService } from './abstract-schema-generate.service';
 import { StoreConfigService } from '@luomus/store/config';
 import {
-  FileService, GEOMETRY_COLLECTION_SCHEMA,
+  FileService,
+  GEOMETRY_COLLECTION_SCHEMA,
   GEOMETRY_SCHEMA,
   JSON_PATCH_SCHEMA,
   JsonSchemaService,
   UtilityService
 } from '@luomus/store/shared';
-import { PROPERTY_ID, PARAM_INCLUDE_DIFF, PARAM_VERSIONS } from '@luomus/store/interface';
+import {
+  PROPERTY_ID,
+  PARAM_INCLUDE_DIFF,
+  PARAM_VERSIONS,
+  PARAM_FIELDS,
+  PARAM_PAGE_SIZE,
+  PARAM_PAGE,
+  PARAM_QUERY,
+  PARAM_SORT,
+  PARAM_DRY_RUN,
+  PARAM_LIMIT,
+  PARAM_VERSION_NUMBER
+} from '@luomus/store/interface';
 
 const MULTI_LANG_OBJ = 'multiLangObject';
 const PAGED_VIEW = 'pagedView';
@@ -356,27 +369,33 @@ export class GenerateSwaggerService extends AbstractSchemaGenerateService {
         operationId: `search${normalized}`,
         parameters: [
           {
-            name: 'q',
+            name: PARAM_QUERY,
             in: 'query',
             description: 'Query string to search by.',
             schema: { type: 'string' },
           },
           {
-            name: 'page',
+            name: PARAM_PAGE,
             in: 'query',
             description: 'Page number',
             schema: { type: 'integer' },
           },
           {
-            name: 'page_size',
+            name: PARAM_PAGE_SIZE,
             in: 'query',
             description: 'Page size',
             schema: { type: 'integer' },
           },
           {
-            name: 'sort',
+            name: PARAM_SORT,
             in: 'query',
             description: 'Sort by',
+            schema: { type: 'string' },
+          },
+          {
+            name: PARAM_FIELDS,
+            in: 'query',
+            description: 'Comma separated list of fields to return',
             schema: { type: 'string' },
           },
         ],
@@ -396,7 +415,7 @@ export class GenerateSwaggerService extends AbstractSchemaGenerateService {
             description: `A list of  ${label}.`,
             content: {
               'application/json': {
-                schema: this.pagedResult(component),
+                schema: this.pagedResult(component, true),
               },
             },
           },
@@ -424,27 +443,33 @@ export class GenerateSwaggerService extends AbstractSchemaGenerateService {
         operationId: `list${normalized}`,
         parameters: [
           {
-            name: 'q',
+            name: PARAM_QUERY,
             in: 'query',
             description: 'Query string to search by.',
             schema: { type: 'string' },
           },
           {
-            name: 'page',
+            name: PARAM_PAGE,
             in: 'query',
             description: 'Page number',
             schema: { type: 'integer' },
           },
           {
-            name: 'page_size',
+            name: PARAM_PAGE_SIZE,
             in: 'query',
             description: 'Page size',
             schema: { type: 'integer' },
           },
           {
-            name: 'sort',
+            name: PARAM_SORT,
             in: 'query',
             description: 'Sort by',
+            schema: { type: 'string' },
+          },
+          {
+            name: PARAM_FIELDS,
+            in: 'query',
+            description: 'Comma separated list of fields to return',
             schema: { type: 'string' },
           },
         ],
@@ -479,19 +504,19 @@ export class GenerateSwaggerService extends AbstractSchemaGenerateService {
         operationId: `patch${normalized}`,
         parameters: [
           {
-            name: 'q',
+            name: PARAM_QUERY,
             in: 'query',
             description: 'Query string to search by.',
             schema: { type: 'string' },
           },
           {
-            name: 'dry_run',
+            name: PARAM_DRY_RUN,
             in: 'query',
             description: 'Show result only without saving it',
             schema: { type: 'boolean', default: true },
           },
           {
-            name: 'limit',
+            name: PARAM_LIMIT,
             in: 'query',
             description: `Limit the change to this many items (MAX ${max})`,
             schema: { type: 'integer', minimum: 1, maximum: parseInt(max) },
@@ -566,7 +591,7 @@ export class GenerateSwaggerService extends AbstractSchemaGenerateService {
             schema: { type: 'string' },
           },
           {
-            name: 'number',
+            name: PARAM_VERSION_NUMBER,
             in: 'path',
             description: `Version number for the ${label}`,
             required: true,
@@ -732,7 +757,7 @@ export class GenerateSwaggerService extends AbstractSchemaGenerateService {
     };
   }
 
-  private pagedResult(component: string) {
+  private pagedResult(component: string, addSearchResponses = false) {
     return {
       type: 'object',
       properties: {
@@ -763,6 +788,11 @@ export class GenerateSwaggerService extends AbstractSchemaGenerateService {
             $ref: component,
           },
         },
+        ...(addSearchResponses ? {
+          aggregations: {
+            type: 'object'
+          }
+        } : {})
       },
       required: [
         '@context',

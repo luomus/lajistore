@@ -1,3 +1,5 @@
+import { SearchQuery } from '@luomus/store/interface';
+
 export class UtilityService {
   static normalize(text: string, capitalize = false): string {
     const specials = /[^A-Za-z0-9]/g;
@@ -18,5 +20,9 @@ export class UtilityService {
 
   static UCFirst(name: string) {
     return name.charAt(0).toUpperCase() + name.slice(1);
+  }
+
+  static hasSelectedFields(query: SearchQuery): boolean {
+    return !!(query.fields || query?.body?._source)
   }
 }

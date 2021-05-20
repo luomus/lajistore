@@ -86,13 +86,16 @@ export class GenerateEsIndexService extends AbstractSchemaGenerateService {
 
   private getMapping(prop: string, property: JSONSchema4) {
     const range: string = property['range'];
+    const subject: string = property['subject'];
     const items: JSONSchema4 | undefined = property.items;
     const propType = (Array.isArray(property.type) ? property.type[0] : property.type) || '';
     const type: string = propType === 'array' && items && typeof items.type === 'string' ?
       items.type :
       propType;
 
-    if (this.mapping[prop]) {
+    if (this.mapping[subject]) {
+      return this.mapping[subject];
+    } else if (this.mapping[prop]) {
       return this.mapping[prop];
     } else if (JsonSchemaService.isMultiLang(property, this.languages)) {
       const langBase = this.mapping[MAPPING_MULTI_LANG] ?? { properties: {} };

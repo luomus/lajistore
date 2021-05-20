@@ -77,15 +77,16 @@ export class StoreSearchService extends HealthIndicator {
    * @param query
    */
   async search(query: SearchQuery): Promise<PagedResponse<string>> {
-    const page = Math.max(query.page ?? 1, 1);
-    const size = query.pageSize ?? 20;
     const index = StoreSearchService.getIndexName(query.source, query.type);
+    const size = query.body?.size ?? query.pageSize ?? 20;
+    const page = Math.max(
+      query.body?.from && size ?
+        Math.floor(query.body.from / size) + 1 :
+        query.page ?? 1,
+      1);
     const params: RequestParams.Search = {
       index,
-      body: StoreSearchService.getSearchBody(query.body ?? {}, query),
-      size,
-      from: (page - 1) * size,
-      _source: false as any,
+      body: StoreSearchService.getSearchBody(query.body ?? {}, query, size, page)
     };
     try {
       const { body } = await this.es.search(params);
@@ -94,6 +95,9 @@ export class StoreSearchService extends HealthIndicator {
     } catch (e) {
       if (e instanceof ResponseError && e.statusCode === 404) {
         return this.pagedResponse(size, page, query, 0, 1, {})
+      }
+      if (e?.meta?.body) {
+        console.log(e.meta.body);
       }
       throw e;
     }
@@ -189,15 +193,21 @@ export class StoreSearchService extends HealthIndicator {
     }
   }
 
-  private static getSearchBody(base: any, query: SearchQuery) {
+  private static getSearchBody(base: any, query: SearchQuery, size: number, page: number) {
+    base.size = size;
+    base.from = (page - 1) * size;
+
     if (query.query) {
       if (!base.query) {
         base.query = {};
       }
-      if (!base.query.query_string) {
-        base.query.query_string = {};
+      if (!base.query.bool) {
+        base.query.bool = {};
       }
-      base.query.query_string.query = query.query;
+      if (!base.query.bool.must) {
+        base.query.bool.must = [];
+      }
+      base.query.bool.must.push({query_string: {query: query.query}});
     }
     if (typeof query.sort === 'string' && query.sort) {
       base.sort = query.sort.split(',').map((sortBy) => {
@@ -210,6 +220,18 @@ export class StoreSearchService extends HealthIndicator {
     }
     base.sort.push({ '_meta.created': 'desc' });
     base.track_total_hits = true;
+
+    if (query.fields) {
+      if (!base._source || typeof base._source === 'boolean') {
+        base._source = {};
+      }
+      if (!base._source.includes) {
+        base._source.includes = [];
+      }
+      base._source.includes.push(...query.fields.split(','))
+    } else if (!base._source) {
+      base._source = false;
+    }
 
     return base;
   }
@@ -241,7 +263,9 @@ export class StoreSearchService extends HealthIndicator {
       lastPage,
       pageSize,
       currentPage,
-      member: body.hits?.hits?.map((h: any) => h['_id']) ?? [],
+      member: UtilityService.hasSelectedFields(query) ?
+        body.hits?.hits?.map((h: any) => h['_source']) ?? [] :
+        body.hits?.hits?.map((h: any) => h['_id']) ?? [],
       view: {
         itemsPerPage: '' + pageSize,
         '@type': 'PartialCollectionView',
@@ -250,6 +274,9 @@ export class StoreSearchService extends HealthIndicator {
         first: this.getPageIdString(query, 1, pageSize),
       },
     };
+    if (body.aggregations) {
+      response.aggregations = body.aggregations;
+    }
 
     if (currentPage < lastPage) {
       response.view.next = this.getPageIdString(
