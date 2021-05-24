@@ -28,6 +28,11 @@ spec:
                 configMapKeyRef:
                   key: ID_RESOLVER
                   name: store-config
+            - name: SOURCE_ID
+              valueFrom:
+                configMapKeyRef:
+                  key: SOURCE_ID
+                  name: store-config
             - name: PUBLIC_ADDRESS
               valueFrom:
                 configMapKeyRef:
@@ -88,6 +93,16 @@ spec:
                 configMapKeyRef:
                   key: DW_SOURCES
                   name: store-config
+            - name: LAJI_API_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: LAJI_API_URL
+                  name: store-config
+            - name: LAJI_API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  key: LAJI_API_TOKEN
+                  name: store-config
             - name: LAJI_API_DB_USERNAME
               valueFrom:
                 configMapKeyRef:
@@ -121,6 +136,14 @@ spec:
             periodSeconds: 60
             successThreshold: 1
             failureThreshold: 3
+          readinessProbe:
+            exec:
+              command:
+                - node
+                - cli.js
+                - status
+            initialDelaySeconds: 10
+            periodSeconds: 5
           ports:
             - containerPort: 3000
               name: http

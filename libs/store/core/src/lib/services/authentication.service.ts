@@ -7,7 +7,9 @@ import { User } from '@luomus/store/database';
 export class AuthenticationService {
   private cache: { [key: string]: User } = {};
 
-  constructor(private readonly userService: UserService) {}
+  constructor(
+    private readonly userService: UserService
+  ) {}
 
   /**
    * Register new user to the system

@@ -94,12 +94,19 @@ spec:
               path: /status
               port: http
               scheme: HTTP
-            initialDelaySeconds: 10
+            initialDelaySeconds: 30
             periodSeconds: 30
             successThreshold: 1
             timeoutSeconds: 6
+          readinessProbe:
+            httpGet:
+              path: /status
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 30
+            periodSeconds: 5
       restartPolicy: Always
-      terminationGracePeriodSeconds: 30
+      terminationGracePeriodSeconds: 60
       dnsPolicy: ClusterFirst
       securityContext: { }
   podManagementPolicy: OrderedReady

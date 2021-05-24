@@ -35,9 +35,9 @@ interface Configuration {
   // comma separated list of types that should have generated fields id and type
   // (all root elements have this automatically)
   ADD_GENERATED_FIELDS_FOR_EMBEDDED_TYPES: string;
-  // comma separated list of types that will not generate fields for this (unless it's a root element) nor it's children
-  // id property are not removed from json-schema
-  NO_GENERATED_FIELDS_FOR_CHILDREN: string;
+  // comma separated list of types that will not generate fields for any embedded child object
+  // generated properties are not removed from json-schema so that they can still be in the data
+  NO_GENERATED_FIELDS_FOR_ANY_CHILDREN_OF: string;
   ID_LIST_SEPARATOR: string;
   ID_SEPARATOR: string;
   CONFIG_ID_TYPE_MAP_FILE: string;
@@ -57,6 +57,10 @@ const DEFAULT_VALUES: Configuration = {
   IS_WORKER: 'false',
   CONTEXT_IRI: 'http://tun.fi/%type%.json',
   ADD_GENERATED_FIELDS_FOR_EMBEDDED_TYPES:
+    'HRA.permitClass,' +
+    'HRAA.transactionEventClass,' +
+    'HRAB.transactionItemClass,' +
+    'MAN.annotation,' +
     'MY.document,' +
     'MZ.gatheringEvent,' +
     'MY.gathering,' +
@@ -64,7 +68,7 @@ const DEFAULT_VALUES: Configuration = {
     'MY.unit,' +
     'MY.identification,' +
     'MY.typeSpecimen',
-  NO_GENERATED_FIELDS_FOR_CHILDREN: 'MHL.form,MNP.namedPlace,MHN.notification',
+  NO_GENERATED_FIELDS_FOR_ANY_CHILDREN_OF: 'MHL.form,MNP.namedPlace,MHN.notification',
   ID_LIST_SEPARATOR: ',',
   ID_SEPARATOR: '#',
   RABBITMQ_PORT: '5672',

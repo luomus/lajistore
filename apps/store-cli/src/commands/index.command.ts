@@ -105,6 +105,7 @@ export class IndexCommand {
     } catch (e) {
       spin.fail(`Failed to index data!!! ${e.message}`);
     }
+
     if (removeDeleted) {
       await this.removeDeleted(where, batchSize);
     }
@@ -120,6 +121,7 @@ export class IndexCommand {
       while (page >= 0) {
         const data: Record<string, Record<string, string[]>> = {};
         const deleted = await this.documentHistoryService.findDeleted({
+          ...where,
           take: removeBatchSize,
           skip: page * removeBatchSize
         });
@@ -130,13 +132,6 @@ export class IndexCommand {
         }
 
         for (const document of deleted) {
-          if (
-            (where.type && where.type !== document.type) ||
-            (where.source && where.source !== document.source) ||
-            (where.id && !where.id.includes(document.id))
-          ) {
-            continue;
-          }
           if (!data[document.source]) {
             data[document.source] = {};
           }

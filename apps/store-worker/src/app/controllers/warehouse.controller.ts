@@ -29,12 +29,15 @@ export class WarehouseController {
     try {
       const channel = context.getChannelRef();
       const originalMsg = context.getMessage();
+      console.log('SENDING DATA', action, data);
       await this.dataWarehouseService.send(
         action,
         data
       );
       channel.ack(originalMsg);
+      console.log('SENDING OK');
     } catch (e) {
+      console.log('SENDING FAILED', e);
       if (retry > MAX_RETRY) {
         throw new Error(`Failed ${MAX_RETRY} times to send data to Warehouse!`)
       }

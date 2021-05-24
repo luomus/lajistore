@@ -24,8 +24,15 @@ export class DocumentHistoryRepository {
     return this.connection.getRepository(DocumentHistory).find(options);
   }
 
-  findDeleted(options: { skip?: number, take?: number } = {} ): Promise<Required<Pick<DocumentHistory, 'id'|'source'|'type'>>[]> {
-    return this.connection.getRepository(DocumentHistory)
+  findDeleted(options: {
+    skip?: number,
+    take?: number,
+    source?: string,
+    type?: string,
+    id?: string[]
+  } = {} ): Promise<Required<Pick<DocumentHistory, 'id'|'source'|'type'>>[]> {
+    const {skip, take, id, type, source} = options;
+    const query = this.connection.getRepository(DocumentHistory)
       .createQueryBuilder('history')
       .select(['history.id', 'history.source', 'history.type', 'history.version'])
       .leftJoinAndSelect(qb => qb
@@ -35,8 +42,19 @@ export class DocumentHistoryRepository {
         'history.id = "document".id AND history.SOURCE = "document".SOURCE'
       )
       .where('"document".id is null AND "history".version = 1')
-      .skip(options.skip ?? 0)
-      .take(options.take ?? 100)
-      .getMany() as any;
+      .skip(skip ?? 0)
+      .take(take ?? 100);
+
+    if (id) {
+      query.andWhere(`"history".id IN (:...id)`, {id});
+    }
+    if (type) {
+      query.andWhere(`"history".type = :type`, {type});
+    }
+    if (source) {
+      query.andWhere(`"history".source = :source`, {source});
+    }
+
+    return query.getMany() as any;
   }
 }

@@ -22,16 +22,17 @@ export class DocumentHistoryService {
       const last = versions.length - 1;
       version = last >= 0 ? versions[last].version : 1;
     }
+
     const conditions = {
       source,
       id,
       type: DocumentHistoryService.getNormalizedType(type),
       version,
     };
-
     const history = await this.documentHistoryRepository
       .find(conditions)
       .then((data) => data[0]);
+
     if (history) {
       return history;
     }
@@ -40,7 +41,13 @@ export class DocumentHistoryService {
       .then((data) => data[0]);
   }
 
-  findDeleted(options: { skip?: number, take?: number }) {
+  findDeleted(options: {
+    source?: string,
+    type?: string,
+    id?: string[],
+    skip?: number,
+    take?: number
+  }) {
     return this.documentHistoryRepository.findDeleted(options);
   }
 
@@ -72,14 +79,13 @@ export class DocumentHistoryService {
         version: document.version ?? 1,
         created: document.edited,
       };
+
       if (!includeDiff) {
         return version;
       }
-
       if (idx === 0) {
         version.original = document.data as any;
       }
-
       if (history[idx - 1]) {
         version.patch = compare(history[idx - 1].data || {}, document.data || {});
       }

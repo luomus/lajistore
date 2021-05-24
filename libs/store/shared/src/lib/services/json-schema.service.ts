@@ -51,20 +51,6 @@ export class JsonSchemaService {
     return range.startsWith('xsd:');
   }
 
-  static foreachProperty(
-    schema: JSONSchema4,
-    cb: (property: string, propertySchema: JSONSchema4) => void
-  ): void {
-    if (!schema.properties) {
-      return;
-    }
-    const properties = Object.keys(schema.properties);
-
-    for (const property of properties) {
-      cb(property, schema.properties[property]);
-    }
-  }
-
   static removeExtraProperties<T>(
     obj: T,
     remove?: Array<keyof T>,
@@ -134,16 +120,14 @@ export class JsonSchemaService {
       const schema = await this.getSchema(type);
       const embedded: { [prop: string]: string } = {};
 
-      JsonSchemaService.foreachProperty(
-        schema,
-        async (property, propertySchema) => {
-          if (await this.isEmbedded(propertySchema)) {
-            embedded[property] = propertySchema['range'] ?? property;
-            await this.getEmbedded(embedded[property]);
+      if (schema.properties) {
+        const properties = Object.keys(schema.properties);
+        for (const property of properties) {
+          if (await this.isEmbedded(schema.properties[property])) {
+            embedded[property] = schema.properties[property]['range'] ?? property;
           }
         }
-      );
-
+      }
       this.embedded[type] = embedded;
     }
     return this.embedded[type];

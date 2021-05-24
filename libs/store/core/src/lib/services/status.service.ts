@@ -13,7 +13,7 @@ type CheckTypes = 'documentation'|'database'|'search'|'workers'
 
 @Injectable()
 export class StatusService {
-  private checks: Record<CheckTypes, HealthIndicatorFunction>;
+  private readonly checks: Record<CheckTypes, HealthIndicatorFunction>;
 
   constructor(
     private health: HealthCheckService,

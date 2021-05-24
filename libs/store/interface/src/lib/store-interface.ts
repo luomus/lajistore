@@ -60,6 +60,12 @@ export interface PagedResponse<T> {
   aggregations?: any
 }
 
+export interface FindOptions {
+  source?: string,
+  type?: string,
+  id?: string[],
+}
+
 export interface VersionResponse {
   version: number;
   created: Date;

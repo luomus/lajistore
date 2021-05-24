@@ -8,8 +8,8 @@ import { IdService, JsonSchemaService, UtilityService } from '@luomus/store/shar
 @Injectable()
 export class DocumentService {
 
-  private generatedFieldsToType: string[];
-  private noGeneratedFieldsToChildren: string[];
+  private readonly generatedFieldsToType: string[];
+  private readonly noGeneratedFieldsToChildren: string[];
 
   constructor(
     private readonly idService: IdService,
@@ -18,7 +18,7 @@ export class DocumentService {
     private readonly documentRepository: DocumentRepository
   ) {
     this.generatedFieldsToType = this.configService.getList('ADD_GENERATED_FIELDS_FOR_EMBEDDED_TYPES');
-    this.noGeneratedFieldsToChildren = this.configService.getList('NO_GENERATED_FIELDS_FOR_CHILDREN');
+    this.noGeneratedFieldsToChildren = this.configService.getList('NO_GENERATED_FIELDS_FOR_ANY_CHILDREN_OF');
   }
 
   async createOrUpdate(
@@ -171,7 +171,6 @@ export class DocumentService {
         ),
         true
       );
-      console.log('META', documents);
 
       documents.forEach((document) => {
         const { id, ...meta } = document;
@@ -198,12 +197,8 @@ export class DocumentService {
     const contextProperty: keyof Pick<StoreObject, '@context'> = '@context';
     const typeQName = schema['subject'] || type;
 
-    if (this.noGeneratedFieldsToChildren.includes(typeQName)) {
-      addGenerated = false;
-    }
-
     if (isBase || (addGenerated && this.generatedFieldsToType.includes(typeQName))) {
-      if (typeof data[PROPERTY_ID] === 'undefined') {
+      if (!data[PROPERTY_ID]) {
         data[PROPERTY_ID] = isBase
           ? baseId
           : this.idService.getChildId(baseId, meta.sequence++);
@@ -215,6 +210,10 @@ export class DocumentService {
 
     if (isBase) {
       data[contextProperty] = contextIri.replace('%type%', schema['subject']);
+    }
+
+    if (this.noGeneratedFieldsToChildren.includes(typeQName)) {
+      addGenerated = false;
     }
 
     for (const property of embeddedProperties) {

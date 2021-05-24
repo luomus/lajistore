@@ -170,6 +170,7 @@ export class StoreService {
     );
 
     if (result.affected) {
+      // Do not await this since it would wait for the worker to ack from workers before continuing
       this.bgWorkerService.send(WorkerMessagePattern.documentDelete, [
         { source, id, type },
       ]);

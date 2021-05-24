@@ -72,7 +72,7 @@ services:
       IS_WORKER: 'true'
       DW_SOURCES: 'KE.388,KE.441'
       ID_RESOLVER: 'http://tun.fi/'
-    command: 'nx serve store-worker'
+    command: 'npm run nx -- serve store-worker'
 
   kotka:
     env_file:
