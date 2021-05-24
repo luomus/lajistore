@@ -1,8 +1,9 @@
 FROM node:14 as builder
 ENV NODE_ENV build
 
-USER node
 WORKDIR /app
+RUN chown -Rh node:node /app
+USER node
 
 # Copy the things that are needed for installing corrent node_modules
 COPY --chown=node:node ./package*.json ./
@@ -42,8 +43,9 @@ RUN apt update \
  && ldconfig
 
 SHELL ["/bin/bash", "-c"]
-USER node
 WORKDIR /app
+RUN chown -Rh node:node /app
+USER node
 
 # To run this you need to mount ./ (with corrent node_modules included) to this image
 CMD [ "npm", "run", "nx", "--", "serve", "store-api" ]
