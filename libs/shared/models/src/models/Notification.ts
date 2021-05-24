@@ -10,6 +10,8 @@ export interface Notification {
   id?: string;
   "@type"?: string;
   annotation?: {
+    id?: string;
+    "@type"?: string;
     addedTags?: string[];
     annotationByPerson?: string;
     annotationBySystem?: string;
@@ -24,6 +26,8 @@ export interface Notification {
     byRole?: "MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin";
     censusAnnotation?: ("MAN.countError" | "MAN.innerCountError" | "MAN.otherError")[];
     created?: string;
+    createdTimestamp?: number;
+    deletedTimestamp?: number;
     identification?: {
       id?: string;
       "@type"?: string;

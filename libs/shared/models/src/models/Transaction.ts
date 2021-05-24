@@ -163,11 +163,15 @@ export interface Transaction {
     | "HRA.sentTypeOther"
     | "HRA.sentTypeImage";
   transactionEvents?: {
+    id?: string;
+    "@type"?: string;
     eventDate: string;
     eventHandler: string;
     eventType: "HRAA.eventTypeSend" | "HRAA.eventTypeReceive" | "HRAA.eventTypeOther";
     items: [
       {
+        id?: string;
+        "@type"?: string;
         collectionID?: string;
         itemCount: number;
         itemID?: string;
@@ -177,6 +181,8 @@ export interface Transaction {
         status: "HRAB.statusOk" | "HRAB.statusMissing" | "HRAB.statusDamaged";
       },
       ...{
+        id?: string;
+        "@type"?: string;
         collectionID?: string;
         itemCount: number;
         itemID?: string;
@@ -250,6 +256,8 @@ export interface Transaction {
     | "MZ.publicityRestrictionsProtected"
     | "MZ.publicityRestrictionsPrivate";
   permits?: {
+    id?: string;
+    "@type"?: string;
     permitEndDate?: string;
     permitFile?: string;
     permitNotes?: string;

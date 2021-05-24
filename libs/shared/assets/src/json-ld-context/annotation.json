@@ -59,6 +59,14 @@
       "@id": "default:MAN.created",
       "@type": "xsd:dateTime"
     },
+    "createdTimestamp": {
+      "@id": "default:MAN.createdTimestamp",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "deletedTimestamp": {
+      "@id": "default:MAN.deletedTimestamp",
+      "@type": "xsd:nonNegativeInteger"
+    },
     "identification": {
       "@id": "default:MAN.identification",
       "@container": "@set"

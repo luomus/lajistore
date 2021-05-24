@@ -23,6 +23,8 @@ export interface Annotation {
   byRole?: "MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin";
   censusAnnotation?: ("MAN.countError" | "MAN.innerCountError" | "MAN.otherError")[];
   created?: string;
+  createdTimestamp?: number;
+  deletedTimestamp?: number;
   identification?: {
     id?: string;
     "@type"?: string;

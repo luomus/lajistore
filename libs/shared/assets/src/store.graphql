@@ -3971,9 +3971,11 @@ type Annotation2 {
   context: String
   created: String
   createdBySystem: String
+  createdTimestamp: Int
   deleted: Boolean
   deletedByPerson: String
   deletedDateTime: String
+  deletedTimestamp: Int
   id: String
   identification: Identification
   invasiveControlEffectiveness: InvasiveControlEffectiveness
@@ -19733,9 +19735,11 @@ input Annotation2Input {
   context: String
   created: String
   createdBySystem: String
+  createdTimestamp: Int
   deleted: Boolean
   deletedByPerson: String
   deletedDateTime: String
+  deletedTimestamp: Int
   id: String
   identification: IdentificationInput
   invasiveControlEffectiveness: InvasiveControlEffectiveness

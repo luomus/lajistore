@@ -18,6 +18,12 @@
       },
       "annotation": {
         "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
           "addedTags": {
             "type": "keyword",
             "ignore_above": 200
@@ -44,6 +50,12 @@
           },
           "created": {
             "type": "date"
+          },
+          "createdTimestamp": {
+            "type": "integer"
+          },
+          "deletedTimestamp": {
+            "type": "integer"
           },
           "identification": {
             "properties": {

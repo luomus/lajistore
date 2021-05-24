@@ -45271,6 +45271,16 @@
             "format": "date-time",
             "title": "Creation time"
           },
+          "createdTimestamp": {
+            "type": "integer",
+            "minimum": 0,
+            "title": "Created timestamp"
+          },
+          "deletedTimestamp": {
+            "type": "integer",
+            "minimum": 0,
+            "title": "Deleted timestamp"
+          },
           "identification": {
             "$ref": "#/components/schemas/identification"
           },
@@ -57356,7 +57366,7 @@
   ],
   "servers": [
     {
-      "url": "http://localhost:3000"
+      "url": "https://store-dev.luomus.fi"
     }
   ]
 }

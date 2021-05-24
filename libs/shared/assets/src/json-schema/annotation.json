@@ -119,6 +119,20 @@
       "subject": "MAN.created",
       "title": "Creation time"
     },
+    "createdTimestamp": {
+      "type": "integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
+      "subject": "MAN.createdTimestamp",
+      "title": "Created timestamp"
+    },
+    "deletedTimestamp": {
+      "type": "integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
+      "subject": "MAN.deletedTimestamp",
+      "title": "Deleted timestamp"
+    },
     "identification": {
       "type": "object",
       "subject": "MAN.identification",

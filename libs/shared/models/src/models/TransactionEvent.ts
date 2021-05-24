@@ -14,6 +14,8 @@ export interface TransactionEvent {
   eventType: "HRAA.eventTypeSend" | "HRAA.eventTypeReceive" | "HRAA.eventTypeOther";
   items: [
     {
+      id?: string;
+      "@type"?: string;
       collectionID?: string;
       itemCount: number;
       itemID?: string;
@@ -23,6 +25,8 @@ export interface TransactionEvent {
       status: "HRAB.statusOk" | "HRAB.statusMissing" | "HRAB.statusDamaged";
     },
     ...{
+      id?: string;
+      "@type"?: string;
       collectionID?: string;
       itemCount: number;
       itemID?: string;

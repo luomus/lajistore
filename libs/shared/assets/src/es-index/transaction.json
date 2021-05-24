@@ -195,6 +195,12 @@
       "transactionEvents": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
           "eventDate": {
             "type": "date"
           },
@@ -209,6 +215,12 @@
           "items": {
             "type": "object",
             "properties": {
+              "id": {
+                "type": "keyword"
+              },
+              "@type": {
+                "type": "keyword"
+              },
               "collectionID": {
                 "type": "keyword",
                 "ignore_above": 200
@@ -312,6 +324,12 @@
       "permits": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
           "permitEndDate": {
             "type": "date"
           },

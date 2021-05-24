@@ -31,6 +31,18 @@
       "title": "Annotation",
       "description": "",
       "properties": {
+        "id": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "id",
+          "title": "Id for the MAN.annotation"
+        },
+        "@type": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "@type",
+          "title": "Type for the MAN.annotation"
+        },
         "addedTags": {
           "type": "array",
           "uniqueItems": false,
@@ -125,6 +137,20 @@
           "range": "xsd:dateTime",
           "subject": "MAN.created",
           "title": "Creation time"
+        },
+        "createdTimestamp": {
+          "type": "integer",
+          "minimum": 0,
+          "range": "xsd:nonNegativeInteger",
+          "subject": "MAN.createdTimestamp",
+          "title": "Created timestamp"
+        },
+        "deletedTimestamp": {
+          "type": "integer",
+          "minimum": 0,
+          "range": "xsd:nonNegativeInteger",
+          "subject": "MAN.deletedTimestamp",
+          "title": "Deleted timestamp"
         },
         "identification": {
           "type": "object",

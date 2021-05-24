@@ -43,6 +43,12 @@
       "created": {
         "type": "date"
       },
+      "createdTimestamp": {
+        "type": "integer"
+      },
+      "deletedTimestamp": {
+        "type": "integer"
+      },
       "identification": {
         "properties": {
           "id": {

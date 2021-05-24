@@ -396,6 +396,18 @@
         "title": "Transaction Event",
         "description": "",
         "properties": {
+          "id": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "id",
+            "title": "Id for the Transaction Event"
+          },
+          "@type": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "@type",
+            "title": "Type for the Transaction Event"
+          },
           "eventDate": {
             "type": "string",
             "format": "date",
@@ -435,6 +447,18 @@
               "title": "Transaction Item",
               "description": "",
               "properties": {
+                "id": {
+                  "type": "string",
+                  "range": "xsd:string",
+                  "subject": "id",
+                  "title": "Id for the Transaction Item"
+                },
+                "@type": {
+                  "type": "string",
+                  "range": "xsd:string",
+                  "subject": "@type",
+                  "title": "Type for the Transaction Item"
+                },
                 "collectionID": {
                   "type": "string",
                   "range": "MY.collection",
@@ -731,6 +755,18 @@
         "title": "",
         "description": "",
         "properties": {
+          "id": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "id",
+            "title": "Id for the HRA.permitClass"
+          },
+          "@type": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "@type",
+            "title": "Type for the HRA.permitClass"
+          },
           "permitEndDate": {
             "type": "string",
             "format": "date",

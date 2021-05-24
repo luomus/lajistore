@@ -30,6 +30,12 @@
       "items": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "@type": {
+            "type": "keyword"
+          },
           "collectionID": {
             "type": "keyword",
             "ignore_above": 200
