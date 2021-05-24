@@ -11,8 +11,9 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* \
  && ln -sf /lib/x86_64-linux-musl/libc.so /usr/lib/libc.musl-x86_64.so.1
 
-USER node
 WORKDIR /app
+RUN chown -Rh node:node /app
+USER node
 
 COPY --chown=node:node ./decorate-angular-cli.js ./package*.json ./
 
