@@ -48,6 +48,14 @@ export class IdService {
     return `${baseId}${this.idSeparator}${sequence}`;
   }
 
+  getSequenceNumberFromId(id: string): number {
+    const parts = id.split(this.idSeparator, 2);
+    if (parts[1]) {
+      return Number(parts[1]);
+    }
+    return 0;
+  }
+
   private async getIdTypeMap() {
     if (!this.idTypeMap) {
       this.idTypeMap = await this.fileService

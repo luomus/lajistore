@@ -198,10 +198,16 @@ export class DocumentService {
     const typeQName = schema['subject'] || type;
 
     if (isBase || (addGenerated && this.generatedFieldsToType.includes(typeQName))) {
-      if (!data[PROPERTY_ID]) {
+      const id = data[PROPERTY_ID];
+      if (!id) {
         data[PROPERTY_ID] = isBase
           ? baseId
           : this.idService.getChildId(baseId, meta.sequence++);
+      } else {
+        const sequence = this.idService.getSequenceNumberFromId(id);
+        if (sequence >= meta.sequence) {
+          meta.sequence = sequence + 1;
+        }
       }
       if (schema['subject']) {
         data[typeProperty] = schema['subject'];

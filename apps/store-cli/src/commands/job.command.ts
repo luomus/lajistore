@@ -25,14 +25,14 @@ export class JobCommand {
 
   @Command({
     command: 'job',
-    description: 'Reindex documents to search index',
+    description: 'Add documents to job queue',
     options: [
       {
-        flags: '-s, --source <source>',
+        flags: '--source <source>',
         description: 'Source id',
         required: false
       },{
-        flags: '-t, --type <type>',
+        flags: '--type <type>',
         description: 'Type of the document',
         required: false
       },{
@@ -89,6 +89,7 @@ export class JobCommand {
       let page = 0;
       while (page >= 0) {
         const deleted = await this.documentHistoryService.findDeleted({
+          ...where,
           take: PAGE_SIZE,
           skip: page * PAGE_SIZE
         });
@@ -100,11 +101,7 @@ export class JobCommand {
 
         await this.bgWorkerService.send(
           WorkerMessagePattern.documentDelete,
-          deleted.filter(document =>
-            (!where.source || where.source === document.source) &&
-            (!where.type || where.type === document.type) &&
-            (!where.id || where.id.includes(document.id))
-          )
+          deleted
         );
       }
 

@@ -8,7 +8,7 @@ import { StoreGenerateModule } from '@luomus/store/generate';
 import { GenerateCommand } from './commands/generate.command';
 import { StatusCommand } from './commands/status.command';
 import { IndexCommand } from './commands/index.command';
-import { TestCommand } from './commands/test.command';
+import { UndoCommand } from './commands/undo.command';
 import { UserCommand } from './commands/user.command';
 import { JobCommand } from './commands/job.command';
 
@@ -22,7 +22,7 @@ import { JobCommand } from './commands/job.command';
     TerminusModule
   ],
   controllers: [],
-  providers: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, TestCommand],
-  exports: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, TestCommand]
+  providers: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand],
+  exports: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand]
 })
 export class StoreCliModule {}
