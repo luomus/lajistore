@@ -12,12 +12,11 @@ RUN apt-get update \
  && ln -sf /lib/x86_64-linux-musl/libc.so /usr/lib/libc.musl-x86_64.so.1
 
 WORKDIR /app
-RUN chown -Rh node:node /app
-USER node
 
 COPY --chown=node:node ./decorate-angular-cli.js ./package*.json ./
 
 # Install share deps
-RUN npm ci
+RUN npm ci \
+ && npm cache clean --force
 
 CMD ["npm", "start:store-api"]

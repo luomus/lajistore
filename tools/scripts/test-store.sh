@@ -9,7 +9,7 @@ docker volume rm luomus_postgre_data
 
 docker-compose -f ./docker-compose.e2e.yml up --build test
 #docker-compose -f ./docker-compose.e2e.yml up store-api
-docker-compose -f ./docker-compose.e2e.yml down --remove-orphans
 
-docker volume rm luomus_elastic_data
-docker volume rm luomus_postgre_data
+# Give docker some time to finish after test run
+sleep 5
+docker-compose -f ./docker-compose.e2e.yml down --remove-orphans -v
