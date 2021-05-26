@@ -55,6 +55,7 @@ services:
     volumes:
       - .:/app
       - ./.env.e2e:/app/.env
+      - /app/node_modules
     command: 'npm run start:store-api'
     restart: on-failure
     healthcheck:
@@ -75,6 +76,7 @@ services:
     image: store-api
     volumes:
       - .:/app
+      - /app/node_modules
     command: 'npm run test:store-api'
     entrypoint: ['./tools/scripts/test-entrypoint.sh']
 
