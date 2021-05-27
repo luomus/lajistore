@@ -86,6 +86,7 @@ PODS="$( oc get pods | grep store- | awk '{print $1}' )"
 for pod in $PODS
 do
   oc delete pod $pod
+  sleep 30
 done
 
 echo ""
