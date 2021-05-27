@@ -26,6 +26,28 @@ if [[ $OC_SERVER != *"${TARGET_SERVER_MATCH}"* ]]; then
   echo ""
   exit 1
 fi
+if [[ ! -f ".env.${TYPE}" ]]; then
+  echo ""
+  echo "You need the file '.env.${TYPE}' in the repo root"
+  echo "in order to deploy ${TYPE}."
+  echo ""
+  exit 1
+fi
+if [[ ! -f "tools/kubernetes/store-secret.${TYPE}.yaml" ]]; then
+  echo ""
+  echo "You need the file 'tools/kubernetes/store-secret.${TYPE}.yaml'"
+  echo "in order to deploy ${TYPE}."
+  echo ""
+  exit 1
+fi
+if [[ ! -f "tools/kubernetes/store-configmap.${TYPE}.yaml" ]]; then
+  echo ""
+  echo "You need the file 'tools/kubernetes/store-configmap.${TYPE}.yaml'"
+  echo "in order to deploy ${TYPE}."
+  echo ""
+  exit 1
+fi
+
 
 source ".env.${TYPE}"
 

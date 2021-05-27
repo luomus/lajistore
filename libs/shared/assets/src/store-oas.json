@@ -57366,7 +57366,7 @@
   ],
   "servers": [
     {
-      "url": "https://store-dev.luomus.fi"
+      "url": "http://localhost:3000"
     }
   ]
 }
