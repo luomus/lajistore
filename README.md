@@ -8,6 +8,8 @@ Currently, these are:
 This workspace uses [Nx](https://nx.dev) to manage the workspace
 and [Docker](https://www.docker.com/) to run applications.
 
+**More documentation can be found in the [WIKI](https://wiki.helsinki.fi/display/luomusict/store.luomus.fi).**
+
 ## Tech Stack & Links to Documentations
 
 > [Docker](https://docs.docker.com/)
@@ -25,6 +27,13 @@ and [Docker](https://www.docker.com/) to run applications.
 > [PostgreSQL](https://www.postgresql.org/docs/) (other database can be used as long as [TypeORM](https://typeorm.io/) supports transactions on them)
 
 ## Development server
+
+Make sure that you have updated docker & docker-compose
+This has been tested with
+```shell
+docker-compose version 1.29.1
+Docker version 20.10.6, build 370c289
+```
 
 Run `docker-compose up` for a dev server.
 Navigate to http://localhost:4200/ for Kotka and to http://localhost:3000/ for Store.
