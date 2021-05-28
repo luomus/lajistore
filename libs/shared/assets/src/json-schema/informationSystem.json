@@ -162,7 +162,8 @@
         "KE.program",
         "KE.database",
         "KE.hardware",
-        "KE.server"
+        "KE.server",
+        "KE.mobileApp"
       ],
       "enumNames": [
         "Web application",
@@ -171,7 +172,8 @@
         "Stand-alone program",
         "Database",
         "Hardware",
-        "Server"
+        "Server",
+        "KE.mobileApp"
       ],
       "range": "KE.types",
       "subject": "KE.type",

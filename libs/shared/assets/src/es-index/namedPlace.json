@@ -153,6 +153,9 @@
               "@type": {
                 "type": "keyword"
               },
+              "acknowledgeNoUnitsInCensus": {
+                "type": "boolean"
+              },
               "artificialLight": {
                 "type": "keyword",
                 "ignore_above": 200
@@ -488,6 +491,11 @@
                     "ignore_above": 200
                   }
                 }
+              },
+              "geometry": {
+                "type": "geo_shape",
+                "ignore_malformed": true,
+                "coerce": true
               },
               "gpsUsed": {
                 "type": "boolean"
@@ -2377,6 +2385,9 @@
               "@type": {
                 "type": "keyword"
               },
+              "acknowledgeNoUnitsInCensus": {
+                "type": "boolean"
+              },
               "artificialLight": {
                 "type": "keyword",
                 "ignore_above": 200
@@ -2712,6 +2723,11 @@
                     "ignore_above": 200
                   }
                 }
+              },
+              "geometry": {
+                "type": "geo_shape",
+                "ignore_malformed": true,
+                "coerce": true
               },
               "gpsUsed": {
                 "type": "boolean"

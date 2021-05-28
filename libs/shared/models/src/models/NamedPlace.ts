@@ -136,6 +136,7 @@ export interface NamedPlace {
     gatheringEvent?: {
       id?: string;
       "@type"?: string;
+      acknowledgeNoUnitsInCensus?: boolean;
       artificialLight?:
         | "MY.artificialLightEnum1"
         | "MY.artificialLightEnum2"
@@ -410,6 +411,7 @@ export interface NamedPlace {
         wayOfTravelNotes?: string;
         wind?: "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
       };
+      geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
       gpsUsed?: boolean;
       /**
        * Name of the collector(s), in format 'Lastname, Firstname; Lastname Firstname'
@@ -4362,6 +4364,7 @@ export interface NamedPlace {
     gatheringEvent?: {
       id?: string;
       "@type"?: string;
+      acknowledgeNoUnitsInCensus?: boolean;
       artificialLight?:
         | "MY.artificialLightEnum1"
         | "MY.artificialLightEnum2"
@@ -4636,6 +4639,7 @@ export interface NamedPlace {
         wayOfTravelNotes?: string;
         wind?: "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
       };
+      geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
       gpsUsed?: boolean;
       /**
        * Name of the collector(s), in format 'Lastname, Firstname; Lastname Firstname'

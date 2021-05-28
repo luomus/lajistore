@@ -4790,6 +4790,7 @@ enum DataOriginListItem {
 }
 
 type GatheringEvent {
+  acknowledgeNoUnitsInCensus: Boolean
   artificialLight: ArtificialLight
   breaksDuringCensusInMinutes: Int
   censusHinderedByEnviromentalFactors: Boolean
@@ -4804,6 +4805,7 @@ type GatheringEvent {
   dateBegin: String
   dateEnd: String
   gatheringFact: GatheringFact
+  geometry: JSON
   gpsUsed: Boolean
   id: String
 
@@ -7462,6 +7464,7 @@ enum Type2 {
   KE_DATABASE
   KE_HARDWARE
   KE_SERVER
+  KE_MOBILEAPP
 }
 
 type IucnRedListEvaluation2 {
@@ -20302,6 +20305,7 @@ input Document2Input {
 }
 
 input GatheringEventInput {
+  acknowledgeNoUnitsInCensus: Boolean
   artificialLight: ArtificialLight
   breaksDuringCensusInMinutes: Int
   censusHinderedByEnviromentalFactors: Boolean
@@ -20316,6 +20320,7 @@ input GatheringEventInput {
   dateBegin: String
   dateEnd: String
   gatheringFact: GatheringFactInput
+  geometry: JSON
   gpsUsed: Boolean
   id: String
 

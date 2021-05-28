@@ -309,6 +309,12 @@
           "subject": "@type",
           "title": "Type for the Global gathering event"
         },
+        "acknowledgeNoUnitsInCensus": {
+          "type": "boolean",
+          "range": "xsd:boolean",
+          "subject": "MY.acknowledgeNoUnitsInCensus",
+          "title": "No units in census"
+        },
         "artificialLight": {
           "type": "string",
           "enum": [
@@ -1450,6 +1456,19 @@
             }
           },
           "range": "MY.gatheringFactClass"
+        },
+        "geometry": {
+          "anyOf": [
+            {
+              "$ref": "https://geojson.org/schema/Geometry.json"
+            },
+            {
+              "$ref": "https://geojson.org/schema/GeometryCollection.json"
+            }
+          ],
+          "range": "MZ.geometry",
+          "subject": "MY.geometry",
+          "title": "Coordinates"
         },
         "gpsUsed": {
           "type": "boolean",

@@ -48961,6 +48961,10 @@
             "type": "string",
             "title": "Type for the Global gathering event"
           },
+          "acknowledgeNoUnitsInCensus": {
+            "type": "boolean",
+            "title": "No units in census"
+          },
           "artificialLight": {
             "type": "string",
             "enum": [
@@ -49055,6 +49059,9 @@
           },
           "gatheringFact": {
             "$ref": "#/components/schemas/gatheringFact"
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/geometry"
           },
           "gpsUsed": {
             "type": "boolean",
@@ -50534,7 +50541,8 @@
               "KE.program",
               "KE.database",
               "KE.hardware",
-              "KE.server"
+              "KE.server",
+              "KE.mobileApp"
             ],
             "title": "Type"
           }

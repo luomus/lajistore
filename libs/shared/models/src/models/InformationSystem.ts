@@ -37,5 +37,6 @@ export interface InformationSystem {
     | "KE.program"
     | "KE.database"
     | "KE.hardware"
-    | "KE.server";
+    | "KE.server"
+    | "KE.mobileApp";
 }
