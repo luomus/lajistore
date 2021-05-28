@@ -34,7 +34,8 @@ This has been tested with
 docker-compose version 1.29.1
 Docker version 20.10.6, build 370c289
 ```
-
+Use node version higher than `12.17`
+Run `npm ci` to install all dependencies (node_module is mounted for development)
 Run `docker-compose up` for a dev server.
 Navigate to http://localhost:4200/ for Kotka and to http://localhost:3000/ for Store.
 The app will automatically reload if you change any of the source files.
