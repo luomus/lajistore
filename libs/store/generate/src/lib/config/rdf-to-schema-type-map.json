@@ -18,7 +18,8 @@
   "MZ.geometry": {
     "anyOf": [
       { "$ref": "https://geojson.org/schema/Geometry.json" },
-      { "$ref": "https://geojson.org/schema/GeometryCollection.json" }
+      { "$ref": "https://geojson.org/schema/GeometryCollection.json" },
+      { "type" : "object", "additionalProperties": false }
     ]
   }
 }
