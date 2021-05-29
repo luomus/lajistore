@@ -79,10 +79,12 @@
     "elutionMedium": {
       "type": "string",
       "enum": [
+        "",
         "MF.elutionMediumUltrapureWater",
         "MF.elutionMediumElutionBuffer"
       ],
       "enumNames": [
+        "",
         "Ultrapure water",
         "Elution buffer"
       ],
@@ -118,10 +120,12 @@
     "individualsInPreparation": {
       "type": "string",
       "enum": [
+        "",
         "MF.individualsInPreparationMultiple",
         "MF.individualsInPreparationSingle"
       ],
       "enumNames": [
+        "",
         "Multiple",
         "Single"
       ],
@@ -133,6 +137,7 @@
     "material": {
       "type": "string",
       "enum": [
+        "",
         "MF.materialBirdStudySkin",
         "MF.materialWing",
         "MF.materialTail",
@@ -167,6 +172,7 @@
         "MF.materialOther"
       ],
       "enumNames": [
+        "",
         "Bird study skin",
         "Wing(s)",
         "Tail",
@@ -247,6 +253,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MY.preservationPressed",
           "MY.preservationDry",
           "MY.preservationCriticalPointDrying",
@@ -285,6 +292,7 @@
           "MY.preservationFrozenMinus80CAndEthanolMinus20C"
         ],
         "enumNames": [
+          "",
           "Dry and pressed",
           "Dry",
           "Critical-point drying",
@@ -344,11 +352,13 @@
     "quality": {
       "type": "string",
       "enum": [
+        "",
         "MF.qualityLow",
         "MF.qualityMedium",
         "MF.qualityHigh"
       ],
       "enumNames": [
+        "",
         "Low",
         "Medium",
         "High"
@@ -371,10 +381,12 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MF.qualityCheckMethodNanoDrop",
           "MF.qualityCheckMethodCubit"
         ],
         "enumNames": [
+          "",
           "Nano Drop",
           "Cubit"
         ]
@@ -408,6 +420,7 @@
     "status": {
       "type": "string",
       "enum": [
+        "",
         "MY.statusOk",
         "MY.statusMissing",
         "MY.statusUnrecoverable",
@@ -426,6 +439,7 @@
         "MY.statusNoVoucherRetained"
       ],
       "enumNames": [
+        "",
         "Ok",
         "Missing (but could still be recovered)",
         "Unrecoverable (location known, bet can't get it back)",

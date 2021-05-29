@@ -16,6 +16,7 @@ export interface TransactionEvent {
     {
       id?: string;
       "@type"?: string;
+      "@context"?: string;
       collectionID?: string;
       itemCount: number;
       itemID?: string;
@@ -27,6 +28,7 @@ export interface TransactionEvent {
     ...{
       id?: string;
       "@type"?: string;
+      "@context"?: string;
       collectionID?: string;
       itemCount: number;
       itemID?: string;
@@ -39,6 +41,7 @@ export interface TransactionEvent {
   notes?: string;
   numberOfPackages?: number;
   sentBy?:
+    | ""
     | "HRAA.sentByPriority"
     | "HRAA.sentByEconomy"
     | "HRAA.sentByCourier"

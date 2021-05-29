@@ -9,7 +9,7 @@ export interface GatheringFact {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
+  batCollector?: "" | "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
   binocularsUsed?: boolean;
   censusAreaHectares?: number;
   invasiveControlOtherExpensesInEuros?: number;
@@ -19,6 +19,7 @@ export interface GatheringFact {
   lineTransectSegmentMetersStart?: number;
   observedAreaHectares?: number;
   pointCountHabitat?:
+    | ""
     | "MY.pointCountHabitat0"
     | "MY.pointCountHabitat1"
     | "MY.pointCountHabitat2"
@@ -41,6 +42,7 @@ export interface GatheringFact {
   spottingScopeUsed?: boolean;
   sunniness?: number;
   sykeButterFlyCensusWind?:
+    | ""
     | "MY.sykeButterFlyCensusWindEnumUnknown"
     | "MY.sykeButterFlyCensusWindEnum0"
     | "MY.sykeButterFlyCensusWindEnum1"
@@ -50,6 +52,7 @@ export interface GatheringFact {
     | "MY.sykeButterFlyCensusWindEnum5"
     | "MY.sykeButterFlyCensusWindEnum6";
   sykeButterFlyCensusWindEnd?:
+    | ""
     | "MY.sykeButterFlyCensusWindEnumUnknown"
     | "MY.sykeButterFlyCensusWindEnum0"
     | "MY.sykeButterFlyCensusWindEnum1"
@@ -59,6 +62,7 @@ export interface GatheringFact {
     | "MY.sykeButterFlyCensusWindEnum5"
     | "MY.sykeButterFlyCensusWindEnum6";
   sykeButterFlyCensusWindStart?:
+    | ""
     | "MY.sykeButterFlyCensusWindEnumUnknown"
     | "MY.sykeButterFlyCensusWindEnum0"
     | "MY.sykeButterFlyCensusWindEnum1"
@@ -68,12 +72,14 @@ export interface GatheringFact {
     | "MY.sykeButterFlyCensusWindEnum5"
     | "MY.sykeButterFlyCensusWindEnum6";
   waterbirdCensusPeriod?:
+    | ""
     | "MY.waterbirdCensusPeriodEnum1"
     | "MY.waterbirdCensusPeriodEnum2"
     | "MY.waterbirdCensusPeriodEnumJuvenile"
     | "MY.waterbirdCensusPeriodEnumAdditional"
     | "MY.waterbirdCensusPeriodEnumCombined";
   waterbirdHabitat?:
+    | ""
     | "MY.waterbirdHabitatEnum1"
     | "MY.waterbirdHabitatEnum2"
     | "MY.waterbirdHabitatEnum3"
@@ -100,16 +106,19 @@ export interface GatheringFact {
   LOXIAonPine?: number;
   LOXIAonSpruce?: number;
   abundanceBOMGAR?:
+    | ""
     | "WBC.speciesAbundanceEnum0"
     | "WBC.speciesAbundanceEnum1"
     | "WBC.speciesAbundanceEnum2"
     | "WBC.speciesAbundanceEnum3";
   abundancePINENU?:
+    | ""
     | "WBC.speciesAbundanceEnum0"
     | "WBC.speciesAbundanceEnum1"
     | "WBC.speciesAbundanceEnum2"
     | "WBC.speciesAbundanceEnum3";
   abundanceTURPIL?:
+    | ""
     | "WBC.speciesAbundanceEnum0"
     | "WBC.speciesAbundanceEnum1"
     | "WBC.speciesAbundanceEnum2"
@@ -124,6 +133,7 @@ export interface GatheringFact {
   birdFeederCountBiotopeG?: number;
   birdFeederCountBiotopeH?: number;
   cloudAndRain?:
+    | ""
     | "WBC.cloudAndRainEnum0"
     | "WBC.cloudAndRainEnum1"
     | "WBC.cloudAndRainEnum2"
@@ -140,6 +150,7 @@ export interface GatheringFact {
   feedingStationCountBiotopeG?: number;
   feedingStationCountBiotopeH?: number;
   iceCover?:
+    | ""
     | "WBC.iceCoverEnum0"
     | "WBC.iceCoverEnum1"
     | "WBC.iceCoverEnum2"
@@ -149,6 +160,7 @@ export interface GatheringFact {
   observerCount?: number;
   observerID?: number;
   pineConesAtCensus?:
+    | ""
     | "WBC.berriesAndConesEnum0"
     | "WBC.berriesAndConesEnum1"
     | "WBC.berriesAndConesEnum2"
@@ -176,11 +188,13 @@ export interface GatheringFact {
   routeLengthChangeBiotopeG?: number;
   routeLengthChangeBiotopeH?: number;
   snowAndIceOnTrees?:
+    | ""
     | "WBC.snowAndIceOnTreesEnum0"
     | "WBC.snowAndIceOnTreesEnum1"
     | "WBC.snowAndIceOnTreesEnum2"
     | "WBC.snowAndIceOnTreesEnum3";
   snowCover?:
+    | ""
     | "WBC.snowCoverEnum0"
     | "WBC.snowCoverEnum1"
     | "WBC.snowCoverEnum2"
@@ -191,6 +205,7 @@ export interface GatheringFact {
     | "WBC.snowCoverEnum7"
     | "WBC.snowCoverEnum8";
   sorbusBerriesAtCensus?:
+    | ""
     | "WBC.berriesAndConesEnum0"
     | "WBC.berriesAndConesEnum1"
     | "WBC.berriesAndConesEnum2"
@@ -199,6 +214,7 @@ export interface GatheringFact {
     | "WBC.berriesAndConesEnum5"
     | "WBC.berriesAndConesEnum6";
   sorbusBerriesEarlyFall?:
+    | ""
     | "WBC.berriesAndConesEnum0"
     | "WBC.berriesAndConesEnum1"
     | "WBC.berriesAndConesEnum2"
@@ -207,6 +223,7 @@ export interface GatheringFact {
     | "WBC.berriesAndConesEnum5"
     | "WBC.berriesAndConesEnum6";
   spruceConesAtCensus?:
+    | ""
     | "WBC.berriesAndConesEnum0"
     | "WBC.berriesAndConesEnum1"
     | "WBC.berriesAndConesEnum2"
@@ -214,14 +231,16 @@ export interface GatheringFact {
     | "WBC.berriesAndConesEnum4"
     | "WBC.berriesAndConesEnum5"
     | "WBC.berriesAndConesEnum6";
-  typeOfSnowCover?: "WBC.typeOfSnowCoverEnum0" | "WBC.typeOfSnowCoverEnum1" | "WBC.typeOfSnowCoverEnum2";
+  typeOfSnowCover?: "" | "WBC.typeOfSnowCoverEnum0" | "WBC.typeOfSnowCoverEnum1" | "WBC.typeOfSnowCoverEnum2";
   visibility?:
+    | ""
     | "WBC.visibilityEnum0"
     | "WBC.visibilityEnum1"
     | "WBC.visibilityEnum2"
     | "WBC.visibilityEnum3"
     | "WBC.visibilityEnum4";
   waterbodies?:
+    | ""
     | "WBC.waterbodiesEnum0"
     | "WBC.waterbodiesEnum1"
     | "WBC.waterbodiesEnum2"
@@ -229,11 +248,12 @@ export interface GatheringFact {
     | "WBC.waterbodiesEnum4"
     | "WBC.waterbodiesEnum5";
   wayOfTravel?:
+    | ""
     | "WBC.wayOfTravelEnum0"
     | "WBC.wayOfTravelEnum1"
     | "WBC.wayOfTravelEnum2"
     | "WBC.wayOfTravelEnum3"
     | "WBC.wayOfTravelEnum9";
   wayOfTravelNotes?: string;
-  wind?: "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
+  wind?: "" | "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
 }

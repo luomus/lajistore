@@ -17,6 +17,7 @@ export interface Preparation {
    * Materials (chemicals, kits etc.) used in the preparation process. It is possible to choose several.
    */
   preparationMaterials?: (
+    | ""
     | "MF.preparationMaterialsAcetone"
     | "MF.preparationMaterialsAmmonia"
     | "MF.preparationMaterialsBasyntan"
@@ -44,6 +45,7 @@ export interface Preparation {
    * Processes used in the preparation. It is possible to choose several.
    */
   preparationProcess?: (
+    | ""
     | "MF.preparationProcessTanning"
     | "MF.preparationProcessEnzymaticMaceration"
     | "MF.preparationProcessDegreasing"

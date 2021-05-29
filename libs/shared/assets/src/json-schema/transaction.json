@@ -34,11 +34,13 @@
     "availableForGeneticResearch": {
       "type": "string",
       "enum": [
+        "",
         "HRA.availableForGeneticResearchYes",
         "HRA.availableForGeneticResearchWithRestrictions",
         "HRA.availableForGeneticResearchNo"
       ],
       "enumNames": [
+        "",
         "Yes, freely",
         "Yes, with restrictions",
         "No"
@@ -153,6 +155,7 @@
     "geneticResourceType": {
       "type": "string",
       "enum": [
+        "",
         "HRA.geneticResourceTypeAnimal",
         "HRA.geneticResourceTypePlant",
         "HRA.geneticResourceTypeFungus",
@@ -161,6 +164,7 @@
         "HRA.geneticResourceTypeAqua"
       ],
       "enumNames": [
+        "",
         "Animal",
         "Plant",
         "Fungus",
@@ -207,6 +211,7 @@
     "localDepartment": {
       "type": "string",
       "enum": [
+        "",
         "HRA.localDepartmentDipteraHymenoptera",
         "HRA.localDepartmentLepidopteraColeoptera",
         "HRA.localDepartmentMetazoa",
@@ -217,6 +222,7 @@
         "HRA.localDepartmentVascularPlants"
       ],
       "enumNames": [
+        "",
         "Entomology team",
         "Entomology team",
         "Metazoa team",
@@ -319,11 +325,13 @@
     "resourceImported": {
       "type": "string",
       "enum": [
+        "",
         "HRA.resourceImportedGeneticResources",
         "HRA.resourceImportedTraditionalKnowledge",
         "HRA.resourceImportedBoth"
       ],
       "enumNames": [
+        "",
         "Genetic resources",
         "Traditional knowledge",
         "Both"
@@ -366,6 +374,7 @@
     "sentType": {
       "type": "string",
       "enum": [
+        "",
         "HRA.sentTypePriority",
         "HRA.sentTypeEconomy",
         "HRA.sentTypeCourier",
@@ -374,6 +383,7 @@
         "HRA.sentTypeImage"
       ],
       "enumNames": [
+        "",
         "Priority mail",
         "Economy mail",
         "Courier, see remarks",
@@ -407,6 +417,12 @@
             "range": "xsd:string",
             "subject": "@type",
             "title": "Type for the Transaction Event"
+          },
+          "@context": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "@context",
+            "title": "Context for the Transaction Event"
           },
           "eventDate": {
             "type": "string",
@@ -458,6 +474,12 @@
                   "range": "xsd:string",
                   "subject": "@type",
                   "title": "Type for the Transaction Item"
+                },
+                "@context": {
+                  "type": "string",
+                  "range": "xsd:string",
+                  "subject": "@context",
+                  "title": "Context for the Transaction Item"
                 },
                 "collectionID": {
                   "type": "string",
@@ -552,6 +574,7 @@
           "sentBy": {
             "type": "string",
             "enum": [
+              "",
               "HRAA.sentByPriority",
               "HRAA.sentByEconomy",
               "HRAA.sentByCourier",
@@ -559,6 +582,7 @@
               "HRAA.sentByOther"
             ],
             "enumNames": [
+              "",
               "Priority mail",
               "Economy mail",
               "Courier, see remarks",
@@ -609,11 +633,13 @@
     "transactionStatus": {
       "type": "string",
       "enum": [
+        "",
         "HRA.transactionStatusInProcess",
         "HRA.transactionStatusOutstanding",
         "HRA.transactionStatusClosed"
       ],
       "enumNames": [
+        "",
         "In process",
         "Outstanding",
         "Closed"
@@ -731,11 +757,13 @@
     "publicityRestrictions": {
       "type": "string",
       "enum": [
+        "",
         "MZ.publicityRestrictionsPublic",
         "MZ.publicityRestrictionsProtected",
         "MZ.publicityRestrictionsPrivate"
       ],
       "enumNames": [
+        "",
         "public",
         "protected",
         "private"
@@ -767,6 +795,12 @@
             "subject": "@type",
             "title": "Type for the HRA.permitClass"
           },
+          "@context": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "@context",
+            "title": "Context for the HRA.permitClass"
+          },
           "permitEndDate": {
             "type": "string",
             "format": "date",
@@ -796,10 +830,12 @@
           "permitStatus": {
             "type": "string",
             "enum": [
+              "",
               "HRA.permitStatusAvailable",
               "HRA.permitStatusNotRequired"
             ],
             "enumNames": [
+              "",
               "Available",
               "Not required"
             ],
@@ -810,6 +846,7 @@
           "permitType": {
             "type": "string",
             "enum": [
+              "",
               "HRA.permitTypePIC",
               "HRA.permitTypeMAT",
               "HRA.permitTypeMTA",
@@ -819,6 +856,7 @@
               "HRA.permitTypeMemorandumOfUnderstanding"
             ],
             "enumNames": [
+              "",
               "PIC",
               "MAT",
               "MTA",

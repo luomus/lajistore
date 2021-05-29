@@ -13,6 +13,7 @@ export interface Collection {
    * Secure level (salaus-/karkeistustaso) for the data
    */
   secureLevel?:
+    | ""
     | "MX.secureLevelNone"
     | "MX.secureLevelKM1"
     | "MX.secureLevelKM5"
@@ -107,6 +108,7 @@ export interface Collection {
    * Quality estimation for the data in this collection
    */
   dataQuality?:
+    | ""
     | "MY.dataQuality1"
     | "MY.dataQuality2"
     | "MY.dataQuality3"
@@ -199,6 +201,7 @@ export interface Collection {
    * Indication of how comprehensive the information on this form is.
    */
   metadataStatus?:
+    | ""
     | "MY.metadataStatusPreliminary"
     | "MY.metadataStatusSatisfactory"
     | "MY.metadataStatusComprehensive"
@@ -243,6 +246,7 @@ export interface Collection {
    * How can Luomus publish the data, if it is owned by third party?
    */
   publicationTerms?:
+    | ""
     | "MY.publicationTermsFree"
     | "MY.publicationTermsOfficial"
     | "MY.publicationTermsInternal"
@@ -291,6 +295,7 @@ export interface Collection {
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
   publicityRestrictions?:
+    | ""
     | "MZ.publicityRestrictionsPublic"
     | "MZ.publicityRestrictionsProtected"
     | "MZ.publicityRestrictionsPrivate";

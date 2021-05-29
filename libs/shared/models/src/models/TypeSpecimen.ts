@@ -41,6 +41,7 @@ export interface TypeSpecimen {
    * Is this holotype, paratype, syntype etc...
    */
   typeStatus?:
+    | ""
     | "MY.typeStatusType"
     | "MY.typeStatusHolotype"
     | "MY.typeStatusSyntype"
@@ -78,6 +79,7 @@ export interface TypeSpecimen {
    * Verification whether this really is a type?
    */
   typeVerification?:
+    | ""
     | "MY.typeVerificationVerified"
     | "MY.typeVerificationUnverified"
     | "MY.typeVerificationProbable"
@@ -94,6 +96,7 @@ export interface TypeSpecimen {
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
   publicityRestrictions?:
+    | ""
     | "MZ.publicityRestrictionsPublic"
     | "MZ.publicityRestrictionsProtected"
     | "MZ.publicityRestrictionsPrivate";

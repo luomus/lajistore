@@ -129,6 +129,7 @@
     "breedingSecureLevel": {
       "type": "string",
       "enum": [
+        "",
         "MX.secureLevelNone",
         "MX.secureLevelKM1",
         "MX.secureLevelKM5",
@@ -140,6 +141,7 @@
         "MX.secureLevelNoShow"
       ],
       "enumNames": [
+        "",
         "None",
         "1 km",
         "5 km",
@@ -412,6 +414,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MX.finlex160_1997_appendix4",
           "MX.finlex160_1997_appendix4_specialInterest",
           "MX.finlex160_1997_appendix2a",
@@ -450,6 +453,7 @@
           "MX.finnishEnvironmentInstitute20192021forestSpecies"
         ],
         "enumNames": [
+          "",
           "Threatened species (Nature Conservation Decree 14.2.1997/160, Appendix 4 19.6.2013/471)",
           "Species under strict protection (Nature Conservation Decree 14.2.1997/160, Appendix 4 19.6.2013/471)",
           "Animal species that are protected in the whole country\n(Nature Conservation Decree 14.2.1997/160, Appendix 2a 19.6.2013/471)",
@@ -654,11 +658,13 @@
     "invasiveSpeciesCategory": {
       "type": "string",
       "enum": [
+        "",
         "MX.invasiveExtremelyDangerous",
         "MX.invasiveDangerous",
         "MX.invasiveWatchlist"
       ],
       "enumNames": [
+        "",
         "Extremely dangerous",
         "Dangerous",
         "On watchlist"
@@ -682,6 +688,7 @@
     "invasiveSpeciesEstablishment": {
       "type": "string",
       "enum": [
+        "",
         "MX.invasiveEstablished",
         "MX.invasiveSporadic",
         "MX.invasiveNotYetInFinland",
@@ -689,6 +696,7 @@
         "MX.invasiveEstablishmentAccidental"
       ],
       "enumNames": [
+        "",
         "Established",
         "Sporadic",
         "Not yet in Finland",
@@ -722,6 +730,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MX.taxonSetSykeButterflyCensusPapilionoidea",
           "MX.taxonSetSykeButterflyCensusOther",
           "MX.taxonSetWaterbirdWaterbirds",
@@ -733,6 +742,7 @@
           "MVL.1201"
         ],
         "enumNames": [
+          "",
           "SYKE's Butterfly Census: Butterflies",
           "SYKE's Butterly Census: Other Macrolepidoptera",
           "Waterbird Census: Waterbirds",
@@ -790,6 +800,7 @@
     "naturaAreaSecureLevel": {
       "type": "string",
       "enum": [
+        "",
         "MX.secureLevelNone",
         "MX.secureLevelKM1",
         "MX.secureLevelKM5",
@@ -801,6 +812,7 @@
         "MX.secureLevelNoShow"
       ],
       "enumNames": [
+        "",
         "None",
         "1 km",
         "5 km",
@@ -818,6 +830,7 @@
     "nestSiteSecureLevel": {
       "type": "string",
       "enum": [
+        "",
         "MX.secureLevelNone",
         "MX.secureLevelKM1",
         "MX.secureLevelKM5",
@@ -829,6 +842,7 @@
         "MX.secureLevelNoShow"
       ],
       "enumNames": [
+        "",
         "None",
         "1 km",
         "5 km",
@@ -886,6 +900,7 @@
     "occurrenceInFinland": {
       "type": "string",
       "enum": [
+        "",
         "MX.doesNotOccur",
         "MX.occurrenceInFinlandPublished",
         "MX.occurrenceInFinlandCollected",
@@ -897,6 +912,7 @@
         "MX.occurrenceInFinlandPresumed"
       ],
       "enumNames": [
+        "",
         "Does not occur",
         "Published from Finland",
         "Collected from Finland",
@@ -977,6 +993,7 @@
     "redListStatus2000Finland": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnEX",
         "MX.iucnEW",
         "MX.iucnRE",
@@ -990,6 +1007,7 @@
         "MX.iucnNE"
       ],
       "enumNames": [
+        "",
         "EX – Extinct",
         "EW – Extinct in the Wild",
         "RE – Regionally Extinct",
@@ -1009,6 +1027,7 @@
     "redListStatus2010Finland": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnEX",
         "MX.iucnEW",
         "MX.iucnRE",
@@ -1022,6 +1041,7 @@
         "MX.iucnNE"
       ],
       "enumNames": [
+        "",
         "EX – Extinct",
         "EW – Extinct in the Wild",
         "RE – Regionally Extinct",
@@ -1041,6 +1061,7 @@
     "redListStatus2015Finland": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnEX",
         "MX.iucnEW",
         "MX.iucnRE",
@@ -1054,6 +1075,7 @@
         "MX.iucnNE"
       ],
       "enumNames": [
+        "",
         "EX – Extinct",
         "EW – Extinct in the Wild",
         "RE – Regionally Extinct",
@@ -1073,6 +1095,7 @@
     "redListStatus2019Finland": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnEX",
         "MX.iucnEW",
         "MX.iucnRE",
@@ -1086,6 +1109,7 @@
         "MX.iucnNE"
       ],
       "enumNames": [
+        "",
         "EX – Extinct",
         "EW – Extinct in the Wild",
         "RE – Regionally Extinct",
@@ -1137,6 +1161,7 @@
     "secureLevel": {
       "type": "string",
       "enum": [
+        "",
         "MX.secureLevelNone",
         "MX.secureLevelKM1",
         "MX.secureLevelKM5",
@@ -1148,6 +1173,7 @@
         "MX.secureLevelNoShow"
       ],
       "enumNames": [
+        "",
         "None",
         "1 km",
         "5 km",
@@ -1217,6 +1243,7 @@
     "taxonRank": {
       "type": "string",
       "enum": [
+        "",
         "MX.superdomain",
         "MX.domain",
         "MX.kingdom",
@@ -1277,6 +1304,7 @@
         "MX.grex"
       ],
       "enumNames": [
+        "",
         "superdomain",
         "domain",
         "kingdom",
@@ -1363,6 +1391,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MX.doesNotOccur",
           "MX.typeOfOccurrenceOccurs",
           "MX.typeOfOccurrenceStablePopulation",
@@ -1402,6 +1431,7 @@
           "MX.typeOfOccurrenceOccursBasedOnOccurrences"
         ],
         "enumNames": [
+          "",
           "Does not occur",
           "Occurs",
           "Stable population",
@@ -1480,6 +1510,7 @@
     "winteringSecureLevel": {
       "type": "string",
       "enum": [
+        "",
         "MX.secureLevelNone",
         "MX.secureLevelKM1",
         "MX.secureLevelKM5",
@@ -1491,6 +1522,7 @@
         "MX.secureLevelNoShow"
       ],
       "enumNames": [
+        "",
         "None",
         "1 km",
         "5 km",

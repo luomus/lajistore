@@ -76,6 +76,7 @@
     "typeStatus": {
       "type": "string",
       "enum": [
+        "",
         "MY.typeStatusType",
         "MY.typeStatusHolotype",
         "MY.typeStatusSyntype",
@@ -103,6 +104,7 @@
         "MY.typeStatusPathovarReferenceStrain"
       ],
       "enumNames": [
+        "",
         "type",
         "holotype",
         "syntype",
@@ -151,12 +153,14 @@
     "typeVerification": {
       "type": "string",
       "enum": [
+        "",
         "MY.typeVerificationVerified",
         "MY.typeVerificationUnverified",
         "MY.typeVerificationProbable",
         "MY.typeVerificationDoubtful"
       ],
       "enumNames": [
+        "",
         "verified",
         "unverified",
         "probable",
@@ -184,11 +188,13 @@
     "publicityRestrictions": {
       "type": "string",
       "enum": [
+        "",
         "MZ.publicityRestrictionsPublic",
         "MZ.publicityRestrictionsProtected",
         "MZ.publicityRestrictionsPrivate"
       ],
       "enumNames": [
+        "",
         "public",
         "protected",
         "private"

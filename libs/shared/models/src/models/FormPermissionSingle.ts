@@ -10,6 +10,6 @@ export interface FormPermissionSingle {
   id?: string;
   "@type"?: string;
   collectionID: string;
-  type?: "MFP.typeAdmin" | "MFP.typeEditor" | "MFP.typeAccessRequest";
+  type?: "" | "MFP.typeAdmin" | "MFP.typeEditor" | "MFP.typeAccessRequest";
   userID?: string;
 }

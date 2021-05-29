@@ -11,6 +11,7 @@ export interface TaxonCensus {
   "@type"?: string;
   censusTaxonID?: string;
   censusTaxonSetID?:
+    | ""
     | "MX.taxonSetSykeButterflyCensusPapilionoidea"
     | "MX.taxonSetSykeButterflyCensusOther"
     | "MX.taxonSetWaterbirdWaterbirds"

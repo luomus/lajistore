@@ -53,10 +53,12 @@
     "permitStatus": {
       "type": "string",
       "enum": [
+        "",
         "HRA.permitStatusAvailable",
         "HRA.permitStatusNotRequired"
       ],
       "enumNames": [
+        "",
         "Available",
         "Not required"
       ],
@@ -67,6 +69,7 @@
     "permitType": {
       "type": "string",
       "enum": [
+        "",
         "HRA.permitTypePIC",
         "HRA.permitTypeMAT",
         "HRA.permitTypeMTA",
@@ -76,6 +79,7 @@
         "HRA.permitTypeMemorandumOfUnderstanding"
       ],
       "enumNames": [
+        "",
         "PIC",
         "MAT",
         "MTA",

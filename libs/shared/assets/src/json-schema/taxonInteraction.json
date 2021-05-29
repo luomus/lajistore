@@ -57,6 +57,7 @@
     "objectLifeStage": {
       "type": "string",
       "enum": [
+        "",
         "MY.lifeStageEgg",
         "MY.lifeStageLarva",
         "MY.lifeStagePupa",
@@ -80,6 +81,7 @@
         "MY.lifeStageMarks"
       ],
       "enumNames": [
+        "",
         "egg",
         "larva",
         "pupa",
@@ -126,6 +128,7 @@
     "subjectLifeStage": {
       "type": "string",
       "enum": [
+        "",
         "MY.lifeStageEgg",
         "MY.lifeStageLarva",
         "MY.lifeStagePupa",
@@ -149,6 +152,7 @@
         "MY.lifeStageMarks"
       ],
       "enumNames": [
+        "",
         "egg",
         "larva",
         "pupa",

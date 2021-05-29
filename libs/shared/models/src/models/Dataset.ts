@@ -24,7 +24,7 @@ export interface Dataset {
   /**
    * Type of the dataset. Usually basic, project type is generally used only to give information on project Nagoya compliance.
    */
-  datasetType?: "GX.datasetTypeProject";
+  datasetType?: "" | "GX.datasetTypeProject";
   /**
    * Description of the dataset, so that other people understand what it is about.
    */

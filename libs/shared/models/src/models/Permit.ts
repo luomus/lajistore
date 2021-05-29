@@ -13,8 +13,9 @@ export interface Permit {
   permitFile?: string;
   permitNotes?: string;
   permitStartDate?: string;
-  permitStatus?: "HRA.permitStatusAvailable" | "HRA.permitStatusNotRequired";
+  permitStatus?: "" | "HRA.permitStatusAvailable" | "HRA.permitStatusNotRequired";
   permitType?:
+    | ""
     | "HRA.permitTypePIC"
     | "HRA.permitTypeMAT"
     | "HRA.permitTypeMTA"

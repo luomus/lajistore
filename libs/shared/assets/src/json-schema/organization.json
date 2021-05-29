@@ -41,10 +41,12 @@
     "abbreviationExplanation": {
       "type": "string",
       "enum": [
+        "",
         "MOS.abbreviation-explanationIndexHerbariorum",
         "MOS.abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld"
       ],
       "enumNames": [
+        "",
         "Index Herbariorum",
         "Insect and Spider Collections of the World"
       ],

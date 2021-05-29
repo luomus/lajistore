@@ -9,7 +9,7 @@ export interface Image {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  LuomusIntellectualRights?: "MM.LuomusRightsFreeToUse" | "MM.LuomusRightsInternalOnly";
+  LuomusIntellectualRights?: "" | "MM.LuomusRightsFreeToUse" | "MM.LuomusRightsInternalOnly";
   caption?: string;
   captureDateTime?: string;
   capturerVerbatim?: string[];
@@ -59,6 +59,7 @@ export interface Image {
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
   publicityRestrictions?:
+    | ""
     | "MZ.publicityRestrictionsPublic"
     | "MZ.publicityRestrictionsProtected"
     | "MZ.publicityRestrictionsPrivate";

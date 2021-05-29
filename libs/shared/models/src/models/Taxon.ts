@@ -53,6 +53,7 @@ export interface Taxon {
   behaviour?: string;
   birdlifeCode?: string;
   breedingSecureLevel?:
+    | ""
     | "MX.secureLevelNone"
     | "MX.secureLevelKM1"
     | "MX.secureLevelKM5"
@@ -147,6 +148,7 @@ export interface Taxon {
    */
   habitatSubstrate?: string;
   hasAdminStatus?: (
+    | ""
     | "MX.finlex160_1997_appendix4"
     | "MX.finlex160_1997_appendix4_specialInterest"
     | "MX.finlex160_1997_appendix2a"
@@ -204,10 +206,11 @@ export interface Taxon {
   invasiveCitizenActionsText?: string;
   invasiveEffectText?: string;
   invasivePreventionMethodsText?: string;
-  invasiveSpeciesCategory?: "MX.invasiveExtremelyDangerous" | "MX.invasiveDangerous" | "MX.invasiveWatchlist";
+  invasiveSpeciesCategory?: "" | "MX.invasiveExtremelyDangerous" | "MX.invasiveDangerous" | "MX.invasiveWatchlist";
   invasiveSpeciesClassificationDescription?: string;
   invasiveSpeciesEarlyWarning?: boolean;
   invasiveSpeciesEstablishment?:
+    | ""
     | "MX.invasiveEstablished"
     | "MX.invasiveSporadic"
     | "MX.invasiveNotYetInFinland"
@@ -216,6 +219,7 @@ export interface Taxon {
   isPartOf?: string;
   isPartOfInformalTaxonGroup?: string[];
   isPartOfSet?: (
+    | ""
     | "MX.taxonSetSykeButterflyCensusPapilionoidea"
     | "MX.taxonSetSykeButterflyCensusOther"
     | "MX.taxonSetWaterbirdWaterbirds"
@@ -236,6 +240,7 @@ export interface Taxon {
   nameDecidedBy?: string;
   nameDecidedDate?: string;
   naturaAreaSecureLevel?:
+    | ""
     | "MX.secureLevelNone"
     | "MX.secureLevelKM1"
     | "MX.secureLevelKM5"
@@ -246,6 +251,7 @@ export interface Taxon {
     | "MX.secureLevelHighest"
     | "MX.secureLevelNoShow";
   nestSiteSecureLevel?:
+    | ""
     | "MX.secureLevelNone"
     | "MX.secureLevelKM1"
     | "MX.secureLevelKM5"
@@ -265,6 +271,7 @@ export interface Taxon {
     sv?: string[];
   };
   occurrenceInFinland?:
+    | ""
     | "MX.doesNotOccur"
     | "MX.occurrenceInFinlandPublished"
     | "MX.occurrenceInFinlandCollected"
@@ -283,6 +290,7 @@ export interface Taxon {
   privateNotes?: string;
   productionText?: string;
   redListStatus2000Finland?:
+    | ""
     | "MX.iucnEX"
     | "MX.iucnEW"
     | "MX.iucnRE"
@@ -295,6 +303,7 @@ export interface Taxon {
     | "MX.iucnNA"
     | "MX.iucnNE";
   redListStatus2010Finland?:
+    | ""
     | "MX.iucnEX"
     | "MX.iucnEW"
     | "MX.iucnRE"
@@ -307,6 +316,7 @@ export interface Taxon {
     | "MX.iucnNA"
     | "MX.iucnNE";
   redListStatus2015Finland?:
+    | ""
     | "MX.iucnEX"
     | "MX.iucnEW"
     | "MX.iucnRE"
@@ -319,6 +329,7 @@ export interface Taxon {
     | "MX.iucnNA"
     | "MX.iucnNE";
   redListStatus2019Finland?:
+    | ""
     | "MX.iucnEX"
     | "MX.iucnEW"
     | "MX.iucnRE"
@@ -345,6 +356,7 @@ export interface Taxon {
    * Secure level (salaus-/karkeistustaso) for the data
    */
   secureLevel?:
+    | ""
     | "MX.secureLevelNone"
     | "MX.secureLevelKM1"
     | "MX.secureLevelKM5"
@@ -361,6 +373,7 @@ export interface Taxon {
   taxonEditor?: string[];
   taxonExpert?: string[];
   taxonRank?:
+    | ""
     | "MX.superdomain"
     | "MX.domain"
     | "MX.kingdom"
@@ -422,6 +435,7 @@ export interface Taxon {
   taxonomyText?: string;
   tradeName?: string[];
   typeOfOccurrenceInFinland?: (
+    | ""
     | "MX.doesNotOccur"
     | "MX.typeOfOccurrenceOccurs"
     | "MX.typeOfOccurrenceStablePopulation"
@@ -471,6 +485,7 @@ export interface Taxon {
     sv?: string;
   };
   winteringSecureLevel?:
+    | ""
     | "MX.secureLevelNone"
     | "MX.secureLevelKM1"
     | "MX.secureLevelKM5"

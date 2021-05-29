@@ -41,6 +41,7 @@
     "sex": {
       "type": "string",
       "enum": [
+        "",
         "MY.sexM",
         "MY.sexF",
         "MY.sexW",
@@ -51,6 +52,7 @@
         "MY.sexC"
       ],
       "enumNames": [
+        "",
         "M - Male",
         "F - Female",
         "W - Worker",

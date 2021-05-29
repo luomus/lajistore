@@ -50,6 +50,7 @@
     "annotationClass": {
       "type": "string",
       "enum": [
+        "",
         "MAN.annotationClassReliable",
         "MAN.annotationClassLikely",
         "MAN.annotationClassNeutral",
@@ -59,6 +60,7 @@
         "MAN.annotationClassSpam"
       ],
       "enumNames": [
+        "",
         "verified",
         "likely",
         "neutral",
@@ -74,6 +76,7 @@
     "byRole": {
       "type": "string",
       "enum": [
+        "",
         "MMAN.expert",
         "MMAN.basic",
         "MMAN.owner",
@@ -81,6 +84,7 @@
         "MMAN.ictAdmin"
       ],
       "enumNames": [
+        "",
         "expert",
         "basic",
         "owner",
@@ -97,11 +101,13 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MAN.countError",
           "MAN.innerCountError",
           "MAN.otherError"
         ],
         "enumNames": [
+          "",
           "Total count incorrect",
           "The inner count percentage is incorrect",
           "Otherwise unreliable"
@@ -152,6 +158,12 @@
           "subject": "@type",
           "title": "Type for the Identification"
         },
+        "@context": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "@context",
+          "title": "Context for the Identification"
+        },
         "herbo:sortOrder": {
           "type": "integer",
           "range": "xsd:integer",
@@ -189,11 +201,13 @@
         "detMethod": {
           "type": "string",
           "enum": [
+            "",
             "MY.detMethodFreshSample",
             "MY.detMethodMicroscopy",
             "MY.detMethodPhoto"
           ],
           "enumNames": [
+            "",
             "fresh sample",
             "microscopy",
             "photo"
@@ -222,6 +236,7 @@
           "items": {
             "type": "string",
             "enum": [
+              "",
               "MY.identificationBasisSeen",
               "MY.identificationBasisHeard",
               "MY.identificationBasisHandled",
@@ -236,6 +251,7 @@
               "MY.identificationBasisDNA"
             ],
             "enumNames": [
+              "",
               "Seen",
               "Heard",
               "Handled",
@@ -279,6 +295,7 @@
         "infraRank": {
           "type": "string",
           "enum": [
+            "",
             "MY.infraRankSsp",
             "MY.infraRankVar",
             "MY.infraRankBeta",
@@ -295,6 +312,7 @@
             "MY.infraRankCultivarGroup"
           ],
           "enumNames": [
+            "",
             "ssp.",
             "var.",
             "β",
@@ -373,6 +391,7 @@
         "taxonRank": {
           "type": "string",
           "enum": [
+            "",
             "MX.superdomain",
             "MX.domain",
             "MX.kingdom",
@@ -433,6 +452,7 @@
             "MX.grex"
           ],
           "enumNames": [
+            "",
             "superdomain",
             "domain",
             "kingdom",
@@ -519,11 +539,13 @@
         "publicityRestrictions": {
           "type": "string",
           "enum": [
+            "",
             "MZ.publicityRestrictionsPublic",
             "MZ.publicityRestrictionsProtected",
             "MZ.publicityRestrictionsPrivate"
           ],
           "enumNames": [
+            "",
             "public",
             "protected",
             "private"
@@ -545,12 +567,14 @@
     "invasiveControlEffectiveness": {
       "type": "string",
       "enum": [
+        "",
         "MY.invasiveControlEffectivenessFull",
         "MY.invasiveControlEffectivenessPartial",
         "MY.invasiveControlEffectivenessNone",
         "MY.invasiveControlEffectivenessNotFound"
       ],
       "enumNames": [
+        "",
         "Fully controlled",
         "Partially controlled",
         "Not controlled (didn't succeed)",
@@ -566,11 +590,13 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MAN.birdCountError",
           "MAN.innerCountError",
           "MAN.otherError"
         ],
         "enumNames": [
+          "",
           "Total bird count incorrect",
           "The inner count percentage is incorrect",
           "Otherwise unreliable"
@@ -683,12 +709,14 @@
     "type": {
       "type": "string",
       "enum": [
+        "",
         "MAN.typeOpinion",
         "MAN.typeInvasiveControlEffectiveness",
         "MAN.typeUnidentifiable",
         "MAN.typeAdmin"
       ],
       "enumNames": [
+        "",
         "Taxon",
         "Invasive control effectiveness",
         "Unidentifiable",

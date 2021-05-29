@@ -11,6 +11,7 @@ export interface UnitFact {
   "@type"?: string;
   autocompleteSelectedTaxonID?: string;
   glowWormMicrohabitat?:
+    | ""
     | "MY.glowWormMicrohabitatEnum1"
     | "MY.glowWormMicrohabitatEnum2"
     | "MY.glowWormMicrohabitatEnum3"
@@ -22,6 +23,7 @@ export interface UnitFact {
   individualCountInner?: number;
   individualCountOuter?: number;
   lineTransectObsType?:
+    | ""
     | "MY.lineTransectObsTypeSong"
     | "MY.lineTransectObsTypeOtherSound"
     | "MY.lineTransectObsTypeSeen"
@@ -34,15 +36,17 @@ export interface UnitFact {
     | "MY.lineTransectObsTypeSeenBrood"
     | "MY.lineTransectObsTypeSeenNest"
     | "MY.lineTransectObsTypeUnknown";
-  lineTransectRouteFieldType?: "MY.lineTransectRouteFieldTypeInner" | "MY.lineTransectRouteFieldTypeOuter";
-  lolifeDroppingsCount?: "MY.lolifeDroppingsCount1" | "MY.lolifeDroppingsCount2" | "MY.lolifeDroppingsCount3";
-  lolifeDroppingsQuality?: "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
+  lineTransectRouteFieldType?: "" | "MY.lineTransectRouteFieldTypeInner" | "MY.lineTransectRouteFieldTypeOuter";
+  lolifeDroppingsCount?: "" | "MY.lolifeDroppingsCount1" | "MY.lolifeDroppingsCount2" | "MY.lolifeDroppingsCount3";
+  lolifeDroppingsQuality?: "" | "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
   lolifeDroppingsType?:
+    | ""
     | "MY.lolifeDroppingsTypeRock"
     | "MY.lolifeDroppingsTypeTree"
     | "MY.lolifeDroppingsTypeTreeGroup"
     | "MY.lolifeDroppingsTypeOther";
   lolifeNestTree?:
+    | ""
     | "MX.38590"
     | "MX.37812"
     | "MX.37999"
@@ -54,8 +58,13 @@ export interface UnitFact {
   pairCountOuter?: number;
   pointCountFlock?: string;
   runningWaterInVicinity?: boolean;
-  waterbirdFemale?: "MY.waterbirdFemaleEnumYes" | "MY.waterbirdFemaleEnumNo" | "MY.waterbirdFemaleEnumLonelyPanicking";
+  waterbirdFemale?:
+    | ""
+    | "MY.waterbirdFemaleEnumYes"
+    | "MY.waterbirdFemaleEnumNo"
+    | "MY.waterbirdFemaleEnumLonelyPanicking";
   waterbirdJuvenileAgeClass?:
+    | ""
     | "MY.waterbirdJuvenileAgeClassIa"
     | "MY.waterbirdJuvenileAgeClassIb"
     | "MY.waterbirdJuvenileAgeClassIc"
@@ -67,6 +76,7 @@ export interface UnitFact {
   waterbirdJuvenileCountAccurate?: boolean;
   waterbirdObserverOpinionSelectedCensus?: boolean;
   waterbirdPairCountOpinionReasoning?:
+    | ""
     | "MY.waterbirdPairCountOpinionReasoningEnum1"
     | "MY.waterbirdPairCountOpinionReasoningEnum2"
     | "MY.waterbirdPairCountOpinionReasoningEnum3"

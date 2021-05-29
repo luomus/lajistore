@@ -66,6 +66,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MMAN.expert",
           "MMAN.basic",
           "MMAN.owner",
@@ -73,6 +74,7 @@
           "MMAN.ictAdmin"
         ],
         "enumNames": [
+          "",
           "expert",
           "basic",
           "owner",
@@ -91,6 +93,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MMAN.expert",
           "MMAN.basic",
           "MMAN.owner",
@@ -98,6 +101,7 @@
           "MMAN.ictAdmin"
         ],
         "enumNames": [
+          "",
           "expert",
           "basic",
           "owner",
@@ -113,6 +117,7 @@
     "type": {
       "type": "string",
       "enum": [
+        "",
         "MMAN.typeCheck",
         "MMAN.typeAdmin",
         "MMAN.typeInfo",
@@ -122,6 +127,7 @@
         "MMAN.typePositiveQuality"
       ],
       "enumNames": [
+        "",
         "Check",
         "Admin",
         "Info",

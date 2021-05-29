@@ -17,6 +17,7 @@ export interface Transaction {
    * If you choose "Yes, with restrictions", explain the restrictions in the following field "Rights and obligations".
    */
   availableForGeneticResearch?:
+    | ""
     | "HRA.availableForGeneticResearchYes"
     | "HRA.availableForGeneticResearchWithRestrictions"
     | "HRA.availableForGeneticResearchNo";
@@ -71,6 +72,7 @@ export interface Transaction {
    * Choose the type of the genetic resource for statistical and reporting purposes.
    */
   geneticResourceType?:
+    | ""
     | "HRA.geneticResourceTypeAnimal"
     | "HRA.geneticResourceTypePlant"
     | "HRA.geneticResourceTypeFungus"
@@ -91,6 +93,7 @@ export interface Transaction {
    * Responsible team in our museum.
    */
   localDepartment?:
+    | ""
     | "HRA.localDepartmentDipteraHymenoptera"
     | "HRA.localDepartmentLepidopteraColeoptera"
     | "HRA.localDepartmentMetazoa"
@@ -140,6 +143,7 @@ export interface Transaction {
    * Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
    */
   resourceImported?:
+    | ""
     | "HRA.resourceImportedGeneticResources"
     | "HRA.resourceImportedTraditionalKnowledge"
     | "HRA.resourceImportedBoth";
@@ -156,6 +160,7 @@ export interface Transaction {
    * Means of sending, mail, courier etc.
    */
   sentType?:
+    | ""
     | "HRA.sentTypePriority"
     | "HRA.sentTypeEconomy"
     | "HRA.sentTypeCourier"
@@ -165,6 +170,7 @@ export interface Transaction {
   transactionEvents?: {
     id?: string;
     "@type"?: string;
+    "@context"?: string;
     eventDate: string;
     eventHandler: string;
     eventType: "HRAA.eventTypeSend" | "HRAA.eventTypeReceive" | "HRAA.eventTypeOther";
@@ -172,6 +178,7 @@ export interface Transaction {
       {
         id?: string;
         "@type"?: string;
+        "@context"?: string;
         collectionID?: string;
         itemCount: number;
         itemID?: string;
@@ -183,6 +190,7 @@ export interface Transaction {
       ...{
         id?: string;
         "@type"?: string;
+        "@context"?: string;
         collectionID?: string;
         itemCount: number;
         itemID?: string;
@@ -195,6 +203,7 @@ export interface Transaction {
     notes?: string;
     numberOfPackages?: number;
     sentBy?:
+      | ""
       | "HRAA.sentByPriority"
       | "HRAA.sentByEconomy"
       | "HRAA.sentByCourier"
@@ -217,6 +226,7 @@ export interface Transaction {
    * Whether the transaction is closed, outstanding or in process.
    */
   transactionStatus?:
+    | ""
     | "HRA.transactionStatusInProcess"
     | "HRA.transactionStatusOutstanding"
     | "HRA.transactionStatusClosed";
@@ -252,18 +262,21 @@ export interface Transaction {
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
   publicityRestrictions?:
+    | ""
     | "MZ.publicityRestrictionsPublic"
     | "MZ.publicityRestrictionsProtected"
     | "MZ.publicityRestrictionsPrivate";
   permits?: {
     id?: string;
     "@type"?: string;
+    "@context"?: string;
     permitEndDate?: string;
     permitFile?: string;
     permitNotes?: string;
     permitStartDate?: string;
-    permitStatus?: "HRA.permitStatusAvailable" | "HRA.permitStatusNotRequired";
+    permitStatus?: "" | "HRA.permitStatusAvailable" | "HRA.permitStatusNotRequired";
     permitType?:
+      | ""
       | "HRA.permitTypePIC"
       | "HRA.permitTypeMAT"
       | "HRA.permitTypeMTA"

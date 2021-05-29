@@ -25,6 +25,9 @@
           "@type": {
             "type": "keyword"
           },
+          "@context": {
+            "type": "keyword"
+          },
           "addedTags": {
             "type": "keyword",
             "ignore_above": 200
@@ -64,6 +67,9 @@
                 "type": "keyword"
               },
               "@type": {
+                "type": "keyword"
+              },
+              "@context": {
                 "type": "keyword"
               },
               "herbo:sortOrder": {

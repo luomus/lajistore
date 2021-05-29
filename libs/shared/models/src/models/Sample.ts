@@ -36,7 +36,7 @@ export interface Sample {
   /**
    * DNA sample elution medium
    */
-  elutionMedium?: "MF.elutionMediumUltrapureWater" | "MF.elutionMediumElutionBuffer";
+  elutionMedium?: "" | "MF.elutionMediumUltrapureWater" | "MF.elutionMediumElutionBuffer";
   /**
    * Diary-style information about what has been done to the preparation/sample
    */
@@ -48,11 +48,12 @@ export interface Sample {
   /**
    * For example a jar that contains multiple fish individuals can be recorded as one specimen and one preparation. Can also be used for DNA samples (was DNA extracted from single or multiple individuals?).
    */
-  individualsInPreparation?: "MF.individualsInPreparationMultiple" | "MF.individualsInPreparationSingle";
+  individualsInPreparation?: "" | "MF.individualsInPreparationMultiple" | "MF.individualsInPreparationSingle";
   /**
    * Preparation/sample material. Choose preparation/sample type first.
    */
   material?:
+    | ""
     | "MF.materialBirdStudySkin"
     | "MF.materialWing"
     | "MF.materialTail"
@@ -106,6 +107,7 @@ export interface Sample {
    * Preservation methods and materials of the preparation/sample. It is possible to choose several
    */
   preservation?: (
+    | ""
     | "MY.preservationPressed"
     | "MY.preservationDry"
     | "MY.preservationCriticalPointDrying"
@@ -150,7 +152,7 @@ export interface Sample {
   /**
    * DNA sample quality on a three step scale. The quality is defined by quality check measurements
    */
-  quality?: "MF.qualityLow" | "MF.qualityMedium" | "MF.qualityHigh";
+  quality?: "" | "MF.qualityLow" | "MF.qualityMedium" | "MF.qualityHigh";
   /**
    * Date of the latest quality check measurements
    */
@@ -158,7 +160,7 @@ export interface Sample {
   /**
    * Method or instrument used for quality measurements
    */
-  qualityCheckMethod?: ("MF.qualityCheckMethodNanoDrop" | "MF.qualityCheckMethodCubit")[];
+  qualityCheckMethod?: ("" | "MF.qualityCheckMethodNanoDrop" | "MF.qualityCheckMethodCubit")[];
   /**
    * Additional information about the DNA sample quality
    */
@@ -172,6 +174,7 @@ export interface Sample {
    * Status of the preparation/sample. For specimen level status use the status field in the basic information section. Empty value means same as "ok" - that there is nothing special about the status of the sample.
    */
   status?:
+    | ""
     | "MY.statusOk"
     | "MY.statusMissing"
     | "MY.statusUnrecoverable"

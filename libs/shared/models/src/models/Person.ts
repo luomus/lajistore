@@ -37,6 +37,7 @@ export interface Person {
   preferredName?: string;
   previousEmailAddress?: string[];
   role?: (
+    | ""
     | "MA.admin"
     | "MA.securePortalUser"
     | "MA.sensitiveInformationApprovalRequestHandler"
@@ -46,8 +47,8 @@ export interface Person {
     | "MA.invasivePortalAdmin"
     | "MA.luomusSpaceCalendarUser"
   )[];
-  roleAnnotation?: "MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin";
-  roleKotka?: "MA.admin" | "MA.advanced" | "MA.member" | "MA.guest";
+  roleAnnotation?: "" | "MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin";
+  roleKotka?: "" | "MA.admin" | "MA.advanced" | "MA.member" | "MA.guest";
   virtuLoginName?: string;
   yearOfBirth?: string;
 }

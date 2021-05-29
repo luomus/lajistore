@@ -19,9 +19,10 @@ export interface Tag {
     fi?: string;
     sv?: string;
   };
-  requiredRolesAdd?: ("MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin")[];
-  requiredRolesRemove?: ("MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin")[];
+  requiredRolesAdd?: ("" | "MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin")[];
+  requiredRolesRemove?: ("" | "MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin")[];
   type?:
+    | ""
     | "MMAN.typeCheck"
     | "MMAN.typeAdmin"
     | "MMAN.typeInfo"

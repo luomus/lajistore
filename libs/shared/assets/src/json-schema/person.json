@@ -206,6 +206,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MA.admin",
           "MA.securePortalUser",
           "MA.sensitiveInformationApprovalRequestHandler",
@@ -216,6 +217,7 @@
           "MA.luomusSpaceCalendarUser"
         ],
         "enumNames": [
+          "",
           "Admin (ICT-team)",
           "Viranomaiset.laji.fi user",
           "Sensitive information administrator",
@@ -234,6 +236,7 @@
     "roleAnnotation": {
       "type": "string",
       "enum": [
+        "",
         "MMAN.expert",
         "MMAN.basic",
         "MMAN.owner",
@@ -241,6 +244,7 @@
         "MMAN.ictAdmin"
       ],
       "enumNames": [
+        "",
         "expert",
         "basic",
         "owner",
@@ -254,12 +258,14 @@
     "roleKotka": {
       "type": "string",
       "enum": [
+        "",
         "MA.admin",
         "MA.advanced",
         "MA.member",
         "MA.guest"
       ],
       "enumNames": [
+        "",
         "Admin (ICT-team)",
         "advanced",
         "member",

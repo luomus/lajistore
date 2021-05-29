@@ -182,6 +182,7 @@ export interface IucnRedListEvaluation {
    * <ul> <li><b>1. Tuntematon alkuperä.</b> Taksoni tunnetaan vain yhdestä tai muutamasta yksilöstä/ näyteestä, joiden löytöpaikkaa ei tunneta tai paikkatiedot ovat hyvin epätarkat, joten taksonin tilaa ei voida päätellä. </li><li><b>2. Taksonominen epävarmuus.</b> Tietojen vähäisyys voi olla seurausta taksonomisesta epävarmuudesta eli levinneisyydestä, ekologiasta, tilasta, ja uhkista on vähän tietoa, koska vähäinen näytteiden ja/ tai havaintojenmäärä johtuu siitä että taksonia edustaa poikkeava yksilö, hybridi, harvinainen värimuoto tai muun lajin alalajia. Se voi selittää tiedon puutetta yhtä todennäköisesti tai todennäköisemmin kuin se, että taksoni on aidosti harvinainen, uhanalainen tai riittämättömästi etsitty. Tästä on kuitenkin erotettava ne taksonit, joiden taksonomiassa/ taksonomisessa asemassa on jotain epäselvää: ne on joko arvioitava normaalisti tai jätettävä arvioinnin ulkopuolelle (NE) ja tästä arviointilistalle mukaan ottamisesta on päätettävä arvioinnin vaiheessa 1 (luku 2). </li><li><b>3. Puutteelliset tiedot.</b> Tiedot ovat riittämättömät arviointikriteerien soveltamiseksi eli kaikki muut syyt tietojen vähäisyyteen. </li></ul>
    */
   ddReason?:
+    | ""
     | "MKV.ddReasonIncompleteSpatialData"
     | "MKV.ddReasonIncompleteTaxonomicData"
     | "MKV.ddReasonIncompleteOtherData";
@@ -211,6 +212,7 @@ export interface IucnRedListEvaluation {
    * <p>Luokka-kenttään asetetaan alennuksen tai korotuksen aiheuttama lopputulos. Tähän kenttään asetetaan tieto tehdystä alennuksesta tai korotuksesta.</p>
    */
   externalPopulationImpactOnRedListStatus?:
+    | ""
     | "MKV.externalPopulationImpactOnRedListStatusEnumMinus1"
     | "MKV.externalPopulationImpactOnRedListStatusEnumMinus2"
     | "MKV.externalPopulationImpactOnRedListStatusEnumPlus1"
@@ -286,7 +288,7 @@ export interface IucnRedListEvaluation {
    */
   populationVaries?: boolean;
   populationVariesNotes?: string;
-  possiblyRE?: "MX.iucnRE" | "MX.iucnEW" | "MX.iucnEX";
+  possiblyRE?: "" | "MX.iucnRE" | "MX.iucnEW" | "MX.iucnEX";
   possiblyRENotes?: string;
   /**
    * <p>Lisämerkinnät:</p>
@@ -321,6 +323,7 @@ export interface IucnRedListEvaluation {
    * <p><b>Muu syy:</b> muutos johtuu muusta syystä kuin aiemmista ja/tai vaatii lisäselvitystä (esimerkiksi arvioijien suhtautuminen epävarmuuteen muuttuu tai arvioinnin tulkintaohjeet ovat muuttuneet.</p>
    */
   reasonForStatusChange?: (
+    | ""
     | "MKV.reasonForStatusChangeGenuine"
     | "MKV.reasonForStatusChangeGenuineBeforePreviousEvaluation"
     | "MKV.reasonForStatusChangeChangesInCriteria"
@@ -335,6 +338,7 @@ export interface IucnRedListEvaluation {
    * Tätä ei täytetä kuluvalle vuodelle. Muuttujaa käytetään ainoastaan tarvittaessa jälkikäteen uhanalaisuusindeksin laskemisessa. Jos tätä arviointia jälkikäteen halutaan korjata, arvioinnissa annettua luokkaa ei muuteta, vaan annetaan tässä korjattu luokka.
    */
   redListIndexCorrection?:
+    | ""
     | "MX.iucnEX"
     | "MX.iucnEW"
     | "MX.iucnRE"
@@ -361,6 +365,7 @@ export interface IucnRedListEvaluation {
     | "MX.iucnNE";
   redListStatusAccuracyNotes?: string;
   redListStatusMax?:
+    | ""
     | "MX.iucnEX"
     | "MX.iucnEW"
     | "MX.iucnRE"
@@ -373,6 +378,7 @@ export interface IucnRedListEvaluation {
     | "MX.iucnNA"
     | "MX.iucnNE";
   redListStatusMin?:
+    | ""
     | "MX.iucnEX"
     | "MX.iucnEW"
     | "MX.iucnRE"
@@ -391,6 +397,7 @@ export interface IucnRedListEvaluation {
   secondaryHabitat?: string[];
   state: "MKV.stateReady" | "MKV.stateReadyForComments" | "MKV.stateStarted";
   statusA?:
+    | ""
     | "MX.iucnEX"
     | "MX.iucnEW"
     | "MX.iucnRE"
@@ -404,6 +411,7 @@ export interface IucnRedListEvaluation {
     | "MX.iucnNE";
   statusANotes?: string;
   statusB?:
+    | ""
     | "MX.iucnEX"
     | "MX.iucnEW"
     | "MX.iucnRE"
@@ -417,6 +425,7 @@ export interface IucnRedListEvaluation {
     | "MX.iucnNE";
   statusBNotes?: string;
   statusC?:
+    | ""
     | "MX.iucnEX"
     | "MX.iucnEW"
     | "MX.iucnRE"
@@ -430,6 +439,7 @@ export interface IucnRedListEvaluation {
     | "MX.iucnNE";
   statusCNotes?: string;
   statusD?:
+    | ""
     | "MX.iucnEX"
     | "MX.iucnEW"
     | "MX.iucnRE"
@@ -443,6 +453,7 @@ export interface IucnRedListEvaluation {
     | "MX.iucnNE";
   statusDNotes?: string;
   statusE?:
+    | ""
     | "MX.iucnEX"
     | "MX.iucnEW"
     | "MX.iucnRE"
@@ -458,6 +469,7 @@ export interface IucnRedListEvaluation {
   taxonomicNotes?: string;
   threatNotes?: string;
   typeOfOccurrenceInFinland?:
+    | ""
     | "MX.doesNotOccur"
     | "MX.typeOfOccurrenceOccurs"
     | "MX.typeOfOccurrenceStablePopulation"

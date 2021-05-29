@@ -27,10 +27,12 @@
     "LuomusIntellectualRights": {
       "type": "string",
       "enum": [
+        "",
         "MM.LuomusRightsFreeToUse",
         "MM.LuomusRightsInternalOnly"
       ],
       "enumNames": [
+        "",
         "Free to use and publish",
         "Internal use only"
       ],
@@ -239,11 +241,13 @@
     "publicityRestrictions": {
       "type": "string",
       "enum": [
+        "",
         "MZ.publicityRestrictionsPublic",
         "MZ.publicityRestrictionsProtected",
         "MZ.publicityRestrictionsPrivate"
       ],
       "enumNames": [
+        "",
         "public",
         "protected",
         "private"

@@ -55,6 +55,7 @@ export interface Event {
   germinationPercentage?: number;
   germinationRate?: number;
   lifeStage?:
+    | ""
     | "MY.plantLifeStageSterile"
     | "MY.plantLifeStageFertile"
     | "MY.plantLifeStageSeed"

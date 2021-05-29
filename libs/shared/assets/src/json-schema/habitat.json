@@ -234,6 +234,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MKV.habitatSpecificTypeV",
           "MKV.habitatSpecificTypeH",
           "MKV.habitatSpecificTypeP",
@@ -246,6 +247,7 @@
           "MKV.habitatSpecificTypeCA"
         ],
         "enumNames": [
+          "",
           "v – old-growth forests (including sporadic old trees and younger forests with decaying trees)",
           "h – esker forests, also semi-open forests",
           "p – burnt forest areas and other young stages of natural succession",

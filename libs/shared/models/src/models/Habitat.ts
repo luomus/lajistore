@@ -106,6 +106,7 @@ export interface Habitat {
     | "MKV.habitatIr"
     | "MKV.habitatU";
   habitatSpecificType?: (
+    | ""
     | "MKV.habitatSpecificTypeV"
     | "MKV.habitatSpecificTypeH"
     | "MKV.habitatSpecificTypeP"

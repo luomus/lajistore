@@ -575,6 +575,9 @@
           "@type": {
             "type": "keyword"
           },
+          "@context": {
+            "type": "keyword"
+          },
           "dateBegin": {
             "type": "date"
           },
@@ -635,6 +638,9 @@
             "type": "keyword"
           },
           "@type": {
+            "type": "keyword"
+          },
+          "@context": {
             "type": "keyword"
           },
           "herbo:sortOrder": {
@@ -751,6 +757,9 @@
             "type": "keyword"
           },
           "@type": {
+            "type": "keyword"
+          },
+          "@context": {
             "type": "keyword"
           },
           "isPartOf": {

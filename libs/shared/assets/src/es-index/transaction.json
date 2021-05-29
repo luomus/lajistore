@@ -202,6 +202,9 @@
           "@type": {
             "type": "keyword"
           },
+          "@context": {
+            "type": "keyword"
+          },
           "eventDate": {
             "type": "date"
           },
@@ -220,6 +223,9 @@
                 "type": "keyword"
               },
               "@type": {
+                "type": "keyword"
+              },
+              "@context": {
                 "type": "keyword"
               },
               "collectionID": {
@@ -329,6 +335,9 @@
             "type": "keyword"
           },
           "@type": {
+            "type": "keyword"
+          },
+          "@context": {
             "type": "keyword"
           },
           "permitEndDate": {

@@ -21,6 +21,7 @@ export interface Organization {
    * If organisation abbreviation is given, the source for it must be chosen.
    */
   abbreviationExplanation?:
+    | ""
     | "MOS.abbreviation-explanationIndexHerbariorum"
     | "MOS.abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld";
   /**

@@ -146,11 +146,13 @@
     "ddReason": {
       "type": "string",
       "enum": [
+        "",
         "MKV.ddReasonIncompleteSpatialData",
         "MKV.ddReasonIncompleteTaxonomicData",
         "MKV.ddReasonIncompleteOtherData"
       ],
       "enumNames": [
+        "",
         "1. Origin unknown",
         "2. Uncertainty i taxonomy",
         "3. Incomplete information"
@@ -237,12 +239,14 @@
     "externalPopulationImpactOnRedListStatus": {
       "type": "string",
       "enum": [
+        "",
         "MKV.externalPopulationImpactOnRedListStatusEnumMinus1",
         "MKV.externalPopulationImpactOnRedListStatusEnumMinus2",
         "MKV.externalPopulationImpactOnRedListStatusEnumPlus1",
         "MKV.externalPopulationImpactOnRedListStatusEnumPlus2"
       ],
       "enumNames": [
+        "",
         "-1",
         "-2",
         "+1",
@@ -494,11 +498,13 @@
     "possiblyRE": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnRE",
         "MX.iucnEW",
         "MX.iucnEX"
       ],
       "enumNames": [
+        "",
         "RE – Regionally Extinct",
         "EW – Extinct in the Wild",
         "EX – Extinct"
@@ -538,6 +544,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MKV.reasonForStatusChangeGenuine",
           "MKV.reasonForStatusChangeGenuineBeforePreviousEvaluation",
           "MKV.reasonForStatusChangeChangesInCriteria",
@@ -548,6 +555,7 @@
           "MKV.reasonForStatusChangeOther"
         ],
         "enumNames": [
+          "",
           "1. Genuine (recent)",
           "2. Genuine (since first assessment)",
           "3. Criteria revision",
@@ -573,6 +581,7 @@
     "redListIndexCorrection": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnEX",
         "MX.iucnEW",
         "MX.iucnRE",
@@ -586,6 +595,7 @@
         "MX.iucnNE"
       ],
       "enumNames": [
+        "",
         "EX – Extinct",
         "EW – Extinct in the Wild",
         "RE – Regionally Extinct",
@@ -650,6 +660,7 @@
     "redListStatusMax": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnEX",
         "MX.iucnEW",
         "MX.iucnRE",
@@ -663,6 +674,7 @@
         "MX.iucnNE"
       ],
       "enumNames": [
+        "",
         "EX – Extinct",
         "EW – Extinct in the Wild",
         "RE – Regionally Extinct",
@@ -682,6 +694,7 @@
     "redListStatusMin": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnEX",
         "MX.iucnEW",
         "MX.iucnRE",
@@ -695,6 +708,7 @@
         "MX.iucnNE"
       ],
       "enumNames": [
+        "",
         "EX – Extinct",
         "EW – Extinct in the Wild",
         "RE – Regionally Extinct",
@@ -770,6 +784,7 @@
     "statusA": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnEX",
         "MX.iucnEW",
         "MX.iucnRE",
@@ -783,6 +798,7 @@
         "MX.iucnNE"
       ],
       "enumNames": [
+        "",
         "EX – Extinct",
         "EW – Extinct in the Wild",
         "RE – Regionally Extinct",
@@ -808,6 +824,7 @@
     "statusB": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnEX",
         "MX.iucnEW",
         "MX.iucnRE",
@@ -821,6 +838,7 @@
         "MX.iucnNE"
       ],
       "enumNames": [
+        "",
         "EX – Extinct",
         "EW – Extinct in the Wild",
         "RE – Regionally Extinct",
@@ -846,6 +864,7 @@
     "statusC": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnEX",
         "MX.iucnEW",
         "MX.iucnRE",
@@ -859,6 +878,7 @@
         "MX.iucnNE"
       ],
       "enumNames": [
+        "",
         "EX – Extinct",
         "EW – Extinct in the Wild",
         "RE – Regionally Extinct",
@@ -884,6 +904,7 @@
     "statusD": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnEX",
         "MX.iucnEW",
         "MX.iucnRE",
@@ -897,6 +918,7 @@
         "MX.iucnNE"
       ],
       "enumNames": [
+        "",
         "EX – Extinct",
         "EW – Extinct in the Wild",
         "RE – Regionally Extinct",
@@ -922,6 +944,7 @@
     "statusE": {
       "type": "string",
       "enum": [
+        "",
         "MX.iucnEX",
         "MX.iucnEW",
         "MX.iucnRE",
@@ -935,6 +958,7 @@
         "MX.iucnNE"
       ],
       "enumNames": [
+        "",
         "EX – Extinct",
         "EW – Extinct in the Wild",
         "RE – Regionally Extinct",
@@ -972,6 +996,7 @@
     "typeOfOccurrenceInFinland": {
       "type": "string",
       "enum": [
+        "",
         "MX.doesNotOccur",
         "MX.typeOfOccurrenceOccurs",
         "MX.typeOfOccurrenceStablePopulation",
@@ -1011,6 +1036,7 @@
         "MX.typeOfOccurrenceOccursBasedOnOccurrences"
       ],
       "enumNames": [
+        "",
         "Does not occur",
         "Occurs",
         "Stable population",

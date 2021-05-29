@@ -54,9 +54,11 @@
     "datasetType": {
       "type": "string",
       "enum": [
+        "",
         "GX.datasetTypeProject"
       ],
       "enumNames": [
+        "",
         "Project"
       ],
       "range": "GX.datasetTypeEnum",

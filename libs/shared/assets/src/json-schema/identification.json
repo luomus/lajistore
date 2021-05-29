@@ -61,11 +61,13 @@
     "detMethod": {
       "type": "string",
       "enum": [
+        "",
         "MY.detMethodFreshSample",
         "MY.detMethodMicroscopy",
         "MY.detMethodPhoto"
       ],
       "enumNames": [
+        "",
         "fresh sample",
         "microscopy",
         "photo"
@@ -94,6 +96,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MY.identificationBasisSeen",
           "MY.identificationBasisHeard",
           "MY.identificationBasisHandled",
@@ -108,6 +111,7 @@
           "MY.identificationBasisDNA"
         ],
         "enumNames": [
+          "",
           "Seen",
           "Heard",
           "Handled",
@@ -151,6 +155,7 @@
     "infraRank": {
       "type": "string",
       "enum": [
+        "",
         "MY.infraRankSsp",
         "MY.infraRankVar",
         "MY.infraRankBeta",
@@ -167,6 +172,7 @@
         "MY.infraRankCultivarGroup"
       ],
       "enumNames": [
+        "",
         "ssp.",
         "var.",
         "β",
@@ -245,6 +251,7 @@
     "taxonRank": {
       "type": "string",
       "enum": [
+        "",
         "MX.superdomain",
         "MX.domain",
         "MX.kingdom",
@@ -305,6 +312,7 @@
         "MX.grex"
       ],
       "enumNames": [
+        "",
         "superdomain",
         "domain",
         "kingdom",
@@ -391,11 +399,13 @@
     "publicityRestrictions": {
       "type": "string",
       "enum": [
+        "",
         "MZ.publicityRestrictionsPublic",
         "MZ.publicityRestrictionsProtected",
         "MZ.publicityRestrictionsPrivate"
       ],
       "enumNames": [
+        "",
         "public",
         "protected",
         "private"

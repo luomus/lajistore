@@ -156,6 +156,7 @@
     "lifeStage": {
       "type": "string",
       "enum": [
+        "",
         "MY.plantLifeStageSterile",
         "MY.plantLifeStageFertile",
         "MY.plantLifeStageSeed",
@@ -171,6 +172,7 @@
         "MY.plantLifeStageDeadPlant"
       ],
       "enumNames": [
+        "",
         "sterile",
         "fertile",
         "seed / spore / fruit",

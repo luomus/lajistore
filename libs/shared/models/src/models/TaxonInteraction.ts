@@ -21,6 +21,7 @@ export interface TaxonInteraction {
     | "MI.taxonInteractionEctoparasitism"
     | "MI.taxonInteractionEndoparasitism";
   objectLifeStage?:
+    | ""
     | "MY.lifeStageEgg"
     | "MY.lifeStageLarva"
     | "MY.lifeStagePupa"
@@ -45,6 +46,7 @@ export interface TaxonInteraction {
   objectTaxon: string;
   originalPublication?: string[];
   subjectLifeStage?:
+    | ""
     | "MY.lifeStageEgg"
     | "MY.lifeStageLarva"
     | "MY.lifeStagePupa"

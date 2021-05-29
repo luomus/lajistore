@@ -10,12 +10,14 @@ export interface Profile {
   id?: string;
   "@type"?: string;
   birdwatchingActivityLevel?:
+    | ""
     | "MA.birdwatchingActivityLevelEnum1"
     | "MA.birdwatchingActivityLevelEnum2"
     | "MA.birdwatchingActivityLevelEnum3"
     | "MA.birdwatchingActivityLevelEnum4";
   blocked?: string[];
   finnishBirdSongRecognitionSkillLevel?:
+    | ""
     | "MA.finnishBirdSongRecognitionSkillLevelEnum1"
     | "MA.finnishBirdSongRecognitionSkillLevelEnum2"
     | "MA.finnishBirdSongRecognitionSkillLevelEnum3"

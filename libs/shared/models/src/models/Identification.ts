@@ -26,7 +26,7 @@ export interface Identification {
    * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
    */
   detDate?: string;
-  detMethod?: "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
+  detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
   /**
    * Name of the identifier and date of identification in original format (e.g. from the label), errors and all
    */
@@ -36,6 +36,7 @@ export interface Identification {
    */
   genusQualifier?: string;
   identificationBasis?: (
+    | ""
     | "MY.identificationBasisSeen"
     | "MY.identificationBasisHeard"
     | "MY.identificationBasisHandled"
@@ -65,6 +66,7 @@ export interface Identification {
    * Taxonomic level of the epithet below species level
    */
   infraRank?:
+    | ""
     | "MY.infraRankSsp"
     | "MY.infraRankVar"
     | "MY.infraRankBeta"
@@ -112,6 +114,7 @@ export interface Identification {
    * Taxonomic level for the identification
    */
   taxonRank?:
+    | ""
     | "MX.superdomain"
     | "MX.domain"
     | "MX.kingdom"
@@ -180,6 +183,7 @@ export interface Identification {
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
   publicityRestrictions?:
+    | ""
     | "MZ.publicityRestrictionsPublic"
     | "MZ.publicityRestrictionsProtected"
     | "MZ.publicityRestrictionsPrivate";

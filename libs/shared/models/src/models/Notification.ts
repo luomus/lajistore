@@ -12,10 +12,12 @@ export interface Notification {
   annotation?: {
     id?: string;
     "@type"?: string;
+    "@context"?: string;
     addedTags?: string[];
     annotationByPerson?: string;
     annotationBySystem?: string;
     annotationClass?:
+      | ""
       | "MAN.annotationClassReliable"
       | "MAN.annotationClassLikely"
       | "MAN.annotationClassNeutral"
@@ -23,14 +25,15 @@ export interface Notification {
       | "MAN.annotationClassUnreliable"
       | "MAN.annotationClassAcknowledged"
       | "MAN.annotationClassSpam";
-    byRole?: "MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin";
-    censusAnnotation?: ("MAN.countError" | "MAN.innerCountError" | "MAN.otherError")[];
+    byRole?: "" | "MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin";
+    censusAnnotation?: ("" | "MAN.countError" | "MAN.innerCountError" | "MAN.otherError")[];
     created?: string;
     createdTimestamp?: number;
     deletedTimestamp?: number;
     identification?: {
       id?: string;
       "@type"?: string;
+      "@context"?: string;
       "herbo:sortOrder"?: number;
       /**
        * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -48,7 +51,7 @@ export interface Notification {
        * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
        */
       detDate?: string;
-      detMethod?: "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
+      detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
       /**
        * Name of the identifier and date of identification in original format (e.g. from the label), errors and all
        */
@@ -58,6 +61,7 @@ export interface Notification {
        */
       genusQualifier?: string;
       identificationBasis?: (
+        | ""
         | "MY.identificationBasisSeen"
         | "MY.identificationBasisHeard"
         | "MY.identificationBasisHandled"
@@ -87,6 +91,7 @@ export interface Notification {
        * Taxonomic level of the epithet below species level
        */
       infraRank?:
+        | ""
         | "MY.infraRankSsp"
         | "MY.infraRankVar"
         | "MY.infraRankBeta"
@@ -134,6 +139,7 @@ export interface Notification {
        * Taxonomic level for the identification
        */
       taxonRank?:
+        | ""
         | "MX.superdomain"
         | "MX.domain"
         | "MX.kingdom"
@@ -202,17 +208,19 @@ export interface Notification {
        * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
        */
       publicityRestrictions?:
+        | ""
         | "MZ.publicityRestrictionsPublic"
         | "MZ.publicityRestrictionsProtected"
         | "MZ.publicityRestrictionsPrivate";
       sortOrder?: number;
     };
     invasiveControlEffectiveness?:
+      | ""
       | "MY.invasiveControlEffectivenessFull"
       | "MY.invasiveControlEffectivenessPartial"
       | "MY.invasiveControlEffectivenessNone"
       | "MY.invasiveControlEffectivenessNotFound";
-    lineTransectAnnotation?: ("MAN.birdCountError" | "MAN.innerCountError" | "MAN.otherError")[];
+    lineTransectAnnotation?: ("" | "MAN.birdCountError" | "MAN.innerCountError" | "MAN.otherError")[];
     notes?: string;
     occurrenceAtTimeOfAnnotation?: {
       countryVerbatim?: string;
@@ -229,7 +237,7 @@ export interface Notification {
     removedTags?: string[];
     rootID?: string;
     targetID?: string;
-    type?: "MAN.typeOpinion" | "MAN.typeInvasiveControlEffectiveness" | "MAN.typeUnidentifiable" | "MAN.typeAdmin";
+    type?: "" | "MAN.typeOpinion" | "MAN.typeInvasiveControlEffectiveness" | "MAN.typeUnidentifiable" | "MAN.typeAdmin";
     createdBySystem?: string;
     deleted?: boolean;
     deletedByPerson?: string;
@@ -239,6 +247,7 @@ export interface Notification {
   friendRequest?: string;
   friendRequestAccepted?: string;
   notificationReason?:
+    | ""
     | "MHN.notificationReasonOwnDocumentAnnotated"
     | "MHN.notificationReasonAnnotatedDocumentAnnotated";
   seen?: boolean;

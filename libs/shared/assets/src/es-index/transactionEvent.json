@@ -37,6 +37,9 @@
           "@type": {
             "type": "keyword"
           },
+          "@context": {
+            "type": "keyword"
+          },
           "collectionID": {
             "type": "keyword",
             "ignore_above": 200

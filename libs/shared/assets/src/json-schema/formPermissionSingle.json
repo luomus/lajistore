@@ -33,11 +33,13 @@
     "type": {
       "type": "string",
       "enum": [
+        "",
         "MFP.typeAdmin",
         "MFP.typeEditor",
         "MFP.typeAccessRequest"
       ],
       "enumNames": [
+        "",
         "Admin",
         "Editor",
         "Access request"

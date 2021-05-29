@@ -27,12 +27,14 @@
     "birdwatchingActivityLevel": {
       "type": "string",
       "enum": [
+        "",
         "MA.birdwatchingActivityLevelEnum1",
         "MA.birdwatchingActivityLevelEnum2",
         "MA.birdwatchingActivityLevelEnum3",
         "MA.birdwatchingActivityLevelEnum4"
       ],
       "enumNames": [
+        "",
         "I’m not a birdwatcher",
         "I watch birds occasionally",
         "I watch birds actively and regularly",
@@ -56,12 +58,14 @@
     "finnishBirdSongRecognitionSkillLevel": {
       "type": "string",
       "enum": [
+        "",
         "MA.finnishBirdSongRecognitionSkillLevelEnum1",
         "MA.finnishBirdSongRecognitionSkillLevelEnum2",
         "MA.finnishBirdSongRecognitionSkillLevelEnum3",
         "MA.finnishBirdSongRecognitionSkillLevelEnum4"
       ],
       "enumNames": [
+        "",
         "I can hardly recognize any bird sounds",
         "I can recognize the most common songbirds in Finland",
         "I can recognize majority of the breeding birds and most common passage migrants",

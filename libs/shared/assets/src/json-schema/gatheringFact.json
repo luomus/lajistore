@@ -27,11 +27,13 @@
     "batCollector": {
       "type": "string",
       "enum": [
+        "",
         "MY.batCollectorAlone",
         "MY.batCollectorWithProjectGroupMember",
         "MY.batCollectorSomeoneElse"
       ],
       "enumNames": [
+        "",
         "Alone",
         "With someone from the project group",
         "With someone else"
@@ -97,6 +99,7 @@
     "pointCountHabitat": {
       "type": "string",
       "enum": [
+        "",
         "MY.pointCountHabitat0",
         "MY.pointCountHabitat1",
         "MY.pointCountHabitat2",
@@ -117,6 +120,7 @@
         "MY.pointCountHabitat17"
       ],
       "enumNames": [
+        "",
         "Tuntematon (0)",
         "Kuusimetsä (1)",
         "Mäntymetsä (2)",
@@ -163,6 +167,7 @@
     "sykeButterFlyCensusWind": {
       "type": "string",
       "enum": [
+        "",
         "MY.sykeButterFlyCensusWindEnumUnknown",
         "MY.sykeButterFlyCensusWindEnum0",
         "MY.sykeButterFlyCensusWindEnum1",
@@ -173,6 +178,7 @@
         "MY.sykeButterFlyCensusWindEnum6"
       ],
       "enumNames": [
+        "",
         "Ei tietoa",
         "0 - Tyyntä, savu nousee pystysuoraan",
         "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -189,6 +195,7 @@
     "sykeButterFlyCensusWindEnd": {
       "type": "string",
       "enum": [
+        "",
         "MY.sykeButterFlyCensusWindEnumUnknown",
         "MY.sykeButterFlyCensusWindEnum0",
         "MY.sykeButterFlyCensusWindEnum1",
@@ -199,6 +206,7 @@
         "MY.sykeButterFlyCensusWindEnum6"
       ],
       "enumNames": [
+        "",
         "Ei tietoa",
         "0 - Tyyntä, savu nousee pystysuoraan",
         "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -215,6 +223,7 @@
     "sykeButterFlyCensusWindStart": {
       "type": "string",
       "enum": [
+        "",
         "MY.sykeButterFlyCensusWindEnumUnknown",
         "MY.sykeButterFlyCensusWindEnum0",
         "MY.sykeButterFlyCensusWindEnum1",
@@ -225,6 +234,7 @@
         "MY.sykeButterFlyCensusWindEnum6"
       ],
       "enumNames": [
+        "",
         "Ei tietoa",
         "0 - Tyyntä, savu nousee pystysuoraan",
         "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -241,6 +251,7 @@
     "waterbirdCensusPeriod": {
       "type": "string",
       "enum": [
+        "",
         "MY.waterbirdCensusPeriodEnum1",
         "MY.waterbirdCensusPeriodEnum2",
         "MY.waterbirdCensusPeriodEnumJuvenile",
@@ -248,6 +259,7 @@
         "MY.waterbirdCensusPeriodEnumCombined"
       ],
       "enumNames": [
+        "",
         "1. laskenta",
         "2. laskenta",
         "Poikuelaskenta",
@@ -261,6 +273,7 @@
     "waterbirdHabitat": {
       "type": "string",
       "enum": [
+        "",
         "MY.waterbirdHabitatEnum1",
         "MY.waterbirdHabitatEnum2",
         "MY.waterbirdHabitatEnum3",
@@ -273,6 +286,7 @@
         "MY.waterbirdHabitatEnum10"
       ],
       "enumNames": [
+        "",
         "1. Karu, metsä- tai suorantainen järvi tai lampi",
         "2. Syvä, osittain rehevöitynyt järvi, lahdissa laajahkoja ruovikoita",
         "3. Matala, metsä- tai suorantainen runsaskasvustoinen järvi tai lampi",
@@ -396,12 +410,14 @@
     "abundanceBOMGAR": {
       "type": "string",
       "enum": [
+        "",
         "WBC.speciesAbundanceEnum0",
         "WBC.speciesAbundanceEnum1",
         "WBC.speciesAbundanceEnum2",
         "WBC.speciesAbundanceEnum3"
       ],
       "enumNames": [
+        "",
         "0. Ei tietoa",
         "1. Ohi",
         "2. Samanaikainen",
@@ -414,12 +430,14 @@
     "abundancePINENU": {
       "type": "string",
       "enum": [
+        "",
         "WBC.speciesAbundanceEnum0",
         "WBC.speciesAbundanceEnum1",
         "WBC.speciesAbundanceEnum2",
         "WBC.speciesAbundanceEnum3"
       ],
       "enumNames": [
+        "",
         "0. Ei tietoa",
         "1. Ohi",
         "2. Samanaikainen",
@@ -432,12 +450,14 @@
     "abundanceTURPIL": {
       "type": "string",
       "enum": [
+        "",
         "WBC.speciesAbundanceEnum0",
         "WBC.speciesAbundanceEnum1",
         "WBC.speciesAbundanceEnum2",
         "WBC.speciesAbundanceEnum3"
       ],
       "enumNames": [
+        "",
         "0. Ei tietoa",
         "1. Ohi",
         "2. Samanaikainen",
@@ -513,6 +533,7 @@
     "cloudAndRain": {
       "type": "string",
       "enum": [
+        "",
         "WBC.cloudAndRainEnum0",
         "WBC.cloudAndRainEnum1",
         "WBC.cloudAndRainEnum2",
@@ -520,6 +541,7 @@
         "WBC.cloudAndRainEnum4"
       ],
       "enumNames": [
+        "",
         "Ei tietoa",
         "1 - Enimmäkseen kirkasta",
         "2 - Vaihtelevaa pilvisyyttä",
@@ -602,6 +624,7 @@
     "iceCover": {
       "type": "string",
       "enum": [
+        "",
         "WBC.iceCoverEnum0",
         "WBC.iceCoverEnum1",
         "WBC.iceCoverEnum2",
@@ -609,6 +632,7 @@
         "WBC.iceCoverEnum4"
       ],
       "enumNames": [
+        "",
         "0. Ei tietoa",
         "1. Vesistöt sulat",
         "2. Vain rannat/lahdet jäässä",
@@ -642,6 +666,7 @@
     "pineConesAtCensus": {
       "type": "string",
       "enum": [
+        "",
         "WBC.berriesAndConesEnum0",
         "WBC.berriesAndConesEnum1",
         "WBC.berriesAndConesEnum2",
@@ -651,6 +676,7 @@
         "WBC.berriesAndConesEnum6"
       ],
       "enumNames": [
+        "",
         "0. Ei tietoa",
         "1. Ei lainkaan",
         "2. Hyvin vähän",
@@ -790,12 +816,14 @@
     "snowAndIceOnTrees": {
       "type": "string",
       "enum": [
+        "",
         "WBC.snowAndIceOnTreesEnum0",
         "WBC.snowAndIceOnTreesEnum1",
         "WBC.snowAndIceOnTreesEnum2",
         "WBC.snowAndIceOnTreesEnum3"
       ],
       "enumNames": [
+        "",
         "0. Ei tietoa",
         "1. Ei ollenkaan",
         "2. Vähän",
@@ -808,6 +836,7 @@
     "snowCover": {
       "type": "string",
       "enum": [
+        "",
         "WBC.snowCoverEnum0",
         "WBC.snowCoverEnum1",
         "WBC.snowCoverEnum2",
@@ -819,6 +848,7 @@
         "WBC.snowCoverEnum8"
       ],
       "enumNames": [
+        "",
         "0. Ei tietoa",
         "1. Ei lunta",
         "2. Lunta vain paikoitellen",
@@ -836,6 +866,7 @@
     "sorbusBerriesAtCensus": {
       "type": "string",
       "enum": [
+        "",
         "WBC.berriesAndConesEnum0",
         "WBC.berriesAndConesEnum1",
         "WBC.berriesAndConesEnum2",
@@ -845,6 +876,7 @@
         "WBC.berriesAndConesEnum6"
       ],
       "enumNames": [
+        "",
         "0. Ei tietoa",
         "1. Ei lainkaan",
         "2. Hyvin vähän",
@@ -860,6 +892,7 @@
     "sorbusBerriesEarlyFall": {
       "type": "string",
       "enum": [
+        "",
         "WBC.berriesAndConesEnum0",
         "WBC.berriesAndConesEnum1",
         "WBC.berriesAndConesEnum2",
@@ -869,6 +902,7 @@
         "WBC.berriesAndConesEnum6"
       ],
       "enumNames": [
+        "",
         "0. Ei tietoa",
         "1. Ei lainkaan",
         "2. Hyvin vähän",
@@ -884,6 +918,7 @@
     "spruceConesAtCensus": {
       "type": "string",
       "enum": [
+        "",
         "WBC.berriesAndConesEnum0",
         "WBC.berriesAndConesEnum1",
         "WBC.berriesAndConesEnum2",
@@ -893,6 +928,7 @@
         "WBC.berriesAndConesEnum6"
       ],
       "enumNames": [
+        "",
         "0. Ei tietoa",
         "1. Ei lainkaan",
         "2. Hyvin vähän",
@@ -908,11 +944,13 @@
     "typeOfSnowCover": {
       "type": "string",
       "enum": [
+        "",
         "WBC.typeOfSnowCoverEnum0",
         "WBC.typeOfSnowCoverEnum1",
         "WBC.typeOfSnowCoverEnum2"
       ],
       "enumNames": [
+        "",
         "0. Ei tietoa tai ei lunta",
         "1. Lumi pehmeää",
         "2. Lumessa kova hankikerros"
@@ -924,6 +962,7 @@
     "visibility": {
       "type": "string",
       "enum": [
+        "",
         "WBC.visibilityEnum0",
         "WBC.visibilityEnum1",
         "WBC.visibilityEnum2",
@@ -931,6 +970,7 @@
         "WBC.visibilityEnum4"
       ],
       "enumNames": [
+        "",
         "Ei tietoa",
         "Hyvä",
         "Hyvä-kohtalainen",
@@ -944,6 +984,7 @@
     "waterbodies": {
       "type": "string",
       "enum": [
+        "",
         "WBC.waterbodiesEnum0",
         "WBC.waterbodiesEnum1",
         "WBC.waterbodiesEnum2",
@@ -952,6 +993,7 @@
         "WBC.waterbodiesEnum5"
       ],
       "enumNames": [
+        "",
         "Ei tietoa",
         "Meren rantaa",
         "Järven rantaa",
@@ -966,6 +1008,7 @@
     "wayOfTravel": {
       "type": "string",
       "enum": [
+        "",
         "WBC.wayOfTravelEnum0",
         "WBC.wayOfTravelEnum1",
         "WBC.wayOfTravelEnum2",
@@ -973,6 +1016,7 @@
         "WBC.wayOfTravelEnum9"
       ],
       "enumNames": [
+        "",
         "Jalkaisin",
         "Suksilla",
         "Muu, mikä",
@@ -992,6 +1036,7 @@
     "wind": {
       "type": "string",
       "enum": [
+        "",
         "WBC.windEnum0",
         "WBC.windEnum1",
         "WBC.windEnum2",
@@ -999,6 +1044,7 @@
         "WBC.windEnum4"
       ],
       "enumNames": [
+        "",
         "Ei tietoa",
         "Tyyntä-heikkoa",
         "Heikkoa-kohtalaista",

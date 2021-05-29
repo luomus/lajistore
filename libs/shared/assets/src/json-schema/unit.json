@@ -47,6 +47,7 @@
     "abundanceUnit": {
       "type": "string",
       "enum": [
+        "",
         "MY.abundanceUnitIndividualCount",
         "MY.abundanceUnitPairCount",
         "MY.abundanceUnitNest",
@@ -69,6 +70,7 @@
         "MY.abundanceUnitOccursDoesNotOccur"
       ],
       "enumNames": [
+        "",
         "Individual count",
         "Pair count",
         "Nest count",
@@ -153,6 +155,7 @@
     "atlasCode": {
       "type": "string",
       "enum": [
+        "",
         "MY.atlasCodeEnum1",
         "MY.atlasCodeEnum2",
         "MY.atlasCodeEnum3",
@@ -176,6 +179,7 @@
         "MY.atlasCodeEnum82"
       ],
       "enumNames": [
+        "",
         "1 Breeding unlikely; Species detected in the grid during the breeding season, but almost certainly does not breed there",
         "2 Possible breeding; A solitary bird detected once in suitable breeding habitat, and breeding of the species in the grid is possible",
         "3 Possible breeding; A pair detected once in a suitable breeding habitat, and breeding of the species in the grid is possible",
@@ -205,12 +209,14 @@
     "batBehavior": {
       "type": "string",
       "enum": [
+        "",
         "MY.batBehaviorHibernating",
         "MY.batBehaviorRoosting",
         "MY.batBehaviorHunting",
         "MY.batBehaviorDead"
       ],
       "enumNames": [
+        "",
         "hibernating",
         "roosting",
         "hunting",
@@ -234,6 +240,7 @@
     "birdAge": {
       "type": "string",
       "enum": [
+        "",
         "MY.birdAgePp",
         "MY.birdAgePm",
         "MY.birdAgeFl",
@@ -255,6 +262,7 @@
         "MY.birdAge8Kv"
       ],
       "enumNames": [
+        "",
         "pp",
         "pm",
         "fl",
@@ -293,6 +301,7 @@
     "birdPlumage": {
       "type": "string",
       "enum": [
+        "",
         "MY.birdPlumageAd",
         "MY.birdPlumageEijp",
         "MY.birdPlumageImm",
@@ -307,6 +316,7 @@
         "MY.birdPlumageSs"
       ],
       "enumNames": [
+        "",
         "ad",
         "eijp",
         "imm (immature)",
@@ -374,6 +384,7 @@
     "distance": {
       "type": "string",
       "enum": [
+        "",
         "MY.distanceOverFlight",
         "MY.distanceNear",
         "MY.distanceQuiteFar",
@@ -381,6 +392,7 @@
         "MY.distanceVeryFar"
       ],
       "enumNames": [
+        "",
         "flight over or next to observer",
         "near",
         "quite far away",
@@ -394,6 +406,7 @@
     "earliestEpochOrLowestSeries": {
       "type": "string",
       "enum": [
+        "",
         "MY.epochOrSeriesCambrian",
         "MY.epochOrSeriesCarboniferous",
         "MY.epochOrSeriesCretaceous",
@@ -409,6 +422,7 @@
         "MY.epochOrSeriesTriassic"
       ],
       "enumNames": [
+        "",
         "Cambrian",
         "Carboniferous",
         "Cretaceous",
@@ -438,6 +452,7 @@
     "fruitType": {
       "type": "string",
       "enum": [
+        "",
         "MY.fruitTypeAchene",
         "MY.fruitTypeBerry",
         "MY.fruitTypeCapsule",
@@ -453,6 +468,7 @@
         "MY.fruitTypeSiliqua"
       ],
       "enumNames": [
+        "",
         "achene",
         "berry",
         "capsule",
@@ -548,6 +564,7 @@
     "indirectObservationType": {
       "type": "string",
       "enum": [
+        "",
         "MY.indirectObservationTypeFeces",
         "MY.indirectObservationTypeSnowTracks",
         "MY.indirectObservationTypeUrine",
@@ -555,6 +572,7 @@
         "MY.indirectObservationTypeFoodStock"
       ],
       "enumNames": [
+        "",
         "Feces",
         "Snow tracks",
         "Urine",
@@ -644,6 +662,7 @@
     "latestEpochOrHighestSeries": {
       "type": "string",
       "enum": [
+        "",
         "MY.epochOrSeriesCambrian",
         "MY.epochOrSeriesCarboniferous",
         "MY.epochOrSeriesCretaceous",
@@ -659,6 +678,7 @@
         "MY.epochOrSeriesTriassic"
       ],
       "enumNames": [
+        "",
         "Cambrian",
         "Carboniferous",
         "Cretaceous",
@@ -692,6 +712,7 @@
     "lifeStage": {
       "type": "string",
       "enum": [
+        "",
         "MY.lifeStageEgg",
         "MY.lifeStageLarva",
         "MY.lifeStagePupa",
@@ -715,6 +736,7 @@
         "MY.lifeStageMarks"
       ],
       "enumNames": [
+        "",
         "egg",
         "larva",
         "pupa",
@@ -1042,12 +1064,14 @@
     "microbiologicalRiskGroup": {
       "type": "string",
       "enum": [
+        "",
         "MY.microbiologicalRiskGroup1",
         "MY.microbiologicalRiskGroup2",
         "MY.microbiologicalRiskGroup3",
         "MY.microbiologicalRiskGroup4"
       ],
       "enumNames": [
+        "",
         "1",
         "2",
         "3",
@@ -1068,6 +1092,7 @@
     "movingDirection": {
       "type": "string",
       "enum": [
+        "",
         "MY.movingDirectionN",
         "MY.movingDirectionNNE",
         "MY.movingDirectionNE",
@@ -1086,6 +1111,7 @@
         "MY.movingDirectionNNW"
       ],
       "enumNames": [
+        "",
         "north",
         "north-northeast",
         "north-east",
@@ -1128,10 +1154,12 @@
     "nativeStatus": {
       "type": "string",
       "enum": [
+        "",
         "MY.native",
         "MY.nonNative"
       ],
       "enumNames": [
+        "",
         "wild",
         "non-wild"
       ],
@@ -1155,6 +1183,7 @@
     "nestType": {
       "type": "string",
       "enum": [
+        "",
         "MY.nestTypeTreeCavity",
         "MY.nestTypeTwig",
         "MY.nestTypeNestBox",
@@ -1163,6 +1192,7 @@
         "MY.nestTypeOther"
       ],
       "enumNames": [
+        "",
         "Cavity in tree",
         "Twig nest in tree",
         "Nestbox in tree",
@@ -1198,6 +1228,7 @@
     "plantLifeStage": {
       "type": "string",
       "enum": [
+        "",
         "MY.plantLifeStageSterile",
         "MY.plantLifeStageFertile",
         "MY.plantLifeStageSeed",
@@ -1213,6 +1244,7 @@
         "MY.plantLifeStageDeadPlant"
       ],
       "enumNames": [
+        "",
         "sterile",
         "fertile",
         "seed / spore / fruit",
@@ -1234,6 +1266,7 @@
     "plantStatusCode": {
       "type": "string",
       "enum": [
+        "",
         "MY.plantStatusCodeL",
         "MY.plantStatusCodeA",
         "MY.plantStatusCodeAV",
@@ -1266,6 +1299,7 @@
         "MY.plantStatusCodeF"
       ],
       "enumNames": [
+        "",
         "L - wild",
         "A - spontaneous",
         "AV - spontaneous, resident",
@@ -1322,6 +1356,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MY.preservationPressed",
           "MY.preservationDry",
           "MY.preservationCriticalPointDrying",
@@ -1360,6 +1395,7 @@
           "MY.preservationFrozenMinus80CAndEthanolMinus20C"
         ],
         "enumNames": [
+          "",
           "Dry and pressed",
           "Dry",
           "Critical-point drying",
@@ -1407,6 +1443,7 @@
     "provenance": {
       "type": "string",
       "enum": [
+        "",
         "MY.provenanceUnknown",
         "MY.provenanceCultivated",
         "MY.provenanceCultivatedUnsure",
@@ -1417,6 +1454,7 @@
         "MY.provenancePropagule"
       ],
       "enumNames": [
+        "",
         "? (Unknown)",
         "G (Cultivated)",
         "G? (Cultivated, unsure)",
@@ -1434,6 +1472,7 @@
     "recordBasis": {
       "type": "string",
       "enum": [
+        "",
         "MY.recordBasisPreservedSpecimen",
         "MY.recordBasisHumanObservation",
         "MY.recordBasisHumanObservationSeen",
@@ -1456,6 +1495,7 @@
         "MY.recordBasisMaterialSample"
       ],
       "enumNames": [
+        "",
         "Preserved specimen",
         "Observation",
         "Seen",
@@ -1488,6 +1528,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MY.recordPartsBones",
           "MY.recordPartsAntler",
           "MY.recordPartsHead",
@@ -1522,6 +1563,7 @@
           "My.recordPartsSkullAndBones"
         ],
         "enumNames": [
+          "",
           "bones",
           "antler(s)",
           "head",
@@ -1572,6 +1614,7 @@
     "samplingMethod": {
       "type": "string",
       "enum": [
+        "",
         "MY.samplingMethodLight",
         "MY.samplingMethodLightTrap",
         "MY.samplingMethodTrap",
@@ -1621,6 +1664,7 @@
         "MY.samplingMethodOther"
       ],
       "enumNames": [
+        "",
         "Light (lux)",
         "Light trap",
         "Trap (generic)",
@@ -1683,11 +1727,13 @@
     "seedMaturity": {
       "type": "string",
       "enum": [
+        "",
         "MY.seedMaturityImmature",
         "MY.seedMaturityMature",
         "MY.seedMaturityMixed"
       ],
       "enumNames": [
+        "",
         "immature",
         "mature",
         "mixed"
@@ -1700,6 +1746,7 @@
     "seedMorphology": {
       "type": "string",
       "enum": [
+        "",
         "MY.seedMorphologyBent",
         "MY.seedMorphologyBroad",
         "MY.seedMorphologyCapitate",
@@ -1714,6 +1761,7 @@
         "MY.seedMorphologyUndifferentiated"
       ],
       "enumNames": [
+        "",
         "bent",
         "broad",
         "capitate",
@@ -1735,6 +1783,7 @@
     "sex": {
       "type": "string",
       "enum": [
+        "",
         "MY.sexM",
         "MY.sexF",
         "MY.sexW",
@@ -1745,6 +1794,7 @@
         "MY.sexC"
       ],
       "enumNames": [
+        "",
         "M - Male",
         "F - Female",
         "W - Worker",
@@ -1775,6 +1825,7 @@
     "smell": {
       "type": "string",
       "enum": [
+        "",
         "MY.smellNotSmelled",
         "MY.smellNoSmelled",
         "MY.smellWeak",
@@ -1782,6 +1833,7 @@
         "MY.smellStrong"
       ],
       "enumNames": [
+        "",
         "Not sniffed",
         "Smell none",
         "Faint",
@@ -1801,6 +1853,7 @@
     "substrateClassification": {
       "type": "string",
       "enum": [
+        "",
         "MY.substrateGround",
         "MY.substrateGroundLowShrubs",
         "MY.substrateGroundLichens",
@@ -1859,6 +1912,7 @@
         "MY.substrateDeadLeaf"
       ],
       "enumNames": [
+        "",
         "ground",
         "among low shrubs",
         "among lichens",
@@ -1923,6 +1977,7 @@
     "substrateDecayStage": {
       "type": "string",
       "enum": [
+        "",
         "MY.substrateDecayStageEnum1",
         "MY.substrateDecayStageEnum2",
         "MY.substrateDecayStageEnum3",
@@ -1930,6 +1985,7 @@
         "MY.substrateDecayStageEnum5"
       ],
       "enumNames": [
+        "",
         "Decay stage 1",
         "Decay stage 2",
         "Decay stage 3",
@@ -1970,6 +2026,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MY.substrateTreeClassificationEnum1",
           "MY.substrateTreeClassificationEnum2",
           "MY.substrateTreeClassificationEnum3",
@@ -1978,6 +2035,7 @@
           "MY.substrateTreeClassificationEnum6"
         ],
         "enumNames": [
+          "",
           "kelo",
           "charred",
           "moss-covered",
@@ -2005,6 +2063,7 @@
     "taste": {
       "type": "string",
       "enum": [
+        "",
         "MY.tasteNotTasted",
         "MY.tasteNoTaste",
         "MY.tasteWeak",
@@ -2012,6 +2071,7 @@
         "MY.tasteStrong"
       ],
       "enumNames": [
+        "",
         "Not tasted",
         "Taste none",
         "Faint",
@@ -2031,11 +2091,13 @@
     "taxonConfidence": {
       "type": "string",
       "enum": [
+        "",
         "MY.taxonConfidenceSure",
         "MY.taxonConfidenceUnsure",
         "MY.taxonConfidenceSubspeciesUnsure"
       ],
       "enumNames": [
+        "",
         "Sure",
         "Unsure",
         "Subspecies unsure"
@@ -2066,6 +2128,7 @@
         "glowWormMicrohabitat": {
           "type": "string",
           "enum": [
+            "",
             "MY.glowWormMicrohabitatEnum1",
             "MY.glowWormMicrohabitatEnum2",
             "MY.glowWormMicrohabitatEnum3",
@@ -2075,6 +2138,7 @@
             "MY.glowWormMicrohabitatEnumOther"
           ],
           "enumNames": [
+            "",
             "Short grass",
             "Long grass",
             "Under tree",
@@ -2111,6 +2175,7 @@
         "lineTransectObsType": {
           "type": "string",
           "enum": [
+            "",
             "MY.lineTransectObsTypeSong",
             "MY.lineTransectObsTypeOtherSound",
             "MY.lineTransectObsTypeSeen",
@@ -2125,6 +2190,7 @@
             "MY.lineTransectObsTypeUnknown"
           ],
           "enumNames": [
+            "",
             "Singing",
             "Other noises",
             "Seen",
@@ -2145,10 +2211,12 @@
         "lineTransectRouteFieldType": {
           "type": "string",
           "enum": [
+            "",
             "MY.lineTransectRouteFieldTypeInner",
             "MY.lineTransectRouteFieldTypeOuter"
           ],
           "enumNames": [
+            "",
             "P - Inner route field",
             "A - Outer route field"
           ],
@@ -2159,11 +2227,13 @@
         "lolifeDroppingsCount": {
           "type": "string",
           "enum": [
+            "",
             "MY.lolifeDroppingsCount1",
             "MY.lolifeDroppingsCount2",
             "MY.lolifeDroppingsCount3"
           ],
           "enumNames": [
+            "",
             "Muutama",
             "Kymmeniä",
             "Satoja"
@@ -2175,10 +2245,12 @@
         "lolifeDroppingsQuality": {
           "type": "string",
           "enum": [
+            "",
             "MY.lolifeDroppingsQuality1",
             "MY.lolifeDroppingsQuality2"
           ],
           "enumNames": [
+            "",
             "Vanhoja",
             "Tuoreita"
           ],
@@ -2189,12 +2261,14 @@
         "lolifeDroppingsType": {
           "type": "string",
           "enum": [
+            "",
             "MY.lolifeDroppingsTypeRock",
             "MY.lolifeDroppingsTypeTree",
             "MY.lolifeDroppingsTypeTreeGroup",
             "MY.lolifeDroppingsTypeOther"
           ],
           "enumNames": [
+            "",
             "On top of rock",
             "Single tree",
             "Group of trees",
@@ -2207,6 +2281,7 @@
         "lolifeNestTree": {
           "type": "string",
           "enum": [
+            "",
             "MX.38590",
             "MX.37812",
             "MX.37999",
@@ -2216,6 +2291,7 @@
             "MY.lolifeNestTreeOther"
           ],
           "enumNames": [
+            "",
             "Aspen",
             "Spruce",
             "Downy birch",
@@ -2257,11 +2333,13 @@
         "waterbirdFemale": {
           "type": "string",
           "enum": [
+            "",
             "MY.waterbirdFemaleEnumYes",
             "MY.waterbirdFemaleEnumNo",
             "MY.waterbirdFemaleEnumLonelyPanicking"
           ],
           "enumNames": [
+            "",
             "yes",
             "no",
             "lonely panicking female"
@@ -2273,6 +2351,7 @@
         "waterbirdJuvenileAgeClass": {
           "type": "string",
           "enum": [
+            "",
             "MY.waterbirdJuvenileAgeClassIa",
             "MY.waterbirdJuvenileAgeClassIb",
             "MY.waterbirdJuvenileAgeClassIc",
@@ -2283,6 +2362,7 @@
             "MY.waterbirdJuvenileAgeClassUnknown"
           ],
           "enumNames": [
+            "",
             "1. Aivan pienet kirkasväriset untuvapallot (Ia)",
             "2. Pienet, hieman haalistuneet untuvikot (Ib)",
             "3. Pienehköt, haalistuneet untuvikkopoikaset (Ic)",
@@ -2311,12 +2391,14 @@
         "waterbirdPairCountOpinionReasoning": {
           "type": "string",
           "enum": [
+            "",
             "MY.waterbirdPairCountOpinionReasoningEnum1",
             "MY.waterbirdPairCountOpinionReasoningEnum2",
             "MY.waterbirdPairCountOpinionReasoningEnum3",
             "MY.waterbirdPairCountOpinionReasoningEnumOther"
           ],
           "enumNames": [
+            "",
             "1) Laji ei varmasti pesi kohteella, linnut ruokailevia (esim. muuttomatkalla)",
             "2) Alueella levähti 1. laskennan aikaan vielä runsaasti muuttajia ja tulkinta 2. laskennan perusteella",
             "3) Lajin pesä(t) ovat jääneet jo kasvaneen järviruovikon suojiin 2. laskennassa, tulkinta tehty 1. laskennan perusteella",
@@ -2404,6 +2486,12 @@
           "subject": "@type",
           "title": "Type for the Havainnon keruutiedot"
         },
+        "@context": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "@context",
+          "title": "Context for the Havainnon keruutiedot"
+        },
         "dateBegin": {
           "type": "string",
           "range": "xsd:string",
@@ -2481,11 +2569,13 @@
     "wild": {
       "type": "string",
       "enum": [
+        "",
         "MY.wildWild",
         "MY.wildUnknown",
         "MY.wildNonWild"
       ],
       "enumNames": [
+        "",
         "Wild",
         "Unknown",
         "Non-wild"
@@ -2530,11 +2620,13 @@
     "publicityRestrictions": {
       "type": "string",
       "enum": [
+        "",
         "MZ.publicityRestrictionsPublic",
         "MZ.publicityRestrictionsProtected",
         "MZ.publicityRestrictionsPrivate"
       ],
       "enumNames": [
+        "",
         "public",
         "protected",
         "private"
@@ -2565,6 +2657,12 @@
             "range": "xsd:string",
             "subject": "@type",
             "title": "Type for the Identification"
+          },
+          "@context": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "@context",
+            "title": "Context for the Identification"
           },
           "herbo:sortOrder": {
             "type": "integer",
@@ -2603,11 +2701,13 @@
           "detMethod": {
             "type": "string",
             "enum": [
+              "",
               "MY.detMethodFreshSample",
               "MY.detMethodMicroscopy",
               "MY.detMethodPhoto"
             ],
             "enumNames": [
+              "",
               "fresh sample",
               "microscopy",
               "photo"
@@ -2636,6 +2736,7 @@
             "items": {
               "type": "string",
               "enum": [
+                "",
                 "MY.identificationBasisSeen",
                 "MY.identificationBasisHeard",
                 "MY.identificationBasisHandled",
@@ -2650,6 +2751,7 @@
                 "MY.identificationBasisDNA"
               ],
               "enumNames": [
+                "",
                 "Seen",
                 "Heard",
                 "Handled",
@@ -2693,6 +2795,7 @@
           "infraRank": {
             "type": "string",
             "enum": [
+              "",
               "MY.infraRankSsp",
               "MY.infraRankVar",
               "MY.infraRankBeta",
@@ -2709,6 +2812,7 @@
               "MY.infraRankCultivarGroup"
             ],
             "enumNames": [
+              "",
               "ssp.",
               "var.",
               "β",
@@ -2787,6 +2891,7 @@
           "taxonRank": {
             "type": "string",
             "enum": [
+              "",
               "MX.superdomain",
               "MX.domain",
               "MX.kingdom",
@@ -2847,6 +2952,7 @@
               "MX.grex"
             ],
             "enumNames": [
+              "",
               "superdomain",
               "domain",
               "kingdom",
@@ -2933,11 +3039,13 @@
           "publicityRestrictions": {
             "type": "string",
             "enum": [
+              "",
               "MZ.publicityRestrictionsPublic",
               "MZ.publicityRestrictionsProtected",
               "MZ.publicityRestrictionsPrivate"
             ],
             "enumNames": [
+              "",
               "public",
               "protected",
               "private"
@@ -2981,6 +3089,12 @@
             "range": "xsd:string",
             "subject": "@type",
             "title": "Type for the Identification"
+          },
+          "@context": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "@context",
+            "title": "Context for the Identification"
           },
           "isPartOf": {
             "type": "string",
@@ -3034,6 +3148,7 @@
           "typeStatus": {
             "type": "string",
             "enum": [
+              "",
               "MY.typeStatusType",
               "MY.typeStatusHolotype",
               "MY.typeStatusSyntype",
@@ -3061,6 +3176,7 @@
               "MY.typeStatusPathovarReferenceStrain"
             ],
             "enumNames": [
+              "",
               "type",
               "holotype",
               "syntype",
@@ -3109,12 +3225,14 @@
           "typeVerification": {
             "type": "string",
             "enum": [
+              "",
               "MY.typeVerificationVerified",
               "MY.typeVerificationUnverified",
               "MY.typeVerificationProbable",
               "MY.typeVerificationDoubtful"
             ],
             "enumNames": [
+              "",
               "verified",
               "unverified",
               "probable",
@@ -3142,11 +3260,13 @@
           "publicityRestrictions": {
             "type": "string",
             "enum": [
+              "",
               "MZ.publicityRestrictionsPublic",
               "MZ.publicityRestrictionsProtected",
               "MZ.publicityRestrictionsPrivate"
             ],
             "enumNames": [
+              "",
               "public",
               "protected",
               "private"

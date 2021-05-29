@@ -47,6 +47,7 @@ export interface Gathering {
    * Bat habitat
    */
   batHabitat?: (
+    | ""
     | "MY.batHabitatYardCityCentre"
     | "MY.batHabitatYardSuburbs"
     | "MY.batHabitatYardRural"
@@ -90,6 +91,7 @@ export interface Gathering {
    * Use for NEW SPECIMENS: Where the coordinates have been acquired
    */
   coordinateSource?:
+    | ""
     | "MY.coordinateSourceGps"
     | "MY.coordinateSourcePeruskartta"
     | "MY.coordinateSourcePapermap"
@@ -103,6 +105,7 @@ export interface Gathering {
    * More information about the coordinate systems: https://wiki.helsinki.fi/display/digit/Entering+specimen+data
    */
   coordinateSystem?:
+    | ""
     | "MY.coordinateSystemYkj"
     | "MY.coordinateSystemWgs84"
     | "MY.coordinateSystemWgs84dms"
@@ -139,6 +142,7 @@ export interface Gathering {
    * Finnish forest vegetation zone
    */
   forestVegetationZone?:
+    | ""
     | "MY.forestVegetationZone1a"
     | "MY.forestVegetationZone1b"
     | "MY.forestVegetationZone2a"
@@ -151,7 +155,7 @@ export interface Gathering {
     | "MY.forestVegetationZone4c"
     | "MY.forestVegetationZone4d";
   gatheringFact?: {
-    batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
+    batCollector?: "" | "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
     binocularsUsed?: boolean;
     censusAreaHectares?: number;
     invasiveControlOtherExpensesInEuros?: number;
@@ -161,6 +165,7 @@ export interface Gathering {
     lineTransectSegmentMetersStart?: number;
     observedAreaHectares?: number;
     pointCountHabitat?:
+      | ""
       | "MY.pointCountHabitat0"
       | "MY.pointCountHabitat1"
       | "MY.pointCountHabitat2"
@@ -183,6 +188,7 @@ export interface Gathering {
     spottingScopeUsed?: boolean;
     sunniness?: number;
     sykeButterFlyCensusWind?:
+      | ""
       | "MY.sykeButterFlyCensusWindEnumUnknown"
       | "MY.sykeButterFlyCensusWindEnum0"
       | "MY.sykeButterFlyCensusWindEnum1"
@@ -192,6 +198,7 @@ export interface Gathering {
       | "MY.sykeButterFlyCensusWindEnum5"
       | "MY.sykeButterFlyCensusWindEnum6";
     sykeButterFlyCensusWindEnd?:
+      | ""
       | "MY.sykeButterFlyCensusWindEnumUnknown"
       | "MY.sykeButterFlyCensusWindEnum0"
       | "MY.sykeButterFlyCensusWindEnum1"
@@ -201,6 +208,7 @@ export interface Gathering {
       | "MY.sykeButterFlyCensusWindEnum5"
       | "MY.sykeButterFlyCensusWindEnum6";
     sykeButterFlyCensusWindStart?:
+      | ""
       | "MY.sykeButterFlyCensusWindEnumUnknown"
       | "MY.sykeButterFlyCensusWindEnum0"
       | "MY.sykeButterFlyCensusWindEnum1"
@@ -210,12 +218,14 @@ export interface Gathering {
       | "MY.sykeButterFlyCensusWindEnum5"
       | "MY.sykeButterFlyCensusWindEnum6";
     waterbirdCensusPeriod?:
+      | ""
       | "MY.waterbirdCensusPeriodEnum1"
       | "MY.waterbirdCensusPeriodEnum2"
       | "MY.waterbirdCensusPeriodEnumJuvenile"
       | "MY.waterbirdCensusPeriodEnumAdditional"
       | "MY.waterbirdCensusPeriodEnumCombined";
     waterbirdHabitat?:
+      | ""
       | "MY.waterbirdHabitatEnum1"
       | "MY.waterbirdHabitatEnum2"
       | "MY.waterbirdHabitatEnum3"
@@ -242,16 +252,19 @@ export interface Gathering {
     LOXIAonPine?: number;
     LOXIAonSpruce?: number;
     abundanceBOMGAR?:
+      | ""
       | "WBC.speciesAbundanceEnum0"
       | "WBC.speciesAbundanceEnum1"
       | "WBC.speciesAbundanceEnum2"
       | "WBC.speciesAbundanceEnum3";
     abundancePINENU?:
+      | ""
       | "WBC.speciesAbundanceEnum0"
       | "WBC.speciesAbundanceEnum1"
       | "WBC.speciesAbundanceEnum2"
       | "WBC.speciesAbundanceEnum3";
     abundanceTURPIL?:
+      | ""
       | "WBC.speciesAbundanceEnum0"
       | "WBC.speciesAbundanceEnum1"
       | "WBC.speciesAbundanceEnum2"
@@ -266,6 +279,7 @@ export interface Gathering {
     birdFeederCountBiotopeG?: number;
     birdFeederCountBiotopeH?: number;
     cloudAndRain?:
+      | ""
       | "WBC.cloudAndRainEnum0"
       | "WBC.cloudAndRainEnum1"
       | "WBC.cloudAndRainEnum2"
@@ -282,6 +296,7 @@ export interface Gathering {
     feedingStationCountBiotopeG?: number;
     feedingStationCountBiotopeH?: number;
     iceCover?:
+      | ""
       | "WBC.iceCoverEnum0"
       | "WBC.iceCoverEnum1"
       | "WBC.iceCoverEnum2"
@@ -291,6 +306,7 @@ export interface Gathering {
     observerCount?: number;
     observerID?: number;
     pineConesAtCensus?:
+      | ""
       | "WBC.berriesAndConesEnum0"
       | "WBC.berriesAndConesEnum1"
       | "WBC.berriesAndConesEnum2"
@@ -318,11 +334,13 @@ export interface Gathering {
     routeLengthChangeBiotopeG?: number;
     routeLengthChangeBiotopeH?: number;
     snowAndIceOnTrees?:
+      | ""
       | "WBC.snowAndIceOnTreesEnum0"
       | "WBC.snowAndIceOnTreesEnum1"
       | "WBC.snowAndIceOnTreesEnum2"
       | "WBC.snowAndIceOnTreesEnum3";
     snowCover?:
+      | ""
       | "WBC.snowCoverEnum0"
       | "WBC.snowCoverEnum1"
       | "WBC.snowCoverEnum2"
@@ -333,6 +351,7 @@ export interface Gathering {
       | "WBC.snowCoverEnum7"
       | "WBC.snowCoverEnum8";
     sorbusBerriesAtCensus?:
+      | ""
       | "WBC.berriesAndConesEnum0"
       | "WBC.berriesAndConesEnum1"
       | "WBC.berriesAndConesEnum2"
@@ -341,6 +360,7 @@ export interface Gathering {
       | "WBC.berriesAndConesEnum5"
       | "WBC.berriesAndConesEnum6";
     sorbusBerriesEarlyFall?:
+      | ""
       | "WBC.berriesAndConesEnum0"
       | "WBC.berriesAndConesEnum1"
       | "WBC.berriesAndConesEnum2"
@@ -349,6 +369,7 @@ export interface Gathering {
       | "WBC.berriesAndConesEnum5"
       | "WBC.berriesAndConesEnum6";
     spruceConesAtCensus?:
+      | ""
       | "WBC.berriesAndConesEnum0"
       | "WBC.berriesAndConesEnum1"
       | "WBC.berriesAndConesEnum2"
@@ -356,14 +377,16 @@ export interface Gathering {
       | "WBC.berriesAndConesEnum4"
       | "WBC.berriesAndConesEnum5"
       | "WBC.berriesAndConesEnum6";
-    typeOfSnowCover?: "WBC.typeOfSnowCoverEnum0" | "WBC.typeOfSnowCoverEnum1" | "WBC.typeOfSnowCoverEnum2";
+    typeOfSnowCover?: "" | "WBC.typeOfSnowCoverEnum0" | "WBC.typeOfSnowCoverEnum1" | "WBC.typeOfSnowCoverEnum2";
     visibility?:
+      | ""
       | "WBC.visibilityEnum0"
       | "WBC.visibilityEnum1"
       | "WBC.visibilityEnum2"
       | "WBC.visibilityEnum3"
       | "WBC.visibilityEnum4";
     waterbodies?:
+      | ""
       | "WBC.waterbodiesEnum0"
       | "WBC.waterbodiesEnum1"
       | "WBC.waterbodiesEnum2"
@@ -371,15 +394,17 @@ export interface Gathering {
       | "WBC.waterbodiesEnum4"
       | "WBC.waterbodiesEnum5";
     wayOfTravel?:
+      | ""
       | "WBC.wayOfTravelEnum0"
       | "WBC.wayOfTravelEnum1"
       | "WBC.wayOfTravelEnum2"
       | "WBC.wayOfTravelEnum3"
       | "WBC.wayOfTravelEnum9";
     wayOfTravelNotes?: string;
-    wind?: "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
+    wind?: "" | "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
   };
   gatheringType?:
+    | ""
     | "MY.gatheringTypeForagingArea"
     | "MY.gatheringTypeBreedingAndRestingArea"
     | "MY.gatheringTypeCavityTree"
@@ -396,6 +421,7 @@ export interface Gathering {
    * Use for OLD SPECIMENS: What source was used to get coordinates based on locality names
    */
   georeferenceSource?:
+    | ""
     | "MY.georeferenceSourceKotka"
     | "MY.georeferenceSourceKarttapaikka"
     | "MY.georeferenceSourcePaikkatietoikkuna"
@@ -412,6 +438,7 @@ export interface Gathering {
     | "MY.georeferenceSourceOther"
     | "MY.georeferenceSourceUnknown";
   habitat?: (
+    | ""
     | "MY.habitatEnumValue1"
     | "MY.habitatEnumValue2"
     | "MY.habitatEnumValue3"
@@ -501,6 +528,7 @@ export interface Gathering {
     | "MY.habitatEnumValue86"
   )[];
   habitatAttributes?: (
+    | ""
     | "MY.habitatAttributesEnumValue1"
     | "MY.habitatAttributesEnumValue2"
     | "MY.habitatAttributesEnumValue3"
@@ -541,12 +569,14 @@ export interface Gathering {
   invasiveControlDangerous?: boolean;
   invasiveControlDangerousDescription?: string;
   invasiveControlEffectiveness?:
+    | ""
     | "MY.invasiveControlEffectivenessFull"
     | "MY.invasiveControlEffectivenessPartial"
     | "MY.invasiveControlEffectivenessNone"
     | "MY.invasiveControlEffectivenessNotFound";
   invasiveControlEffectivenessNotes?: string;
   invasiveControlMethods?: (
+    | ""
     | "MY.invasiveControlMethodsMechanical"
     | "MY.invasiveControlMethodsChemical"
     | "MY.invasiveControlMethodsBiological"
@@ -618,6 +648,7 @@ export interface Gathering {
    */
   percentageGivingSeeds?: number;
   predominantTree?:
+    | ""
     | "MX.37819"
     | "MX.37812"
     | "MX.37992"
@@ -650,6 +681,7 @@ export interface Gathering {
    * Main method for (usually intentional) sampling
    */
   samplingMethod?:
+    | ""
     | "MY.samplingMethodLight"
     | "MY.samplingMethodLightTrap"
     | "MY.samplingMethodTrap"
@@ -708,6 +740,7 @@ export interface Gathering {
   taxonCensus?: {
     censusTaxonID?: string;
     censusTaxonSetID?:
+      | ""
       | "MX.taxonSetSykeButterflyCensusPapilionoidea"
       | "MX.taxonSetSykeButterflyCensusOther"
       | "MX.taxonSetWaterbirdWaterbirds"
@@ -731,12 +764,14 @@ export interface Gathering {
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
   publicityRestrictions?:
+    | ""
     | "MZ.publicityRestrictionsPublic"
     | "MZ.publicityRestrictionsProtected"
     | "MZ.publicityRestrictionsPrivate";
   units?: {
     id?: string;
     "@type"?: string;
+    "@context"?: string;
     /**
      * Diameter at breast height, in centimeters
      */
@@ -747,6 +782,7 @@ export interface Gathering {
     DNASampleLocation?: string;
     abundanceString?: string;
     abundanceUnit?:
+      | ""
       | "MY.abundanceUnitIndividualCount"
       | "MY.abundanceUnitPairCount"
       | "MY.abundanceUnitNest"
@@ -784,6 +820,7 @@ export interface Gathering {
     ankleInMillimeters?: string[];
     areaInSquareMeters?: number;
     atlasCode?:
+      | ""
       | "MY.atlasCodeEnum1"
       | "MY.atlasCodeEnum2"
       | "MY.atlasCodeEnum3"
@@ -806,12 +843,14 @@ export interface Gathering {
       | "MY.atlasCodeEnum81"
       | "MY.atlasCodeEnum82";
     batBehavior?:
+      | ""
       | "MY.batBehaviorHibernating"
       | "MY.batBehaviorRoosting"
       | "MY.batBehaviorHunting"
       | "MY.batBehaviorDead";
     beakInMillimeters?: string[];
     birdAge?:
+      | ""
       | "MY.birdAgePp"
       | "MY.birdAgePm"
       | "MY.birdAgeFl"
@@ -833,6 +872,7 @@ export interface Gathering {
       | "MY.birdAge8Kv";
     birdBehavior?: string[];
     birdPlumage?:
+      | ""
       | "MY.birdPlumageAd"
       | "MY.birdPlumageEijp"
       | "MY.birdPlumageImm"
@@ -865,6 +905,7 @@ export interface Gathering {
      */
     decayStage?: string;
     distance?:
+      | ""
       | "MY.distanceOverFlight"
       | "MY.distanceNear"
       | "MY.distanceQuiteFar"
@@ -874,6 +915,7 @@ export interface Gathering {
      * For palaeontological specimens, earliest possible geochronologic epoch or lowest chronostratigraphic series attributable to the stratigraphic horizon from which the specimen was collected
      */
     earliestEpochOrLowestSeries?:
+      | ""
       | "MY.epochOrSeriesCambrian"
       | "MY.epochOrSeriesCarboniferous"
       | "MY.epochOrSeriesCretaceous"
@@ -892,6 +934,7 @@ export interface Gathering {
      * Fruit type of the collected fruits, used for botanical garden accessions/seed bank.
      */
     fruitType?:
+      | ""
       | "MY.fruitTypeAchene"
       | "MY.fruitTypeBerry"
       | "MY.fruitTypeCapsule"
@@ -927,6 +970,7 @@ export interface Gathering {
     hostID?: string;
     hostInformalNameString?: string;
     indirectObservationType?:
+      | ""
       | "MY.indirectObservationTypeFeces"
       | "MY.indirectObservationTypeSnowTracks"
       | "MY.indirectObservationTypeUrine"
@@ -958,6 +1002,7 @@ export interface Gathering {
      * For palaeontological specimens, latest possible geochronologic epoch or highest chronostratigraphic series attributable to the stratigraphic horizon from which the specimen was collected.
      */
     latestEpochOrHighestSeries?:
+      | ""
       | "MY.epochOrSeriesCambrian"
       | "MY.epochOrSeriesCarboniferous"
       | "MY.epochOrSeriesCretaceous"
@@ -976,6 +1021,7 @@ export interface Gathering {
      * Life stage of the specimen
      */
     lifeStage?:
+      | ""
       | "MY.lifeStageEgg"
       | "MY.lifeStageLarva"
       | "MY.lifeStagePupa"
@@ -1043,6 +1089,7 @@ export interface Gathering {
      * According to German TRBA August 2015, which is more comprehensive than the EU or Finnish list for bacterial risk groups
      */
     microbiologicalRiskGroup?:
+      | ""
       | "MY.microbiologicalRiskGroup1"
       | "MY.microbiologicalRiskGroup2"
       | "MY.microbiologicalRiskGroup3"
@@ -1052,6 +1099,7 @@ export interface Gathering {
      */
     microscopy?: string;
     movingDirection?:
+      | ""
       | "MY.movingDirectionN"
       | "MY.movingDirectionNNE"
       | "MY.movingDirectionNE"
@@ -1073,10 +1121,11 @@ export interface Gathering {
      * Information on mutant microbial strain.
      */
     mutant?: string;
-    nativeStatus?: "MY.native" | "MY.nonNative";
+    nativeStatus?: "" | "MY.native" | "MY.nonNative";
     nestCount?: number;
     nestNotes?: string;
     nestType?:
+      | ""
       | "MY.nestTypeTreeCavity"
       | "MY.nestTypeTwig"
       | "MY.nestTypeNestBox"
@@ -1090,6 +1139,7 @@ export interface Gathering {
     pairCount?: number;
     pairCountOpinion?: number;
     plantLifeStage?:
+      | ""
       | "MY.plantLifeStageSterile"
       | "MY.plantLifeStageFertile"
       | "MY.plantLifeStageSeed"
@@ -1107,6 +1157,7 @@ export interface Gathering {
      * Status code for the plant (wild, alien etc.)
      */
     plantStatusCode?:
+      | ""
       | "MY.plantStatusCodeL"
       | "MY.plantStatusCodeA"
       | "MY.plantStatusCodeAV"
@@ -1149,6 +1200,7 @@ export interface Gathering {
      * Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.
      */
     preservation?: (
+      | ""
       | "MY.preservationPressed"
       | "MY.preservationDry"
       | "MY.preservationCriticalPointDrying"
@@ -1190,6 +1242,7 @@ export interface Gathering {
      * Origin or source of the garden accession
      */
     provenance?:
+      | ""
       | "MY.provenanceUnknown"
       | "MY.provenanceCultivated"
       | "MY.provenanceCultivatedUnsure"
@@ -1202,6 +1255,7 @@ export interface Gathering {
      * Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
      */
     recordBasis?:
+      | ""
       | "MY.recordBasisPreservedSpecimen"
       | "MY.recordBasisHumanObservation"
       | "MY.recordBasisHumanObservationSeen"
@@ -1226,6 +1280,7 @@ export interface Gathering {
      * What parts of the record are / have been in storage.
      */
     recordParts?: (
+      | ""
       | "MY.recordPartsBones"
       | "MY.recordPartsAntler"
       | "MY.recordPartsHead"
@@ -1267,6 +1322,7 @@ export interface Gathering {
      * Main method for (usually intentional) sampling
      */
     samplingMethod?:
+      | ""
       | "MY.samplingMethodLight"
       | "MY.samplingMethodLightTrap"
       | "MY.samplingMethodTrap"
@@ -1318,11 +1374,12 @@ export interface Gathering {
     /**
      * Maturity of the collected seeds, used for botanical garden accessions/seed bank.
      */
-    seedMaturity?: "MY.seedMaturityImmature" | "MY.seedMaturityMature" | "MY.seedMaturityMixed";
+    seedMaturity?: "" | "MY.seedMaturityImmature" | "MY.seedMaturityMature" | "MY.seedMaturityMixed";
     /**
      * Seed morphology of the collected seeds, used for botanical garden accessions/seed bank.
      */
     seedMorphology?:
+      | ""
       | "MY.seedMorphologyBent"
       | "MY.seedMorphologyBroad"
       | "MY.seedMorphologyCapitate"
@@ -1338,15 +1395,16 @@ export interface Gathering {
     /**
      * Sex of the individual(s)
      */
-    sex?: "MY.sexM" | "MY.sexF" | "MY.sexW" | "MY.sexU" | "MY.sexN" | "MY.sexX" | "MY.sexE" | "MY.sexC";
+    sex?: "" | "MY.sexM" | "MY.sexF" | "MY.sexW" | "MY.sexU" | "MY.sexN" | "MY.sexX" | "MY.sexE" | "MY.sexC";
     /**
      * E.g. how sex was determined, by whom and when.
      */
     sexNotes?: string;
     shortHandText?: string;
-    smell?: "MY.smellNotSmelled" | "MY.smellNoSmelled" | "MY.smellWeak" | "MY.smellModerate" | "MY.smellStrong";
+    smell?: "" | "MY.smellNotSmelled" | "MY.smellNoSmelled" | "MY.smellWeak" | "MY.smellModerate" | "MY.smellStrong";
     smellNotes?: string;
     substrateClassification?:
+      | ""
       | "MY.substrateGround"
       | "MY.substrateGroundLowShrubs"
       | "MY.substrateGroundLichens"
@@ -1404,6 +1462,7 @@ export interface Gathering {
       | "MY.substrateDeadNeedle"
       | "MY.substrateDeadLeaf";
     substrateDecayStage?:
+      | ""
       | "MY.substrateDecayStageEnum1"
       | "MY.substrateDecayStageEnum2"
       | "MY.substrateDecayStageEnum3"
@@ -1414,6 +1473,7 @@ export interface Gathering {
     substrateSpeciesID?: string;
     substrateSpeciesInformalNameString?: string;
     substrateTreeClassification?: (
+      | ""
       | "MY.substrateTreeClassificationEnum1"
       | "MY.substrateTreeClassificationEnum2"
       | "MY.substrateTreeClassificationEnum3"
@@ -1422,13 +1482,14 @@ export interface Gathering {
       | "MY.substrateTreeClassificationEnum6"
     )[];
     tailInMillimeters?: string[];
-    taste?: "MY.tasteNotTasted" | "MY.tasteNoTaste" | "MY.tasteWeak" | "MY.tasteModerate" | "MY.tasteStrong";
+    taste?: "" | "MY.tasteNotTasted" | "MY.tasteNoTaste" | "MY.tasteWeak" | "MY.tasteModerate" | "MY.tasteStrong";
     tasteNotes?: string;
-    taxonConfidence?: "MY.taxonConfidenceSure" | "MY.taxonConfidenceUnsure" | "MY.taxonConfidenceSubspeciesUnsure";
+    taxonConfidence?: "" | "MY.taxonConfidenceSure" | "MY.taxonConfidenceUnsure" | "MY.taxonConfidenceSubspeciesUnsure";
     twitched?: boolean;
     unitFact?: {
       autocompleteSelectedTaxonID?: string;
       glowWormMicrohabitat?:
+        | ""
         | "MY.glowWormMicrohabitatEnum1"
         | "MY.glowWormMicrohabitatEnum2"
         | "MY.glowWormMicrohabitatEnum3"
@@ -1440,6 +1501,7 @@ export interface Gathering {
       individualCountInner?: number;
       individualCountOuter?: number;
       lineTransectObsType?:
+        | ""
         | "MY.lineTransectObsTypeSong"
         | "MY.lineTransectObsTypeOtherSound"
         | "MY.lineTransectObsTypeSeen"
@@ -1452,15 +1514,17 @@ export interface Gathering {
         | "MY.lineTransectObsTypeSeenBrood"
         | "MY.lineTransectObsTypeSeenNest"
         | "MY.lineTransectObsTypeUnknown";
-      lineTransectRouteFieldType?: "MY.lineTransectRouteFieldTypeInner" | "MY.lineTransectRouteFieldTypeOuter";
-      lolifeDroppingsCount?: "MY.lolifeDroppingsCount1" | "MY.lolifeDroppingsCount2" | "MY.lolifeDroppingsCount3";
-      lolifeDroppingsQuality?: "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
+      lineTransectRouteFieldType?: "" | "MY.lineTransectRouteFieldTypeInner" | "MY.lineTransectRouteFieldTypeOuter";
+      lolifeDroppingsCount?: "" | "MY.lolifeDroppingsCount1" | "MY.lolifeDroppingsCount2" | "MY.lolifeDroppingsCount3";
+      lolifeDroppingsQuality?: "" | "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
       lolifeDroppingsType?:
+        | ""
         | "MY.lolifeDroppingsTypeRock"
         | "MY.lolifeDroppingsTypeTree"
         | "MY.lolifeDroppingsTypeTreeGroup"
         | "MY.lolifeDroppingsTypeOther";
       lolifeNestTree?:
+        | ""
         | "MX.38590"
         | "MX.37812"
         | "MX.37999"
@@ -1473,10 +1537,12 @@ export interface Gathering {
       pointCountFlock?: string;
       runningWaterInVicinity?: boolean;
       waterbirdFemale?:
+        | ""
         | "MY.waterbirdFemaleEnumYes"
         | "MY.waterbirdFemaleEnumNo"
         | "MY.waterbirdFemaleEnumLonelyPanicking";
       waterbirdJuvenileAgeClass?:
+        | ""
         | "MY.waterbirdJuvenileAgeClassIa"
         | "MY.waterbirdJuvenileAgeClassIb"
         | "MY.waterbirdJuvenileAgeClassIc"
@@ -1488,6 +1554,7 @@ export interface Gathering {
       waterbirdJuvenileCountAccurate?: boolean;
       waterbirdObserverOpinionSelectedCensus?: boolean;
       waterbirdPairCountOpinionReasoning?:
+        | ""
         | "MY.waterbirdPairCountOpinionReasoningEnum1"
         | "MY.waterbirdPairCountOpinionReasoningEnum2"
         | "MY.waterbirdPairCountOpinionReasoningEnum3"
@@ -1504,6 +1571,7 @@ export interface Gathering {
     unitGathering?: {
       id?: string;
       "@type"?: string;
+      "@context"?: string;
       dateBegin?: string;
       dateEnd?: string;
       geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
@@ -1519,7 +1587,7 @@ export interface Gathering {
     };
     unitType?: string[];
     weightInGrams?: string[];
-    wild?: "MY.wildWild" | "MY.wildUnknown" | "MY.wildNonWild";
+    wild?: "" | "MY.wildWild" | "MY.wildUnknown" | "MY.wildNonWild";
     wingInMillimeters?: string[];
     audio?: string[];
     images?: string[];
@@ -1527,12 +1595,14 @@ export interface Gathering {
      * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
      */
     publicityRestrictions?:
+      | ""
       | "MZ.publicityRestrictionsPublic"
       | "MZ.publicityRestrictionsProtected"
       | "MZ.publicityRestrictionsPrivate";
     identifications?: {
       id?: string;
       "@type"?: string;
+      "@context"?: string;
       "herbo:sortOrder"?: number;
       /**
        * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -1550,7 +1620,7 @@ export interface Gathering {
        * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
        */
       detDate?: string;
-      detMethod?: "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
+      detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
       /**
        * Name of the identifier and date of identification in original format (e.g. from the label), errors and all
        */
@@ -1560,6 +1630,7 @@ export interface Gathering {
        */
       genusQualifier?: string;
       identificationBasis?: (
+        | ""
         | "MY.identificationBasisSeen"
         | "MY.identificationBasisHeard"
         | "MY.identificationBasisHandled"
@@ -1589,6 +1660,7 @@ export interface Gathering {
        * Taxonomic level of the epithet below species level
        */
       infraRank?:
+        | ""
         | "MY.infraRankSsp"
         | "MY.infraRankVar"
         | "MY.infraRankBeta"
@@ -1636,6 +1708,7 @@ export interface Gathering {
        * Taxonomic level for the identification
        */
       taxonRank?:
+        | ""
         | "MX.superdomain"
         | "MX.domain"
         | "MX.kingdom"
@@ -1704,6 +1777,7 @@ export interface Gathering {
        * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
        */
       publicityRestrictions?:
+        | ""
         | "MZ.publicityRestrictionsPublic"
         | "MZ.publicityRestrictionsProtected"
         | "MZ.publicityRestrictionsPrivate";
@@ -1712,6 +1786,7 @@ export interface Gathering {
     typeSpecimens?: {
       id?: string;
       "@type"?: string;
+      "@context"?: string;
       /**
        * Which parent or larger collection this is part of.
        */
@@ -1744,6 +1819,7 @@ export interface Gathering {
        * Is this holotype, paratype, syntype etc...
        */
       typeStatus?:
+        | ""
         | "MY.typeStatusType"
         | "MY.typeStatusHolotype"
         | "MY.typeStatusSyntype"
@@ -1781,6 +1857,7 @@ export interface Gathering {
        * Verification whether this really is a type?
        */
       typeVerification?:
+        | ""
         | "MY.typeVerificationVerified"
         | "MY.typeVerificationUnverified"
         | "MY.typeVerificationProbable"
@@ -1797,6 +1874,7 @@ export interface Gathering {
        * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
        */
       publicityRestrictions?:
+        | ""
         | "MZ.publicityRestrictionsPublic"
         | "MZ.publicityRestrictionsProtected"
         | "MZ.publicityRestrictionsPrivate";

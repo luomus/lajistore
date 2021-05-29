@@ -19,6 +19,7 @@ export interface Form {
   "@type"?: string;
   baseFormID?: string;
   category?:
+    | ""
     | "MHL.categoryGeneric"
     | "MHL.categorySurvey"
     | "MHL.categoryTaxonomicGroup"
@@ -186,7 +187,7 @@ export interface Form {
       [k: string]: unknown | undefined;
     };
   }[];
-  language?: "en" | "fi" | "sv";
+  language?: "" | "en" | "fi" | "sv";
   logo?: string;
   name?: string;
   options?: {
@@ -512,10 +513,12 @@ export interface Form {
     prepopulatedDocument?: {
       id?: string;
       "@type"?: string;
+      "@context"?: string;
       /**
        * Secure level (salaus-/karkeistustaso) for the data
        */
       secureLevel?:
+        | ""
         | "MX.secureLevelNone"
         | "MX.secureLevelKM1"
         | "MX.secureLevelKM5"
@@ -585,7 +588,7 @@ export interface Form {
        * Annuality/perenniality or other specialities about cultivation in our conditions.
        */
       cultivationInformation?: string;
-      dataOrigin?: ("MY.dataOriginPaperForm" | "MY.dataOriginWebForm" | "MY.dataOriginSpreadsheetFile")[];
+      dataOrigin?: ("" | "MY.dataOriginPaperForm" | "MY.dataOriginWebForm" | "MY.dataOriginSpreadsheetFile")[];
       /**
        * Where the data about this specimen is from, in addition to labels. Eg. Field notes, expedition journals.
        */
@@ -628,8 +631,10 @@ export interface Form {
       gatheringEvent?: {
         id?: string;
         "@type"?: string;
+        "@context"?: string;
         acknowledgeNoUnitsInCensus?: boolean;
         artificialLight?:
+          | ""
           | "MY.artificialLightEnum1"
           | "MY.artificialLightEnum2"
           | "MY.artificialLightEnum3"
@@ -642,6 +647,7 @@ export interface Form {
         censusHinderedByWind?: boolean;
         censusPrematurelyAborted?: boolean;
         cloudCover?:
+          | ""
           | "MY.cloudCoverOktaEnumUnknown"
           | "MY.cloudCoverOktaEnum0"
           | "MY.cloudCoverOktaEnum1"
@@ -653,6 +659,7 @@ export interface Form {
           | "MY.cloudCoverOktaEnum7"
           | "MY.cloudCoverOktaEnum8";
         cloudCoverEnd?:
+          | ""
           | "MY.cloudCoverOktaEnumUnknown"
           | "MY.cloudCoverOktaEnum0"
           | "MY.cloudCoverOktaEnum1"
@@ -664,6 +671,7 @@ export interface Form {
           | "MY.cloudCoverOktaEnum7"
           | "MY.cloudCoverOktaEnum8";
         cloudCoverStart?:
+          | ""
           | "MY.cloudCoverOktaEnumUnknown"
           | "MY.cloudCoverOktaEnum0"
           | "MY.cloudCoverOktaEnum1"
@@ -678,6 +686,7 @@ export interface Form {
         dateEnd?: string;
         gatheringFact?: {
           batCollector?:
+            | ""
             | "MY.batCollectorAlone"
             | "MY.batCollectorWithProjectGroupMember"
             | "MY.batCollectorSomeoneElse";
@@ -690,6 +699,7 @@ export interface Form {
           lineTransectSegmentMetersStart?: number;
           observedAreaHectares?: number;
           pointCountHabitat?:
+            | ""
             | "MY.pointCountHabitat0"
             | "MY.pointCountHabitat1"
             | "MY.pointCountHabitat2"
@@ -712,6 +722,7 @@ export interface Form {
           spottingScopeUsed?: boolean;
           sunniness?: number;
           sykeButterFlyCensusWind?:
+            | ""
             | "MY.sykeButterFlyCensusWindEnumUnknown"
             | "MY.sykeButterFlyCensusWindEnum0"
             | "MY.sykeButterFlyCensusWindEnum1"
@@ -721,6 +732,7 @@ export interface Form {
             | "MY.sykeButterFlyCensusWindEnum5"
             | "MY.sykeButterFlyCensusWindEnum6";
           sykeButterFlyCensusWindEnd?:
+            | ""
             | "MY.sykeButterFlyCensusWindEnumUnknown"
             | "MY.sykeButterFlyCensusWindEnum0"
             | "MY.sykeButterFlyCensusWindEnum1"
@@ -730,6 +742,7 @@ export interface Form {
             | "MY.sykeButterFlyCensusWindEnum5"
             | "MY.sykeButterFlyCensusWindEnum6";
           sykeButterFlyCensusWindStart?:
+            | ""
             | "MY.sykeButterFlyCensusWindEnumUnknown"
             | "MY.sykeButterFlyCensusWindEnum0"
             | "MY.sykeButterFlyCensusWindEnum1"
@@ -739,12 +752,14 @@ export interface Form {
             | "MY.sykeButterFlyCensusWindEnum5"
             | "MY.sykeButterFlyCensusWindEnum6";
           waterbirdCensusPeriod?:
+            | ""
             | "MY.waterbirdCensusPeriodEnum1"
             | "MY.waterbirdCensusPeriodEnum2"
             | "MY.waterbirdCensusPeriodEnumJuvenile"
             | "MY.waterbirdCensusPeriodEnumAdditional"
             | "MY.waterbirdCensusPeriodEnumCombined";
           waterbirdHabitat?:
+            | ""
             | "MY.waterbirdHabitatEnum1"
             | "MY.waterbirdHabitatEnum2"
             | "MY.waterbirdHabitatEnum3"
@@ -771,16 +786,19 @@ export interface Form {
           LOXIAonPine?: number;
           LOXIAonSpruce?: number;
           abundanceBOMGAR?:
+            | ""
             | "WBC.speciesAbundanceEnum0"
             | "WBC.speciesAbundanceEnum1"
             | "WBC.speciesAbundanceEnum2"
             | "WBC.speciesAbundanceEnum3";
           abundancePINENU?:
+            | ""
             | "WBC.speciesAbundanceEnum0"
             | "WBC.speciesAbundanceEnum1"
             | "WBC.speciesAbundanceEnum2"
             | "WBC.speciesAbundanceEnum3";
           abundanceTURPIL?:
+            | ""
             | "WBC.speciesAbundanceEnum0"
             | "WBC.speciesAbundanceEnum1"
             | "WBC.speciesAbundanceEnum2"
@@ -795,6 +813,7 @@ export interface Form {
           birdFeederCountBiotopeG?: number;
           birdFeederCountBiotopeH?: number;
           cloudAndRain?:
+            | ""
             | "WBC.cloudAndRainEnum0"
             | "WBC.cloudAndRainEnum1"
             | "WBC.cloudAndRainEnum2"
@@ -811,6 +830,7 @@ export interface Form {
           feedingStationCountBiotopeG?: number;
           feedingStationCountBiotopeH?: number;
           iceCover?:
+            | ""
             | "WBC.iceCoverEnum0"
             | "WBC.iceCoverEnum1"
             | "WBC.iceCoverEnum2"
@@ -820,6 +840,7 @@ export interface Form {
           observerCount?: number;
           observerID?: number;
           pineConesAtCensus?:
+            | ""
             | "WBC.berriesAndConesEnum0"
             | "WBC.berriesAndConesEnum1"
             | "WBC.berriesAndConesEnum2"
@@ -847,11 +868,13 @@ export interface Form {
           routeLengthChangeBiotopeG?: number;
           routeLengthChangeBiotopeH?: number;
           snowAndIceOnTrees?:
+            | ""
             | "WBC.snowAndIceOnTreesEnum0"
             | "WBC.snowAndIceOnTreesEnum1"
             | "WBC.snowAndIceOnTreesEnum2"
             | "WBC.snowAndIceOnTreesEnum3";
           snowCover?:
+            | ""
             | "WBC.snowCoverEnum0"
             | "WBC.snowCoverEnum1"
             | "WBC.snowCoverEnum2"
@@ -862,6 +885,7 @@ export interface Form {
             | "WBC.snowCoverEnum7"
             | "WBC.snowCoverEnum8";
           sorbusBerriesAtCensus?:
+            | ""
             | "WBC.berriesAndConesEnum0"
             | "WBC.berriesAndConesEnum1"
             | "WBC.berriesAndConesEnum2"
@@ -870,6 +894,7 @@ export interface Form {
             | "WBC.berriesAndConesEnum5"
             | "WBC.berriesAndConesEnum6";
           sorbusBerriesEarlyFall?:
+            | ""
             | "WBC.berriesAndConesEnum0"
             | "WBC.berriesAndConesEnum1"
             | "WBC.berriesAndConesEnum2"
@@ -878,6 +903,7 @@ export interface Form {
             | "WBC.berriesAndConesEnum5"
             | "WBC.berriesAndConesEnum6";
           spruceConesAtCensus?:
+            | ""
             | "WBC.berriesAndConesEnum0"
             | "WBC.berriesAndConesEnum1"
             | "WBC.berriesAndConesEnum2"
@@ -885,14 +911,16 @@ export interface Form {
             | "WBC.berriesAndConesEnum4"
             | "WBC.berriesAndConesEnum5"
             | "WBC.berriesAndConesEnum6";
-          typeOfSnowCover?: "WBC.typeOfSnowCoverEnum0" | "WBC.typeOfSnowCoverEnum1" | "WBC.typeOfSnowCoverEnum2";
+          typeOfSnowCover?: "" | "WBC.typeOfSnowCoverEnum0" | "WBC.typeOfSnowCoverEnum1" | "WBC.typeOfSnowCoverEnum2";
           visibility?:
+            | ""
             | "WBC.visibilityEnum0"
             | "WBC.visibilityEnum1"
             | "WBC.visibilityEnum2"
             | "WBC.visibilityEnum3"
             | "WBC.visibilityEnum4";
           waterbodies?:
+            | ""
             | "WBC.waterbodiesEnum0"
             | "WBC.waterbodiesEnum1"
             | "WBC.waterbodiesEnum2"
@@ -900,13 +928,14 @@ export interface Form {
             | "WBC.waterbodiesEnum4"
             | "WBC.waterbodiesEnum5";
           wayOfTravel?:
+            | ""
             | "WBC.wayOfTravelEnum0"
             | "WBC.wayOfTravelEnum1"
             | "WBC.wayOfTravelEnum2"
             | "WBC.wayOfTravelEnum3"
             | "WBC.wayOfTravelEnum9";
           wayOfTravelNotes?: string;
-          wind?: "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
+          wind?: "" | "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
         };
         geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
         gpsUsed?: boolean;
@@ -921,6 +950,7 @@ export interface Form {
         legUserID?: string[];
         namedPlaceNotes?: string;
         rainIntensity?:
+          | ""
           | "MY.rainIntensityEnumNoRain"
           | "MY.rainIntensityEnumLightRain"
           | "MY.rainIntensityEnumModerateRain"
@@ -933,6 +963,7 @@ export interface Form {
         taxonCensus?: {
           censusTaxonID?: string;
           censusTaxonSetID?:
+            | ""
             | "MX.taxonSetSykeButterflyCensusPapilionoidea"
             | "MX.taxonSetSykeButterflyCensusOther"
             | "MX.taxonSetWaterbirdWaterbirds"
@@ -986,6 +1017,7 @@ export interface Form {
        * Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.
        */
       preservation?: (
+        | ""
         | "MY.preservationPressed"
         | "MY.preservationDry"
         | "MY.preservationCriticalPointDrying"
@@ -1057,6 +1089,7 @@ export interface Form {
        * Empty value means same as "ok" - that there is not anything special about the status of the specimen.
        */
       status?:
+        | ""
         | "MY.statusOk"
         | "MY.statusMissing"
         | "MY.statusUnrecoverable"
@@ -1092,6 +1125,7 @@ export interface Form {
        * Information about the quality of the specimen data. Possible to select several. Empty value means same as OK.
        */
       verificationStatus?: (
+        | ""
         | "MY.verificationStatusOk"
         | "MY.verificationStatusVerify"
         | "MY.verificationStatusComplete"
@@ -1117,6 +1151,7 @@ export interface Form {
        * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
        */
       publicityRestrictions?:
+        | ""
         | "MZ.publicityRestrictionsPublic"
         | "MZ.publicityRestrictionsProtected"
         | "MZ.publicityRestrictionsPrivate";
@@ -1125,6 +1160,7 @@ export interface Form {
         {
           id?: string;
           "@type"?: string;
+          "@context"?: string;
           /**
            * AFE grid name
            */
@@ -1155,6 +1191,7 @@ export interface Form {
            * Bat habitat
            */
           batHabitat?: (
+            | ""
             | "MY.batHabitatYardCityCentre"
             | "MY.batHabitatYardSuburbs"
             | "MY.batHabitatYardRural"
@@ -1198,6 +1235,7 @@ export interface Form {
            * Use for NEW SPECIMENS: Where the coordinates have been acquired
            */
           coordinateSource?:
+            | ""
             | "MY.coordinateSourceGps"
             | "MY.coordinateSourcePeruskartta"
             | "MY.coordinateSourcePapermap"
@@ -1211,6 +1249,7 @@ export interface Form {
            * More information about the coordinate systems: https://wiki.helsinki.fi/display/digit/Entering+specimen+data
            */
           coordinateSystem?:
+            | ""
             | "MY.coordinateSystemYkj"
             | "MY.coordinateSystemWgs84"
             | "MY.coordinateSystemWgs84dms"
@@ -1247,6 +1286,7 @@ export interface Form {
            * Finnish forest vegetation zone
            */
           forestVegetationZone?:
+            | ""
             | "MY.forestVegetationZone1a"
             | "MY.forestVegetationZone1b"
             | "MY.forestVegetationZone2a"
@@ -1260,6 +1300,7 @@ export interface Form {
             | "MY.forestVegetationZone4d";
           gatheringFact?: {
             batCollector?:
+              | ""
               | "MY.batCollectorAlone"
               | "MY.batCollectorWithProjectGroupMember"
               | "MY.batCollectorSomeoneElse";
@@ -1272,6 +1313,7 @@ export interface Form {
             lineTransectSegmentMetersStart?: number;
             observedAreaHectares?: number;
             pointCountHabitat?:
+              | ""
               | "MY.pointCountHabitat0"
               | "MY.pointCountHabitat1"
               | "MY.pointCountHabitat2"
@@ -1294,6 +1336,7 @@ export interface Form {
             spottingScopeUsed?: boolean;
             sunniness?: number;
             sykeButterFlyCensusWind?:
+              | ""
               | "MY.sykeButterFlyCensusWindEnumUnknown"
               | "MY.sykeButterFlyCensusWindEnum0"
               | "MY.sykeButterFlyCensusWindEnum1"
@@ -1303,6 +1346,7 @@ export interface Form {
               | "MY.sykeButterFlyCensusWindEnum5"
               | "MY.sykeButterFlyCensusWindEnum6";
             sykeButterFlyCensusWindEnd?:
+              | ""
               | "MY.sykeButterFlyCensusWindEnumUnknown"
               | "MY.sykeButterFlyCensusWindEnum0"
               | "MY.sykeButterFlyCensusWindEnum1"
@@ -1312,6 +1356,7 @@ export interface Form {
               | "MY.sykeButterFlyCensusWindEnum5"
               | "MY.sykeButterFlyCensusWindEnum6";
             sykeButterFlyCensusWindStart?:
+              | ""
               | "MY.sykeButterFlyCensusWindEnumUnknown"
               | "MY.sykeButterFlyCensusWindEnum0"
               | "MY.sykeButterFlyCensusWindEnum1"
@@ -1321,12 +1366,14 @@ export interface Form {
               | "MY.sykeButterFlyCensusWindEnum5"
               | "MY.sykeButterFlyCensusWindEnum6";
             waterbirdCensusPeriod?:
+              | ""
               | "MY.waterbirdCensusPeriodEnum1"
               | "MY.waterbirdCensusPeriodEnum2"
               | "MY.waterbirdCensusPeriodEnumJuvenile"
               | "MY.waterbirdCensusPeriodEnumAdditional"
               | "MY.waterbirdCensusPeriodEnumCombined";
             waterbirdHabitat?:
+              | ""
               | "MY.waterbirdHabitatEnum1"
               | "MY.waterbirdHabitatEnum2"
               | "MY.waterbirdHabitatEnum3"
@@ -1353,16 +1400,19 @@ export interface Form {
             LOXIAonPine?: number;
             LOXIAonSpruce?: number;
             abundanceBOMGAR?:
+              | ""
               | "WBC.speciesAbundanceEnum0"
               | "WBC.speciesAbundanceEnum1"
               | "WBC.speciesAbundanceEnum2"
               | "WBC.speciesAbundanceEnum3";
             abundancePINENU?:
+              | ""
               | "WBC.speciesAbundanceEnum0"
               | "WBC.speciesAbundanceEnum1"
               | "WBC.speciesAbundanceEnum2"
               | "WBC.speciesAbundanceEnum3";
             abundanceTURPIL?:
+              | ""
               | "WBC.speciesAbundanceEnum0"
               | "WBC.speciesAbundanceEnum1"
               | "WBC.speciesAbundanceEnum2"
@@ -1377,6 +1427,7 @@ export interface Form {
             birdFeederCountBiotopeG?: number;
             birdFeederCountBiotopeH?: number;
             cloudAndRain?:
+              | ""
               | "WBC.cloudAndRainEnum0"
               | "WBC.cloudAndRainEnum1"
               | "WBC.cloudAndRainEnum2"
@@ -1393,6 +1444,7 @@ export interface Form {
             feedingStationCountBiotopeG?: number;
             feedingStationCountBiotopeH?: number;
             iceCover?:
+              | ""
               | "WBC.iceCoverEnum0"
               | "WBC.iceCoverEnum1"
               | "WBC.iceCoverEnum2"
@@ -1402,6 +1454,7 @@ export interface Form {
             observerCount?: number;
             observerID?: number;
             pineConesAtCensus?:
+              | ""
               | "WBC.berriesAndConesEnum0"
               | "WBC.berriesAndConesEnum1"
               | "WBC.berriesAndConesEnum2"
@@ -1429,11 +1482,13 @@ export interface Form {
             routeLengthChangeBiotopeG?: number;
             routeLengthChangeBiotopeH?: number;
             snowAndIceOnTrees?:
+              | ""
               | "WBC.snowAndIceOnTreesEnum0"
               | "WBC.snowAndIceOnTreesEnum1"
               | "WBC.snowAndIceOnTreesEnum2"
               | "WBC.snowAndIceOnTreesEnum3";
             snowCover?:
+              | ""
               | "WBC.snowCoverEnum0"
               | "WBC.snowCoverEnum1"
               | "WBC.snowCoverEnum2"
@@ -1444,6 +1499,7 @@ export interface Form {
               | "WBC.snowCoverEnum7"
               | "WBC.snowCoverEnum8";
             sorbusBerriesAtCensus?:
+              | ""
               | "WBC.berriesAndConesEnum0"
               | "WBC.berriesAndConesEnum1"
               | "WBC.berriesAndConesEnum2"
@@ -1452,6 +1508,7 @@ export interface Form {
               | "WBC.berriesAndConesEnum5"
               | "WBC.berriesAndConesEnum6";
             sorbusBerriesEarlyFall?:
+              | ""
               | "WBC.berriesAndConesEnum0"
               | "WBC.berriesAndConesEnum1"
               | "WBC.berriesAndConesEnum2"
@@ -1460,6 +1517,7 @@ export interface Form {
               | "WBC.berriesAndConesEnum5"
               | "WBC.berriesAndConesEnum6";
             spruceConesAtCensus?:
+              | ""
               | "WBC.berriesAndConesEnum0"
               | "WBC.berriesAndConesEnum1"
               | "WBC.berriesAndConesEnum2"
@@ -1467,14 +1525,16 @@ export interface Form {
               | "WBC.berriesAndConesEnum4"
               | "WBC.berriesAndConesEnum5"
               | "WBC.berriesAndConesEnum6";
-            typeOfSnowCover?: "WBC.typeOfSnowCoverEnum0" | "WBC.typeOfSnowCoverEnum1" | "WBC.typeOfSnowCoverEnum2";
+            typeOfSnowCover?: "" | "WBC.typeOfSnowCoverEnum0" | "WBC.typeOfSnowCoverEnum1" | "WBC.typeOfSnowCoverEnum2";
             visibility?:
+              | ""
               | "WBC.visibilityEnum0"
               | "WBC.visibilityEnum1"
               | "WBC.visibilityEnum2"
               | "WBC.visibilityEnum3"
               | "WBC.visibilityEnum4";
             waterbodies?:
+              | ""
               | "WBC.waterbodiesEnum0"
               | "WBC.waterbodiesEnum1"
               | "WBC.waterbodiesEnum2"
@@ -1482,15 +1542,17 @@ export interface Form {
               | "WBC.waterbodiesEnum4"
               | "WBC.waterbodiesEnum5";
             wayOfTravel?:
+              | ""
               | "WBC.wayOfTravelEnum0"
               | "WBC.wayOfTravelEnum1"
               | "WBC.wayOfTravelEnum2"
               | "WBC.wayOfTravelEnum3"
               | "WBC.wayOfTravelEnum9";
             wayOfTravelNotes?: string;
-            wind?: "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
+            wind?: "" | "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
           };
           gatheringType?:
+            | ""
             | "MY.gatheringTypeForagingArea"
             | "MY.gatheringTypeBreedingAndRestingArea"
             | "MY.gatheringTypeCavityTree"
@@ -1507,6 +1569,7 @@ export interface Form {
            * Use for OLD SPECIMENS: What source was used to get coordinates based on locality names
            */
           georeferenceSource?:
+            | ""
             | "MY.georeferenceSourceKotka"
             | "MY.georeferenceSourceKarttapaikka"
             | "MY.georeferenceSourcePaikkatietoikkuna"
@@ -1523,6 +1586,7 @@ export interface Form {
             | "MY.georeferenceSourceOther"
             | "MY.georeferenceSourceUnknown";
           habitat?: (
+            | ""
             | "MY.habitatEnumValue1"
             | "MY.habitatEnumValue2"
             | "MY.habitatEnumValue3"
@@ -1612,6 +1676,7 @@ export interface Form {
             | "MY.habitatEnumValue86"
           )[];
           habitatAttributes?: (
+            | ""
             | "MY.habitatAttributesEnumValue1"
             | "MY.habitatAttributesEnumValue2"
             | "MY.habitatAttributesEnumValue3"
@@ -1652,12 +1717,14 @@ export interface Form {
           invasiveControlDangerous?: boolean;
           invasiveControlDangerousDescription?: string;
           invasiveControlEffectiveness?:
+            | ""
             | "MY.invasiveControlEffectivenessFull"
             | "MY.invasiveControlEffectivenessPartial"
             | "MY.invasiveControlEffectivenessNone"
             | "MY.invasiveControlEffectivenessNotFound";
           invasiveControlEffectivenessNotes?: string;
           invasiveControlMethods?: (
+            | ""
             | "MY.invasiveControlMethodsMechanical"
             | "MY.invasiveControlMethodsChemical"
             | "MY.invasiveControlMethodsBiological"
@@ -1729,6 +1796,7 @@ export interface Form {
            */
           percentageGivingSeeds?: number;
           predominantTree?:
+            | ""
             | "MX.37819"
             | "MX.37812"
             | "MX.37992"
@@ -1761,6 +1829,7 @@ export interface Form {
            * Main method for (usually intentional) sampling
            */
           samplingMethod?:
+            | ""
             | "MY.samplingMethodLight"
             | "MY.samplingMethodLightTrap"
             | "MY.samplingMethodTrap"
@@ -1819,6 +1888,7 @@ export interface Form {
           taxonCensus?: {
             censusTaxonID?: string;
             censusTaxonSetID?:
+              | ""
               | "MX.taxonSetSykeButterflyCensusPapilionoidea"
               | "MX.taxonSetSykeButterflyCensusOther"
               | "MX.taxonSetWaterbirdWaterbirds"
@@ -1845,12 +1915,14 @@ export interface Form {
            * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
            */
           publicityRestrictions?:
+            | ""
             | "MZ.publicityRestrictionsPublic"
             | "MZ.publicityRestrictionsProtected"
             | "MZ.publicityRestrictionsPrivate";
           units?: {
             id?: string;
             "@type"?: string;
+            "@context"?: string;
             /**
              * Diameter at breast height, in centimeters
              */
@@ -1861,6 +1933,7 @@ export interface Form {
             DNASampleLocation?: string;
             abundanceString?: string;
             abundanceUnit?:
+              | ""
               | "MY.abundanceUnitIndividualCount"
               | "MY.abundanceUnitPairCount"
               | "MY.abundanceUnitNest"
@@ -1898,6 +1971,7 @@ export interface Form {
             ankleInMillimeters?: string[];
             areaInSquareMeters?: number;
             atlasCode?:
+              | ""
               | "MY.atlasCodeEnum1"
               | "MY.atlasCodeEnum2"
               | "MY.atlasCodeEnum3"
@@ -1920,12 +1994,14 @@ export interface Form {
               | "MY.atlasCodeEnum81"
               | "MY.atlasCodeEnum82";
             batBehavior?:
+              | ""
               | "MY.batBehaviorHibernating"
               | "MY.batBehaviorRoosting"
               | "MY.batBehaviorHunting"
               | "MY.batBehaviorDead";
             beakInMillimeters?: string[];
             birdAge?:
+              | ""
               | "MY.birdAgePp"
               | "MY.birdAgePm"
               | "MY.birdAgeFl"
@@ -1947,6 +2023,7 @@ export interface Form {
               | "MY.birdAge8Kv";
             birdBehavior?: string[];
             birdPlumage?:
+              | ""
               | "MY.birdPlumageAd"
               | "MY.birdPlumageEijp"
               | "MY.birdPlumageImm"
@@ -1979,6 +2056,7 @@ export interface Form {
              */
             decayStage?: string;
             distance?:
+              | ""
               | "MY.distanceOverFlight"
               | "MY.distanceNear"
               | "MY.distanceQuiteFar"
@@ -1988,6 +2066,7 @@ export interface Form {
              * For palaeontological specimens, earliest possible geochronologic epoch or lowest chronostratigraphic series attributable to the stratigraphic horizon from which the specimen was collected
              */
             earliestEpochOrLowestSeries?:
+              | ""
               | "MY.epochOrSeriesCambrian"
               | "MY.epochOrSeriesCarboniferous"
               | "MY.epochOrSeriesCretaceous"
@@ -2006,6 +2085,7 @@ export interface Form {
              * Fruit type of the collected fruits, used for botanical garden accessions/seed bank.
              */
             fruitType?:
+              | ""
               | "MY.fruitTypeAchene"
               | "MY.fruitTypeBerry"
               | "MY.fruitTypeCapsule"
@@ -2041,6 +2121,7 @@ export interface Form {
             hostID?: string;
             hostInformalNameString?: string;
             indirectObservationType?:
+              | ""
               | "MY.indirectObservationTypeFeces"
               | "MY.indirectObservationTypeSnowTracks"
               | "MY.indirectObservationTypeUrine"
@@ -2072,6 +2153,7 @@ export interface Form {
              * For palaeontological specimens, latest possible geochronologic epoch or highest chronostratigraphic series attributable to the stratigraphic horizon from which the specimen was collected.
              */
             latestEpochOrHighestSeries?:
+              | ""
               | "MY.epochOrSeriesCambrian"
               | "MY.epochOrSeriesCarboniferous"
               | "MY.epochOrSeriesCretaceous"
@@ -2090,6 +2172,7 @@ export interface Form {
              * Life stage of the specimen
              */
             lifeStage?:
+              | ""
               | "MY.lifeStageEgg"
               | "MY.lifeStageLarva"
               | "MY.lifeStagePupa"
@@ -2157,6 +2240,7 @@ export interface Form {
              * According to German TRBA August 2015, which is more comprehensive than the EU or Finnish list for bacterial risk groups
              */
             microbiologicalRiskGroup?:
+              | ""
               | "MY.microbiologicalRiskGroup1"
               | "MY.microbiologicalRiskGroup2"
               | "MY.microbiologicalRiskGroup3"
@@ -2166,6 +2250,7 @@ export interface Form {
              */
             microscopy?: string;
             movingDirection?:
+              | ""
               | "MY.movingDirectionN"
               | "MY.movingDirectionNNE"
               | "MY.movingDirectionNE"
@@ -2187,10 +2272,11 @@ export interface Form {
              * Information on mutant microbial strain.
              */
             mutant?: string;
-            nativeStatus?: "MY.native" | "MY.nonNative";
+            nativeStatus?: "" | "MY.native" | "MY.nonNative";
             nestCount?: number;
             nestNotes?: string;
             nestType?:
+              | ""
               | "MY.nestTypeTreeCavity"
               | "MY.nestTypeTwig"
               | "MY.nestTypeNestBox"
@@ -2204,6 +2290,7 @@ export interface Form {
             pairCount?: number;
             pairCountOpinion?: number;
             plantLifeStage?:
+              | ""
               | "MY.plantLifeStageSterile"
               | "MY.plantLifeStageFertile"
               | "MY.plantLifeStageSeed"
@@ -2221,6 +2308,7 @@ export interface Form {
              * Status code for the plant (wild, alien etc.)
              */
             plantStatusCode?:
+              | ""
               | "MY.plantStatusCodeL"
               | "MY.plantStatusCodeA"
               | "MY.plantStatusCodeAV"
@@ -2263,6 +2351,7 @@ export interface Form {
              * Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.
              */
             preservation?: (
+              | ""
               | "MY.preservationPressed"
               | "MY.preservationDry"
               | "MY.preservationCriticalPointDrying"
@@ -2304,6 +2393,7 @@ export interface Form {
              * Origin or source of the garden accession
              */
             provenance?:
+              | ""
               | "MY.provenanceUnknown"
               | "MY.provenanceCultivated"
               | "MY.provenanceCultivatedUnsure"
@@ -2316,6 +2406,7 @@ export interface Form {
              * Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
              */
             recordBasis?:
+              | ""
               | "MY.recordBasisPreservedSpecimen"
               | "MY.recordBasisHumanObservation"
               | "MY.recordBasisHumanObservationSeen"
@@ -2340,6 +2431,7 @@ export interface Form {
              * What parts of the record are / have been in storage.
              */
             recordParts?: (
+              | ""
               | "MY.recordPartsBones"
               | "MY.recordPartsAntler"
               | "MY.recordPartsHead"
@@ -2381,6 +2473,7 @@ export interface Form {
              * Main method for (usually intentional) sampling
              */
             samplingMethod?:
+              | ""
               | "MY.samplingMethodLight"
               | "MY.samplingMethodLightTrap"
               | "MY.samplingMethodTrap"
@@ -2432,11 +2525,12 @@ export interface Form {
             /**
              * Maturity of the collected seeds, used for botanical garden accessions/seed bank.
              */
-            seedMaturity?: "MY.seedMaturityImmature" | "MY.seedMaturityMature" | "MY.seedMaturityMixed";
+            seedMaturity?: "" | "MY.seedMaturityImmature" | "MY.seedMaturityMature" | "MY.seedMaturityMixed";
             /**
              * Seed morphology of the collected seeds, used for botanical garden accessions/seed bank.
              */
             seedMorphology?:
+              | ""
               | "MY.seedMorphologyBent"
               | "MY.seedMorphologyBroad"
               | "MY.seedMorphologyCapitate"
@@ -2452,15 +2546,22 @@ export interface Form {
             /**
              * Sex of the individual(s)
              */
-            sex?: "MY.sexM" | "MY.sexF" | "MY.sexW" | "MY.sexU" | "MY.sexN" | "MY.sexX" | "MY.sexE" | "MY.sexC";
+            sex?: "" | "MY.sexM" | "MY.sexF" | "MY.sexW" | "MY.sexU" | "MY.sexN" | "MY.sexX" | "MY.sexE" | "MY.sexC";
             /**
              * E.g. how sex was determined, by whom and when.
              */
             sexNotes?: string;
             shortHandText?: string;
-            smell?: "MY.smellNotSmelled" | "MY.smellNoSmelled" | "MY.smellWeak" | "MY.smellModerate" | "MY.smellStrong";
+            smell?:
+              | ""
+              | "MY.smellNotSmelled"
+              | "MY.smellNoSmelled"
+              | "MY.smellWeak"
+              | "MY.smellModerate"
+              | "MY.smellStrong";
             smellNotes?: string;
             substrateClassification?:
+              | ""
               | "MY.substrateGround"
               | "MY.substrateGroundLowShrubs"
               | "MY.substrateGroundLichens"
@@ -2518,6 +2619,7 @@ export interface Form {
               | "MY.substrateDeadNeedle"
               | "MY.substrateDeadLeaf";
             substrateDecayStage?:
+              | ""
               | "MY.substrateDecayStageEnum1"
               | "MY.substrateDecayStageEnum2"
               | "MY.substrateDecayStageEnum3"
@@ -2528,6 +2630,7 @@ export interface Form {
             substrateSpeciesID?: string;
             substrateSpeciesInformalNameString?: string;
             substrateTreeClassification?: (
+              | ""
               | "MY.substrateTreeClassificationEnum1"
               | "MY.substrateTreeClassificationEnum2"
               | "MY.substrateTreeClassificationEnum3"
@@ -2536,9 +2639,16 @@ export interface Form {
               | "MY.substrateTreeClassificationEnum6"
             )[];
             tailInMillimeters?: string[];
-            taste?: "MY.tasteNotTasted" | "MY.tasteNoTaste" | "MY.tasteWeak" | "MY.tasteModerate" | "MY.tasteStrong";
+            taste?:
+              | ""
+              | "MY.tasteNotTasted"
+              | "MY.tasteNoTaste"
+              | "MY.tasteWeak"
+              | "MY.tasteModerate"
+              | "MY.tasteStrong";
             tasteNotes?: string;
             taxonConfidence?:
+              | ""
               | "MY.taxonConfidenceSure"
               | "MY.taxonConfidenceUnsure"
               | "MY.taxonConfidenceSubspeciesUnsure";
@@ -2546,6 +2656,7 @@ export interface Form {
             unitFact?: {
               autocompleteSelectedTaxonID?: string;
               glowWormMicrohabitat?:
+                | ""
                 | "MY.glowWormMicrohabitatEnum1"
                 | "MY.glowWormMicrohabitatEnum2"
                 | "MY.glowWormMicrohabitatEnum3"
@@ -2557,6 +2668,7 @@ export interface Form {
               individualCountInner?: number;
               individualCountOuter?: number;
               lineTransectObsType?:
+                | ""
                 | "MY.lineTransectObsTypeSong"
                 | "MY.lineTransectObsTypeOtherSound"
                 | "MY.lineTransectObsTypeSeen"
@@ -2569,18 +2681,24 @@ export interface Form {
                 | "MY.lineTransectObsTypeSeenBrood"
                 | "MY.lineTransectObsTypeSeenNest"
                 | "MY.lineTransectObsTypeUnknown";
-              lineTransectRouteFieldType?: "MY.lineTransectRouteFieldTypeInner" | "MY.lineTransectRouteFieldTypeOuter";
+              lineTransectRouteFieldType?:
+                | ""
+                | "MY.lineTransectRouteFieldTypeInner"
+                | "MY.lineTransectRouteFieldTypeOuter";
               lolifeDroppingsCount?:
+                | ""
                 | "MY.lolifeDroppingsCount1"
                 | "MY.lolifeDroppingsCount2"
                 | "MY.lolifeDroppingsCount3";
-              lolifeDroppingsQuality?: "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
+              lolifeDroppingsQuality?: "" | "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
               lolifeDroppingsType?:
+                | ""
                 | "MY.lolifeDroppingsTypeRock"
                 | "MY.lolifeDroppingsTypeTree"
                 | "MY.lolifeDroppingsTypeTreeGroup"
                 | "MY.lolifeDroppingsTypeOther";
               lolifeNestTree?:
+                | ""
                 | "MX.38590"
                 | "MX.37812"
                 | "MX.37999"
@@ -2593,10 +2711,12 @@ export interface Form {
               pointCountFlock?: string;
               runningWaterInVicinity?: boolean;
               waterbirdFemale?:
+                | ""
                 | "MY.waterbirdFemaleEnumYes"
                 | "MY.waterbirdFemaleEnumNo"
                 | "MY.waterbirdFemaleEnumLonelyPanicking";
               waterbirdJuvenileAgeClass?:
+                | ""
                 | "MY.waterbirdJuvenileAgeClassIa"
                 | "MY.waterbirdJuvenileAgeClassIb"
                 | "MY.waterbirdJuvenileAgeClassIc"
@@ -2608,6 +2728,7 @@ export interface Form {
               waterbirdJuvenileCountAccurate?: boolean;
               waterbirdObserverOpinionSelectedCensus?: boolean;
               waterbirdPairCountOpinionReasoning?:
+                | ""
                 | "MY.waterbirdPairCountOpinionReasoningEnum1"
                 | "MY.waterbirdPairCountOpinionReasoningEnum2"
                 | "MY.waterbirdPairCountOpinionReasoningEnum3"
@@ -2624,6 +2745,7 @@ export interface Form {
             unitGathering?: {
               id?: string;
               "@type"?: string;
+              "@context"?: string;
               dateBegin?: string;
               dateEnd?: string;
               geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
@@ -2639,7 +2761,7 @@ export interface Form {
             };
             unitType?: string[];
             weightInGrams?: string[];
-            wild?: "MY.wildWild" | "MY.wildUnknown" | "MY.wildNonWild";
+            wild?: "" | "MY.wildWild" | "MY.wildUnknown" | "MY.wildNonWild";
             wingInMillimeters?: string[];
             audio?: string[];
             images?: string[];
@@ -2647,12 +2769,14 @@ export interface Form {
              * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
              */
             publicityRestrictions?:
+              | ""
               | "MZ.publicityRestrictionsPublic"
               | "MZ.publicityRestrictionsProtected"
               | "MZ.publicityRestrictionsPrivate";
             identifications?: {
               id?: string;
               "@type"?: string;
+              "@context"?: string;
               "herbo:sortOrder"?: number;
               /**
                * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -2670,7 +2794,7 @@ export interface Form {
                * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
                */
               detDate?: string;
-              detMethod?: "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
+              detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
               /**
                * Name of the identifier and date of identification in original format (e.g. from the label), errors and all
                */
@@ -2680,6 +2804,7 @@ export interface Form {
                */
               genusQualifier?: string;
               identificationBasis?: (
+                | ""
                 | "MY.identificationBasisSeen"
                 | "MY.identificationBasisHeard"
                 | "MY.identificationBasisHandled"
@@ -2709,6 +2834,7 @@ export interface Form {
                * Taxonomic level of the epithet below species level
                */
               infraRank?:
+                | ""
                 | "MY.infraRankSsp"
                 | "MY.infraRankVar"
                 | "MY.infraRankBeta"
@@ -2756,6 +2882,7 @@ export interface Form {
                * Taxonomic level for the identification
                */
               taxonRank?:
+                | ""
                 | "MX.superdomain"
                 | "MX.domain"
                 | "MX.kingdom"
@@ -2824,6 +2951,7 @@ export interface Form {
                * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
                */
               publicityRestrictions?:
+                | ""
                 | "MZ.publicityRestrictionsPublic"
                 | "MZ.publicityRestrictionsProtected"
                 | "MZ.publicityRestrictionsPrivate";
@@ -2832,6 +2960,7 @@ export interface Form {
             typeSpecimens?: {
               id?: string;
               "@type"?: string;
+              "@context"?: string;
               /**
                * Which parent or larger collection this is part of.
                */
@@ -2864,6 +2993,7 @@ export interface Form {
                * Is this holotype, paratype, syntype etc...
                */
               typeStatus?:
+                | ""
                 | "MY.typeStatusType"
                 | "MY.typeStatusHolotype"
                 | "MY.typeStatusSyntype"
@@ -2901,6 +3031,7 @@ export interface Form {
                * Verification whether this really is a type?
                */
               typeVerification?:
+                | ""
                 | "MY.typeVerificationVerified"
                 | "MY.typeVerificationUnverified"
                 | "MY.typeVerificationProbable"
@@ -2917,6 +3048,7 @@ export interface Form {
                * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
                */
               publicityRestrictions?:
+                | ""
                 | "MZ.publicityRestrictionsPublic"
                 | "MZ.publicityRestrictionsProtected"
                 | "MZ.publicityRestrictionsPrivate";
@@ -2926,6 +3058,7 @@ export interface Form {
         ...{
           id?: string;
           "@type"?: string;
+          "@context"?: string;
           /**
            * AFE grid name
            */
@@ -2956,6 +3089,7 @@ export interface Form {
            * Bat habitat
            */
           batHabitat?: (
+            | ""
             | "MY.batHabitatYardCityCentre"
             | "MY.batHabitatYardSuburbs"
             | "MY.batHabitatYardRural"
@@ -2999,6 +3133,7 @@ export interface Form {
            * Use for NEW SPECIMENS: Where the coordinates have been acquired
            */
           coordinateSource?:
+            | ""
             | "MY.coordinateSourceGps"
             | "MY.coordinateSourcePeruskartta"
             | "MY.coordinateSourcePapermap"
@@ -3012,6 +3147,7 @@ export interface Form {
            * More information about the coordinate systems: https://wiki.helsinki.fi/display/digit/Entering+specimen+data
            */
           coordinateSystem?:
+            | ""
             | "MY.coordinateSystemYkj"
             | "MY.coordinateSystemWgs84"
             | "MY.coordinateSystemWgs84dms"
@@ -3048,6 +3184,7 @@ export interface Form {
            * Finnish forest vegetation zone
            */
           forestVegetationZone?:
+            | ""
             | "MY.forestVegetationZone1a"
             | "MY.forestVegetationZone1b"
             | "MY.forestVegetationZone2a"
@@ -3061,6 +3198,7 @@ export interface Form {
             | "MY.forestVegetationZone4d";
           gatheringFact?: {
             batCollector?:
+              | ""
               | "MY.batCollectorAlone"
               | "MY.batCollectorWithProjectGroupMember"
               | "MY.batCollectorSomeoneElse";
@@ -3073,6 +3211,7 @@ export interface Form {
             lineTransectSegmentMetersStart?: number;
             observedAreaHectares?: number;
             pointCountHabitat?:
+              | ""
               | "MY.pointCountHabitat0"
               | "MY.pointCountHabitat1"
               | "MY.pointCountHabitat2"
@@ -3095,6 +3234,7 @@ export interface Form {
             spottingScopeUsed?: boolean;
             sunniness?: number;
             sykeButterFlyCensusWind?:
+              | ""
               | "MY.sykeButterFlyCensusWindEnumUnknown"
               | "MY.sykeButterFlyCensusWindEnum0"
               | "MY.sykeButterFlyCensusWindEnum1"
@@ -3104,6 +3244,7 @@ export interface Form {
               | "MY.sykeButterFlyCensusWindEnum5"
               | "MY.sykeButterFlyCensusWindEnum6";
             sykeButterFlyCensusWindEnd?:
+              | ""
               | "MY.sykeButterFlyCensusWindEnumUnknown"
               | "MY.sykeButterFlyCensusWindEnum0"
               | "MY.sykeButterFlyCensusWindEnum1"
@@ -3113,6 +3254,7 @@ export interface Form {
               | "MY.sykeButterFlyCensusWindEnum5"
               | "MY.sykeButterFlyCensusWindEnum6";
             sykeButterFlyCensusWindStart?:
+              | ""
               | "MY.sykeButterFlyCensusWindEnumUnknown"
               | "MY.sykeButterFlyCensusWindEnum0"
               | "MY.sykeButterFlyCensusWindEnum1"
@@ -3122,12 +3264,14 @@ export interface Form {
               | "MY.sykeButterFlyCensusWindEnum5"
               | "MY.sykeButterFlyCensusWindEnum6";
             waterbirdCensusPeriod?:
+              | ""
               | "MY.waterbirdCensusPeriodEnum1"
               | "MY.waterbirdCensusPeriodEnum2"
               | "MY.waterbirdCensusPeriodEnumJuvenile"
               | "MY.waterbirdCensusPeriodEnumAdditional"
               | "MY.waterbirdCensusPeriodEnumCombined";
             waterbirdHabitat?:
+              | ""
               | "MY.waterbirdHabitatEnum1"
               | "MY.waterbirdHabitatEnum2"
               | "MY.waterbirdHabitatEnum3"
@@ -3154,16 +3298,19 @@ export interface Form {
             LOXIAonPine?: number;
             LOXIAonSpruce?: number;
             abundanceBOMGAR?:
+              | ""
               | "WBC.speciesAbundanceEnum0"
               | "WBC.speciesAbundanceEnum1"
               | "WBC.speciesAbundanceEnum2"
               | "WBC.speciesAbundanceEnum3";
             abundancePINENU?:
+              | ""
               | "WBC.speciesAbundanceEnum0"
               | "WBC.speciesAbundanceEnum1"
               | "WBC.speciesAbundanceEnum2"
               | "WBC.speciesAbundanceEnum3";
             abundanceTURPIL?:
+              | ""
               | "WBC.speciesAbundanceEnum0"
               | "WBC.speciesAbundanceEnum1"
               | "WBC.speciesAbundanceEnum2"
@@ -3178,6 +3325,7 @@ export interface Form {
             birdFeederCountBiotopeG?: number;
             birdFeederCountBiotopeH?: number;
             cloudAndRain?:
+              | ""
               | "WBC.cloudAndRainEnum0"
               | "WBC.cloudAndRainEnum1"
               | "WBC.cloudAndRainEnum2"
@@ -3194,6 +3342,7 @@ export interface Form {
             feedingStationCountBiotopeG?: number;
             feedingStationCountBiotopeH?: number;
             iceCover?:
+              | ""
               | "WBC.iceCoverEnum0"
               | "WBC.iceCoverEnum1"
               | "WBC.iceCoverEnum2"
@@ -3203,6 +3352,7 @@ export interface Form {
             observerCount?: number;
             observerID?: number;
             pineConesAtCensus?:
+              | ""
               | "WBC.berriesAndConesEnum0"
               | "WBC.berriesAndConesEnum1"
               | "WBC.berriesAndConesEnum2"
@@ -3230,11 +3380,13 @@ export interface Form {
             routeLengthChangeBiotopeG?: number;
             routeLengthChangeBiotopeH?: number;
             snowAndIceOnTrees?:
+              | ""
               | "WBC.snowAndIceOnTreesEnum0"
               | "WBC.snowAndIceOnTreesEnum1"
               | "WBC.snowAndIceOnTreesEnum2"
               | "WBC.snowAndIceOnTreesEnum3";
             snowCover?:
+              | ""
               | "WBC.snowCoverEnum0"
               | "WBC.snowCoverEnum1"
               | "WBC.snowCoverEnum2"
@@ -3245,6 +3397,7 @@ export interface Form {
               | "WBC.snowCoverEnum7"
               | "WBC.snowCoverEnum8";
             sorbusBerriesAtCensus?:
+              | ""
               | "WBC.berriesAndConesEnum0"
               | "WBC.berriesAndConesEnum1"
               | "WBC.berriesAndConesEnum2"
@@ -3253,6 +3406,7 @@ export interface Form {
               | "WBC.berriesAndConesEnum5"
               | "WBC.berriesAndConesEnum6";
             sorbusBerriesEarlyFall?:
+              | ""
               | "WBC.berriesAndConesEnum0"
               | "WBC.berriesAndConesEnum1"
               | "WBC.berriesAndConesEnum2"
@@ -3261,6 +3415,7 @@ export interface Form {
               | "WBC.berriesAndConesEnum5"
               | "WBC.berriesAndConesEnum6";
             spruceConesAtCensus?:
+              | ""
               | "WBC.berriesAndConesEnum0"
               | "WBC.berriesAndConesEnum1"
               | "WBC.berriesAndConesEnum2"
@@ -3268,14 +3423,16 @@ export interface Form {
               | "WBC.berriesAndConesEnum4"
               | "WBC.berriesAndConesEnum5"
               | "WBC.berriesAndConesEnum6";
-            typeOfSnowCover?: "WBC.typeOfSnowCoverEnum0" | "WBC.typeOfSnowCoverEnum1" | "WBC.typeOfSnowCoverEnum2";
+            typeOfSnowCover?: "" | "WBC.typeOfSnowCoverEnum0" | "WBC.typeOfSnowCoverEnum1" | "WBC.typeOfSnowCoverEnum2";
             visibility?:
+              | ""
               | "WBC.visibilityEnum0"
               | "WBC.visibilityEnum1"
               | "WBC.visibilityEnum2"
               | "WBC.visibilityEnum3"
               | "WBC.visibilityEnum4";
             waterbodies?:
+              | ""
               | "WBC.waterbodiesEnum0"
               | "WBC.waterbodiesEnum1"
               | "WBC.waterbodiesEnum2"
@@ -3283,15 +3440,17 @@ export interface Form {
               | "WBC.waterbodiesEnum4"
               | "WBC.waterbodiesEnum5";
             wayOfTravel?:
+              | ""
               | "WBC.wayOfTravelEnum0"
               | "WBC.wayOfTravelEnum1"
               | "WBC.wayOfTravelEnum2"
               | "WBC.wayOfTravelEnum3"
               | "WBC.wayOfTravelEnum9";
             wayOfTravelNotes?: string;
-            wind?: "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
+            wind?: "" | "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
           };
           gatheringType?:
+            | ""
             | "MY.gatheringTypeForagingArea"
             | "MY.gatheringTypeBreedingAndRestingArea"
             | "MY.gatheringTypeCavityTree"
@@ -3308,6 +3467,7 @@ export interface Form {
            * Use for OLD SPECIMENS: What source was used to get coordinates based on locality names
            */
           georeferenceSource?:
+            | ""
             | "MY.georeferenceSourceKotka"
             | "MY.georeferenceSourceKarttapaikka"
             | "MY.georeferenceSourcePaikkatietoikkuna"
@@ -3324,6 +3484,7 @@ export interface Form {
             | "MY.georeferenceSourceOther"
             | "MY.georeferenceSourceUnknown";
           habitat?: (
+            | ""
             | "MY.habitatEnumValue1"
             | "MY.habitatEnumValue2"
             | "MY.habitatEnumValue3"
@@ -3413,6 +3574,7 @@ export interface Form {
             | "MY.habitatEnumValue86"
           )[];
           habitatAttributes?: (
+            | ""
             | "MY.habitatAttributesEnumValue1"
             | "MY.habitatAttributesEnumValue2"
             | "MY.habitatAttributesEnumValue3"
@@ -3453,12 +3615,14 @@ export interface Form {
           invasiveControlDangerous?: boolean;
           invasiveControlDangerousDescription?: string;
           invasiveControlEffectiveness?:
+            | ""
             | "MY.invasiveControlEffectivenessFull"
             | "MY.invasiveControlEffectivenessPartial"
             | "MY.invasiveControlEffectivenessNone"
             | "MY.invasiveControlEffectivenessNotFound";
           invasiveControlEffectivenessNotes?: string;
           invasiveControlMethods?: (
+            | ""
             | "MY.invasiveControlMethodsMechanical"
             | "MY.invasiveControlMethodsChemical"
             | "MY.invasiveControlMethodsBiological"
@@ -3530,6 +3694,7 @@ export interface Form {
            */
           percentageGivingSeeds?: number;
           predominantTree?:
+            | ""
             | "MX.37819"
             | "MX.37812"
             | "MX.37992"
@@ -3562,6 +3727,7 @@ export interface Form {
            * Main method for (usually intentional) sampling
            */
           samplingMethod?:
+            | ""
             | "MY.samplingMethodLight"
             | "MY.samplingMethodLightTrap"
             | "MY.samplingMethodTrap"
@@ -3620,6 +3786,7 @@ export interface Form {
           taxonCensus?: {
             censusTaxonID?: string;
             censusTaxonSetID?:
+              | ""
               | "MX.taxonSetSykeButterflyCensusPapilionoidea"
               | "MX.taxonSetSykeButterflyCensusOther"
               | "MX.taxonSetWaterbirdWaterbirds"
@@ -3646,12 +3813,14 @@ export interface Form {
            * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
            */
           publicityRestrictions?:
+            | ""
             | "MZ.publicityRestrictionsPublic"
             | "MZ.publicityRestrictionsProtected"
             | "MZ.publicityRestrictionsPrivate";
           units?: {
             id?: string;
             "@type"?: string;
+            "@context"?: string;
             /**
              * Diameter at breast height, in centimeters
              */
@@ -3662,6 +3831,7 @@ export interface Form {
             DNASampleLocation?: string;
             abundanceString?: string;
             abundanceUnit?:
+              | ""
               | "MY.abundanceUnitIndividualCount"
               | "MY.abundanceUnitPairCount"
               | "MY.abundanceUnitNest"
@@ -3699,6 +3869,7 @@ export interface Form {
             ankleInMillimeters?: string[];
             areaInSquareMeters?: number;
             atlasCode?:
+              | ""
               | "MY.atlasCodeEnum1"
               | "MY.atlasCodeEnum2"
               | "MY.atlasCodeEnum3"
@@ -3721,12 +3892,14 @@ export interface Form {
               | "MY.atlasCodeEnum81"
               | "MY.atlasCodeEnum82";
             batBehavior?:
+              | ""
               | "MY.batBehaviorHibernating"
               | "MY.batBehaviorRoosting"
               | "MY.batBehaviorHunting"
               | "MY.batBehaviorDead";
             beakInMillimeters?: string[];
             birdAge?:
+              | ""
               | "MY.birdAgePp"
               | "MY.birdAgePm"
               | "MY.birdAgeFl"
@@ -3748,6 +3921,7 @@ export interface Form {
               | "MY.birdAge8Kv";
             birdBehavior?: string[];
             birdPlumage?:
+              | ""
               | "MY.birdPlumageAd"
               | "MY.birdPlumageEijp"
               | "MY.birdPlumageImm"
@@ -3780,6 +3954,7 @@ export interface Form {
              */
             decayStage?: string;
             distance?:
+              | ""
               | "MY.distanceOverFlight"
               | "MY.distanceNear"
               | "MY.distanceQuiteFar"
@@ -3789,6 +3964,7 @@ export interface Form {
              * For palaeontological specimens, earliest possible geochronologic epoch or lowest chronostratigraphic series attributable to the stratigraphic horizon from which the specimen was collected
              */
             earliestEpochOrLowestSeries?:
+              | ""
               | "MY.epochOrSeriesCambrian"
               | "MY.epochOrSeriesCarboniferous"
               | "MY.epochOrSeriesCretaceous"
@@ -3807,6 +3983,7 @@ export interface Form {
              * Fruit type of the collected fruits, used for botanical garden accessions/seed bank.
              */
             fruitType?:
+              | ""
               | "MY.fruitTypeAchene"
               | "MY.fruitTypeBerry"
               | "MY.fruitTypeCapsule"
@@ -3842,6 +4019,7 @@ export interface Form {
             hostID?: string;
             hostInformalNameString?: string;
             indirectObservationType?:
+              | ""
               | "MY.indirectObservationTypeFeces"
               | "MY.indirectObservationTypeSnowTracks"
               | "MY.indirectObservationTypeUrine"
@@ -3873,6 +4051,7 @@ export interface Form {
              * For palaeontological specimens, latest possible geochronologic epoch or highest chronostratigraphic series attributable to the stratigraphic horizon from which the specimen was collected.
              */
             latestEpochOrHighestSeries?:
+              | ""
               | "MY.epochOrSeriesCambrian"
               | "MY.epochOrSeriesCarboniferous"
               | "MY.epochOrSeriesCretaceous"
@@ -3891,6 +4070,7 @@ export interface Form {
              * Life stage of the specimen
              */
             lifeStage?:
+              | ""
               | "MY.lifeStageEgg"
               | "MY.lifeStageLarva"
               | "MY.lifeStagePupa"
@@ -3958,6 +4138,7 @@ export interface Form {
              * According to German TRBA August 2015, which is more comprehensive than the EU or Finnish list for bacterial risk groups
              */
             microbiologicalRiskGroup?:
+              | ""
               | "MY.microbiologicalRiskGroup1"
               | "MY.microbiologicalRiskGroup2"
               | "MY.microbiologicalRiskGroup3"
@@ -3967,6 +4148,7 @@ export interface Form {
              */
             microscopy?: string;
             movingDirection?:
+              | ""
               | "MY.movingDirectionN"
               | "MY.movingDirectionNNE"
               | "MY.movingDirectionNE"
@@ -3988,10 +4170,11 @@ export interface Form {
              * Information on mutant microbial strain.
              */
             mutant?: string;
-            nativeStatus?: "MY.native" | "MY.nonNative";
+            nativeStatus?: "" | "MY.native" | "MY.nonNative";
             nestCount?: number;
             nestNotes?: string;
             nestType?:
+              | ""
               | "MY.nestTypeTreeCavity"
               | "MY.nestTypeTwig"
               | "MY.nestTypeNestBox"
@@ -4005,6 +4188,7 @@ export interface Form {
             pairCount?: number;
             pairCountOpinion?: number;
             plantLifeStage?:
+              | ""
               | "MY.plantLifeStageSterile"
               | "MY.plantLifeStageFertile"
               | "MY.plantLifeStageSeed"
@@ -4022,6 +4206,7 @@ export interface Form {
              * Status code for the plant (wild, alien etc.)
              */
             plantStatusCode?:
+              | ""
               | "MY.plantStatusCodeL"
               | "MY.plantStatusCodeA"
               | "MY.plantStatusCodeAV"
@@ -4064,6 +4249,7 @@ export interface Form {
              * Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.
              */
             preservation?: (
+              | ""
               | "MY.preservationPressed"
               | "MY.preservationDry"
               | "MY.preservationCriticalPointDrying"
@@ -4105,6 +4291,7 @@ export interface Form {
              * Origin or source of the garden accession
              */
             provenance?:
+              | ""
               | "MY.provenanceUnknown"
               | "MY.provenanceCultivated"
               | "MY.provenanceCultivatedUnsure"
@@ -4117,6 +4304,7 @@ export interface Form {
              * Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
              */
             recordBasis?:
+              | ""
               | "MY.recordBasisPreservedSpecimen"
               | "MY.recordBasisHumanObservation"
               | "MY.recordBasisHumanObservationSeen"
@@ -4141,6 +4329,7 @@ export interface Form {
              * What parts of the record are / have been in storage.
              */
             recordParts?: (
+              | ""
               | "MY.recordPartsBones"
               | "MY.recordPartsAntler"
               | "MY.recordPartsHead"
@@ -4182,6 +4371,7 @@ export interface Form {
              * Main method for (usually intentional) sampling
              */
             samplingMethod?:
+              | ""
               | "MY.samplingMethodLight"
               | "MY.samplingMethodLightTrap"
               | "MY.samplingMethodTrap"
@@ -4233,11 +4423,12 @@ export interface Form {
             /**
              * Maturity of the collected seeds, used for botanical garden accessions/seed bank.
              */
-            seedMaturity?: "MY.seedMaturityImmature" | "MY.seedMaturityMature" | "MY.seedMaturityMixed";
+            seedMaturity?: "" | "MY.seedMaturityImmature" | "MY.seedMaturityMature" | "MY.seedMaturityMixed";
             /**
              * Seed morphology of the collected seeds, used for botanical garden accessions/seed bank.
              */
             seedMorphology?:
+              | ""
               | "MY.seedMorphologyBent"
               | "MY.seedMorphologyBroad"
               | "MY.seedMorphologyCapitate"
@@ -4253,15 +4444,22 @@ export interface Form {
             /**
              * Sex of the individual(s)
              */
-            sex?: "MY.sexM" | "MY.sexF" | "MY.sexW" | "MY.sexU" | "MY.sexN" | "MY.sexX" | "MY.sexE" | "MY.sexC";
+            sex?: "" | "MY.sexM" | "MY.sexF" | "MY.sexW" | "MY.sexU" | "MY.sexN" | "MY.sexX" | "MY.sexE" | "MY.sexC";
             /**
              * E.g. how sex was determined, by whom and when.
              */
             sexNotes?: string;
             shortHandText?: string;
-            smell?: "MY.smellNotSmelled" | "MY.smellNoSmelled" | "MY.smellWeak" | "MY.smellModerate" | "MY.smellStrong";
+            smell?:
+              | ""
+              | "MY.smellNotSmelled"
+              | "MY.smellNoSmelled"
+              | "MY.smellWeak"
+              | "MY.smellModerate"
+              | "MY.smellStrong";
             smellNotes?: string;
             substrateClassification?:
+              | ""
               | "MY.substrateGround"
               | "MY.substrateGroundLowShrubs"
               | "MY.substrateGroundLichens"
@@ -4319,6 +4517,7 @@ export interface Form {
               | "MY.substrateDeadNeedle"
               | "MY.substrateDeadLeaf";
             substrateDecayStage?:
+              | ""
               | "MY.substrateDecayStageEnum1"
               | "MY.substrateDecayStageEnum2"
               | "MY.substrateDecayStageEnum3"
@@ -4329,6 +4528,7 @@ export interface Form {
             substrateSpeciesID?: string;
             substrateSpeciesInformalNameString?: string;
             substrateTreeClassification?: (
+              | ""
               | "MY.substrateTreeClassificationEnum1"
               | "MY.substrateTreeClassificationEnum2"
               | "MY.substrateTreeClassificationEnum3"
@@ -4337,9 +4537,16 @@ export interface Form {
               | "MY.substrateTreeClassificationEnum6"
             )[];
             tailInMillimeters?: string[];
-            taste?: "MY.tasteNotTasted" | "MY.tasteNoTaste" | "MY.tasteWeak" | "MY.tasteModerate" | "MY.tasteStrong";
+            taste?:
+              | ""
+              | "MY.tasteNotTasted"
+              | "MY.tasteNoTaste"
+              | "MY.tasteWeak"
+              | "MY.tasteModerate"
+              | "MY.tasteStrong";
             tasteNotes?: string;
             taxonConfidence?:
+              | ""
               | "MY.taxonConfidenceSure"
               | "MY.taxonConfidenceUnsure"
               | "MY.taxonConfidenceSubspeciesUnsure";
@@ -4347,6 +4554,7 @@ export interface Form {
             unitFact?: {
               autocompleteSelectedTaxonID?: string;
               glowWormMicrohabitat?:
+                | ""
                 | "MY.glowWormMicrohabitatEnum1"
                 | "MY.glowWormMicrohabitatEnum2"
                 | "MY.glowWormMicrohabitatEnum3"
@@ -4358,6 +4566,7 @@ export interface Form {
               individualCountInner?: number;
               individualCountOuter?: number;
               lineTransectObsType?:
+                | ""
                 | "MY.lineTransectObsTypeSong"
                 | "MY.lineTransectObsTypeOtherSound"
                 | "MY.lineTransectObsTypeSeen"
@@ -4370,18 +4579,24 @@ export interface Form {
                 | "MY.lineTransectObsTypeSeenBrood"
                 | "MY.lineTransectObsTypeSeenNest"
                 | "MY.lineTransectObsTypeUnknown";
-              lineTransectRouteFieldType?: "MY.lineTransectRouteFieldTypeInner" | "MY.lineTransectRouteFieldTypeOuter";
+              lineTransectRouteFieldType?:
+                | ""
+                | "MY.lineTransectRouteFieldTypeInner"
+                | "MY.lineTransectRouteFieldTypeOuter";
               lolifeDroppingsCount?:
+                | ""
                 | "MY.lolifeDroppingsCount1"
                 | "MY.lolifeDroppingsCount2"
                 | "MY.lolifeDroppingsCount3";
-              lolifeDroppingsQuality?: "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
+              lolifeDroppingsQuality?: "" | "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
               lolifeDroppingsType?:
+                | ""
                 | "MY.lolifeDroppingsTypeRock"
                 | "MY.lolifeDroppingsTypeTree"
                 | "MY.lolifeDroppingsTypeTreeGroup"
                 | "MY.lolifeDroppingsTypeOther";
               lolifeNestTree?:
+                | ""
                 | "MX.38590"
                 | "MX.37812"
                 | "MX.37999"
@@ -4394,10 +4609,12 @@ export interface Form {
               pointCountFlock?: string;
               runningWaterInVicinity?: boolean;
               waterbirdFemale?:
+                | ""
                 | "MY.waterbirdFemaleEnumYes"
                 | "MY.waterbirdFemaleEnumNo"
                 | "MY.waterbirdFemaleEnumLonelyPanicking";
               waterbirdJuvenileAgeClass?:
+                | ""
                 | "MY.waterbirdJuvenileAgeClassIa"
                 | "MY.waterbirdJuvenileAgeClassIb"
                 | "MY.waterbirdJuvenileAgeClassIc"
@@ -4409,6 +4626,7 @@ export interface Form {
               waterbirdJuvenileCountAccurate?: boolean;
               waterbirdObserverOpinionSelectedCensus?: boolean;
               waterbirdPairCountOpinionReasoning?:
+                | ""
                 | "MY.waterbirdPairCountOpinionReasoningEnum1"
                 | "MY.waterbirdPairCountOpinionReasoningEnum2"
                 | "MY.waterbirdPairCountOpinionReasoningEnum3"
@@ -4425,6 +4643,7 @@ export interface Form {
             unitGathering?: {
               id?: string;
               "@type"?: string;
+              "@context"?: string;
               dateBegin?: string;
               dateEnd?: string;
               geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
@@ -4440,7 +4659,7 @@ export interface Form {
             };
             unitType?: string[];
             weightInGrams?: string[];
-            wild?: "MY.wildWild" | "MY.wildUnknown" | "MY.wildNonWild";
+            wild?: "" | "MY.wildWild" | "MY.wildUnknown" | "MY.wildNonWild";
             wingInMillimeters?: string[];
             audio?: string[];
             images?: string[];
@@ -4448,12 +4667,14 @@ export interface Form {
              * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
              */
             publicityRestrictions?:
+              | ""
               | "MZ.publicityRestrictionsPublic"
               | "MZ.publicityRestrictionsProtected"
               | "MZ.publicityRestrictionsPrivate";
             identifications?: {
               id?: string;
               "@type"?: string;
+              "@context"?: string;
               "herbo:sortOrder"?: number;
               /**
                * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
@@ -4471,7 +4692,7 @@ export interface Form {
                * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
                */
               detDate?: string;
-              detMethod?: "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
+              detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
               /**
                * Name of the identifier and date of identification in original format (e.g. from the label), errors and all
                */
@@ -4481,6 +4702,7 @@ export interface Form {
                */
               genusQualifier?: string;
               identificationBasis?: (
+                | ""
                 | "MY.identificationBasisSeen"
                 | "MY.identificationBasisHeard"
                 | "MY.identificationBasisHandled"
@@ -4510,6 +4732,7 @@ export interface Form {
                * Taxonomic level of the epithet below species level
                */
               infraRank?:
+                | ""
                 | "MY.infraRankSsp"
                 | "MY.infraRankVar"
                 | "MY.infraRankBeta"
@@ -4557,6 +4780,7 @@ export interface Form {
                * Taxonomic level for the identification
                */
               taxonRank?:
+                | ""
                 | "MX.superdomain"
                 | "MX.domain"
                 | "MX.kingdom"
@@ -4625,6 +4849,7 @@ export interface Form {
                * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
                */
               publicityRestrictions?:
+                | ""
                 | "MZ.publicityRestrictionsPublic"
                 | "MZ.publicityRestrictionsProtected"
                 | "MZ.publicityRestrictionsPrivate";
@@ -4633,6 +4858,7 @@ export interface Form {
             typeSpecimens?: {
               id?: string;
               "@type"?: string;
+              "@context"?: string;
               /**
                * Which parent or larger collection this is part of.
                */
@@ -4665,6 +4891,7 @@ export interface Form {
                * Is this holotype, paratype, syntype etc...
                */
               typeStatus?:
+                | ""
                 | "MY.typeStatusType"
                 | "MY.typeStatusHolotype"
                 | "MY.typeStatusSyntype"
@@ -4702,6 +4929,7 @@ export interface Form {
                * Verification whether this really is a type?
                */
               typeVerification?:
+                | ""
                 | "MY.typeVerificationVerified"
                 | "MY.typeVerificationUnverified"
                 | "MY.typeVerificationProbable"
@@ -4718,6 +4946,7 @@ export interface Form {
                * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
                */
               publicityRestrictions?:
+                | ""
                 | "MZ.publicityRestrictionsPublic"
                 | "MZ.publicityRestrictionsProtected"
                 | "MZ.publicityRestrictionsPrivate";
@@ -4726,12 +4955,13 @@ export interface Form {
         }[]
       ];
     };
-    printType?: "MHL.printTypeLineTransect";
+    printType?: "" | "MHL.printTypeLineTransect";
     /**
      * Users need to have permission to access the form
      */
-    restrictAccess?: "MHL.restrictAccessStrict" | "MHL.restrictAccessLoose";
+    restrictAccess?: "" | "MHL.restrictAccessStrict" | "MHL.restrictAccessLoose";
     resultServiceType?:
+      | ""
       | "MHL.resultServiceTypeLineTransect"
       | "MHL.resultServiceTypeNafi"
       | "MHL.resultServiceTypeBirdPointCount"
@@ -4790,7 +5020,7 @@ export interface Form {
      * Makes the form use named places
      */
     useNamedPlaces?: boolean;
-    viewerType?: "MHL.viewerTypeLineTransect" | "MHL.viewerTypeBirdPointCount";
+    viewerType?: "" | "MHL.viewerTypeLineTransect" | "MHL.viewerTypeBirdPointCount";
     warnEditingOldDocument?: boolean;
     /**
      * Duration in ISO 8601 duration format. Defaults to P1W (one week)
@@ -4805,7 +5035,7 @@ export interface Form {
    * Shown at sidebar and & as browser title
    */
   shortTitle?: string;
-  supportedLanguage?: ("en" | "fi" | "sv")[];
+  supportedLanguage?: ("" | "en" | "fi" | "sv")[];
   title?: string;
   translations?: {
     [k: string]: unknown | undefined;

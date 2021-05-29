@@ -33,6 +33,7 @@
     "censusTaxonSetID": {
       "type": "string",
       "enum": [
+        "",
         "MX.taxonSetSykeButterflyCensusPapilionoidea",
         "MX.taxonSetSykeButterflyCensusOther",
         "MX.taxonSetWaterbirdWaterbirds",
@@ -44,6 +45,7 @@
         "MVL.1201"
       ],
       "enumNames": [
+        "",
         "SYKE's Butterfly Census: Butterflies",
         "SYKE's Butterly Census: Other Macrolepidoptera",
         "Waterbird Census: Waterbirds",

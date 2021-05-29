@@ -693,6 +693,9 @@
               "@type": {
                 "type": "keyword"
               },
+              "@context": {
+                "type": "keyword"
+              },
               "secureLevel": {
                 "type": "keyword",
                 "ignore_above": 200
@@ -819,6 +822,9 @@
                     "type": "keyword"
                   },
                   "@type": {
+                    "type": "keyword"
+                  },
+                  "@context": {
                     "type": "keyword"
                   },
                   "acknowledgeNoUnitsInCensus": {
@@ -1396,6 +1402,9 @@
                     "type": "keyword"
                   },
                   "@type": {
+                    "type": "keyword"
+                  },
+                  "@context": {
                     "type": "keyword"
                   },
                   "AFEQuadrat": {
@@ -2065,6 +2074,9 @@
                       "@type": {
                         "type": "keyword"
                       },
+                      "@context": {
+                        "type": "keyword"
+                      },
                       "DBH": {
                         "type": "keyword",
                         "ignore_above": 200
@@ -2623,6 +2635,9 @@
                           "@type": {
                             "type": "keyword"
                           },
+                          "@context": {
+                            "type": "keyword"
+                          },
                           "dateBegin": {
                             "type": "date"
                           },
@@ -2683,6 +2698,9 @@
                             "type": "keyword"
                           },
                           "@type": {
+                            "type": "keyword"
+                          },
+                          "@context": {
                             "type": "keyword"
                           },
                           "herbo:sortOrder": {
@@ -2799,6 +2817,9 @@
                             "type": "keyword"
                           },
                           "@type": {
+                            "type": "keyword"
+                          },
+                          "@context": {
                             "type": "keyword"
                           },
                           "isPartOf": {

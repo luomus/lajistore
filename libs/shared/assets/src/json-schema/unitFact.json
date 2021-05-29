@@ -33,6 +33,7 @@
     "glowWormMicrohabitat": {
       "type": "string",
       "enum": [
+        "",
         "MY.glowWormMicrohabitatEnum1",
         "MY.glowWormMicrohabitatEnum2",
         "MY.glowWormMicrohabitatEnum3",
@@ -42,6 +43,7 @@
         "MY.glowWormMicrohabitatEnumOther"
       ],
       "enumNames": [
+        "",
         "Short grass",
         "Long grass",
         "Under tree",
@@ -78,6 +80,7 @@
     "lineTransectObsType": {
       "type": "string",
       "enum": [
+        "",
         "MY.lineTransectObsTypeSong",
         "MY.lineTransectObsTypeOtherSound",
         "MY.lineTransectObsTypeSeen",
@@ -92,6 +95,7 @@
         "MY.lineTransectObsTypeUnknown"
       ],
       "enumNames": [
+        "",
         "Singing",
         "Other noises",
         "Seen",
@@ -112,10 +116,12 @@
     "lineTransectRouteFieldType": {
       "type": "string",
       "enum": [
+        "",
         "MY.lineTransectRouteFieldTypeInner",
         "MY.lineTransectRouteFieldTypeOuter"
       ],
       "enumNames": [
+        "",
         "P - Inner route field",
         "A - Outer route field"
       ],
@@ -126,11 +132,13 @@
     "lolifeDroppingsCount": {
       "type": "string",
       "enum": [
+        "",
         "MY.lolifeDroppingsCount1",
         "MY.lolifeDroppingsCount2",
         "MY.lolifeDroppingsCount3"
       ],
       "enumNames": [
+        "",
         "Muutama",
         "Kymmeniä",
         "Satoja"
@@ -142,10 +150,12 @@
     "lolifeDroppingsQuality": {
       "type": "string",
       "enum": [
+        "",
         "MY.lolifeDroppingsQuality1",
         "MY.lolifeDroppingsQuality2"
       ],
       "enumNames": [
+        "",
         "Vanhoja",
         "Tuoreita"
       ],
@@ -156,12 +166,14 @@
     "lolifeDroppingsType": {
       "type": "string",
       "enum": [
+        "",
         "MY.lolifeDroppingsTypeRock",
         "MY.lolifeDroppingsTypeTree",
         "MY.lolifeDroppingsTypeTreeGroup",
         "MY.lolifeDroppingsTypeOther"
       ],
       "enumNames": [
+        "",
         "On top of rock",
         "Single tree",
         "Group of trees",
@@ -174,6 +186,7 @@
     "lolifeNestTree": {
       "type": "string",
       "enum": [
+        "",
         "MX.38590",
         "MX.37812",
         "MX.37999",
@@ -183,6 +196,7 @@
         "MY.lolifeNestTreeOther"
       ],
       "enumNames": [
+        "",
         "Aspen",
         "Spruce",
         "Downy birch",
@@ -224,11 +238,13 @@
     "waterbirdFemale": {
       "type": "string",
       "enum": [
+        "",
         "MY.waterbirdFemaleEnumYes",
         "MY.waterbirdFemaleEnumNo",
         "MY.waterbirdFemaleEnumLonelyPanicking"
       ],
       "enumNames": [
+        "",
         "yes",
         "no",
         "lonely panicking female"
@@ -240,6 +256,7 @@
     "waterbirdJuvenileAgeClass": {
       "type": "string",
       "enum": [
+        "",
         "MY.waterbirdJuvenileAgeClassIa",
         "MY.waterbirdJuvenileAgeClassIb",
         "MY.waterbirdJuvenileAgeClassIc",
@@ -250,6 +267,7 @@
         "MY.waterbirdJuvenileAgeClassUnknown"
       ],
       "enumNames": [
+        "",
         "1. Aivan pienet kirkasväriset untuvapallot (Ia)",
         "2. Pienet, hieman haalistuneet untuvikot (Ib)",
         "3. Pienehköt, haalistuneet untuvikkopoikaset (Ic)",
@@ -278,12 +296,14 @@
     "waterbirdPairCountOpinionReasoning": {
       "type": "string",
       "enum": [
+        "",
         "MY.waterbirdPairCountOpinionReasoningEnum1",
         "MY.waterbirdPairCountOpinionReasoningEnum2",
         "MY.waterbirdPairCountOpinionReasoningEnum3",
         "MY.waterbirdPairCountOpinionReasoningEnumOther"
       ],
       "enumNames": [
+        "",
         "1) Laji ei varmasti pesi kohteella, linnut ruokailevia (esim. muuttomatkalla)",
         "2) Alueella levähti 1. laskennan aikaan vielä runsaasti muuttajia ja tulkinta 2. laskennan perusteella",
         "3) Lajin pesä(t) ovat jääneet jo kasvaneen järviruovikon suojiin 2. laskennassa, tulkinta tehty 1. laskennan perusteella",

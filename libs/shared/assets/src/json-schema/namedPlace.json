@@ -43,9 +43,16 @@
           "subject": "@type",
           "title": "Type for the Submissions"
         },
+        "@context": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "@context",
+          "title": "Context for the Submissions"
+        },
         "secureLevel": {
           "type": "string",
           "enum": [
+            "",
             "MX.secureLevelNone",
             "MX.secureLevelKM1",
             "MX.secureLevelKM5",
@@ -57,6 +64,7 @@
             "MX.secureLevelNoShow"
           ],
           "enumNames": [
+            "",
             "None",
             "1 km",
             "5 km",
@@ -203,11 +211,13 @@
           "items": {
             "type": "string",
             "enum": [
+              "",
               "MY.dataOriginPaperForm",
               "MY.dataOriginWebForm",
               "MY.dataOriginSpreadsheetFile"
             ],
             "enumNames": [
+              "",
               "Paper form",
               "Web form",
               "File upload"
@@ -328,6 +338,12 @@
               "subject": "@type",
               "title": "Type for the Global gathering event"
             },
+            "@context": {
+              "type": "string",
+              "range": "xsd:string",
+              "subject": "@context",
+              "title": "Context for the Global gathering event"
+            },
             "acknowledgeNoUnitsInCensus": {
               "type": "boolean",
               "range": "xsd:boolean",
@@ -337,6 +353,7 @@
             "artificialLight": {
               "type": "string",
               "enum": [
+                "",
                 "MY.artificialLightEnum1",
                 "MY.artificialLightEnum2",
                 "MY.artificialLightEnum3",
@@ -344,6 +361,7 @@
                 "MY.artificialLightEnum5"
               ],
               "enumNames": [
+                "",
                 "Artificial light in close proximity (closer than 10m)",
                 "Artificial light in moderate proximity (10 - 50 m)",
                 "Artificial light far away (over 50m)",
@@ -394,6 +412,7 @@
             "cloudCover": {
               "type": "string",
               "enum": [
+                "",
                 "MY.cloudCoverOktaEnumUnknown",
                 "MY.cloudCoverOktaEnum0",
                 "MY.cloudCoverOktaEnum1",
@@ -406,6 +425,7 @@
                 "MY.cloudCoverOktaEnum8"
               ],
               "enumNames": [
+                "",
                 "Ei tietoa",
                 "0 -Täysin pilvetöntä",
                 "1 - Noin 1/8 taivaasta pilvien peitossa",
@@ -424,6 +444,7 @@
             "cloudCoverEnd": {
               "type": "string",
               "enum": [
+                "",
                 "MY.cloudCoverOktaEnumUnknown",
                 "MY.cloudCoverOktaEnum0",
                 "MY.cloudCoverOktaEnum1",
@@ -436,6 +457,7 @@
                 "MY.cloudCoverOktaEnum8"
               ],
               "enumNames": [
+                "",
                 "Ei tietoa",
                 "0 -Täysin pilvetöntä",
                 "1 - Noin 1/8 taivaasta pilvien peitossa",
@@ -454,6 +476,7 @@
             "cloudCoverStart": {
               "type": "string",
               "enum": [
+                "",
                 "MY.cloudCoverOktaEnumUnknown",
                 "MY.cloudCoverOktaEnum0",
                 "MY.cloudCoverOktaEnum1",
@@ -466,6 +489,7 @@
                 "MY.cloudCoverOktaEnum8"
               ],
               "enumNames": [
+                "",
                 "Ei tietoa",
                 "0 -Täysin pilvetöntä",
                 "1 - Noin 1/8 taivaasta pilvien peitossa",
@@ -503,11 +527,13 @@
                 "batCollector": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.batCollectorAlone",
                     "MY.batCollectorWithProjectGroupMember",
                     "MY.batCollectorSomeoneElse"
                   ],
                   "enumNames": [
+                    "",
                     "Alone",
                     "With someone from the project group",
                     "With someone else"
@@ -573,6 +599,7 @@
                 "pointCountHabitat": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.pointCountHabitat0",
                     "MY.pointCountHabitat1",
                     "MY.pointCountHabitat2",
@@ -593,6 +620,7 @@
                     "MY.pointCountHabitat17"
                   ],
                   "enumNames": [
+                    "",
                     "Tuntematon (0)",
                     "Kuusimetsä (1)",
                     "Mäntymetsä (2)",
@@ -639,6 +667,7 @@
                 "sykeButterFlyCensusWind": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.sykeButterFlyCensusWindEnumUnknown",
                     "MY.sykeButterFlyCensusWindEnum0",
                     "MY.sykeButterFlyCensusWindEnum1",
@@ -649,6 +678,7 @@
                     "MY.sykeButterFlyCensusWindEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "0 - Tyyntä, savu nousee pystysuoraan",
                     "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -665,6 +695,7 @@
                 "sykeButterFlyCensusWindEnd": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.sykeButterFlyCensusWindEnumUnknown",
                     "MY.sykeButterFlyCensusWindEnum0",
                     "MY.sykeButterFlyCensusWindEnum1",
@@ -675,6 +706,7 @@
                     "MY.sykeButterFlyCensusWindEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "0 - Tyyntä, savu nousee pystysuoraan",
                     "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -691,6 +723,7 @@
                 "sykeButterFlyCensusWindStart": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.sykeButterFlyCensusWindEnumUnknown",
                     "MY.sykeButterFlyCensusWindEnum0",
                     "MY.sykeButterFlyCensusWindEnum1",
@@ -701,6 +734,7 @@
                     "MY.sykeButterFlyCensusWindEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "0 - Tyyntä, savu nousee pystysuoraan",
                     "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -717,6 +751,7 @@
                 "waterbirdCensusPeriod": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.waterbirdCensusPeriodEnum1",
                     "MY.waterbirdCensusPeriodEnum2",
                     "MY.waterbirdCensusPeriodEnumJuvenile",
@@ -724,6 +759,7 @@
                     "MY.waterbirdCensusPeriodEnumCombined"
                   ],
                   "enumNames": [
+                    "",
                     "1. laskenta",
                     "2. laskenta",
                     "Poikuelaskenta",
@@ -737,6 +773,7 @@
                 "waterbirdHabitat": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.waterbirdHabitatEnum1",
                     "MY.waterbirdHabitatEnum2",
                     "MY.waterbirdHabitatEnum3",
@@ -749,6 +786,7 @@
                     "MY.waterbirdHabitatEnum10"
                   ],
                   "enumNames": [
+                    "",
                     "1. Karu, metsä- tai suorantainen järvi tai lampi",
                     "2. Syvä, osittain rehevöitynyt järvi, lahdissa laajahkoja ruovikoita",
                     "3. Matala, metsä- tai suorantainen runsaskasvustoinen järvi tai lampi",
@@ -872,12 +910,14 @@
                 "abundanceBOMGAR": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.speciesAbundanceEnum0",
                     "WBC.speciesAbundanceEnum1",
                     "WBC.speciesAbundanceEnum2",
                     "WBC.speciesAbundanceEnum3"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ohi",
                     "2. Samanaikainen",
@@ -890,12 +930,14 @@
                 "abundancePINENU": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.speciesAbundanceEnum0",
                     "WBC.speciesAbundanceEnum1",
                     "WBC.speciesAbundanceEnum2",
                     "WBC.speciesAbundanceEnum3"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ohi",
                     "2. Samanaikainen",
@@ -908,12 +950,14 @@
                 "abundanceTURPIL": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.speciesAbundanceEnum0",
                     "WBC.speciesAbundanceEnum1",
                     "WBC.speciesAbundanceEnum2",
                     "WBC.speciesAbundanceEnum3"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ohi",
                     "2. Samanaikainen",
@@ -989,6 +1033,7 @@
                 "cloudAndRain": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.cloudAndRainEnum0",
                     "WBC.cloudAndRainEnum1",
                     "WBC.cloudAndRainEnum2",
@@ -996,6 +1041,7 @@
                     "WBC.cloudAndRainEnum4"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "1 - Enimmäkseen kirkasta",
                     "2 - Vaihtelevaa pilvisyyttä",
@@ -1078,6 +1124,7 @@
                 "iceCover": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.iceCoverEnum0",
                     "WBC.iceCoverEnum1",
                     "WBC.iceCoverEnum2",
@@ -1085,6 +1132,7 @@
                     "WBC.iceCoverEnum4"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Vesistöt sulat",
                     "2. Vain rannat/lahdet jäässä",
@@ -1118,6 +1166,7 @@
                 "pineConesAtCensus": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.berriesAndConesEnum0",
                     "WBC.berriesAndConesEnum1",
                     "WBC.berriesAndConesEnum2",
@@ -1127,6 +1176,7 @@
                     "WBC.berriesAndConesEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ei lainkaan",
                     "2. Hyvin vähän",
@@ -1266,12 +1316,14 @@
                 "snowAndIceOnTrees": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.snowAndIceOnTreesEnum0",
                     "WBC.snowAndIceOnTreesEnum1",
                     "WBC.snowAndIceOnTreesEnum2",
                     "WBC.snowAndIceOnTreesEnum3"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ei ollenkaan",
                     "2. Vähän",
@@ -1284,6 +1336,7 @@
                 "snowCover": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.snowCoverEnum0",
                     "WBC.snowCoverEnum1",
                     "WBC.snowCoverEnum2",
@@ -1295,6 +1348,7 @@
                     "WBC.snowCoverEnum8"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ei lunta",
                     "2. Lunta vain paikoitellen",
@@ -1312,6 +1366,7 @@
                 "sorbusBerriesAtCensus": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.berriesAndConesEnum0",
                     "WBC.berriesAndConesEnum1",
                     "WBC.berriesAndConesEnum2",
@@ -1321,6 +1376,7 @@
                     "WBC.berriesAndConesEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ei lainkaan",
                     "2. Hyvin vähän",
@@ -1336,6 +1392,7 @@
                 "sorbusBerriesEarlyFall": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.berriesAndConesEnum0",
                     "WBC.berriesAndConesEnum1",
                     "WBC.berriesAndConesEnum2",
@@ -1345,6 +1402,7 @@
                     "WBC.berriesAndConesEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ei lainkaan",
                     "2. Hyvin vähän",
@@ -1360,6 +1418,7 @@
                 "spruceConesAtCensus": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.berriesAndConesEnum0",
                     "WBC.berriesAndConesEnum1",
                     "WBC.berriesAndConesEnum2",
@@ -1369,6 +1428,7 @@
                     "WBC.berriesAndConesEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ei lainkaan",
                     "2. Hyvin vähän",
@@ -1384,11 +1444,13 @@
                 "typeOfSnowCover": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.typeOfSnowCoverEnum0",
                     "WBC.typeOfSnowCoverEnum1",
                     "WBC.typeOfSnowCoverEnum2"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa tai ei lunta",
                     "1. Lumi pehmeää",
                     "2. Lumessa kova hankikerros"
@@ -1400,6 +1462,7 @@
                 "visibility": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.visibilityEnum0",
                     "WBC.visibilityEnum1",
                     "WBC.visibilityEnum2",
@@ -1407,6 +1470,7 @@
                     "WBC.visibilityEnum4"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "Hyvä",
                     "Hyvä-kohtalainen",
@@ -1420,6 +1484,7 @@
                 "waterbodies": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.waterbodiesEnum0",
                     "WBC.waterbodiesEnum1",
                     "WBC.waterbodiesEnum2",
@@ -1428,6 +1493,7 @@
                     "WBC.waterbodiesEnum5"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "Meren rantaa",
                     "Järven rantaa",
@@ -1442,6 +1508,7 @@
                 "wayOfTravel": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.wayOfTravelEnum0",
                     "WBC.wayOfTravelEnum1",
                     "WBC.wayOfTravelEnum2",
@@ -1449,6 +1516,7 @@
                     "WBC.wayOfTravelEnum9"
                   ],
                   "enumNames": [
+                    "",
                     "Jalkaisin",
                     "Suksilla",
                     "Muu, mikä",
@@ -1468,6 +1536,7 @@
                 "wind": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.windEnum0",
                     "WBC.windEnum1",
                     "WBC.windEnum2",
@@ -1475,6 +1544,7 @@
                     "WBC.windEnum4"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "Tyyntä-heikkoa",
                     "Heikkoa-kohtalaista",
@@ -1550,6 +1620,7 @@
             "rainIntensity": {
               "type": "string",
               "enum": [
+                "",
                 "MY.rainIntensityEnumNoRain",
                 "MY.rainIntensityEnumLightRain",
                 "MY.rainIntensityEnumModerateRain",
@@ -1557,6 +1628,7 @@
                 "MY.rainIntensityEnumTorrentialRain"
               ],
               "enumNames": [
+                "",
                 "No rain",
                 "Light rain",
                 "Moderate rain",
@@ -1610,6 +1682,7 @@
                   "censusTaxonSetID": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MX.taxonSetSykeButterflyCensusPapilionoidea",
                       "MX.taxonSetSykeButterflyCensusOther",
                       "MX.taxonSetWaterbirdWaterbirds",
@@ -1621,6 +1694,7 @@
                       "MVL.1201"
                     ],
                     "enumNames": [
+                      "",
                       "SYKE's Butterfly Census: Butterflies",
                       "SYKE's Butterly Census: Other Macrolepidoptera",
                       "Waterbird Census: Waterbirds",
@@ -1788,6 +1862,7 @@
           "items": {
             "type": "string",
             "enum": [
+              "",
               "MY.preservationPressed",
               "MY.preservationDry",
               "MY.preservationCriticalPointDrying",
@@ -1826,6 +1901,7 @@
               "MY.preservationFrozenMinus80CAndEthanolMinus20C"
             ],
             "enumNames": [
+              "",
               "Dry and pressed",
               "Dry",
               "Critical-point drying",
@@ -1949,6 +2025,7 @@
         "status": {
           "type": "string",
           "enum": [
+            "",
             "MY.statusOk",
             "MY.statusMissing",
             "MY.statusUnrecoverable",
@@ -1967,6 +2044,7 @@
             "MY.statusNoVoucherRetained"
           ],
           "enumNames": [
+            "",
             "Ok",
             "Missing (but could still be recovered)",
             "Unrecoverable (location known, bet can't get it back)",
@@ -2034,6 +2112,7 @@
           "items": {
             "type": "string",
             "enum": [
+              "",
               "MY.verificationStatusOk",
               "MY.verificationStatusVerify",
               "MY.verificationStatusComplete",
@@ -2043,6 +2122,7 @@
               "MY.verificationStatusVerifyCoordinates"
             ],
             "enumNames": [
+              "",
               "ok",
               "needs verification",
               "needs completion",
@@ -2117,11 +2197,13 @@
         "publicityRestrictions": {
           "type": "string",
           "enum": [
+            "",
             "MZ.publicityRestrictionsPublic",
             "MZ.publicityRestrictionsProtected",
             "MZ.publicityRestrictionsPrivate"
           ],
           "enumNames": [
+            "",
             "public",
             "protected",
             "private"
@@ -2158,6 +2240,12 @@
                 "range": "xsd:string",
                 "subject": "@type",
                 "title": "Type for the Gathering event"
+              },
+              "@context": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "@context",
+                "title": "Context for the Gathering event"
               },
               "AFEQuadrat": {
                 "type": "string",
@@ -2219,6 +2307,7 @@
                 "items": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.batHabitatYardCityCentre",
                     "MY.batHabitatYardSuburbs",
                     "MY.batHabitatYardRural",
@@ -2237,6 +2326,7 @@
                     "MY.batHabitatCountryside"
                   ],
                   "enumNames": [
+                    "",
                     "Yard (city centre)",
                     "Yard (suburbs)",
                     "Yard (rural)",
@@ -2328,6 +2418,7 @@
               "coordinateSource": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.coordinateSourceGps",
                   "MY.coordinateSourcePeruskartta",
                   "MY.coordinateSourcePapermap",
@@ -2339,6 +2430,7 @@
                   "MY.coordinateSourceUnknown"
                 ],
                 "enumNames": [
+                  "",
                   "GPS",
                   "Peruskartta paper map",
                   "Other paper map",
@@ -2357,6 +2449,7 @@
               "coordinateSystem": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.coordinateSystemYkj",
                   "MY.coordinateSystemWgs84",
                   "MY.coordinateSystemWgs84dms",
@@ -2366,6 +2459,7 @@
                   "MY.coordinateSystemDms"
                 ],
                 "enumNames": [
+                  "",
                   "Uniform grid (YKJ)",
                   "WGS84 and ETRS89, decimal degrees",
                   "WGS84 or ETRS89, degrees minutes (seconds)",
@@ -2447,6 +2541,7 @@
               "forestVegetationZone": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.forestVegetationZone1a",
                   "MY.forestVegetationZone1b",
                   "MY.forestVegetationZone2a",
@@ -2460,6 +2555,7 @@
                   "MY.forestVegetationZone4d"
                 ],
                 "enumNames": [
+                  "",
                   "1a Hemiboreal, Åland",
                   "1b Hemiboreal, Oak zone",
                   "2a Southern boreal, Southwestern Finland and Southern Ostrobothnia",
@@ -2487,11 +2583,13 @@
                   "batCollector": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.batCollectorAlone",
                       "MY.batCollectorWithProjectGroupMember",
                       "MY.batCollectorSomeoneElse"
                     ],
                     "enumNames": [
+                      "",
                       "Alone",
                       "With someone from the project group",
                       "With someone else"
@@ -2557,6 +2655,7 @@
                   "pointCountHabitat": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.pointCountHabitat0",
                       "MY.pointCountHabitat1",
                       "MY.pointCountHabitat2",
@@ -2577,6 +2676,7 @@
                       "MY.pointCountHabitat17"
                     ],
                     "enumNames": [
+                      "",
                       "Tuntematon (0)",
                       "Kuusimetsä (1)",
                       "Mäntymetsä (2)",
@@ -2623,6 +2723,7 @@
                   "sykeButterFlyCensusWind": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.sykeButterFlyCensusWindEnumUnknown",
                       "MY.sykeButterFlyCensusWindEnum0",
                       "MY.sykeButterFlyCensusWindEnum1",
@@ -2633,6 +2734,7 @@
                       "MY.sykeButterFlyCensusWindEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "0 - Tyyntä, savu nousee pystysuoraan",
                       "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -2649,6 +2751,7 @@
                   "sykeButterFlyCensusWindEnd": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.sykeButterFlyCensusWindEnumUnknown",
                       "MY.sykeButterFlyCensusWindEnum0",
                       "MY.sykeButterFlyCensusWindEnum1",
@@ -2659,6 +2762,7 @@
                       "MY.sykeButterFlyCensusWindEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "0 - Tyyntä, savu nousee pystysuoraan",
                       "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -2675,6 +2779,7 @@
                   "sykeButterFlyCensusWindStart": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.sykeButterFlyCensusWindEnumUnknown",
                       "MY.sykeButterFlyCensusWindEnum0",
                       "MY.sykeButterFlyCensusWindEnum1",
@@ -2685,6 +2790,7 @@
                       "MY.sykeButterFlyCensusWindEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "0 - Tyyntä, savu nousee pystysuoraan",
                       "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -2701,6 +2807,7 @@
                   "waterbirdCensusPeriod": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.waterbirdCensusPeriodEnum1",
                       "MY.waterbirdCensusPeriodEnum2",
                       "MY.waterbirdCensusPeriodEnumJuvenile",
@@ -2708,6 +2815,7 @@
                       "MY.waterbirdCensusPeriodEnumCombined"
                     ],
                     "enumNames": [
+                      "",
                       "1. laskenta",
                       "2. laskenta",
                       "Poikuelaskenta",
@@ -2721,6 +2829,7 @@
                   "waterbirdHabitat": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.waterbirdHabitatEnum1",
                       "MY.waterbirdHabitatEnum2",
                       "MY.waterbirdHabitatEnum3",
@@ -2733,6 +2842,7 @@
                       "MY.waterbirdHabitatEnum10"
                     ],
                     "enumNames": [
+                      "",
                       "1. Karu, metsä- tai suorantainen järvi tai lampi",
                       "2. Syvä, osittain rehevöitynyt järvi, lahdissa laajahkoja ruovikoita",
                       "3. Matala, metsä- tai suorantainen runsaskasvustoinen järvi tai lampi",
@@ -2856,12 +2966,14 @@
                   "abundanceBOMGAR": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.speciesAbundanceEnum0",
                       "WBC.speciesAbundanceEnum1",
                       "WBC.speciesAbundanceEnum2",
                       "WBC.speciesAbundanceEnum3"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ohi",
                       "2. Samanaikainen",
@@ -2874,12 +2986,14 @@
                   "abundancePINENU": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.speciesAbundanceEnum0",
                       "WBC.speciesAbundanceEnum1",
                       "WBC.speciesAbundanceEnum2",
                       "WBC.speciesAbundanceEnum3"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ohi",
                       "2. Samanaikainen",
@@ -2892,12 +3006,14 @@
                   "abundanceTURPIL": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.speciesAbundanceEnum0",
                       "WBC.speciesAbundanceEnum1",
                       "WBC.speciesAbundanceEnum2",
                       "WBC.speciesAbundanceEnum3"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ohi",
                       "2. Samanaikainen",
@@ -2973,6 +3089,7 @@
                   "cloudAndRain": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.cloudAndRainEnum0",
                       "WBC.cloudAndRainEnum1",
                       "WBC.cloudAndRainEnum2",
@@ -2980,6 +3097,7 @@
                       "WBC.cloudAndRainEnum4"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "1 - Enimmäkseen kirkasta",
                       "2 - Vaihtelevaa pilvisyyttä",
@@ -3062,6 +3180,7 @@
                   "iceCover": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.iceCoverEnum0",
                       "WBC.iceCoverEnum1",
                       "WBC.iceCoverEnum2",
@@ -3069,6 +3188,7 @@
                       "WBC.iceCoverEnum4"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Vesistöt sulat",
                       "2. Vain rannat/lahdet jäässä",
@@ -3102,6 +3222,7 @@
                   "pineConesAtCensus": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.berriesAndConesEnum0",
                       "WBC.berriesAndConesEnum1",
                       "WBC.berriesAndConesEnum2",
@@ -3111,6 +3232,7 @@
                       "WBC.berriesAndConesEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ei lainkaan",
                       "2. Hyvin vähän",
@@ -3250,12 +3372,14 @@
                   "snowAndIceOnTrees": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.snowAndIceOnTreesEnum0",
                       "WBC.snowAndIceOnTreesEnum1",
                       "WBC.snowAndIceOnTreesEnum2",
                       "WBC.snowAndIceOnTreesEnum3"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ei ollenkaan",
                       "2. Vähän",
@@ -3268,6 +3392,7 @@
                   "snowCover": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.snowCoverEnum0",
                       "WBC.snowCoverEnum1",
                       "WBC.snowCoverEnum2",
@@ -3279,6 +3404,7 @@
                       "WBC.snowCoverEnum8"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ei lunta",
                       "2. Lunta vain paikoitellen",
@@ -3296,6 +3422,7 @@
                   "sorbusBerriesAtCensus": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.berriesAndConesEnum0",
                       "WBC.berriesAndConesEnum1",
                       "WBC.berriesAndConesEnum2",
@@ -3305,6 +3432,7 @@
                       "WBC.berriesAndConesEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ei lainkaan",
                       "2. Hyvin vähän",
@@ -3320,6 +3448,7 @@
                   "sorbusBerriesEarlyFall": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.berriesAndConesEnum0",
                       "WBC.berriesAndConesEnum1",
                       "WBC.berriesAndConesEnum2",
@@ -3329,6 +3458,7 @@
                       "WBC.berriesAndConesEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ei lainkaan",
                       "2. Hyvin vähän",
@@ -3344,6 +3474,7 @@
                   "spruceConesAtCensus": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.berriesAndConesEnum0",
                       "WBC.berriesAndConesEnum1",
                       "WBC.berriesAndConesEnum2",
@@ -3353,6 +3484,7 @@
                       "WBC.berriesAndConesEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ei lainkaan",
                       "2. Hyvin vähän",
@@ -3368,11 +3500,13 @@
                   "typeOfSnowCover": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.typeOfSnowCoverEnum0",
                       "WBC.typeOfSnowCoverEnum1",
                       "WBC.typeOfSnowCoverEnum2"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa tai ei lunta",
                       "1. Lumi pehmeää",
                       "2. Lumessa kova hankikerros"
@@ -3384,6 +3518,7 @@
                   "visibility": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.visibilityEnum0",
                       "WBC.visibilityEnum1",
                       "WBC.visibilityEnum2",
@@ -3391,6 +3526,7 @@
                       "WBC.visibilityEnum4"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "Hyvä",
                       "Hyvä-kohtalainen",
@@ -3404,6 +3540,7 @@
                   "waterbodies": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.waterbodiesEnum0",
                       "WBC.waterbodiesEnum1",
                       "WBC.waterbodiesEnum2",
@@ -3412,6 +3549,7 @@
                       "WBC.waterbodiesEnum5"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "Meren rantaa",
                       "Järven rantaa",
@@ -3426,6 +3564,7 @@
                   "wayOfTravel": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.wayOfTravelEnum0",
                       "WBC.wayOfTravelEnum1",
                       "WBC.wayOfTravelEnum2",
@@ -3433,6 +3572,7 @@
                       "WBC.wayOfTravelEnum9"
                     ],
                     "enumNames": [
+                      "",
                       "Jalkaisin",
                       "Suksilla",
                       "Muu, mikä",
@@ -3452,6 +3592,7 @@
                   "wind": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.windEnum0",
                       "WBC.windEnum1",
                       "WBC.windEnum2",
@@ -3459,6 +3600,7 @@
                       "WBC.windEnum4"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "Tyyntä-heikkoa",
                       "Heikkoa-kohtalaista",
@@ -3475,6 +3617,7 @@
               "gatheringType": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.gatheringTypeForagingArea",
                   "MY.gatheringTypeBreedingAndRestingArea",
                   "MY.gatheringTypeCavityTree",
@@ -3488,6 +3631,7 @@
                   "MY.gatheringTypeWaterbirdRound"
                 ],
                 "enumNames": [
+                  "",
                   "Foraging area",
                   "Breeding and resting area",
                   "Cavity tree",
@@ -3524,6 +3668,7 @@
               "georeferenceSource": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.georeferenceSourceKotka",
                   "MY.georeferenceSourceKarttapaikka",
                   "MY.georeferenceSourcePaikkatietoikkuna",
@@ -3541,6 +3686,7 @@
                   "MY.georeferenceSourceUnknown"
                 ],
                 "enumNames": [
+                  "",
                   "Kotka maps",
                   "Karttapaikka (MML)",
                   "Paikkatietoikkuna (MML)",
@@ -3568,6 +3714,7 @@
                 "items": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.habitatEnumValue1",
                     "MY.habitatEnumValue2",
                     "MY.habitatEnumValue3",
@@ -3657,6 +3804,7 @@
                     "MY.habitatEnumValue86"
                   ],
                   "enumNames": [
+                    "",
                     "Forest",
                     "Heath forest",
                     "Mesic heath forest",
@@ -3757,6 +3905,7 @@
                 "items": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.habitatAttributesEnumValue1",
                     "MY.habitatAttributesEnumValue2",
                     "MY.habitatAttributesEnumValue3",
@@ -3781,6 +3930,7 @@
                     "MY.habitatAttributesEnumValue22"
                   ],
                   "enumNames": [
+                    "",
                     "Young forest / young trees",
                     "Middle-aged forest/ middle-aged trees",
                     "Old forest /old trees",
@@ -3863,12 +4013,14 @@
               "invasiveControlEffectiveness": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.invasiveControlEffectivenessFull",
                   "MY.invasiveControlEffectivenessPartial",
                   "MY.invasiveControlEffectivenessNone",
                   "MY.invasiveControlEffectivenessNotFound"
                 ],
                 "enumNames": [
+                  "",
                   "Fully controlled",
                   "Partially controlled",
                   "Not controlled (didn't succeed)",
@@ -3890,12 +4042,14 @@
                 "items": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.invasiveControlMethodsMechanical",
                     "MY.invasiveControlMethodsChemical",
                     "MY.invasiveControlMethodsBiological",
                     "MY.invasiveControlMethodsOther"
                   ],
                   "enumNames": [
+                    "",
                     "Mekaaniset / fysikaaliset",
                     "Kemialliset",
                     "Biologiset",
@@ -4084,6 +4238,7 @@
               "predominantTree": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MX.37819",
                   "MX.37812",
                   "MX.37992",
@@ -4104,6 +4259,7 @@
                   "MX.37815"
                 ],
                 "enumNames": [
+                  "",
                   "Mänty",
                   "Spruce",
                   "Koivut",
@@ -4157,6 +4313,7 @@
               "samplingMethod": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.samplingMethodLight",
                   "MY.samplingMethodLightTrap",
                   "MY.samplingMethodTrap",
@@ -4206,6 +4363,7 @@
                   "MY.samplingMethodOther"
                 ],
                 "enumNames": [
+                  "",
                   "Light (lux)",
                   "Light trap",
                   "Trap (generic)",
@@ -4310,6 +4468,7 @@
                     "censusTaxonSetID": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MX.taxonSetSykeButterflyCensusPapilionoidea",
                         "MX.taxonSetSykeButterflyCensusOther",
                         "MX.taxonSetWaterbirdWaterbirds",
@@ -4321,6 +4480,7 @@
                         "MVL.1201"
                       ],
                       "enumNames": [
+                        "",
                         "SYKE's Butterfly Census: Butterflies",
                         "SYKE's Butterly Census: Other Macrolepidoptera",
                         "Waterbird Census: Waterbirds",
@@ -4417,11 +4577,13 @@
               "publicityRestrictions": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MZ.publicityRestrictionsPublic",
                   "MZ.publicityRestrictionsProtected",
                   "MZ.publicityRestrictionsPrivate"
                 ],
                 "enumNames": [
+                  "",
                   "public",
                   "protected",
                   "private"
@@ -4453,6 +4615,12 @@
                       "subject": "@type",
                       "title": "Type for the Specimen"
                     },
+                    "@context": {
+                      "type": "string",
+                      "range": "xsd:string",
+                      "subject": "@context",
+                      "title": "Context for the Specimen"
+                    },
                     "DBH": {
                       "type": "string",
                       "range": "xsd:string",
@@ -4476,6 +4644,7 @@
                     "abundanceUnit": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.abundanceUnitIndividualCount",
                         "MY.abundanceUnitPairCount",
                         "MY.abundanceUnitNest",
@@ -4498,6 +4667,7 @@
                         "MY.abundanceUnitOccursDoesNotOccur"
                       ],
                       "enumNames": [
+                        "",
                         "Individual count",
                         "Pair count",
                         "Nest count",
@@ -4582,6 +4752,7 @@
                     "atlasCode": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.atlasCodeEnum1",
                         "MY.atlasCodeEnum2",
                         "MY.atlasCodeEnum3",
@@ -4605,6 +4776,7 @@
                         "MY.atlasCodeEnum82"
                       ],
                       "enumNames": [
+                        "",
                         "1 Breeding unlikely; Species detected in the grid during the breeding season, but almost certainly does not breed there",
                         "2 Possible breeding; A solitary bird detected once in suitable breeding habitat, and breeding of the species in the grid is possible",
                         "3 Possible breeding; A pair detected once in a suitable breeding habitat, and breeding of the species in the grid is possible",
@@ -4634,12 +4806,14 @@
                     "batBehavior": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.batBehaviorHibernating",
                         "MY.batBehaviorRoosting",
                         "MY.batBehaviorHunting",
                         "MY.batBehaviorDead"
                       ],
                       "enumNames": [
+                        "",
                         "hibernating",
                         "roosting",
                         "hunting",
@@ -4663,6 +4837,7 @@
                     "birdAge": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.birdAgePp",
                         "MY.birdAgePm",
                         "MY.birdAgeFl",
@@ -4684,6 +4859,7 @@
                         "MY.birdAge8Kv"
                       ],
                       "enumNames": [
+                        "",
                         "pp",
                         "pm",
                         "fl",
@@ -4722,6 +4898,7 @@
                     "birdPlumage": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.birdPlumageAd",
                         "MY.birdPlumageEijp",
                         "MY.birdPlumageImm",
@@ -4736,6 +4913,7 @@
                         "MY.birdPlumageSs"
                       ],
                       "enumNames": [
+                        "",
                         "ad",
                         "eijp",
                         "imm (immature)",
@@ -4803,6 +4981,7 @@
                     "distance": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.distanceOverFlight",
                         "MY.distanceNear",
                         "MY.distanceQuiteFar",
@@ -4810,6 +4989,7 @@
                         "MY.distanceVeryFar"
                       ],
                       "enumNames": [
+                        "",
                         "flight over or next to observer",
                         "near",
                         "quite far away",
@@ -4823,6 +5003,7 @@
                     "earliestEpochOrLowestSeries": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.epochOrSeriesCambrian",
                         "MY.epochOrSeriesCarboniferous",
                         "MY.epochOrSeriesCretaceous",
@@ -4838,6 +5019,7 @@
                         "MY.epochOrSeriesTriassic"
                       ],
                       "enumNames": [
+                        "",
                         "Cambrian",
                         "Carboniferous",
                         "Cretaceous",
@@ -4867,6 +5049,7 @@
                     "fruitType": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.fruitTypeAchene",
                         "MY.fruitTypeBerry",
                         "MY.fruitTypeCapsule",
@@ -4882,6 +5065,7 @@
                         "MY.fruitTypeSiliqua"
                       ],
                       "enumNames": [
+                        "",
                         "achene",
                         "berry",
                         "capsule",
@@ -4977,6 +5161,7 @@
                     "indirectObservationType": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.indirectObservationTypeFeces",
                         "MY.indirectObservationTypeSnowTracks",
                         "MY.indirectObservationTypeUrine",
@@ -4984,6 +5169,7 @@
                         "MY.indirectObservationTypeFoodStock"
                       ],
                       "enumNames": [
+                        "",
                         "Feces",
                         "Snow tracks",
                         "Urine",
@@ -5073,6 +5259,7 @@
                     "latestEpochOrHighestSeries": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.epochOrSeriesCambrian",
                         "MY.epochOrSeriesCarboniferous",
                         "MY.epochOrSeriesCretaceous",
@@ -5088,6 +5275,7 @@
                         "MY.epochOrSeriesTriassic"
                       ],
                       "enumNames": [
+                        "",
                         "Cambrian",
                         "Carboniferous",
                         "Cretaceous",
@@ -5121,6 +5309,7 @@
                     "lifeStage": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.lifeStageEgg",
                         "MY.lifeStageLarva",
                         "MY.lifeStagePupa",
@@ -5144,6 +5333,7 @@
                         "MY.lifeStageMarks"
                       ],
                       "enumNames": [
+                        "",
                         "egg",
                         "larva",
                         "pupa",
@@ -5471,12 +5661,14 @@
                     "microbiologicalRiskGroup": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.microbiologicalRiskGroup1",
                         "MY.microbiologicalRiskGroup2",
                         "MY.microbiologicalRiskGroup3",
                         "MY.microbiologicalRiskGroup4"
                       ],
                       "enumNames": [
+                        "",
                         "1",
                         "2",
                         "3",
@@ -5497,6 +5689,7 @@
                     "movingDirection": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.movingDirectionN",
                         "MY.movingDirectionNNE",
                         "MY.movingDirectionNE",
@@ -5515,6 +5708,7 @@
                         "MY.movingDirectionNNW"
                       ],
                       "enumNames": [
+                        "",
                         "north",
                         "north-northeast",
                         "north-east",
@@ -5557,10 +5751,12 @@
                     "nativeStatus": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.native",
                         "MY.nonNative"
                       ],
                       "enumNames": [
+                        "",
                         "wild",
                         "non-wild"
                       ],
@@ -5584,6 +5780,7 @@
                     "nestType": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.nestTypeTreeCavity",
                         "MY.nestTypeTwig",
                         "MY.nestTypeNestBox",
@@ -5592,6 +5789,7 @@
                         "MY.nestTypeOther"
                       ],
                       "enumNames": [
+                        "",
                         "Cavity in tree",
                         "Twig nest in tree",
                         "Nestbox in tree",
@@ -5627,6 +5825,7 @@
                     "plantLifeStage": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.plantLifeStageSterile",
                         "MY.plantLifeStageFertile",
                         "MY.plantLifeStageSeed",
@@ -5642,6 +5841,7 @@
                         "MY.plantLifeStageDeadPlant"
                       ],
                       "enumNames": [
+                        "",
                         "sterile",
                         "fertile",
                         "seed / spore / fruit",
@@ -5663,6 +5863,7 @@
                     "plantStatusCode": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.plantStatusCodeL",
                         "MY.plantStatusCodeA",
                         "MY.plantStatusCodeAV",
@@ -5695,6 +5896,7 @@
                         "MY.plantStatusCodeF"
                       ],
                       "enumNames": [
+                        "",
                         "L - wild",
                         "A - spontaneous",
                         "AV - spontaneous, resident",
@@ -5751,6 +5953,7 @@
                       "items": {
                         "type": "string",
                         "enum": [
+                          "",
                           "MY.preservationPressed",
                           "MY.preservationDry",
                           "MY.preservationCriticalPointDrying",
@@ -5789,6 +5992,7 @@
                           "MY.preservationFrozenMinus80CAndEthanolMinus20C"
                         ],
                         "enumNames": [
+                          "",
                           "Dry and pressed",
                           "Dry",
                           "Critical-point drying",
@@ -5836,6 +6040,7 @@
                     "provenance": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.provenanceUnknown",
                         "MY.provenanceCultivated",
                         "MY.provenanceCultivatedUnsure",
@@ -5846,6 +6051,7 @@
                         "MY.provenancePropagule"
                       ],
                       "enumNames": [
+                        "",
                         "? (Unknown)",
                         "G (Cultivated)",
                         "G? (Cultivated, unsure)",
@@ -5863,6 +6069,7 @@
                     "recordBasis": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.recordBasisPreservedSpecimen",
                         "MY.recordBasisHumanObservation",
                         "MY.recordBasisHumanObservationSeen",
@@ -5885,6 +6092,7 @@
                         "MY.recordBasisMaterialSample"
                       ],
                       "enumNames": [
+                        "",
                         "Preserved specimen",
                         "Observation",
                         "Seen",
@@ -5917,6 +6125,7 @@
                       "items": {
                         "type": "string",
                         "enum": [
+                          "",
                           "MY.recordPartsBones",
                           "MY.recordPartsAntler",
                           "MY.recordPartsHead",
@@ -5951,6 +6160,7 @@
                           "My.recordPartsSkullAndBones"
                         ],
                         "enumNames": [
+                          "",
                           "bones",
                           "antler(s)",
                           "head",
@@ -6001,6 +6211,7 @@
                     "samplingMethod": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.samplingMethodLight",
                         "MY.samplingMethodLightTrap",
                         "MY.samplingMethodTrap",
@@ -6050,6 +6261,7 @@
                         "MY.samplingMethodOther"
                       ],
                       "enumNames": [
+                        "",
                         "Light (lux)",
                         "Light trap",
                         "Trap (generic)",
@@ -6112,11 +6324,13 @@
                     "seedMaturity": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.seedMaturityImmature",
                         "MY.seedMaturityMature",
                         "MY.seedMaturityMixed"
                       ],
                       "enumNames": [
+                        "",
                         "immature",
                         "mature",
                         "mixed"
@@ -6129,6 +6343,7 @@
                     "seedMorphology": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.seedMorphologyBent",
                         "MY.seedMorphologyBroad",
                         "MY.seedMorphologyCapitate",
@@ -6143,6 +6358,7 @@
                         "MY.seedMorphologyUndifferentiated"
                       ],
                       "enumNames": [
+                        "",
                         "bent",
                         "broad",
                         "capitate",
@@ -6164,6 +6380,7 @@
                     "sex": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.sexM",
                         "MY.sexF",
                         "MY.sexW",
@@ -6174,6 +6391,7 @@
                         "MY.sexC"
                       ],
                       "enumNames": [
+                        "",
                         "M - Male",
                         "F - Female",
                         "W - Worker",
@@ -6204,6 +6422,7 @@
                     "smell": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.smellNotSmelled",
                         "MY.smellNoSmelled",
                         "MY.smellWeak",
@@ -6211,6 +6430,7 @@
                         "MY.smellStrong"
                       ],
                       "enumNames": [
+                        "",
                         "Not sniffed",
                         "Smell none",
                         "Faint",
@@ -6230,6 +6450,7 @@
                     "substrateClassification": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.substrateGround",
                         "MY.substrateGroundLowShrubs",
                         "MY.substrateGroundLichens",
@@ -6288,6 +6509,7 @@
                         "MY.substrateDeadLeaf"
                       ],
                       "enumNames": [
+                        "",
                         "ground",
                         "among low shrubs",
                         "among lichens",
@@ -6352,6 +6574,7 @@
                     "substrateDecayStage": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.substrateDecayStageEnum1",
                         "MY.substrateDecayStageEnum2",
                         "MY.substrateDecayStageEnum3",
@@ -6359,6 +6582,7 @@
                         "MY.substrateDecayStageEnum5"
                       ],
                       "enumNames": [
+                        "",
                         "Decay stage 1",
                         "Decay stage 2",
                         "Decay stage 3",
@@ -6399,6 +6623,7 @@
                       "items": {
                         "type": "string",
                         "enum": [
+                          "",
                           "MY.substrateTreeClassificationEnum1",
                           "MY.substrateTreeClassificationEnum2",
                           "MY.substrateTreeClassificationEnum3",
@@ -6407,6 +6632,7 @@
                           "MY.substrateTreeClassificationEnum6"
                         ],
                         "enumNames": [
+                          "",
                           "kelo",
                           "charred",
                           "moss-covered",
@@ -6434,6 +6660,7 @@
                     "taste": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.tasteNotTasted",
                         "MY.tasteNoTaste",
                         "MY.tasteWeak",
@@ -6441,6 +6668,7 @@
                         "MY.tasteStrong"
                       ],
                       "enumNames": [
+                        "",
                         "Not tasted",
                         "Taste none",
                         "Faint",
@@ -6460,11 +6688,13 @@
                     "taxonConfidence": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.taxonConfidenceSure",
                         "MY.taxonConfidenceUnsure",
                         "MY.taxonConfidenceSubspeciesUnsure"
                       ],
                       "enumNames": [
+                        "",
                         "Sure",
                         "Unsure",
                         "Subspecies unsure"
@@ -6495,6 +6725,7 @@
                         "glowWormMicrohabitat": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.glowWormMicrohabitatEnum1",
                             "MY.glowWormMicrohabitatEnum2",
                             "MY.glowWormMicrohabitatEnum3",
@@ -6504,6 +6735,7 @@
                             "MY.glowWormMicrohabitatEnumOther"
                           ],
                           "enumNames": [
+                            "",
                             "Short grass",
                             "Long grass",
                             "Under tree",
@@ -6540,6 +6772,7 @@
                         "lineTransectObsType": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.lineTransectObsTypeSong",
                             "MY.lineTransectObsTypeOtherSound",
                             "MY.lineTransectObsTypeSeen",
@@ -6554,6 +6787,7 @@
                             "MY.lineTransectObsTypeUnknown"
                           ],
                           "enumNames": [
+                            "",
                             "Singing",
                             "Other noises",
                             "Seen",
@@ -6574,10 +6808,12 @@
                         "lineTransectRouteFieldType": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.lineTransectRouteFieldTypeInner",
                             "MY.lineTransectRouteFieldTypeOuter"
                           ],
                           "enumNames": [
+                            "",
                             "P - Inner route field",
                             "A - Outer route field"
                           ],
@@ -6588,11 +6824,13 @@
                         "lolifeDroppingsCount": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.lolifeDroppingsCount1",
                             "MY.lolifeDroppingsCount2",
                             "MY.lolifeDroppingsCount3"
                           ],
                           "enumNames": [
+                            "",
                             "Muutama",
                             "Kymmeniä",
                             "Satoja"
@@ -6604,10 +6842,12 @@
                         "lolifeDroppingsQuality": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.lolifeDroppingsQuality1",
                             "MY.lolifeDroppingsQuality2"
                           ],
                           "enumNames": [
+                            "",
                             "Vanhoja",
                             "Tuoreita"
                           ],
@@ -6618,12 +6858,14 @@
                         "lolifeDroppingsType": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.lolifeDroppingsTypeRock",
                             "MY.lolifeDroppingsTypeTree",
                             "MY.lolifeDroppingsTypeTreeGroup",
                             "MY.lolifeDroppingsTypeOther"
                           ],
                           "enumNames": [
+                            "",
                             "On top of rock",
                             "Single tree",
                             "Group of trees",
@@ -6636,6 +6878,7 @@
                         "lolifeNestTree": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MX.38590",
                             "MX.37812",
                             "MX.37999",
@@ -6645,6 +6888,7 @@
                             "MY.lolifeNestTreeOther"
                           ],
                           "enumNames": [
+                            "",
                             "Aspen",
                             "Spruce",
                             "Downy birch",
@@ -6686,11 +6930,13 @@
                         "waterbirdFemale": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.waterbirdFemaleEnumYes",
                             "MY.waterbirdFemaleEnumNo",
                             "MY.waterbirdFemaleEnumLonelyPanicking"
                           ],
                           "enumNames": [
+                            "",
                             "yes",
                             "no",
                             "lonely panicking female"
@@ -6702,6 +6948,7 @@
                         "waterbirdJuvenileAgeClass": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.waterbirdJuvenileAgeClassIa",
                             "MY.waterbirdJuvenileAgeClassIb",
                             "MY.waterbirdJuvenileAgeClassIc",
@@ -6712,6 +6959,7 @@
                             "MY.waterbirdJuvenileAgeClassUnknown"
                           ],
                           "enumNames": [
+                            "",
                             "1. Aivan pienet kirkasväriset untuvapallot (Ia)",
                             "2. Pienet, hieman haalistuneet untuvikot (Ib)",
                             "3. Pienehköt, haalistuneet untuvikkopoikaset (Ic)",
@@ -6740,12 +6988,14 @@
                         "waterbirdPairCountOpinionReasoning": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.waterbirdPairCountOpinionReasoningEnum1",
                             "MY.waterbirdPairCountOpinionReasoningEnum2",
                             "MY.waterbirdPairCountOpinionReasoningEnum3",
                             "MY.waterbirdPairCountOpinionReasoningEnumOther"
                           ],
                           "enumNames": [
+                            "",
                             "1) Laji ei varmasti pesi kohteella, linnut ruokailevia (esim. muuttomatkalla)",
                             "2) Alueella levähti 1. laskennan aikaan vielä runsaasti muuttajia ja tulkinta 2. laskennan perusteella",
                             "3) Lajin pesä(t) ovat jääneet jo kasvaneen järviruovikon suojiin 2. laskennassa, tulkinta tehty 1. laskennan perusteella",
@@ -6833,6 +7083,12 @@
                           "subject": "@type",
                           "title": "Type for the Havainnon keruutiedot"
                         },
+                        "@context": {
+                          "type": "string",
+                          "range": "xsd:string",
+                          "subject": "@context",
+                          "title": "Context for the Havainnon keruutiedot"
+                        },
                         "dateBegin": {
                           "type": "string",
                           "range": "xsd:string",
@@ -6910,11 +7166,13 @@
                     "wild": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.wildWild",
                         "MY.wildUnknown",
                         "MY.wildNonWild"
                       ],
                       "enumNames": [
+                        "",
                         "Wild",
                         "Unknown",
                         "Non-wild"
@@ -6959,11 +7217,13 @@
                     "publicityRestrictions": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MZ.publicityRestrictionsPublic",
                         "MZ.publicityRestrictionsProtected",
                         "MZ.publicityRestrictionsPrivate"
                       ],
                       "enumNames": [
+                        "",
                         "public",
                         "protected",
                         "private"
@@ -6994,6 +7254,12 @@
                             "range": "xsd:string",
                             "subject": "@type",
                             "title": "Type for the Identification"
+                          },
+                          "@context": {
+                            "type": "string",
+                            "range": "xsd:string",
+                            "subject": "@context",
+                            "title": "Context for the Identification"
                           },
                           "herbo:sortOrder": {
                             "type": "integer",
@@ -7032,11 +7298,13 @@
                           "detMethod": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MY.detMethodFreshSample",
                               "MY.detMethodMicroscopy",
                               "MY.detMethodPhoto"
                             ],
                             "enumNames": [
+                              "",
                               "fresh sample",
                               "microscopy",
                               "photo"
@@ -7065,6 +7333,7 @@
                             "items": {
                               "type": "string",
                               "enum": [
+                                "",
                                 "MY.identificationBasisSeen",
                                 "MY.identificationBasisHeard",
                                 "MY.identificationBasisHandled",
@@ -7079,6 +7348,7 @@
                                 "MY.identificationBasisDNA"
                               ],
                               "enumNames": [
+                                "",
                                 "Seen",
                                 "Heard",
                                 "Handled",
@@ -7122,6 +7392,7 @@
                           "infraRank": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MY.infraRankSsp",
                               "MY.infraRankVar",
                               "MY.infraRankBeta",
@@ -7138,6 +7409,7 @@
                               "MY.infraRankCultivarGroup"
                             ],
                             "enumNames": [
+                              "",
                               "ssp.",
                               "var.",
                               "β",
@@ -7216,6 +7488,7 @@
                           "taxonRank": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MX.superdomain",
                               "MX.domain",
                               "MX.kingdom",
@@ -7276,6 +7549,7 @@
                               "MX.grex"
                             ],
                             "enumNames": [
+                              "",
                               "superdomain",
                               "domain",
                               "kingdom",
@@ -7362,11 +7636,13 @@
                           "publicityRestrictions": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MZ.publicityRestrictionsPublic",
                               "MZ.publicityRestrictionsProtected",
                               "MZ.publicityRestrictionsPrivate"
                             ],
                             "enumNames": [
+                              "",
                               "public",
                               "protected",
                               "private"
@@ -7410,6 +7686,12 @@
                             "range": "xsd:string",
                             "subject": "@type",
                             "title": "Type for the Identification"
+                          },
+                          "@context": {
+                            "type": "string",
+                            "range": "xsd:string",
+                            "subject": "@context",
+                            "title": "Context for the Identification"
                           },
                           "isPartOf": {
                             "type": "string",
@@ -7463,6 +7745,7 @@
                           "typeStatus": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MY.typeStatusType",
                               "MY.typeStatusHolotype",
                               "MY.typeStatusSyntype",
@@ -7490,6 +7773,7 @@
                               "MY.typeStatusPathovarReferenceStrain"
                             ],
                             "enumNames": [
+                              "",
                               "type",
                               "holotype",
                               "syntype",
@@ -7538,12 +7822,14 @@
                           "typeVerification": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MY.typeVerificationVerified",
                               "MY.typeVerificationUnverified",
                               "MY.typeVerificationProbable",
                               "MY.typeVerificationDoubtful"
                             ],
                             "enumNames": [
+                              "",
                               "verified",
                               "unverified",
                               "probable",
@@ -7571,11 +7857,13 @@
                           "publicityRestrictions": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MZ.publicityRestrictionsPublic",
                               "MZ.publicityRestrictionsProtected",
                               "MZ.publicityRestrictionsPrivate"
                             ],
                             "enumNames": [
+                              "",
                               "public",
                               "protected",
                               "private"
@@ -7615,11 +7903,13 @@
     "accessibility": {
       "type": "string",
       "enum": [
+        "",
         "MNP.accessibilityEasy",
         "MNP.accessibilityModerate",
         "MNP.accessibilityDifficult"
       ],
       "enumNames": [
+        "",
         "Easy",
         "Moderate",
         "Difficult"
@@ -7800,9 +8090,16 @@
           "subject": "@type",
           "title": "Type for the Submissions"
         },
+        "@context": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "@context",
+          "title": "Context for the Submissions"
+        },
         "secureLevel": {
           "type": "string",
           "enum": [
+            "",
             "MX.secureLevelNone",
             "MX.secureLevelKM1",
             "MX.secureLevelKM5",
@@ -7814,6 +8111,7 @@
             "MX.secureLevelNoShow"
           ],
           "enumNames": [
+            "",
             "None",
             "1 km",
             "5 km",
@@ -7960,11 +8258,13 @@
           "items": {
             "type": "string",
             "enum": [
+              "",
               "MY.dataOriginPaperForm",
               "MY.dataOriginWebForm",
               "MY.dataOriginSpreadsheetFile"
             ],
             "enumNames": [
+              "",
               "Paper form",
               "Web form",
               "File upload"
@@ -8085,6 +8385,12 @@
               "subject": "@type",
               "title": "Type for the Global gathering event"
             },
+            "@context": {
+              "type": "string",
+              "range": "xsd:string",
+              "subject": "@context",
+              "title": "Context for the Global gathering event"
+            },
             "acknowledgeNoUnitsInCensus": {
               "type": "boolean",
               "range": "xsd:boolean",
@@ -8094,6 +8400,7 @@
             "artificialLight": {
               "type": "string",
               "enum": [
+                "",
                 "MY.artificialLightEnum1",
                 "MY.artificialLightEnum2",
                 "MY.artificialLightEnum3",
@@ -8101,6 +8408,7 @@
                 "MY.artificialLightEnum5"
               ],
               "enumNames": [
+                "",
                 "Artificial light in close proximity (closer than 10m)",
                 "Artificial light in moderate proximity (10 - 50 m)",
                 "Artificial light far away (over 50m)",
@@ -8151,6 +8459,7 @@
             "cloudCover": {
               "type": "string",
               "enum": [
+                "",
                 "MY.cloudCoverOktaEnumUnknown",
                 "MY.cloudCoverOktaEnum0",
                 "MY.cloudCoverOktaEnum1",
@@ -8163,6 +8472,7 @@
                 "MY.cloudCoverOktaEnum8"
               ],
               "enumNames": [
+                "",
                 "Ei tietoa",
                 "0 -Täysin pilvetöntä",
                 "1 - Noin 1/8 taivaasta pilvien peitossa",
@@ -8181,6 +8491,7 @@
             "cloudCoverEnd": {
               "type": "string",
               "enum": [
+                "",
                 "MY.cloudCoverOktaEnumUnknown",
                 "MY.cloudCoverOktaEnum0",
                 "MY.cloudCoverOktaEnum1",
@@ -8193,6 +8504,7 @@
                 "MY.cloudCoverOktaEnum8"
               ],
               "enumNames": [
+                "",
                 "Ei tietoa",
                 "0 -Täysin pilvetöntä",
                 "1 - Noin 1/8 taivaasta pilvien peitossa",
@@ -8211,6 +8523,7 @@
             "cloudCoverStart": {
               "type": "string",
               "enum": [
+                "",
                 "MY.cloudCoverOktaEnumUnknown",
                 "MY.cloudCoverOktaEnum0",
                 "MY.cloudCoverOktaEnum1",
@@ -8223,6 +8536,7 @@
                 "MY.cloudCoverOktaEnum8"
               ],
               "enumNames": [
+                "",
                 "Ei tietoa",
                 "0 -Täysin pilvetöntä",
                 "1 - Noin 1/8 taivaasta pilvien peitossa",
@@ -8260,11 +8574,13 @@
                 "batCollector": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.batCollectorAlone",
                     "MY.batCollectorWithProjectGroupMember",
                     "MY.batCollectorSomeoneElse"
                   ],
                   "enumNames": [
+                    "",
                     "Alone",
                     "With someone from the project group",
                     "With someone else"
@@ -8330,6 +8646,7 @@
                 "pointCountHabitat": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.pointCountHabitat0",
                     "MY.pointCountHabitat1",
                     "MY.pointCountHabitat2",
@@ -8350,6 +8667,7 @@
                     "MY.pointCountHabitat17"
                   ],
                   "enumNames": [
+                    "",
                     "Tuntematon (0)",
                     "Kuusimetsä (1)",
                     "Mäntymetsä (2)",
@@ -8396,6 +8714,7 @@
                 "sykeButterFlyCensusWind": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.sykeButterFlyCensusWindEnumUnknown",
                     "MY.sykeButterFlyCensusWindEnum0",
                     "MY.sykeButterFlyCensusWindEnum1",
@@ -8406,6 +8725,7 @@
                     "MY.sykeButterFlyCensusWindEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "0 - Tyyntä, savu nousee pystysuoraan",
                     "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -8422,6 +8742,7 @@
                 "sykeButterFlyCensusWindEnd": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.sykeButterFlyCensusWindEnumUnknown",
                     "MY.sykeButterFlyCensusWindEnum0",
                     "MY.sykeButterFlyCensusWindEnum1",
@@ -8432,6 +8753,7 @@
                     "MY.sykeButterFlyCensusWindEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "0 - Tyyntä, savu nousee pystysuoraan",
                     "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -8448,6 +8770,7 @@
                 "sykeButterFlyCensusWindStart": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.sykeButterFlyCensusWindEnumUnknown",
                     "MY.sykeButterFlyCensusWindEnum0",
                     "MY.sykeButterFlyCensusWindEnum1",
@@ -8458,6 +8781,7 @@
                     "MY.sykeButterFlyCensusWindEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "0 - Tyyntä, savu nousee pystysuoraan",
                     "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -8474,6 +8798,7 @@
                 "waterbirdCensusPeriod": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.waterbirdCensusPeriodEnum1",
                     "MY.waterbirdCensusPeriodEnum2",
                     "MY.waterbirdCensusPeriodEnumJuvenile",
@@ -8481,6 +8806,7 @@
                     "MY.waterbirdCensusPeriodEnumCombined"
                   ],
                   "enumNames": [
+                    "",
                     "1. laskenta",
                     "2. laskenta",
                     "Poikuelaskenta",
@@ -8494,6 +8820,7 @@
                 "waterbirdHabitat": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.waterbirdHabitatEnum1",
                     "MY.waterbirdHabitatEnum2",
                     "MY.waterbirdHabitatEnum3",
@@ -8506,6 +8833,7 @@
                     "MY.waterbirdHabitatEnum10"
                   ],
                   "enumNames": [
+                    "",
                     "1. Karu, metsä- tai suorantainen järvi tai lampi",
                     "2. Syvä, osittain rehevöitynyt järvi, lahdissa laajahkoja ruovikoita",
                     "3. Matala, metsä- tai suorantainen runsaskasvustoinen järvi tai lampi",
@@ -8629,12 +8957,14 @@
                 "abundanceBOMGAR": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.speciesAbundanceEnum0",
                     "WBC.speciesAbundanceEnum1",
                     "WBC.speciesAbundanceEnum2",
                     "WBC.speciesAbundanceEnum3"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ohi",
                     "2. Samanaikainen",
@@ -8647,12 +8977,14 @@
                 "abundancePINENU": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.speciesAbundanceEnum0",
                     "WBC.speciesAbundanceEnum1",
                     "WBC.speciesAbundanceEnum2",
                     "WBC.speciesAbundanceEnum3"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ohi",
                     "2. Samanaikainen",
@@ -8665,12 +8997,14 @@
                 "abundanceTURPIL": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.speciesAbundanceEnum0",
                     "WBC.speciesAbundanceEnum1",
                     "WBC.speciesAbundanceEnum2",
                     "WBC.speciesAbundanceEnum3"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ohi",
                     "2. Samanaikainen",
@@ -8746,6 +9080,7 @@
                 "cloudAndRain": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.cloudAndRainEnum0",
                     "WBC.cloudAndRainEnum1",
                     "WBC.cloudAndRainEnum2",
@@ -8753,6 +9088,7 @@
                     "WBC.cloudAndRainEnum4"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "1 - Enimmäkseen kirkasta",
                     "2 - Vaihtelevaa pilvisyyttä",
@@ -8835,6 +9171,7 @@
                 "iceCover": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.iceCoverEnum0",
                     "WBC.iceCoverEnum1",
                     "WBC.iceCoverEnum2",
@@ -8842,6 +9179,7 @@
                     "WBC.iceCoverEnum4"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Vesistöt sulat",
                     "2. Vain rannat/lahdet jäässä",
@@ -8875,6 +9213,7 @@
                 "pineConesAtCensus": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.berriesAndConesEnum0",
                     "WBC.berriesAndConesEnum1",
                     "WBC.berriesAndConesEnum2",
@@ -8884,6 +9223,7 @@
                     "WBC.berriesAndConesEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ei lainkaan",
                     "2. Hyvin vähän",
@@ -9023,12 +9363,14 @@
                 "snowAndIceOnTrees": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.snowAndIceOnTreesEnum0",
                     "WBC.snowAndIceOnTreesEnum1",
                     "WBC.snowAndIceOnTreesEnum2",
                     "WBC.snowAndIceOnTreesEnum3"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ei ollenkaan",
                     "2. Vähän",
@@ -9041,6 +9383,7 @@
                 "snowCover": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.snowCoverEnum0",
                     "WBC.snowCoverEnum1",
                     "WBC.snowCoverEnum2",
@@ -9052,6 +9395,7 @@
                     "WBC.snowCoverEnum8"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ei lunta",
                     "2. Lunta vain paikoitellen",
@@ -9069,6 +9413,7 @@
                 "sorbusBerriesAtCensus": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.berriesAndConesEnum0",
                     "WBC.berriesAndConesEnum1",
                     "WBC.berriesAndConesEnum2",
@@ -9078,6 +9423,7 @@
                     "WBC.berriesAndConesEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ei lainkaan",
                     "2. Hyvin vähän",
@@ -9093,6 +9439,7 @@
                 "sorbusBerriesEarlyFall": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.berriesAndConesEnum0",
                     "WBC.berriesAndConesEnum1",
                     "WBC.berriesAndConesEnum2",
@@ -9102,6 +9449,7 @@
                     "WBC.berriesAndConesEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ei lainkaan",
                     "2. Hyvin vähän",
@@ -9117,6 +9465,7 @@
                 "spruceConesAtCensus": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.berriesAndConesEnum0",
                     "WBC.berriesAndConesEnum1",
                     "WBC.berriesAndConesEnum2",
@@ -9126,6 +9475,7 @@
                     "WBC.berriesAndConesEnum6"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa",
                     "1. Ei lainkaan",
                     "2. Hyvin vähän",
@@ -9141,11 +9491,13 @@
                 "typeOfSnowCover": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.typeOfSnowCoverEnum0",
                     "WBC.typeOfSnowCoverEnum1",
                     "WBC.typeOfSnowCoverEnum2"
                   ],
                   "enumNames": [
+                    "",
                     "0. Ei tietoa tai ei lunta",
                     "1. Lumi pehmeää",
                     "2. Lumessa kova hankikerros"
@@ -9157,6 +9509,7 @@
                 "visibility": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.visibilityEnum0",
                     "WBC.visibilityEnum1",
                     "WBC.visibilityEnum2",
@@ -9164,6 +9517,7 @@
                     "WBC.visibilityEnum4"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "Hyvä",
                     "Hyvä-kohtalainen",
@@ -9177,6 +9531,7 @@
                 "waterbodies": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.waterbodiesEnum0",
                     "WBC.waterbodiesEnum1",
                     "WBC.waterbodiesEnum2",
@@ -9185,6 +9540,7 @@
                     "WBC.waterbodiesEnum5"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "Meren rantaa",
                     "Järven rantaa",
@@ -9199,6 +9555,7 @@
                 "wayOfTravel": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.wayOfTravelEnum0",
                     "WBC.wayOfTravelEnum1",
                     "WBC.wayOfTravelEnum2",
@@ -9206,6 +9563,7 @@
                     "WBC.wayOfTravelEnum9"
                   ],
                   "enumNames": [
+                    "",
                     "Jalkaisin",
                     "Suksilla",
                     "Muu, mikä",
@@ -9225,6 +9583,7 @@
                 "wind": {
                   "type": "string",
                   "enum": [
+                    "",
                     "WBC.windEnum0",
                     "WBC.windEnum1",
                     "WBC.windEnum2",
@@ -9232,6 +9591,7 @@
                     "WBC.windEnum4"
                   ],
                   "enumNames": [
+                    "",
                     "Ei tietoa",
                     "Tyyntä-heikkoa",
                     "Heikkoa-kohtalaista",
@@ -9307,6 +9667,7 @@
             "rainIntensity": {
               "type": "string",
               "enum": [
+                "",
                 "MY.rainIntensityEnumNoRain",
                 "MY.rainIntensityEnumLightRain",
                 "MY.rainIntensityEnumModerateRain",
@@ -9314,6 +9675,7 @@
                 "MY.rainIntensityEnumTorrentialRain"
               ],
               "enumNames": [
+                "",
                 "No rain",
                 "Light rain",
                 "Moderate rain",
@@ -9367,6 +9729,7 @@
                   "censusTaxonSetID": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MX.taxonSetSykeButterflyCensusPapilionoidea",
                       "MX.taxonSetSykeButterflyCensusOther",
                       "MX.taxonSetWaterbirdWaterbirds",
@@ -9378,6 +9741,7 @@
                       "MVL.1201"
                     ],
                     "enumNames": [
+                      "",
                       "SYKE's Butterfly Census: Butterflies",
                       "SYKE's Butterly Census: Other Macrolepidoptera",
                       "Waterbird Census: Waterbirds",
@@ -9545,6 +9909,7 @@
           "items": {
             "type": "string",
             "enum": [
+              "",
               "MY.preservationPressed",
               "MY.preservationDry",
               "MY.preservationCriticalPointDrying",
@@ -9583,6 +9948,7 @@
               "MY.preservationFrozenMinus80CAndEthanolMinus20C"
             ],
             "enumNames": [
+              "",
               "Dry and pressed",
               "Dry",
               "Critical-point drying",
@@ -9706,6 +10072,7 @@
         "status": {
           "type": "string",
           "enum": [
+            "",
             "MY.statusOk",
             "MY.statusMissing",
             "MY.statusUnrecoverable",
@@ -9724,6 +10091,7 @@
             "MY.statusNoVoucherRetained"
           ],
           "enumNames": [
+            "",
             "Ok",
             "Missing (but could still be recovered)",
             "Unrecoverable (location known, bet can't get it back)",
@@ -9791,6 +10159,7 @@
           "items": {
             "type": "string",
             "enum": [
+              "",
               "MY.verificationStatusOk",
               "MY.verificationStatusVerify",
               "MY.verificationStatusComplete",
@@ -9800,6 +10169,7 @@
               "MY.verificationStatusVerifyCoordinates"
             ],
             "enumNames": [
+              "",
               "ok",
               "needs verification",
               "needs completion",
@@ -9874,11 +10244,13 @@
         "publicityRestrictions": {
           "type": "string",
           "enum": [
+            "",
             "MZ.publicityRestrictionsPublic",
             "MZ.publicityRestrictionsProtected",
             "MZ.publicityRestrictionsPrivate"
           ],
           "enumNames": [
+            "",
             "public",
             "protected",
             "private"
@@ -9915,6 +10287,12 @@
                 "range": "xsd:string",
                 "subject": "@type",
                 "title": "Type for the Gathering event"
+              },
+              "@context": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "@context",
+                "title": "Context for the Gathering event"
               },
               "AFEQuadrat": {
                 "type": "string",
@@ -9976,6 +10354,7 @@
                 "items": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.batHabitatYardCityCentre",
                     "MY.batHabitatYardSuburbs",
                     "MY.batHabitatYardRural",
@@ -9994,6 +10373,7 @@
                     "MY.batHabitatCountryside"
                   ],
                   "enumNames": [
+                    "",
                     "Yard (city centre)",
                     "Yard (suburbs)",
                     "Yard (rural)",
@@ -10085,6 +10465,7 @@
               "coordinateSource": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.coordinateSourceGps",
                   "MY.coordinateSourcePeruskartta",
                   "MY.coordinateSourcePapermap",
@@ -10096,6 +10477,7 @@
                   "MY.coordinateSourceUnknown"
                 ],
                 "enumNames": [
+                  "",
                   "GPS",
                   "Peruskartta paper map",
                   "Other paper map",
@@ -10114,6 +10496,7 @@
               "coordinateSystem": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.coordinateSystemYkj",
                   "MY.coordinateSystemWgs84",
                   "MY.coordinateSystemWgs84dms",
@@ -10123,6 +10506,7 @@
                   "MY.coordinateSystemDms"
                 ],
                 "enumNames": [
+                  "",
                   "Uniform grid (YKJ)",
                   "WGS84 and ETRS89, decimal degrees",
                   "WGS84 or ETRS89, degrees minutes (seconds)",
@@ -10204,6 +10588,7 @@
               "forestVegetationZone": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.forestVegetationZone1a",
                   "MY.forestVegetationZone1b",
                   "MY.forestVegetationZone2a",
@@ -10217,6 +10602,7 @@
                   "MY.forestVegetationZone4d"
                 ],
                 "enumNames": [
+                  "",
                   "1a Hemiboreal, Åland",
                   "1b Hemiboreal, Oak zone",
                   "2a Southern boreal, Southwestern Finland and Southern Ostrobothnia",
@@ -10244,11 +10630,13 @@
                   "batCollector": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.batCollectorAlone",
                       "MY.batCollectorWithProjectGroupMember",
                       "MY.batCollectorSomeoneElse"
                     ],
                     "enumNames": [
+                      "",
                       "Alone",
                       "With someone from the project group",
                       "With someone else"
@@ -10314,6 +10702,7 @@
                   "pointCountHabitat": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.pointCountHabitat0",
                       "MY.pointCountHabitat1",
                       "MY.pointCountHabitat2",
@@ -10334,6 +10723,7 @@
                       "MY.pointCountHabitat17"
                     ],
                     "enumNames": [
+                      "",
                       "Tuntematon (0)",
                       "Kuusimetsä (1)",
                       "Mäntymetsä (2)",
@@ -10380,6 +10770,7 @@
                   "sykeButterFlyCensusWind": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.sykeButterFlyCensusWindEnumUnknown",
                       "MY.sykeButterFlyCensusWindEnum0",
                       "MY.sykeButterFlyCensusWindEnum1",
@@ -10390,6 +10781,7 @@
                       "MY.sykeButterFlyCensusWindEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "0 - Tyyntä, savu nousee pystysuoraan",
                       "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -10406,6 +10798,7 @@
                   "sykeButterFlyCensusWindEnd": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.sykeButterFlyCensusWindEnumUnknown",
                       "MY.sykeButterFlyCensusWindEnum0",
                       "MY.sykeButterFlyCensusWindEnum1",
@@ -10416,6 +10809,7 @@
                       "MY.sykeButterFlyCensusWindEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "0 - Tyyntä, savu nousee pystysuoraan",
                       "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -10432,6 +10826,7 @@
                   "sykeButterFlyCensusWindStart": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.sykeButterFlyCensusWindEnumUnknown",
                       "MY.sykeButterFlyCensusWindEnum0",
                       "MY.sykeButterFlyCensusWindEnum1",
@@ -10442,6 +10837,7 @@
                       "MY.sykeButterFlyCensusWindEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "0 - Tyyntä, savu nousee pystysuoraan",
                       "1 - Hiukan savun ajautumista sivusuunnassa",
@@ -10458,6 +10854,7 @@
                   "waterbirdCensusPeriod": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.waterbirdCensusPeriodEnum1",
                       "MY.waterbirdCensusPeriodEnum2",
                       "MY.waterbirdCensusPeriodEnumJuvenile",
@@ -10465,6 +10862,7 @@
                       "MY.waterbirdCensusPeriodEnumCombined"
                     ],
                     "enumNames": [
+                      "",
                       "1. laskenta",
                       "2. laskenta",
                       "Poikuelaskenta",
@@ -10478,6 +10876,7 @@
                   "waterbirdHabitat": {
                     "type": "string",
                     "enum": [
+                      "",
                       "MY.waterbirdHabitatEnum1",
                       "MY.waterbirdHabitatEnum2",
                       "MY.waterbirdHabitatEnum3",
@@ -10490,6 +10889,7 @@
                       "MY.waterbirdHabitatEnum10"
                     ],
                     "enumNames": [
+                      "",
                       "1. Karu, metsä- tai suorantainen järvi tai lampi",
                       "2. Syvä, osittain rehevöitynyt järvi, lahdissa laajahkoja ruovikoita",
                       "3. Matala, metsä- tai suorantainen runsaskasvustoinen järvi tai lampi",
@@ -10613,12 +11013,14 @@
                   "abundanceBOMGAR": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.speciesAbundanceEnum0",
                       "WBC.speciesAbundanceEnum1",
                       "WBC.speciesAbundanceEnum2",
                       "WBC.speciesAbundanceEnum3"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ohi",
                       "2. Samanaikainen",
@@ -10631,12 +11033,14 @@
                   "abundancePINENU": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.speciesAbundanceEnum0",
                       "WBC.speciesAbundanceEnum1",
                       "WBC.speciesAbundanceEnum2",
                       "WBC.speciesAbundanceEnum3"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ohi",
                       "2. Samanaikainen",
@@ -10649,12 +11053,14 @@
                   "abundanceTURPIL": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.speciesAbundanceEnum0",
                       "WBC.speciesAbundanceEnum1",
                       "WBC.speciesAbundanceEnum2",
                       "WBC.speciesAbundanceEnum3"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ohi",
                       "2. Samanaikainen",
@@ -10730,6 +11136,7 @@
                   "cloudAndRain": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.cloudAndRainEnum0",
                       "WBC.cloudAndRainEnum1",
                       "WBC.cloudAndRainEnum2",
@@ -10737,6 +11144,7 @@
                       "WBC.cloudAndRainEnum4"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "1 - Enimmäkseen kirkasta",
                       "2 - Vaihtelevaa pilvisyyttä",
@@ -10819,6 +11227,7 @@
                   "iceCover": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.iceCoverEnum0",
                       "WBC.iceCoverEnum1",
                       "WBC.iceCoverEnum2",
@@ -10826,6 +11235,7 @@
                       "WBC.iceCoverEnum4"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Vesistöt sulat",
                       "2. Vain rannat/lahdet jäässä",
@@ -10859,6 +11269,7 @@
                   "pineConesAtCensus": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.berriesAndConesEnum0",
                       "WBC.berriesAndConesEnum1",
                       "WBC.berriesAndConesEnum2",
@@ -10868,6 +11279,7 @@
                       "WBC.berriesAndConesEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ei lainkaan",
                       "2. Hyvin vähän",
@@ -11007,12 +11419,14 @@
                   "snowAndIceOnTrees": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.snowAndIceOnTreesEnum0",
                       "WBC.snowAndIceOnTreesEnum1",
                       "WBC.snowAndIceOnTreesEnum2",
                       "WBC.snowAndIceOnTreesEnum3"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ei ollenkaan",
                       "2. Vähän",
@@ -11025,6 +11439,7 @@
                   "snowCover": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.snowCoverEnum0",
                       "WBC.snowCoverEnum1",
                       "WBC.snowCoverEnum2",
@@ -11036,6 +11451,7 @@
                       "WBC.snowCoverEnum8"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ei lunta",
                       "2. Lunta vain paikoitellen",
@@ -11053,6 +11469,7 @@
                   "sorbusBerriesAtCensus": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.berriesAndConesEnum0",
                       "WBC.berriesAndConesEnum1",
                       "WBC.berriesAndConesEnum2",
@@ -11062,6 +11479,7 @@
                       "WBC.berriesAndConesEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ei lainkaan",
                       "2. Hyvin vähän",
@@ -11077,6 +11495,7 @@
                   "sorbusBerriesEarlyFall": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.berriesAndConesEnum0",
                       "WBC.berriesAndConesEnum1",
                       "WBC.berriesAndConesEnum2",
@@ -11086,6 +11505,7 @@
                       "WBC.berriesAndConesEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ei lainkaan",
                       "2. Hyvin vähän",
@@ -11101,6 +11521,7 @@
                   "spruceConesAtCensus": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.berriesAndConesEnum0",
                       "WBC.berriesAndConesEnum1",
                       "WBC.berriesAndConesEnum2",
@@ -11110,6 +11531,7 @@
                       "WBC.berriesAndConesEnum6"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa",
                       "1. Ei lainkaan",
                       "2. Hyvin vähän",
@@ -11125,11 +11547,13 @@
                   "typeOfSnowCover": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.typeOfSnowCoverEnum0",
                       "WBC.typeOfSnowCoverEnum1",
                       "WBC.typeOfSnowCoverEnum2"
                     ],
                     "enumNames": [
+                      "",
                       "0. Ei tietoa tai ei lunta",
                       "1. Lumi pehmeää",
                       "2. Lumessa kova hankikerros"
@@ -11141,6 +11565,7 @@
                   "visibility": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.visibilityEnum0",
                       "WBC.visibilityEnum1",
                       "WBC.visibilityEnum2",
@@ -11148,6 +11573,7 @@
                       "WBC.visibilityEnum4"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "Hyvä",
                       "Hyvä-kohtalainen",
@@ -11161,6 +11587,7 @@
                   "waterbodies": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.waterbodiesEnum0",
                       "WBC.waterbodiesEnum1",
                       "WBC.waterbodiesEnum2",
@@ -11169,6 +11596,7 @@
                       "WBC.waterbodiesEnum5"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "Meren rantaa",
                       "Järven rantaa",
@@ -11183,6 +11611,7 @@
                   "wayOfTravel": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.wayOfTravelEnum0",
                       "WBC.wayOfTravelEnum1",
                       "WBC.wayOfTravelEnum2",
@@ -11190,6 +11619,7 @@
                       "WBC.wayOfTravelEnum9"
                     ],
                     "enumNames": [
+                      "",
                       "Jalkaisin",
                       "Suksilla",
                       "Muu, mikä",
@@ -11209,6 +11639,7 @@
                   "wind": {
                     "type": "string",
                     "enum": [
+                      "",
                       "WBC.windEnum0",
                       "WBC.windEnum1",
                       "WBC.windEnum2",
@@ -11216,6 +11647,7 @@
                       "WBC.windEnum4"
                     ],
                     "enumNames": [
+                      "",
                       "Ei tietoa",
                       "Tyyntä-heikkoa",
                       "Heikkoa-kohtalaista",
@@ -11232,6 +11664,7 @@
               "gatheringType": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.gatheringTypeForagingArea",
                   "MY.gatheringTypeBreedingAndRestingArea",
                   "MY.gatheringTypeCavityTree",
@@ -11245,6 +11678,7 @@
                   "MY.gatheringTypeWaterbirdRound"
                 ],
                 "enumNames": [
+                  "",
                   "Foraging area",
                   "Breeding and resting area",
                   "Cavity tree",
@@ -11281,6 +11715,7 @@
               "georeferenceSource": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.georeferenceSourceKotka",
                   "MY.georeferenceSourceKarttapaikka",
                   "MY.georeferenceSourcePaikkatietoikkuna",
@@ -11298,6 +11733,7 @@
                   "MY.georeferenceSourceUnknown"
                 ],
                 "enumNames": [
+                  "",
                   "Kotka maps",
                   "Karttapaikka (MML)",
                   "Paikkatietoikkuna (MML)",
@@ -11325,6 +11761,7 @@
                 "items": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.habitatEnumValue1",
                     "MY.habitatEnumValue2",
                     "MY.habitatEnumValue3",
@@ -11414,6 +11851,7 @@
                     "MY.habitatEnumValue86"
                   ],
                   "enumNames": [
+                    "",
                     "Forest",
                     "Heath forest",
                     "Mesic heath forest",
@@ -11514,6 +11952,7 @@
                 "items": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.habitatAttributesEnumValue1",
                     "MY.habitatAttributesEnumValue2",
                     "MY.habitatAttributesEnumValue3",
@@ -11538,6 +11977,7 @@
                     "MY.habitatAttributesEnumValue22"
                   ],
                   "enumNames": [
+                    "",
                     "Young forest / young trees",
                     "Middle-aged forest/ middle-aged trees",
                     "Old forest /old trees",
@@ -11620,12 +12060,14 @@
               "invasiveControlEffectiveness": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.invasiveControlEffectivenessFull",
                   "MY.invasiveControlEffectivenessPartial",
                   "MY.invasiveControlEffectivenessNone",
                   "MY.invasiveControlEffectivenessNotFound"
                 ],
                 "enumNames": [
+                  "",
                   "Fully controlled",
                   "Partially controlled",
                   "Not controlled (didn't succeed)",
@@ -11647,12 +12089,14 @@
                 "items": {
                   "type": "string",
                   "enum": [
+                    "",
                     "MY.invasiveControlMethodsMechanical",
                     "MY.invasiveControlMethodsChemical",
                     "MY.invasiveControlMethodsBiological",
                     "MY.invasiveControlMethodsOther"
                   ],
                   "enumNames": [
+                    "",
                     "Mekaaniset / fysikaaliset",
                     "Kemialliset",
                     "Biologiset",
@@ -11841,6 +12285,7 @@
               "predominantTree": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MX.37819",
                   "MX.37812",
                   "MX.37992",
@@ -11861,6 +12306,7 @@
                   "MX.37815"
                 ],
                 "enumNames": [
+                  "",
                   "Mänty",
                   "Spruce",
                   "Koivut",
@@ -11914,6 +12360,7 @@
               "samplingMethod": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MY.samplingMethodLight",
                   "MY.samplingMethodLightTrap",
                   "MY.samplingMethodTrap",
@@ -11963,6 +12410,7 @@
                   "MY.samplingMethodOther"
                 ],
                 "enumNames": [
+                  "",
                   "Light (lux)",
                   "Light trap",
                   "Trap (generic)",
@@ -12067,6 +12515,7 @@
                     "censusTaxonSetID": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MX.taxonSetSykeButterflyCensusPapilionoidea",
                         "MX.taxonSetSykeButterflyCensusOther",
                         "MX.taxonSetWaterbirdWaterbirds",
@@ -12078,6 +12527,7 @@
                         "MVL.1201"
                       ],
                       "enumNames": [
+                        "",
                         "SYKE's Butterfly Census: Butterflies",
                         "SYKE's Butterly Census: Other Macrolepidoptera",
                         "Waterbird Census: Waterbirds",
@@ -12174,11 +12624,13 @@
               "publicityRestrictions": {
                 "type": "string",
                 "enum": [
+                  "",
                   "MZ.publicityRestrictionsPublic",
                   "MZ.publicityRestrictionsProtected",
                   "MZ.publicityRestrictionsPrivate"
                 ],
                 "enumNames": [
+                  "",
                   "public",
                   "protected",
                   "private"
@@ -12210,6 +12662,12 @@
                       "subject": "@type",
                       "title": "Type for the Specimen"
                     },
+                    "@context": {
+                      "type": "string",
+                      "range": "xsd:string",
+                      "subject": "@context",
+                      "title": "Context for the Specimen"
+                    },
                     "DBH": {
                       "type": "string",
                       "range": "xsd:string",
@@ -12233,6 +12691,7 @@
                     "abundanceUnit": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.abundanceUnitIndividualCount",
                         "MY.abundanceUnitPairCount",
                         "MY.abundanceUnitNest",
@@ -12255,6 +12714,7 @@
                         "MY.abundanceUnitOccursDoesNotOccur"
                       ],
                       "enumNames": [
+                        "",
                         "Individual count",
                         "Pair count",
                         "Nest count",
@@ -12339,6 +12799,7 @@
                     "atlasCode": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.atlasCodeEnum1",
                         "MY.atlasCodeEnum2",
                         "MY.atlasCodeEnum3",
@@ -12362,6 +12823,7 @@
                         "MY.atlasCodeEnum82"
                       ],
                       "enumNames": [
+                        "",
                         "1 Breeding unlikely; Species detected in the grid during the breeding season, but almost certainly does not breed there",
                         "2 Possible breeding; A solitary bird detected once in suitable breeding habitat, and breeding of the species in the grid is possible",
                         "3 Possible breeding; A pair detected once in a suitable breeding habitat, and breeding of the species in the grid is possible",
@@ -12391,12 +12853,14 @@
                     "batBehavior": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.batBehaviorHibernating",
                         "MY.batBehaviorRoosting",
                         "MY.batBehaviorHunting",
                         "MY.batBehaviorDead"
                       ],
                       "enumNames": [
+                        "",
                         "hibernating",
                         "roosting",
                         "hunting",
@@ -12420,6 +12884,7 @@
                     "birdAge": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.birdAgePp",
                         "MY.birdAgePm",
                         "MY.birdAgeFl",
@@ -12441,6 +12906,7 @@
                         "MY.birdAge8Kv"
                       ],
                       "enumNames": [
+                        "",
                         "pp",
                         "pm",
                         "fl",
@@ -12479,6 +12945,7 @@
                     "birdPlumage": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.birdPlumageAd",
                         "MY.birdPlumageEijp",
                         "MY.birdPlumageImm",
@@ -12493,6 +12960,7 @@
                         "MY.birdPlumageSs"
                       ],
                       "enumNames": [
+                        "",
                         "ad",
                         "eijp",
                         "imm (immature)",
@@ -12560,6 +13028,7 @@
                     "distance": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.distanceOverFlight",
                         "MY.distanceNear",
                         "MY.distanceQuiteFar",
@@ -12567,6 +13036,7 @@
                         "MY.distanceVeryFar"
                       ],
                       "enumNames": [
+                        "",
                         "flight over or next to observer",
                         "near",
                         "quite far away",
@@ -12580,6 +13050,7 @@
                     "earliestEpochOrLowestSeries": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.epochOrSeriesCambrian",
                         "MY.epochOrSeriesCarboniferous",
                         "MY.epochOrSeriesCretaceous",
@@ -12595,6 +13066,7 @@
                         "MY.epochOrSeriesTriassic"
                       ],
                       "enumNames": [
+                        "",
                         "Cambrian",
                         "Carboniferous",
                         "Cretaceous",
@@ -12624,6 +13096,7 @@
                     "fruitType": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.fruitTypeAchene",
                         "MY.fruitTypeBerry",
                         "MY.fruitTypeCapsule",
@@ -12639,6 +13112,7 @@
                         "MY.fruitTypeSiliqua"
                       ],
                       "enumNames": [
+                        "",
                         "achene",
                         "berry",
                         "capsule",
@@ -12734,6 +13208,7 @@
                     "indirectObservationType": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.indirectObservationTypeFeces",
                         "MY.indirectObservationTypeSnowTracks",
                         "MY.indirectObservationTypeUrine",
@@ -12741,6 +13216,7 @@
                         "MY.indirectObservationTypeFoodStock"
                       ],
                       "enumNames": [
+                        "",
                         "Feces",
                         "Snow tracks",
                         "Urine",
@@ -12830,6 +13306,7 @@
                     "latestEpochOrHighestSeries": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.epochOrSeriesCambrian",
                         "MY.epochOrSeriesCarboniferous",
                         "MY.epochOrSeriesCretaceous",
@@ -12845,6 +13322,7 @@
                         "MY.epochOrSeriesTriassic"
                       ],
                       "enumNames": [
+                        "",
                         "Cambrian",
                         "Carboniferous",
                         "Cretaceous",
@@ -12878,6 +13356,7 @@
                     "lifeStage": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.lifeStageEgg",
                         "MY.lifeStageLarva",
                         "MY.lifeStagePupa",
@@ -12901,6 +13380,7 @@
                         "MY.lifeStageMarks"
                       ],
                       "enumNames": [
+                        "",
                         "egg",
                         "larva",
                         "pupa",
@@ -13228,12 +13708,14 @@
                     "microbiologicalRiskGroup": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.microbiologicalRiskGroup1",
                         "MY.microbiologicalRiskGroup2",
                         "MY.microbiologicalRiskGroup3",
                         "MY.microbiologicalRiskGroup4"
                       ],
                       "enumNames": [
+                        "",
                         "1",
                         "2",
                         "3",
@@ -13254,6 +13736,7 @@
                     "movingDirection": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.movingDirectionN",
                         "MY.movingDirectionNNE",
                         "MY.movingDirectionNE",
@@ -13272,6 +13755,7 @@
                         "MY.movingDirectionNNW"
                       ],
                       "enumNames": [
+                        "",
                         "north",
                         "north-northeast",
                         "north-east",
@@ -13314,10 +13798,12 @@
                     "nativeStatus": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.native",
                         "MY.nonNative"
                       ],
                       "enumNames": [
+                        "",
                         "wild",
                         "non-wild"
                       ],
@@ -13341,6 +13827,7 @@
                     "nestType": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.nestTypeTreeCavity",
                         "MY.nestTypeTwig",
                         "MY.nestTypeNestBox",
@@ -13349,6 +13836,7 @@
                         "MY.nestTypeOther"
                       ],
                       "enumNames": [
+                        "",
                         "Cavity in tree",
                         "Twig nest in tree",
                         "Nestbox in tree",
@@ -13384,6 +13872,7 @@
                     "plantLifeStage": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.plantLifeStageSterile",
                         "MY.plantLifeStageFertile",
                         "MY.plantLifeStageSeed",
@@ -13399,6 +13888,7 @@
                         "MY.plantLifeStageDeadPlant"
                       ],
                       "enumNames": [
+                        "",
                         "sterile",
                         "fertile",
                         "seed / spore / fruit",
@@ -13420,6 +13910,7 @@
                     "plantStatusCode": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.plantStatusCodeL",
                         "MY.plantStatusCodeA",
                         "MY.plantStatusCodeAV",
@@ -13452,6 +13943,7 @@
                         "MY.plantStatusCodeF"
                       ],
                       "enumNames": [
+                        "",
                         "L - wild",
                         "A - spontaneous",
                         "AV - spontaneous, resident",
@@ -13508,6 +14000,7 @@
                       "items": {
                         "type": "string",
                         "enum": [
+                          "",
                           "MY.preservationPressed",
                           "MY.preservationDry",
                           "MY.preservationCriticalPointDrying",
@@ -13546,6 +14039,7 @@
                           "MY.preservationFrozenMinus80CAndEthanolMinus20C"
                         ],
                         "enumNames": [
+                          "",
                           "Dry and pressed",
                           "Dry",
                           "Critical-point drying",
@@ -13593,6 +14087,7 @@
                     "provenance": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.provenanceUnknown",
                         "MY.provenanceCultivated",
                         "MY.provenanceCultivatedUnsure",
@@ -13603,6 +14098,7 @@
                         "MY.provenancePropagule"
                       ],
                       "enumNames": [
+                        "",
                         "? (Unknown)",
                         "G (Cultivated)",
                         "G? (Cultivated, unsure)",
@@ -13620,6 +14116,7 @@
                     "recordBasis": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.recordBasisPreservedSpecimen",
                         "MY.recordBasisHumanObservation",
                         "MY.recordBasisHumanObservationSeen",
@@ -13642,6 +14139,7 @@
                         "MY.recordBasisMaterialSample"
                       ],
                       "enumNames": [
+                        "",
                         "Preserved specimen",
                         "Observation",
                         "Seen",
@@ -13674,6 +14172,7 @@
                       "items": {
                         "type": "string",
                         "enum": [
+                          "",
                           "MY.recordPartsBones",
                           "MY.recordPartsAntler",
                           "MY.recordPartsHead",
@@ -13708,6 +14207,7 @@
                           "My.recordPartsSkullAndBones"
                         ],
                         "enumNames": [
+                          "",
                           "bones",
                           "antler(s)",
                           "head",
@@ -13758,6 +14258,7 @@
                     "samplingMethod": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.samplingMethodLight",
                         "MY.samplingMethodLightTrap",
                         "MY.samplingMethodTrap",
@@ -13807,6 +14308,7 @@
                         "MY.samplingMethodOther"
                       ],
                       "enumNames": [
+                        "",
                         "Light (lux)",
                         "Light trap",
                         "Trap (generic)",
@@ -13869,11 +14371,13 @@
                     "seedMaturity": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.seedMaturityImmature",
                         "MY.seedMaturityMature",
                         "MY.seedMaturityMixed"
                       ],
                       "enumNames": [
+                        "",
                         "immature",
                         "mature",
                         "mixed"
@@ -13886,6 +14390,7 @@
                     "seedMorphology": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.seedMorphologyBent",
                         "MY.seedMorphologyBroad",
                         "MY.seedMorphologyCapitate",
@@ -13900,6 +14405,7 @@
                         "MY.seedMorphologyUndifferentiated"
                       ],
                       "enumNames": [
+                        "",
                         "bent",
                         "broad",
                         "capitate",
@@ -13921,6 +14427,7 @@
                     "sex": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.sexM",
                         "MY.sexF",
                         "MY.sexW",
@@ -13931,6 +14438,7 @@
                         "MY.sexC"
                       ],
                       "enumNames": [
+                        "",
                         "M - Male",
                         "F - Female",
                         "W - Worker",
@@ -13961,6 +14469,7 @@
                     "smell": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.smellNotSmelled",
                         "MY.smellNoSmelled",
                         "MY.smellWeak",
@@ -13968,6 +14477,7 @@
                         "MY.smellStrong"
                       ],
                       "enumNames": [
+                        "",
                         "Not sniffed",
                         "Smell none",
                         "Faint",
@@ -13987,6 +14497,7 @@
                     "substrateClassification": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.substrateGround",
                         "MY.substrateGroundLowShrubs",
                         "MY.substrateGroundLichens",
@@ -14045,6 +14556,7 @@
                         "MY.substrateDeadLeaf"
                       ],
                       "enumNames": [
+                        "",
                         "ground",
                         "among low shrubs",
                         "among lichens",
@@ -14109,6 +14621,7 @@
                     "substrateDecayStage": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.substrateDecayStageEnum1",
                         "MY.substrateDecayStageEnum2",
                         "MY.substrateDecayStageEnum3",
@@ -14116,6 +14629,7 @@
                         "MY.substrateDecayStageEnum5"
                       ],
                       "enumNames": [
+                        "",
                         "Decay stage 1",
                         "Decay stage 2",
                         "Decay stage 3",
@@ -14156,6 +14670,7 @@
                       "items": {
                         "type": "string",
                         "enum": [
+                          "",
                           "MY.substrateTreeClassificationEnum1",
                           "MY.substrateTreeClassificationEnum2",
                           "MY.substrateTreeClassificationEnum3",
@@ -14164,6 +14679,7 @@
                           "MY.substrateTreeClassificationEnum6"
                         ],
                         "enumNames": [
+                          "",
                           "kelo",
                           "charred",
                           "moss-covered",
@@ -14191,6 +14707,7 @@
                     "taste": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.tasteNotTasted",
                         "MY.tasteNoTaste",
                         "MY.tasteWeak",
@@ -14198,6 +14715,7 @@
                         "MY.tasteStrong"
                       ],
                       "enumNames": [
+                        "",
                         "Not tasted",
                         "Taste none",
                         "Faint",
@@ -14217,11 +14735,13 @@
                     "taxonConfidence": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.taxonConfidenceSure",
                         "MY.taxonConfidenceUnsure",
                         "MY.taxonConfidenceSubspeciesUnsure"
                       ],
                       "enumNames": [
+                        "",
                         "Sure",
                         "Unsure",
                         "Subspecies unsure"
@@ -14252,6 +14772,7 @@
                         "glowWormMicrohabitat": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.glowWormMicrohabitatEnum1",
                             "MY.glowWormMicrohabitatEnum2",
                             "MY.glowWormMicrohabitatEnum3",
@@ -14261,6 +14782,7 @@
                             "MY.glowWormMicrohabitatEnumOther"
                           ],
                           "enumNames": [
+                            "",
                             "Short grass",
                             "Long grass",
                             "Under tree",
@@ -14297,6 +14819,7 @@
                         "lineTransectObsType": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.lineTransectObsTypeSong",
                             "MY.lineTransectObsTypeOtherSound",
                             "MY.lineTransectObsTypeSeen",
@@ -14311,6 +14834,7 @@
                             "MY.lineTransectObsTypeUnknown"
                           ],
                           "enumNames": [
+                            "",
                             "Singing",
                             "Other noises",
                             "Seen",
@@ -14331,10 +14855,12 @@
                         "lineTransectRouteFieldType": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.lineTransectRouteFieldTypeInner",
                             "MY.lineTransectRouteFieldTypeOuter"
                           ],
                           "enumNames": [
+                            "",
                             "P - Inner route field",
                             "A - Outer route field"
                           ],
@@ -14345,11 +14871,13 @@
                         "lolifeDroppingsCount": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.lolifeDroppingsCount1",
                             "MY.lolifeDroppingsCount2",
                             "MY.lolifeDroppingsCount3"
                           ],
                           "enumNames": [
+                            "",
                             "Muutama",
                             "Kymmeniä",
                             "Satoja"
@@ -14361,10 +14889,12 @@
                         "lolifeDroppingsQuality": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.lolifeDroppingsQuality1",
                             "MY.lolifeDroppingsQuality2"
                           ],
                           "enumNames": [
+                            "",
                             "Vanhoja",
                             "Tuoreita"
                           ],
@@ -14375,12 +14905,14 @@
                         "lolifeDroppingsType": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.lolifeDroppingsTypeRock",
                             "MY.lolifeDroppingsTypeTree",
                             "MY.lolifeDroppingsTypeTreeGroup",
                             "MY.lolifeDroppingsTypeOther"
                           ],
                           "enumNames": [
+                            "",
                             "On top of rock",
                             "Single tree",
                             "Group of trees",
@@ -14393,6 +14925,7 @@
                         "lolifeNestTree": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MX.38590",
                             "MX.37812",
                             "MX.37999",
@@ -14402,6 +14935,7 @@
                             "MY.lolifeNestTreeOther"
                           ],
                           "enumNames": [
+                            "",
                             "Aspen",
                             "Spruce",
                             "Downy birch",
@@ -14443,11 +14977,13 @@
                         "waterbirdFemale": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.waterbirdFemaleEnumYes",
                             "MY.waterbirdFemaleEnumNo",
                             "MY.waterbirdFemaleEnumLonelyPanicking"
                           ],
                           "enumNames": [
+                            "",
                             "yes",
                             "no",
                             "lonely panicking female"
@@ -14459,6 +14995,7 @@
                         "waterbirdJuvenileAgeClass": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.waterbirdJuvenileAgeClassIa",
                             "MY.waterbirdJuvenileAgeClassIb",
                             "MY.waterbirdJuvenileAgeClassIc",
@@ -14469,6 +15006,7 @@
                             "MY.waterbirdJuvenileAgeClassUnknown"
                           ],
                           "enumNames": [
+                            "",
                             "1. Aivan pienet kirkasväriset untuvapallot (Ia)",
                             "2. Pienet, hieman haalistuneet untuvikot (Ib)",
                             "3. Pienehköt, haalistuneet untuvikkopoikaset (Ic)",
@@ -14497,12 +15035,14 @@
                         "waterbirdPairCountOpinionReasoning": {
                           "type": "string",
                           "enum": [
+                            "",
                             "MY.waterbirdPairCountOpinionReasoningEnum1",
                             "MY.waterbirdPairCountOpinionReasoningEnum2",
                             "MY.waterbirdPairCountOpinionReasoningEnum3",
                             "MY.waterbirdPairCountOpinionReasoningEnumOther"
                           ],
                           "enumNames": [
+                            "",
                             "1) Laji ei varmasti pesi kohteella, linnut ruokailevia (esim. muuttomatkalla)",
                             "2) Alueella levähti 1. laskennan aikaan vielä runsaasti muuttajia ja tulkinta 2. laskennan perusteella",
                             "3) Lajin pesä(t) ovat jääneet jo kasvaneen järviruovikon suojiin 2. laskennassa, tulkinta tehty 1. laskennan perusteella",
@@ -14590,6 +15130,12 @@
                           "subject": "@type",
                           "title": "Type for the Havainnon keruutiedot"
                         },
+                        "@context": {
+                          "type": "string",
+                          "range": "xsd:string",
+                          "subject": "@context",
+                          "title": "Context for the Havainnon keruutiedot"
+                        },
                         "dateBegin": {
                           "type": "string",
                           "range": "xsd:string",
@@ -14667,11 +15213,13 @@
                     "wild": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.wildWild",
                         "MY.wildUnknown",
                         "MY.wildNonWild"
                       ],
                       "enumNames": [
+                        "",
                         "Wild",
                         "Unknown",
                         "Non-wild"
@@ -14716,11 +15264,13 @@
                     "publicityRestrictions": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MZ.publicityRestrictionsPublic",
                         "MZ.publicityRestrictionsProtected",
                         "MZ.publicityRestrictionsPrivate"
                       ],
                       "enumNames": [
+                        "",
                         "public",
                         "protected",
                         "private"
@@ -14751,6 +15301,12 @@
                             "range": "xsd:string",
                             "subject": "@type",
                             "title": "Type for the Identification"
+                          },
+                          "@context": {
+                            "type": "string",
+                            "range": "xsd:string",
+                            "subject": "@context",
+                            "title": "Context for the Identification"
                           },
                           "herbo:sortOrder": {
                             "type": "integer",
@@ -14789,11 +15345,13 @@
                           "detMethod": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MY.detMethodFreshSample",
                               "MY.detMethodMicroscopy",
                               "MY.detMethodPhoto"
                             ],
                             "enumNames": [
+                              "",
                               "fresh sample",
                               "microscopy",
                               "photo"
@@ -14822,6 +15380,7 @@
                             "items": {
                               "type": "string",
                               "enum": [
+                                "",
                                 "MY.identificationBasisSeen",
                                 "MY.identificationBasisHeard",
                                 "MY.identificationBasisHandled",
@@ -14836,6 +15395,7 @@
                                 "MY.identificationBasisDNA"
                               ],
                               "enumNames": [
+                                "",
                                 "Seen",
                                 "Heard",
                                 "Handled",
@@ -14879,6 +15439,7 @@
                           "infraRank": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MY.infraRankSsp",
                               "MY.infraRankVar",
                               "MY.infraRankBeta",
@@ -14895,6 +15456,7 @@
                               "MY.infraRankCultivarGroup"
                             ],
                             "enumNames": [
+                              "",
                               "ssp.",
                               "var.",
                               "β",
@@ -14973,6 +15535,7 @@
                           "taxonRank": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MX.superdomain",
                               "MX.domain",
                               "MX.kingdom",
@@ -15033,6 +15596,7 @@
                               "MX.grex"
                             ],
                             "enumNames": [
+                              "",
                               "superdomain",
                               "domain",
                               "kingdom",
@@ -15119,11 +15683,13 @@
                           "publicityRestrictions": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MZ.publicityRestrictionsPublic",
                               "MZ.publicityRestrictionsProtected",
                               "MZ.publicityRestrictionsPrivate"
                             ],
                             "enumNames": [
+                              "",
                               "public",
                               "protected",
                               "private"
@@ -15167,6 +15733,12 @@
                             "range": "xsd:string",
                             "subject": "@type",
                             "title": "Type for the Identification"
+                          },
+                          "@context": {
+                            "type": "string",
+                            "range": "xsd:string",
+                            "subject": "@context",
+                            "title": "Context for the Identification"
                           },
                           "isPartOf": {
                             "type": "string",
@@ -15220,6 +15792,7 @@
                           "typeStatus": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MY.typeStatusType",
                               "MY.typeStatusHolotype",
                               "MY.typeStatusSyntype",
@@ -15247,6 +15820,7 @@
                               "MY.typeStatusPathovarReferenceStrain"
                             ],
                             "enumNames": [
+                              "",
                               "type",
                               "holotype",
                               "syntype",
@@ -15295,12 +15869,14 @@
                           "typeVerification": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MY.typeVerificationVerified",
                               "MY.typeVerificationUnverified",
                               "MY.typeVerificationProbable",
                               "MY.typeVerificationDoubtful"
                             ],
                             "enumNames": [
+                              "",
                               "verified",
                               "unverified",
                               "probable",
@@ -15328,11 +15904,13 @@
                           "publicityRestrictions": {
                             "type": "string",
                             "enum": [
+                              "",
                               "MZ.publicityRestrictionsPublic",
                               "MZ.publicityRestrictionsProtected",
                               "MZ.publicityRestrictionsPrivate"
                             ],
                             "enumNames": [
+                              "",
                               "public",
                               "protected",
                               "private"
@@ -15372,6 +15950,7 @@
     "priority": {
       "type": "string",
       "enum": [
+        "",
         "MNP.priority1",
         "MNP.priority2",
         "MNP.priority3",
@@ -15379,6 +15958,7 @@
         "MNP.priority5"
       ],
       "enumNames": [
+        "",
         "1",
         "2",
         "3",
@@ -15435,6 +16015,7 @@
       "items": {
         "type": "string",
         "enum": [
+          "",
           "MNP.tagAccessibilityEasy",
           "MNP.tagAccessibilityModerate",
           "MNP.tagAccessibilityDifficult",
@@ -15442,6 +16023,7 @@
           "MNP.tagCensusRare"
         ],
         "enumNames": [
+          "",
           "Easy accessibility",
           "Moderate accessibility",
           "Difficult accessibility",

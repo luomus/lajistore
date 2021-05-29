@@ -27,6 +27,7 @@
     "secureLevel": {
       "type": "string",
       "enum": [
+        "",
         "MX.secureLevelNone",
         "MX.secureLevelKM1",
         "MX.secureLevelKM5",
@@ -38,6 +39,7 @@
         "MX.secureLevelNoShow"
       ],
       "enumNames": [
+        "",
         "None",
         "1 km",
         "5 km",
@@ -245,6 +247,7 @@
     "dataQuality": {
       "type": "string",
       "enum": [
+        "",
         "MY.dataQuality1",
         "MY.dataQuality2",
         "MY.dataQuality3",
@@ -253,6 +256,7 @@
         "MY.dataQualityNA"
       ],
       "enumNames": [
+        "",
         "1 star",
         "2 star",
         "3 star",
@@ -456,12 +460,14 @@
     "metadataStatus": {
       "type": "string",
       "enum": [
+        "",
         "MY.metadataStatusPreliminary",
         "MY.metadataStatusSatisfactory",
         "MY.metadataStatusComprehensive",
         "MY.metadataStatusHidden"
       ],
       "enumNames": [
+        "",
         "preliminary - needs improvement",
         "satisfactory - could be improved",
         "comprehensive",
@@ -553,12 +559,14 @@
     "publicationTerms": {
       "type": "string",
       "enum": [
+        "",
         "MY.publicationTermsFree",
         "MY.publicationTermsOfficial",
         "MY.publicationTermsInternal",
         "MY.publicationTermsNone"
       ],
       "enumNames": [
+        "",
         "Free to publish",
         "Official use only",
         "Internal use only",
@@ -676,11 +684,13 @@
     "publicityRestrictions": {
       "type": "string",
       "enum": [
+        "",
         "MZ.publicityRestrictionsPublic",
         "MZ.publicityRestrictionsProtected",
         "MZ.publicityRestrictionsPrivate"
       ],
       "enumNames": [
+        "",
         "public",
         "protected",
         "private"
