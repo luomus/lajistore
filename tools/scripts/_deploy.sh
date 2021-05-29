@@ -63,6 +63,7 @@ echo "Prepare configs..."
 # These two are using local configs that can differ from the global
 docker-compose -f "docker-compose.${TYPE}.yml" run --rm store npm run store:cli generate open-api
 docker-compose -f "docker-compose.${TYPE}.yml" run --rm store npm run store:cli generate graphql
+docker-compose -f "docker-compose.${TYPE}.yml" down --remove-orphans -v
 
 echo "Building..."
 docker build -t store-api -f tools/docker/store/Dockerfile --target api --build-arg STORE_VERSION=api .
