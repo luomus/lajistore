@@ -5,7 +5,7 @@ SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 REGISTRY=${1}
 TARGET_SERVER=${2}
 TYPE=${3}
-TOKEN=${5}
+TOKEN=${4}
 
 if [[ -n "$TOKEN" ]]; then
   oc login --server=${TARGET_SERVER} --token=${TOKEN}
