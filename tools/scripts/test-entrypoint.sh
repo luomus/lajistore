@@ -6,6 +6,7 @@ DATA_FILES=./tools/init/*.json
 
 cd ${SCRIPT_PATH}/../../
 
+npm run build:migrate:postgres
 npm run store:cli generate open-api
 npm run store:cli user KE.006 password
 npm run store:cli user KE.007 password
