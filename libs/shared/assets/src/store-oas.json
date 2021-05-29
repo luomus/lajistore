@@ -49110,6 +49110,10 @@
             "type": "boolean",
             "title": "Adhered route direction"
           },
+          "spottingScopeUsed": {
+            "type": "boolean",
+            "title": "Spotting scope"
+          },
           "startDistanceFromNECorner": {
             "type": "string",
             "title": "Start distance from NE corner (m)"
@@ -49165,6 +49169,10 @@
               "MY.batCollectorSomeoneElse"
             ],
             "title": "I placed the sound recorder to the terrain"
+          },
+          "binocularsUsed": {
+            "type": "boolean",
+            "title": "Binoculars"
           },
           "censusAreaHectares": {
             "type": "integer",
@@ -49228,6 +49236,10 @@
             "type": "integer",
             "minimum": 0,
             "title": "Shoreline length/m"
+          },
+          "spottingScopeUsed": {
+            "type": "boolean",
+            "title": "Spotting scope"
           },
           "sunniness": {
             "type": "integer",

@@ -516,6 +516,12 @@
                   "subject": "MY.batCollector",
                   "title": "I placed the sound recorder to the terrain"
                 },
+                "binocularsUsed": {
+                  "type": "boolean",
+                  "range": "xsd:boolean",
+                  "subject": "MY.binocularsUsed",
+                  "title": "Binoculars"
+                },
                 "censusAreaHectares": {
                   "type": "integer",
                   "minimum": 0,
@@ -616,6 +622,12 @@
                   "range": "xsd:nonNegativeInteger",
                   "subject": "MY.shorelineLengthMeters",
                   "title": "Shoreline length/m"
+                },
+                "spottingScopeUsed": {
+                  "type": "boolean",
+                  "range": "xsd:boolean",
+                  "subject": "MY.spottingScopeUsed",
+                  "title": "Spotting scope"
                 },
                 "sunniness": {
                   "type": "integer",
@@ -1483,6 +1495,10 @@
                 },
                 {
                   "$ref": "https://geojson.org/schema/GeometryCollection.json"
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false
                 }
               ],
               "range": "MZ.geometry",
@@ -1556,6 +1572,12 @@
               "range": "xsd:boolean",
               "subject": "MY.routeDirectionAdhered",
               "title": "Adhered route direction"
+            },
+            "spottingScopeUsed": {
+              "type": "boolean",
+              "range": "xsd:boolean",
+              "subject": "MY.spottingScopeUsed",
+              "title": "Spotting scope"
             },
             "startDistanceFromNECorner": {
               "type": "string",
@@ -2478,6 +2500,12 @@
                     "subject": "MY.batCollector",
                     "title": "I placed the sound recorder to the terrain"
                   },
+                  "binocularsUsed": {
+                    "type": "boolean",
+                    "range": "xsd:boolean",
+                    "subject": "MY.binocularsUsed",
+                    "title": "Binoculars"
+                  },
                   "censusAreaHectares": {
                     "type": "integer",
                     "minimum": 0,
@@ -2578,6 +2606,12 @@
                     "range": "xsd:nonNegativeInteger",
                     "subject": "MY.shorelineLengthMeters",
                     "title": "Shoreline length/m"
+                  },
+                  "spottingScopeUsed": {
+                    "type": "boolean",
+                    "range": "xsd:boolean",
+                    "subject": "MY.spottingScopeUsed",
+                    "title": "Spotting scope"
                   },
                   "sunniness": {
                     "type": "integer",
@@ -3477,6 +3511,10 @@
                   },
                   {
                     "$ref": "https://geojson.org/schema/GeometryCollection.json"
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false
                   }
                 ],
                 "range": "MZ.geometry",
@@ -6814,6 +6852,10 @@
                             },
                             {
                               "$ref": "https://geojson.org/schema/GeometryCollection.json"
+                            },
+                            {
+                              "type": "object",
+                              "additionalProperties": false
                             }
                           ],
                           "range": "MZ.geometry",
@@ -7669,6 +7711,10 @@
         },
         {
           "$ref": "https://geojson.org/schema/GeometryCollection.json"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false
         }
       ],
       "range": "MZ.geometry",
@@ -8227,6 +8273,12 @@
                   "subject": "MY.batCollector",
                   "title": "I placed the sound recorder to the terrain"
                 },
+                "binocularsUsed": {
+                  "type": "boolean",
+                  "range": "xsd:boolean",
+                  "subject": "MY.binocularsUsed",
+                  "title": "Binoculars"
+                },
                 "censusAreaHectares": {
                   "type": "integer",
                   "minimum": 0,
@@ -8327,6 +8379,12 @@
                   "range": "xsd:nonNegativeInteger",
                   "subject": "MY.shorelineLengthMeters",
                   "title": "Shoreline length/m"
+                },
+                "spottingScopeUsed": {
+                  "type": "boolean",
+                  "range": "xsd:boolean",
+                  "subject": "MY.spottingScopeUsed",
+                  "title": "Spotting scope"
                 },
                 "sunniness": {
                   "type": "integer",
@@ -9194,6 +9252,10 @@
                 },
                 {
                   "$ref": "https://geojson.org/schema/GeometryCollection.json"
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false
                 }
               ],
               "range": "MZ.geometry",
@@ -9267,6 +9329,12 @@
               "range": "xsd:boolean",
               "subject": "MY.routeDirectionAdhered",
               "title": "Adhered route direction"
+            },
+            "spottingScopeUsed": {
+              "type": "boolean",
+              "range": "xsd:boolean",
+              "subject": "MY.spottingScopeUsed",
+              "title": "Spotting scope"
             },
             "startDistanceFromNECorner": {
               "type": "string",
@@ -10189,6 +10257,12 @@
                     "subject": "MY.batCollector",
                     "title": "I placed the sound recorder to the terrain"
                   },
+                  "binocularsUsed": {
+                    "type": "boolean",
+                    "range": "xsd:boolean",
+                    "subject": "MY.binocularsUsed",
+                    "title": "Binoculars"
+                  },
                   "censusAreaHectares": {
                     "type": "integer",
                     "minimum": 0,
@@ -10289,6 +10363,12 @@
                     "range": "xsd:nonNegativeInteger",
                     "subject": "MY.shorelineLengthMeters",
                     "title": "Shoreline length/m"
+                  },
+                  "spottingScopeUsed": {
+                    "type": "boolean",
+                    "range": "xsd:boolean",
+                    "subject": "MY.spottingScopeUsed",
+                    "title": "Spotting scope"
                   },
                   "sunniness": {
                     "type": "integer",
@@ -11188,6 +11268,10 @@
                   },
                   {
                     "$ref": "https://geojson.org/schema/GeometryCollection.json"
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false
                   }
                 ],
                 "range": "MZ.geometry",
@@ -14525,6 +14609,10 @@
                             },
                             {
                               "$ref": "https://geojson.org/schema/GeometryCollection.json"
+                            },
+                            {
+                              "type": "object",
+                              "additionalProperties": false
                             }
                           ],
                           "range": "MZ.geometry",

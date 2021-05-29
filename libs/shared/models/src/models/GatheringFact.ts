@@ -10,6 +10,7 @@ export interface GatheringFact {
   id?: string;
   "@type"?: string;
   batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
+  binocularsUsed?: boolean;
   censusAreaHectares?: number;
   invasiveControlOtherExpensesInEuros?: number;
   invasiveControlWorkHours?: number;
@@ -37,6 +38,7 @@ export interface GatheringFact {
     | "MY.pointCountHabitat16"
     | "MY.pointCountHabitat17";
   shorelineLengthMeters?: number;
+  spottingScopeUsed?: boolean;
   sunniness?: number;
   sykeButterFlyCensusWind?:
     | "MY.sykeButterFlyCensusWindEnumUnknown"

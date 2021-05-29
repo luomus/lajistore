@@ -152,6 +152,7 @@ export interface Gathering {
     | "MY.forestVegetationZone4d";
   gatheringFact?: {
     batCollector?: "MY.batCollectorAlone" | "MY.batCollectorWithProjectGroupMember" | "MY.batCollectorSomeoneElse";
+    binocularsUsed?: boolean;
     censusAreaHectares?: number;
     invasiveControlOtherExpensesInEuros?: number;
     invasiveControlWorkHours?: number;
@@ -179,6 +180,7 @@ export interface Gathering {
       | "MY.pointCountHabitat16"
       | "MY.pointCountHabitat17";
     shorelineLengthMeters?: number;
+    spottingScopeUsed?: boolean;
     sunniness?: number;
     sykeButterFlyCensusWind?:
       | "MY.sykeButterFlyCensusWindEnumUnknown"
@@ -389,7 +391,7 @@ export interface Gathering {
     | "MY.gatheringTypeLolifeApplicableZone"
     | "MY.gatheringTypeWaterbirdPoint"
     | "MY.gatheringTypeWaterbirdRound";
-  geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
+  geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
   /**
    * Use for OLD SPECIMENS: What source was used to get coordinates based on locality names
    */
@@ -1504,7 +1506,7 @@ export interface Gathering {
       "@type"?: string;
       dateBegin?: string;
       dateEnd?: string;
-      geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
+      geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
       /**
        * Informal description of the habitat.
        */

@@ -4818,6 +4818,7 @@ type GatheringEvent {
   namedPlaceNotes: String
   rainIntensity: RainIntensity
   routeDirectionAdhered: Boolean
+  spottingScopeUsed: Boolean
   startDistanceFromNECorner: String
   startPointDeviation: Int
   taxonCensus: [TaxonCensus2]
@@ -4885,6 +4886,7 @@ type GatheringFact {
   abundancePINENU: AbundancePINENU
   abundanceTURPIL: AbundanceTURPIL
   batCollector: BatCollector
+  binocularsUsed: Boolean
   birdFeederCount: Int
   birdFeederCountBiotopeA: Int
   birdFeederCountBiotopeB: Int
@@ -4954,6 +4956,7 @@ type GatheringFact {
   snowCover: SnowCover
   sorbusBerriesAtCensus: SorbusBerriesAtCensus
   sorbusBerriesEarlyFall: SorbusBerriesEarlyFall
+  spottingScopeUsed: Boolean
   spruceConesAtCensus: SpruceConesAtCensus
   sunniness: Int
   sykeButterFlyCensusWind: SykeButterFlyCensusWind
@@ -20333,6 +20336,7 @@ input GatheringEventInput {
   namedPlaceNotes: String
   rainIntensity: RainIntensity
   routeDirectionAdhered: Boolean
+  spottingScopeUsed: Boolean
   startDistanceFromNECorner: String
   startPointDeviation: Int
   taxonCensus: [TaxonCensus2Input]
@@ -20353,6 +20357,7 @@ input GatheringFactInput {
   abundancePINENU: AbundancePINENU
   abundanceTURPIL: AbundanceTURPIL
   batCollector: BatCollector
+  binocularsUsed: Boolean
   birdFeederCount: Int
   birdFeederCountBiotopeA: Int
   birdFeederCountBiotopeB: Int
@@ -20422,6 +20427,7 @@ input GatheringFactInput {
   snowCover: SnowCover
   sorbusBerriesAtCensus: SorbusBerriesAtCensus
   sorbusBerriesEarlyFall: SorbusBerriesEarlyFall
+  spottingScopeUsed: Boolean
   spruceConesAtCensus: SpruceConesAtCensus
   sunniness: Int
   sykeButterFlyCensusWind: SykeButterFlyCensusWind

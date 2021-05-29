@@ -35,6 +35,10 @@
       "@id": "default:MY.batCollector",
       "@type": "@id"
     },
+    "binocularsUsed": {
+      "@id": "default:MY.binocularsUsed",
+      "@type": "xsd:boolean"
+    },
     "censusAreaHectares": {
       "@id": "default:MY.censusAreaHectares",
       "@type": "xsd:nonNegativeInteger"
@@ -70,6 +74,10 @@
     "shorelineLengthMeters": {
       "@id": "default:MY.shorelineLengthMeters",
       "@type": "xsd:nonNegativeInteger"
+    },
+    "spottingScopeUsed": {
+      "@id": "default:MY.spottingScopeUsed",
+      "@type": "xsd:boolean"
     },
     "sunniness": {
       "@id": "default:MY.sunniness",

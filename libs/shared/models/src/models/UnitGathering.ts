@@ -19,7 +19,7 @@ export interface UnitGathering {
   "@type"?: string;
   dateBegin?: string;
   dateEnd?: string;
-  geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
+  geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
   /**
    * Informal description of the habitat.
    */

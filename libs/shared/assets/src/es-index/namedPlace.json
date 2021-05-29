@@ -202,6 +202,9 @@
                     "type": "keyword",
                     "ignore_above": 200
                   },
+                  "binocularsUsed": {
+                    "type": "boolean"
+                  },
                   "censusAreaHectares": {
                     "type": "integer"
                   },
@@ -229,6 +232,9 @@
                   },
                   "shorelineLengthMeters": {
                     "type": "integer"
+                  },
+                  "spottingScopeUsed": {
+                    "type": "boolean"
                   },
                   "sunniness": {
                     "type": "integer"
@@ -520,6 +526,9 @@
                 "ignore_above": 200
               },
               "routeDirectionAdhered": {
+                "type": "boolean"
+              },
+              "spottingScopeUsed": {
                 "type": "boolean"
               },
               "startDistanceFromNECorner": {
@@ -847,6 +856,9 @@
                     "type": "keyword",
                     "ignore_above": 200
                   },
+                  "binocularsUsed": {
+                    "type": "boolean"
+                  },
                   "censusAreaHectares": {
                     "type": "integer"
                   },
@@ -874,6 +886,9 @@
                   },
                   "shorelineLengthMeters": {
                     "type": "integer"
+                  },
+                  "spottingScopeUsed": {
+                    "type": "boolean"
                   },
                   "sunniness": {
                     "type": "integer"
@@ -2434,6 +2449,9 @@
                     "type": "keyword",
                     "ignore_above": 200
                   },
+                  "binocularsUsed": {
+                    "type": "boolean"
+                  },
                   "censusAreaHectares": {
                     "type": "integer"
                   },
@@ -2461,6 +2479,9 @@
                   },
                   "shorelineLengthMeters": {
                     "type": "integer"
+                  },
+                  "spottingScopeUsed": {
+                    "type": "boolean"
                   },
                   "sunniness": {
                     "type": "integer"
@@ -2752,6 +2773,9 @@
                 "ignore_above": 200
               },
               "routeDirectionAdhered": {
+                "type": "boolean"
+              },
+              "spottingScopeUsed": {
                 "type": "boolean"
               },
               "startDistanceFromNECorner": {
@@ -3079,6 +3103,9 @@
                     "type": "keyword",
                     "ignore_above": 200
                   },
+                  "binocularsUsed": {
+                    "type": "boolean"
+                  },
                   "censusAreaHectares": {
                     "type": "integer"
                   },
@@ -3106,6 +3133,9 @@
                   },
                   "shorelineLengthMeters": {
                     "type": "integer"
+                  },
+                  "spottingScopeUsed": {
+                    "type": "boolean"
                   },
                   "sunniness": {
                     "type": "integer"

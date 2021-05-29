@@ -43,6 +43,10 @@
         },
         {
           "$ref": "https://geojson.org/schema/GeometryCollection.json"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false
         }
       ],
       "range": "MZ.geometry",

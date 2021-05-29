@@ -119,6 +119,10 @@
       "@id": "default:MY.routeDirectionAdhered",
       "@type": "xsd:boolean"
     },
+    "spottingScopeUsed": {
+      "@id": "default:MY.spottingScopeUsed",
+      "@type": "xsd:boolean"
+    },
     "startDistanceFromNECorner": {
       "@id": "default:MY.startDistanceFromNECorner",
       "@type": "xsd:string"

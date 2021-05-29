@@ -681,6 +681,7 @@ export interface Form {
             | "MY.batCollectorAlone"
             | "MY.batCollectorWithProjectGroupMember"
             | "MY.batCollectorSomeoneElse";
+          binocularsUsed?: boolean;
           censusAreaHectares?: number;
           invasiveControlOtherExpensesInEuros?: number;
           invasiveControlWorkHours?: number;
@@ -708,6 +709,7 @@ export interface Form {
             | "MY.pointCountHabitat16"
             | "MY.pointCountHabitat17";
           shorelineLengthMeters?: number;
+          spottingScopeUsed?: boolean;
           sunniness?: number;
           sykeButterFlyCensusWind?:
             | "MY.sykeButterFlyCensusWindEnumUnknown"
@@ -906,7 +908,7 @@ export interface Form {
           wayOfTravelNotes?: string;
           wind?: "WBC.windEnum0" | "WBC.windEnum1" | "WBC.windEnum2" | "WBC.windEnum3" | "WBC.windEnum4";
         };
-        geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
+        geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
         gpsUsed?: boolean;
         /**
          * Name of the collector(s), in format 'Lastname, Firstname; Lastname Firstname'
@@ -925,6 +927,7 @@ export interface Form {
           | "MY.rainIntensityEnumHeavyRain"
           | "MY.rainIntensityEnumTorrentialRain";
         routeDirectionAdhered?: boolean;
+        spottingScopeUsed?: boolean;
         startDistanceFromNECorner?: string;
         startPointDeviation?: number;
         taxonCensus?: {
@@ -1260,6 +1263,7 @@ export interface Form {
               | "MY.batCollectorAlone"
               | "MY.batCollectorWithProjectGroupMember"
               | "MY.batCollectorSomeoneElse";
+            binocularsUsed?: boolean;
             censusAreaHectares?: number;
             invasiveControlOtherExpensesInEuros?: number;
             invasiveControlWorkHours?: number;
@@ -1287,6 +1291,7 @@ export interface Form {
               | "MY.pointCountHabitat16"
               | "MY.pointCountHabitat17";
             shorelineLengthMeters?: number;
+            spottingScopeUsed?: boolean;
             sunniness?: number;
             sykeButterFlyCensusWind?:
               | "MY.sykeButterFlyCensusWindEnumUnknown"
@@ -1497,7 +1502,7 @@ export interface Form {
             | "MY.gatheringTypeLolifeApplicableZone"
             | "MY.gatheringTypeWaterbirdPoint"
             | "MY.gatheringTypeWaterbirdRound";
-          geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
+          geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
           /**
            * Use for OLD SPECIMENS: What source was used to get coordinates based on locality names
            */
@@ -2621,7 +2626,7 @@ export interface Form {
               "@type"?: string;
               dateBegin?: string;
               dateEnd?: string;
-              geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
+              geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
               /**
                * Informal description of the habitat.
                */
@@ -3059,6 +3064,7 @@ export interface Form {
               | "MY.batCollectorAlone"
               | "MY.batCollectorWithProjectGroupMember"
               | "MY.batCollectorSomeoneElse";
+            binocularsUsed?: boolean;
             censusAreaHectares?: number;
             invasiveControlOtherExpensesInEuros?: number;
             invasiveControlWorkHours?: number;
@@ -3086,6 +3092,7 @@ export interface Form {
               | "MY.pointCountHabitat16"
               | "MY.pointCountHabitat17";
             shorelineLengthMeters?: number;
+            spottingScopeUsed?: boolean;
             sunniness?: number;
             sykeButterFlyCensusWind?:
               | "MY.sykeButterFlyCensusWindEnumUnknown"
@@ -3296,7 +3303,7 @@ export interface Form {
             | "MY.gatheringTypeLolifeApplicableZone"
             | "MY.gatheringTypeWaterbirdPoint"
             | "MY.gatheringTypeWaterbirdRound";
-          geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
+          geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
           /**
            * Use for OLD SPECIMENS: What source was used to get coordinates based on locality names
            */
@@ -4420,7 +4427,7 @@ export interface Form {
               "@type"?: string;
               dateBegin?: string;
               dateEnd?: string;
-              geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
+              geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
               /**
                * Informal description of the habitat.
                */

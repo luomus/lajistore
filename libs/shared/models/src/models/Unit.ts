@@ -782,7 +782,7 @@ export interface Unit {
     "@type"?: string;
     dateBegin?: string;
     dateEnd?: string;
-    geometry?: GeoJSONGeometry | GeoJSONGeometryCollection;
+    geometry?: GeoJSONGeometry | GeoJSONGeometryCollection | {};
     /**
      * Informal description of the habitat.
      */
