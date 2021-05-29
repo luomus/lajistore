@@ -104,10 +104,8 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
         required,
         depth
       );
-    }
 
-    // Add context property to all classes (context should is used only in the root)
-    if (depth === 0) {
+      // Add context property to all classes
       properties[PROPERTY_CONTEXT] = await this.generateBasicPropertySchema(
         PROPERTY_CONTEXT,
         `Context for the ${ schema['title'] || className }`,
@@ -223,8 +221,8 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
       }
       propSchema = { ...embedded };
     } else if (property?.alts?.length) {
-      const enums: string[] = [];
-      const names: string[] = [];
+      const enums: string[] = property.required ? [] : [''];
+      const names: string[] = property.required ? [] : [''];
       property.alts.forEach((alt) =>
         alt.options.forEach((option) => {
           enums.push(option.id);
