@@ -2,12 +2,18 @@
 set -e -a
 
 SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+REGISTRY=${1}
+TARGET_SERVER=${2}
+TYPE=${3}
+TOKEN=${5}
+
+if [[ -n "$TOKEN" ]]; then
+  oc login --server=${TARGET_SERVER} --token=${TOKEN}
+fi
+
 OC_USER="$( oc whoami )"
 OC_SERVER="$( oc whoami --show-server )"
 OC_PROJECT=lajistore-api
-REGISTRY=${1}
-TARGET_SERVER_MATCH=${2}
-TYPE=${3}
 
 cd ${SCRIPT_PATH}/../../
 
@@ -19,9 +25,9 @@ if [[ -z "${OC_USER}" ]]; then
   echo ""
   exit 1
 fi
-if [[ $OC_SERVER != *"${TARGET_SERVER_MATCH}"* ]]; then
+if [[ $OC_SERVER != "${TARGET_SERVER}" ]]; then
   echo ""
-  echo "You should login to ${TARGET_SERVER_MATCH} Kontti instead of"
+  echo "You should login to ${TARGET_SERVER} instead of"
   echo "${OC_SERVER} "
   echo ""
   exit 1
