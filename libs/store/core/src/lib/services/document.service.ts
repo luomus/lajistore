@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { AffectedResponse, PROPERTY_ID } from '@luomus/store/interface';
-import { KeyOfUnion, StoreObject } from '@luomus/shared/models';
+import { isDocument, KeyOfUnion, StoreObject } from '@luomus/shared/models';
 import { StoreConfigService } from '@luomus/store/config';
 import { Document, DocumentRepository, FindManyDocumentOptions, Where } from '@luomus/store/database';
 import { IdService, JsonSchemaService, UtilityService } from '@luomus/store/shared';
@@ -133,6 +133,11 @@ export class DocumentService {
     );
     const doc = new Document();
     const meta = { sequence: base.sequence ?? 1 };
+
+    // This is tmp workaround for removing _lajiFormId from gatheringEvent
+    if (isDocument(data) && (data.gatheringEvent as any)?.['_lajiFormId']) {
+      delete (data.gatheringEvent as any)?.['_lajiFormId'];
+    }
 
     await this.addMetaProperties(type, data, id, meta);
 

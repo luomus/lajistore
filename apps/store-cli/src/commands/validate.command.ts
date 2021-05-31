@@ -53,6 +53,12 @@ export class ValidateCommand {
         const documents = await this.documentService.findAll({where, skip: page * batchSize, take: batchSize});
 
         for (const document of documents) {
+
+          // Temp fix to remove _lajiFormId from document
+          if ((document.data as any).gatheringEvent?._lajiFormId) {
+            delete (document.data as any).gatheringEvent._lajiFormId;
+          }
+
           const errors = await this.validatorService.validate(where.type, document.data);
           if (errors) {
             console.log(JSON.stringify({id: document.id, errors}, undefined, 2));
