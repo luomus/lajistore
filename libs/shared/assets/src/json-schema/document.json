@@ -1534,18 +1534,7 @@
           "range": "MY.gatheringFactClass"
         },
         "geometry": {
-          "anyOf": [
-            {
-              "$ref": "https://geojson.org/schema/Geometry.json"
-            },
-            {
-              "$ref": "https://geojson.org/schema/GeometryCollection.json"
-            },
-            {
-              "type": "object",
-              "additionalProperties": false
-            }
-          ],
+          "type": "object",
           "range": "MZ.geometry",
           "subject": "MY.geometry",
           "title": "Coordinates"
@@ -3631,18 +3620,7 @@
             "title": "Gathering event type"
           },
           "geometry": {
-            "anyOf": [
-              {
-                "$ref": "https://geojson.org/schema/Geometry.json"
-              },
-              {
-                "$ref": "https://geojson.org/schema/GeometryCollection.json"
-              },
-              {
-                "type": "object",
-                "additionalProperties": false
-              }
-            ],
+            "type": "object",
             "range": "MZ.geometry",
             "subject": "MY.geometry",
             "title": "Coordinates"
@@ -7096,18 +7074,7 @@
                       "title": "End date"
                     },
                     "geometry": {
-                      "anyOf": [
-                        {
-                          "$ref": "https://geojson.org/schema/Geometry.json"
-                        },
-                        {
-                          "$ref": "https://geojson.org/schema/GeometryCollection.json"
-                        },
-                        {
-                          "type": "object",
-                          "additionalProperties": false
-                        }
-                      ],
+                      "type": "object",
                       "range": "MZ.geometry",
                       "subject": "MY.geometry",
                       "title": "Coordinates"
