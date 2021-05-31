@@ -49180,6 +49180,10 @@
               "$ref": "#/components/schemas/taxonCensus"
             }
           },
+          "temperature": {
+            "type": "integer",
+            "title": "Temperature in celsius"
+          },
           "temperatureEnd": {
             "type": "number",
             "title": "End temperature / °C"

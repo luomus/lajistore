@@ -1706,6 +1706,12 @@
           "subject": "MY.taxonCensus",
           "title": "Completely recorded taxon"
         },
+        "temperature": {
+          "type": "integer",
+          "range": "xsd:integer",
+          "subject": "MY.temperature",
+          "title": "Temperature in celsius"
+        },
         "temperatureEnd": {
           "type": "number",
           "range": "xsd:decimal",

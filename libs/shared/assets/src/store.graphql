@@ -4843,6 +4843,7 @@ type GatheringEvent {
   startDistanceFromNECorner: String
   startPointDeviation: Int
   taxonCensus: [TaxonCensus2]
+  temperature: Int
   temperatureEnd: Float
   temperatureStart: Float
   timeEnd: String
@@ -20523,6 +20524,7 @@ input GatheringEventInput {
   startDistanceFromNECorner: String
   startPointDeviation: Int
   taxonCensus: [TaxonCensus2Input]
+  temperature: Int
   temperatureEnd: Float
   temperatureStart: Float
   timeEnd: String

@@ -480,6 +480,7 @@ export interface NamedPlace {
           | "MVL.1201";
         taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
       }[];
+      temperature?: number;
       temperatureEnd?: number;
       temperatureStart?: number;
       timeEnd?: string;
@@ -4960,6 +4961,7 @@ export interface NamedPlace {
           | "MVL.1201";
         taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
       }[];
+      temperature?: number;
       temperatureEnd?: number;
       temperatureStart?: number;
       timeEnd?: string;

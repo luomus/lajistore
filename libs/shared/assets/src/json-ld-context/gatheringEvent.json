@@ -139,6 +139,10 @@
       "@id": "default:MY.taxonCensus",
       "@container": "@set"
     },
+    "temperature": {
+      "@id": "default:MY.temperature",
+      "@type": "xsd:integer"
+    },
     "temperatureEnd": {
       "@id": "default:MY.temperatureEnd",
       "@type": "xsd:decimal"

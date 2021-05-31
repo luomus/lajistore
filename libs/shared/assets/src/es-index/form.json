@@ -1233,6 +1233,9 @@
                       }
                     }
                   },
+                  "temperature": {
+                    "type": "integer"
+                  },
                   "temperatureEnd": {
                     "type": "float"
                   },

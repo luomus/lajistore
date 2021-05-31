@@ -565,6 +565,9 @@
                   }
                 }
               },
+              "temperature": {
+                "type": "integer"
+              },
               "temperatureEnd": {
                 "type": "float"
               },
@@ -2842,6 +2845,9 @@
                     "ignore_above": 200
                   }
                 }
+              },
+              "temperature": {
+                "type": "integer"
               },
               "temperatureEnd": {
                 "type": "float"
