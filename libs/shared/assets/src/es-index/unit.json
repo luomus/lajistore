@@ -469,6 +469,9 @@
       },
       "unitFact": {
         "properties": {
+          "adultIndividualCount": {
+            "type": "integer"
+          },
           "autocompleteSelectedTaxonID": {
             "type": "keyword",
             "ignore_above": 200
@@ -484,6 +487,9 @@
             "type": "integer"
           },
           "individualCountOuter": {
+            "type": "integer"
+          },
+          "juvenileIndividualCount": {
             "type": "integer"
           },
           "lineTransectObsType": {

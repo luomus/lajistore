@@ -385,6 +385,10 @@
         "type": "keyword",
         "ignore_above": 200
       },
+      "notes": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "rainIntensity": {
         "type": "keyword",
         "ignore_above": 200

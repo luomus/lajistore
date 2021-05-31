@@ -31,6 +31,10 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
+    "adultIndividualCount": {
+      "@id": "default:MY.adultIndividualCount",
+      "@type": "xsd:integer"
+    },
     "autocompleteSelectedTaxonID": {
       "@id": "default:MY.autocompleteSelectedTaxonID",
       "@type": "xsd:string"
@@ -50,6 +54,10 @@
     "individualCountOuter": {
       "@id": "default:MY.individualCountOuter",
       "@type": "xsd:nonNegativeInteger"
+    },
+    "juvenileIndividualCount": {
+      "@id": "default:MY.juvenileIndividualCount",
+      "@type": "xsd:integer"
     },
     "lineTransectObsType": {
       "@id": "default:MY.lineTransectObsType",

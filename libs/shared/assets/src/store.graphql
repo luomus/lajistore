@@ -4834,6 +4834,9 @@ type GatheringEvent {
   # Alkuperäislähteen käyttäjätunnus
   legUserID: [String]
   namedPlaceNotes: String
+
+  # Additional information to the data in each section.
+  notes: String
   rainIntensity: RainIntensity
   routeDirectionAdhered: Boolean
   spottingScopeUsed: Boolean
@@ -6603,6 +6606,7 @@ enum TypeVerification {
 }
 
 type UnitFact {
+  adultIndividualCount: Int
   autocompleteSelectedTaxonID: String
   context: String
   glowWormMicrohabitat: GlowWormMicrohabitat
@@ -6618,6 +6622,7 @@ type UnitFact {
   individualCountFlock: Int
   individualCountInner: Int
   individualCountOuter: Int
+  juvenileIndividualCount: Int
   lineTransectObsType: LineTransectObsType
   lineTransectRouteFieldType: LineTransectRouteFieldType
   lolifeDroppingsCount: LolifeDroppingsCount
@@ -20509,6 +20514,9 @@ input GatheringEventInput {
   # Alkuperäislähteen käyttäjätunnus
   legUserID: [String]
   namedPlaceNotes: String
+
+  # Additional information to the data in each section.
+  notes: String
   rainIntensity: RainIntensity
   routeDirectionAdhered: Boolean
   spottingScopeUsed: Boolean
@@ -21088,6 +21096,7 @@ input TypeSpecimenInput {
 }
 
 input UnitFactInput {
+  adultIndividualCount: Int
   autocompleteSelectedTaxonID: String
   context: String
   glowWormMicrohabitat: GlowWormMicrohabitat
@@ -21103,6 +21112,7 @@ input UnitFactInput {
   individualCountFlock: Int
   individualCountInner: Int
   individualCountOuter: Int
+  juvenileIndividualCount: Int
   lineTransectObsType: LineTransectObsType
   lineTransectRouteFieldType: LineTransectRouteFieldType
   lolifeDroppingsCount: LolifeDroppingsCount

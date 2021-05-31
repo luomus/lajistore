@@ -9,6 +9,7 @@ export interface UnitFact {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  adultIndividualCount?: number;
   autocompleteSelectedTaxonID?: string;
   glowWormMicrohabitat?:
     | ""
@@ -22,6 +23,7 @@ export interface UnitFact {
   individualCountFlock?: number;
   individualCountInner?: number;
   individualCountOuter?: number;
+  juvenileIndividualCount?: number;
   lineTransectObsType?:
     | ""
     | "MY.lineTransectObsTypeSong"

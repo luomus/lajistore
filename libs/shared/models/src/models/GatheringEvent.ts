@@ -330,6 +330,10 @@ export interface GatheringEvent {
    */
   legUserID?: string[];
   namedPlaceNotes?: string;
+  /**
+   * Additional information to the data in each section.
+   */
+  notes?: string;
   rainIntensity?:
     | ""
     | "MY.rainIntensityEnumNoRain"

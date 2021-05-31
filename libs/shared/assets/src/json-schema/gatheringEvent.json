@@ -1297,6 +1297,13 @@
       "subject": "MY.namedPlaceNotes",
       "title": "Info about this route"
     },
+    "notes": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.notes",
+      "description": "Additional information to the data in each section.",
+      "title": "Notes"
+    },
     "rainIntensity": {
       "type": "string",
       "enum": [

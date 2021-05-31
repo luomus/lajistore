@@ -2119,6 +2119,12 @@
       "title": "unitFact",
       "description": "",
       "properties": {
+        "adultIndividualCount": {
+          "type": "integer",
+          "range": "xsd:integer",
+          "subject": "MY.adultIndividualCount",
+          "title": "Adult individual count"
+        },
         "autocompleteSelectedTaxonID": {
           "type": "string",
           "range": "xsd:string",
@@ -2171,6 +2177,12 @@
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.individualCountOuter",
           "title": "Yksilömäärä alueen ulkopuolella"
+        },
+        "juvenileIndividualCount": {
+          "type": "integer",
+          "range": "xsd:integer",
+          "subject": "MY.juvenileIndividualCount",
+          "title": "Juvenile individual count"
         },
         "lineTransectObsType": {
           "type": "string",

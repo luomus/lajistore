@@ -949,6 +949,10 @@ export interface Form {
          */
         legUserID?: string[];
         namedPlaceNotes?: string;
+        /**
+         * Additional information to the data in each section.
+         */
+        notes?: string;
         rainIntensity?:
           | ""
           | "MY.rainIntensityEnumNoRain"
@@ -2654,6 +2658,7 @@ export interface Form {
               | "MY.taxonConfidenceSubspeciesUnsure";
             twitched?: boolean;
             unitFact?: {
+              adultIndividualCount?: number;
               autocompleteSelectedTaxonID?: string;
               glowWormMicrohabitat?:
                 | ""
@@ -2667,6 +2672,7 @@ export interface Form {
               individualCountFlock?: number;
               individualCountInner?: number;
               individualCountOuter?: number;
+              juvenileIndividualCount?: number;
               lineTransectObsType?:
                 | ""
                 | "MY.lineTransectObsTypeSong"
@@ -4552,6 +4558,7 @@ export interface Form {
               | "MY.taxonConfidenceSubspeciesUnsure";
             twitched?: boolean;
             unitFact?: {
+              adultIndividualCount?: number;
               autocompleteSelectedTaxonID?: string;
               glowWormMicrohabitat?:
                 | ""
@@ -4565,6 +4572,7 @@ export interface Form {
               individualCountFlock?: number;
               individualCountInner?: number;
               individualCountOuter?: number;
+              juvenileIndividualCount?: number;
               lineTransectObsType?:
                 | ""
                 | "MY.lineTransectObsTypeSong"

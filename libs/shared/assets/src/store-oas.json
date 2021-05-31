@@ -49141,6 +49141,11 @@
             "type": "string",
             "title": "Info about this route"
           },
+          "notes": {
+            "type": "string",
+            "description": "Additional information to the data in each section.",
+            "title": "Notes"
+          },
           "rainIntensity": {
             "type": "string",
             "enum": [
@@ -56362,6 +56367,10 @@
             "type": "string",
             "title": "Type for the Näytteen / havainnon faktat"
           },
+          "adultIndividualCount": {
+            "type": "integer",
+            "title": "Adult individual count"
+          },
           "autocompleteSelectedTaxonID": {
             "type": "string",
             "title": "Taxon ID selected from autocomplete"
@@ -56394,6 +56403,10 @@
             "type": "integer",
             "minimum": 0,
             "title": "Yksilömäärä alueen ulkopuolella"
+          },
+          "juvenileIndividualCount": {
+            "type": "integer",
+            "title": "Juvenile individual count"
           },
           "lineTransectObsType": {
             "type": "string",

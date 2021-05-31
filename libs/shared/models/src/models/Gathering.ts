@@ -1487,6 +1487,7 @@ export interface Gathering {
     taxonConfidence?: "" | "MY.taxonConfidenceSure" | "MY.taxonConfidenceUnsure" | "MY.taxonConfidenceSubspeciesUnsure";
     twitched?: boolean;
     unitFact?: {
+      adultIndividualCount?: number;
       autocompleteSelectedTaxonID?: string;
       glowWormMicrohabitat?:
         | ""
@@ -1500,6 +1501,7 @@ export interface Gathering {
       individualCountFlock?: number;
       individualCountInner?: number;
       individualCountOuter?: number;
+      juvenileIndividualCount?: number;
       lineTransectObsType?:
         | ""
         | "MY.lineTransectObsTypeSong"
