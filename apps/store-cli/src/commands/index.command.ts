@@ -65,6 +65,10 @@ export class IndexCommand {
         description: 'ID for the document',
         required: false
       },{
+        flags: '--edited <edited>',
+        description: 'Edited after this date. Give date time in ISO 8601 format (for example 2021-05-31T10:00).',
+        required: false
+      },{
         flags: '--remove-deleted',
         description: 'Remove deleted documents from the index. Please note that this is quite slow operation',
         required: false

@@ -2,7 +2,7 @@ import { Connection, FindManyOptions } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { DocumentHistory } from './document-history.entity';
 import { Where } from '../utility/utility-public';
-import { toDbWhere } from '../utility/utility-private';
+import { toDbWhere, toStartDate } from '../utility/utility-private';
 import { Document } from '../document/document.entity';
 
 @Injectable()
@@ -27,11 +27,12 @@ export class DocumentHistoryRepository {
   findDeleted(options: {
     skip?: number,
     take?: number,
+    edited?: string,
     source?: string,
     type?: string,
     id?: string[]
   } = {} ): Promise<Required<Pick<DocumentHistory, 'id'|'source'|'type'>>[]> {
-    const {skip, take, id, type, source} = options;
+    const {skip, take, id, type, source, edited} = options;
     const query = this.connection.getRepository(DocumentHistory)
       .createQueryBuilder('history')
       .select(['history.id', 'history.source', 'history.type', 'history.version'])
@@ -53,6 +54,16 @@ export class DocumentHistoryRepository {
     }
     if (source) {
       query.andWhere(`"history".source = :source`, {source});
+    }
+    if (edited) {
+      query.andWhere(qb => {
+        const subQuery = qb.subQuery()
+          .select(`"h".id`)
+          .from(DocumentHistory, "h")
+          .where(`"h".deleted >= :edited`)
+          .getQuery();
+        return `"history".id IN ${subQuery}`
+      }, {edited: toStartDate(edited)});
     }
 
     return query.getMany() as any;

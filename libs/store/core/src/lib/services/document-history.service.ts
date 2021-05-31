@@ -45,6 +45,7 @@ export class DocumentHistoryService {
     source?: string,
     type?: string,
     id?: string[],
+    edited?: string,
     skip?: number,
     take?: number
   }) {
