@@ -15,11 +15,5 @@
     "additionalProperties": { "type": "string" }
   },
   "MZ.keyAny": { "type": "object" },
-  "MZ.geometry": {
-    "anyOf": [
-      { "$ref": "https://geojson.org/schema/Geometry.json" },
-      { "$ref": "https://geojson.org/schema/GeometryCollection.json" },
-      { "type" : "object", "additionalProperties": false }
-    ]
-  }
+  "MZ.geometry": { "type" : "object" }
 }
