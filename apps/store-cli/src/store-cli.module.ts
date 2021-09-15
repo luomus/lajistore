@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { HttpModule, Module } from '@nestjs/common';
 import { ConsoleModule } from 'nestjs-console';
 import { TerminusModule } from '@nestjs/terminus';
 import { StoreCoreModule } from '@luomus/store/core';
@@ -12,6 +12,9 @@ import { IndexCommand } from './commands/index.command';
 import { UndoCommand } from './commands/undo.command';
 import { UserCommand } from './commands/user.command';
 import { JobCommand } from './commands/job.command';
+import { LinkUserCommand } from './commands/link-user.command'
+import { ConfigService } from './services/config.service';
+import { LajiApiService } from './services/laji-api.service'
 
 @Module({
   imports: [
@@ -20,10 +23,11 @@ import { JobCommand } from './commands/job.command';
     StoreGenerateModule,
     StoreSharedModule,
     StoreSearchModule,
-    TerminusModule
+    TerminusModule,
+    HttpModule
   ],
   controllers: [],
-  providers: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand, ValidateCommand],
-  exports: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand, ValidateCommand]
+  providers: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand, ValidateCommand, LinkUserCommand, ConfigService, LajiApiService],
+  exports: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand, ValidateCommand, LinkUserCommand, ConfigService, LajiApiService]
 })
 export class StoreCliModule {}

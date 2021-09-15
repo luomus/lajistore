@@ -147,7 +147,7 @@ export class DataWarehouseService {
   ): Promise<DocumentPayload> {
     if (
       action === WorkerMessagePattern.documentDelete ||
-      document.publicityRestrictions !== 'MZ.publicityRestrictionsPublic'
+      document.publicityRestrictions === 'MZ.publicityRestrictionsPrivate'
     ) {
       return {document: this.deletePayload(document)};
     }
