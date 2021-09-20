@@ -28,7 +28,6 @@ export class LinkUserCommand {
     ]
   })
   async link(command: LinkUserOptions) {
-    const failed = [];
     const spin = createSpinner();
     
     spin.start('Fetching linked user ID:s')
@@ -36,31 +35,49 @@ export class LinkUserCommand {
     let users: UserLink[] = []
 
     try {
-      users = await this.lajiApiService.getLinkedUsers().toPromise()
+      users = await this.lajiApiService.getLinkedUsers().toPromise();
     } catch (e) {
-      spin.fail('Failed fetching linked user ID:s')
+      spin.fail('Failed fetching linked user ID:s');
       console.log('');
       console.log(e);
     }
 
-    spin.start('Cheking and updating documents...')
+    let failed = false
+    let userCount = 0;
+    let documentCount = 0;
+
+    spin.start('Cheking and updating documents...');
     for (const user of users) {
-      const original = user.userId
-      const replacer = user.personId
+      const original = user.userId;
+      const replacer = user.personId;
 
       try {
-        await this.linkUser(original, replacer, command.dryRun)
+        const documents = await this.linkUser(original, replacer, command.dryRun);
+
+        if (documents.length) {
+          userCount++;
+          documentCount += documents.length;
+        }
+
       } catch (e) {
-        failed.push(original)
+        failed = true;
         console.log('');
         console.log(e);
       }
     }
 
-    if (failed.length) {
-      spin.fail(`Failed to link: ${failed.join(', ')}`)
+    if (failed) {
+      if (documentCount === 0) {
+        spin.fail(`Failed to link users`);
+      } else {
+        spin.fail(`Failed to link some users, succeeded linking ${documentCount} documents for ${userCount} user linkings`);
+      }
     } else {
-      spin.succeed('Document linkings finished');
+      if (documentCount === 0) {
+        spin.succeed(`No documents to link`);
+      } else {
+        spin.succeed(`Document linkings finished, linked ${documentCount} documents for ${userCount} user linkings`);
+      }
     }
   }
 
@@ -143,9 +160,11 @@ export class LinkUserCommand {
 
     if (toSend.document.length > 0 && !dryRun) {
       await this.storeService.createOrUpdate(source, toSend);
-    } else if (toSend.document.length && dryRun) {
+    } else if (toSend.document.length > 0 && dryRun) {
       console.log(JSON.stringify(toSend, null, ' '))
     }
+
+    return toSend.document
   };
 
   linkValue(value: any, original: string, replacer: string) {
