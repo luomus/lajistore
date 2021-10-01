@@ -46,6 +46,10 @@ export class LinkUserCommand {
     let userCount = 0;
     let documentCount = 0;
 
+    users = users.filter(user => {
+      return (/^((hatikka|vanhahatikka|lintuvaara|virtala):.*|.*@hatikka.fi)$/).test(user.userId)
+    })
+
     spin.start('Cheking and updating documents...');
     for (const user of users) {
       const original = user.userId;
