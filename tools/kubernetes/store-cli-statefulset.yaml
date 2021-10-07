@@ -76,6 +76,16 @@ spec:
                 secretKeyRef:
                   key: RABBITMQ_PASSWORD_API
                   name: store-config
+            - name: LAJI_API_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: LAJI_API_URL
+                  name: store-config
+            - name: SOURCE_ID
+              valueFrom:
+                configMapKeyRef:
+                  key: SOURCE_ID
+                  name: store-config
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst

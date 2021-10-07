@@ -1,0 +1,88 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: store-cli-link-user-cron
+  namespace: lajistore-api
+spec:
+  schedule: "@daily"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: store-cli-link-user-cron
+              image: >-
+                image-registry.openshift-image-registry.svc:5000/lajistore-api/store-cli
+              imagePullPolicy: Always
+              env: 
+                - name: PUBLIC_ADDRESS
+                  valueFrom:
+                    configMapKeyRef:
+                      key: PUBLIC_ADDRESS
+                      name: store-config
+                - name: INTERNAL_ADDRESS
+                  valueFrom:
+                    configMapKeyRef:
+                      key: INTERNAL_ADDRESS
+                      name: store-config
+                - name: CONTEXT_IRI
+                  valueFrom:
+                    configMapKeyRef:
+                      key: CONTEXT_IRI
+                      name: store-config
+                - name: DB_TYPE
+                  valueFrom:
+                    configMapKeyRef:
+                      key: DB_TYPE
+                      name: store-config
+                - name: DB_USERNAME
+                  valueFrom:
+                    configMapKeyRef:
+                      key: DB_USERNAME
+                      name: store-config
+                - name: DB_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      key: DB_PASSWORD
+                      name: store-config
+                - name: DB_CONNECT_STRING
+                  valueFrom:
+                    secretKeyRef:
+                      key: DB_CONNECT_STRING
+                      name: store-config
+                - name: ELASTICSEARCH_NODES
+                  valueFrom:
+                    configMapKeyRef:
+                      key: ELASTICSEARCH_NODES
+                      name: store-config
+                - name: RABBITMQ_HOST
+                  valueFrom:
+                    configMapKeyRef:
+                      key: RABBITMQ_HOST
+                      name: store-config
+                - name: RABBITMQ_USERNAME
+                  valueFrom:
+                    configMapKeyRef:
+                      key: RABBITMQ_USERNAME_CLI
+                      name: store-config
+                - name: RABBITMQ_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      key: RABBITMQ_PASSWORD_API
+                      name: store-config
+                - name: LAJI_API_URL
+                  valueFrom:
+                    configMapKeyRef:
+                      key: LAJI_API_URL
+                      name: store-config
+                - name: SOURCE_ID
+                  valueFrom:
+                    configMapKeyRef:
+                      key: SOURCE_ID
+                      name: store-config
+              command:
+                - node
+                - main.js
+                - link-user
+          restartPolicy: OnFailure

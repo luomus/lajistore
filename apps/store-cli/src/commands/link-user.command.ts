@@ -22,7 +22,7 @@ export class LinkUserCommand {
     options: [
       {
         flags: '--dry-run',
-        description: 'Test linking by only printing modified values out.',
+        description: 'Test linking without sending changes, print out changed documents.',
         required: false
       }
     ]
