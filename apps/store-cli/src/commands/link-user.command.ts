@@ -86,90 +86,97 @@ export class LinkUserCommand {
   }
 
   async linkUser(original: string, replacer: string, dryRun?: boolean) {
-    const source = this.configService.get('SOURCE_ID');
+    const sources = this.configService.get('DW_SOURCES').split(',').map(v => v.trim());
 
-    const documents = await this.storeService.search<Document>({
-      type: 'document',
-      source: source,
-      pageSize: 1000,
-      body: {
-        'query': {
-          'bool': {
-            'should': [
-              {
-                'match': {
-                  'editors': `${original}`
+    const toReturn: Document[] = [];
+
+    for (const source of sources) {
+      const documents = await this.storeService.search<Document>({
+        type: 'document',
+        source: source,
+        pageSize: 1000,
+        body: {
+          'query': {
+            'bool': {
+              'should': [
+                {
+                  'match': {
+                    'editors': `${original}`
+                  }
+                },
+                {
+                  'match': {
+                    'editor': `${original}`
+                  }
+                },
+                {
+                  'match': {
+                    'creator': `${original}`
+                  }
+                },
+                {
+                  'match': {
+                    'gatheringEvent.legUserID': `${original}`
+                  }
                 }
-              },
-              {
-                'match': {
-                  'editor': `${original}`
-                }
-              },
-              {
-                'match': {
-                  'creator': `${original}`
-                }
-              },
-              {
-                'match': {
-                  'gatheringEvent.legUserID': `${original}`
-                }
-              }
-            ]
+              ]
+            }
           }
         }
+      })
+
+      const toSend: {'document': Array<Document>} = {
+        'document': []
       }
-    })
-    const toSend: {'document': Array<Document>} = {
-      'document': []
-    }
 
-    documents?.member.forEach((document: Document) => {
-      const docFields: Array<keyof Document> = ['creator','editor','editors'];
-
-      let changed = false;
-    
-      docFields.forEach((field) => {
-        if (document[field]) {
-          const newVal = this.linkValue(document[field], original, replacer);
-
-          if (newVal.changed) {
-            changed = true;
-            (document[field] as string | string[]) = newVal.value;
+      documents?.member.forEach((document: Document) => {
+        const docFields: Array<keyof Document> = ['creator','editor','editors'];
+  
+        let changed = false;
+      
+        docFields.forEach((field) => {
+          if (document[field]) {
+            const newVal = this.linkValue(document[field], original, replacer);
+  
+            if (newVal.changed) {
+              changed = true;
+              (document[field] as string | string[]) = newVal.value;
+            }
           }
+        });
+  
+        const gatheringEvent = document.gatheringEvent;
+        if (gatheringEvent) {
+          // if (gatheringEvent['leg']) {
+          //   gatheringEvent['leg'] = this.linkValue(gatheringEvent['leg'], original, target);
+          // }
+  
+          if (gatheringEvent['legUserID' ]) {
+            const newVal = this.linkValue(gatheringEvent['legUserID'], original, replacer);
+  
+            if (newVal.changed) {
+              changed = true;
+              (gatheringEvent['legUserID'] as string | string[]) = newVal.value;
+            }
+          }
+        }
+  
+        if (changed) {
+          toSend['document'].push(document);
         }
       });
-
-      const gatheringEvent = document.gatheringEvent;
-      if (gatheringEvent) {
-        // if (gatheringEvent['leg']) {
-        //   gatheringEvent['leg'] = this.linkValue(gatheringEvent['leg'], original, target);
-        // }
-
-        if (gatheringEvent['legUserID' ]) {
-          const newVal = this.linkValue(gatheringEvent['legUserID'], original, replacer);
-
-          if (newVal.changed) {
-            changed = true;
-            (gatheringEvent['legUserID'] as string | string[]) = newVal.value;
-          }
-        }
+  
+      if (toSend.document.length > 0 && !dryRun) {
+        await this.storeService.createOrUpdate(source, toSend);
+      } else if (toSend.document.length > 0 && dryRun) {
+        console.log(JSON.stringify(toSend, null, ' '))
       }
-
-      if (changed) {
-        toSend['document'].push(document);
-      }
-    });
-
-    if (toSend.document.length > 0 && !dryRun) {
-      await this.storeService.createOrUpdate(source, toSend);
-    } else if (toSend.document.length > 0 && dryRun) {
-      console.log(JSON.stringify(toSend, null, ' '))
+  
+      toReturn.push(...toSend.document);
     }
 
-    return toSend.document
-  };
+    return toReturn;
+  }
 
   linkValue(value: any, original: string, replacer: string) {
     let changed = false;
@@ -178,7 +185,7 @@ export class LinkUserCommand {
         if (val === original) {
           changed = true
           return replacer;
-        };
+        }
     
         return val;
       });

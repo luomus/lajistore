@@ -81,6 +81,11 @@ spec:
                     configMapKeyRef:
                       key: SOURCE_ID
                       name: store-config
+                - name: DW_SOURCES
+                  valueFrom:
+                    configMapKeyRef:
+                      key: DW_SOURCES
+                      name: store-config
               command:
                 - node
                 - main.js
