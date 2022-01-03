@@ -59,6 +59,7 @@ export interface GatheringEvent {
     | "MY.cloudCoverOktaEnum6"
     | "MY.cloudCoverOktaEnum7"
     | "MY.cloudCoverOktaEnum8";
+  completeList?: string;
   dateBegin?: string;
   dateEnd?: string;
   gatheringFact?: {
@@ -351,7 +352,8 @@ export interface GatheringEvent {
       | "MX.taxonSetWaterbirdPasserines"
       | "MX.taxonSetWaterbirdAmphibia"
       | "MX.taxonSetSykeBumblebee"
-      | "MVL.1201";
+      | "MVL.1201"
+      | "MX.taxonSetSykeBumblebeeOther";
     taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
   }[];
   temperature?: number;

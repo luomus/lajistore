@@ -51,6 +51,9 @@ export interface Collection {
     fi?: string;
     sv?: string;
   };
+  /**
+   * Quality classification for the collection.
+   */
   collectionQuality: "MY.collectionQualityEnum3" | "MY.collectionQualityEnum2" | "MY.collectionQualityEnum1";
   /**
    * How many specimens, records or such does the collection contain? Fill in approximate number, describe more in notes if necessary.
@@ -124,7 +127,7 @@ export interface Collection {
     sv?: string;
   };
   /**
-   * Quarantine period in years after which data is opened
+   * Embargo period in years after which data is opened
    */
   dataQuarantinePeriod?: number;
   /**
@@ -187,6 +190,9 @@ export interface Collection {
     | "MY.intellectualRightsCC0"
     | "MY.intellectualRightsPD"
     | "MY.intellectualRightsARR";
+  /**
+   * Is the data to be used only within Kotka?
+   */
   internalUseOnly?: boolean;
   /**
    * Which parent or larger collection this is part of.
@@ -260,9 +266,9 @@ export interface Collection {
     sv?: string;
   };
   /**
-   * Admin field. Can the data be shared to GBIF or not.
+   * Admin field. Can the data be shared to GBIF or not: Given collection ID means data is shared under that collection.
    */
-  shareToGbif?: boolean;
+  shareToGbif?: string;
   /**
    * Lowest common taxon in the collection (for example, scientific name of an order).
    */

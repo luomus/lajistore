@@ -193,7 +193,7 @@
     },
     "shareToGbif": {
       "@id": "default:MY.shareToGbif",
-      "@type": "xsd:boolean"
+      "@type": "@id"
     },
     "taxonomicCoverage": {
       "@id": "default:MY.taxonomicCoverage",

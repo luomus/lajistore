@@ -120,12 +120,14 @@
       "enum": [
         "KE.inUseByLuomus",
         "KE.inPublicUse",
-        "KE.adminOnly"
+        "KE.adminOnly",
+        "KE.thirdParty"
       ],
       "enumNames": [
         "Internal LUOMUS use only",
         "Public service",
-        "ICT-team only"
+        "ICT-team only",
+        "3rd party"
       ],
       "range": "KE.publicities",
       "subject": "KE.publicity",

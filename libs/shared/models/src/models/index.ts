@@ -1,6 +1,8 @@
 export * from './list-response';
 import { BibliographicResource } from './BibliographicResource'
 export type { BibliographicResource }
+import { Concept } from './Concept'
+export type { Concept }
 import { Pinkka } from './Pinkka'
 export type { Pinkka }
 import { AdministrativeStatus } from './AdministrativeStatus'
@@ -23,6 +25,8 @@ import { ChecklistVersion } from './ChecklistVersion'
 export type { ChecklistVersion }
 import { Collection } from './Collection'
 export type { Collection }
+import { CompleteList } from './CompleteList'
+export type { CompleteList }
 import { ContentContextDescription } from './ContentContextDescription'
 export type { ContentContextDescription }
 import { Dataset } from './Dataset'
@@ -155,6 +159,7 @@ import { Video } from './Video'
 export type { Video }
 
 export type StoreObject = BibliographicResource
+   | Concept
    | Pinkka
    | AdministrativeStatus
    | Agent
@@ -166,6 +171,7 @@ export type StoreObject = BibliographicResource
    | Checklist
    | ChecklistVersion
    | Collection
+   | CompleteList
    | ContentContextDescription
    | Dataset
    | DateRange
@@ -252,6 +258,11 @@ export function isBibliographicResource(data: unknown): data is BibliographicRes
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'dc:BibliographicResource'
   );
 }
+export function isConcept(data: unknown): data is Concept {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'skos:Concept'
+  );
+}
 export function isPinkka(data: unknown): data is Pinkka {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'LA.Pinkka'
@@ -305,6 +316,11 @@ export function isChecklistVersion(data: unknown): data is ChecklistVersion {
 export function isCollection(data: unknown): data is Collection {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MY.collection'
+  );
+}
+export function isCompleteList(data: unknown): data is CompleteList {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MY.completeListClass'
   );
 }
 export function isContentContextDescription(data: unknown): data is ContentContextDescription {

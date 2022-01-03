@@ -27,7 +27,7 @@ export interface InformationSystem {
     sv?: string;
   };
   personResponsible: string;
-  publicity: "KE.inUseByLuomus" | "KE.inPublicUse" | "KE.adminOnly";
+  publicity: "KE.inUseByLuomus" | "KE.inPublicUse" | "KE.adminOnly" | "KE.thirdParty";
   state: "KE.productionState" | "KE.developmentState" | "KE.abandonedState";
   transactionApiURL: string;
   type:

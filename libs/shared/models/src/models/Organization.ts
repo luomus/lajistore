@@ -14,11 +14,11 @@ export interface Organization {
    */
   URL?: string;
   /**
-   * Official abbreviation for this organization, if one exists
+   * Official code for this organization, if one exists
    */
   abbreviation?: string;
   /**
-   * If organisation abbreviation is given, the source for it must be chosen.
+   * If organisation code is given, the source for it must be chosen.
    */
   abbreviationExplanation?:
     | ""

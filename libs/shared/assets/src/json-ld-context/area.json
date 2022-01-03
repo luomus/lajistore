@@ -51,6 +51,14 @@
       "@id": "default:ML.isPartOfBirdAssociationArea",
       "@type": "@id"
     },
+    "isPartOfEnvironmentalELY": {
+      "@id": "default:ML.isPartOfEnvironmentalELY",
+      "@type": "@id"
+    },
+    "isPartOfProvince": {
+      "@id": "default:ML.isPartOfProvince",
+      "@type": "@id"
+    },
     "name": {
       "@id": "default:ML.name",
       "@container": "@language"

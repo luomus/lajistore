@@ -185,6 +185,12 @@
       "subject": "MY.cloudCoverStart",
       "title": "Start cloud cover"
     },
+    "completeList": {
+      "type": "string",
+      "range": "MY.completeListClass",
+      "subject": "MY.completeList",
+      "title": "List completeness"
+    },
     "dateBegin": {
       "type": "string",
       "range": "xsd:string",
@@ -1367,7 +1373,8 @@
               "MX.taxonSetWaterbirdPasserines",
               "MX.taxonSetWaterbirdAmphibia",
               "MX.taxonSetSykeBumblebee",
-              "MVL.1201"
+              "MVL.1201",
+              "MX.taxonSetSykeBumblebeeOther"
             ],
             "enumNames": [
               "",
@@ -1379,7 +1386,8 @@
               "Waterbird Census: Passerines",
               "Waterbird Census: Amphibians",
               "SYKE's Bumblebee Census",
-              "Spring monitoring species"
+              "Spring monitoring species",
+              "Syken kimalaistutkimus: Ylemmät taksonit"
             ],
             "range": "MX.taxonSetEnum",
             "subject": "MY.censusTaxonSetID",

@@ -129,6 +129,7 @@
       ],
       "range": "MY.collectionQualityEnum",
       "subject": "MY.collectionQuality",
+      "description": "Quality classification for the collection.",
       "title": "Collection quality"
     },
     "collectionSize": {
@@ -292,8 +293,8 @@
       "type": "integer",
       "range": "xsd:integer",
       "subject": "MY.dataQuarantinePeriod",
-      "description": "Quarantine period in years after which data is opened",
-      "title": "Quarantine in years"
+      "description": "Embargo period in years after which data is opened",
+      "title": "Embargo in years"
     },
     "dataUseTerms": {
       "type": "object",
@@ -435,6 +436,7 @@
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.internalUseOnly",
+      "description": "Is the data to be used only within Kotka?",
       "title": "Internal use only"
     },
     "isPartOf": {
@@ -521,7 +523,7 @@
       "range": "xsd:string",
       "subject": "MY.onlineUrl",
       "description": "Web address (URL) with more info about the collection.",
-      "title": "Url"
+      "title": "URL"
     },
     "personResponsible": {
       "type": "string",
@@ -597,10 +599,10 @@
       "title": "Publisher short name"
     },
     "shareToGbif": {
-      "type": "boolean",
-      "range": "xsd:boolean",
+      "type": "string",
+      "range": "MY.collection",
       "subject": "MY.shareToGbif",
-      "description": "Admin field. Can the data be shared to GBIF or not.",
+      "description": "Admin field. Can the data be shared to GBIF or not: Given collection ID means data is shared under that collection.",
       "title": "Share to GBIF"
     },
     "taxonomicCoverage": {

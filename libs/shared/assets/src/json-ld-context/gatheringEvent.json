@@ -75,6 +75,10 @@
       "@id": "default:MY.cloudCoverStart",
       "@type": "@id"
     },
+    "completeList": {
+      "@id": "default:MY.completeList",
+      "@type": "@id"
+    },
     "dateBegin": {
       "@id": "default:MY.dateBegin",
       "@type": "xsd:string"

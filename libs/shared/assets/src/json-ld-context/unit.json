@@ -375,6 +375,10 @@
       "@id": "default:MY.smellNotes",
       "@type": "xsd:string"
     },
+    "stratigraphyVerbatim": {
+      "@id": "default:MY.stratigraphyVerbatim",
+      "@type": "xsd:string"
+    },
     "substrateClassification": {
       "@id": "default:MY.substrateClassification",
       "@type": "@id"

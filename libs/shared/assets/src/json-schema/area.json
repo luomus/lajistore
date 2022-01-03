@@ -31,6 +31,8 @@
         "ML.biogeographicalProvince",
         "ML.municipality",
         "ML.oldMunicipality",
+        "ML.elyCentre",
+        "ML.province",
         "ML.iucnEvaluationArea",
         "ML.birdAssociationArea"
       ],
@@ -39,6 +41,8 @@
         "Biogeographical province",
         "Finnish municipality",
         "Old Finnish municipality",
+        "ELY Centre for Environmental Affairs",
+        "Finnish province",
         "Red list evaluation area",
         "Bird association area"
       ],
@@ -72,6 +76,18 @@
       "range": "ML.area",
       "subject": "ML.isPartOfBirdAssociationArea",
       "title": "Is part of bird assocation area"
+    },
+    "isPartOfEnvironmentalELY": {
+      "type": "string",
+      "range": "ML.area",
+      "subject": "ML.isPartOfEnvironmentalELY",
+      "title": "Is part of Environmental ELY"
+    },
+    "isPartOfProvince": {
+      "type": "string",
+      "range": "ML.area",
+      "subject": "ML.isPartOfProvince",
+      "title": "Is part of province"
     },
     "name": {
       "type": "object",

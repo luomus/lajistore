@@ -17,6 +17,8 @@ export interface Area {
     | "ML.biogeographicalProvince"
     | "ML.municipality"
     | "ML.oldMunicipality"
+    | "ML.elyCentre"
+    | "ML.province"
     | "ML.iucnEvaluationArea"
     | "ML.birdAssociationArea";
   /**
@@ -29,6 +31,8 @@ export interface Area {
   countryCodeISOalpha3?: string;
   isPartOf?: string;
   isPartOfBirdAssociationArea?: string;
+  isPartOfEnvironmentalELY?: string;
+  isPartOfProvince?: string;
   name: {
     en?: string;
     fi?: string;

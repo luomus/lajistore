@@ -17,6 +17,10 @@
       "@type": {
         "type": "keyword"
       },
+      "apiKeyExpires": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "approximateResultSize": {
         "type": "integer"
       },

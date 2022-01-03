@@ -420,6 +420,10 @@
         "type": "keyword",
         "ignore_above": 200
       },
+      "stratigraphyVerbatim": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "substrateClassification": {
         "type": "keyword",
         "ignore_above": 200

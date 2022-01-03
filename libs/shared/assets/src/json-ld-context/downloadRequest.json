@@ -31,6 +31,10 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
+    "apiKeyExpires": {
+      "@id": "default:HBF.apiKeyExpires",
+      "@type": "xsd:string"
+    },
     "approximateResultSize": {
       "@id": "default:HBF.approximateResultSize",
       "@type": "xsd:integer"

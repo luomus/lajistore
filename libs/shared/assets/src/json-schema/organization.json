@@ -35,7 +35,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.abbreviation",
-      "description": "Official abbreviation for this organization, if one exists",
+      "description": "Official code for this organization, if one exists",
       "title": "Institution code"
     },
     "abbreviationExplanation": {
@@ -52,8 +52,8 @@
       ],
       "range": "MOS.abbreviation-explanations",
       "subject": "MOS.abbreviationExplanation",
-      "description": "If organisation abbreviation is given, the source for it must be chosen.",
-      "title": "Abbreviation source"
+      "description": "If organisation code is given, the source for it must be chosen.",
+      "title": "Code source"
     },
     "ad": {
       "type": "string",

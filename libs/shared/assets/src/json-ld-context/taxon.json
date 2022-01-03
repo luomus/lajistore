@@ -431,6 +431,10 @@
       "@id": "default:MX.speciesCardAuthors",
       "@type": "xsd:string"
     },
+    "stopInformalTaxonGroupInheritance": {
+      "@id": "default:MX.stopInformalTaxonGroupInheritance",
+      "@type": "xsd:boolean"
+    },
     "stopOccurrenceInFinlandPublicationInheritance": {
       "@id": "default:MX.stopOccurrenceInFinlandPublicationInheritance",
       "@type": "xsd:boolean"
@@ -490,6 +494,10 @@
     "sortOrder": {
       "@id": "default:sortOrder",
       "@type": "xsd:integer"
+    },
+    "skos:exactMatch": {
+      "@id": "default:skos:exactMatch",
+      "@type": "@id"
     }
   }
 }

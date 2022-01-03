@@ -64,19 +64,19 @@ export interface Unit {
     | "MY.atlasCodeEnum4"
     | "MY.atlasCodeEnum5"
     | "MY.atlasCodeEnum6"
-    | "MY.atlasCodeEnum7"
-    | "MY.atlasCodeEnum8"
     | "MY.atlasCodeEnum61"
     | "MY.atlasCodeEnum62"
     | "MY.atlasCodeEnum63"
     | "MY.atlasCodeEnum64"
     | "MY.atlasCodeEnum65"
     | "MY.atlasCodeEnum66"
+    | "MY.atlasCodeEnum7"
     | "MY.atlasCodeEnum71"
     | "MY.atlasCodeEnum72"
     | "MY.atlasCodeEnum73"
     | "MY.atlasCodeEnum74"
     | "MY.atlasCodeEnum75"
+    | "MY.atlasCodeEnum8"
     | "MY.atlasCodeEnum81"
     | "MY.atlasCodeEnum82";
   batBehavior?:
@@ -512,7 +512,8 @@ export interface Unit {
     | "MY.recordBasisLivingSpecimen"
     | "MY.recordBasisMicrobialSpecimen"
     | "MY.recordBasisLiterature"
-    | "MY.recordBasisMaterialSample";
+    | "MY.recordBasisMaterialSample"
+    | "MY.recordBasisSubfossilSpecimenAmberInclusion";
   /**
    * What parts of the record are / have been in storage.
    */
@@ -640,6 +641,7 @@ export interface Unit {
   shortHandText?: string;
   smell?: "" | "MY.smellNotSmelled" | "MY.smellNoSmelled" | "MY.smellWeak" | "MY.smellModerate" | "MY.smellStrong";
   smellNotes?: string;
+  stratigraphyVerbatim?: string;
   substrateClassification?:
     | ""
     | "MY.substrateGround"

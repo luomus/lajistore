@@ -181,6 +181,7 @@
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "HRA.hasIRCC",
+      "description": "Whether the resource has an IRCC number or not. If not, more information needs to be filled in.",
       "title": "IRCC number provided?"
     },
     "ids": {
@@ -684,6 +685,7 @@
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "HRA.underNagoya",
+      "description": "Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?",
       "title": "Does Nagoya protocol apply?"
     },
     "awayOther": {

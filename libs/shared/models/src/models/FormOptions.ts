@@ -500,6 +500,7 @@ export interface FormOptions {
         | "MY.cloudCoverOktaEnum6"
         | "MY.cloudCoverOktaEnum7"
         | "MY.cloudCoverOktaEnum8";
+      completeList?: string;
       dateBegin?: string;
       dateEnd?: string;
       gatheringFact?: {
@@ -796,7 +797,8 @@ export interface FormOptions {
           | "MX.taxonSetWaterbirdPasserines"
           | "MX.taxonSetWaterbirdAmphibia"
           | "MX.taxonSetSykeBumblebee"
-          | "MVL.1201";
+          | "MVL.1201"
+          | "MX.taxonSetSykeBumblebeeOther";
         taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
       }[];
       temperature?: number;
@@ -1724,7 +1726,8 @@ export interface FormOptions {
             | "MX.taxonSetWaterbirdPasserines"
             | "MX.taxonSetWaterbirdAmphibia"
             | "MX.taxonSetSykeBumblebee"
-            | "MVL.1201";
+            | "MVL.1201"
+            | "MX.taxonSetSykeBumblebeeOther";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -1802,19 +1805,19 @@ export interface FormOptions {
             | "MY.atlasCodeEnum4"
             | "MY.atlasCodeEnum5"
             | "MY.atlasCodeEnum6"
-            | "MY.atlasCodeEnum7"
-            | "MY.atlasCodeEnum8"
             | "MY.atlasCodeEnum61"
             | "MY.atlasCodeEnum62"
             | "MY.atlasCodeEnum63"
             | "MY.atlasCodeEnum64"
             | "MY.atlasCodeEnum65"
             | "MY.atlasCodeEnum66"
+            | "MY.atlasCodeEnum7"
             | "MY.atlasCodeEnum71"
             | "MY.atlasCodeEnum72"
             | "MY.atlasCodeEnum73"
             | "MY.atlasCodeEnum74"
             | "MY.atlasCodeEnum75"
+            | "MY.atlasCodeEnum8"
             | "MY.atlasCodeEnum81"
             | "MY.atlasCodeEnum82";
           batBehavior?:
@@ -2250,7 +2253,8 @@ export interface FormOptions {
             | "MY.recordBasisLivingSpecimen"
             | "MY.recordBasisMicrobialSpecimen"
             | "MY.recordBasisLiterature"
-            | "MY.recordBasisMaterialSample";
+            | "MY.recordBasisMaterialSample"
+            | "MY.recordBasisSubfossilSpecimenAmberInclusion";
           /**
            * What parts of the record are / have been in storage.
            */
@@ -2384,6 +2388,7 @@ export interface FormOptions {
             | "MY.smellModerate"
             | "MY.smellStrong";
           smellNotes?: string;
+          stratigraphyVerbatim?: string;
           substrateClassification?:
             | ""
             | "MY.substrateGround"
@@ -3619,7 +3624,8 @@ export interface FormOptions {
             | "MX.taxonSetWaterbirdPasserines"
             | "MX.taxonSetWaterbirdAmphibia"
             | "MX.taxonSetSykeBumblebee"
-            | "MVL.1201";
+            | "MVL.1201"
+            | "MX.taxonSetSykeBumblebeeOther";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -3697,19 +3703,19 @@ export interface FormOptions {
             | "MY.atlasCodeEnum4"
             | "MY.atlasCodeEnum5"
             | "MY.atlasCodeEnum6"
-            | "MY.atlasCodeEnum7"
-            | "MY.atlasCodeEnum8"
             | "MY.atlasCodeEnum61"
             | "MY.atlasCodeEnum62"
             | "MY.atlasCodeEnum63"
             | "MY.atlasCodeEnum64"
             | "MY.atlasCodeEnum65"
             | "MY.atlasCodeEnum66"
+            | "MY.atlasCodeEnum7"
             | "MY.atlasCodeEnum71"
             | "MY.atlasCodeEnum72"
             | "MY.atlasCodeEnum73"
             | "MY.atlasCodeEnum74"
             | "MY.atlasCodeEnum75"
+            | "MY.atlasCodeEnum8"
             | "MY.atlasCodeEnum81"
             | "MY.atlasCodeEnum82";
           batBehavior?:
@@ -4145,7 +4151,8 @@ export interface FormOptions {
             | "MY.recordBasisLivingSpecimen"
             | "MY.recordBasisMicrobialSpecimen"
             | "MY.recordBasisLiterature"
-            | "MY.recordBasisMaterialSample";
+            | "MY.recordBasisMaterialSample"
+            | "MY.recordBasisSubfossilSpecimenAmberInclusion";
           /**
            * What parts of the record are / have been in storage.
            */
@@ -4279,6 +4286,7 @@ export interface FormOptions {
             | "MY.smellModerate"
             | "MY.smellStrong";
           smellNotes?: string;
+          stratigraphyVerbatim?: string;
           substrateClassification?:
             | ""
             | "MY.substrateGround"

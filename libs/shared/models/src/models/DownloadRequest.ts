@@ -9,6 +9,7 @@ export interface DownloadRequest {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  apiKeyExpires?: string;
   approximateResultSize: number;
   collectionId?: string[];
   completed: boolean;

@@ -342,7 +342,8 @@
         }
       },
       "shareToGbif": {
-        "type": "boolean"
+        "type": "keyword",
+        "ignore_above": 200
       },
       "taxonomicCoverage": {
         "properties": {

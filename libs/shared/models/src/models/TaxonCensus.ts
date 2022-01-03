@@ -20,6 +20,7 @@ export interface TaxonCensus {
     | "MX.taxonSetWaterbirdPasserines"
     | "MX.taxonSetWaterbirdAmphibia"
     | "MX.taxonSetSykeBumblebee"
-    | "MVL.1201";
+    | "MVL.1201"
+    | "MX.taxonSetSykeBumblebeeOther";
   taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
 }

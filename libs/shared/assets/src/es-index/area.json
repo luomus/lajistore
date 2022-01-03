@@ -37,6 +37,14 @@
         "type": "keyword",
         "ignore_above": 200
       },
+      "isPartOfEnvironmentalELY": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "isPartOfProvince": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "name": {
         "properties": {
           "en": {

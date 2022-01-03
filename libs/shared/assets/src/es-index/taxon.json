@@ -447,6 +447,9 @@
         "type": "keyword",
         "ignore_above": 200
       },
+      "stopInformalTaxonGroupInheritance": {
+        "type": "boolean"
+      },
       "stopOccurrenceInFinlandPublicationInheritance": {
         "type": "boolean"
       },
@@ -515,6 +518,10 @@
       },
       "sortOrder": {
         "type": "integer"
+      },
+      "skos:exactMatch": {
+        "type": "keyword",
+        "ignore_above": 200
       },
       "_meta": {
         "properties": {

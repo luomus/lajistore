@@ -196,6 +196,10 @@
                 "type": "keyword",
                 "ignore_above": 200
               },
+              "completeList": {
+                "type": "keyword",
+                "ignore_above": 200
+              },
               "dateBegin": {
                 "type": "date"
               },
@@ -1816,6 +1820,10 @@
                     "ignore_above": 200
                   },
                   "smellNotes": {
+                    "type": "keyword",
+                    "ignore_above": 200
+                  },
+                  "stratigraphyVerbatim": {
                     "type": "keyword",
                     "ignore_above": 200
                   },
@@ -2477,6 +2485,10 @@
                 "type": "keyword",
                 "ignore_above": 200
               },
+              "completeList": {
+                "type": "keyword",
+                "ignore_above": 200
+              },
               "dateBegin": {
                 "type": "date"
               },
@@ -4097,6 +4109,10 @@
                     "ignore_above": 200
                   },
                   "smellNotes": {
+                    "type": "keyword",
+                    "ignore_above": 200
+                  },
+                  "stratigraphyVerbatim": {
                     "type": "keyword",
                     "ignore_above": 200
                   },

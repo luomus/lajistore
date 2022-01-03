@@ -764,6 +764,576 @@
         }
       }
     },
+    "/Concept": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "Concept"
+        ],
+        "operationId": "listConcept",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of Concept objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Concept.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Concept"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "Concept"
+        ],
+        "operationId": "storeConcept",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concept"
+              }
+            }
+          }
+        },
+        "description": "Store Concept object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored Concept object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Concept"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "Concept"
+        ],
+        "operationId": "patchConcept",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch concept (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching concept.",
+        "responses": {
+          "200": {
+            "description": "A list of  Concept.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Concept"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Concept/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "Concept"
+        ],
+        "operationId": "searchConcept",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of Concept objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Concept.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Concept"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Concept/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "Concept"
+        ],
+        "operationId": "getConcept",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Concept",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a Concept.",
+        "responses": {
+          "200": {
+            "description": "a Concept.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Concept"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "Concept"
+        ],
+        "operationId": "updateConcept",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Concept",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Concept"
+              }
+            }
+          }
+        },
+        "description": "Store Concept",
+        "responses": {
+          "200": {
+            "description": "Stored Concept",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Concept"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "Concept"
+        ],
+        "operationId": "deleteConcept",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Concept",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete Concept",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Concept/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOfConcept",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Concept",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "Concept"
+        ],
+        "description": "Return a Concept.",
+        "responses": {
+          "200": {
+            "description": "a Concept.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Concept/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "Concept"
+        ],
+        "operationId": "versionConcept",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Concept",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the Concept",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a Concept.",
+        "responses": {
+          "200": {
+            "description": "a Concept.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Concept"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Pinkka": {
       "get": {
         "security": [
@@ -7027,6 +7597,576 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/collection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/completeList": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "completeList"
+        ],
+        "operationId": "listcompleteList",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of completeList objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  completeList.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/completeList"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "completeList"
+        ],
+        "operationId": "storecompleteList",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/completeList"
+              }
+            }
+          }
+        },
+        "description": "Store completeList object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored completeList object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/completeList"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "completeList"
+        ],
+        "operationId": "patchcompleteList",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch completelist (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching completelist.",
+        "responses": {
+          "200": {
+            "description": "A list of  completeList.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/completeList"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/completeList/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "completeList"
+        ],
+        "operationId": "searchcompleteList",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of completeList objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  completeList.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/completeList"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/completeList/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "completeList"
+        ],
+        "operationId": "getcompleteList",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the completeList",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a completeList.",
+        "responses": {
+          "200": {
+            "description": "a completeList.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/completeList"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "completeList"
+        ],
+        "operationId": "updatecompleteList",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the completeList",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/completeList"
+              }
+            }
+          }
+        },
+        "description": "Store completeList",
+        "responses": {
+          "200": {
+            "description": "Stored completeList",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/completeList"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "completeList"
+        ],
+        "operationId": "deletecompleteList",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the completeList",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete completeList",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/completeList/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOfcompleteList",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the completeList",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "completeList"
+        ],
+        "description": "Return a completeList.",
+        "responses": {
+          "200": {
+            "description": "a completeList.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/completeList/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "completeList"
+        ],
+        "operationId": "versioncompleteList",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the completeList",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the completeList",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a completeList.",
+        "responses": {
+          "200": {
+            "description": "a completeList.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/completeList"
                 }
               }
             }
@@ -44109,6 +45249,12 @@
                       "$ref": "#/components/schemas/BibliographicResource"
                     }
                   },
+                  "Concept": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Concept"
+                    }
+                  },
                   "Pinkka": {
                     "type": "array",
                     "items": {
@@ -44173,6 +45319,12 @@
                     "type": "array",
                     "items": {
                       "$ref": "#/components/schemas/collection"
+                    }
+                  },
+                  "completeList": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/completeList"
                     }
                   },
                   "contentContextDescription": {
@@ -44587,6 +45739,12 @@
                         "$ref": "#/components/schemas/BibliographicResource"
                       }
                     },
+                    "Concept": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Concept"
+                      }
+                    },
                     "Pinkka": {
                       "type": "array",
                       "items": {
@@ -44651,6 +45809,12 @@
                       "type": "array",
                       "items": {
                         "$ref": "#/components/schemas/collection"
+                      }
+                    },
+                    "completeList": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/completeList"
                       }
                     },
                     "contentContextDescription": {
@@ -45083,6 +46247,23 @@
           "owner"
         ]
       },
+      "Concept": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the skos:Concept"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the skos:Concept"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the skos:Concept"
+          }
+        }
+      },
       "Pinkka": {
         "type": "object",
         "properties": {
@@ -45446,6 +46627,8 @@
               "ML.biogeographicalProvince",
               "ML.municipality",
               "ML.oldMunicipality",
+              "ML.elyCentre",
+              "ML.province",
               "ML.iucnEvaluationArea",
               "ML.birdAssociationArea"
             ],
@@ -45469,6 +46652,14 @@
           "isPartOfBirdAssociationArea": {
             "type": "string",
             "title": "Is part of bird assocation area"
+          },
+          "isPartOfEnvironmentalELY": {
+            "type": "string",
+            "title": "Is part of Environmental ELY"
+          },
+          "isPartOfProvince": {
+            "type": "string",
+            "title": "Is part of province"
           },
           "name": {
             "$ref": "#/components/schemas/multiLang"
@@ -45837,6 +47028,7 @@
               "MY.collectionQualityEnum2",
               "MY.collectionQualityEnum1"
             ],
+            "description": "Quality classification for the collection.",
             "title": "Collection quality"
           },
           "collectionSize": {
@@ -45901,8 +47093,8 @@
           },
           "dataQuarantinePeriod": {
             "type": "integer",
-            "description": "Quarantine period in years after which data is opened",
-            "title": "Quarantine in years"
+            "description": "Embargo period in years after which data is opened",
+            "title": "Embargo in years"
           },
           "dataUseTerms": {
             "$ref": "#/components/schemas/multiLang"
@@ -45959,6 +47151,7 @@
           },
           "internalUseOnly": {
             "type": "boolean",
+            "description": "Is the data to be used only within Kotka?",
             "title": "Internal use only"
           },
           "isPartOf": {
@@ -46027,8 +47220,8 @@
             "$ref": "#/components/schemas/multiLang"
           },
           "shareToGbif": {
-            "type": "boolean",
-            "description": "Admin field. Can the data be shared to GBIF or not.",
+            "type": "string",
+            "description": "Admin field. Can the data be shared to GBIF or not: Given collection ID means data is shared under that collection.",
             "title": "Share to GBIF"
           },
           "taxonomicCoverage": {
@@ -46086,6 +47279,23 @@
           "intellectualRights",
           "personResponsible"
         ]
+      },
+      "completeList": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the MY.completeListClass"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the MY.completeListClass"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the MY.completeListClass"
+          }
+        }
       },
       "contentContextDescription": {
         "type": "object",
@@ -46863,6 +48073,10 @@
           "@type": {
             "type": "string",
             "title": "Type for the Download request"
+          },
+          "apiKeyExpires": {
+            "type": "string",
+            "title": "API-key expires"
           },
           "approximateResultSize": {
             "type": "integer",
@@ -49095,6 +50309,10 @@
             ],
             "title": "Start cloud cover"
           },
+          "completeList": {
+            "type": "string",
+            "title": "List completeness"
+          },
           "dateBegin": {
             "type": "string",
             "title": "Start date"
@@ -50614,7 +51832,8 @@
             "enum": [
               "KE.inUseByLuomus",
               "KE.inPublicUse",
-              "KE.adminOnly"
+              "KE.adminOnly",
+              "KE.thirdParty"
             ],
             "title": "Publicity"
           },
@@ -52080,7 +53299,7 @@
           },
           "abbreviation": {
             "type": "string",
-            "description": "Official abbreviation for this organization, if one exists",
+            "description": "Official code for this organization, if one exists",
             "title": "Institution code"
           },
           "abbreviationExplanation": {
@@ -52090,8 +53309,8 @@
               "MOS.abbreviation-explanationIndexHerbariorum",
               "MOS.abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld"
             ],
-            "description": "If organisation abbreviation is given, the source for it must be chosen.",
-            "title": "Abbreviation source"
+            "description": "If organisation code is given, the source for it must be chosen.",
+            "title": "Code source"
           },
           "ad": {
             "type": "string",
@@ -53555,13 +54774,14 @@
               "type": "string",
               "enum": [
                 "",
-                "MX.finlex160_1997_appendix4",
-                "MX.finlex160_1997_appendix4_specialInterest",
+                "MX.finlex160_1997_appendix4_2021",
+                "MX.finlex160_1997_appendix4_specialInterest_2021",
                 "MX.finlex160_1997_appendix2a",
                 "MX.finlex160_1997_appendix2b",
                 "MX.finlex160_1997_appendix3a",
                 "MX.finlex160_1997_appendix3b",
                 "MX.finlex160_1997_appendix3c",
+                "MX.finlex160_1997_largeBirdsOfPrey",
                 "MX.habitatsDirectiveAnnexII",
                 "MX.habitatsDirectiveAnnexIV",
                 "MX.habitatsDirectiveAnnexV",
@@ -53574,6 +54794,13 @@
                 "MX.birdsDirectiveStatusAppendix2B",
                 "MX.birdsDirectiveStatusAppendix3A",
                 "MX.birdsDirectiveStatusAppendix3B",
+                "MX.birdsDirectiveStatusMigratoryBirds",
+                "MX.cites_appendixI",
+                "MX.cites_appendixII",
+                "MX.cites_appendixIII",
+                "MX.euRegulation_cites_appendixA",
+                "MX.euRegulation_cites_appendixB",
+                "MX.finnishEnvironmentInstitute2020protectionPrioritySpecies",
                 "MX.finnishEnvironmentInstitute2010protectionPrioritySpecies",
                 "MX.gameBird",
                 "MX.gameMammal",
@@ -53590,7 +54817,9 @@
                 "MX.finnishEnvironmentInstitute2020conservationProjectSpecies",
                 "MX.finnishEnvironmentInstitute2020conservationProjectAapamireSpecies",
                 "MX.cropWildRelative",
-                "MX.finnishEnvironmentInstitute20192021forestSpecies"
+                "MX.finnishEnvironmentInstitute20192021forestSpecies",
+                "MX.finlex160_1997_appendix4",
+                "MX.finlex160_1997_appendix4_specialInterest"
               ]
             },
             "minItems": 0,
@@ -53778,7 +55007,8 @@
                 "MX.taxonSetWaterbirdPasserines",
                 "MX.taxonSetWaterbirdAmphibia",
                 "MX.taxonSetSykeBumblebee",
-                "MVL.1201"
+                "MVL.1201",
+                "MX.taxonSetSykeBumblebeeOther"
               ]
             },
             "minItems": 0,
@@ -54056,6 +55286,10 @@
             "type": "string",
             "title": "Description text authors"
           },
+          "stopInformalTaxonGroupInheritance": {
+            "type": "boolean",
+            "title": "Stop informal taxon group inheritance"
+          },
           "stopOccurrenceInFinlandPublicationInheritance": {
             "type": "boolean",
             "title": "Stop occurrence in Finland publication inheritance"
@@ -54252,6 +55486,15 @@
           "sortOrder": {
             "type": "integer",
             "title": "sortOrder"
+          },
+          "skos:exactMatch": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Taxonid.org identifier"
           }
         }
       },
@@ -54286,7 +55529,8 @@
               "MX.taxonSetWaterbirdPasserines",
               "MX.taxonSetWaterbirdAmphibia",
               "MX.taxonSetSykeBumblebee",
-              "MVL.1201"
+              "MVL.1201",
+              "MX.taxonSetSykeBumblebeeOther"
             ],
             "title": "Censused taxon set"
           },
@@ -54639,6 +55883,7 @@
           },
           "hasIRCC": {
             "type": "boolean",
+            "description": "Whether the resource has an IRCC number or not. If not, more information needs to be filled in.",
             "title": "IRCC number provided?"
           },
           "ids": {
@@ -54796,6 +56041,7 @@
           },
           "underNagoya": {
             "type": "boolean",
+            "description": "Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?",
             "title": "Does Nagoya protocol apply?"
           },
           "awayOther": {
@@ -55291,19 +56537,19 @@
               "MY.atlasCodeEnum4",
               "MY.atlasCodeEnum5",
               "MY.atlasCodeEnum6",
-              "MY.atlasCodeEnum7",
-              "MY.atlasCodeEnum8",
               "MY.atlasCodeEnum61",
               "MY.atlasCodeEnum62",
               "MY.atlasCodeEnum63",
               "MY.atlasCodeEnum64",
               "MY.atlasCodeEnum65",
               "MY.atlasCodeEnum66",
+              "MY.atlasCodeEnum7",
               "MY.atlasCodeEnum71",
               "MY.atlasCodeEnum72",
               "MY.atlasCodeEnum73",
               "MY.atlasCodeEnum74",
               "MY.atlasCodeEnum75",
+              "MY.atlasCodeEnum8",
               "MY.atlasCodeEnum81",
               "MY.atlasCodeEnum82"
             ],
@@ -55936,7 +57182,8 @@
               "MY.recordBasisLivingSpecimen",
               "MY.recordBasisMicrobialSpecimen",
               "MY.recordBasisLiterature",
-              "MY.recordBasisMaterialSample"
+              "MY.recordBasisMaterialSample",
+              "MY.recordBasisSubfossilSpecimenAmberInclusion"
             ],
             "description": "Type of record, most commonly preserved specimen for museum specimens and observation for associated observations (\"seuralaislajihavainto\").",
             "title": "Record type"
@@ -56121,6 +57368,10 @@
           "smellNotes": {
             "type": "string",
             "title": "Smell notes"
+          },
+          "stratigraphyVerbatim": {
+            "type": "string",
+            "title": "Verbatim stratigraphy from original source"
           },
           "substrateClassification": {
             "type": "string",
@@ -57286,6 +58537,10 @@
       "description": "Bibliographic Resource"
     },
     {
+      "name": "Concept",
+      "description": "Concept"
+    },
+    {
       "name": "Pinkka",
       "description": "Instances of this describe one taxon description context (Pinkka eLearning enviroment)"
     },
@@ -57328,6 +58583,10 @@
     {
       "name": "collection",
       "description": "Collection"
+    },
+    {
+      "name": "completeList",
+      "description": "completeList"
     },
     {
       "name": "contentContextDescription",

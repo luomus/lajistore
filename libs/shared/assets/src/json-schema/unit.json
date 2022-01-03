@@ -162,19 +162,19 @@
         "MY.atlasCodeEnum4",
         "MY.atlasCodeEnum5",
         "MY.atlasCodeEnum6",
-        "MY.atlasCodeEnum7",
-        "MY.atlasCodeEnum8",
         "MY.atlasCodeEnum61",
         "MY.atlasCodeEnum62",
         "MY.atlasCodeEnum63",
         "MY.atlasCodeEnum64",
         "MY.atlasCodeEnum65",
         "MY.atlasCodeEnum66",
+        "MY.atlasCodeEnum7",
         "MY.atlasCodeEnum71",
         "MY.atlasCodeEnum72",
         "MY.atlasCodeEnum73",
         "MY.atlasCodeEnum74",
         "MY.atlasCodeEnum75",
+        "MY.atlasCodeEnum8",
         "MY.atlasCodeEnum81",
         "MY.atlasCodeEnum82"
       ],
@@ -186,19 +186,19 @@
         "4 Probable breeding; A singing or a displaying male observed at the same site in different days",
         "5 Probable breeding; A female or a pair observed at the same site in different days",
         "6 Probable breeding; A bird or a pair observed",
-        "7 Confirmed breeding; Indirect evidence of verified breeding detected",
-        "8 Confirmed breeding; Direct evidence of verified breeding detected",
         "61 Probable breeding; A bird or a pair observed visiting frequently at the probable nest",
         "62 Probable breeding; A bird or a pair observed building a nest",
         "63 Probable breeding; A bird or a pair observed giving alarm calls because of proximity to nest or brood",
         "64 Probable breeding; A bird or a pair observed displaying broken wing -act",
         "65 Probable breeding; A bird or a pair observed attacking the observer",
         "66 Probable breeding; Nest found with fresh nest material or remains of food; no direct evidence of eggs or young found.",
+        "7 Confirmed breeding; Indirect evidence of verified breeding detected",
         "71 Confirmed breeding; Indirect evidence of verified breeding detected: nest found with signs indicating that is has been used in the same year",
         "72 Confirmed breeding; Indirect evidence of verified breeding detected: a bird seen entering or coming out from the nest in a way that suggests breeding",
         "73 Confirmed breeding; Indirect evidence of verified breeding detected: fledglings or young detected so that they can be assumed to have hatched within the grid",
         "74 Confirmed breeding; Indirect evidence of verified breeding detected: a parent carrying food to nestlings or faeces of nestlings away from the nest",
         "75 Confirmed breeding; Indirect evidence of verified breeding detected: an incubating bird seen in the nest",
+        "8 Confirmed breeding; Direct evidence of verified breeding detected",
         "81 Confirmed breeding; Direct evidence of a verified breeding detected: begging or other calls of nestlings heard from the nest",
         "82 Confirmed breeding; Direct evidence of a verified breeding detected: a nest found with eggs or nestlings"
       ],
@@ -1492,7 +1492,8 @@
         "MY.recordBasisLivingSpecimen",
         "MY.recordBasisMicrobialSpecimen",
         "MY.recordBasisLiterature",
-        "MY.recordBasisMaterialSample"
+        "MY.recordBasisMaterialSample",
+        "MY.recordBasisSubfossilSpecimenAmberInclusion"
       ],
       "enumNames": [
         "",
@@ -1515,7 +1516,8 @@
         "Living specimen",
         "Microbial specimen",
         "Literature",
-        "Material sample"
+        "Material sample",
+        "Amber inclusion"
       ],
       "range": "MY.recordBases",
       "subject": "MY.recordBasis",
@@ -1849,6 +1851,12 @@
       "range": "xsd:string",
       "subject": "MY.smellNotes",
       "title": "Smell notes"
+    },
+    "stratigraphyVerbatim": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.stratigraphyVerbatim",
+      "title": "Verbatim stratigraphy from original source"
     },
     "substrateClassification": {
       "type": "string",

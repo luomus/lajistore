@@ -24,6 +24,12 @@
       "subject": "@type",
       "title": "Type for the Download request"
     },
+    "apiKeyExpires": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HBF.apiKeyExpires",
+      "title": "API-key expires"
+    },
     "approximateResultSize": {
       "type": "integer",
       "range": "xsd:integer",

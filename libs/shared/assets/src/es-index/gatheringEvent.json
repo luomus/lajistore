@@ -54,6 +54,10 @@
         "type": "keyword",
         "ignore_above": 200
       },
+      "completeList": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "dateBegin": {
         "type": "date"
       },

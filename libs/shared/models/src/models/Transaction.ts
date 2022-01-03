@@ -79,6 +79,9 @@ export interface Transaction {
     | "HRA.geneticResourceTypeMicrobe"
     | "HRA.geneticResourceTypeSoil"
     | "HRA.geneticResourceTypeAqua";
+  /**
+   * Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
+   */
   hasIRCC?: boolean;
   ids?: string;
   /**
@@ -244,6 +247,9 @@ export interface Transaction {
     | "HRA.transactionTypeImportNotice"
     | "HRA.transactionTypeABSNegotiations"
     | "HRA.transactionTypeVirtualLoanOutgoing";
+  /**
+   * Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?
+   */
   underNagoya?: boolean;
   awayOther?: number;
   damaged?: string[];

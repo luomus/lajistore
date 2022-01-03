@@ -149,13 +149,14 @@ export interface Taxon {
   habitatSubstrate?: string;
   hasAdminStatus?: (
     | ""
-    | "MX.finlex160_1997_appendix4"
-    | "MX.finlex160_1997_appendix4_specialInterest"
+    | "MX.finlex160_1997_appendix4_2021"
+    | "MX.finlex160_1997_appendix4_specialInterest_2021"
     | "MX.finlex160_1997_appendix2a"
     | "MX.finlex160_1997_appendix2b"
     | "MX.finlex160_1997_appendix3a"
     | "MX.finlex160_1997_appendix3b"
     | "MX.finlex160_1997_appendix3c"
+    | "MX.finlex160_1997_largeBirdsOfPrey"
     | "MX.habitatsDirectiveAnnexII"
     | "MX.habitatsDirectiveAnnexIV"
     | "MX.habitatsDirectiveAnnexV"
@@ -168,6 +169,13 @@ export interface Taxon {
     | "MX.birdsDirectiveStatusAppendix2B"
     | "MX.birdsDirectiveStatusAppendix3A"
     | "MX.birdsDirectiveStatusAppendix3B"
+    | "MX.birdsDirectiveStatusMigratoryBirds"
+    | "MX.cites_appendixI"
+    | "MX.cites_appendixII"
+    | "MX.cites_appendixIII"
+    | "MX.euRegulation_cites_appendixA"
+    | "MX.euRegulation_cites_appendixB"
+    | "MX.finnishEnvironmentInstitute2020protectionPrioritySpecies"
     | "MX.finnishEnvironmentInstitute2010protectionPrioritySpecies"
     | "MX.gameBird"
     | "MX.gameMammal"
@@ -185,6 +193,8 @@ export interface Taxon {
     | "MX.finnishEnvironmentInstitute2020conservationProjectAapamireSpecies"
     | "MX.cropWildRelative"
     | "MX.finnishEnvironmentInstitute20192021forestSpecies"
+    | "MX.finlex160_1997_appendix4"
+    | "MX.finlex160_1997_appendix4_specialInterest"
   )[];
   hasAlternativeName?: string[];
   hasBasionym?: string[];
@@ -229,6 +239,7 @@ export interface Taxon {
     | "MX.taxonSetWaterbirdAmphibia"
     | "MX.taxonSetSykeBumblebee"
     | "MVL.1201"
+    | "MX.taxonSetSykeBumblebeeOther"
   )[];
   /**
    * Eliön elinkierto
@@ -367,6 +378,7 @@ export interface Taxon {
     | "MX.secureLevelHighest"
     | "MX.secureLevelNoShow";
   speciesCardAuthors?: string;
+  stopInformalTaxonGroupInheritance?: boolean;
   stopOccurrenceInFinlandPublicationInheritance?: boolean;
   stopOriginalPublicationInheritance?: boolean;
   targetName?: string[];
@@ -497,4 +509,5 @@ export interface Taxon {
     | "MX.secureLevelNoShow";
   createdAtTimestamp?: string;
   sortOrder?: number;
+  "skos:exactMatch"?: string[];
 }
