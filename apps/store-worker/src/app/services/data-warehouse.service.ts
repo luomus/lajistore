@@ -14,6 +14,8 @@ import {
 import { WorkerConfigService } from './worker-config.service';
 import { LajiApiTokenService } from './laji-api-token.service';
 
+const BATCH_SIZE = 50;
+
 const taxonUnitFields: Array<keyof Unit> = [
   'informalNameString',
   'informalTaxonGroups',
@@ -176,10 +178,43 @@ export class DataWarehouseService {
         [];
 
       if (deleted.length) {
-        await this.lajiApiService.sendToWarehouse(this.prepareDeletePayload(deleted), accessToken).toPromise();
+        let batch = [];
+        let cnt = 0;
+
+        for (const toDelete of deleted) {
+          cnt++;
+          batch.push(toDelete);
+
+          if (cnt >= BATCH_SIZE) {
+            await this.lajiApiService.sendToWarehouse(this.prepareDeletePayload(batch), accessToken).toPromise();
+            batch = [];
+            cnt = 0;
+          }
+        }
+
+        if (cnt > 0) {
+          await this.lajiApiService.sendToWarehouse(this.prepareDeletePayload(batch), accessToken).toPromise();
+        }
       }
+
       if (update.length) {
-        await this.lajiApiService.sendToWarehouse({ 'schema': 'lajistore', 'roots': update }, accessToken).toPromise();
+        let batch = [];
+        let cnt = 0;
+
+        for (const toUpdate of update) {
+          cnt++;
+          batch.push(toUpdate);
+
+          if (cnt >= BATCH_SIZE) {
+            await this.lajiApiService.sendToWarehouse({ 'schema': 'lajistore', 'roots': batch }, accessToken).toPromise();
+            batch= [];
+            cnt = 0;
+          }
+        }
+
+        if (cnt > 0) {
+          await this.lajiApiService.sendToWarehouse({ 'schema': 'lajistore', 'roots': batch }, accessToken).toPromise();
+        }
       }
     }
   }
