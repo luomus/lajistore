@@ -353,7 +353,8 @@ export interface GatheringEvent {
       | "MX.taxonSetWaterbirdAmphibia"
       | "MX.taxonSetSykeBumblebee"
       | "MVL.1201"
-      | "MX.taxonSetSykeBumblebeeOther";
+      | "MX.taxonSetSykeBumblebeeOther"
+      | "MX.taxonSetBirdAtlasCommon";
     taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
   }[];
   temperature?: number;

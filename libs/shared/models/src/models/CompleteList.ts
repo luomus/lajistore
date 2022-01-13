@@ -9,4 +9,10 @@ export interface CompleteList {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  completeListTaxonID?: string;
+  completeListType?:
+    | ""
+    | "MY.completeListTypeCompleteWithBreedingStatus"
+    | "MY.completeListTypeComplete"
+    | "MY.completeListTypeIncomplete";
 }

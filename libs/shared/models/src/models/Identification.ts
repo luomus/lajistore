@@ -153,6 +153,7 @@ export interface Identification {
     | "MX.subseries"
     | "MX.infragenericTaxon"
     | "MX.aggregate"
+    | "MX.speciesAggregate"
     | "MX.species"
     | "MX.nothospecies"
     | "MX.infraspecificTaxon"
@@ -171,7 +172,6 @@ export interface Identification {
     | "MX.infragenericHybrid"
     | "MX.cultivar"
     | "MX.group"
-    | "MX.speciesAggregate"
     | "MX.grex";
   taxonSpecifier?: string;
   taxonURI?: string;

@@ -47294,6 +47294,20 @@
           "@type": {
             "type": "string",
             "title": "Type for the MY.completeListClass"
+          },
+          "completeListTaxonID": {
+            "type": "string",
+            "title": "Species"
+          },
+          "completeListType": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.completeListTypeCompleteWithBreedingStatus",
+              "MY.completeListTypeComplete",
+              "MY.completeListTypeIncomplete"
+            ],
+            "title": "Species list completeness"
           }
         }
       },
@@ -51422,6 +51436,7 @@
               "MX.subseries",
               "MX.infragenericTaxon",
               "MX.aggregate",
+              "MX.speciesAggregate",
               "MX.species",
               "MX.nothospecies",
               "MX.infraspecificTaxon",
@@ -51440,7 +51455,6 @@
               "MX.infragenericHybrid",
               "MX.cultivar",
               "MX.group",
-              "MX.speciesAggregate",
               "MX.grex"
             ],
             "description": "Taxonomic level for the identification",
@@ -54787,6 +54801,7 @@
                 "MX.habitatsDirectiveAnnexV",
                 "MX.primaryInterestInEU",
                 "MX.habitatsDirectiveAnnexIIExceptionGranted",
+                "MX.habitatsDirectiveAnnexII_FinlandNaturaSpecies",
                 "MX.habitatsDirectiveAnnexIVExceptionGranted",
                 "MX.habitatsDirectiveAnnexVExceptionGranted",
                 "MX.birdsDirectiveStatusAppendix1",
@@ -54800,6 +54815,7 @@
                 "MX.cites_appendixIII",
                 "MX.euRegulation_cites_appendixA",
                 "MX.euRegulation_cites_appendixB",
+                "MX.euRegulation_cites_appendixD",
                 "MX.finnishEnvironmentInstitute2020protectionPrioritySpecies",
                 "MX.finnishEnvironmentInstitute2010protectionPrioritySpecies",
                 "MX.gameBird",
@@ -55008,7 +55024,8 @@
                 "MX.taxonSetWaterbirdAmphibia",
                 "MX.taxonSetSykeBumblebee",
                 "MVL.1201",
-                "MX.taxonSetSykeBumblebeeOther"
+                "MX.taxonSetSykeBumblebeeOther",
+                "MX.taxonSetBirdAtlasCommon"
               ]
             },
             "minItems": 0,
@@ -55367,6 +55384,7 @@
               "MX.subseries",
               "MX.infragenericTaxon",
               "MX.aggregate",
+              "MX.speciesAggregate",
               "MX.species",
               "MX.nothospecies",
               "MX.infraspecificTaxon",
@@ -55385,7 +55403,6 @@
               "MX.infragenericHybrid",
               "MX.cultivar",
               "MX.group",
-              "MX.speciesAggregate",
               "MX.grex"
             ],
             "title": "Taxonomic rank"
@@ -55530,7 +55547,8 @@
               "MX.taxonSetWaterbirdAmphibia",
               "MX.taxonSetSykeBumblebee",
               "MVL.1201",
-              "MX.taxonSetSykeBumblebeeOther"
+              "MX.taxonSetSykeBumblebeeOther",
+              "MX.taxonSetBirdAtlasCommon"
             ],
             "title": "Censused taxon set"
           },

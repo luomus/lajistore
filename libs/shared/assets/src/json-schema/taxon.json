@@ -428,6 +428,7 @@
           "MX.habitatsDirectiveAnnexV",
           "MX.primaryInterestInEU",
           "MX.habitatsDirectiveAnnexIIExceptionGranted",
+          "MX.habitatsDirectiveAnnexII_FinlandNaturaSpecies",
           "MX.habitatsDirectiveAnnexIVExceptionGranted",
           "MX.habitatsDirectiveAnnexVExceptionGranted",
           "MX.birdsDirectiveStatusAppendix1",
@@ -441,6 +442,7 @@
           "MX.cites_appendixIII",
           "MX.euRegulation_cites_appendixA",
           "MX.euRegulation_cites_appendixB",
+          "MX.euRegulation_cites_appendixD",
           "MX.finnishEnvironmentInstitute2020protectionPrioritySpecies",
           "MX.finnishEnvironmentInstitute2010protectionPrioritySpecies",
           "MX.gameBird",
@@ -477,6 +479,7 @@
           "EU Habitats Directive Annex V",
           "Priority species (EU Habitats Directive, Appendix II)",
           "EU Habitats Directive Annex II, exception granted for Finnish populations",
+          "EU Habitats Directive Annex II, Finland's Natura species",
           "EU Habitats Directive Annex IV, exception granted for Finnish populations",
           "EU Habitats Directive Annex V, exception granted for Finnish populations",
           "EU Directive on Conservation of Wild Birds Annex I",
@@ -490,6 +493,7 @@
           "Convention on International Trade in Endangered Species of Wild Flora and Fauna - CITES, Appendix III",
           "EU regulation regarding CITES, Appendix A",
           "EU regulation regarding CITES, Appendix B",
+          "EU regulation regarding CITES, Appendix D",
           "Species to be protected urgently (Finnish Environment Institute 2020)",
           "Species to be protected urgently (Finnish Environment Institute 2010-2011)",
           "Game bird (Hunting law 1993/615)",
@@ -760,7 +764,8 @@
           "MX.taxonSetWaterbirdAmphibia",
           "MX.taxonSetSykeBumblebee",
           "MVL.1201",
-          "MX.taxonSetSykeBumblebeeOther"
+          "MX.taxonSetSykeBumblebeeOther",
+          "MX.taxonSetBirdAtlasCommon"
         ],
         "enumNames": [
           "",
@@ -773,7 +778,8 @@
           "Waterbird Census: Amphibians",
           "SYKE's Bumblebee Census",
           "Spring monitoring species",
-          "Syken kimalaistutkimus: Ylemmät taksonit"
+          "Syken kimalaistutkimus: Ylemmät taksonit",
+          "Bird atlas: common breeders"
         ]
       },
       "minItems": 0,
@@ -1310,6 +1316,7 @@
         "MX.subseries",
         "MX.infragenericTaxon",
         "MX.aggregate",
+        "MX.speciesAggregate",
         "MX.species",
         "MX.nothospecies",
         "MX.infraspecificTaxon",
@@ -1328,7 +1335,6 @@
         "MX.infragenericHybrid",
         "MX.cultivar",
         "MX.group",
-        "MX.speciesAggregate",
         "MX.grex"
       ],
       "enumNames": [
@@ -1371,6 +1377,7 @@
         "subseries",
         "infrageneric taxon",
         "aggregate",
+        "taxon aggregate",
         "species",
         "nothospecies",
         "infraspecific taxon",
@@ -1389,7 +1396,6 @@
         "infrageneric hybrid",
         "cultivar",
         "Group",
-        "taxon aggregate",
         "grex"
       ],
       "range": "MX.taxonRankEnum",

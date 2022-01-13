@@ -162,6 +162,7 @@ export interface Taxon {
     | "MX.habitatsDirectiveAnnexV"
     | "MX.primaryInterestInEU"
     | "MX.habitatsDirectiveAnnexIIExceptionGranted"
+    | "MX.habitatsDirectiveAnnexII_FinlandNaturaSpecies"
     | "MX.habitatsDirectiveAnnexIVExceptionGranted"
     | "MX.habitatsDirectiveAnnexVExceptionGranted"
     | "MX.birdsDirectiveStatusAppendix1"
@@ -175,6 +176,7 @@ export interface Taxon {
     | "MX.cites_appendixIII"
     | "MX.euRegulation_cites_appendixA"
     | "MX.euRegulation_cites_appendixB"
+    | "MX.euRegulation_cites_appendixD"
     | "MX.finnishEnvironmentInstitute2020protectionPrioritySpecies"
     | "MX.finnishEnvironmentInstitute2010protectionPrioritySpecies"
     | "MX.gameBird"
@@ -240,6 +242,7 @@ export interface Taxon {
     | "MX.taxonSetSykeBumblebee"
     | "MVL.1201"
     | "MX.taxonSetSykeBumblebeeOther"
+    | "MX.taxonSetBirdAtlasCommon"
   )[];
   /**
    * Eliön elinkierto
@@ -424,6 +427,7 @@ export interface Taxon {
     | "MX.subseries"
     | "MX.infragenericTaxon"
     | "MX.aggregate"
+    | "MX.speciesAggregate"
     | "MX.species"
     | "MX.nothospecies"
     | "MX.infraspecificTaxon"
@@ -442,7 +446,6 @@ export interface Taxon {
     | "MX.infragenericHybrid"
     | "MX.cultivar"
     | "MX.group"
-    | "MX.speciesAggregate"
     | "MX.grex";
   taxonomyText?: string;
   tradeName?: string[];

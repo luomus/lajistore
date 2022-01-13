@@ -2989,7 +2989,8 @@
                           "MX.taxonSetWaterbirdAmphibia",
                           "MX.taxonSetSykeBumblebee",
                           "MVL.1201",
-                          "MX.taxonSetSykeBumblebeeOther"
+                          "MX.taxonSetSykeBumblebeeOther",
+                          "MX.taxonSetBirdAtlasCommon"
                         ],
                         "enumNames": [
                           "",
@@ -3002,7 +3003,8 @@
                           "Waterbird Census: Amphibians",
                           "SYKE's Bumblebee Census",
                           "Spring monitoring species",
-                          "Syken kimalaistutkimus: Ylemmät taksonit"
+                          "Syken kimalaistutkimus: Ylemmät taksonit",
+                          "Bird atlas: common breeders"
                         ],
                         "range": "MX.taxonSetEnum",
                         "subject": "MY.censusTaxonSetID",
@@ -5772,7 +5774,8 @@
                             "MX.taxonSetWaterbirdAmphibia",
                             "MX.taxonSetSykeBumblebee",
                             "MVL.1201",
-                            "MX.taxonSetSykeBumblebeeOther"
+                            "MX.taxonSetSykeBumblebeeOther",
+                            "MX.taxonSetBirdAtlasCommon"
                           ],
                           "enumNames": [
                             "",
@@ -5785,7 +5788,8 @@
                             "Waterbird Census: Amphibians",
                             "SYKE's Bumblebee Census",
                             "Spring monitoring species",
-                            "Syken kimalaistutkimus: Ylemmät taksonit"
+                            "Syken kimalaistutkimus: Ylemmät taksonit",
+                            "Bird atlas: common breeders"
                           ],
                           "range": "MX.taxonSetEnum",
                           "subject": "MY.censusTaxonSetID",
@@ -8832,6 +8836,7 @@
                                   "MX.subseries",
                                   "MX.infragenericTaxon",
                                   "MX.aggregate",
+                                  "MX.speciesAggregate",
                                   "MX.species",
                                   "MX.nothospecies",
                                   "MX.infraspecificTaxon",
@@ -8850,7 +8855,6 @@
                                   "MX.infragenericHybrid",
                                   "MX.cultivar",
                                   "MX.group",
-                                  "MX.speciesAggregate",
                                   "MX.grex"
                                 ],
                                 "enumNames": [
@@ -8893,6 +8897,7 @@
                                   "subseries",
                                   "infrageneric taxon",
                                   "aggregate",
+                                  "taxon aggregate",
                                   "species",
                                   "nothospecies",
                                   "infraspecific taxon",
@@ -8911,7 +8916,6 @@
                                   "infrageneric hybrid",
                                   "cultivar",
                                   "Group",
-                                  "taxon aggregate",
                                   "grex"
                                 ],
                                 "range": "MX.taxonRankEnum",

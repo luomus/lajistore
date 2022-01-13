@@ -990,6 +990,7 @@ export interface Unit {
       | "MX.subseries"
       | "MX.infragenericTaxon"
       | "MX.aggregate"
+      | "MX.speciesAggregate"
       | "MX.species"
       | "MX.nothospecies"
       | "MX.infraspecificTaxon"
@@ -1008,7 +1009,6 @@ export interface Unit {
       | "MX.infragenericHybrid"
       | "MX.cultivar"
       | "MX.group"
-      | "MX.speciesAggregate"
       | "MX.grex";
     taxonSpecifier?: string;
     taxonURI?: string;

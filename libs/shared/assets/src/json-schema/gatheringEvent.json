@@ -1374,7 +1374,8 @@
               "MX.taxonSetWaterbirdAmphibia",
               "MX.taxonSetSykeBumblebee",
               "MVL.1201",
-              "MX.taxonSetSykeBumblebeeOther"
+              "MX.taxonSetSykeBumblebeeOther",
+              "MX.taxonSetBirdAtlasCommon"
             ],
             "enumNames": [
               "",
@@ -1387,7 +1388,8 @@
               "Waterbird Census: Amphibians",
               "SYKE's Bumblebee Census",
               "Spring monitoring species",
-              "Syken kimalaistutkimus: Ylemmät taksonit"
+              "Syken kimalaistutkimus: Ylemmät taksonit",
+              "Bird atlas: common breeders"
             ],
             "range": "MX.taxonSetEnum",
             "subject": "MY.censusTaxonSetID",

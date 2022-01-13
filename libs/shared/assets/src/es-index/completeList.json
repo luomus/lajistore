@@ -17,6 +17,14 @@
       "@type": {
         "type": "keyword"
       },
+      "completeListTaxonID": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "completeListType": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "_meta": {
         "properties": {
           "created": {

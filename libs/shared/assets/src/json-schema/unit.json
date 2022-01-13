@@ -2939,6 +2939,7 @@
               "MX.subseries",
               "MX.infragenericTaxon",
               "MX.aggregate",
+              "MX.speciesAggregate",
               "MX.species",
               "MX.nothospecies",
               "MX.infraspecificTaxon",
@@ -2957,7 +2958,6 @@
               "MX.infragenericHybrid",
               "MX.cultivar",
               "MX.group",
-              "MX.speciesAggregate",
               "MX.grex"
             ],
             "enumNames": [
@@ -3000,6 +3000,7 @@
               "subseries",
               "infrageneric taxon",
               "aggregate",
+              "taxon aggregate",
               "species",
               "nothospecies",
               "infraspecific taxon",
@@ -3018,7 +3019,6 @@
               "infrageneric hybrid",
               "cultivar",
               "Group",
-              "taxon aggregate",
               "grex"
             ],
             "range": "MX.taxonRankEnum",

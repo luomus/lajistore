@@ -798,7 +798,8 @@ export interface FormOptions {
           | "MX.taxonSetWaterbirdAmphibia"
           | "MX.taxonSetSykeBumblebee"
           | "MVL.1201"
-          | "MX.taxonSetSykeBumblebeeOther";
+          | "MX.taxonSetSykeBumblebeeOther"
+          | "MX.taxonSetBirdAtlasCommon";
         taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
       }[];
       temperature?: number;
@@ -1727,7 +1728,8 @@ export interface FormOptions {
             | "MX.taxonSetWaterbirdAmphibia"
             | "MX.taxonSetSykeBumblebee"
             | "MVL.1201"
-            | "MX.taxonSetSykeBumblebeeOther";
+            | "MX.taxonSetSykeBumblebeeOther"
+            | "MX.taxonSetBirdAtlasCommon";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -2748,6 +2750,7 @@ export interface FormOptions {
               | "MX.subseries"
               | "MX.infragenericTaxon"
               | "MX.aggregate"
+              | "MX.speciesAggregate"
               | "MX.species"
               | "MX.nothospecies"
               | "MX.infraspecificTaxon"
@@ -2766,7 +2769,6 @@ export interface FormOptions {
               | "MX.infragenericHybrid"
               | "MX.cultivar"
               | "MX.group"
-              | "MX.speciesAggregate"
               | "MX.grex";
             taxonSpecifier?: string;
             taxonURI?: string;
@@ -3625,7 +3627,8 @@ export interface FormOptions {
             | "MX.taxonSetWaterbirdAmphibia"
             | "MX.taxonSetSykeBumblebee"
             | "MVL.1201"
-            | "MX.taxonSetSykeBumblebeeOther";
+            | "MX.taxonSetSykeBumblebeeOther"
+            | "MX.taxonSetBirdAtlasCommon";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -4646,6 +4649,7 @@ export interface FormOptions {
               | "MX.subseries"
               | "MX.infragenericTaxon"
               | "MX.aggregate"
+              | "MX.speciesAggregate"
               | "MX.species"
               | "MX.nothospecies"
               | "MX.infraspecificTaxon"
@@ -4664,7 +4668,6 @@ export interface FormOptions {
               | "MX.infragenericHybrid"
               | "MX.cultivar"
               | "MX.group"
-              | "MX.speciesAggregate"
               | "MX.grex";
             taxonSpecifier?: string;
             taxonURI?: string;
