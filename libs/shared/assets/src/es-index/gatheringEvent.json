@@ -55,8 +55,16 @@
         "ignore_above": 200
       },
       "completeList": {
-        "type": "keyword",
-        "ignore_above": 200
+        "properties": {
+          "completeListTaxonID": {
+            "type": "keyword",
+            "ignore_above": 200
+          },
+          "completeListType": {
+            "type": "keyword",
+            "ignore_above": 200
+          }
+        }
       },
       "dateBegin": {
         "type": "date"

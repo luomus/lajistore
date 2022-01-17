@@ -186,10 +186,38 @@
       "title": "Start cloud cover"
     },
     "completeList": {
-      "type": "string",
-      "range": "MY.completeListClass",
+      "type": "object",
       "subject": "MY.completeList",
-      "title": "List completeness"
+      "additionalProperties": false,
+      "title": "List completeness",
+      "description": "",
+      "properties": {
+        "completeListTaxonID": {
+          "type": "string",
+          "range": "MX.taxon",
+          "subject": "MY.completeListTaxonID",
+          "title": "Species"
+        },
+        "completeListType": {
+          "type": "string",
+          "enum": [
+            "",
+            "MY.completeListTypeCompleteWithBreedingStatus",
+            "MY.completeListTypeComplete",
+            "MY.completeListTypeIncomplete"
+          ],
+          "enumNames": [
+            "",
+            "Täydellinen lajiluettelo, sisältäen pesimäindeksit kaikille havainnoille (suositeltava pesimäkaudella)",
+            "Täydellinen lajiluettelo (suositeltava vain pesimäkauden ulkopuolella)",
+            "Epätäydellinen lajiluettelo (hajahavainnoille)"
+          ],
+          "range": "MY.completeListTypeEnum",
+          "subject": "MY.completeListType",
+          "title": "Species list completeness"
+        }
+      },
+      "range": "MY.completeListClass"
     },
     "dateBegin": {
       "type": "string",

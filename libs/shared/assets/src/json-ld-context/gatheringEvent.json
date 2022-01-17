@@ -77,7 +77,7 @@
     },
     "completeList": {
       "@id": "default:MY.completeList",
-      "@type": "@id"
+      "@container": "@set"
     },
     "dateBegin": {
       "@id": "default:MY.dateBegin",

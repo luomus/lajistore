@@ -50324,8 +50324,7 @@
             "title": "Start cloud cover"
           },
           "completeList": {
-            "type": "string",
-            "title": "List completeness"
+            "$ref": "#/components/schemas/completeList"
           },
           "dateBegin": {
             "type": "string",

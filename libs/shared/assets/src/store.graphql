@@ -4948,7 +4948,7 @@ type GatheringEvent {
   cloudCover: CloudCover
   cloudCoverEnd: CloudCoverEnd
   cloudCoverStart: CloudCoverStart
-  completeList: String
+  completeList: CompleteList2
   context: String
   dateBegin: String
   dateEnd: String
@@ -20938,7 +20938,7 @@ input GatheringEventInput {
   cloudCover: CloudCover
   cloudCoverEnd: CloudCoverEnd
   cloudCoverStart: CloudCoverStart
-  completeList: String
+  completeList: CompleteList2Input
   context: String
   dateBegin: String
   dateEnd: String

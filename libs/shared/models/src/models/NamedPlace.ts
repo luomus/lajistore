@@ -181,7 +181,14 @@ export interface NamedPlace {
         | "MY.cloudCoverOktaEnum6"
         | "MY.cloudCoverOktaEnum7"
         | "MY.cloudCoverOktaEnum8";
-      completeList?: string;
+      completeList?: {
+        completeListTaxonID?: string;
+        completeListType?:
+          | ""
+          | "MY.completeListTypeCompleteWithBreedingStatus"
+          | "MY.completeListTypeComplete"
+          | "MY.completeListTypeIncomplete";
+      };
       dateBegin?: string;
       dateEnd?: string;
       gatheringFact?: {
@@ -4673,7 +4680,14 @@ export interface NamedPlace {
         | "MY.cloudCoverOktaEnum6"
         | "MY.cloudCoverOktaEnum7"
         | "MY.cloudCoverOktaEnum8";
-      completeList?: string;
+      completeList?: {
+        completeListTaxonID?: string;
+        completeListType?:
+          | ""
+          | "MY.completeListTypeCompleteWithBreedingStatus"
+          | "MY.completeListTypeComplete"
+          | "MY.completeListTypeIncomplete";
+      };
       dateBegin?: string;
       dateEnd?: string;
       gatheringFact?: {
