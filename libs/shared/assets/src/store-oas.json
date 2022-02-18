@@ -54789,6 +54789,7 @@
                 "",
                 "MX.finlex160_1997_appendix4_2021",
                 "MX.finlex160_1997_appendix4_specialInterest_2021",
+                "MX.finlex160_1997_appendix1",
                 "MX.finlex160_1997_appendix2a",
                 "MX.finlex160_1997_appendix2b",
                 "MX.finlex160_1997_appendix3a",
@@ -54831,6 +54832,7 @@
                 "MX.finnishEnvironmentInstitute20072010forestSpecies",
                 "MX.finnishEnvironmentInstitute2020conservationProjectSpecies",
                 "MX.finnishEnvironmentInstitute2020conservationProjectAapamireSpecies",
+                "MX.finnishEnvironmentInstitute2020conservationProjectVascularSpecies",
                 "MX.cropWildRelative",
                 "MX.finnishEnvironmentInstitute20192021forestSpecies",
                 "MX.finlex160_1997_appendix4",
@@ -56570,7 +56572,7 @@
               "MY.atlasCodeEnum81",
               "MY.atlasCodeEnum82"
             ],
-            "title": "Breeding category"
+            "title": "Breeding code"
           },
           "batBehavior": {
             "type": "string",

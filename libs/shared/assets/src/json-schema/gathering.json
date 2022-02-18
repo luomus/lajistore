@@ -2571,7 +2571,7 @@
             ],
             "range": "MY.atlasCodeEnum",
             "subject": "MY.atlasCode",
-            "title": "Breeding category"
+            "title": "Breeding code"
           },
           "batBehavior": {
             "type": "string",

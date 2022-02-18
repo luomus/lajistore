@@ -40,9 +40,9 @@
       ],
       "enumNames": [
         "",
-        "Täydellinen lajiluettelo, sisältäen pesimäindeksit kaikille havainnoille (suositeltava pesimäkaudella)",
-        "Täydellinen lajiluettelo (suositeltava vain pesimäkauden ulkopuolella)",
-        "Epätäydellinen lajiluettelo (hajahavainnoille)"
+        "Täydellinen lajiluettelo sisältäen pesimävarmuusindeksit kaikille havainnoille (A; suositeltava pesimäkaudella)",
+        "Täydellinen lajiluettelo, voi sisältää pesimävarmuusindeksejä (B)",
+        "Epätäydellinen lajiluettelo (C; hajahavainnoille)"
       ],
       "range": "MY.completeListTypeEnum",
       "subject": "MY.completeListType",
