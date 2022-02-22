@@ -8989,6 +8989,9 @@ export interface NamedPlace {
     | "MNP.tagAccessibilityDifficult"
     | "MNP.tagHabitatImportant"
     | "MNP.tagCensusRare"
+    | "MNP.tagHabitatFarmland"
+    | "MNP.tagHabitatMire"
+    | "MNP.tagHabitatMountain"
   )[];
   taxonIDs?: string[];
 }

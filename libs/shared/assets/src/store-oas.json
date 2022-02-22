@@ -53058,7 +53058,10 @@
                 "MNP.tagAccessibilityModerate",
                 "MNP.tagAccessibilityDifficult",
                 "MNP.tagHabitatImportant",
-                "MNP.tagCensusRare"
+                "MNP.tagCensusRare",
+                "MNP.tagHabitatFarmland",
+                "MNP.tagHabitatMire",
+                "MNP.tagHabitatMountain"
               ]
             },
             "minItems": 0,

@@ -16093,7 +16093,10 @@
           "MNP.tagAccessibilityModerate",
           "MNP.tagAccessibilityDifficult",
           "MNP.tagHabitatImportant",
-          "MNP.tagCensusRare"
+          "MNP.tagCensusRare",
+          "MNP.tagHabitatFarmland",
+          "MNP.tagHabitatMire",
+          "MNP.tagHabitatMountain"
         ],
         "enumNames": [
           "",
@@ -16101,7 +16104,10 @@
           "Moderate accessibility",
           "Difficult accessibility",
           "Important habitat",
-          "Rarely censused"
+          "Rarely censused",
+          "Farmland",
+          "Mire",
+          "Mountain"
         ]
       },
       "minItems": 0,
