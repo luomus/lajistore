@@ -52559,6 +52559,14 @@
               "MX.typeOfOccurrenceMaxReplanted",
               "MX.typeOfOccurrenceMaxRelict",
               "MX.typeOfOccurrenceNotEvaluated",
+              "MX.typeOfOccurrenceRegularBreeder",
+              "MX.typeOfOccurrenceIrregularBreeder",
+              "MX.typeOfOccurrencePassageMigrant",
+              "MX.typeOfOccurrenceBirdLifeCategoryA",
+              "MX.typeOfOccurrenceBirdLifeCategoryB",
+              "MX.typeOfOccurrenceBirdLifeCategoryC",
+              "MX.typeOfOccurrenceBirdLifeCategoryD",
+              "MX.typeOfOccurrenceBirdLifeCategoryE",
               "MX.typeOfOccurrenceOccursBasedOnOccurrences"
             ],
             "title": "Type of occurrence in Finland"
@@ -53270,6 +53278,14 @@
               "MX.typeOfOccurrenceMaxReplanted",
               "MX.typeOfOccurrenceMaxRelict",
               "MX.typeOfOccurrenceNotEvaluated",
+              "MX.typeOfOccurrenceRegularBreeder",
+              "MX.typeOfOccurrenceIrregularBreeder",
+              "MX.typeOfOccurrencePassageMigrant",
+              "MX.typeOfOccurrenceBirdLifeCategoryA",
+              "MX.typeOfOccurrenceBirdLifeCategoryB",
+              "MX.typeOfOccurrenceBirdLifeCategoryC",
+              "MX.typeOfOccurrenceBirdLifeCategoryD",
+              "MX.typeOfOccurrenceBirdLifeCategoryE",
               "MX.typeOfOccurrenceOccursBasedOnOccurrences"
             ],
             "title": "Status"
@@ -54011,6 +54027,14 @@
               "MX.typeOfOccurrenceMaxReplanted",
               "MX.typeOfOccurrenceMaxRelict",
               "MX.typeOfOccurrenceNotEvaluated",
+              "MX.typeOfOccurrenceRegularBreeder",
+              "MX.typeOfOccurrenceIrregularBreeder",
+              "MX.typeOfOccurrencePassageMigrant",
+              "MX.typeOfOccurrenceBirdLifeCategoryA",
+              "MX.typeOfOccurrenceBirdLifeCategoryB",
+              "MX.typeOfOccurrenceBirdLifeCategoryC",
+              "MX.typeOfOccurrenceBirdLifeCategoryD",
+              "MX.typeOfOccurrenceBirdLifeCategoryE",
               "MX.typeOfOccurrenceOccursBasedOnOccurrences"
             ],
             "title": "regionalStatusStatus"
@@ -55467,6 +55491,14 @@
                 "MX.typeOfOccurrenceMaxReplanted",
                 "MX.typeOfOccurrenceMaxRelict",
                 "MX.typeOfOccurrenceNotEvaluated",
+                "MX.typeOfOccurrenceRegularBreeder",
+                "MX.typeOfOccurrenceIrregularBreeder",
+                "MX.typeOfOccurrencePassageMigrant",
+                "MX.typeOfOccurrenceBirdLifeCategoryA",
+                "MX.typeOfOccurrenceBirdLifeCategoryB",
+                "MX.typeOfOccurrenceBirdLifeCategoryC",
+                "MX.typeOfOccurrenceBirdLifeCategoryD",
+                "MX.typeOfOccurrenceBirdLifeCategoryE",
                 "MX.typeOfOccurrenceOccursBasedOnOccurrences"
               ]
             },

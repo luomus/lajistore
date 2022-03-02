@@ -506,6 +506,14 @@ export interface IucnRedListEvaluation {
     | "MX.typeOfOccurrenceMaxReplanted"
     | "MX.typeOfOccurrenceMaxRelict"
     | "MX.typeOfOccurrenceNotEvaluated"
+    | "MX.typeOfOccurrenceRegularBreeder"
+    | "MX.typeOfOccurrenceIrregularBreeder"
+    | "MX.typeOfOccurrencePassageMigrant"
+    | "MX.typeOfOccurrenceBirdLifeCategoryA"
+    | "MX.typeOfOccurrenceBirdLifeCategoryB"
+    | "MX.typeOfOccurrenceBirdLifeCategoryC"
+    | "MX.typeOfOccurrenceBirdLifeCategoryD"
+    | "MX.typeOfOccurrenceBirdLifeCategoryE"
     | "MX.typeOfOccurrenceOccursBasedOnOccurrences";
   typeOfOccurrenceInFinlandNotes?: string;
 }

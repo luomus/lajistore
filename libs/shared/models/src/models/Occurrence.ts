@@ -49,6 +49,14 @@ export interface Occurrence {
     | "MX.typeOfOccurrenceMaxReplanted"
     | "MX.typeOfOccurrenceMaxRelict"
     | "MX.typeOfOccurrenceNotEvaluated"
+    | "MX.typeOfOccurrenceRegularBreeder"
+    | "MX.typeOfOccurrenceIrregularBreeder"
+    | "MX.typeOfOccurrencePassageMigrant"
+    | "MX.typeOfOccurrenceBirdLifeCategoryA"
+    | "MX.typeOfOccurrenceBirdLifeCategoryB"
+    | "MX.typeOfOccurrenceBirdLifeCategoryC"
+    | "MX.typeOfOccurrenceBirdLifeCategoryD"
+    | "MX.typeOfOccurrenceBirdLifeCategoryE"
     | "MX.typeOfOccurrenceOccursBasedOnOccurrences";
   taxon: string;
   threatened?: boolean;
