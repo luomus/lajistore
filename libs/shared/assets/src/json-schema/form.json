@@ -59,6 +59,13 @@
       "description": "Id for the collection to where observation useing this form are connected",
       "title": "Collection ID"
     },
+    "context": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MHL.context",
+      "description": "The schema context of the form (e.g. MY.document, MNP.namedPlace...)",
+      "title": "Context"
+    },
     "description": {
       "type": "string",
       "range": "xsd:string",

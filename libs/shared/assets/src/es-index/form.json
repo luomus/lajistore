@@ -29,6 +29,10 @@
         "type": "keyword",
         "ignore_above": 200
       },
+      "context": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "description": {
         "type": "keyword",
         "ignore_above": 200

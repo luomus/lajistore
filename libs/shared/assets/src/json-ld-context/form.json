@@ -43,6 +43,10 @@
       "@id": "default:MHL.collectionID",
       "@type": "@id"
     },
+    "context": {
+      "@id": "default:MHL.context",
+      "@type": "xsd:string"
+    },
     "description": {
       "@id": "default:MHL.description",
       "@type": "xsd:string"

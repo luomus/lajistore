@@ -48552,6 +48552,11 @@
             "description": "Id for the collection to where observation useing this form are connected",
             "title": "Collection ID"
           },
+          "context": {
+            "type": "string",
+            "description": "The schema context of the form (e.g. MY.document, MNP.namedPlace...)",
+            "title": "Context"
+          },
           "description": {
             "type": "string",
             "title": "Description"

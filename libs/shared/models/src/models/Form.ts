@@ -21,6 +21,10 @@ export interface Form {
    * Id for the collection to where observation useing this form are connected
    */
   collectionID?: string;
+  /**
+   * The schema context of the form (e.g. MY.document, MNP.namedPlace...)
+   */
+  context?: string;
   description?: string;
   fields?: {
     name?: string;

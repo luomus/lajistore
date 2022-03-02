@@ -7098,6 +7098,8 @@ type Form2 {
 
   # Id for the collection to where observation useing this form are connected
   collectionID: String
+
+  # The schema context of the form (e.g. MY.document, MNP.namedPlace...)
   context: String
   description: String
   fields: [Field2]
@@ -21725,6 +21727,8 @@ input Form2Input {
 
   # Id for the collection to where observation useing this form are connected
   collectionID: String
+
+  # The schema context of the form (e.g. MY.document, MNP.namedPlace...)
   context: String
   description: String
   fields: [Field2Input]
