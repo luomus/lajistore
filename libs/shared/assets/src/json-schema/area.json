@@ -33,6 +33,7 @@
         "ML.oldMunicipality",
         "ML.elyCentre",
         "ML.province",
+        "ML.continent",
         "ML.iucnEvaluationArea",
         "ML.birdAssociationArea"
       ],
@@ -43,6 +44,7 @@
         "Old Finnish municipality",
         "ELY Centre for Environmental Affairs",
         "Finnish province",
+        "Continent",
         "Red list evaluation area",
         "Bird association area"
       ],

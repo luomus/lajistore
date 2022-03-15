@@ -19,6 +19,7 @@ export interface Area {
     | "ML.oldMunicipality"
     | "ML.elyCentre"
     | "ML.province"
+    | "ML.continent"
     | "ML.iucnEvaluationArea"
     | "ML.birdAssociationArea";
   /**
