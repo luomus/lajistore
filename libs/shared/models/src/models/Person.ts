@@ -46,6 +46,7 @@ export interface Person {
     | "MA.satelliteDataManagementUser"
     | "MA.invasivePortalAdmin"
     | "MA.luomusSpaceCalendarUser"
+    | "MA.luomusSpaceOpeningTimesUser"
   )[];
   roleAnnotation?: "" | "MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin";
   roleKotka?: "" | "MA.admin" | "MA.advanced" | "MA.member" | "MA.guest";

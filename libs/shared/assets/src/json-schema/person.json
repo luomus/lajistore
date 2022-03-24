@@ -214,7 +214,8 @@
           "MA.taxonEditorUserDescriptionWriterOnly",
           "MA.satelliteDataManagementUser",
           "MA.invasivePortalAdmin",
-          "MA.luomusSpaceCalendarUser"
+          "MA.luomusSpaceCalendarUser",
+          "MA.luomusSpaceOpeningTimesUser"
         ],
         "enumNames": [
           "",
@@ -225,7 +226,8 @@
           "Species description writer",
           "Satelliitti.laji.fi user",
           "Invasive species portal administrator",
-          "Luomus space reservation calendar"
+          "Luomus space reservation calendar",
+          "Luomuksen yleisökohteiden aukioloajat"
         ]
       },
       "minItems": 0,

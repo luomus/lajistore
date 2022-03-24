@@ -17,6 +17,8 @@ import { Area } from './Area'
 export type { Area }
 import { Audio } from './Audio'
 export type { Audio }
+import { BirdSongRecognitionSkillLevel } from './BirdSongRecognitionSkillLevel'
+export type { BirdSongRecognitionSkillLevel }
 import { Branch } from './Branch'
 export type { Branch }
 import { Checklist } from './Checklist'
@@ -167,6 +169,7 @@ export type StoreObject = BibliographicResource
    | AnnotationOccurrence
    | Area
    | Audio
+   | BirdSongRecognitionSkillLevel
    | Branch
    | Checklist
    | ChecklistVersion
@@ -296,6 +299,11 @@ export function isArea(data: unknown): data is Area {
 export function isAudio(data: unknown): data is Audio {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MM.audio'
+  );
+}
+export function isBirdSongRecognitionSkillLevel(data: unknown): data is BirdSongRecognitionSkillLevel {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MA.birdSongRecognitionSkillLevelClass'
   );
 }
 export function isBranch(data: unknown): data is Branch {

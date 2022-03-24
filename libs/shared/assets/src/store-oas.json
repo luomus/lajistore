@@ -5324,6 +5324,576 @@
         }
       }
     },
+    "/birdSongRecognitionSkillLevel": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "birdSongRecognitionSkillLevel"
+        ],
+        "operationId": "listbirdSongRecognitionSkillLevel",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of Instances of this class are bird song recognition skill levels of a certain area objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Instances of this class are bird song recognition skill levels of a certain area.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/birdSongRecognitionSkillLevel"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "birdSongRecognitionSkillLevel"
+        ],
+        "operationId": "storebirdSongRecognitionSkillLevel",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/birdSongRecognitionSkillLevel"
+              }
+            }
+          }
+        },
+        "description": "Store Instances of this class are bird song recognition skill levels of a certain area object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored Instances of this class are bird song recognition skill levels of a certain area object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/birdSongRecognitionSkillLevel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "birdSongRecognitionSkillLevel"
+        ],
+        "operationId": "patchbirdSongRecognitionSkillLevel",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch instances of this class are bird song recognition skill levels of a certain area (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching instances of this class are bird song recognition skill levels of a certain area.",
+        "responses": {
+          "200": {
+            "description": "A list of  Instances of this class are bird song recognition skill levels of a certain area.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/birdSongRecognitionSkillLevel"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/birdSongRecognitionSkillLevel/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "birdSongRecognitionSkillLevel"
+        ],
+        "operationId": "searchbirdSongRecognitionSkillLevel",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of Instances of this class are bird song recognition skill levels of a certain area objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Instances of this class are bird song recognition skill levels of a certain area.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/birdSongRecognitionSkillLevel"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/birdSongRecognitionSkillLevel/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "birdSongRecognitionSkillLevel"
+        ],
+        "operationId": "getbirdSongRecognitionSkillLevel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Instances of this class are bird song recognition skill levels of a certain area",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a Instances of this class are bird song recognition skill levels of a certain area.",
+        "responses": {
+          "200": {
+            "description": "a Instances of this class are bird song recognition skill levels of a certain area.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/birdSongRecognitionSkillLevel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "birdSongRecognitionSkillLevel"
+        ],
+        "operationId": "updatebirdSongRecognitionSkillLevel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Instances of this class are bird song recognition skill levels of a certain area",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/birdSongRecognitionSkillLevel"
+              }
+            }
+          }
+        },
+        "description": "Store Instances of this class are bird song recognition skill levels of a certain area",
+        "responses": {
+          "200": {
+            "description": "Stored Instances of this class are bird song recognition skill levels of a certain area",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/birdSongRecognitionSkillLevel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "birdSongRecognitionSkillLevel"
+        ],
+        "operationId": "deletebirdSongRecognitionSkillLevel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Instances of this class are bird song recognition skill levels of a certain area",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete Instances of this class are bird song recognition skill levels of a certain area",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/birdSongRecognitionSkillLevel/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOfbirdSongRecognitionSkillLevel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Instances of this class are bird song recognition skill levels of a certain area",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "birdSongRecognitionSkillLevel"
+        ],
+        "description": "Return a Instances of this class are bird song recognition skill levels of a certain area.",
+        "responses": {
+          "200": {
+            "description": "a Instances of this class are bird song recognition skill levels of a certain area.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/birdSongRecognitionSkillLevel/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "birdSongRecognitionSkillLevel"
+        ],
+        "operationId": "versionbirdSongRecognitionSkillLevel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Instances of this class are bird song recognition skill levels of a certain area",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the Instances of this class are bird song recognition skill levels of a certain area",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a Instances of this class are bird song recognition skill levels of a certain area.",
+        "responses": {
+          "200": {
+            "description": "a Instances of this class are bird song recognition skill levels of a certain area.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/birdSongRecognitionSkillLevel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/branch": {
       "get": {
         "security": [
@@ -45297,6 +45867,12 @@
                       "$ref": "#/components/schemas/audio"
                     }
                   },
+                  "birdSongRecognitionSkillLevel": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/birdSongRecognitionSkillLevel"
+                    }
+                  },
                   "branch": {
                     "type": "array",
                     "items": {
@@ -45785,6 +46361,12 @@
                       "type": "array",
                       "items": {
                         "$ref": "#/components/schemas/audio"
+                      }
+                    },
+                    "birdSongRecognitionSkillLevel": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/birdSongRecognitionSkillLevel"
                       }
                     },
                     "branch": {
@@ -46850,6 +47432,41 @@
           "uploadedBy",
           "intellectualOwner",
           "intellectualRights"
+        ]
+      },
+      "birdSongRecognitionSkillLevel": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the Instances of this class are bird song recognition skill levels of a certain area"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the Instances of this class are bird song recognition skill levels of a certain area"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the Instances of this class are bird song recognition skill levels of a certain area"
+          },
+          "birdSongRecognitionArea": {
+            "type": "string",
+            "title": "Area"
+          },
+          "birdSongRecognitionSkillLevel": {
+            "type": "string",
+            "enum": [
+              "MA.birdSongRecognitionSkillLevelEnum1",
+              "MA.birdSongRecognitionSkillLevelEnum2",
+              "MA.birdSongRecognitionSkillLevelEnum3",
+              "MA.birdSongRecognitionSkillLevelEnum4"
+            ],
+            "title": "Skill level"
+          }
+        },
+        "required": [
+          "birdSongRecognitionArea",
+          "birdSongRecognitionSkillLevel"
         ]
       },
       "branch": {
@@ -53707,7 +54324,8 @@
                 "MA.taxonEditorUserDescriptionWriterOnly",
                 "MA.satelliteDataManagementUser",
                 "MA.invasivePortalAdmin",
-                "MA.luomusSpaceCalendarUser"
+                "MA.luomusSpaceCalendarUser",
+                "MA.luomusSpaceOpeningTimesUser"
               ]
             },
             "minItems": 0,
@@ -53855,6 +54473,15 @@
           "@type": {
             "type": "string",
             "title": "Type for the MA.profile"
+          },
+          "birdSongRecognitionSkillLevels": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Bird sing recognition skill level"
           },
           "birdwatchingActivityLevel": {
             "type": "string",
@@ -58627,6 +59254,10 @@
     {
       "name": "audio",
       "description": "Audio recording"
+    },
+    {
+      "name": "birdSongRecognitionSkillLevel",
+      "description": "Instances of this class are bird song recognition skill levels of a certain area"
     },
     {
       "name": "branch",

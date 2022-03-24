@@ -9,6 +9,7 @@ export interface Profile {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  birdSongRecognitionSkillLevels?: string[];
   birdwatchingActivityLevel?:
     | ""
     | "MA.birdwatchingActivityLevelEnum1"

@@ -31,6 +31,10 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
+    "birdSongRecognitionSkillLevels": {
+      "@id": "default:MA.birdSongRecognitionSkillLevels",
+      "@type": "@id"
+    },
     "birdwatchingActivityLevel": {
       "@id": "default:MA.birdwatchingActivityLevel",
       "@type": "@id"

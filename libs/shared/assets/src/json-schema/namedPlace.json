@@ -528,9 +528,9 @@
                   ],
                   "enumNames": [
                     "",
-                    "Täydellinen lajiluettelo sisältäen pesimävarmuusindeksit kaikille havainnoille (A; suositeltava pesimäkaudella)",
-                    "Täydellinen lajiluettelo, voi sisältää pesimävarmuusindeksejä (B)",
-                    "Epätäydellinen lajiluettelo (C; hajahavainnoille)"
+                    "Täydellinen lajilista sisältäen pesimävarmuusindeksit kaikille havainnoille (A; suositeltava pesimäkaudella)",
+                    "Täydellinen lajilista, voi sisältää pesimävarmuusindeksejä (B)",
+                    "Epätäydellinen lajilista (C; hajahavainnoille)"
                   ],
                   "range": "MY.completeListTypeEnum",
                   "subject": "MY.completeListType",
@@ -4821,13 +4821,13 @@
                         "63 Probable breeding; A bird or a pair observed giving alarm calls because of proximity to nest or brood",
                         "64 Probable breeding; A bird or a pair observed displaying broken wing -act",
                         "65 Probable breeding; A bird or a pair observed attacking the observer",
-                        "66 Probable breeding; Nest found with fresh nest material or remains of food; no direct evidence of eggs or young found.",
+                        "66 Todennäköinen pesintä: asuttu tai koristeltu pesä, ei tietoa munista / poikasista.",
                         "7 Confirmed breeding; Indirect evidence of verified breeding detected",
                         "71 Confirmed breeding; Indirect evidence of verified breeding detected: nest found with signs indicating that is has been used in the same year",
                         "72 Confirmed breeding; Indirect evidence of verified breeding detected: a bird seen entering or coming out from the nest in a way that suggests breeding",
                         "73 Confirmed breeding; Indirect evidence of verified breeding detected: fledglings or young detected so that they can be assumed to have hatched within the grid",
                         "74 Confirmed breeding; Indirect evidence of verified breeding detected: a parent carrying food to nestlings or faeces of nestlings away from the nest",
-                        "75 Confirmed breeding; Indirect evidence of verified breeding detected: an incubating bird seen in the nest",
+                        "75 Varma pesintä: nähty pesässä hautova emo.",
                         "8 Confirmed breeding; Direct evidence of verified breeding detected",
                         "81 Confirmed breeding; Direct evidence of a verified breeding detected: begging or other calls of nestlings heard from the nest",
                         "82 Confirmed breeding; Direct evidence of a verified breeding detected: a nest found with eggs or nestlings"
@@ -8606,9 +8606,9 @@
                   ],
                   "enumNames": [
                     "",
-                    "Täydellinen lajiluettelo sisältäen pesimävarmuusindeksit kaikille havainnoille (A; suositeltava pesimäkaudella)",
-                    "Täydellinen lajiluettelo, voi sisältää pesimävarmuusindeksejä (B)",
-                    "Epätäydellinen lajiluettelo (C; hajahavainnoille)"
+                    "Täydellinen lajilista sisältäen pesimävarmuusindeksit kaikille havainnoille (A; suositeltava pesimäkaudella)",
+                    "Täydellinen lajilista, voi sisältää pesimävarmuusindeksejä (B)",
+                    "Epätäydellinen lajilista (C; hajahavainnoille)"
                   ],
                   "range": "MY.completeListTypeEnum",
                   "subject": "MY.completeListType",
@@ -12899,13 +12899,13 @@
                         "63 Probable breeding; A bird or a pair observed giving alarm calls because of proximity to nest or brood",
                         "64 Probable breeding; A bird or a pair observed displaying broken wing -act",
                         "65 Probable breeding; A bird or a pair observed attacking the observer",
-                        "66 Probable breeding; Nest found with fresh nest material or remains of food; no direct evidence of eggs or young found.",
+                        "66 Todennäköinen pesintä: asuttu tai koristeltu pesä, ei tietoa munista / poikasista.",
                         "7 Confirmed breeding; Indirect evidence of verified breeding detected",
                         "71 Confirmed breeding; Indirect evidence of verified breeding detected: nest found with signs indicating that is has been used in the same year",
                         "72 Confirmed breeding; Indirect evidence of verified breeding detected: a bird seen entering or coming out from the nest in a way that suggests breeding",
                         "73 Confirmed breeding; Indirect evidence of verified breeding detected: fledglings or young detected so that they can be assumed to have hatched within the grid",
                         "74 Confirmed breeding; Indirect evidence of verified breeding detected: a parent carrying food to nestlings or faeces of nestlings away from the nest",
-                        "75 Confirmed breeding; Indirect evidence of verified breeding detected: an incubating bird seen in the nest",
+                        "75 Varma pesintä: nähty pesässä hautova emo.",
                         "8 Confirmed breeding; Direct evidence of verified breeding detected",
                         "81 Confirmed breeding; Direct evidence of a verified breeding detected: begging or other calls of nestlings heard from the nest",
                         "82 Confirmed breeding; Direct evidence of a verified breeding detected: a nest found with eggs or nestlings"

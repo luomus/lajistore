@@ -24,6 +24,17 @@
       "subject": "@type",
       "title": "Type for the MA.profile"
     },
+    "birdSongRecognitionSkillLevels": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "MA.birdSongRecognitionSkillLevelClass",
+      "subject": "MA.birdSongRecognitionSkillLevels",
+      "title": "Bird sing recognition skill level"
+    },
     "birdwatchingActivityLevel": {
       "type": "string",
       "enum": [
