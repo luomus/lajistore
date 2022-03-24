@@ -28,7 +28,41 @@
       "type": "array",
       "uniqueItems": false,
       "items": {
-        "type": "string"
+        "type": "object",
+        "subject": "MA.birdSongRecognitionSkillLevelClass",
+        "additionalProperties": false,
+        "title": "Instances of this class are bird song recognition skill levels of a certain area",
+        "description": "",
+        "properties": {
+          "birdSongRecognitionArea": {
+            "type": "string",
+            "range": "ML.area",
+            "subject": "MA.birdSongRecognitionArea",
+            "title": "Area"
+          },
+          "birdSongRecognitionSkillLevel": {
+            "type": "string",
+            "enum": [
+              "MA.birdSongRecognitionSkillLevelEnum1",
+              "MA.birdSongRecognitionSkillLevelEnum2",
+              "MA.birdSongRecognitionSkillLevelEnum3",
+              "MA.birdSongRecognitionSkillLevelEnum4"
+            ],
+            "enumNames": [
+              "I can hardly recognize any bird sounds",
+              "I can recognize the most common songbirds",
+              "I can recognize majority of the breeding birds and most common passage migrants",
+              "I can recognize majority of the bird species"
+            ],
+            "range": "MA.birdSongRecognitionSkillLevelEnum",
+            "subject": "MA.birdSongRecognitionSkillLevel",
+            "title": "Skill level"
+          }
+        },
+        "required": [
+          "birdSongRecognitionArea",
+          "birdSongRecognitionSkillLevel"
+        ]
       },
       "minItems": 0,
       "range": "MA.birdSongRecognitionSkillLevelClass",

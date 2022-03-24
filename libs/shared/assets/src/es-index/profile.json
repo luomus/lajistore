@@ -18,8 +18,17 @@
         "type": "keyword"
       },
       "birdSongRecognitionSkillLevels": {
-        "type": "keyword",
-        "ignore_above": 200
+        "type": "object",
+        "properties": {
+          "birdSongRecognitionArea": {
+            "type": "keyword",
+            "ignore_above": 200
+          },
+          "birdSongRecognitionSkillLevel": {
+            "type": "keyword",
+            "ignore_above": 200
+          }
+        }
       },
       "birdwatchingActivityLevel": {
         "type": "keyword",

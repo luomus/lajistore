@@ -9,7 +9,14 @@ export interface Profile {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  birdSongRecognitionSkillLevels?: string[];
+  birdSongRecognitionSkillLevels?: {
+    birdSongRecognitionArea: string;
+    birdSongRecognitionSkillLevel:
+      | "MA.birdSongRecognitionSkillLevelEnum1"
+      | "MA.birdSongRecognitionSkillLevelEnum2"
+      | "MA.birdSongRecognitionSkillLevelEnum3"
+      | "MA.birdSongRecognitionSkillLevelEnum4";
+  }[];
   birdwatchingActivityLevel?:
     | ""
     | "MA.birdwatchingActivityLevelEnum1"

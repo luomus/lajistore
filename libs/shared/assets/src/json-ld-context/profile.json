@@ -33,7 +33,7 @@
     },
     "birdSongRecognitionSkillLevels": {
       "@id": "default:MA.birdSongRecognitionSkillLevels",
-      "@type": "@id"
+      "@container": "@set"
     },
     "birdwatchingActivityLevel": {
       "@id": "default:MA.birdwatchingActivityLevel",

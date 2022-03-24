@@ -8768,7 +8768,7 @@ enum PreparationProcessListItem {
 }
 
 type Profile2 {
-  birdSongRecognitionSkillLevels: [String]
+  birdSongRecognitionSkillLevels: [BirdSongRecognitionSkillLevel2]
   birdwatchingActivityLevel: BirdwatchingActivityLevel
   blocked: [String]
   context: String
@@ -22953,7 +22953,7 @@ input Preparation2Input {
 }
 
 input Profile2Input {
-  birdSongRecognitionSkillLevels: [String]
+  birdSongRecognitionSkillLevels: [BirdSongRecognitionSkillLevel2Input]
   birdwatchingActivityLevel: BirdwatchingActivityLevel
   blocked: [String]
   context: String

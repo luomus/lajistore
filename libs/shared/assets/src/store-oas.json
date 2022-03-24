@@ -54476,12 +54476,9 @@
           },
           "birdSongRecognitionSkillLevels": {
             "type": "array",
-            "uniqueItems": false,
             "items": {
-              "type": "string"
-            },
-            "minItems": 0,
-            "title": "Bird sing recognition skill level"
+              "$ref": "#/components/schemas/birdSongRecognitionSkillLevel"
+            }
           },
           "birdwatchingActivityLevel": {
             "type": "string",
