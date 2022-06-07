@@ -49861,6 +49861,11 @@
             "description": "Has only a form page, no sidebar",
             "title": "Simple form"
           },
+          "strict": {
+            "type": "string",
+            "description": "Documents can't have data not defined in form fields.",
+            "title": "Strict"
+          },
           "tempLabel": {
             "type": "string",
             "description": "Label for the draft button at the form footer",
@@ -54322,6 +54327,7 @@
                 "MA.sensitiveInformationApprovalRequestHandler",
                 "MA.taxonEditorUser",
                 "MA.taxonEditorUserDescriptionWriterOnly",
+                "MA.haukkaUser",
                 "MA.satelliteDataManagementUser",
                 "MA.invasivePortalAdmin",
                 "MA.luomusSpaceCalendarUser",

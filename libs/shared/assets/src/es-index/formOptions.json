@@ -2622,6 +2622,10 @@
       "simple": {
         "type": "boolean"
       },
+      "strict": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "tempLabel": {
         "type": "keyword",
         "ignore_above": 200

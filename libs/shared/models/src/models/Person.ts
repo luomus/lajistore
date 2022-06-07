@@ -43,6 +43,7 @@ export interface Person {
     | "MA.sensitiveInformationApprovalRequestHandler"
     | "MA.taxonEditorUser"
     | "MA.taxonEditorUserDescriptionWriterOnly"
+    | "MA.haukkaUser"
     | "MA.satelliteDataManagementUser"
     | "MA.invasivePortalAdmin"
     | "MA.luomusSpaceCalendarUser"

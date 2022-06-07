@@ -39,10 +39,10 @@
         "MA.birdSongRecognitionSkillLevelEnum4"
       ],
       "enumNames": [
-        "I can hardly recognize any bird sounds",
-        "I can recognize the most common songbirds",
-        "I can recognize majority of the breeding birds and most common passage migrants",
-        "I can recognize majority of the bird species"
+        "I can hardly identify any bird species",
+        "I can identify some of the species (regionally)",
+        "I can identify majority of the species regionally",
+        "I can identify majority of the species of the continent"
       ],
       "range": "MA.birdSongRecognitionSkillLevelEnum",
       "subject": "MA.birdSongRecognitionSkillLevel",

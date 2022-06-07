@@ -5046,6 +5046,10 @@ export interface Form {
      */
     simple?: boolean;
     /**
+     * Documents can't have data not defined in form fields.
+     */
+    strict?: string;
+    /**
      * Label for the draft button at the form footer
      */
     tempLabel?: string;

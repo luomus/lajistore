@@ -239,6 +239,10 @@
       "@id": "default:MHL.simple",
       "@type": "xsd:boolean"
     },
+    "strict": {
+      "@id": "default:MHL.strict",
+      "@type": "xsd:string"
+    },
     "tempLabel": {
       "@id": "default:MHL.tempLabel",
       "@type": "xsd:string"

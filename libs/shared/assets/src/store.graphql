@@ -7338,6 +7338,9 @@ type FormOptions {
   # Has only a form page, no sidebar
   simple: Boolean
 
+  # Documents can't have data not defined in form fields.
+  strict: String
+
   # Label for the draft button at the form footer
   tempLabel: String
   type: String
@@ -8684,6 +8687,7 @@ enum RoleListItem {
   MA_SENSITIVEINFORMATIONAPPROVALREQUESTHANDLER
   MA_TAXONEDITORUSER
   MA_TAXONEDITORUSERDESCRIPTIONWRITERONLY
+  MA_HAUKKAUSER
   MA_SATELLITEDATAMANAGEMENTUSER
   MA_INVASIVEPORTALADMIN
   MA_LUOMUSSPACECALENDARUSER
@@ -22091,6 +22095,9 @@ input FormOptionsInput {
 
   # Has only a form page, no sidebar
   simple: Boolean
+
+  # Documents can't have data not defined in form fields.
+  strict: String
 
   # Label for the draft button at the form footer
   tempLabel: String

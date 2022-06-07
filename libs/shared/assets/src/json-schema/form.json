@@ -9377,6 +9377,13 @@
           "description": "Has only a form page, no sidebar",
           "title": "Simple form"
         },
+        "strict": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "MHL.strict",
+          "description": "Documents can't have data not defined in form fields.",
+          "title": "Strict"
+        },
         "tempLabel": {
           "type": "string",
           "range": "xsd:string",
