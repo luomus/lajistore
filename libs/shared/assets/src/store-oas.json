@@ -49862,7 +49862,7 @@
             "title": "Simple form"
           },
           "strict": {
-            "type": "string",
+            "type": "boolean",
             "description": "Documents can't have data not defined in form fields.",
             "title": "Strict"
           },

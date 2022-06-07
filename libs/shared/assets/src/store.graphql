@@ -7339,7 +7339,7 @@ type FormOptions {
   simple: Boolean
 
   # Documents can't have data not defined in form fields.
-  strict: String
+  strict: Boolean
 
   # Label for the draft button at the form footer
   tempLabel: String
@@ -22097,7 +22097,7 @@ input FormOptionsInput {
   simple: Boolean
 
   # Documents can't have data not defined in form fields.
-  strict: String
+  strict: Boolean
 
   # Label for the draft button at the form footer
   tempLabel: String

@@ -2623,8 +2623,7 @@
         "type": "boolean"
       },
       "strict": {
-        "type": "keyword",
-        "ignore_above": 200
+        "type": "boolean"
       },
       "tempLabel": {
         "type": "keyword",

@@ -4852,7 +4852,7 @@ export interface FormOptions {
   /**
    * Documents can't have data not defined in form fields.
    */
-  strict?: string;
+  strict?: boolean;
   /**
    * Label for the draft button at the form footer
    */

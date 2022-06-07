@@ -241,7 +241,7 @@
     },
     "strict": {
       "@id": "default:MHL.strict",
-      "@type": "xsd:string"
+      "@type": "xsd:boolean"
     },
     "tempLabel": {
       "@id": "default:MHL.tempLabel",
