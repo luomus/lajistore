@@ -243,7 +243,7 @@ export class StoreSearchService extends HealthIndicator {
     body: Record<string, any>
   ): PagedResponse<string> {
     const total = body.hits.total.value;
-    const lastPage = size > 0 ? Math.floor(total / size) : 0;
+    const lastPage = size > 0 ? Math.ceil(total / size) : 1;
 
     return this.pagedResponse(size, page, query, total, lastPage, body);
   }
