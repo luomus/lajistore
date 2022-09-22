@@ -8670,11 +8670,13 @@ type Person2 {
   lintuvaaraLoginName: [String]
   omariistaLoginName: String
   organisation: [String]
+  organisationAdmin: [String]
   preferredName: String
   previousEmailAddress: [String]
   role: [RoleListItem]
   roleAnnotation: RoleAnnotation
   roleKotka: RoleKotka
+  securePortalUserRoleExpires: String
   type: String
   virtuLoginName: String
   yearOfBirth: String
@@ -9148,6 +9150,7 @@ type Taxon2 {
 
   # Commonly used names. (Eg names used in recent literature.)
   alternativeVernacularName: AlternativeVernacularName
+  autoNonWild: Boolean
 
   # Lajin elintavat
   behaviour: String
@@ -22919,11 +22922,13 @@ input Person2Input {
   lintuvaaraLoginName: [String]
   omariistaLoginName: String
   organisation: [String]
+  organisationAdmin: [String]
   preferredName: String
   previousEmailAddress: [String]
   role: [RoleListItem]
   roleAnnotation: RoleAnnotation
   roleKotka: RoleKotka
+  securePortalUserRoleExpires: String
   type: String
   virtuLoginName: String
   yearOfBirth: String
@@ -23110,6 +23115,7 @@ input Taxon2Input {
 
   # Commonly used names. (Eg names used in recent literature.)
   alternativeVernacularName: AlternativeVernacularNameInput
+  autoNonWild: Boolean
 
   # Lajin elintavat
   behaviour: String

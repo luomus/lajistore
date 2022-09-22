@@ -113,6 +113,12 @@
       "description": "Commonly used names. (Eg names used in recent literature.)",
       "title": "Other common names"
     },
+    "autoNonWild": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "MX.autoNonWild",
+      "title": "Automatically set occurrences as non-wild"
+    },
     "behaviour": {
       "type": "string",
       "range": "xsd:string",
@@ -503,7 +509,7 @@
           "Game mammal (Hunting law 1993/615; 2019/683)",
           "Unprotected animal (Hunting law 1993/615)",
           "Government Decree on Invasive Alien Species of National Concern (1725/2015)",
-          "Invasive alien species of Union concern (EU 2016/1141; 2017/1263; 2019/1262)",
+          "Invasive alien species of Union concern (EU 2016/1141; 2017/1263; 2019/1262; 2022/1203)",
           "Quarantine plant pest",
           "Quality plant pests",
           "Other plant pests",

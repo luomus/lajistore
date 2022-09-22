@@ -34,6 +34,7 @@ export interface Person {
   lintuvaaraLoginName?: string[];
   omariistaLoginName?: string;
   organisation?: string[];
+  organisationAdmin?: string[];
   preferredName?: string;
   previousEmailAddress?: string[];
   role?: (
@@ -51,6 +52,7 @@ export interface Person {
   )[];
   roleAnnotation?: "" | "MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin";
   roleKotka?: "" | "MA.admin" | "MA.advanced" | "MA.member" | "MA.guest";
+  securePortalUserRoleExpires?: string;
   virtuLoginName?: string;
   yearOfBirth?: string;
 }

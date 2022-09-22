@@ -47,6 +47,7 @@ export interface Taxon {
     fi?: string[];
     sv?: string[];
   };
+  autoNonWild?: boolean;
   /**
    * Lajin elintavat
    */

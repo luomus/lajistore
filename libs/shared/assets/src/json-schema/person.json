@@ -183,6 +183,17 @@
       "subject": "MA.organisation",
       "title": "Organisaatio"
     },
+    "organisationAdmin": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "MOS.organization",
+      "subject": "MA.organisationAdmin",
+      "title": "Lists all organisations that this user administrates (can grant access to PAP and add users to this organisation)"
+    },
     "preferredName": {
       "type": "string",
       "range": "xsd:string",
@@ -278,6 +289,13 @@
       "range": "MA.roleKotkaEnum",
       "subject": "MA.roleKotka",
       "title": "User role in Kotka"
+    },
+    "securePortalUserRoleExpires": {
+      "type": "string",
+      "format": "date",
+      "range": "xsd:date",
+      "subject": "MA.securePortalUserRoleExpires",
+      "title": "Public Authorities Portal access expiry date"
     },
     "virtuLoginName": {
       "type": "string",

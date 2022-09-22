@@ -54302,6 +54302,15 @@
             "minItems": 0,
             "title": "Organisaatio"
           },
+          "organisationAdmin": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Lists all organisations that this user administrates (can grant access to PAP and add users to this organisation)"
+          },
           "preferredName": {
             "type": "string",
             "title": "Kutsumanimi"
@@ -54359,6 +54368,11 @@
               "MA.guest"
             ],
             "title": "User role in Kotka"
+          },
+          "securePortalUserRoleExpires": {
+            "type": "string",
+            "format": "date",
+            "title": "Public Authorities Portal access expiry date"
           },
           "virtuLoginName": {
             "type": "string",
@@ -55235,6 +55249,10 @@
             },
             "description": "Commonly used names. (Eg names used in recent literature.)",
             "title": "Other common names"
+          },
+          "autoNonWild": {
+            "type": "boolean",
+            "title": "Automatically set occurrences as non-wild"
           },
           "behaviour": {
             "type": "string",

@@ -156,13 +156,13 @@
         "MY.collectionTypeGardenSublocation"
       ],
       "enumNames": [
-        "Specimen collection",
-        "Living collection",
-        "Monitoring scheme",
-        "Free-form observations",
-        "Data from publication(s)",
+        "Specimens",
+        "Specimens from a living collection",
+        "Monitoring scheme observations",
+        "Incidental observations",
+        "Observations from publication(s)",
         "Publication(s)",
-        "Mixed",
+        "Combination of different kinds of data",
         "Other",
         "Garden area",
         "Indoor garden area",
@@ -470,10 +470,10 @@
       ],
       "enumNames": [
         "",
-        "preliminary - needs improvement",
-        "satisfactory - could be improved",
+        "preliminary – needs improvement",
+        "satisfactory – could be improved",
         "comprehensive",
-        "hidden - this metadata should not be used"
+        "hidden – this metadata should not be used"
       ],
       "range": "MY.metadataStatuses",
       "subject": "MY.metadataStatus",

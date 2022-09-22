@@ -56,6 +56,9 @@
           }
         }
       },
+      "autoNonWild": {
+        "type": "boolean"
+      },
       "behaviour": {
         "type": "keyword",
         "ignore_above": 200
