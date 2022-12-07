@@ -192,7 +192,8 @@
       "minItems": 0,
       "range": "MOS.organization",
       "subject": "MA.organisationAdmin",
-      "title": "Lists all organisations that this user administrates (can grant access to PAP and add users to this organisation)"
+      "description": "Lists all organisations that this user administrates (can grant access to PAP and add users to this organisation)",
+      "title": "Admin of organisation"
     },
     "preferredName": {
       "type": "string",
@@ -227,7 +228,8 @@
           "MA.satelliteDataManagementUser",
           "MA.invasivePortalAdmin",
           "MA.luomusSpaceCalendarUser",
-          "MA.luomusSpaceOpeningTimesUser"
+          "MA.luomusSpaceOpeningTimesUser",
+          "MA.taxonIdEditor"
         ],
         "enumNames": [
           "",
@@ -240,7 +242,8 @@
           "Satelliitti.laji.fi user",
           "Invasive species portal administrator",
           "Luomus space reservation calendar",
-          "Luomuksen yleisökohteiden aukioloajat"
+          "Luomuksen yleisökohteiden aukioloajat",
+          "Taxonid.org Editoriin pääsyoikeus"
         ]
       },
       "minItems": 0,

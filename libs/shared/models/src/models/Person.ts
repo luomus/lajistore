@@ -34,6 +34,9 @@ export interface Person {
   lintuvaaraLoginName?: string[];
   omariistaLoginName?: string;
   organisation?: string[];
+  /**
+   * Lists all organisations that this user administrates (can grant access to PAP and add users to this organisation)
+   */
   organisationAdmin?: string[];
   preferredName?: string;
   previousEmailAddress?: string[];
@@ -49,6 +52,7 @@ export interface Person {
     | "MA.invasivePortalAdmin"
     | "MA.luomusSpaceCalendarUser"
     | "MA.luomusSpaceOpeningTimesUser"
+    | "MA.taxonIdEditor"
   )[];
   roleAnnotation?: "" | "MMAN.expert" | "MMAN.basic" | "MMAN.owner" | "MMAN.formAdmin" | "MMAN.ictAdmin";
   roleKotka?: "" | "MA.admin" | "MA.advanced" | "MA.member" | "MA.guest";

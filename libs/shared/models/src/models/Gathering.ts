@@ -520,6 +520,13 @@ export interface Gathering {
     | "MY.habitatEnumValue84"
     | "MY.habitatEnumValue85"
     | "MY.habitatEnumValue86"
+    | "MY.habitatEnumValue88"
+    | "MY.habitatEnumValue89"
+    | "MY.habitatEnumValue90"
+    | "MY.habitatEnumValue91"
+    | "MY.habitatEnumValue92"
+    | "MY.habitatEnumValue93"
+    | "MY.habitatEnumValue94"
   )[];
   habitatAttributes?: (
     | ""
@@ -691,6 +698,7 @@ export interface Gathering {
     | "MY.samplingMethodBait"
     | "MY.samplingMethodNet"
     | "MY.samplingMethodSweeping"
+    | "MY.samplingMethodAquaticNet"
     | "MY.samplingMethodCarnet"
     | "MY.samplingMethodMistnet"
     | "MY.samplingMethodBoard"
@@ -798,6 +806,7 @@ export interface Gathering {
       | "MY.abundanceUnitIndirect"
       | "MY.abundanceUnitSquareDM"
       | "MY.abundanceUnitSquareM"
+      | "MY.abundanceUnitRelativeDensity"
       | "MY.abundanceUnitOccursDoesNotOccur";
     /**
      * Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)
@@ -1038,7 +1047,8 @@ export interface Gathering {
       | "MY.lifeStageHatchedEgg"
       | "MY.lifeStageHatchedPupa"
       | "MY.lifeStageGall"
-      | "MY.lifeStageMarks";
+      | "MY.lifeStageMarks"
+      | "MY.lifeStageTriungulin";
     /**
      * Free-text notes or addtional information about the life stage
      */
@@ -1335,6 +1345,7 @@ export interface Gathering {
       | "MY.samplingMethodBait"
       | "MY.samplingMethodNet"
       | "MY.samplingMethodSweeping"
+      | "MY.samplingMethodAquaticNet"
       | "MY.samplingMethodCarnet"
       | "MY.samplingMethodMistnet"
       | "MY.samplingMethodBoard"
@@ -1388,7 +1399,8 @@ export interface Gathering {
       | "MY.seedMorphologyRudimentary"
       | "MY.seedMorphologySpatulateFullyDeveloped"
       | "MY.seedMorphologySpatulateUnderdeveloped"
-      | "MY.seedMorphologyUndifferentiated";
+      | "MY.seedMorphologyUndifferentiated"
+      | "MY.seedMorphologyInvesting";
     /**
      * Sex of the individual(s)
      */
@@ -1676,7 +1688,8 @@ export interface Gathering {
         | "MY.infraRankMorpha"
         | "MY.infraRankUnknown"
         | "MY.infraRankNothosubspecies"
-        | "MY.infraRankCultivarGroup";
+        | "MY.infraRankCultivarGroup"
+        | "MY.infraRankFsp";
       /**
        * Pathovars, serovars and other infrasubspecific subdivisions of microbes.
        */

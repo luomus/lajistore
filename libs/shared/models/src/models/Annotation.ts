@@ -101,7 +101,8 @@ export interface Annotation {
       | "MY.infraRankMorpha"
       | "MY.infraRankUnknown"
       | "MY.infraRankNothosubspecies"
-      | "MY.infraRankCultivarGroup";
+      | "MY.infraRankCultivarGroup"
+      | "MY.infraRankFsp";
     /**
      * Pathovars, serovars and other infrasubspecific subdivisions of microbes.
      */

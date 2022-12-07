@@ -902,8 +902,8 @@
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.dataSource",
-          "description": "Where the data about this specimen is from, in addition to labels. Eg. Field notes, expedition journals.",
-          "title": "Specimen data source"
+          "description": "Where the data about this specimen or observation is from, in addition to labels. Eg. reference to a publication, field notes or an expedition.",
+          "title": "Data source"
         },
         "datasetID": {
           "type": "array",
@@ -4500,7 +4500,14 @@
                     "MY.habitatEnumValue83",
                     "MY.habitatEnumValue84",
                     "MY.habitatEnumValue85",
-                    "MY.habitatEnumValue86"
+                    "MY.habitatEnumValue86",
+                    "MY.habitatEnumValue88",
+                    "MY.habitatEnumValue89",
+                    "MY.habitatEnumValue90",
+                    "MY.habitatEnumValue91",
+                    "MY.habitatEnumValue92",
+                    "MY.habitatEnumValue93",
+                    "MY.habitatEnumValue94"
                   ],
                   "enumNames": [
                     "",
@@ -4590,7 +4597,14 @@
                     "Sand and gravel pit",
                     "Peat production area",
                     "Quarry and mine area",
-                    "Ruderate habitats and areas"
+                    "Ruderate habitats and areas",
+                    "Sea",
+                    "Brackish water",
+                    "Oligotrophic lake or pond",
+                    "Eutrophic lake or pond",
+                    "Lampare tai allikko",
+                    "River",
+                    "Rapids"
                   ]
                 },
                 "minItems": 0,
@@ -5028,6 +5042,7 @@
                   "MY.samplingMethodBait",
                   "MY.samplingMethodNet",
                   "MY.samplingMethodSweeping",
+                  "MY.samplingMethodAquaticNet",
                   "MY.samplingMethodCarnet",
                   "MY.samplingMethodMistnet",
                   "MY.samplingMethodBoard",
@@ -5078,6 +5093,7 @@
                   "Bait (any kind, without trap)",
                   "Net (haavi)",
                   "Sweeping",
+                  "aquatic net",
                   "Car net",
                   "Mistnet",
                   "Board Shelter",
@@ -5367,6 +5383,7 @@
                         "MY.abundanceUnitIndirect",
                         "MY.abundanceUnitSquareDM",
                         "MY.abundanceUnitSquareM",
+                        "MY.abundanceUnitRelativeDensity",
                         "MY.abundanceUnitOccursDoesNotOccur"
                       ],
                       "enumNames": [
@@ -5390,6 +5407,7 @@
                         "Number of indirect marks/traces",
                         "Square decimeter (dm^2)",
                         "Square meter (m^2)",
+                        "Relative density",
                         "Occurs / does not occur"
                       ],
                       "range": "MY.abundanceUnitEnum",
@@ -6033,7 +6051,8 @@
                         "MY.lifeStageHatchedEgg",
                         "MY.lifeStageHatchedPupa",
                         "MY.lifeStageGall",
-                        "MY.lifeStageMarks"
+                        "MY.lifeStageMarks",
+                        "MY.lifeStageTriungulin"
                       ],
                       "enumNames": [
                         "",
@@ -6057,7 +6076,8 @@
                         "hatched egg",
                         "hatched pupa",
                         "gall",
-                        "marks (feeding marks etc.)"
+                        "marks (feeding marks etc.)",
+                        "triungulin"
                       ],
                       "range": "MY.lifeStages",
                       "subject": "MY.lifeStage",
@@ -6932,6 +6952,7 @@
                         "MY.samplingMethodBait",
                         "MY.samplingMethodNet",
                         "MY.samplingMethodSweeping",
+                        "MY.samplingMethodAquaticNet",
                         "MY.samplingMethodCarnet",
                         "MY.samplingMethodMistnet",
                         "MY.samplingMethodBoard",
@@ -6982,6 +7003,7 @@
                         "Bait (any kind, without trap)",
                         "Net (haavi)",
                         "Sweeping",
+                        "aquatic net",
                         "Car net",
                         "Mistnet",
                         "Board Shelter",
@@ -7060,7 +7082,8 @@
                         "MY.seedMorphologyRudimentary",
                         "MY.seedMorphologySpatulateFullyDeveloped",
                         "MY.seedMorphologySpatulateUnderdeveloped",
-                        "MY.seedMorphologyUndifferentiated"
+                        "MY.seedMorphologyUndifferentiated",
+                        "MY.seedMorphologyInvesting"
                       ],
                       "enumNames": [
                         "",
@@ -7075,7 +7098,8 @@
                         "rudimentary",
                         "spatulate fully developed",
                         "spatulate underdeveloped",
-                        "undifferentiated"
+                        "undifferentiated",
+                        "investing"
                       ],
                       "range": "MY.seedMorphologyEnum",
                       "subject": "MY.seedMorphology",
@@ -8118,7 +8142,8 @@
                               "MY.infraRankMorpha",
                               "MY.infraRankUnknown",
                               "MY.infraRankNothosubspecies",
-                              "MY.infraRankCultivarGroup"
+                              "MY.infraRankCultivarGroup",
+                              "MY.infraRankFsp"
                             ],
                             "enumNames": [
                               "",
@@ -8135,7 +8160,8 @@
                               "morpha",
                               "Unknown",
                               "Nothosubspecies",
-                              "Cultivar group"
+                              "Cultivar group",
+                              "f.sp."
                             ],
                             "range": "MY.infraRanks",
                             "subject": "MY.infraRank",
@@ -8765,6 +8791,13 @@
       "subject": "MHL.useNamedPlaces",
       "description": "Makes the form use named places",
       "title": "Use named places"
+    },
+    "useSchemaCommmentsAsHelpTexts": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "MHL.useSchemaCommmentsAsHelpTexts",
+      "description": "Uses schema comments as form help texts",
+      "title": "Use schema comments as help texts"
     },
     "viewerType": {
       "type": "string",

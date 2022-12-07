@@ -78,7 +78,8 @@
         "MY.lifeStageHatchedEgg",
         "MY.lifeStageHatchedPupa",
         "MY.lifeStageGall",
-        "MY.lifeStageMarks"
+        "MY.lifeStageMarks",
+        "MY.lifeStageTriungulin"
       ],
       "enumNames": [
         "",
@@ -102,7 +103,8 @@
         "hatched egg",
         "hatched pupa",
         "gall",
-        "marks (feeding marks etc.)"
+        "marks (feeding marks etc.)",
+        "triungulin"
       ],
       "range": "MY.lifeStages",
       "subject": "MI.objectLifeStage",
@@ -149,7 +151,8 @@
         "MY.lifeStageHatchedEgg",
         "MY.lifeStageHatchedPupa",
         "MY.lifeStageGall",
-        "MY.lifeStageMarks"
+        "MY.lifeStageMarks",
+        "MY.lifeStageTriungulin"
       ],
       "enumNames": [
         "",
@@ -173,7 +176,8 @@
         "hatched egg",
         "hatched pupa",
         "gall",
-        "marks (feeding marks etc.)"
+        "marks (feeding marks etc.)",
+        "triungulin"
       ],
       "range": "MY.lifeStages",
       "subject": "MI.subjectLifeStage",

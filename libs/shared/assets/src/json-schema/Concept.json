@@ -23,6 +23,50 @@
       "range": "xsd:string",
       "subject": "@type",
       "title": "Type for the skos:Concept"
+    },
+    "skos:broader": {
+      "type": "string",
+      "range": "skos:Concept",
+      "subject": "skos:broader",
+      "title": "skos:broader"
+    },
+    "skos:definition": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "skos:definition",
+      "title": "skos:definition"
+    },
+    "skos:example": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "skos:example",
+      "title": "skos:example"
+    },
+    "skos:inScheme": {
+      "type": "string",
+      "range": "skos:ConceptScheme",
+      "subject": "skos:inScheme",
+      "title": "skos:inScheme"
+    },
+    "skos:narrower": {
+      "type": "string",
+      "range": "skos:Concept",
+      "subject": "skos:narrower",
+      "title": "skos:narrower"
+    },
+    "skos:note": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "skos:note",
+      "title": "skos:note"
     }
-  }
+  },
+  "required": [
+    "skos:broader",
+    "skos:definition",
+    "skos:example",
+    "skos:inScheme",
+    "skos:narrower",
+    "skos:note"
+  ]
 }

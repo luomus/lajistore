@@ -169,7 +169,8 @@
         "MY.infraRankMorpha",
         "MY.infraRankUnknown",
         "MY.infraRankNothosubspecies",
-        "MY.infraRankCultivarGroup"
+        "MY.infraRankCultivarGroup",
+        "MY.infraRankFsp"
       ],
       "enumNames": [
         "",
@@ -186,7 +187,8 @@
         "morpha",
         "Unknown",
         "Nothosubspecies",
-        "Cultivar group"
+        "Cultivar group",
+        "f.sp."
       ],
       "range": "MY.infraRanks",
       "subject": "MY.infraRank",

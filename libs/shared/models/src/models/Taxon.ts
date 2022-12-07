@@ -523,5 +523,5 @@ export interface Taxon {
     | "MX.secureLevelNoShow";
   createdAtTimestamp?: string;
   sortOrder?: number;
-  "skos:exactMatch"?: string[];
+  "skos:exactMatch"?: string;
 }

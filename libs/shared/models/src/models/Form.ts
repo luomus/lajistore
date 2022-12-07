@@ -586,7 +586,7 @@ export interface Form {
       cultivationInformation?: string;
       dataOrigin?: ("" | "MY.dataOriginPaperForm" | "MY.dataOriginWebForm" | "MY.dataOriginSpreadsheetFile")[];
       /**
-       * Where the data about this specimen is from, in addition to labels. Eg. Field notes, expedition journals.
+       * Where the data about this specimen or observation is from, in addition to labels. Eg. reference to a publication, field notes or an expedition.
        */
       dataSource?: string;
       /**
@@ -1689,6 +1689,13 @@ export interface Form {
             | "MY.habitatEnumValue84"
             | "MY.habitatEnumValue85"
             | "MY.habitatEnumValue86"
+            | "MY.habitatEnumValue88"
+            | "MY.habitatEnumValue89"
+            | "MY.habitatEnumValue90"
+            | "MY.habitatEnumValue91"
+            | "MY.habitatEnumValue92"
+            | "MY.habitatEnumValue93"
+            | "MY.habitatEnumValue94"
           )[];
           habitatAttributes?: (
             | ""
@@ -1860,6 +1867,7 @@ export interface Form {
             | "MY.samplingMethodBait"
             | "MY.samplingMethodNet"
             | "MY.samplingMethodSweeping"
+            | "MY.samplingMethodAquaticNet"
             | "MY.samplingMethodCarnet"
             | "MY.samplingMethodMistnet"
             | "MY.samplingMethodBoard"
@@ -1970,6 +1978,7 @@ export interface Form {
               | "MY.abundanceUnitIndirect"
               | "MY.abundanceUnitSquareDM"
               | "MY.abundanceUnitSquareM"
+              | "MY.abundanceUnitRelativeDensity"
               | "MY.abundanceUnitOccursDoesNotOccur";
             /**
              * Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)
@@ -2210,7 +2219,8 @@ export interface Form {
               | "MY.lifeStageHatchedEgg"
               | "MY.lifeStageHatchedPupa"
               | "MY.lifeStageGall"
-              | "MY.lifeStageMarks";
+              | "MY.lifeStageMarks"
+              | "MY.lifeStageTriungulin";
             /**
              * Free-text notes or addtional information about the life stage
              */
@@ -2507,6 +2517,7 @@ export interface Form {
               | "MY.samplingMethodBait"
               | "MY.samplingMethodNet"
               | "MY.samplingMethodSweeping"
+              | "MY.samplingMethodAquaticNet"
               | "MY.samplingMethodCarnet"
               | "MY.samplingMethodMistnet"
               | "MY.samplingMethodBoard"
@@ -2560,7 +2571,8 @@ export interface Form {
               | "MY.seedMorphologyRudimentary"
               | "MY.seedMorphologySpatulateFullyDeveloped"
               | "MY.seedMorphologySpatulateUnderdeveloped"
-              | "MY.seedMorphologyUndifferentiated";
+              | "MY.seedMorphologyUndifferentiated"
+              | "MY.seedMorphologyInvesting";
             /**
              * Sex of the individual(s)
              */
@@ -2871,7 +2883,8 @@ export interface Form {
                 | "MY.infraRankMorpha"
                 | "MY.infraRankUnknown"
                 | "MY.infraRankNothosubspecies"
-                | "MY.infraRankCultivarGroup";
+                | "MY.infraRankCultivarGroup"
+                | "MY.infraRankFsp";
               /**
                * Pathovars, serovars and other infrasubspecific subdivisions of microbes.
                */
@@ -3597,6 +3610,13 @@ export interface Form {
             | "MY.habitatEnumValue84"
             | "MY.habitatEnumValue85"
             | "MY.habitatEnumValue86"
+            | "MY.habitatEnumValue88"
+            | "MY.habitatEnumValue89"
+            | "MY.habitatEnumValue90"
+            | "MY.habitatEnumValue91"
+            | "MY.habitatEnumValue92"
+            | "MY.habitatEnumValue93"
+            | "MY.habitatEnumValue94"
           )[];
           habitatAttributes?: (
             | ""
@@ -3768,6 +3788,7 @@ export interface Form {
             | "MY.samplingMethodBait"
             | "MY.samplingMethodNet"
             | "MY.samplingMethodSweeping"
+            | "MY.samplingMethodAquaticNet"
             | "MY.samplingMethodCarnet"
             | "MY.samplingMethodMistnet"
             | "MY.samplingMethodBoard"
@@ -3878,6 +3899,7 @@ export interface Form {
               | "MY.abundanceUnitIndirect"
               | "MY.abundanceUnitSquareDM"
               | "MY.abundanceUnitSquareM"
+              | "MY.abundanceUnitRelativeDensity"
               | "MY.abundanceUnitOccursDoesNotOccur";
             /**
              * Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)
@@ -4118,7 +4140,8 @@ export interface Form {
               | "MY.lifeStageHatchedEgg"
               | "MY.lifeStageHatchedPupa"
               | "MY.lifeStageGall"
-              | "MY.lifeStageMarks";
+              | "MY.lifeStageMarks"
+              | "MY.lifeStageTriungulin";
             /**
              * Free-text notes or addtional information about the life stage
              */
@@ -4415,6 +4438,7 @@ export interface Form {
               | "MY.samplingMethodBait"
               | "MY.samplingMethodNet"
               | "MY.samplingMethodSweeping"
+              | "MY.samplingMethodAquaticNet"
               | "MY.samplingMethodCarnet"
               | "MY.samplingMethodMistnet"
               | "MY.samplingMethodBoard"
@@ -4468,7 +4492,8 @@ export interface Form {
               | "MY.seedMorphologyRudimentary"
               | "MY.seedMorphologySpatulateFullyDeveloped"
               | "MY.seedMorphologySpatulateUnderdeveloped"
-              | "MY.seedMorphologyUndifferentiated";
+              | "MY.seedMorphologyUndifferentiated"
+              | "MY.seedMorphologyInvesting";
             /**
              * Sex of the individual(s)
              */
@@ -4779,7 +4804,8 @@ export interface Form {
                 | "MY.infraRankMorpha"
                 | "MY.infraRankUnknown"
                 | "MY.infraRankNothosubspecies"
-                | "MY.infraRankCultivarGroup";
+                | "MY.infraRankCultivarGroup"
+                | "MY.infraRankFsp";
               /**
                * Pathovars, serovars and other infrasubspecific subdivisions of microbes.
                */
@@ -5057,6 +5083,10 @@ export interface Form {
      * Makes the form use named places
      */
     useNamedPlaces?: boolean;
+    /**
+     * Uses schema comments as form help texts
+     */
+    useSchemaCommmentsAsHelpTexts?: boolean;
     viewerType?: "" | "MHL.viewerTypeLineTransect" | "MHL.viewerTypeBirdPointCount";
     warnEditingOldDocument?: boolean;
     /**

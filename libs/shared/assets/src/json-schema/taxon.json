@@ -733,7 +733,7 @@
         "",
         "Established",
         "Sporadic",
-        "Not yet in Finland",
+        "Does not occur in Finland",
         "Unknown",
         "Temporary"
       ],
@@ -1512,7 +1512,7 @@
           "TOVU -alien, old, formerly resident, now possibly extinct",
           "TOVX - alien, old, extinct",
           "1 - spreading in the wild; to a small degree of cultivated origin",
-          "2 - spreading in the wild;  to a notable degree of cultivated origin",
+          "2 - spreading in the wild; to a notable degree of cultivated origin",
           "3 - spreading in the wild; completely of cultivated origin",
           "C - only as cultivated",
           "H - at most a short-distance escape from cultivation (inside a garden or similar)",
@@ -1610,12 +1610,7 @@
       "title": "sortOrder"
     },
     "skos:exactMatch": {
-      "type": "array",
-      "uniqueItems": false,
-      "items": {
-        "type": "string"
-      },
-      "minItems": 0,
+      "type": "string",
       "range": "skos:Concept",
       "subject": "skos:exactMatch",
       "title": "Taxonid.org identifier"

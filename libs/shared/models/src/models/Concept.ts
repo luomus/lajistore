@@ -9,4 +9,10 @@ export interface Concept {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  "skos:broader": string;
+  "skos:definition": string;
+  "skos:example": string;
+  "skos:inScheme": string;
+  "skos:narrower": string;
+  "skos:note": string;
 }

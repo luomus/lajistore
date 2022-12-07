@@ -9314,6 +9314,576 @@
         }
       }
     },
+    "/dataField": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "dataField"
+        ],
+        "operationId": "listdataField",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of Data field objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Data field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/dataField"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "dataField"
+        ],
+        "operationId": "storedataField",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/dataField"
+              }
+            }
+          }
+        },
+        "description": "Store Data field object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored Data field object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/dataField"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "dataField"
+        ],
+        "operationId": "patchdataField",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch data field (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching data field.",
+        "responses": {
+          "200": {
+            "description": "A list of  Data field.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/dataField"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataField/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "dataField"
+        ],
+        "operationId": "searchdataField",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of Data field objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Data field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/dataField"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataField/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "dataField"
+        ],
+        "operationId": "getdataField",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Data field",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a Data field.",
+        "responses": {
+          "200": {
+            "description": "a Data field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/dataField"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "dataField"
+        ],
+        "operationId": "updatedataField",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Data field",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/dataField"
+              }
+            }
+          }
+        },
+        "description": "Store Data field",
+        "responses": {
+          "200": {
+            "description": "Stored Data field",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/dataField"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "dataField"
+        ],
+        "operationId": "deletedataField",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Data field",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete Data field",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataField/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOfdataField",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Data field",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "dataField"
+        ],
+        "description": "Return a Data field.",
+        "responses": {
+          "200": {
+            "description": "a Data field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataField/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "dataField"
+        ],
+        "operationId": "versiondataField",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Data field",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the Data field",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a Data field.",
+        "responses": {
+          "200": {
+            "description": "a Data field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/dataField"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/dataset": {
       "get": {
         "security": [
@@ -45909,6 +46479,12 @@
                       "$ref": "#/components/schemas/contentContextDescription"
                     }
                   },
+                  "dataField": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/dataField"
+                    }
+                  },
                   "dataset": {
                     "type": "array",
                     "items": {
@@ -46405,6 +46981,12 @@
                         "$ref": "#/components/schemas/contentContextDescription"
                       }
                     },
+                    "dataField": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/dataField"
+                      }
+                    },
                     "dataset": {
                       "type": "array",
                       "items": {
@@ -46843,8 +47425,40 @@
           "@type": {
             "type": "string",
             "title": "Type for the skos:Concept"
+          },
+          "skos:broader": {
+            "type": "string",
+            "title": "skos:broader"
+          },
+          "skos:definition": {
+            "type": "string",
+            "title": "skos:definition"
+          },
+          "skos:example": {
+            "type": "string",
+            "title": "skos:example"
+          },
+          "skos:inScheme": {
+            "type": "string",
+            "title": "skos:inScheme"
+          },
+          "skos:narrower": {
+            "type": "string",
+            "title": "skos:narrower"
+          },
+          "skos:note": {
+            "type": "string",
+            "title": "skos:note"
           }
-        }
+        },
+        "required": [
+          "skos:broader",
+          "skos:definition",
+          "skos:example",
+          "skos:inScheme",
+          "skos:narrower",
+          "skos:note"
+        ]
       },
       "Pinkka": {
         "type": "object",
@@ -47946,6 +48560,80 @@
           }
         }
       },
+      "dataField": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the Data field"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the Data field"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the Data field"
+          },
+          "apiName": {
+            "type": "string",
+            "title": "Name in API /warehouse/unit endpoint"
+          },
+          "description": {
+            "type": "string",
+            "description": "Information for data users about the contents/source/etc of the field",
+            "title": "Description of the field"
+          },
+          "example": {
+            "type": "string",
+            "title": "Example values"
+          },
+          "includeFull": {
+            "type": "boolean",
+            "title": "Include field to full downloads"
+          },
+          "includeSecurePortalUI": {
+            "type": "boolean",
+            "title": "Include field to PAP UI"
+          },
+          "includeUI": {
+            "type": "boolean",
+            "title": "Include field to Laji.fi UI"
+          },
+          "name": {
+            "type": "string",
+            "title": "Human readable name"
+          },
+          "rPackageName": {
+            "type": "string",
+            "title": "Name in R-package"
+          },
+          "shortName": {
+            "type": "string",
+            "description": "Short name for shapefiles",
+            "title": "Short name"
+          },
+          "techicalNotes": {
+            "type": "string",
+            "description": "Internal notes for us developers",
+            "title": "Technical notes"
+          },
+          "technicalName": {
+            "type": "string",
+            "description": "Short dwc or other term for the field (for example \"collectionID\"); usually the same as subjectname (without the \"DDF.\")",
+            "title": "Technical name"
+          },
+          "sortOrder": {
+            "type": "integer",
+            "title": "sortOrder"
+          }
+        },
+        "required": [
+          "name",
+          "shortName",
+          "technicalName"
+        ]
+      },
       "dataset": {
         "type": "object",
         "properties": {
@@ -48307,8 +48995,8 @@
           },
           "dataSource": {
             "type": "string",
-            "description": "Where the data about this specimen is from, in addition to labels. Eg. Field notes, expedition journals.",
-            "title": "Specimen data source"
+            "description": "Where the data about this specimen or observation is from, in addition to labels. Eg. reference to a publication, field notes or an expedition.",
+            "title": "Data source"
           },
           "datasetID": {
             "type": "array",
@@ -49876,6 +50564,11 @@
             "description": "Makes the form use named places",
             "title": "Use named places"
           },
+          "useSchemaCommmentsAsHelpTexts": {
+            "type": "boolean",
+            "description": "Uses schema comments as form help texts",
+            "title": "Use schema comments as help texts"
+          },
           "viewerType": {
             "type": "string",
             "enum": [
@@ -50425,7 +51118,14 @@
                 "MY.habitatEnumValue83",
                 "MY.habitatEnumValue84",
                 "MY.habitatEnumValue85",
-                "MY.habitatEnumValue86"
+                "MY.habitatEnumValue86",
+                "MY.habitatEnumValue88",
+                "MY.habitatEnumValue89",
+                "MY.habitatEnumValue90",
+                "MY.habitatEnumValue91",
+                "MY.habitatEnumValue92",
+                "MY.habitatEnumValue93",
+                "MY.habitatEnumValue94"
               ]
             },
             "minItems": 0,
@@ -50724,6 +51424,7 @@
               "MY.samplingMethodBait",
               "MY.samplingMethodNet",
               "MY.samplingMethodSweeping",
+              "MY.samplingMethodAquaticNet",
               "MY.samplingMethodCarnet",
               "MY.samplingMethodMistnet",
               "MY.samplingMethodBoard",
@@ -51977,7 +52678,8 @@
               "MY.infraRankMorpha",
               "MY.infraRankUnknown",
               "MY.infraRankNothosubspecies",
-              "MY.infraRankCultivarGroup"
+              "MY.infraRankCultivarGroup",
+              "MY.infraRankFsp"
             ],
             "description": "Taxonomic level of the epithet below species level",
             "title": "Infra rank"
@@ -54309,7 +55011,8 @@
               "type": "string"
             },
             "minItems": 0,
-            "title": "Lists all organisations that this user administrates (can grant access to PAP and add users to this organisation)"
+            "description": "Lists all organisations that this user administrates (can grant access to PAP and add users to this organisation)",
+            "title": "Admin of organisation"
           },
           "preferredName": {
             "type": "string",
@@ -54340,7 +55043,8 @@
                 "MA.satelliteDataManagementUser",
                 "MA.invasivePortalAdmin",
                 "MA.luomusSpaceCalendarUser",
-                "MA.luomusSpaceOpeningTimesUser"
+                "MA.luomusSpaceOpeningTimesUser",
+                "MA.taxonIdEditor"
               ]
             },
             "minItems": 0,
@@ -56195,12 +56899,7 @@
             "title": "sortOrder"
           },
           "skos:exactMatch": {
-            "type": "array",
-            "uniqueItems": false,
-            "items": {
-              "type": "string"
-            },
-            "minItems": 0,
+            "type": "string",
             "title": "Taxonid.org identifier"
           }
         }
@@ -56397,7 +57096,8 @@
               "MY.lifeStageHatchedEgg",
               "MY.lifeStageHatchedPupa",
               "MY.lifeStageGall",
-              "MY.lifeStageMarks"
+              "MY.lifeStageMarks",
+              "MY.lifeStageTriungulin"
             ],
             "title": "Object taxon life stage"
           },
@@ -56438,7 +57138,8 @@
               "MY.lifeStageHatchedEgg",
               "MY.lifeStageHatchedPupa",
               "MY.lifeStageGall",
-              "MY.lifeStageMarks"
+              "MY.lifeStageMarks",
+              "MY.lifeStageTriungulin"
             ],
             "title": "Subject taxon life stage"
           },
@@ -57189,6 +57890,7 @@
               "MY.abundanceUnitIndirect",
               "MY.abundanceUnitSquareDM",
               "MY.abundanceUnitSquareM",
+              "MY.abundanceUnitRelativeDensity",
               "MY.abundanceUnitOccursDoesNotOccur"
             ],
             "title": "Abundance unit"
@@ -57607,7 +58309,8 @@
               "MY.lifeStageHatchedEgg",
               "MY.lifeStageHatchedPupa",
               "MY.lifeStageGall",
-              "MY.lifeStageMarks"
+              "MY.lifeStageMarks",
+              "MY.lifeStageTriungulin"
             ],
             "description": "Life stage of the specimen",
             "title": "Life stage"
@@ -57965,6 +58668,7 @@
               "MY.samplingMethodBait",
               "MY.samplingMethodNet",
               "MY.samplingMethodSweeping",
+              "MY.samplingMethodAquaticNet",
               "MY.samplingMethodCarnet",
               "MY.samplingMethodMistnet",
               "MY.samplingMethodBoard",
@@ -58031,7 +58735,8 @@
               "MY.seedMorphologyRudimentary",
               "MY.seedMorphologySpatulateFullyDeveloped",
               "MY.seedMorphologySpatulateUnderdeveloped",
-              "MY.seedMorphologyUndifferentiated"
+              "MY.seedMorphologyUndifferentiated",
+              "MY.seedMorphologyInvesting"
             ],
             "description": "Seed morphology of the collected seeds, used for botanical garden accessions/seed bank.",
             "title": "Seed morphology"
@@ -59303,6 +60008,10 @@
     {
       "name": "contentContextDescription",
       "description": "Instances of this describe one taxon description context"
+    },
+    {
+      "name": "dataField",
+      "description": "Data field"
     },
     {
       "name": "dataset",
