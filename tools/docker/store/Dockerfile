@@ -33,7 +33,7 @@ ENV ORACLE_CLIENT_FILENAME oracle-instantclient-basiclite-21.1.0.0.0-1.x86_64.rp
 # Install Oracle instanclient so that oracle db can be accessed from node
 # to find versions available you can go to https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient21/x86_64/
 RUN apt update \
- && apt install -y --no-install-recommends alien libaio1 curl libaio1 libaio-dev libssl1.0-dev musl-dev \
+ && apt install -y --no-install-recommends alien libaio1 curl libaio1 libaio-dev libssl-dev musl-dev \
  && wget https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient21/x86_64/getPackage/${ORACLE_CLIENT_FILENAME} \
  && alien -i --scripts ${ORACLE_CLIENT_FILENAME} \
  && rm -f ${ORACLE_CLIENT_FILENAME} \
