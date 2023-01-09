@@ -775,7 +775,8 @@
           "MX.taxonSetSykeBumblebee",
           "MVL.1201",
           "MX.taxonSetSykeBumblebeeOther",
-          "MX.taxonSetBirdAtlasCommon"
+          "MX.taxonSetBirdAtlasCommon",
+          "MX.taxonSetBiomonCompleteListOdonata"
         ],
         "enumNames": [
           "",
@@ -789,7 +790,8 @@
           "SYKE's Bumblebee Census",
           "Spring monitoring species",
           "Syken kimalaistutkimus: Ylemmät taksonit",
-          "Bird atlas: common breeders"
+          "Bird atlas: common breeders",
+          "Biomon: Suomen sudenkorennot"
         ]
       },
       "minItems": 0,

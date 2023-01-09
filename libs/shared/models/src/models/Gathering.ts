@@ -753,7 +753,8 @@ export interface Gathering {
       | "MX.taxonSetSykeBumblebee"
       | "MVL.1201"
       | "MX.taxonSetSykeBumblebeeOther"
-      | "MX.taxonSetBirdAtlasCommon";
+      | "MX.taxonSetBirdAtlasCommon"
+      | "MX.taxonSetBiomonCompleteListOdonata";
     taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
   }[];
   temperature?: number;
@@ -989,7 +990,7 @@ export interface Gathering {
     informalNameString?: string;
     informalTaxonGroup?: string;
     /**
-     * Valitut muotoryhmät
+     * Valitut eliöryhmät
      */
     informalTaxonGroups?: string[];
     /**
@@ -1631,7 +1632,7 @@ export interface Gathering {
        */
       det?: string;
       /**
-       * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
+       * Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
        */
       detDate?: string;
       detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";

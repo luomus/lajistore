@@ -620,7 +620,7 @@
       "minItems": 0,
       "range": "MVL.informalTaxonGroup",
       "subject": "MY.informalTaxonGroups",
-      "description": "Valitut muotoryhmät",
+      "description": "Valitut eliöryhmät",
       "title": "Informal taxon groups"
     },
     "infrasubspecificSubdivision": {
@@ -1988,7 +1988,7 @@
       ],
       "range": "MY.substrateEnum",
       "subject": "MY.substrateClassification",
-      "title": "Substrate classification"
+      "title": "Type of substrate"
     },
     "substrateDecayStage": {
       "type": "string",
@@ -2712,8 +2712,8 @@
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.detDate",
-            "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or  \"Y\"",
-            "title": "Det date"
+            "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or \"Y\"",
+            "title": "Det. date"
           },
           "detMethod": {
             "type": "string",

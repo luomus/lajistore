@@ -55,8 +55,8 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.detDate",
-      "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or  \"Y\"",
-      "title": "Det date"
+      "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or \"Y\"",
+      "title": "Det. date"
     },
     "detMethod": {
       "type": "string",

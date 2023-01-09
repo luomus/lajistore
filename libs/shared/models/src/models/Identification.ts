@@ -23,7 +23,7 @@ export interface Identification {
    */
   det?: string;
   /**
-   * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
+   * Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
    */
   detDate?: string;
   detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";

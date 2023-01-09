@@ -251,8 +251,8 @@
       "@id": "default:MHL.useNamedPlaces",
       "@type": "xsd:boolean"
     },
-    "useSchemaCommmentsAsHelpTexts": {
-      "@id": "default:MHL.useSchemaCommmentsAsHelpTexts",
+    "useSchemaCommentsAsHelpTexts": {
+      "@id": "default:MHL.useSchemaCommentsAsHelpTexts",
       "@type": "xsd:boolean"
     },
     "viewerType": {

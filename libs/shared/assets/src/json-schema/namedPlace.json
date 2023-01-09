@@ -1723,7 +1723,8 @@
                       "MX.taxonSetSykeBumblebee",
                       "MVL.1201",
                       "MX.taxonSetSykeBumblebeeOther",
-                      "MX.taxonSetBirdAtlasCommon"
+                      "MX.taxonSetBirdAtlasCommon",
+                      "MX.taxonSetBiomonCompleteListOdonata"
                     ],
                     "enumNames": [
                       "",
@@ -1737,7 +1738,8 @@
                       "SYKE's Bumblebee Census",
                       "Spring monitoring species",
                       "Syken kimalaistutkimus: Ylemmät taksonit",
-                      "Bird atlas: common breeders"
+                      "Bird atlas: common breeders",
+                      "Biomon: Suomen sudenkorennot"
                     ],
                     "range": "MX.taxonSetEnum",
                     "subject": "MY.censusTaxonSetID",
@@ -3890,11 +3892,11 @@
                     "Mountain meadow",
                     "Snowbed",
                     "Mountain heath scrub",
-                    "Paljakan lähteikkö tai tihkupintaOroarctic/mountain spring complexes and habitats",
-                    "Paljakan kallio tai kivikkoOroarctic/ rocky outcrop and scree",
+                    "Oroarctic/mountain spring complexes and habitats",
+                    "Oroarctic/ rocky outcrop and scree",
                     "Oroarctic mountain mire",
-                    "Paljakan järvi tai lampi (sis. ranta)Oroarctic/mountain lake",
-                    "Paljakan virtavesi (sis. purot ja rannat)Oroarctic/mountain brookside or a stream",
+                    "Oroarctic/mountain lake",
+                    "Oroarctic/mountain brookside or a stream",
                     "Rock face",
                     "Rural biotopes and cultural habitats or other human-impacted environment",
                     "Rural biotopes and cultural habitats",
@@ -3922,7 +3924,7 @@
                     "Scrub",
                     "Secondary habitats",
                     "Roadsides (verges, banks, on the road etc.)",
-                    "Dumpling area",
+                    "Dumping area",
                     "Fill-up soil",
                     "Sand and gravel pit",
                     "Peat production area",
@@ -4001,7 +4003,7 @@
                 "minItems": 0,
                 "range": "MY.habitatAttributesEnum",
                 "subject": "MY.habitatAttributes",
-                "title": "Habitat notes"
+                "title": "Additional information of habitat"
               },
               "habitatClassification": {
                 "type": "string",
@@ -4524,7 +4526,8 @@
                         "MX.taxonSetSykeBumblebee",
                         "MVL.1201",
                         "MX.taxonSetSykeBumblebeeOther",
-                        "MX.taxonSetBirdAtlasCommon"
+                        "MX.taxonSetBirdAtlasCommon",
+                        "MX.taxonSetBiomonCompleteListOdonata"
                       ],
                       "enumNames": [
                         "",
@@ -4538,7 +4541,8 @@
                         "SYKE's Bumblebee Census",
                         "Spring monitoring species",
                         "Syken kimalaistutkimus: Ylemmät taksonit",
-                        "Bird atlas: common breeders"
+                        "Bird atlas: common breeders",
+                        "Biomon: Suomen sudenkorennot"
                       ],
                       "range": "MX.taxonSetEnum",
                       "subject": "MY.censusTaxonSetID",
@@ -5266,7 +5270,7 @@
                       "minItems": 0,
                       "range": "MVL.informalTaxonGroup",
                       "subject": "MY.informalTaxonGroups",
-                      "description": "Valitut muotoryhmät",
+                      "description": "Valitut eliöryhmät",
                       "title": "Informal taxon groups"
                     },
                     "infrasubspecificSubdivision": {
@@ -6634,7 +6638,7 @@
                       ],
                       "range": "MY.substrateEnum",
                       "subject": "MY.substrateClassification",
-                      "title": "Substrate classification"
+                      "title": "Type of substrate"
                     },
                     "substrateDecayStage": {
                       "type": "string",
@@ -7358,8 +7362,8 @@
                             "type": "string",
                             "range": "xsd:string",
                             "subject": "MY.detDate",
-                            "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or  \"Y\"",
-                            "title": "Det date"
+                            "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or \"Y\"",
+                            "title": "Det. date"
                           },
                           "detMethod": {
                             "type": "string",
@@ -9827,7 +9831,8 @@
                       "MX.taxonSetSykeBumblebee",
                       "MVL.1201",
                       "MX.taxonSetSykeBumblebeeOther",
-                      "MX.taxonSetBirdAtlasCommon"
+                      "MX.taxonSetBirdAtlasCommon",
+                      "MX.taxonSetBiomonCompleteListOdonata"
                     ],
                     "enumNames": [
                       "",
@@ -9841,7 +9846,8 @@
                       "SYKE's Bumblebee Census",
                       "Spring monitoring species",
                       "Syken kimalaistutkimus: Ylemmät taksonit",
-                      "Bird atlas: common breeders"
+                      "Bird atlas: common breeders",
+                      "Biomon: Suomen sudenkorennot"
                     ],
                     "range": "MX.taxonSetEnum",
                     "subject": "MY.censusTaxonSetID",
@@ -11994,11 +12000,11 @@
                     "Mountain meadow",
                     "Snowbed",
                     "Mountain heath scrub",
-                    "Paljakan lähteikkö tai tihkupintaOroarctic/mountain spring complexes and habitats",
-                    "Paljakan kallio tai kivikkoOroarctic/ rocky outcrop and scree",
+                    "Oroarctic/mountain spring complexes and habitats",
+                    "Oroarctic/ rocky outcrop and scree",
                     "Oroarctic mountain mire",
-                    "Paljakan järvi tai lampi (sis. ranta)Oroarctic/mountain lake",
-                    "Paljakan virtavesi (sis. purot ja rannat)Oroarctic/mountain brookside or a stream",
+                    "Oroarctic/mountain lake",
+                    "Oroarctic/mountain brookside or a stream",
                     "Rock face",
                     "Rural biotopes and cultural habitats or other human-impacted environment",
                     "Rural biotopes and cultural habitats",
@@ -12026,7 +12032,7 @@
                     "Scrub",
                     "Secondary habitats",
                     "Roadsides (verges, banks, on the road etc.)",
-                    "Dumpling area",
+                    "Dumping area",
                     "Fill-up soil",
                     "Sand and gravel pit",
                     "Peat production area",
@@ -12105,7 +12111,7 @@
                 "minItems": 0,
                 "range": "MY.habitatAttributesEnum",
                 "subject": "MY.habitatAttributes",
-                "title": "Habitat notes"
+                "title": "Additional information of habitat"
               },
               "habitatClassification": {
                 "type": "string",
@@ -12628,7 +12634,8 @@
                         "MX.taxonSetSykeBumblebee",
                         "MVL.1201",
                         "MX.taxonSetSykeBumblebeeOther",
-                        "MX.taxonSetBirdAtlasCommon"
+                        "MX.taxonSetBirdAtlasCommon",
+                        "MX.taxonSetBiomonCompleteListOdonata"
                       ],
                       "enumNames": [
                         "",
@@ -12642,7 +12649,8 @@
                         "SYKE's Bumblebee Census",
                         "Spring monitoring species",
                         "Syken kimalaistutkimus: Ylemmät taksonit",
-                        "Bird atlas: common breeders"
+                        "Bird atlas: common breeders",
+                        "Biomon: Suomen sudenkorennot"
                       ],
                       "range": "MX.taxonSetEnum",
                       "subject": "MY.censusTaxonSetID",
@@ -13370,7 +13378,7 @@
                       "minItems": 0,
                       "range": "MVL.informalTaxonGroup",
                       "subject": "MY.informalTaxonGroups",
-                      "description": "Valitut muotoryhmät",
+                      "description": "Valitut eliöryhmät",
                       "title": "Informal taxon groups"
                     },
                     "infrasubspecificSubdivision": {
@@ -14738,7 +14746,7 @@
                       ],
                       "range": "MY.substrateEnum",
                       "subject": "MY.substrateClassification",
-                      "title": "Substrate classification"
+                      "title": "Type of substrate"
                     },
                     "substrateDecayStage": {
                       "type": "string",
@@ -15462,8 +15470,8 @@
                             "type": "string",
                             "range": "xsd:string",
                             "subject": "MY.detDate",
-                            "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or  \"Y\"",
-                            "title": "Det date"
+                            "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or \"Y\"",
+                            "title": "Det. date"
                           },
                           "detMethod": {
                             "type": "string",

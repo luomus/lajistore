@@ -806,7 +806,8 @@ export interface FormOptions {
           | "MX.taxonSetSykeBumblebee"
           | "MVL.1201"
           | "MX.taxonSetSykeBumblebeeOther"
-          | "MX.taxonSetBirdAtlasCommon";
+          | "MX.taxonSetBirdAtlasCommon"
+          | "MX.taxonSetBiomonCompleteListOdonata";
         taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
       }[];
       temperature?: number;
@@ -1744,7 +1745,8 @@ export interface FormOptions {
             | "MX.taxonSetSykeBumblebee"
             | "MVL.1201"
             | "MX.taxonSetSykeBumblebeeOther"
-            | "MX.taxonSetBirdAtlasCommon";
+            | "MX.taxonSetBirdAtlasCommon"
+            | "MX.taxonSetBiomonCompleteListOdonata";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -1980,7 +1982,7 @@ export interface FormOptions {
           informalNameString?: string;
           informalTaxonGroup?: string;
           /**
-           * Valitut muotoryhmät
+           * Valitut eliöryhmät
            */
           informalTaxonGroups?: string[];
           /**
@@ -2639,7 +2641,7 @@ export interface FormOptions {
              */
             det?: string;
             /**
-             * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
+             * Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
              */
             detDate?: string;
             detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
@@ -3656,7 +3658,8 @@ export interface FormOptions {
             | "MX.taxonSetSykeBumblebee"
             | "MVL.1201"
             | "MX.taxonSetSykeBumblebeeOther"
-            | "MX.taxonSetBirdAtlasCommon";
+            | "MX.taxonSetBirdAtlasCommon"
+            | "MX.taxonSetBiomonCompleteListOdonata";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -3892,7 +3895,7 @@ export interface FormOptions {
           informalNameString?: string;
           informalTaxonGroup?: string;
           /**
-           * Valitut muotoryhmät
+           * Valitut eliöryhmät
            */
           informalTaxonGroups?: string[];
           /**
@@ -4551,7 +4554,7 @@ export interface FormOptions {
              */
             det?: string;
             /**
-             * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
+             * Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
              */
             detDate?: string;
             detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
@@ -4890,7 +4893,7 @@ export interface FormOptions {
   /**
    * Uses schema comments as form help texts
    */
-  useSchemaCommmentsAsHelpTexts?: boolean;
+  useSchemaCommentsAsHelpTexts?: boolean;
   viewerType?: "" | "MHL.viewerTypeLineTransect" | "MHL.viewerTypeBirdPointCount";
   warnEditingOldDocument?: boolean;
   /**

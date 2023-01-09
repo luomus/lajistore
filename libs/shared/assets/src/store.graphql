@@ -4239,7 +4239,7 @@ type Identification {
   # Name of the identifier (person) preferably in format "lastname, firstname"
   det: String
 
-  # Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
+  # Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
   detDate: String
   detMethod: DetMethod
 
@@ -5548,6 +5548,7 @@ enum CensusTaxonSetID {
   MVL_1201
   MX_TAXONSETSYKEBUMBLEBEEOTHER
   MX_TAXONSETBIRDATLASCOMMON
+  MX_TAXONSETBIOMONCOMPLETELISTODONATA
 }
 
 enum TaxonCensusType {
@@ -6126,7 +6127,7 @@ type Unit {
   informalNameString: String
   informalTaxonGroup: String
 
-  # Valitut muotoryhmät
+  # Valitut eliöryhmät
   informalTaxonGroups: [String]
 
   # Pathovars, serovars and other infrasubspecific subdivisions of microbes.
@@ -7443,7 +7444,7 @@ type FormOptions {
   useNamedPlaces: Boolean
 
   # Uses schema comments as form help texts
-  useSchemaCommmentsAsHelpTexts: Boolean
+  useSchemaCommentsAsHelpTexts: Boolean
   viewerType: ViewerType
   warnEditingOldDocument: Boolean
 
@@ -9537,6 +9538,7 @@ enum IsPartOfSetListItem {
   MVL_1201
   MX_TAXONSETSYKEBUMBLEBEEOTHER
   MX_TAXONSETBIRDATLASCOMMON
+  MX_TAXONSETBIOMONCOMPLETELISTODONATA
 }
 
 enum NaturaAreaSecureLevel {
@@ -20847,7 +20849,7 @@ input IdentificationInput {
   # Name of the identifier (person) preferably in format "lastname, firstname"
   det: String
 
-  # Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
+  # Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
   detDate: String
   detMethod: DetMethod
 
@@ -21858,7 +21860,7 @@ input UnitInput {
   informalNameString: String
   informalTaxonGroup: String
 
-  # Valitut muotoryhmät
+  # Valitut eliöryhmät
   informalTaxonGroups: [String]
 
   # Pathovars, serovars and other infrasubspecific subdivisions of microbes.
@@ -22375,7 +22377,7 @@ input FormOptionsInput {
   useNamedPlaces: Boolean
 
   # Uses schema comments as form help texts
-  useSchemaCommmentsAsHelpTexts: Boolean
+  useSchemaCommentsAsHelpTexts: Boolean
   viewerType: ViewerType
   warnEditingOldDocument: Boolean
 

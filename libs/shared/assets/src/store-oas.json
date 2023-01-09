@@ -50564,7 +50564,7 @@
             "description": "Makes the form use named places",
             "title": "Use named places"
           },
-          "useSchemaCommmentsAsHelpTexts": {
+          "useSchemaCommentsAsHelpTexts": {
             "type": "boolean",
             "description": "Uses schema comments as form help texts",
             "title": "Use schema comments as help texts"
@@ -51163,7 +51163,7 @@
               ]
             },
             "minItems": 0,
-            "title": "Habitat notes"
+            "title": "Additional information of habitat"
           },
           "habitatClassification": {
             "type": "string",
@@ -52599,8 +52599,8 @@
           },
           "detDate": {
             "type": "string",
-            "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or  \"Y\"",
-            "title": "Det date"
+            "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or \"Y\"",
+            "title": "Det. date"
           },
           "detMethod": {
             "type": "string",
@@ -56411,7 +56411,8 @@
                 "MX.taxonSetSykeBumblebee",
                 "MVL.1201",
                 "MX.taxonSetSykeBumblebeeOther",
-                "MX.taxonSetBirdAtlasCommon"
+                "MX.taxonSetBirdAtlasCommon",
+                "MX.taxonSetBiomonCompleteListOdonata"
               ]
             },
             "minItems": 0,
@@ -56937,7 +56938,8 @@
               "MX.taxonSetSykeBumblebee",
               "MVL.1201",
               "MX.taxonSetSykeBumblebeeOther",
-              "MX.taxonSetBirdAtlasCommon"
+              "MX.taxonSetBirdAtlasCommon",
+              "MX.taxonSetBiomonCompleteListOdonata"
             ],
             "title": "Censused taxon set"
           },
@@ -58224,7 +58226,7 @@
               "type": "string"
             },
             "minItems": 0,
-            "description": "Valitut muotoryhmät",
+            "description": "Valitut eliöryhmät",
             "title": "Informal taxon groups"
           },
           "infrasubspecificSubdivision": {
@@ -58847,7 +58849,7 @@
               "MY.substrateDeadNeedle",
               "MY.substrateDeadLeaf"
             ],
-            "title": "Substrate classification"
+            "title": "Type of substrate"
           },
           "substrateDecayStage": {
             "type": "string",

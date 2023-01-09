@@ -246,6 +246,7 @@ export interface Taxon {
     | "MVL.1201"
     | "MX.taxonSetSykeBumblebeeOther"
     | "MX.taxonSetBirdAtlasCommon"
+    | "MX.taxonSetBiomonCompleteListOdonata"
   )[];
   /**
    * Eliön elinkierto

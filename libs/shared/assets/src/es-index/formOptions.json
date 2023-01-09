@@ -2632,7 +2632,7 @@
       "useNamedPlaces": {
         "type": "boolean"
       },
-      "useSchemaCommmentsAsHelpTexts": {
+      "useSchemaCommentsAsHelpTexts": {
         "type": "boolean"
       },
       "viewerType": {
