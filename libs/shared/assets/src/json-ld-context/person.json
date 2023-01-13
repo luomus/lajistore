@@ -119,6 +119,10 @@
       "@id": "default:MA.organisation",
       "@type": "@id"
     },
+    "organisationAdmin": {
+      "@id": "default:MA.organisationAdmin",
+      "@type": "@id"
+    },
     "preferredName": {
       "@id": "default:MA.preferredName",
       "@type": "xsd:string"
@@ -138,6 +142,10 @@
     "roleKotka": {
       "@id": "default:MA.roleKotka",
       "@type": "@id"
+    },
+    "securePortalUserRoleExpires": {
+      "@id": "default:MA.securePortalUserRoleExpires",
+      "@type": "xsd:date"
     },
     "virtuLoginName": {
       "@id": "default:MA.virtuLoginName",

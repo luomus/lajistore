@@ -44,7 +44,7 @@ export interface Annotation {
      */
     det?: string;
     /**
-     * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
+     * Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
      */
     detDate?: string;
     detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
@@ -101,7 +101,8 @@ export interface Annotation {
       | "MY.infraRankMorpha"
       | "MY.infraRankUnknown"
       | "MY.infraRankNothosubspecies"
-      | "MY.infraRankCultivarGroup";
+      | "MY.infraRankCultivarGroup"
+      | "MY.infraRankFsp";
     /**
      * Pathovars, serovars and other infrasubspecific subdivisions of microbes.
      */

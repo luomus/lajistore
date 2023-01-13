@@ -1534,8 +1534,8 @@
               "type": "string",
               "range": "xsd:string",
               "subject": "MY.dataSource",
-              "description": "Where the data about this specimen is from, in addition to labels. Eg. Field notes, expedition journals.",
-              "title": "Specimen data source"
+              "description": "Where the data about this specimen or observation is from, in addition to labels. Eg. reference to a publication, field notes or an expedition.",
+              "title": "Data source"
             },
             "datasetID": {
               "type": "array",
@@ -3025,7 +3025,8 @@
                           "MX.taxonSetSykeBumblebee",
                           "MVL.1201",
                           "MX.taxonSetSykeBumblebeeOther",
-                          "MX.taxonSetBirdAtlasCommon"
+                          "MX.taxonSetBirdAtlasCommon",
+                          "MX.taxonSetBiomonCompleteListOdonata"
                         ],
                         "enumNames": [
                           "",
@@ -3039,7 +3040,8 @@
                           "SYKE's Bumblebee Census",
                           "Spring monitoring species",
                           "Syken kimalaistutkimus: Ylemmät taksonit",
-                          "Bird atlas: common breeders"
+                          "Bird atlas: common breeders",
+                          "Biomon: Suomen sudenkorennot"
                         ],
                         "range": "MX.taxonSetEnum",
                         "subject": "MY.censusTaxonSetID",
@@ -5132,7 +5134,14 @@
                         "MY.habitatEnumValue83",
                         "MY.habitatEnumValue84",
                         "MY.habitatEnumValue85",
-                        "MY.habitatEnumValue86"
+                        "MY.habitatEnumValue86",
+                        "MY.habitatEnumValue88",
+                        "MY.habitatEnumValue89",
+                        "MY.habitatEnumValue90",
+                        "MY.habitatEnumValue91",
+                        "MY.habitatEnumValue92",
+                        "MY.habitatEnumValue93",
+                        "MY.habitatEnumValue94"
                       ],
                       "enumNames": [
                         "",
@@ -5185,11 +5194,11 @@
                         "Mountain meadow",
                         "Snowbed",
                         "Mountain heath scrub",
-                        "Paljakan lähteikkö tai tihkupintaOroarctic/mountain spring complexes and habitats",
-                        "Paljakan kallio tai kivikkoOroarctic/ rocky outcrop and scree",
+                        "Oroarctic/mountain spring complexes and habitats",
+                        "Oroarctic/ rocky outcrop and scree",
                         "Oroarctic mountain mire",
-                        "Paljakan järvi tai lampi (sis. ranta)Oroarctic/mountain lake",
-                        "Paljakan virtavesi (sis. purot ja rannat)Oroarctic/mountain brookside or a stream",
+                        "Oroarctic/mountain lake",
+                        "Oroarctic/mountain brookside or a stream",
                         "Rock face",
                         "Rural biotopes and cultural habitats or other human-impacted environment",
                         "Rural biotopes and cultural habitats",
@@ -5217,12 +5226,19 @@
                         "Scrub",
                         "Secondary habitats",
                         "Roadsides (verges, banks, on the road etc.)",
-                        "Dumpling area",
+                        "Dumping area",
                         "Fill-up soil",
                         "Sand and gravel pit",
                         "Peat production area",
                         "Quarry and mine area",
-                        "Ruderate habitats and areas"
+                        "Ruderate habitats and areas",
+                        "Sea",
+                        "Brackish water",
+                        "Oligotrophic lake or pond",
+                        "Eutrophic lake or pond",
+                        "Lampare tai allikko",
+                        "River",
+                        "Rapids"
                       ]
                     },
                     "minItems": 0,
@@ -5289,7 +5305,7 @@
                     "minItems": 0,
                     "range": "MY.habitatAttributesEnum",
                     "subject": "MY.habitatAttributes",
-                    "title": "Habitat notes"
+                    "title": "Additional information of habitat"
                   },
                   "habitatClassification": {
                     "type": "string",
@@ -5660,6 +5676,7 @@
                       "MY.samplingMethodBait",
                       "MY.samplingMethodNet",
                       "MY.samplingMethodSweeping",
+                      "MY.samplingMethodAquaticNet",
                       "MY.samplingMethodCarnet",
                       "MY.samplingMethodMistnet",
                       "MY.samplingMethodBoard",
@@ -5710,6 +5727,7 @@
                       "Bait (any kind, without trap)",
                       "Net (haavi)",
                       "Sweeping",
+                      "aquatic net",
                       "Car net",
                       "Mistnet",
                       "Board Shelter",
@@ -5810,7 +5828,8 @@
                             "MX.taxonSetSykeBumblebee",
                             "MVL.1201",
                             "MX.taxonSetSykeBumblebeeOther",
-                            "MX.taxonSetBirdAtlasCommon"
+                            "MX.taxonSetBirdAtlasCommon",
+                            "MX.taxonSetBiomonCompleteListOdonata"
                           ],
                           "enumNames": [
                             "",
@@ -5824,7 +5843,8 @@
                             "SYKE's Bumblebee Census",
                             "Spring monitoring species",
                             "Syken kimalaistutkimus: Ylemmät taksonit",
-                            "Bird atlas: common breeders"
+                            "Bird atlas: common breeders",
+                            "Biomon: Suomen sudenkorennot"
                           ],
                           "range": "MX.taxonSetEnum",
                           "subject": "MY.censusTaxonSetID",
@@ -5999,6 +6019,7 @@
                             "MY.abundanceUnitIndirect",
                             "MY.abundanceUnitSquareDM",
                             "MY.abundanceUnitSquareM",
+                            "MY.abundanceUnitRelativeDensity",
                             "MY.abundanceUnitOccursDoesNotOccur"
                           ],
                           "enumNames": [
@@ -6022,6 +6043,7 @@
                             "Number of indirect marks/traces",
                             "Square decimeter (dm^2)",
                             "Square meter (m^2)",
+                            "Relative density",
                             "Occurs / does not occur"
                           ],
                           "range": "MY.abundanceUnitEnum",
@@ -6550,7 +6572,7 @@
                           "minItems": 0,
                           "range": "MVL.informalTaxonGroup",
                           "subject": "MY.informalTaxonGroups",
-                          "description": "Valitut muotoryhmät",
+                          "description": "Valitut eliöryhmät",
                           "title": "Informal taxon groups"
                         },
                         "infrasubspecificSubdivision": {
@@ -6665,7 +6687,8 @@
                             "MY.lifeStageHatchedEgg",
                             "MY.lifeStageHatchedPupa",
                             "MY.lifeStageGall",
-                            "MY.lifeStageMarks"
+                            "MY.lifeStageMarks",
+                            "MY.lifeStageTriungulin"
                           ],
                           "enumNames": [
                             "",
@@ -6689,7 +6712,8 @@
                             "hatched egg",
                             "hatched pupa",
                             "gall",
-                            "marks (feeding marks etc.)"
+                            "marks (feeding marks etc.)",
+                            "triungulin"
                           ],
                           "range": "MY.lifeStages",
                           "subject": "MY.lifeStage",
@@ -7564,6 +7588,7 @@
                             "MY.samplingMethodBait",
                             "MY.samplingMethodNet",
                             "MY.samplingMethodSweeping",
+                            "MY.samplingMethodAquaticNet",
                             "MY.samplingMethodCarnet",
                             "MY.samplingMethodMistnet",
                             "MY.samplingMethodBoard",
@@ -7614,6 +7639,7 @@
                             "Bait (any kind, without trap)",
                             "Net (haavi)",
                             "Sweeping",
+                            "aquatic net",
                             "Car net",
                             "Mistnet",
                             "Board Shelter",
@@ -7692,7 +7718,8 @@
                             "MY.seedMorphologyRudimentary",
                             "MY.seedMorphologySpatulateFullyDeveloped",
                             "MY.seedMorphologySpatulateUnderdeveloped",
-                            "MY.seedMorphologyUndifferentiated"
+                            "MY.seedMorphologyUndifferentiated",
+                            "MY.seedMorphologyInvesting"
                           ],
                           "enumNames": [
                             "",
@@ -7707,7 +7734,8 @@
                             "rudimentary",
                             "spatulate fully developed",
                             "spatulate underdeveloped",
-                            "undifferentiated"
+                            "undifferentiated",
+                            "investing"
                           ],
                           "range": "MY.seedMorphologyEnum",
                           "subject": "MY.seedMorphology",
@@ -7912,7 +7940,7 @@
                           ],
                           "range": "MY.substrateEnum",
                           "subject": "MY.substrateClassification",
-                          "title": "Substrate classification"
+                          "title": "Type of substrate"
                         },
                         "substrateDecayStage": {
                           "type": "string",
@@ -8636,8 +8664,8 @@
                                 "type": "string",
                                 "range": "xsd:string",
                                 "subject": "MY.detDate",
-                                "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or  \"Y\"",
-                                "title": "Det date"
+                                "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or \"Y\"",
+                                "title": "Det. date"
                               },
                               "detMethod": {
                                 "type": "string",
@@ -8750,7 +8778,8 @@
                                   "MY.infraRankMorpha",
                                   "MY.infraRankUnknown",
                                   "MY.infraRankNothosubspecies",
-                                  "MY.infraRankCultivarGroup"
+                                  "MY.infraRankCultivarGroup",
+                                  "MY.infraRankFsp"
                                 ],
                                 "enumNames": [
                                   "",
@@ -8767,7 +8796,8 @@
                                   "morpha",
                                   "Unknown",
                                   "Nothosubspecies",
-                                  "Cultivar group"
+                                  "Cultivar group",
+                                  "f.sp."
                                 ],
                                 "range": "MY.infraRanks",
                                 "subject": "MY.infraRank",
@@ -9397,6 +9427,13 @@
           "subject": "MHL.useNamedPlaces",
           "description": "Makes the form use named places",
           "title": "Use named places"
+        },
+        "useSchemaCommentsAsHelpTexts": {
+          "type": "boolean",
+          "range": "xsd:boolean",
+          "subject": "MHL.useSchemaCommentsAsHelpTexts",
+          "description": "Uses schema comments as form help texts",
+          "title": "Use schema comments as help texts"
         },
         "viewerType": {
           "type": "string",

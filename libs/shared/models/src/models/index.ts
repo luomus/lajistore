@@ -31,6 +31,8 @@ import { CompleteList } from './CompleteList'
 export type { CompleteList }
 import { ContentContextDescription } from './ContentContextDescription'
 export type { ContentContextDescription }
+import { DataField } from './DataField'
+export type { DataField }
 import { Dataset } from './Dataset'
 export type { Dataset }
 import { DateRange } from './DateRange'
@@ -176,6 +178,7 @@ export type StoreObject = BibliographicResource
    | Collection
    | CompleteList
    | ContentContextDescription
+   | DataField
    | Dataset
    | DateRange
    | Device
@@ -334,6 +337,11 @@ export function isCompleteList(data: unknown): data is CompleteList {
 export function isContentContextDescription(data: unknown): data is ContentContextDescription {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MX.contentContextDescription'
+  );
+}
+export function isDataField(data: unknown): data is DataField {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'DDF.dataField'
   );
 }
 export function isDataset(data: unknown): data is Dataset {

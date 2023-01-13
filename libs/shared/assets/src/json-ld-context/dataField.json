@@ -31,29 +31,53 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
-    "skos:broader": {
-      "@id": "default:skos:broader",
-      "@type": "@id"
-    },
-    "skos:definition": {
-      "@id": "default:skos:definition",
+    "apiName": {
+      "@id": "default:DDF.apiName",
       "@type": "xsd:string"
     },
-    "skos:example": {
-      "@id": "default:skos:example",
+    "description": {
+      "@id": "default:DDF.description",
       "@type": "xsd:string"
     },
-    "skos:inScheme": {
-      "@id": "default:skos:inScheme",
-      "@type": "@id"
-    },
-    "skos:narrower": {
-      "@id": "default:skos:narrower",
-      "@type": "@id"
-    },
-    "skos:note": {
-      "@id": "default:skos:note",
+    "example": {
+      "@id": "default:DDF.example",
       "@type": "xsd:string"
+    },
+    "includeFull": {
+      "@id": "default:DDF.includeFull",
+      "@type": "xsd:boolean"
+    },
+    "includeSecurePortalUI": {
+      "@id": "default:DDF.includeSecurePortalUI",
+      "@type": "xsd:boolean"
+    },
+    "includeUI": {
+      "@id": "default:DDF.includeUI",
+      "@type": "xsd:boolean"
+    },
+    "name": {
+      "@id": "default:DDF.name",
+      "@type": "xsd:string"
+    },
+    "rPackageName": {
+      "@id": "default:DDF.rPackageName",
+      "@type": "xsd:string"
+    },
+    "shortName": {
+      "@id": "default:DDF.shortName",
+      "@type": "xsd:string"
+    },
+    "techicalNotes": {
+      "@id": "default:DDF.techicalNotes",
+      "@type": "xsd:string"
+    },
+    "technicalName": {
+      "@id": "default:DDF.technicalName",
+      "@type": "xsd:string"
+    },
+    "sortOrder": {
+      "@id": "default:sortOrder",
+      "@type": "xsd:integer"
     }
   }
 }

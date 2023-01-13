@@ -22,6 +22,7 @@ export interface TaxonCensus {
     | "MX.taxonSetSykeBumblebee"
     | "MVL.1201"
     | "MX.taxonSetSykeBumblebeeOther"
-    | "MX.taxonSetBirdAtlasCommon";
+    | "MX.taxonSetBirdAtlasCommon"
+    | "MX.taxonSetBiomonCompleteListOdonata";
   taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
 }

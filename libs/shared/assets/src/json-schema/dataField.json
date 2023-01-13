@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "subject": "DDF.dataField",
+  "additionalProperties": false,
+  "title": "Data field",
+  "description": "",
+  "properties": {
+    "@context": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "@context",
+      "title": "Context for the Data field"
+    },
+    "id": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "id",
+      "title": "Id for the Data field"
+    },
+    "@type": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "@type",
+      "title": "Type for the Data field"
+    },
+    "apiName": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "DDF.apiName",
+      "title": "Name in API /warehouse/unit endpoint"
+    },
+    "description": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "DDF.description",
+      "description": "Information for data users about the contents/source/etc of the field",
+      "title": "Description of the field"
+    },
+    "example": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "DDF.example",
+      "title": "Example values"
+    },
+    "includeFull": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "DDF.includeFull",
+      "title": "Include field to full downloads"
+    },
+    "includeSecurePortalUI": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "DDF.includeSecurePortalUI",
+      "title": "Include field to PAP UI"
+    },
+    "includeUI": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "DDF.includeUI",
+      "title": "Include field to Laji.fi UI"
+    },
+    "name": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "DDF.name",
+      "title": "Human readable name"
+    },
+    "rPackageName": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "DDF.rPackageName",
+      "title": "Name in R-package"
+    },
+    "shortName": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "DDF.shortName",
+      "description": "Short name for shapefiles",
+      "title": "Short name"
+    },
+    "techicalNotes": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "DDF.techicalNotes",
+      "description": "Internal notes for us developers",
+      "title": "Technical notes"
+    },
+    "technicalName": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "DDF.technicalName",
+      "description": "Short dwc or other term for the field (for example \"collectionID\"); usually the same as subjectname (without the \"DDF.\")",
+      "title": "Technical name"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "sortOrder",
+      "title": "sortOrder"
+    }
+  },
+  "required": [
+    "name",
+    "shortName",
+    "technicalName"
+  ]
+}

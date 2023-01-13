@@ -113,6 +113,12 @@
       "description": "Commonly used names. (Eg names used in recent literature.)",
       "title": "Other common names"
     },
+    "autoNonWild": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "MX.autoNonWild",
+      "title": "Automatically set occurrences as non-wild"
+    },
     "behaviour": {
       "type": "string",
       "range": "xsd:string",
@@ -503,7 +509,7 @@
           "Game mammal (Hunting law 1993/615; 2019/683)",
           "Unprotected animal (Hunting law 1993/615)",
           "Government Decree on Invasive Alien Species of National Concern (1725/2015)",
-          "Invasive alien species of Union concern (EU 2016/1141; 2017/1263; 2019/1262)",
+          "Invasive alien species of Union concern (EU 2016/1141; 2017/1263; 2019/1262; 2022/1203)",
           "Quarantine plant pest",
           "Quality plant pests",
           "Other plant pests",
@@ -727,7 +733,7 @@
         "",
         "Established",
         "Sporadic",
-        "Not yet in Finland",
+        "Does not occur in Finland",
         "Unknown",
         "Temporary"
       ],
@@ -769,7 +775,8 @@
           "MX.taxonSetSykeBumblebee",
           "MVL.1201",
           "MX.taxonSetSykeBumblebeeOther",
-          "MX.taxonSetBirdAtlasCommon"
+          "MX.taxonSetBirdAtlasCommon",
+          "MX.taxonSetBiomonCompleteListOdonata"
         ],
         "enumNames": [
           "",
@@ -783,7 +790,8 @@
           "SYKE's Bumblebee Census",
           "Spring monitoring species",
           "Syken kimalaistutkimus: Ylemmät taksonit",
-          "Bird atlas: common breeders"
+          "Bird atlas: common breeders",
+          "Biomon: Suomen sudenkorennot"
         ]
       },
       "minItems": 0,
@@ -1506,7 +1514,7 @@
           "TOVU -alien, old, formerly resident, now possibly extinct",
           "TOVX - alien, old, extinct",
           "1 - spreading in the wild; to a small degree of cultivated origin",
-          "2 - spreading in the wild;  to a notable degree of cultivated origin",
+          "2 - spreading in the wild; to a notable degree of cultivated origin",
           "3 - spreading in the wild; completely of cultivated origin",
           "C - only as cultivated",
           "H - at most a short-distance escape from cultivation (inside a garden or similar)",
@@ -1604,12 +1612,7 @@
       "title": "sortOrder"
     },
     "skos:exactMatch": {
-      "type": "array",
-      "uniqueItems": false,
-      "items": {
-        "type": "string"
-      },
-      "minItems": 0,
+      "type": "string",
       "range": "skos:Concept",
       "subject": "skos:exactMatch",
       "title": "Taxonid.org identifier"

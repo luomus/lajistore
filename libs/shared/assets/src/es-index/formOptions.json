@@ -2632,6 +2632,9 @@
       "useNamedPlaces": {
         "type": "boolean"
       },
+      "useSchemaCommentsAsHelpTexts": {
+        "type": "boolean"
+      },
       "viewerType": {
         "type": "keyword",
         "ignore_above": 200

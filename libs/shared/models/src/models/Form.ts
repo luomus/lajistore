@@ -586,7 +586,7 @@ export interface Form {
       cultivationInformation?: string;
       dataOrigin?: ("" | "MY.dataOriginPaperForm" | "MY.dataOriginWebForm" | "MY.dataOriginSpreadsheetFile")[];
       /**
-       * Where the data about this specimen is from, in addition to labels. Eg. Field notes, expedition journals.
+       * Where the data about this specimen or observation is from, in addition to labels. Eg. reference to a publication, field notes or an expedition.
        */
       dataSource?: string;
       /**
@@ -984,7 +984,8 @@ export interface Form {
             | "MX.taxonSetSykeBumblebee"
             | "MVL.1201"
             | "MX.taxonSetSykeBumblebeeOther"
-            | "MX.taxonSetBirdAtlasCommon";
+            | "MX.taxonSetBirdAtlasCommon"
+            | "MX.taxonSetBiomonCompleteListOdonata";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -1689,6 +1690,13 @@ export interface Form {
             | "MY.habitatEnumValue84"
             | "MY.habitatEnumValue85"
             | "MY.habitatEnumValue86"
+            | "MY.habitatEnumValue88"
+            | "MY.habitatEnumValue89"
+            | "MY.habitatEnumValue90"
+            | "MY.habitatEnumValue91"
+            | "MY.habitatEnumValue92"
+            | "MY.habitatEnumValue93"
+            | "MY.habitatEnumValue94"
           )[];
           habitatAttributes?: (
             | ""
@@ -1860,6 +1868,7 @@ export interface Form {
             | "MY.samplingMethodBait"
             | "MY.samplingMethodNet"
             | "MY.samplingMethodSweeping"
+            | "MY.samplingMethodAquaticNet"
             | "MY.samplingMethodCarnet"
             | "MY.samplingMethodMistnet"
             | "MY.samplingMethodBoard"
@@ -1914,7 +1923,8 @@ export interface Form {
               | "MX.taxonSetSykeBumblebee"
               | "MVL.1201"
               | "MX.taxonSetSykeBumblebeeOther"
-              | "MX.taxonSetBirdAtlasCommon";
+              | "MX.taxonSetBirdAtlasCommon"
+              | "MX.taxonSetBiomonCompleteListOdonata";
             taxonCensusType:
               | "MY.taxonCensusTypeCounted"
               | "MY.taxonCensusTypeEstimated"
@@ -1970,6 +1980,7 @@ export interface Form {
               | "MY.abundanceUnitIndirect"
               | "MY.abundanceUnitSquareDM"
               | "MY.abundanceUnitSquareM"
+              | "MY.abundanceUnitRelativeDensity"
               | "MY.abundanceUnitOccursDoesNotOccur";
             /**
              * Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)
@@ -2152,7 +2163,7 @@ export interface Form {
             informalNameString?: string;
             informalTaxonGroup?: string;
             /**
-             * Valitut muotoryhmät
+             * Valitut eliöryhmät
              */
             informalTaxonGroups?: string[];
             /**
@@ -2210,7 +2221,8 @@ export interface Form {
               | "MY.lifeStageHatchedEgg"
               | "MY.lifeStageHatchedPupa"
               | "MY.lifeStageGall"
-              | "MY.lifeStageMarks";
+              | "MY.lifeStageMarks"
+              | "MY.lifeStageTriungulin";
             /**
              * Free-text notes or addtional information about the life stage
              */
@@ -2507,6 +2519,7 @@ export interface Form {
               | "MY.samplingMethodBait"
               | "MY.samplingMethodNet"
               | "MY.samplingMethodSweeping"
+              | "MY.samplingMethodAquaticNet"
               | "MY.samplingMethodCarnet"
               | "MY.samplingMethodMistnet"
               | "MY.samplingMethodBoard"
@@ -2560,7 +2573,8 @@ export interface Form {
               | "MY.seedMorphologyRudimentary"
               | "MY.seedMorphologySpatulateFullyDeveloped"
               | "MY.seedMorphologySpatulateUnderdeveloped"
-              | "MY.seedMorphologyUndifferentiated";
+              | "MY.seedMorphologyUndifferentiated"
+              | "MY.seedMorphologyInvesting";
             /**
              * Sex of the individual(s)
              */
@@ -2814,7 +2828,7 @@ export interface Form {
                */
               det?: string;
               /**
-               * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
+               * Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
                */
               detDate?: string;
               detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
@@ -2871,7 +2885,8 @@ export interface Form {
                 | "MY.infraRankMorpha"
                 | "MY.infraRankUnknown"
                 | "MY.infraRankNothosubspecies"
-                | "MY.infraRankCultivarGroup";
+                | "MY.infraRankCultivarGroup"
+                | "MY.infraRankFsp";
               /**
                * Pathovars, serovars and other infrasubspecific subdivisions of microbes.
                */
@@ -3597,6 +3612,13 @@ export interface Form {
             | "MY.habitatEnumValue84"
             | "MY.habitatEnumValue85"
             | "MY.habitatEnumValue86"
+            | "MY.habitatEnumValue88"
+            | "MY.habitatEnumValue89"
+            | "MY.habitatEnumValue90"
+            | "MY.habitatEnumValue91"
+            | "MY.habitatEnumValue92"
+            | "MY.habitatEnumValue93"
+            | "MY.habitatEnumValue94"
           )[];
           habitatAttributes?: (
             | ""
@@ -3768,6 +3790,7 @@ export interface Form {
             | "MY.samplingMethodBait"
             | "MY.samplingMethodNet"
             | "MY.samplingMethodSweeping"
+            | "MY.samplingMethodAquaticNet"
             | "MY.samplingMethodCarnet"
             | "MY.samplingMethodMistnet"
             | "MY.samplingMethodBoard"
@@ -3822,7 +3845,8 @@ export interface Form {
               | "MX.taxonSetSykeBumblebee"
               | "MVL.1201"
               | "MX.taxonSetSykeBumblebeeOther"
-              | "MX.taxonSetBirdAtlasCommon";
+              | "MX.taxonSetBirdAtlasCommon"
+              | "MX.taxonSetBiomonCompleteListOdonata";
             taxonCensusType:
               | "MY.taxonCensusTypeCounted"
               | "MY.taxonCensusTypeEstimated"
@@ -3878,6 +3902,7 @@ export interface Form {
               | "MY.abundanceUnitIndirect"
               | "MY.abundanceUnitSquareDM"
               | "MY.abundanceUnitSquareM"
+              | "MY.abundanceUnitRelativeDensity"
               | "MY.abundanceUnitOccursDoesNotOccur";
             /**
              * Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)
@@ -4060,7 +4085,7 @@ export interface Form {
             informalNameString?: string;
             informalTaxonGroup?: string;
             /**
-             * Valitut muotoryhmät
+             * Valitut eliöryhmät
              */
             informalTaxonGroups?: string[];
             /**
@@ -4118,7 +4143,8 @@ export interface Form {
               | "MY.lifeStageHatchedEgg"
               | "MY.lifeStageHatchedPupa"
               | "MY.lifeStageGall"
-              | "MY.lifeStageMarks";
+              | "MY.lifeStageMarks"
+              | "MY.lifeStageTriungulin";
             /**
              * Free-text notes or addtional information about the life stage
              */
@@ -4415,6 +4441,7 @@ export interface Form {
               | "MY.samplingMethodBait"
               | "MY.samplingMethodNet"
               | "MY.samplingMethodSweeping"
+              | "MY.samplingMethodAquaticNet"
               | "MY.samplingMethodCarnet"
               | "MY.samplingMethodMistnet"
               | "MY.samplingMethodBoard"
@@ -4468,7 +4495,8 @@ export interface Form {
               | "MY.seedMorphologyRudimentary"
               | "MY.seedMorphologySpatulateFullyDeveloped"
               | "MY.seedMorphologySpatulateUnderdeveloped"
-              | "MY.seedMorphologyUndifferentiated";
+              | "MY.seedMorphologyUndifferentiated"
+              | "MY.seedMorphologyInvesting";
             /**
              * Sex of the individual(s)
              */
@@ -4722,7 +4750,7 @@ export interface Form {
                */
               det?: string;
               /**
-               * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
+               * Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
                */
               detDate?: string;
               detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
@@ -4779,7 +4807,8 @@ export interface Form {
                 | "MY.infraRankMorpha"
                 | "MY.infraRankUnknown"
                 | "MY.infraRankNothosubspecies"
-                | "MY.infraRankCultivarGroup";
+                | "MY.infraRankCultivarGroup"
+                | "MY.infraRankFsp";
               /**
                * Pathovars, serovars and other infrasubspecific subdivisions of microbes.
                */
@@ -5057,6 +5086,10 @@ export interface Form {
      * Makes the form use named places
      */
     useNamedPlaces?: boolean;
+    /**
+     * Uses schema comments as form help texts
+     */
+    useSchemaCommentsAsHelpTexts?: boolean;
     viewerType?: "" | "MHL.viewerTypeLineTransect" | "MHL.viewerTypeBirdPointCount";
     warnEditingOldDocument?: boolean;
     /**

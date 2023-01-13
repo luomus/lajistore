@@ -39,6 +39,7 @@ export interface Unit {
     | "MY.abundanceUnitIndirect"
     | "MY.abundanceUnitSquareDM"
     | "MY.abundanceUnitSquareM"
+    | "MY.abundanceUnitRelativeDensity"
     | "MY.abundanceUnitOccursDoesNotOccur";
   /**
    * Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)
@@ -221,7 +222,7 @@ export interface Unit {
   informalNameString?: string;
   informalTaxonGroup?: string;
   /**
-   * Valitut muotoryhmät
+   * Valitut eliöryhmät
    */
   informalTaxonGroups?: string[];
   /**
@@ -279,7 +280,8 @@ export interface Unit {
     | "MY.lifeStageHatchedEgg"
     | "MY.lifeStageHatchedPupa"
     | "MY.lifeStageGall"
-    | "MY.lifeStageMarks";
+    | "MY.lifeStageMarks"
+    | "MY.lifeStageTriungulin";
   /**
    * Free-text notes or addtional information about the life stage
    */
@@ -576,6 +578,7 @@ export interface Unit {
     | "MY.samplingMethodBait"
     | "MY.samplingMethodNet"
     | "MY.samplingMethodSweeping"
+    | "MY.samplingMethodAquaticNet"
     | "MY.samplingMethodCarnet"
     | "MY.samplingMethodMistnet"
     | "MY.samplingMethodBoard"
@@ -629,7 +632,8 @@ export interface Unit {
     | "MY.seedMorphologyRudimentary"
     | "MY.seedMorphologySpatulateFullyDeveloped"
     | "MY.seedMorphologySpatulateUnderdeveloped"
-    | "MY.seedMorphologyUndifferentiated";
+    | "MY.seedMorphologyUndifferentiated"
+    | "MY.seedMorphologyInvesting";
   /**
    * Sex of the individual(s)
    */
@@ -860,7 +864,7 @@ export interface Unit {
      */
     det?: string;
     /**
-     * Date or year when the identification was done, preferably in format "d.m.Y" or  "Y"
+     * Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
      */
     detDate?: string;
     detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
@@ -917,7 +921,8 @@ export interface Unit {
       | "MY.infraRankMorpha"
       | "MY.infraRankUnknown"
       | "MY.infraRankNothosubspecies"
-      | "MY.infraRankCultivarGroup";
+      | "MY.infraRankCultivarGroup"
+      | "MY.infraRankFsp";
     /**
      * Pathovars, serovars and other infrasubspecific subdivisions of microbes.
      */

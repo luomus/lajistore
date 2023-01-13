@@ -2,7 +2,7 @@
 FROM node:14
 
 RUN apt-get update \
- && apt-get install -y alien libaio1 curl libaio1 libaio-dev libssl1.0-dev musl-dev \
+ && apt-get install -y alien libaio1 curl libaio1 libaio-dev libssl-dev musl-dev \
  && wget https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.3-basiclite-19.3.0.0.0-1.x86_64.rpm \
  && alien -i --scripts oracle-instantclient*.rpm \
  && rm -f oracle-instantclient19.3*.rpm \

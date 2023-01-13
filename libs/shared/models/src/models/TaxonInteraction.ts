@@ -42,7 +42,8 @@ export interface TaxonInteraction {
     | "MY.lifeStageHatchedEgg"
     | "MY.lifeStageHatchedPupa"
     | "MY.lifeStageGall"
-    | "MY.lifeStageMarks";
+    | "MY.lifeStageMarks"
+    | "MY.lifeStageTriungulin";
   objectTaxon: string;
   originalPublication?: string[];
   subjectLifeStage?:
@@ -67,6 +68,7 @@ export interface TaxonInteraction {
     | "MY.lifeStageHatchedEgg"
     | "MY.lifeStageHatchedPupa"
     | "MY.lifeStageGall"
-    | "MY.lifeStageMarks";
+    | "MY.lifeStageMarks"
+    | "MY.lifeStageTriungulin";
   subjectTaxon: string;
 }

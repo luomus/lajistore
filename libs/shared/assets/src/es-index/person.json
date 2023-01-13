@@ -104,6 +104,10 @@
         "type": "keyword",
         "ignore_above": 200
       },
+      "organisationAdmin": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "preferredName": {
         "type": "keyword",
         "ignore_above": 200
@@ -123,6 +127,9 @@
       "roleKotka": {
         "type": "keyword",
         "ignore_above": 200
+      },
+      "securePortalUserRoleExpires": {
+        "type": "date"
       },
       "virtuLoginName": {
         "type": "keyword",

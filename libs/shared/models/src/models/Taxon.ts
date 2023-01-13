@@ -47,6 +47,7 @@ export interface Taxon {
     fi?: string[];
     sv?: string[];
   };
+  autoNonWild?: boolean;
   /**
    * Lajin elintavat
    */
@@ -245,6 +246,7 @@ export interface Taxon {
     | "MVL.1201"
     | "MX.taxonSetSykeBumblebeeOther"
     | "MX.taxonSetBirdAtlasCommon"
+    | "MX.taxonSetBiomonCompleteListOdonata"
   )[];
   /**
    * Eliön elinkierto
@@ -522,5 +524,5 @@ export interface Taxon {
     | "MX.secureLevelNoShow";
   createdAtTimestamp?: string;
   sortOrder?: number;
-  "skos:exactMatch"?: string[];
+  "skos:exactMatch"?: string;
 }

@@ -183,6 +183,18 @@
       "subject": "MA.organisation",
       "title": "Organisaatio"
     },
+    "organisationAdmin": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "MOS.organization",
+      "subject": "MA.organisationAdmin",
+      "description": "Lists all organisations that this user administrates (can grant access to PAP and add users to this organisation)",
+      "title": "Admin of organisation"
+    },
     "preferredName": {
       "type": "string",
       "range": "xsd:string",
@@ -216,7 +228,8 @@
           "MA.satelliteDataManagementUser",
           "MA.invasivePortalAdmin",
           "MA.luomusSpaceCalendarUser",
-          "MA.luomusSpaceOpeningTimesUser"
+          "MA.luomusSpaceOpeningTimesUser",
+          "MA.taxonIdEditor"
         ],
         "enumNames": [
           "",
@@ -229,7 +242,8 @@
           "Satelliitti.laji.fi user",
           "Invasive species portal administrator",
           "Luomus space reservation calendar",
-          "Luomuksen yleisökohteiden aukioloajat"
+          "Luomuksen yleisökohteiden aukioloajat",
+          "Taxonid.org Editoriin pääsyoikeus"
         ]
       },
       "minItems": 0,
@@ -278,6 +292,13 @@
       "range": "MA.roleKotkaEnum",
       "subject": "MA.roleKotka",
       "title": "User role in Kotka"
+    },
+    "securePortalUserRoleExpires": {
+      "type": "string",
+      "format": "date",
+      "range": "xsd:date",
+      "subject": "MA.securePortalUserRoleExpires",
+      "title": "Public Authorities Portal access expiry date"
     },
     "virtuLoginName": {
       "type": "string",

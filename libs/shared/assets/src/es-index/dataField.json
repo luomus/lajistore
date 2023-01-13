@@ -17,29 +17,49 @@
       "@type": {
         "type": "keyword"
       },
-      "skos:broader": {
+      "apiName": {
         "type": "keyword",
         "ignore_above": 200
       },
-      "skos:definition": {
+      "description": {
         "type": "keyword",
         "ignore_above": 200
       },
-      "skos:example": {
+      "example": {
         "type": "keyword",
         "ignore_above": 200
       },
-      "skos:inScheme": {
+      "includeFull": {
+        "type": "boolean"
+      },
+      "includeSecurePortalUI": {
+        "type": "boolean"
+      },
+      "includeUI": {
+        "type": "boolean"
+      },
+      "name": {
         "type": "keyword",
         "ignore_above": 200
       },
-      "skos:narrower": {
+      "rPackageName": {
         "type": "keyword",
         "ignore_above": 200
       },
-      "skos:note": {
+      "shortName": {
         "type": "keyword",
         "ignore_above": 200
+      },
+      "techicalNotes": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "technicalName": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "sortOrder": {
+        "type": "integer"
       },
       "_meta": {
         "properties": {

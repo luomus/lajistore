@@ -59,6 +59,10 @@
       "@id": "default:MX.alternativeVernacularName",
       "@container": "@language"
     },
+    "autoNonWild": {
+      "@id": "default:MX.autoNonWild",
+      "@type": "xsd:boolean"
+    },
     "behaviour": {
       "@id": "default:MX.behaviour",
       "@type": "xsd:string"
