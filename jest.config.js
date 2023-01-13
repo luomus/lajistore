@@ -1,10 +1,6 @@
 module.exports = {
   projects: [
-    '<rootDir>/apps/kotka',
-    '<rootDir>/libs/kotka/ui',
-    '<rootDir>/libs/kotka/form',
     '<rootDir>/apps/store-api/core-client',
-    '<rootDir>/apps/kotka-api',
     '<rootDir>/apps/store-api/core-api',
     '<rootDir>/apps/store-api/core',
     '<rootDir>/libs/laji/client',
@@ -12,7 +8,6 @@ module.exports = {
     '<rootDir>/apps/store-api/core-worker',
     '<rootDir>/apps/store-api/generate',
     '<rootDir>/apps/store-api/api',
-    '<rootDir>/libs/kotka/ui/main-content',
     '<rootDir>/libs/shared/models',
     '<rootDir>/libs/shared/assets',
     '<rootDir>/apps/store-api/interface',

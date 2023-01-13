@@ -1,9 +1,6 @@
 # Luomus
 
-This project is Luomus monorepo for managing projects used by Luomus.
-Currently, these are:
-* Kotka collection management system v3
-* Store storage api v2
+This project is Luomus monorepo for Laji Store api and related libraries.
 
 This workspace uses [Nx](https://nx.dev) to manage the workspace
 and [Docker](https://www.docker.com/) to run applications.
@@ -37,7 +34,7 @@ Docker version 20.10.6, build 370c289
 Use node version higher than `12.17`
 Run `npm ci` to install all dependencies (node_module is mounted for development)
 Run `docker-compose up` for a dev server.
-Navigate to http://localhost:4200/ for Kotka and to http://localhost:3000/ for Store.
+Navigate to http://localhost:3000/.
 The app will automatically reload if you change any of the source files.
 
 ## Shared resources
@@ -108,7 +105,3 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 Visit the [FinBIF foorums](https://foorumi.laji.fi/) to connect with other users and us or
 contact us using the contact information in the [FinBIF web site](https://species.fi).
 
-## ☁ KotkaCMS Cloud
-
-If you would like to give Kotka a spin you can get in touch with us, 
-and we'll set up a private demo for you to give KotkaCMS try.

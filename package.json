@@ -6,7 +6,6 @@
     "ng": "nx",
     "nx:postinstall": "node ./decorate-angular-cli.js && ngcc",
     "nx": "nx",
-    "start:kotka": "ng serve",
     "start:store-api": "nx serve store-api",
     "start:store-worker": "nx serve store-worker",
     "build": "ng build",
