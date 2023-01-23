@@ -183,6 +183,10 @@ export interface Form {
       [k: string]: unknown | undefined;
     };
   }[];
+  /**
+   * Use fields, uiSchema and translations from the form
+   */
+  fieldsFormID?: string;
   language?: "" | "en" | "fi" | "sv";
   logo?: string;
   name?: string;

@@ -26,9 +26,9 @@ export interface Dataset {
    */
   datasetType?: "" | "GX.datasetTypeProject";
   /**
-   * Description of the dataset, so that other people understand what it is about.
+   * Description of the tag, so that other people understand what it is about.
    */
-  description?: {
+  description: {
     en?: string;
     fi?: string;
     sv?: string;

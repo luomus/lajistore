@@ -353,6 +353,10 @@
           }
         }
       },
+      "fieldsFormID": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "language": {
         "type": "keyword",
         "ignore_above": 200

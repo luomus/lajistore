@@ -55,6 +55,10 @@
       "@id": "default:MHL.fields",
       "@container": "@set"
     },
+    "fieldsFormID": {
+      "@id": "default:MHL.fieldsFormID",
+      "@type": "xsd:string"
+    },
     "language": {
       "@id": "default:MHL.language",
       "@type": "@id"

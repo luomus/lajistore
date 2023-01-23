@@ -9937,10 +9937,10 @@
             }
           }
         ],
-        "description": "Return list of Dataset objects.",
+        "description": "Return list of Tag objects.",
         "responses": {
           "200": {
-            "description": "A list of  Dataset.",
+            "description": "A list of  Tag.",
             "content": {
               "application/json": {
                 "schema": {
@@ -10008,10 +10008,10 @@
             }
           }
         },
-        "description": "Store Dataset object(s)",
+        "description": "Store Tag object(s)",
         "responses": {
           "201": {
-            "description": "Stored Dataset object(s)",
+            "description": "Stored Tag object(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -10070,10 +10070,10 @@
             }
           }
         },
-        "description": "Patch dataset (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching dataset.",
+        "description": "Patch tag (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching tag.",
         "responses": {
           "200": {
-            "description": "A list of  Dataset.",
+            "description": "A list of  Tag.",
             "content": {
               "application/json": {
                 "example": {
@@ -10166,10 +10166,10 @@
             }
           }
         },
-        "description": "Return list of Dataset objects.",
+        "description": "Return list of Tag objects.",
         "responses": {
           "200": {
-            "description": "A list of  Dataset.",
+            "description": "A list of  Tag.",
             "content": {
               "application/json": {
                 "schema": {
@@ -10237,17 +10237,17 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Dataset",
+            "description": "Id for the Tag",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Return a Dataset.",
+        "description": "Return a Tag.",
         "responses": {
           "200": {
-            "description": "a Dataset.",
+            "description": "a Tag.",
             "content": {
               "application/json": {
                 "schema": {
@@ -10272,7 +10272,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Dataset",
+            "description": "Id for the Tag",
             "required": true,
             "schema": {
               "type": "string"
@@ -10288,10 +10288,10 @@
             }
           }
         },
-        "description": "Store Dataset",
+        "description": "Store Tag",
         "responses": {
           "200": {
-            "description": "Stored Dataset",
+            "description": "Stored Tag",
             "content": {
               "application/json": {
                 "schema": {
@@ -10316,14 +10316,14 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Dataset",
+            "description": "Id for the Tag",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Delete Dataset",
+        "description": "Delete Tag",
         "responses": {
           "200": {
             "description": "Deletion succeeded",
@@ -10355,7 +10355,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Dataset",
+            "description": "Id for the Tag",
             "required": true,
             "schema": {
               "type": "string"
@@ -10374,10 +10374,10 @@
         "tags": [
           "dataset"
         ],
-        "description": "Return a Dataset.",
+        "description": "Return a Tag.",
         "responses": {
           "200": {
-            "description": "a Dataset.",
+            "description": "a Tag.",
             "content": {
               "application/json": {
                 "schema": {
@@ -10423,7 +10423,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Dataset",
+            "description": "Id for the Tag",
             "required": true,
             "schema": {
               "type": "string"
@@ -10432,17 +10432,17 @@
           {
             "name": "number",
             "in": "path",
-            "description": "Version number for the Dataset",
+            "description": "Version number for the Tag",
             "required": true,
             "schema": {
               "type": "number"
             }
           }
         ],
-        "description": "Return a Dataset.",
+        "description": "Return a Tag.",
         "responses": {
           "200": {
-            "description": "a Dataset.",
+            "description": "a Tag.",
             "content": {
               "application/json": {
                 "schema": {
@@ -48639,15 +48639,15 @@
         "properties": {
           "@context": {
             "type": "string",
-            "title": "Context for the Dataset"
+            "title": "Context for the Tag"
           },
           "id": {
             "type": "string",
-            "title": "Id for the Dataset"
+            "title": "Id for the Tag"
           },
           "@type": {
             "type": "string",
-            "title": "Type for the Dataset"
+            "title": "Type for the Tag"
           },
           "benefitsDerivedAndShared": {
             "type": "string",
@@ -48720,6 +48720,7 @@
         },
         "required": [
           "datasetName",
+          "description",
           "personsResponsible"
         ]
       },
@@ -49872,6 +49873,11 @@
             "items": {
               "$ref": "#/components/schemas/field"
             }
+          },
+          "fieldsFormID": {
+            "type": "string",
+            "description": "Use fields, uiSchema and translations from the form",
+            "title": "Fields form ID"
           },
           "language": {
             "type": "string",
@@ -60017,7 +60023,7 @@
     },
     {
       "name": "dataset",
-      "description": "Dataset"
+      "description": "Tag"
     },
     {
       "name": "dateRange",

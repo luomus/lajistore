@@ -3,26 +3,26 @@
   "type": "object",
   "subject": "GX.dataset",
   "additionalProperties": false,
-  "title": "Dataset",
+  "title": "Tag",
   "description": "",
   "properties": {
     "@context": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@context",
-      "title": "Context for the Dataset"
+      "title": "Context for the Tag"
     },
     "id": {
       "type": "string",
       "range": "xsd:string",
       "subject": "id",
-      "title": "Id for the Dataset"
+      "title": "Id for the Tag"
     },
     "@type": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@type",
-      "title": "Type for the Dataset"
+      "title": "Type for the Tag"
     },
     "benefitsDerivedAndShared": {
       "type": "string",
@@ -80,9 +80,10 @@
           "type": "string"
         }
       },
+      "minProperties": 1,
       "range": "xsd:string",
       "subject": "GX.description",
-      "description": "Description of the dataset, so that other people understand what it is about.",
+      "description": "Description of the tag, so that other people understand what it is about.",
       "title": "Description"
     },
     "personsResponsible": {
@@ -156,6 +157,7 @@
   },
   "required": [
     "datasetName",
+    "description",
     "personsResponsible"
   ]
 }

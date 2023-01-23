@@ -528,9 +528,9 @@
                   ],
                   "enumNames": [
                     "",
-                    "Täydellinen lajilista sisältäen pesimävarmuusindeksit kaikille havainnoille (A; suositeltava pesimäkaudella)",
-                    "Täydellinen lajilista, voi sisältää pesimävarmuusindeksejä (B)",
-                    "Epätäydellinen lajilista (C; hajahavainnoille)"
+                    "Complete lists including nesting indices for all observations (A; recommended during breeding season)",
+                    "Complete list, may include nesting indices (B)",
+                    "Incomplete list (C; for sporadic observations)"
                   ],
                   "range": "MY.completeListTypeEnum",
                   "subject": "MY.completeListType",
@@ -4425,7 +4425,7 @@
                   "Bait (any kind, without trap)",
                   "Net (haavi)",
                   "Sweeping",
-                  "aquatic net",
+                  "Aquatic net",
                   "Car net",
                   "Mistnet",
                   "Board Shelter",
@@ -6337,7 +6337,7 @@
                         "Bait (any kind, without trap)",
                         "Net (haavi)",
                         "Sweeping",
-                        "aquatic net",
+                        "Aquatic net",
                         "Car net",
                         "Mistnet",
                         "Board Shelter",
@@ -8636,9 +8636,9 @@
                   ],
                   "enumNames": [
                     "",
-                    "Täydellinen lajilista sisältäen pesimävarmuusindeksit kaikille havainnoille (A; suositeltava pesimäkaudella)",
-                    "Täydellinen lajilista, voi sisältää pesimävarmuusindeksejä (B)",
-                    "Epätäydellinen lajilista (C; hajahavainnoille)"
+                    "Complete lists including nesting indices for all observations (A; recommended during breeding season)",
+                    "Complete list, may include nesting indices (B)",
+                    "Incomplete list (C; for sporadic observations)"
                   ],
                   "range": "MY.completeListTypeEnum",
                   "subject": "MY.completeListType",
@@ -12533,7 +12533,7 @@
                   "Bait (any kind, without trap)",
                   "Net (haavi)",
                   "Sweeping",
-                  "aquatic net",
+                  "Aquatic net",
                   "Car net",
                   "Mistnet",
                   "Board Shelter",
@@ -14445,7 +14445,7 @@
                         "Bait (any kind, without trap)",
                         "Net (haavi)",
                         "Sweeping",
-                        "aquatic net",
+                        "Aquatic net",
                         "Car net",
                         "Mistnet",
                         "Board Shelter",
