@@ -103,6 +103,10 @@
       "@id": "default:MY.waterbirdHabitat",
       "@type": "@id"
     },
+    "ykjSquareNumber": {
+      "@id": "default:MY.ykjSquareNumber",
+      "@type": "xsd:string"
+    },
     "ACAFLAonAlder": {
       "@id": "default:WBC.ACAFLAonAlder",
       "@type": "xsd:nonNegativeInteger"

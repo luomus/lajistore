@@ -1506,6 +1506,12 @@
                   "subject": "MY.waterbirdHabitat",
                   "title": "Habitat"
                 },
+                "ykjSquareNumber": {
+                  "type": "string",
+                  "range": "xsd:string",
+                  "subject": "MY.ykjSquareNumber",
+                  "title": "Atlasruutu"
+                },
                 "ACAFLAonAlder": {
                   "type": "integer",
                   "minimum": 0,
@@ -3569,6 +3575,12 @@
                     "range": "MY.waterbirdHabitatEnum",
                     "subject": "MY.waterbirdHabitat",
                     "title": "Habitat"
+                  },
+                  "ykjSquareNumber": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MY.ykjSquareNumber",
+                    "title": "Atlasruutu"
                   },
                   "ACAFLAonAlder": {
                     "type": "integer",

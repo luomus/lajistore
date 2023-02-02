@@ -80,7 +80,6 @@
           "type": "string"
         }
       },
-      "minProperties": 1,
       "range": "xsd:string",
       "subject": "GX.description",
       "description": "Description of the tag, so that other people understand what it is about.",
@@ -157,7 +156,6 @@
   },
   "required": [
     "datasetName",
-    "description",
     "personsResponsible"
   ]
 }

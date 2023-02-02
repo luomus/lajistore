@@ -135,6 +135,10 @@
             "type": "keyword",
             "ignore_above": 200
           },
+          "ykjSquareNumber": {
+            "type": "keyword",
+            "ignore_above": 200
+          },
           "ACAFLAonAlder": {
             "type": "integer"
           },

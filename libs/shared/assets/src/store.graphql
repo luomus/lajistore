@@ -4839,7 +4839,7 @@ type Dataset2 {
   datasetType: DatasetType
   dateCreated: String
   dateEdited: String
-  description: MultiLang!
+  description: MultiLang
   editor: String
   id: String
 
@@ -5276,6 +5276,7 @@ type GatheringFact {
   wayOfTravel: WayOfTravel
   wayOfTravelNotes: String
   wind: Wind
+  ykjSquareNumber: String
 }
 
 enum AbundanceBOMGAR {
@@ -21215,7 +21216,7 @@ input Dataset2Input {
   datasetType: DatasetType
   dateCreated: String
   dateEdited: String
-  description: MultiLangInput!
+  description: MultiLangInput
   editor: String
   id: String
 
@@ -21589,6 +21590,7 @@ input GatheringFactInput {
   wayOfTravel: WayOfTravel
   wayOfTravelNotes: String
   wind: Wind
+  ykjSquareNumber: String
 }
 
 input TaxonCensus2Input {

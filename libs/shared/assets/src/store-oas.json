@@ -48720,7 +48720,6 @@
         },
         "required": [
           "datasetName",
-          "description",
           "personsResponsible"
         ]
       },
@@ -51943,6 +51942,10 @@
               "MY.waterbirdHabitatEnum10"
             ],
             "title": "Habitat"
+          },
+          "ykjSquareNumber": {
+            "type": "string",
+            "title": "Atlasruutu"
           },
           "ACAFLAonAlder": {
             "type": "integer",

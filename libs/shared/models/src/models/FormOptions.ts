@@ -596,6 +596,7 @@ export interface FormOptions {
           | "MY.waterbirdHabitatEnum8"
           | "MY.waterbirdHabitatEnum9"
           | "MY.waterbirdHabitatEnum10";
+        ykjSquareNumber?: string;
         ACAFLAonAlder?: number;
         ACAFLAonBirch?: number;
         ACAFLAonGround?: number;
@@ -1220,6 +1221,7 @@ export interface FormOptions {
             | "MY.waterbirdHabitatEnum8"
             | "MY.waterbirdHabitatEnum9"
             | "MY.waterbirdHabitatEnum10";
+          ykjSquareNumber?: string;
           ACAFLAonAlder?: number;
           ACAFLAonBirch?: number;
           ACAFLAonGround?: number;
@@ -3133,6 +3135,7 @@ export interface FormOptions {
             | "MY.waterbirdHabitatEnum8"
             | "MY.waterbirdHabitatEnum9"
             | "MY.waterbirdHabitatEnum10";
+          ykjSquareNumber?: string;
           ACAFLAonAlder?: number;
           ACAFLAonBirch?: number;
           ACAFLAonGround?: number;
