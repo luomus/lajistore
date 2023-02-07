@@ -34,7 +34,7 @@ RUN set -xe && \
     curl -Lo rabbitmq-server.tar.xz.asc https://github.com/rabbitmq/rabbitmq-server/releases/download/v${RABBITMQ_VERSION}/rabbitmq-server-generic-unix-${RABBITMQ_VERSION}.tar.xz.asc && \
     export GNUPGHOME="$(mktemp -d)" && \
     env | grep GNUPG && \
-    gpg --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys "$GPG_KEY" && \
+    gpg --keyserver hkps://keys.openpgp.org --recv-keys "$GPG_KEY" && \
     gpg --batch --verify rabbitmq-server.tar.xz.asc rabbitmq-server.tar.xz && \
     rm -rf "$GNUPGHOME" && \
     mkdir -p "$RABBITMQ_HOME" && \
@@ -58,7 +58,9 @@ RUN set -xe && \
     rm -rf /var/cache/yum
 
 COPY docker-entrypoint.sh /usr/local/bin/
+RUN chmod 777 /usr/local/bin/docker-entrypoint.sh
 USER 1001
+
 ENV PATH=$RABBITMQ_HOME/sbin:$PATH
 ENTRYPOINT ["docker-entrypoint.sh"]
 
