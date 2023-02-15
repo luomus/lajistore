@@ -55,10 +55,12 @@
       "type": "string",
       "enum": [
         "",
+        "GX.datasetTypeBasic",
         "GX.datasetTypeProject"
       ],
       "enumNames": [
         "",
+        "Basic",
         "Project"
       ],
       "range": "GX.datasetTypeEnum",

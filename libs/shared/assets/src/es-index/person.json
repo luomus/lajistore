@@ -88,6 +88,10 @@
         "type": "keyword",
         "ignore_above": 200
       },
+      "kastikkaUserName": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "lajiAuthLoginName": {
         "type": "keyword",
         "ignore_above": 200

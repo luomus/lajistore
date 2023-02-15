@@ -520,7 +520,7 @@
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.ykjSquareNumber",
-          "title": "Atlasruutu"
+          "title": "Atlas grid"
         },
         "ACAFLAonAlder": {
           "type": "integer",

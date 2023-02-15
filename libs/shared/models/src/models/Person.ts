@@ -30,6 +30,7 @@ export interface Person {
   inaturalistLoginName?: string;
   inheritedName?: string;
   insectDatabaseLoginName?: string[];
+  kastikkaUserName?: string[];
   lajiAuthLoginName?: string;
   lintuvaaraLoginName?: string[];
   omariistaLoginName?: string;

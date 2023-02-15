@@ -103,6 +103,10 @@
       "@id": "default:MA.insectDatabaseLoginName",
       "@type": "xsd:string"
     },
+    "kastikkaUserName": {
+      "@id": "default:MA.kastikkaUserName",
+      "@type": "xsd:string"
+    },
     "lajiAuthLoginName": {
       "@id": "default:MA.lajiAuthLoginName",
       "@type": "xsd:string"

@@ -62,18 +62,18 @@ export interface Notification {
       genusQualifier?: string;
       identificationBasis?: (
         | ""
-        | "MY.identificationBasisSeen"
-        | "MY.identificationBasisHeard"
-        | "MY.identificationBasisHandled"
-        | "MY.identificationBasisMedia"
-        | "MY.identificationBasisFreshSpecimen"
-        | "MY.identificationBasisPreservedSpecimen"
-        | "MY.identificationBasisMicroscope"
-        | "MY.identificationBasisSpores"
-        | "MY.identificationBasisChemical"
+        | "MY.identificationBasisDNA"
         | "MY.identificationBasisGenitals"
         | "MY.identificationBasisGenitalPreparate"
-        | "MY.identificationBasisDNA"
+        | "MY.identificationBasisSpores"
+        | "MY.identificationBasisHandled"
+        | "MY.identificationBasisChemical"
+        | "MY.identificationBasisHeard"
+        | "MY.identificationBasisMicroscope"
+        | "MY.identificationBasisSeen"
+        | "MY.identificationBasisPreservedSpecimen"
+        | "MY.identificationBasisFreshSpecimen"
+        | "MY.identificationBasisMedia"
       )[];
       /**
        * Additional information on the identification, basis or such

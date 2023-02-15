@@ -149,6 +149,17 @@
       "subject": "MA.insectDatabaseLoginName",
       "title": "insectDatabaseLoginName"
     },
+    "kastikkaUserName": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "MA.kastikkaUserName",
+      "title": "Kastikka username"
+    },
     "lajiAuthLoginName": {
       "type": "string",
       "range": "xsd:string",
