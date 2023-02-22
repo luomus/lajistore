@@ -167,9 +167,7 @@
         "MY.plantLifeStageRipeningFruit",
         "MY.plantLifeStageRipeFruit",
         "MY.plantLifeStageDeadSprout",
-        "MY.plantLifeStageSubterranean",
-        "MY.plantLifeStageLivingPlant",
-        "MY.plantLifeStageDeadPlant"
+        "MY.plantLifeStageSubterranean"
       ],
       "enumNames": [
         "",
@@ -183,9 +181,7 @@
         "ripening seed / fruit / spore",
         "ripe seed / fruit / spore",
         "dead sprout",
-        "subterranean",
-        "living plant",
-        "dead plant"
+        "subterranean"
       ],
       "range": "MY.plantLifeStageEnum",
       "subject": "PUU.lifeStage",

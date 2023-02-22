@@ -37,7 +37,7 @@ export interface Organization {
    */
   country?: string;
   /**
-   * Datasets this organisation belongs to.
+   * Tags this organisation has
    */
   datasetID?: string[];
   /**

@@ -48660,19 +48660,18 @@
           "datasetType": {
             "type": "string",
             "enum": [
-              "",
               "GX.datasetTypeBasic",
               "GX.datasetTypeProject"
             ],
-            "description": "Type of the dataset. Usually basic, project type is generally used only to give information on project Nagoya compliance.",
-            "title": "Dataset type"
+            "description": "Type of the tag. Usually basic, project type is generally used only to give information on project Nagoya compliance.",
+            "title": "Tag type"
           },
           "description": {
             "$ref": "#/components/schemas/multiLang"
           },
           "personsResponsible": {
             "type": "string",
-            "description": "Person(s) responsible for the dataset.",
+            "description": "Person(s) responsible for the tag.",
             "title": "Person(s) responsible"
           },
           "researchCollaborator": {
@@ -48721,6 +48720,8 @@
         },
         "required": [
           "datasetName",
+          "datasetType",
+          "description",
           "personsResponsible"
         ]
       },
@@ -49006,8 +49007,8 @@
               "type": "string"
             },
             "minItems": 0,
-            "description": "The dataset(s) this specimen belongs to",
-            "title": "Datasets"
+            "description": "The tags this specimen has",
+            "title": "Tags"
           },
           "datatype": {
             "type": "string",
@@ -49108,8 +49109,8 @@
           },
           "legID": {
             "type": "string",
-            "description": "Collector's identifier (field identifier, keruunumero) for the specimen",
-            "title": "Collector's ID"
+            "description": "Collecting number (field identifier, keruunumero) for the specimen",
+            "title": "Collecting number"
           },
           "locked": {
             "type": "boolean",
@@ -49679,9 +49680,7 @@
               "MY.plantLifeStageRipeningFruit",
               "MY.plantLifeStageRipeFruit",
               "MY.plantLifeStageDeadSprout",
-              "MY.plantLifeStageSubterranean",
-              "MY.plantLifeStageLivingPlant",
-              "MY.plantLifeStageDeadPlant"
+              "MY.plantLifeStageSubterranean"
             ],
             "title": "Life stage"
           },
@@ -54706,8 +54705,8 @@
               "type": "string"
             },
             "minItems": 0,
-            "description": "Datasets this organisation belongs to.",
-            "title": "Datasets"
+            "description": "Tags this organisation has",
+            "title": "Tags"
           },
           "dateOrdersDue": {
             "type": "string",
@@ -57108,8 +57107,6 @@
               "MY.lifeStageFertile",
               "MY.lifeStageSterile",
               "MY.lifeStageTadpole",
-              "MY.lifeStageDead",
-              "MY.lifeStageAlive",
               "MY.lifeStageEmbryo",
               "MY.lifeStageSubadult",
               "MY.lifeStageMature",
@@ -57150,8 +57147,6 @@
               "MY.lifeStageFertile",
               "MY.lifeStageSterile",
               "MY.lifeStageTadpole",
-              "MY.lifeStageDead",
-              "MY.lifeStageAlive",
               "MY.lifeStageEmbryo",
               "MY.lifeStageSubadult",
               "MY.lifeStageMature",
@@ -58321,8 +58316,6 @@
               "MY.lifeStageFertile",
               "MY.lifeStageSterile",
               "MY.lifeStageTadpole",
-              "MY.lifeStageDead",
-              "MY.lifeStageAlive",
               "MY.lifeStageEmbryo",
               "MY.lifeStageSubadult",
               "MY.lifeStageMature",
@@ -58472,9 +58465,7 @@
               "MY.plantLifeStageRipeningFruit",
               "MY.plantLifeStageRipeFruit",
               "MY.plantLifeStageDeadSprout",
-              "MY.plantLifeStageSubterranean",
-              "MY.plantLifeStageLivingPlant",
-              "MY.plantLifeStageDeadPlant"
+              "MY.plantLifeStageSubterranean"
             ],
             "title": "Plant life stage"
           },
@@ -59129,6 +59120,7 @@
             "type": "string",
             "enum": [
               "",
+              "MY.lolifeDroppingsCount0",
               "MY.lolifeDroppingsCount1",
               "MY.lolifeDroppingsCount2",
               "MY.lolifeDroppingsCount3"

@@ -219,8 +219,8 @@
       "minItems": 0,
       "range": "GX.dataset",
       "subject": "MY.datasetID",
-      "description": "The dataset(s) this specimen belongs to",
-      "title": "Datasets"
+      "description": "The tags this specimen has",
+      "title": "Tags"
     },
     "datatype": {
       "type": "string",
@@ -1843,8 +1843,8 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.legID",
-      "description": "Collector's identifier (field identifier, keruunumero) for the specimen",
-      "title": "Collector's ID"
+      "description": "Collecting number (field identifier, keruunumero) for the specimen",
+      "title": "Collecting number"
     },
     "locked": {
       "type": "boolean",
@@ -5363,8 +5363,6 @@
                     "MY.lifeStageFertile",
                     "MY.lifeStageSterile",
                     "MY.lifeStageTadpole",
-                    "MY.lifeStageDead",
-                    "MY.lifeStageAlive",
                     "MY.lifeStageEmbryo",
                     "MY.lifeStageSubadult",
                     "MY.lifeStageMature",
@@ -5388,8 +5386,6 @@
                     "fertile",
                     "sterile",
                     "tadpole",
-                    "dead",
-                    "alive",
                     "embryo or fetus",
                     "subadult",
                     "mature",
@@ -5880,9 +5876,7 @@
                     "MY.plantLifeStageRipeningFruit",
                     "MY.plantLifeStageRipeFruit",
                     "MY.plantLifeStageDeadSprout",
-                    "MY.plantLifeStageSubterranean",
-                    "MY.plantLifeStageLivingPlant",
-                    "MY.plantLifeStageDeadPlant"
+                    "MY.plantLifeStageSubterranean"
                   ],
                   "enumNames": [
                     "",
@@ -5896,9 +5890,7 @@
                     "ripening seed / fruit / spore",
                     "ripe seed / fruit / spore",
                     "dead sprout",
-                    "subterranean",
-                    "living plant",
-                    "dead plant"
+                    "subterranean"
                   ],
                   "range": "MY.plantLifeStageEnum",
                   "subject": "MY.plantLifeStage",
@@ -6893,12 +6885,14 @@
                       "type": "string",
                       "enum": [
                         "",
+                        "MY.lolifeDroppingsCount0",
                         "MY.lolifeDroppingsCount1",
                         "MY.lolifeDroppingsCount2",
                         "MY.lolifeDroppingsCount3"
                       ],
                       "enumNames": [
                         "",
+                        "Ei papanoita",
                         "Muutama",
                         "Kymmeniä",
                         "Satoja"

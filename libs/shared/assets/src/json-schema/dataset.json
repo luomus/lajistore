@@ -48,25 +48,23 @@
       "minProperties": 1,
       "range": "xsd:string",
       "subject": "GX.datasetName",
-      "description": "Name of the dataset. This must be unique.",
+      "description": "Name of the tag. This must be unique.",
       "title": "Name"
     },
     "datasetType": {
       "type": "string",
       "enum": [
-        "",
         "GX.datasetTypeBasic",
         "GX.datasetTypeProject"
       ],
       "enumNames": [
-        "",
         "Basic",
         "Project"
       ],
       "range": "GX.datasetTypeEnum",
       "subject": "GX.datasetType",
-      "description": "Type of the dataset. Usually basic, project type is generally used only to give information on project Nagoya compliance.",
-      "title": "Dataset type"
+      "description": "Type of the tag. Usually basic, project type is generally used only to give information on project Nagoya compliance.",
+      "title": "Tag type"
     },
     "description": {
       "type": "object",
@@ -82,6 +80,7 @@
           "type": "string"
         }
       },
+      "minProperties": 1,
       "range": "xsd:string",
       "subject": "GX.description",
       "description": "Description of the tag, so that other people understand what it is about.",
@@ -91,7 +90,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "GX.personsResponsible",
-      "description": "Person(s) responsible for the dataset.",
+      "description": "Person(s) responsible for the tag.",
       "title": "Person(s) responsible"
     },
     "researchCollaborator": {
@@ -158,6 +157,8 @@
   },
   "required": [
     "datasetName",
+    "datasetType",
+    "description",
     "personsResponsible"
   ]
 }

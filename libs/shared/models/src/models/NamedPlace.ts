@@ -93,7 +93,7 @@ export interface NamedPlace {
      */
     dataSource?: string;
     /**
-     * The dataset(s) this specimen belongs to
+     * The tags this specimen has
      */
     datasetID?: string[];
     datatype?: string;
@@ -514,7 +514,7 @@ export interface NamedPlace {
      */
     language?: string;
     /**
-     * Collector's identifier (field identifier, keruunumero) for the specimen
+     * Collecting number (field identifier, keruunumero) for the specimen
      */
     legID?: string;
     locked?: boolean;
@@ -1714,8 +1714,6 @@ export interface NamedPlace {
             | "MY.lifeStageFertile"
             | "MY.lifeStageSterile"
             | "MY.lifeStageTadpole"
-            | "MY.lifeStageDead"
-            | "MY.lifeStageAlive"
             | "MY.lifeStageEmbryo"
             | "MY.lifeStageSubadult"
             | "MY.lifeStageMature"
@@ -1832,9 +1830,7 @@ export interface NamedPlace {
             | "MY.plantLifeStageRipeningFruit"
             | "MY.plantLifeStageRipeFruit"
             | "MY.plantLifeStageDeadSprout"
-            | "MY.plantLifeStageSubterranean"
-            | "MY.plantLifeStageLivingPlant"
-            | "MY.plantLifeStageDeadPlant";
+            | "MY.plantLifeStageSubterranean";
           /**
            * Status code for the plant (wild, alien etc.)
            */
@@ -2218,6 +2214,7 @@ export interface NamedPlace {
               | "MY.lineTransectRouteFieldTypeOuter";
             lolifeDroppingsCount?:
               | ""
+              | "MY.lolifeDroppingsCount0"
               | "MY.lolifeDroppingsCount1"
               | "MY.lolifeDroppingsCount2"
               | "MY.lolifeDroppingsCount3";
@@ -3628,8 +3625,6 @@ export interface NamedPlace {
             | "MY.lifeStageFertile"
             | "MY.lifeStageSterile"
             | "MY.lifeStageTadpole"
-            | "MY.lifeStageDead"
-            | "MY.lifeStageAlive"
             | "MY.lifeStageEmbryo"
             | "MY.lifeStageSubadult"
             | "MY.lifeStageMature"
@@ -3746,9 +3741,7 @@ export interface NamedPlace {
             | "MY.plantLifeStageRipeningFruit"
             | "MY.plantLifeStageRipeFruit"
             | "MY.plantLifeStageDeadSprout"
-            | "MY.plantLifeStageSubterranean"
-            | "MY.plantLifeStageLivingPlant"
-            | "MY.plantLifeStageDeadPlant";
+            | "MY.plantLifeStageSubterranean";
           /**
            * Status code for the plant (wild, alien etc.)
            */
@@ -4132,6 +4125,7 @@ export interface NamedPlace {
               | "MY.lineTransectRouteFieldTypeOuter";
             lolifeDroppingsCount?:
               | ""
+              | "MY.lolifeDroppingsCount0"
               | "MY.lolifeDroppingsCount1"
               | "MY.lolifeDroppingsCount2"
               | "MY.lolifeDroppingsCount3";
@@ -4624,7 +4618,7 @@ export interface NamedPlace {
      */
     dataSource?: string;
     /**
-     * The dataset(s) this specimen belongs to
+     * The tags this specimen has
      */
     datasetID?: string[];
     datatype?: string;
@@ -5045,7 +5039,7 @@ export interface NamedPlace {
      */
     language?: string;
     /**
-     * Collector's identifier (field identifier, keruunumero) for the specimen
+     * Collecting number (field identifier, keruunumero) for the specimen
      */
     legID?: string;
     locked?: boolean;
@@ -6245,8 +6239,6 @@ export interface NamedPlace {
             | "MY.lifeStageFertile"
             | "MY.lifeStageSterile"
             | "MY.lifeStageTadpole"
-            | "MY.lifeStageDead"
-            | "MY.lifeStageAlive"
             | "MY.lifeStageEmbryo"
             | "MY.lifeStageSubadult"
             | "MY.lifeStageMature"
@@ -6363,9 +6355,7 @@ export interface NamedPlace {
             | "MY.plantLifeStageRipeningFruit"
             | "MY.plantLifeStageRipeFruit"
             | "MY.plantLifeStageDeadSprout"
-            | "MY.plantLifeStageSubterranean"
-            | "MY.plantLifeStageLivingPlant"
-            | "MY.plantLifeStageDeadPlant";
+            | "MY.plantLifeStageSubterranean";
           /**
            * Status code for the plant (wild, alien etc.)
            */
@@ -6749,6 +6739,7 @@ export interface NamedPlace {
               | "MY.lineTransectRouteFieldTypeOuter";
             lolifeDroppingsCount?:
               | ""
+              | "MY.lolifeDroppingsCount0"
               | "MY.lolifeDroppingsCount1"
               | "MY.lolifeDroppingsCount2"
               | "MY.lolifeDroppingsCount3";
@@ -8159,8 +8150,6 @@ export interface NamedPlace {
             | "MY.lifeStageFertile"
             | "MY.lifeStageSterile"
             | "MY.lifeStageTadpole"
-            | "MY.lifeStageDead"
-            | "MY.lifeStageAlive"
             | "MY.lifeStageEmbryo"
             | "MY.lifeStageSubadult"
             | "MY.lifeStageMature"
@@ -8277,9 +8266,7 @@ export interface NamedPlace {
             | "MY.plantLifeStageRipeningFruit"
             | "MY.plantLifeStageRipeFruit"
             | "MY.plantLifeStageDeadSprout"
-            | "MY.plantLifeStageSubterranean"
-            | "MY.plantLifeStageLivingPlant"
-            | "MY.plantLifeStageDeadPlant";
+            | "MY.plantLifeStageSubterranean";
           /**
            * Status code for the plant (wild, alien etc.)
            */
@@ -8663,6 +8650,7 @@ export interface NamedPlace {
               | "MY.lineTransectRouteFieldTypeOuter";
             lolifeDroppingsCount?:
               | ""
+              | "MY.lolifeDroppingsCount0"
               | "MY.lolifeDroppingsCount1"
               | "MY.lolifeDroppingsCount2"
               | "MY.lolifeDroppingsCount3";

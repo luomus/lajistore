@@ -39,7 +39,12 @@ export interface UnitFact {
     | "MY.lineTransectObsTypeSeenNest"
     | "MY.lineTransectObsTypeUnknown";
   lineTransectRouteFieldType?: "" | "MY.lineTransectRouteFieldTypeInner" | "MY.lineTransectRouteFieldTypeOuter";
-  lolifeDroppingsCount?: "" | "MY.lolifeDroppingsCount1" | "MY.lolifeDroppingsCount2" | "MY.lolifeDroppingsCount3";
+  lolifeDroppingsCount?:
+    | ""
+    | "MY.lolifeDroppingsCount0"
+    | "MY.lolifeDroppingsCount1"
+    | "MY.lolifeDroppingsCount2"
+    | "MY.lolifeDroppingsCount3";
   lolifeDroppingsQuality?: "" | "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
   lolifeDroppingsType?:
     | ""

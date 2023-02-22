@@ -14,7 +14,7 @@ export interface Dataset {
    */
   benefitsDerivedAndShared?: string;
   /**
-   * Name of the dataset. This must be unique.
+   * Name of the tag. This must be unique.
    */
   datasetName: {
     en?: string;
@@ -22,19 +22,19 @@ export interface Dataset {
     sv?: string;
   };
   /**
-   * Type of the dataset. Usually basic, project type is generally used only to give information on project Nagoya compliance.
+   * Type of the tag. Usually basic, project type is generally used only to give information on project Nagoya compliance.
    */
-  datasetType?: "" | "GX.datasetTypeBasic" | "GX.datasetTypeProject";
+  datasetType: "GX.datasetTypeBasic" | "GX.datasetTypeProject";
   /**
    * Description of the tag, so that other people understand what it is about.
    */
-  description?: {
+  description: {
     en?: string;
     fi?: string;
     sv?: string;
   };
   /**
-   * Person(s) responsible for the dataset.
+   * Person(s) responsible for the tag.
    */
   personsResponsible: string;
   /**

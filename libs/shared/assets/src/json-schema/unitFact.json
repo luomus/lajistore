@@ -145,12 +145,14 @@
       "type": "string",
       "enum": [
         "",
+        "MY.lolifeDroppingsCount0",
         "MY.lolifeDroppingsCount1",
         "MY.lolifeDroppingsCount2",
         "MY.lolifeDroppingsCount3"
       ],
       "enumNames": [
         "",
+        "Ei papanoita",
         "Muutama",
         "Kymmeniä",
         "Satoja"

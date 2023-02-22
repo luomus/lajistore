@@ -85,8 +85,8 @@
       "minItems": 0,
       "range": "GX.dataset",
       "subject": "MOS.datasetID",
-      "description": "Datasets this organisation belongs to.",
-      "title": "Datasets"
+      "description": "Tags this organisation has",
+      "title": "Tags"
     },
     "dateOrdersDue": {
       "type": "string",

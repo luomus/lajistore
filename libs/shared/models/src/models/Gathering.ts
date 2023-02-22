@@ -1040,8 +1040,6 @@ export interface Gathering {
       | "MY.lifeStageFertile"
       | "MY.lifeStageSterile"
       | "MY.lifeStageTadpole"
-      | "MY.lifeStageDead"
-      | "MY.lifeStageAlive"
       | "MY.lifeStageEmbryo"
       | "MY.lifeStageSubadult"
       | "MY.lifeStageMature"
@@ -1158,9 +1156,7 @@ export interface Gathering {
       | "MY.plantLifeStageRipeningFruit"
       | "MY.plantLifeStageRipeFruit"
       | "MY.plantLifeStageDeadSprout"
-      | "MY.plantLifeStageSubterranean"
-      | "MY.plantLifeStageLivingPlant"
-      | "MY.plantLifeStageDeadPlant";
+      | "MY.plantLifeStageSubterranean";
     /**
      * Status code for the plant (wild, alien etc.)
      */
@@ -1529,7 +1525,12 @@ export interface Gathering {
         | "MY.lineTransectObsTypeSeenNest"
         | "MY.lineTransectObsTypeUnknown";
       lineTransectRouteFieldType?: "" | "MY.lineTransectRouteFieldTypeInner" | "MY.lineTransectRouteFieldTypeOuter";
-      lolifeDroppingsCount?: "" | "MY.lolifeDroppingsCount1" | "MY.lolifeDroppingsCount2" | "MY.lolifeDroppingsCount3";
+      lolifeDroppingsCount?:
+        | ""
+        | "MY.lolifeDroppingsCount0"
+        | "MY.lolifeDroppingsCount1"
+        | "MY.lolifeDroppingsCount2"
+        | "MY.lolifeDroppingsCount3";
       lolifeDroppingsQuality?: "" | "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
       lolifeDroppingsType?:
         | ""

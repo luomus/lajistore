@@ -4835,18 +4835,18 @@ type Dataset2 {
   creator: String
   datasetName: MultiLang!
 
-  # Type of the dataset. Usually basic, project type is generally used only to give information on project Nagoya compliance.
-  datasetType: DatasetType
+  # Type of the tag. Usually basic, project type is generally used only to give information on project Nagoya compliance.
+  datasetType: DatasetType!
   dateCreated: String
   dateEdited: String
-  description: MultiLang
+  description: MultiLang!
   editor: String
   id: String
 
   # Team or organisation that owns the record and can edit it.
   owner: String
 
-  # Person(s) responsible for the dataset.
+  # Person(s) responsible for the tag.
   personsResponsible: String!
 
   # Institutions or persons collaborating in the project.
@@ -4864,7 +4864,6 @@ type Dataset2 {
 }
 
 enum DatasetType {
-  _
   GX_DATASETTYPEBASIC
   GX_DATASETTYPEPROJECT
 }
@@ -4954,7 +4953,7 @@ type Document2 {
   # Where the data about this specimen or observation is from, in addition to labels. Eg. reference to a publication, field notes or an expedition.
   dataSource: String
 
-  # The dataset(s) this specimen belongs to
+  # The tags this specimen has
   datasetID: [String]
   datatype: String
   dateCreated: String
@@ -5003,7 +5002,7 @@ type Document2 {
   # Language the data is (mainly) written in, if applicable.
   language: String
 
-  # Collector's identifier (field identifier, keruunumero) for the specimen
+  # Collecting number (field identifier, keruunumero) for the specimen
   legID: String
   locked: Boolean
   namedPlaceID: String
@@ -6425,8 +6424,6 @@ enum LifeStage {
   MY_LIFESTAGEFERTILE
   MY_LIFESTAGESTERILE
   MY_LIFESTAGETADPOLE
-  MY_LIFESTAGEDEAD
-  MY_LIFESTAGEALIVE
   MY_LIFESTAGEEMBRYO
   MY_LIFESTAGESUBADULT
   MY_LIFESTAGEMATURE
@@ -6527,8 +6524,6 @@ enum PlantLifeStage {
   MY_PLANTLIFESTAGERIPEFRUIT
   MY_PLANTLIFESTAGEDEADSPROUT
   MY_PLANTLIFESTAGESUBTERRANEAN
-  MY_PLANTLIFESTAGELIVINGPLANT
-  MY_PLANTLIFESTAGEDEADPLANT
 }
 
 enum PlantStatusCode {
@@ -6974,6 +6969,7 @@ enum LineTransectRouteFieldType {
 
 enum LolifeDroppingsCount {
   _
+  MY_LOLIFEDROPPINGSCOUNT0
   MY_LOLIFEDROPPINGSCOUNT1
   MY_LOLIFEDROPPINGSCOUNT2
   MY_LOLIFEDROPPINGSCOUNT3
@@ -7227,8 +7223,6 @@ enum LifeStage2 {
   MY_PLANTLIFESTAGERIPEFRUIT
   MY_PLANTLIFESTAGEDEADSPROUT
   MY_PLANTLIFESTAGESUBTERRANEAN
-  MY_PLANTLIFESTAGELIVINGPLANT
-  MY_PLANTLIFESTAGEDEADPLANT
 }
 
 type Field2 {
@@ -8656,7 +8650,7 @@ type Organization2 {
   country: String
   creator: String
 
-  # Datasets this organisation belongs to.
+  # Tags this organisation has
   datasetID: [String]
   dateCreated: String
   dateEdited: String
@@ -9833,8 +9827,6 @@ enum ObjectLifeStage {
   MY_LIFESTAGEFERTILE
   MY_LIFESTAGESTERILE
   MY_LIFESTAGETADPOLE
-  MY_LIFESTAGEDEAD
-  MY_LIFESTAGEALIVE
   MY_LIFESTAGEEMBRYO
   MY_LIFESTAGESUBADULT
   MY_LIFESTAGEMATURE
@@ -9859,8 +9851,6 @@ enum SubjectLifeStage {
   MY_LIFESTAGEFERTILE
   MY_LIFESTAGESTERILE
   MY_LIFESTAGETADPOLE
-  MY_LIFESTAGEDEAD
-  MY_LIFESTAGEALIVE
   MY_LIFESTAGEEMBRYO
   MY_LIFESTAGESUBADULT
   MY_LIFESTAGEMATURE
@@ -21214,18 +21204,18 @@ input Dataset2Input {
   creator: String
   datasetName: MultiLangInput!
 
-  # Type of the dataset. Usually basic, project type is generally used only to give information on project Nagoya compliance.
-  datasetType: DatasetType
+  # Type of the tag. Usually basic, project type is generally used only to give information on project Nagoya compliance.
+  datasetType: DatasetType!
   dateCreated: String
   dateEdited: String
-  description: MultiLangInput
+  description: MultiLangInput!
   editor: String
   id: String
 
   # Team or organisation that owns the record and can edit it.
   owner: String
 
-  # Person(s) responsible for the dataset.
+  # Person(s) responsible for the tag.
   personsResponsible: String!
 
   # Institutions or persons collaborating in the project.
@@ -21327,7 +21317,7 @@ input Document2Input {
   # Where the data about this specimen or observation is from, in addition to labels. Eg. reference to a publication, field notes or an expedition.
   dataSource: String
 
-  # The dataset(s) this specimen belongs to
+  # The tags this specimen has
   datasetID: [String]
   datatype: String
   dateCreated: String
@@ -21376,7 +21366,7 @@ input Document2Input {
   # Language the data is (mainly) written in, if applicable.
   language: String
 
-  # Collector's identifier (field identifier, keruunumero) for the specimen
+  # Collecting number (field identifier, keruunumero) for the specimen
   legID: String
   locked: Boolean
   namedPlaceID: String
@@ -23108,7 +23098,7 @@ input Organization2Input {
   country: String
   creator: String
 
-  # Datasets this organisation belongs to.
+  # Tags this organisation has
   datasetID: [String]
   dateCreated: String
   dateEdited: String

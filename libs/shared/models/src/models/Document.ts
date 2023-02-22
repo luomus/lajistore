@@ -89,7 +89,7 @@ export interface Document {
    */
   dataSource?: string;
   /**
-   * The dataset(s) this specimen belongs to
+   * The tags this specimen has
    */
   datasetID?: string[];
   datatype?: string;
@@ -510,7 +510,7 @@ export interface Document {
    */
   language?: string;
   /**
-   * Collector's identifier (field identifier, keruunumero) for the specimen
+   * Collecting number (field identifier, keruunumero) for the specimen
    */
   legID?: string;
   locked?: boolean;
@@ -1710,8 +1710,6 @@ export interface Document {
           | "MY.lifeStageFertile"
           | "MY.lifeStageSterile"
           | "MY.lifeStageTadpole"
-          | "MY.lifeStageDead"
-          | "MY.lifeStageAlive"
           | "MY.lifeStageEmbryo"
           | "MY.lifeStageSubadult"
           | "MY.lifeStageMature"
@@ -1828,9 +1826,7 @@ export interface Document {
           | "MY.plantLifeStageRipeningFruit"
           | "MY.plantLifeStageRipeFruit"
           | "MY.plantLifeStageDeadSprout"
-          | "MY.plantLifeStageSubterranean"
-          | "MY.plantLifeStageLivingPlant"
-          | "MY.plantLifeStageDeadPlant";
+          | "MY.plantLifeStageSubterranean";
         /**
          * Status code for the plant (wild, alien etc.)
          */
@@ -2211,6 +2207,7 @@ export interface Document {
           lineTransectRouteFieldType?: "" | "MY.lineTransectRouteFieldTypeInner" | "MY.lineTransectRouteFieldTypeOuter";
           lolifeDroppingsCount?:
             | ""
+            | "MY.lolifeDroppingsCount0"
             | "MY.lolifeDroppingsCount1"
             | "MY.lolifeDroppingsCount2"
             | "MY.lolifeDroppingsCount3";
@@ -3621,8 +3618,6 @@ export interface Document {
           | "MY.lifeStageFertile"
           | "MY.lifeStageSterile"
           | "MY.lifeStageTadpole"
-          | "MY.lifeStageDead"
-          | "MY.lifeStageAlive"
           | "MY.lifeStageEmbryo"
           | "MY.lifeStageSubadult"
           | "MY.lifeStageMature"
@@ -3739,9 +3734,7 @@ export interface Document {
           | "MY.plantLifeStageRipeningFruit"
           | "MY.plantLifeStageRipeFruit"
           | "MY.plantLifeStageDeadSprout"
-          | "MY.plantLifeStageSubterranean"
-          | "MY.plantLifeStageLivingPlant"
-          | "MY.plantLifeStageDeadPlant";
+          | "MY.plantLifeStageSubterranean";
         /**
          * Status code for the plant (wild, alien etc.)
          */
@@ -4122,6 +4115,7 @@ export interface Document {
           lineTransectRouteFieldType?: "" | "MY.lineTransectRouteFieldTypeInner" | "MY.lineTransectRouteFieldTypeOuter";
           lolifeDroppingsCount?:
             | ""
+            | "MY.lolifeDroppingsCount0"
             | "MY.lolifeDroppingsCount1"
             | "MY.lolifeDroppingsCount2"
             | "MY.lolifeDroppingsCount3";

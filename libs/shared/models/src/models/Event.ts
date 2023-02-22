@@ -66,9 +66,7 @@ export interface Event {
     | "MY.plantLifeStageRipeningFruit"
     | "MY.plantLifeStageRipeFruit"
     | "MY.plantLifeStageDeadSprout"
-    | "MY.plantLifeStageSubterranean"
-    | "MY.plantLifeStageLivingPlant"
-    | "MY.plantLifeStageDeadPlant";
+    | "MY.plantLifeStageSubterranean";
   notes?: string;
   numberOfSeedsEmpty?: number;
   numberOfSeedsFull?: number;
