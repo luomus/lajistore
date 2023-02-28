@@ -2160,7 +2160,8 @@ export interface Form {
               | "MY.indirectObservationTypeSnowTracks"
               | "MY.indirectObservationTypeUrine"
               | "MY.indirectObservationTypeFeasting"
-              | "MY.indirectObservationTypeFoodStock";
+              | "MY.indirectObservationTypeFoodStock"
+              | "MY.indirectObservationTypeNone";
             individualCount?: number;
             /**
              * Description of the infestation status of the collected seeds, used for botanical garden accessions/seed bank.
@@ -4080,7 +4081,8 @@ export interface Form {
               | "MY.indirectObservationTypeSnowTracks"
               | "MY.indirectObservationTypeUrine"
               | "MY.indirectObservationTypeFeasting"
-              | "MY.indirectObservationTypeFoodStock";
+              | "MY.indirectObservationTypeFoodStock"
+              | "MY.indirectObservationTypeNone";
             individualCount?: number;
             /**
              * Description of the infestation status of the collected seeds, used for botanical garden accessions/seed bank.

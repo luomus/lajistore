@@ -83,7 +83,7 @@
         "I’m not a birdwatcher",
         "I watch birds occasionally",
         "I watch birds actively and regularly",
-        "I am bird researcher or professional birdwatcher"
+        "I am a bird researcher or professional birdwatcher"
       ],
       "range": "MA.birdwatchingActivityLevelEnum",
       "subject": "MA.birdwatchingActivityLevel",

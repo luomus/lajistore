@@ -2962,7 +2962,8 @@
               "MY.indirectObservationTypeSnowTracks",
               "MY.indirectObservationTypeUrine",
               "MY.indirectObservationTypeFeasting",
-              "MY.indirectObservationTypeFoodStock"
+              "MY.indirectObservationTypeFoodStock",
+              "MY.indirectObservationTypeNone"
             ],
             "enumNames": [
               "",
@@ -2970,7 +2971,8 @@
               "Snow tracks",
               "Urine",
               "Feasting",
-              "Food stock"
+              "Food stock",
+              "No sightings"
             ],
             "range": "MY.indirectObservationTypeEnum",
             "subject": "MY.indirectObservationType",

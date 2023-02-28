@@ -58211,7 +58211,8 @@
               "MY.indirectObservationTypeSnowTracks",
               "MY.indirectObservationTypeUrine",
               "MY.indirectObservationTypeFeasting",
-              "MY.indirectObservationTypeFoodStock"
+              "MY.indirectObservationTypeFoodStock",
+              "MY.indirectObservationTypeNone"
             ],
             "title": "Tracks"
           },
