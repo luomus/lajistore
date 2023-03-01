@@ -25,6 +25,10 @@
         "type": "keyword",
         "ignore_above": 200
       },
+      "appleLoginName": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "defaultLanguage": {
         "type": "keyword",
         "ignore_above": 200

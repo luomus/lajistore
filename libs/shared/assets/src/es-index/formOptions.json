@@ -2109,6 +2109,9 @@
                     "type": "keyword",
                     "ignore_above": 200
                   },
+                  "primarySpecimen": {
+                    "type": "boolean"
+                  },
                   "provenance": {
                     "type": "keyword",
                     "ignore_above": 200

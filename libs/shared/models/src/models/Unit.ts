@@ -474,6 +474,7 @@ export interface Unit {
     | "MY.preservationPlastinated"
     | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
   )[];
+  primarySpecimen?: boolean;
   /**
    * Origin or source of the garden accession
    */

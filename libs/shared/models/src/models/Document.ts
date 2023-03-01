@@ -1913,6 +1913,7 @@ export interface Document {
           | "MY.preservationPlastinated"
           | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
         )[];
+        primarySpecimen?: boolean;
         /**
          * Origin or source of the garden accession
          */
@@ -3822,6 +3823,7 @@ export interface Document {
           | "MY.preservationPlastinated"
           | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
         )[];
+        primarySpecimen?: boolean;
         /**
          * Origin or source of the garden accession
          */

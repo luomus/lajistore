@@ -323,6 +323,10 @@
       "@id": "default:MY.preservation",
       "@type": "@id"
     },
+    "primarySpecimen": {
+      "@id": "default:MY.primarySpecimen",
+      "@type": "xsd:boolean"
+    },
     "provenance": {
       "@id": "default:MY.provenance",
       "@type": "@id"

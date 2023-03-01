@@ -187,12 +187,6 @@
                                           "subject": "MHLA.filters",
                                           "title": "filters"
                                         },
-                                        "formID": {
-                                          "type": "string",
-                                          "range": "MHL.form",
-                                          "subject": "MHLA.formID",
-                                          "title": "form id to be extended"
-                                        },
                                         "label": {
                                           "type": "string",
                                           "range": "xsd:string",
@@ -259,12 +253,6 @@
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.filters",
                                     "title": "filters"
-                                  },
-                                  "formID": {
-                                    "type": "string",
-                                    "range": "MHL.form",
-                                    "subject": "MHLA.formID",
-                                    "title": "form id to be extended"
                                   },
                                   "label": {
                                     "type": "string",
@@ -333,12 +321,6 @@
                               "subject": "MHLA.filters",
                               "title": "filters"
                             },
-                            "formID": {
-                              "type": "string",
-                              "range": "MHL.form",
-                              "subject": "MHLA.formID",
-                              "title": "form id to be extended"
-                            },
                             "label": {
                               "type": "string",
                               "range": "xsd:string",
@@ -405,12 +387,6 @@
                         "range": "MZ.keyAny",
                         "subject": "MHLA.filters",
                         "title": "filters"
-                      },
-                      "formID": {
-                        "type": "string",
-                        "range": "MHL.form",
-                        "subject": "MHLA.formID",
-                        "title": "form id to be extended"
                       },
                       "label": {
                         "type": "string",
@@ -479,12 +455,6 @@
                   "subject": "MHLA.filters",
                   "title": "filters"
                 },
-                "formID": {
-                  "type": "string",
-                  "range": "MHL.form",
-                  "subject": "MHLA.formID",
-                  "title": "form id to be extended"
-                },
                 "label": {
                   "type": "string",
                   "range": "xsd:string",
@@ -551,12 +521,6 @@
             "range": "MZ.keyAny",
             "subject": "MHLA.filters",
             "title": "filters"
-          },
-          "formID": {
-            "type": "string",
-            "range": "MHL.form",
-            "subject": "MHLA.formID",
-            "title": "form id to be extended"
           },
           "label": {
             "type": "string",
@@ -7408,6 +7372,12 @@
                           "subject": "MY.preservation",
                           "description": "Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.",
                           "title": "Preservation"
+                        },
+                        "primarySpecimen": {
+                          "type": "boolean",
+                          "range": "xsd:boolean",
+                          "subject": "MY.primarySpecimen",
+                          "title": "Primary specimen"
                         },
                         "provenance": {
                           "type": "string",

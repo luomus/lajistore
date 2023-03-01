@@ -71,10 +71,6 @@
                                 "type": "object",
                                 "enabled": false
                               },
-                              "formID": {
-                                "type": "keyword",
-                                "ignore_above": 200
-                              },
                               "label": {
                                 "type": "keyword",
                                 "ignore_above": 200
@@ -115,10 +111,6 @@
                           "filters": {
                             "type": "object",
                             "enabled": false
-                          },
-                          "formID": {
-                            "type": "keyword",
-                            "ignore_above": 200
                           },
                           "label": {
                             "type": "keyword",
@@ -161,10 +153,6 @@
                         "type": "object",
                         "enabled": false
                       },
-                      "formID": {
-                        "type": "keyword",
-                        "ignore_above": 200
-                      },
                       "label": {
                         "type": "keyword",
                         "ignore_above": 200
@@ -205,10 +193,6 @@
                   "filters": {
                     "type": "object",
                     "enabled": false
-                  },
-                  "formID": {
-                    "type": "keyword",
-                    "ignore_above": 200
                   },
                   "label": {
                     "type": "keyword",
@@ -251,10 +235,6 @@
                 "type": "object",
                 "enabled": false
               },
-              "formID": {
-                "type": "keyword",
-                "ignore_above": 200
-              },
               "label": {
                 "type": "keyword",
                 "ignore_above": 200
@@ -296,10 +276,6 @@
             "type": "object",
             "enabled": false
           },
-          "formID": {
-            "type": "keyword",
-            "ignore_above": 200
-          },
           "label": {
             "type": "keyword",
             "ignore_above": 200
@@ -340,10 +316,6 @@
       "filters": {
         "type": "object",
         "enabled": false
-      },
-      "formID": {
-        "type": "keyword",
-        "ignore_above": 200
       },
       "label": {
         "type": "keyword",

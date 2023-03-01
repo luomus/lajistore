@@ -43,10 +43,6 @@
       "@id": "default:MHLA.filters",
       "@type": "@id"
     },
-    "formID": {
-      "@id": "default:MHLA.formID",
-      "@type": "@id"
-    },
     "label": {
       "@id": "default:MHLA.label",
       "@type": "xsd:string"

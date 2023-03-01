@@ -49763,10 +49763,6 @@
             "type": "object",
             "title": "filters"
           },
-          "formID": {
-            "type": "string",
-            "title": "form id to be extended"
-          },
           "label": {
             "type": "string",
             "title": "label"
@@ -54906,6 +54902,10 @@
             "type": "string",
             "title": "Address"
           },
+          "appleLoginName": {
+            "type": "string",
+            "title": "Apple login name"
+          },
           "defaultLanguage": {
             "type": "string",
             "title": "Default language"
@@ -58566,6 +58566,10 @@
             "minItems": 0,
             "description": "Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.",
             "title": "Preservation"
+          },
+          "primarySpecimen": {
+            "type": "boolean",
+            "title": "Primary specimen"
           },
           "provenance": {
             "type": "string",

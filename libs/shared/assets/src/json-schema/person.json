@@ -36,6 +36,12 @@
       "subject": "MA.address",
       "title": "Address"
     },
+    "appleLoginName": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MA.appleLoginName",
+      "title": "Apple login name"
+    },
     "defaultLanguage": {
       "type": "string",
       "range": "xsd:string",

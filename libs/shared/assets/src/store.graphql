@@ -6188,6 +6188,7 @@ type Unit {
 
   # Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.
   preservation: [PreservationListItem]
+  primarySpecimen: Boolean
 
   # Origin or source of the garden accession
   provenance: Provenance
@@ -7230,7 +7231,6 @@ type Field2 {
   context: String
   fields: [Field2]
   filters: JSON
-  formID: String
   id: String
   label: String
   name: String
@@ -8743,6 +8743,7 @@ enum PermitType {
 
 type Person2 {
   address: String
+  appleLoginName: String
   context: String
   defaultLanguage: String
   defaultQNamePrefix: String
@@ -21918,6 +21919,7 @@ input UnitInput {
 
   # Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.
   preservation: [PreservationListItem]
+  primarySpecimen: Boolean
 
   # Origin or source of the garden accession
   provenance: Provenance
@@ -22180,7 +22182,6 @@ input Field2Input {
   context: String
   fields: [Field2Input]
   filters: JSON
-  formID: String
   id: String
   label: String
   name: String
@@ -23168,6 +23169,7 @@ input Permit2Input {
 
 input Person2Input {
   address: String
+  appleLoginName: String
   context: String
   defaultLanguage: String
   defaultQNamePrefix: String

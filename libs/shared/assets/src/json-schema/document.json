@@ -6075,6 +6075,12 @@
                   "description": "Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.",
                   "title": "Preservation"
                 },
+                "primarySpecimen": {
+                  "type": "boolean",
+                  "range": "xsd:boolean",
+                  "subject": "MY.primarySpecimen",
+                  "title": "Primary specimen"
+                },
                 "provenance": {
                   "type": "string",
                   "enum": [

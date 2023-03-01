@@ -87,10 +87,6 @@
                                 "type": "object",
                                 "enabled": false
                               },
-                              "formID": {
-                                "type": "keyword",
-                                "ignore_above": 200
-                              },
                               "label": {
                                 "type": "keyword",
                                 "ignore_above": 200
@@ -131,10 +127,6 @@
                           "filters": {
                             "type": "object",
                             "enabled": false
-                          },
-                          "formID": {
-                            "type": "keyword",
-                            "ignore_above": 200
                           },
                           "label": {
                             "type": "keyword",
@@ -177,10 +169,6 @@
                         "type": "object",
                         "enabled": false
                       },
-                      "formID": {
-                        "type": "keyword",
-                        "ignore_above": 200
-                      },
                       "label": {
                         "type": "keyword",
                         "ignore_above": 200
@@ -221,10 +209,6 @@
                   "filters": {
                     "type": "object",
                     "enabled": false
-                  },
-                  "formID": {
-                    "type": "keyword",
-                    "ignore_above": 200
                   },
                   "label": {
                     "type": "keyword",
@@ -267,10 +251,6 @@
                 "type": "object",
                 "enabled": false
               },
-              "formID": {
-                "type": "keyword",
-                "ignore_above": 200
-              },
               "label": {
                 "type": "keyword",
                 "ignore_above": 200
@@ -311,10 +291,6 @@
           "filters": {
             "type": "object",
             "enabled": false
-          },
-          "formID": {
-            "type": "keyword",
-            "ignore_above": 200
           },
           "label": {
             "type": "keyword",
@@ -2462,6 +2438,9 @@
                       "preservation": {
                         "type": "keyword",
                         "ignore_above": 200
+                      },
+                      "primarySpecimen": {
+                        "type": "boolean"
                       },
                       "provenance": {
                         "type": "keyword",

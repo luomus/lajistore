@@ -39,6 +39,10 @@
       "@id": "default:MA.address",
       "@type": "xsd:string"
     },
+    "appleLoginName": {
+      "@id": "default:MA.appleLoginName",
+      "@type": "xsd:string"
+    },
     "defaultLanguage": {
       "@id": "default:MA.defaultLanguage",
       "@type": "xsd:string"

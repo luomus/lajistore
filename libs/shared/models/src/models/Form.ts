@@ -42,7 +42,6 @@ export interface Form {
               filters?: {
                 [k: string]: unknown | undefined;
               };
-              formID?: string;
               label?: string;
               notices?: {
                 [k: string]: unknown | undefined;
@@ -66,7 +65,6 @@ export interface Form {
             filters?: {
               [k: string]: unknown | undefined;
             };
-            formID?: string;
             label?: string;
             notices?: {
               [k: string]: unknown | undefined;
@@ -90,7 +88,6 @@ export interface Form {
           filters?: {
             [k: string]: unknown | undefined;
           };
-          formID?: string;
           label?: string;
           notices?: {
             [k: string]: unknown | undefined;
@@ -114,7 +111,6 @@ export interface Form {
         filters?: {
           [k: string]: unknown | undefined;
         };
-        formID?: string;
         label?: string;
         notices?: {
           [k: string]: unknown | undefined;
@@ -138,7 +134,6 @@ export interface Form {
       filters?: {
         [k: string]: unknown | undefined;
       };
-      formID?: string;
       label?: string;
       notices?: {
         [k: string]: unknown | undefined;
@@ -162,7 +157,6 @@ export interface Form {
     filters?: {
       [k: string]: unknown | undefined;
     };
-    formID?: string;
     label?: string;
     notices?: {
       [k: string]: unknown | undefined;
@@ -2421,6 +2415,7 @@ export interface Form {
               | "MY.preservationPlastinated"
               | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
             )[];
+            primarySpecimen?: boolean;
             /**
              * Origin or source of the garden accession
              */
@@ -4342,6 +4337,7 @@ export interface Form {
               | "MY.preservationPlastinated"
               | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
             )[];
+            primarySpecimen?: boolean;
             /**
              * Origin or source of the garden accession
              */

@@ -11,6 +11,7 @@ export interface Person {
   "@type"?: string;
   LTKMLoginName?: string;
   address?: string;
+  appleLoginName?: string;
   defaultLanguage?: string;
   defaultQNamePrefix?: string;
   description?: string;
