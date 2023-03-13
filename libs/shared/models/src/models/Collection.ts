@@ -76,7 +76,7 @@ export interface Collection {
     | "MY.collectionTypeOutdoorGardenArea"
     | "MY.collectionTypeGardenSublocation";
   /**
-   * Legal basis for concealment or quarantine
+   * Legal basis for concealment or embargo
    */
   concealmentBasis?: {
     en?: string;

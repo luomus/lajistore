@@ -190,8 +190,8 @@
       },
       "range": "xsd:string",
       "subject": "MY.concealmentBasis",
-      "description": "Legal basis for concealment or quarantine",
-      "title": "Basis for concealment or quarantine"
+      "description": "Legal basis for concealment or embargo",
+      "title": "Basis for concealment or embargo"
     },
     "contactEmail": {
       "type": "string",

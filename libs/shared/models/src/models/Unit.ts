@@ -503,6 +503,7 @@ export interface Unit {
     | "MY.recordBasisHumanObservationVideo"
     | "MY.recordBasisHumanObservationIndirect"
     | "MY.recordBasisMachineObservation"
+    | "MY.recordBasisMachineObservationPhoto"
     | "MY.recordBasisMachineObservationVideo"
     | "MY.recordBasisMachineObservationAudio"
     | "MY.recordBasisMachineObservationGeologger"
