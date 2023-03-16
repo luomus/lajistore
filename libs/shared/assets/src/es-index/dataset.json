@@ -4,7 +4,15 @@
     "index.mapping.ignore_malformed": true,
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
-    "index.mapping.nested_objects.limit": 100000
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": ["lowercase"]
+        }
+      }
+    }
   },
   "mappings": {
     "properties": {
@@ -19,66 +27,80 @@
       },
       "benefitsDerivedAndShared": {
         "type": "keyword",
+        "normalizer": "useLowercase",
         "ignore_above": 200
       },
       "datasetName": {
         "properties": {
           "en": {
             "type": "keyword",
+            "normalizer": "useLowercase",
             "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
+            "normalizer": "useLowercase",
             "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
+            "normalizer": "useLowercase",
             "ignore_above": 200
           }
         }
       },
       "datasetType": {
         "type": "keyword",
+        "normalizer": "useLowercase",
         "ignore_above": 200
       },
       "description": {
         "properties": {
           "en": {
             "type": "keyword",
+            "normalizer": "useLowercase",
             "ignore_above": 200
           },
           "fi": {
             "type": "keyword",
+            "normalizer": "useLowercase",
             "ignore_above": 200
           },
           "sv": {
             "type": "keyword",
+            "normalizer": "useLowercase",
             "ignore_above": 200
           }
         }
       },
       "personsResponsible": {
         "type": "keyword",
+        "normalizer": "useLowercase",
         "ignore_above": 200
       },
       "researchCollaborator": {
         "type": "keyword",
+        "normalizer": "useLowercase",
         "ignore_above": 200
       },
       "researchFundingDuration": {
         "type": "keyword",
+        "normalizer": "useLowercase",
         "ignore_above": 200
       },
       "researchFundingRecipient": {
         "type": "keyword",
+        "normalizer": "useLowercase",
         "ignore_above": 200
       },
       "researchFundingSource": {
         "type": "keyword",
+        "normalizer": "useLowercase",
         "ignore_above": 200
       },
       "creator": {
         "type": "keyword",
+        "normalizer": "useLowercase",
         "ignore_above": 200
       },
       "dateCreated": {
@@ -89,10 +111,12 @@
       },
       "editor": {
         "type": "keyword",
+        "normalizer": "useLowercase",
         "ignore_above": 200
       },
       "owner": {
         "type": "keyword",
+        "normalizer": "useLowercase",
         "ignore_above": 200
       },
       "_meta": {
