@@ -20,7 +20,8 @@
         "type": "keyword"
       },
       "id": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "useLowercase"
       },
       "@type": {
         "type": "keyword"
