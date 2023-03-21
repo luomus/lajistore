@@ -78,6 +78,14 @@ export interface GatheringEvent {
     lineTransectSegmentCounted?: boolean;
     lineTransectSegmentMetersEnd?: number;
     lineTransectSegmentMetersStart?: number;
+    lolifeSiteClassification?:
+      | ""
+      | "MY.lolifeSiteClassificationExcellent"
+      | "MY.lolifeSiteClassificationSuboptimal"
+      | "MY.lolifeSiteClassificationPossible"
+      | "MY.lolifeSiteClassificationCurrentlyUnsuitable"
+      | "MY.lolifeSiteClassificationPermanentlyUnsuitable";
+    lolifeSiteClassificationComments?: string;
     observedAreaHectares?: number;
     pointCountHabitat?:
       | ""
@@ -333,6 +341,7 @@ export interface GatheringEvent {
    */
   legUserID?: string[];
   namedPlaceNotes?: string;
+  nextMonitoringYear?: number;
   /**
    * Additional information to the data in each section.
    */

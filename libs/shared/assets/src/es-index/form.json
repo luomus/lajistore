@@ -893,6 +893,14 @@
                       "lineTransectSegmentMetersStart": {
                         "type": "integer"
                       },
+                      "lolifeSiteClassification": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "lolifeSiteClassificationComments": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
                       "observedAreaHectares": {
                         "type": "integer"
                       },
@@ -1194,6 +1202,9 @@
                   "namedPlaceNotes": {
                     "type": "keyword",
                     "ignore_above": 200
+                  },
+                  "nextMonitoringYear": {
+                    "type": "integer"
                   },
                   "notes": {
                     "type": "keyword",
@@ -1560,6 +1571,14 @@
                       },
                       "lineTransectSegmentMetersStart": {
                         "type": "integer"
+                      },
+                      "lolifeSiteClassification": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "lolifeSiteClassificationComments": {
+                        "type": "keyword",
+                        "ignore_above": 200
                       },
                       "observedAreaHectares": {
                         "type": "integer"
@@ -2404,6 +2423,9 @@
                       "nestNotes": {
                         "type": "keyword",
                         "ignore_above": 200
+                      },
+                      "nestTreeDiameterInCentimeters": {
+                        "type": "integer"
                       },
                       "nestType": {
                         "type": "keyword",

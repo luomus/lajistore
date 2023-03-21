@@ -287,6 +287,10 @@
       "@id": "default:MY.nestNotes",
       "@type": "xsd:string"
     },
+    "nestTreeDiameterInCentimeters": {
+      "@id": "default:MY.nestTreeDiameterInCentimeters",
+      "@type": "xsd:positiveInteger"
+    },
     "nestType": {
       "@id": "default:MY.nestType",
       "@type": "@id"

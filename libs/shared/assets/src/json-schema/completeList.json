@@ -41,7 +41,7 @@
       "enumNames": [
         "",
         "Complete lists including nesting indices for all observations (A; recommended during breeding season)",
-        "Complete list, may include nesting indices (B)",
+        "Complete list (B)",
         "Incomplete list (C; for sporadic observations)"
       ],
       "range": "MY.completeListTypeEnum",

@@ -155,6 +155,14 @@ export interface Gathering {
     lineTransectSegmentCounted?: boolean;
     lineTransectSegmentMetersEnd?: number;
     lineTransectSegmentMetersStart?: number;
+    lolifeSiteClassification?:
+      | ""
+      | "MY.lolifeSiteClassificationExcellent"
+      | "MY.lolifeSiteClassificationSuboptimal"
+      | "MY.lolifeSiteClassificationPossible"
+      | "MY.lolifeSiteClassificationCurrentlyUnsuitable"
+      | "MY.lolifeSiteClassificationPermanentlyUnsuitable";
+    lolifeSiteClassificationComments?: string;
     observedAreaHectares?: number;
     pointCountHabitat?:
       | ""
@@ -1131,6 +1139,7 @@ export interface Gathering {
     nativeStatus?: "" | "MY.native" | "MY.nonNative";
     nestCount?: number;
     nestNotes?: string;
+    nestTreeDiameterInCentimeters?: number;
     nestType?:
       | ""
       | "MY.nestTypeTreeCavity"
@@ -1533,7 +1542,9 @@ export interface Gathering {
         | "MY.lolifeDroppingsCount0"
         | "MY.lolifeDroppingsCount1"
         | "MY.lolifeDroppingsCount2"
-        | "MY.lolifeDroppingsCount3";
+        | "MY.lolifeDroppingsCount25"
+        | "MY.lolifeDroppingsCount3"
+        | "MY.lolifeDroppingsCount4";
       lolifeDroppingsQuality?: "" | "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
       lolifeDroppingsType?:
         | ""

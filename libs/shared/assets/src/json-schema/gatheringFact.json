@@ -89,6 +89,34 @@
       "subject": "MY.lineTransectSegmentMetersStart",
       "title": "Biotope's start meter amount from the start of the line"
     },
+    "lolifeSiteClassification": {
+      "type": "string",
+      "enum": [
+        "",
+        "MY.lolifeSiteClassificationExcellent",
+        "MY.lolifeSiteClassificationSuboptimal",
+        "MY.lolifeSiteClassificationPossible",
+        "MY.lolifeSiteClassificationCurrentlyUnsuitable",
+        "MY.lolifeSiteClassificationPermanentlyUnsuitable"
+      ],
+      "enumNames": [
+        "",
+        "Excellent",
+        "Suboptimal",
+        "Possible, not likely",
+        "Currently not possible",
+        "Permanently invalid"
+      ],
+      "range": "MY.lolifeSiteClassificationEnum",
+      "subject": "MY.lolifeSiteClassification",
+      "title": "Site classification"
+    },
+    "lolifeSiteClassificationComments": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.lolifeSiteClassificationComments",
+      "title": "Classification comments"
+    },
     "observedAreaHectares": {
       "type": "integer",
       "minimum": 0,

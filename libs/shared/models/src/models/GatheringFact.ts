@@ -17,6 +17,14 @@ export interface GatheringFact {
   lineTransectSegmentCounted?: boolean;
   lineTransectSegmentMetersEnd?: number;
   lineTransectSegmentMetersStart?: number;
+  lolifeSiteClassification?:
+    | ""
+    | "MY.lolifeSiteClassificationExcellent"
+    | "MY.lolifeSiteClassificationSuboptimal"
+    | "MY.lolifeSiteClassificationPossible"
+    | "MY.lolifeSiteClassificationCurrentlyUnsuitable"
+    | "MY.lolifeSiteClassificationPermanentlyUnsuitable";
+  lolifeSiteClassificationComments?: string;
   observedAreaHectares?: number;
   pointCountHabitat?:
     | ""

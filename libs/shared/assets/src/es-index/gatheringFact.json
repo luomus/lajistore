@@ -42,6 +42,14 @@
       "lineTransectSegmentMetersStart": {
         "type": "integer"
       },
+      "lolifeSiteClassification": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "lolifeSiteClassificationComments": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "observedAreaHectares": {
         "type": "integer"
       },

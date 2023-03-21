@@ -529,7 +529,7 @@
                   "enumNames": [
                     "",
                     "Complete lists including nesting indices for all observations (A; recommended during breeding season)",
-                    "Complete list, may include nesting indices (B)",
+                    "Complete list (B)",
                     "Incomplete list (C; for sporadic observations)"
                   ],
                   "range": "MY.completeListTypeEnum",
@@ -622,6 +622,34 @@
                   "range": "xsd:nonNegativeInteger",
                   "subject": "MY.lineTransectSegmentMetersStart",
                   "title": "Biotope's start meter amount from the start of the line"
+                },
+                "lolifeSiteClassification": {
+                  "type": "string",
+                  "enum": [
+                    "",
+                    "MY.lolifeSiteClassificationExcellent",
+                    "MY.lolifeSiteClassificationSuboptimal",
+                    "MY.lolifeSiteClassificationPossible",
+                    "MY.lolifeSiteClassificationCurrentlyUnsuitable",
+                    "MY.lolifeSiteClassificationPermanentlyUnsuitable"
+                  ],
+                  "enumNames": [
+                    "",
+                    "Excellent",
+                    "Suboptimal",
+                    "Possible, not likely",
+                    "Currently not possible",
+                    "Permanently invalid"
+                  ],
+                  "range": "MY.lolifeSiteClassificationEnum",
+                  "subject": "MY.lolifeSiteClassification",
+                  "title": "Site classification"
+                },
+                "lolifeSiteClassificationComments": {
+                  "type": "string",
+                  "range": "xsd:string",
+                  "subject": "MY.lolifeSiteClassificationComments",
+                  "title": "Classification comments"
                 },
                 "observedAreaHectares": {
                   "type": "integer",
@@ -1645,6 +1673,12 @@
               "range": "xsd:string",
               "subject": "MY.namedPlaceNotes",
               "title": "Info about this route"
+            },
+            "nextMonitoringYear": {
+              "type": "integer",
+              "range": "xsd:integer",
+              "subject": "MY.nextMonitoringYear",
+              "title": "Next monitoring year"
             },
             "notes": {
               "type": "string",
@@ -2692,6 +2726,34 @@
                     "range": "xsd:nonNegativeInteger",
                     "subject": "MY.lineTransectSegmentMetersStart",
                     "title": "Biotope's start meter amount from the start of the line"
+                  },
+                  "lolifeSiteClassification": {
+                    "type": "string",
+                    "enum": [
+                      "",
+                      "MY.lolifeSiteClassificationExcellent",
+                      "MY.lolifeSiteClassificationSuboptimal",
+                      "MY.lolifeSiteClassificationPossible",
+                      "MY.lolifeSiteClassificationCurrentlyUnsuitable",
+                      "MY.lolifeSiteClassificationPermanentlyUnsuitable"
+                    ],
+                    "enumNames": [
+                      "",
+                      "Excellent",
+                      "Suboptimal",
+                      "Possible, not likely",
+                      "Currently not possible",
+                      "Permanently invalid"
+                    ],
+                    "range": "MY.lolifeSiteClassificationEnum",
+                    "subject": "MY.lolifeSiteClassification",
+                    "title": "Site classification"
+                  },
+                  "lolifeSiteClassificationComments": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MY.lolifeSiteClassificationComments",
+                    "title": "Classification comments"
                   },
                   "observedAreaHectares": {
                     "type": "integer",
@@ -5844,6 +5906,13 @@
                       "subject": "MY.nestNotes",
                       "title": "Nest notes"
                     },
+                    "nestTreeDiameterInCentimeters": {
+                      "type": "integer",
+                      "exclusiveMinimum": 0,
+                      "range": "xsd:positiveInteger",
+                      "subject": "MY.nestTreeDiameterInCentimeters",
+                      "title": "Diameter of the tree (cm)"
+                    },
                     "nestType": {
                       "type": "string",
                       "enum": [
@@ -6923,14 +6992,18 @@
                             "MY.lolifeDroppingsCount0",
                             "MY.lolifeDroppingsCount1",
                             "MY.lolifeDroppingsCount2",
-                            "MY.lolifeDroppingsCount3"
+                            "MY.lolifeDroppingsCount25",
+                            "MY.lolifeDroppingsCount3",
+                            "MY.lolifeDroppingsCount4"
                           ],
                           "enumNames": [
                             "",
                             "Ei papanoita",
-                            "Muutama",
-                            "Kymmeniä",
-                            "Satoja"
+                            "1-10 (muutamia)",
+                            "10-50 (kymmeniä)",
+                            "50-100",
+                            "100-500 (satoja)",
+                            "yli 500"
                           ],
                           "range": "MY.lolifeDroppingsCountEnum",
                           "subject": "MY.lolifeDroppingsCount",
@@ -8653,7 +8726,7 @@
                   "enumNames": [
                     "",
                     "Complete lists including nesting indices for all observations (A; recommended during breeding season)",
-                    "Complete list, may include nesting indices (B)",
+                    "Complete list (B)",
                     "Incomplete list (C; for sporadic observations)"
                   ],
                   "range": "MY.completeListTypeEnum",
@@ -8746,6 +8819,34 @@
                   "range": "xsd:nonNegativeInteger",
                   "subject": "MY.lineTransectSegmentMetersStart",
                   "title": "Biotope's start meter amount from the start of the line"
+                },
+                "lolifeSiteClassification": {
+                  "type": "string",
+                  "enum": [
+                    "",
+                    "MY.lolifeSiteClassificationExcellent",
+                    "MY.lolifeSiteClassificationSuboptimal",
+                    "MY.lolifeSiteClassificationPossible",
+                    "MY.lolifeSiteClassificationCurrentlyUnsuitable",
+                    "MY.lolifeSiteClassificationPermanentlyUnsuitable"
+                  ],
+                  "enumNames": [
+                    "",
+                    "Excellent",
+                    "Suboptimal",
+                    "Possible, not likely",
+                    "Currently not possible",
+                    "Permanently invalid"
+                  ],
+                  "range": "MY.lolifeSiteClassificationEnum",
+                  "subject": "MY.lolifeSiteClassification",
+                  "title": "Site classification"
+                },
+                "lolifeSiteClassificationComments": {
+                  "type": "string",
+                  "range": "xsd:string",
+                  "subject": "MY.lolifeSiteClassificationComments",
+                  "title": "Classification comments"
                 },
                 "observedAreaHectares": {
                   "type": "integer",
@@ -9769,6 +9870,12 @@
               "range": "xsd:string",
               "subject": "MY.namedPlaceNotes",
               "title": "Info about this route"
+            },
+            "nextMonitoringYear": {
+              "type": "integer",
+              "range": "xsd:integer",
+              "subject": "MY.nextMonitoringYear",
+              "title": "Next monitoring year"
             },
             "notes": {
               "type": "string",
@@ -10816,6 +10923,34 @@
                     "range": "xsd:nonNegativeInteger",
                     "subject": "MY.lineTransectSegmentMetersStart",
                     "title": "Biotope's start meter amount from the start of the line"
+                  },
+                  "lolifeSiteClassification": {
+                    "type": "string",
+                    "enum": [
+                      "",
+                      "MY.lolifeSiteClassificationExcellent",
+                      "MY.lolifeSiteClassificationSuboptimal",
+                      "MY.lolifeSiteClassificationPossible",
+                      "MY.lolifeSiteClassificationCurrentlyUnsuitable",
+                      "MY.lolifeSiteClassificationPermanentlyUnsuitable"
+                    ],
+                    "enumNames": [
+                      "",
+                      "Excellent",
+                      "Suboptimal",
+                      "Possible, not likely",
+                      "Currently not possible",
+                      "Permanently invalid"
+                    ],
+                    "range": "MY.lolifeSiteClassificationEnum",
+                    "subject": "MY.lolifeSiteClassification",
+                    "title": "Site classification"
+                  },
+                  "lolifeSiteClassificationComments": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MY.lolifeSiteClassificationComments",
+                    "title": "Classification comments"
                   },
                   "observedAreaHectares": {
                     "type": "integer",
@@ -13968,6 +14103,13 @@
                       "subject": "MY.nestNotes",
                       "title": "Nest notes"
                     },
+                    "nestTreeDiameterInCentimeters": {
+                      "type": "integer",
+                      "exclusiveMinimum": 0,
+                      "range": "xsd:positiveInteger",
+                      "subject": "MY.nestTreeDiameterInCentimeters",
+                      "title": "Diameter of the tree (cm)"
+                    },
                     "nestType": {
                       "type": "string",
                       "enum": [
@@ -15047,14 +15189,18 @@
                             "MY.lolifeDroppingsCount0",
                             "MY.lolifeDroppingsCount1",
                             "MY.lolifeDroppingsCount2",
-                            "MY.lolifeDroppingsCount3"
+                            "MY.lolifeDroppingsCount25",
+                            "MY.lolifeDroppingsCount3",
+                            "MY.lolifeDroppingsCount4"
                           ],
                           "enumNames": [
                             "",
                             "Ei papanoita",
-                            "Muutama",
-                            "Kymmeniä",
-                            "Satoja"
+                            "1-10 (muutamia)",
+                            "10-50 (kymmeniä)",
+                            "50-100",
+                            "100-500 (satoja)",
+                            "yli 500"
                           ],
                           "range": "MY.lolifeDroppingsCountEnum",
                           "subject": "MY.lolifeDroppingsCount",

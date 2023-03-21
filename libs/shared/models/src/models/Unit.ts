@@ -362,6 +362,7 @@ export interface Unit {
   nativeStatus?: "" | "MY.native" | "MY.nonNative";
   nestCount?: number;
   nestNotes?: string;
+  nestTreeDiameterInCentimeters?: number;
   nestType?:
     | ""
     | "MY.nestTypeTreeCavity"
@@ -764,7 +765,9 @@ export interface Unit {
       | "MY.lolifeDroppingsCount0"
       | "MY.lolifeDroppingsCount1"
       | "MY.lolifeDroppingsCount2"
-      | "MY.lolifeDroppingsCount3";
+      | "MY.lolifeDroppingsCount25"
+      | "MY.lolifeDroppingsCount3"
+      | "MY.lolifeDroppingsCount4";
     lolifeDroppingsQuality?: "" | "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
     lolifeDroppingsType?:
       | ""

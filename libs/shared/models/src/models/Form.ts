@@ -699,6 +699,14 @@ export interface Form {
           lineTransectSegmentCounted?: boolean;
           lineTransectSegmentMetersEnd?: number;
           lineTransectSegmentMetersStart?: number;
+          lolifeSiteClassification?:
+            | ""
+            | "MY.lolifeSiteClassificationExcellent"
+            | "MY.lolifeSiteClassificationSuboptimal"
+            | "MY.lolifeSiteClassificationPossible"
+            | "MY.lolifeSiteClassificationCurrentlyUnsuitable"
+            | "MY.lolifeSiteClassificationPermanentlyUnsuitable";
+          lolifeSiteClassificationComments?: string;
           observedAreaHectares?: number;
           pointCountHabitat?:
             | ""
@@ -954,6 +962,7 @@ export interface Form {
          */
         legUserID?: string[];
         namedPlaceNotes?: string;
+        nextMonitoringYear?: number;
         /**
          * Additional information to the data in each section.
          */
@@ -1324,6 +1333,14 @@ export interface Form {
             lineTransectSegmentCounted?: boolean;
             lineTransectSegmentMetersEnd?: number;
             lineTransectSegmentMetersStart?: number;
+            lolifeSiteClassification?:
+              | ""
+              | "MY.lolifeSiteClassificationExcellent"
+              | "MY.lolifeSiteClassificationSuboptimal"
+              | "MY.lolifeSiteClassificationPossible"
+              | "MY.lolifeSiteClassificationCurrentlyUnsuitable"
+              | "MY.lolifeSiteClassificationPermanentlyUnsuitable";
+            lolifeSiteClassificationComments?: string;
             observedAreaHectares?: number;
             pointCountHabitat?:
               | ""
@@ -2303,6 +2320,7 @@ export interface Form {
             nativeStatus?: "" | "MY.native" | "MY.nonNative";
             nestCount?: number;
             nestNotes?: string;
+            nestTreeDiameterInCentimeters?: number;
             nestType?:
               | ""
               | "MY.nestTypeTreeCavity"
@@ -2724,7 +2742,9 @@ export interface Form {
                 | "MY.lolifeDroppingsCount0"
                 | "MY.lolifeDroppingsCount1"
                 | "MY.lolifeDroppingsCount2"
-                | "MY.lolifeDroppingsCount3";
+                | "MY.lolifeDroppingsCount25"
+                | "MY.lolifeDroppingsCount3"
+                | "MY.lolifeDroppingsCount4";
               lolifeDroppingsQuality?: "" | "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
               lolifeDroppingsType?:
                 | ""
@@ -3247,6 +3267,14 @@ export interface Form {
             lineTransectSegmentCounted?: boolean;
             lineTransectSegmentMetersEnd?: number;
             lineTransectSegmentMetersStart?: number;
+            lolifeSiteClassification?:
+              | ""
+              | "MY.lolifeSiteClassificationExcellent"
+              | "MY.lolifeSiteClassificationSuboptimal"
+              | "MY.lolifeSiteClassificationPossible"
+              | "MY.lolifeSiteClassificationCurrentlyUnsuitable"
+              | "MY.lolifeSiteClassificationPermanentlyUnsuitable";
+            lolifeSiteClassificationComments?: string;
             observedAreaHectares?: number;
             pointCountHabitat?:
               | ""
@@ -4226,6 +4254,7 @@ export interface Form {
             nativeStatus?: "" | "MY.native" | "MY.nonNative";
             nestCount?: number;
             nestNotes?: string;
+            nestTreeDiameterInCentimeters?: number;
             nestType?:
               | ""
               | "MY.nestTypeTreeCavity"
@@ -4647,7 +4676,9 @@ export interface Form {
                 | "MY.lolifeDroppingsCount0"
                 | "MY.lolifeDroppingsCount1"
                 | "MY.lolifeDroppingsCount2"
-                | "MY.lolifeDroppingsCount3";
+                | "MY.lolifeDroppingsCount25"
+                | "MY.lolifeDroppingsCount3"
+                | "MY.lolifeDroppingsCount4";
               lolifeDroppingsQuality?: "" | "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
               lolifeDroppingsType?:
                 | ""

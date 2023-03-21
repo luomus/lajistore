@@ -148,14 +148,18 @@
         "MY.lolifeDroppingsCount0",
         "MY.lolifeDroppingsCount1",
         "MY.lolifeDroppingsCount2",
-        "MY.lolifeDroppingsCount3"
+        "MY.lolifeDroppingsCount25",
+        "MY.lolifeDroppingsCount3",
+        "MY.lolifeDroppingsCount4"
       ],
       "enumNames": [
         "",
         "Ei papanoita",
-        "Muutama",
-        "Kymmeniä",
-        "Satoja"
+        "1-10 (muutamia)",
+        "10-50 (kymmeniä)",
+        "50-100",
+        "100-500 (satoja)",
+        "yli 500"
       ],
       "range": "MY.lolifeDroppingsCountEnum",
       "subject": "MY.lolifeDroppingsCount",

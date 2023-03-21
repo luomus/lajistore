@@ -63,6 +63,14 @@
       "@id": "default:MY.lineTransectSegmentMetersStart",
       "@type": "xsd:nonNegativeInteger"
     },
+    "lolifeSiteClassification": {
+      "@id": "default:MY.lolifeSiteClassification",
+      "@type": "@id"
+    },
+    "lolifeSiteClassificationComments": {
+      "@id": "default:MY.lolifeSiteClassificationComments",
+      "@type": "xsd:string"
+    },
     "observedAreaHectares": {
       "@id": "default:MY.observedAreaHectares",
       "@type": "xsd:nonNegativeInteger"

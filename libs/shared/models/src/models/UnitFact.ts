@@ -44,7 +44,9 @@ export interface UnitFact {
     | "MY.lolifeDroppingsCount0"
     | "MY.lolifeDroppingsCount1"
     | "MY.lolifeDroppingsCount2"
-    | "MY.lolifeDroppingsCount3";
+    | "MY.lolifeDroppingsCount25"
+    | "MY.lolifeDroppingsCount3"
+    | "MY.lolifeDroppingsCount4";
   lolifeDroppingsQuality?: "" | "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
   lolifeDroppingsType?:
     | ""

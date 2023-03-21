@@ -5113,6 +5113,7 @@ type GatheringEvent {
   # Alkuperäislähteen käyttäjätunnus
   legUserID: [String]
   namedPlaceNotes: String
+  nextMonitoringYear: Int
 
   # Additional information to the data in each section.
   notes: String
@@ -5231,6 +5232,8 @@ type GatheringFact {
   lineTransectSegmentCounted: Boolean
   lineTransectSegmentMetersEnd: Int
   lineTransectSegmentMetersStart: Int
+  lolifeSiteClassification: LolifeSiteClassification
+  lolifeSiteClassificationComments: String
   meanTemperature: Int
   observedAreaHectares: Int
   observerCount: Int
@@ -5326,6 +5329,15 @@ enum IceCover {
   WBC_ICECOVERENUM2
   WBC_ICECOVERENUM3
   WBC_ICECOVERENUM4
+}
+
+enum LolifeSiteClassification {
+  _
+  MY_LOLIFESITECLASSIFICATIONEXCELLENT
+  MY_LOLIFESITECLASSIFICATIONSUBOPTIMAL
+  MY_LOLIFESITECLASSIFICATIONPOSSIBLE
+  MY_LOLIFESITECLASSIFICATIONCURRENTLYUNSUITABLE
+  MY_LOLIFESITECLASSIFICATIONPERMANENTLYUNSUITABLE
 }
 
 enum PineConesAtCensus {
@@ -6169,6 +6181,7 @@ type Unit {
   nativeStatus: NativeStatus
   nestCount: Int
   nestNotes: String
+  nestTreeDiameterInCentimeters: Int
   nestType: NestType
 
   # Additional information to the data in each section.
@@ -6975,7 +6988,9 @@ enum LolifeDroppingsCount {
   MY_LOLIFEDROPPINGSCOUNT0
   MY_LOLIFEDROPPINGSCOUNT1
   MY_LOLIFEDROPPINGSCOUNT2
+  MY_LOLIFEDROPPINGSCOUNT25
   MY_LOLIFEDROPPINGSCOUNT3
+  MY_LOLIFEDROPPINGSCOUNT4
 }
 
 enum LolifeDroppingsQuality {
@@ -21473,6 +21488,7 @@ input GatheringEventInput {
   # Alkuperäislähteen käyttäjätunnus
   legUserID: [String]
   namedPlaceNotes: String
+  nextMonitoringYear: Int
 
   # Additional information to the data in each section.
   notes: String
@@ -21540,6 +21556,8 @@ input GatheringFactInput {
   lineTransectSegmentCounted: Boolean
   lineTransectSegmentMetersEnd: Int
   lineTransectSegmentMetersStart: Int
+  lolifeSiteClassification: LolifeSiteClassification
+  lolifeSiteClassificationComments: String
   meanTemperature: Int
   observedAreaHectares: Int
   observerCount: Int
@@ -21901,6 +21919,7 @@ input UnitInput {
   nativeStatus: NativeStatus
   nestCount: Int
   nestNotes: String
+  nestTreeDiameterInCentimeters: Int
   nestType: NestType
 
   # Additional information to the data in each section.

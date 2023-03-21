@@ -51702,6 +51702,10 @@
             "type": "string",
             "title": "Info about this route"
           },
+          "nextMonitoringYear": {
+            "type": "integer",
+            "title": "Next monitoring year"
+          },
           "notes": {
             "type": "string",
             "description": "Additional information to the data in each section.",
@@ -51820,6 +51824,22 @@
             "type": "integer",
             "minimum": 0,
             "title": "Biotope's start meter amount from the start of the line"
+          },
+          "lolifeSiteClassification": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.lolifeSiteClassificationExcellent",
+              "MY.lolifeSiteClassificationSuboptimal",
+              "MY.lolifeSiteClassificationPossible",
+              "MY.lolifeSiteClassificationCurrentlyUnsuitable",
+              "MY.lolifeSiteClassificationPermanentlyUnsuitable"
+            ],
+            "title": "Site classification"
+          },
+          "lolifeSiteClassificationComments": {
+            "type": "string",
+            "title": "Classification comments"
           },
           "observedAreaHectares": {
             "type": "integer",
@@ -58424,6 +58444,12 @@
             "type": "string",
             "title": "Nest notes"
           },
+          "nestTreeDiameterInCentimeters": {
+            "type": "integer",
+            "exclusiveMinimum": true,
+            "title": "Diameter of the tree (cm)",
+            "minimum": 0
+          },
           "nestType": {
             "type": "string",
             "enum": [
@@ -59129,7 +59155,9 @@
               "MY.lolifeDroppingsCount0",
               "MY.lolifeDroppingsCount1",
               "MY.lolifeDroppingsCount2",
-              "MY.lolifeDroppingsCount3"
+              "MY.lolifeDroppingsCount25",
+              "MY.lolifeDroppingsCount3",
+              "MY.lolifeDroppingsCount4"
             ],
             "title": "Droppings count"
           },

@@ -209,7 +209,7 @@
           "enumNames": [
             "",
             "Complete lists including nesting indices for all observations (A; recommended during breeding season)",
-            "Complete list, may include nesting indices (B)",
+            "Complete list (B)",
             "Incomplete list (C; for sporadic observations)"
           ],
           "range": "MY.completeListTypeEnum",
@@ -302,6 +302,34 @@
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.lineTransectSegmentMetersStart",
           "title": "Biotope's start meter amount from the start of the line"
+        },
+        "lolifeSiteClassification": {
+          "type": "string",
+          "enum": [
+            "",
+            "MY.lolifeSiteClassificationExcellent",
+            "MY.lolifeSiteClassificationSuboptimal",
+            "MY.lolifeSiteClassificationPossible",
+            "MY.lolifeSiteClassificationCurrentlyUnsuitable",
+            "MY.lolifeSiteClassificationPermanentlyUnsuitable"
+          ],
+          "enumNames": [
+            "",
+            "Excellent",
+            "Suboptimal",
+            "Possible, not likely",
+            "Currently not possible",
+            "Permanently invalid"
+          ],
+          "range": "MY.lolifeSiteClassificationEnum",
+          "subject": "MY.lolifeSiteClassification",
+          "title": "Site classification"
+        },
+        "lolifeSiteClassificationComments": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "MY.lolifeSiteClassificationComments",
+          "title": "Classification comments"
         },
         "observedAreaHectares": {
           "type": "integer",
@@ -1325,6 +1353,12 @@
       "range": "xsd:string",
       "subject": "MY.namedPlaceNotes",
       "title": "Info about this route"
+    },
+    "nextMonitoringYear": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "MY.nextMonitoringYear",
+      "title": "Next monitoring year"
     },
     "notes": {
       "type": "string",

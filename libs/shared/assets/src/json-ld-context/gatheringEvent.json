@@ -115,6 +115,10 @@
       "@id": "default:MY.namedPlaceNotes",
       "@type": "xsd:string"
     },
+    "nextMonitoringYear": {
+      "@id": "default:MY.nextMonitoringYear",
+      "@type": "xsd:integer"
+    },
     "notes": {
       "@id": "default:MY.notes",
       "@type": "xsd:string"

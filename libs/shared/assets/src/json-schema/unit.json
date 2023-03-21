@@ -1182,6 +1182,13 @@
       "subject": "MY.nestNotes",
       "title": "Nest notes"
     },
+    "nestTreeDiameterInCentimeters": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "range": "xsd:positiveInteger",
+      "subject": "MY.nestTreeDiameterInCentimeters",
+      "title": "Diameter of the tree (cm)"
+    },
     "nestType": {
       "type": "string",
       "enum": [
@@ -2261,14 +2268,18 @@
             "MY.lolifeDroppingsCount0",
             "MY.lolifeDroppingsCount1",
             "MY.lolifeDroppingsCount2",
-            "MY.lolifeDroppingsCount3"
+            "MY.lolifeDroppingsCount25",
+            "MY.lolifeDroppingsCount3",
+            "MY.lolifeDroppingsCount4"
           ],
           "enumNames": [
             "",
             "Ei papanoita",
-            "Muutama",
-            "Kymmeniä",
-            "Satoja"
+            "1-10 (muutamia)",
+            "10-50 (kymmeniä)",
+            "50-100",
+            "100-500 (satoja)",
+            "yli 500"
           ],
           "range": "MY.lolifeDroppingsCountEnum",
           "subject": "MY.lolifeDroppingsCount",
