@@ -236,9 +236,7 @@ export class DataWarehouseService {
   }
 
   private prepareDocument(document: Document, form: Partial<Form>): Document {
-    const removeUnitIfNoCount = typeof form.options?.emptyOnNoCount === 'boolean' ?
-      form.options.emptyOnNoCount :
-      !!form.options?.prepopulateWithInformalTaxonGroups;
+    const removeUnitIfNoCount = !!form.options?.emptyOnNoCount;
 
     if (!document.gatherings) {
       return document;
