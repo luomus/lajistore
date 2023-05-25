@@ -18,9 +18,12 @@ export interface Branch {
    * Is the branch alive or not?
    */
   exists?: boolean;
+  gardenLocationNotes?: string;
   /**
    * Sublocation within the garden area, free-text
    */
   location?: string;
   notes?: string;
+  wgs84Latitude?: string;
+  wgs84Longitude?: string;
 }

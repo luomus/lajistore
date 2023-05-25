@@ -694,6 +694,12 @@
       "subject": "MHL.prepopulateWithInformalTaxonGroups",
       "title": "Prepopulate form data with data from informal taxon group"
     },
+    "prepopulateWithTaxonSets": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MHL.prepopulateWithTaxonSets",
+      "title": "Prepopulate form data with data from taxon sets"
+    },
     "prepopulatedDocument": {
       "type": "object",
       "subject": "MHL.prepopulatedDocument",
@@ -2434,7 +2440,15 @@
                       "MVL.1201",
                       "MX.taxonSetSykeBumblebeeOther",
                       "MX.taxonSetBirdAtlasCommon",
-                      "MX.taxonSetBiomonCompleteListOdonata"
+                      "MX.taxonSetBiomonCompleteListOdonata",
+                      "MX.taxonSetBiomonCompleteListButterflies",
+                      "MX.taxonSetBiomonCompleteListMoths",
+                      "MX.taxonSetBiomonCompleteListBombus",
+                      "MX.taxonSetBiomonCompleteListAmphibiaReptilia",
+                      "MX.taxonSetBiomonCompleteListLargeFlowers",
+                      "MX.taxonSetBiomonCompleteListSubarcticPlants",
+                      "MX.taxonSetBiomonCompleteListMacrolichens",
+                      "MX.taxonSetBiomonCompleteListBracketFungi"
                     ],
                     "enumNames": [
                       "",
@@ -2449,7 +2463,15 @@
                       "Spring monitoring species",
                       "Syken kimalaistutkimus: Ylemmät taksonit",
                       "Bird atlas: common breeders",
-                      "Biomon: Suomen sudenkorennot"
+                      "Biomon: Finnish dragonflies",
+                      "Biomon: Finnish butterflies",
+                      "Biomon: Diurnal moths",
+                      "Biomon: Bumblebee list",
+                      "Biomon: Reptiles and amphibians",
+                      "Biomon: Visible flowering plants",
+                      "Biomon: Fell plants",
+                      "Biomon: Macrolichens",
+                      "Biomon: Bracket fungi"
                     ],
                     "range": "MX.taxonSetEnum",
                     "subject": "MY.censusTaxonSetID",
@@ -5271,7 +5293,15 @@
                         "MVL.1201",
                         "MX.taxonSetSykeBumblebeeOther",
                         "MX.taxonSetBirdAtlasCommon",
-                        "MX.taxonSetBiomonCompleteListOdonata"
+                        "MX.taxonSetBiomonCompleteListOdonata",
+                        "MX.taxonSetBiomonCompleteListButterflies",
+                        "MX.taxonSetBiomonCompleteListMoths",
+                        "MX.taxonSetBiomonCompleteListBombus",
+                        "MX.taxonSetBiomonCompleteListAmphibiaReptilia",
+                        "MX.taxonSetBiomonCompleteListLargeFlowers",
+                        "MX.taxonSetBiomonCompleteListSubarcticPlants",
+                        "MX.taxonSetBiomonCompleteListMacrolichens",
+                        "MX.taxonSetBiomonCompleteListBracketFungi"
                       ],
                       "enumNames": [
                         "",
@@ -5286,7 +5316,15 @@
                         "Spring monitoring species",
                         "Syken kimalaistutkimus: Ylemmät taksonit",
                         "Bird atlas: common breeders",
-                        "Biomon: Suomen sudenkorennot"
+                        "Biomon: Finnish dragonflies",
+                        "Biomon: Finnish butterflies",
+                        "Biomon: Diurnal moths",
+                        "Biomon: Bumblebee list",
+                        "Biomon: Reptiles and amphibians",
+                        "Biomon: Visible flowering plants",
+                        "Biomon: Fell plants",
+                        "Biomon: Macrolichens",
+                        "Biomon: Bracket fungi"
                       ],
                       "range": "MX.taxonSetEnum",
                       "subject": "MY.censusTaxonSetID",
@@ -5600,7 +5638,7 @@
                       ],
                       "range": "MY.atlasCodeEnum",
                       "subject": "MY.atlasCode",
-                      "title": "Breeding code"
+                      "title": "Breeding index"
                     },
                     "batBehavior": {
                       "type": "string",
@@ -5608,15 +5646,13 @@
                         "",
                         "MY.batBehaviorHibernating",
                         "MY.batBehaviorRoosting",
-                        "MY.batBehaviorHunting",
-                        "MY.batBehaviorDead"
+                        "MY.batBehaviorHunting"
                       ],
                       "enumNames": [
                         "",
                         "hibernating",
                         "roosting",
-                        "hunting",
-                        "dead"
+                        "hunting"
                       ],
                       "range": "MY.batBehaviorEnum",
                       "subject": "MY.batBehavior",
@@ -6843,6 +6879,7 @@
                       "type": "boolean",
                       "range": "xsd:boolean",
                       "subject": "MY.primarySpecimen",
+                      "description": "Can be used to highlight one unit as primary specimen/observation if there are many in one document. Only one unit per document can be marked as primary.",
                       "title": "Primary specimen"
                     },
                     "provenance": {
@@ -6877,7 +6914,6 @@
                     "recordBasis": {
                       "type": "string",
                       "enum": [
-                        "",
                         "MY.recordBasisPreservedSpecimen",
                         "MY.recordBasisHumanObservation",
                         "MY.recordBasisHumanObservationSeen",
@@ -6902,7 +6938,6 @@
                         "MY.recordBasisSubfossilSpecimenAmberInclusion"
                       ],
                       "enumNames": [
-                        "",
                         "Preserved specimen",
                         "Observation",
                         "Seen",
@@ -8711,7 +8746,10 @@
                       "subject": "MY.typeSpecimens",
                       "title": "Type identification"
                     }
-                  }
+                  },
+                  "required": [
+                    "recordBasis"
+                  ]
                 },
                 "minItems": 0,
                 "range": "MY.unit",

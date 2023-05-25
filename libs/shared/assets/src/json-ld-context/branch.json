@@ -43,12 +43,24 @@
       "@id": "default:PUU.exists",
       "@type": "xsd:boolean"
     },
+    "gardenLocationNotes": {
+      "@id": "default:PUU.gardenLocationNotes",
+      "@type": "xsd:string"
+    },
     "location": {
       "@id": "default:PUU.location",
       "@type": "xsd:string"
     },
     "notes": {
       "@id": "default:PUU.notes",
+      "@type": "xsd:string"
+    },
+    "wgs84Latitude": {
+      "@id": "default:PUU.wgs84Latitude",
+      "@type": "xsd:string"
+    },
+    "wgs84Longitude": {
+      "@id": "default:PUU.wgs84Longitude",
       "@type": "xsd:string"
     }
   }

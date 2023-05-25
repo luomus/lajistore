@@ -4572,12 +4572,15 @@ type Branch2 {
 
   # Is the branch alive or not?
   exists: Boolean
+  gardenLocationNotes: String
   id: String
 
   # Sublocation within the garden area, free-text
   location: String
   notes: String
   type: String
+  wgs84Latitude: String
+  wgs84Longitude: String
 }
 
 type Checklist2 {
@@ -5562,6 +5565,14 @@ enum CensusTaxonSetID {
   MX_TAXONSETSYKEBUMBLEBEEOTHER
   MX_TAXONSETBIRDATLASCOMMON
   MX_TAXONSETBIOMONCOMPLETELISTODONATA
+  MX_TAXONSETBIOMONCOMPLETELISTBUTTERFLIES
+  MX_TAXONSETBIOMONCOMPLETELISTMOTHS
+  MX_TAXONSETBIOMONCOMPLETELISTBOMBUS
+  MX_TAXONSETBIOMONCOMPLETELISTAMPHIBIAREPTILIA
+  MX_TAXONSETBIOMONCOMPLETELISTLARGEFLOWERS
+  MX_TAXONSETBIOMONCOMPLETELISTSUBARCTICPLANTS
+  MX_TAXONSETBIOMONCOMPLETELISTMACROLICHENS
+  MX_TAXONSETBIOMONCOMPLETELISTBRACKETFUNGI
 }
 
 enum TaxonCensusType {
@@ -6201,6 +6212,8 @@ type Unit {
 
   # Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.
   preservation: [PreservationListItem]
+
+  # Can be used to highlight one unit as primary specimen/observation if there are many in one document. Only one unit per document can be marked as primary.
   primarySpecimen: Boolean
 
   # Origin or source of the garden accession
@@ -6210,7 +6223,7 @@ type Unit {
   publicityRestrictions: PublicityRestrictions
 
   # Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
-  recordBasis: RecordBasis
+  recordBasis: RecordBasis!
 
   # What parts of the record are / have been in storage.
   recordParts: [RecordPartsListItem]
@@ -6314,7 +6327,6 @@ enum BatBehavior {
   MY_BATBEHAVIORHIBERNATING
   MY_BATBEHAVIORROOSTING
   MY_BATBEHAVIORHUNTING
-  MY_BATBEHAVIORDEAD
 }
 
 enum BirdAge {
@@ -6628,7 +6640,6 @@ enum Provenance {
 }
 
 enum RecordBasis {
-  _
   MY_RECORDBASISPRESERVEDSPECIMEN
   MY_RECORDBASISHUMANOBSERVATION
   MY_RECORDBASISHUMANOBSERVATIONSEEN
@@ -7417,6 +7428,7 @@ type FormOptions {
   # Periods that the "NoExistingGatheringsInNamedPlace" validation uses
   periods: [String]
   prepopulateWithInformalTaxonGroups: [String]
+  prepopulateWithTaxonSets: String
   prepopulatedDocument: Document2
   printType: PrintType
 
@@ -8547,6 +8559,7 @@ enum TagsListItem {
   MNP_TAGHABITATFARMLAND
   MNP_TAGHABITATMIRE
   MNP_TAGHABITATMOUNTAIN
+  MNP_TAGSUITABLE
 }
 
 type News2 {
@@ -9119,6 +9132,7 @@ enum Material {
   MF_MATERIALCHROMOSOMES
   MF_MATERIALSHELL
   MF_MATERIALOTHER
+  MF_MATERIALHAIR
 }
 
 enum PreparationType {
@@ -9523,6 +9537,7 @@ enum HasAdminStatusListItem {
   MX_FINNISHENVIRONMENTINSTITUTE2020CONSERVATIONPROJECTVASCULARSPECIES
   MX_CROPWILDRELATIVE
   MX_FINNISHENVIRONMENTINSTITUTE20192021FORESTSPECIES
+  MX_FORESTCENTRESPECIES
   MX_FINLEX160_1997_APPENDIX4
   MX_FINLEX160_1997_APPENDIX4_SPECIALINTEREST
 }
@@ -9557,6 +9572,14 @@ enum IsPartOfSetListItem {
   MX_TAXONSETSYKEBUMBLEBEEOTHER
   MX_TAXONSETBIRDATLASCOMMON
   MX_TAXONSETBIOMONCOMPLETELISTODONATA
+  MX_TAXONSETBIOMONCOMPLETELISTBUTTERFLIES
+  MX_TAXONSETBIOMONCOMPLETELISTMOTHS
+  MX_TAXONSETBIOMONCOMPLETELISTBOMBUS
+  MX_TAXONSETBIOMONCOMPLETELISTAMPHIBIAREPTILIA
+  MX_TAXONSETBIOMONCOMPLETELISTLARGEFLOWERS
+  MX_TAXONSETBIOMONCOMPLETELISTSUBARCTICPLANTS
+  MX_TAXONSETBIOMONCOMPLETELISTMACROLICHENS
+  MX_TAXONSETBIOMONCOMPLETELISTBRACKETFUNGI
 }
 
 enum NaturaAreaSecureLevel {
@@ -21021,12 +21044,15 @@ input Branch2Input {
 
   # Is the branch alive or not?
   exists: Boolean
+  gardenLocationNotes: String
   id: String
 
   # Sublocation within the garden area, free-text
   location: String
   notes: String
   type: String
+  wgs84Latitude: String
+  wgs84Longitude: String
 }
 
 input Checklist2Input {
@@ -21939,6 +21965,8 @@ input UnitInput {
 
   # Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.
   preservation: [PreservationListItem]
+
+  # Can be used to highlight one unit as primary specimen/observation if there are many in one document. Only one unit per document can be marked as primary.
   primarySpecimen: Boolean
 
   # Origin or source of the garden accession
@@ -21948,7 +21976,7 @@ input UnitInput {
   publicityRestrictions: PublicityRestrictions
 
   # Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
-  recordBasis: RecordBasis
+  recordBasis: RecordBasis!
 
   # What parts of the record are / have been in storage.
   recordParts: [RecordPartsListItem]
@@ -22356,6 +22384,7 @@ input FormOptionsInput {
   # Periods that the "NoExistingGatheringsInNamedPlace" validation uses
   periods: [String]
   prepopulateWithInformalTaxonGroups: [String]
+  prepopulateWithTaxonSets: String
   prepopulatedDocument: Document2Input
   printType: PrintType
 

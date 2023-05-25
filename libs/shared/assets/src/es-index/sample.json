@@ -4,7 +4,17 @@
     "index.mapping.ignore_malformed": true,
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
-    "index.mapping.nested_objects.limit": 100000
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
   },
   "mappings": {
     "properties": {
@@ -12,34 +22,41 @@
         "type": "keyword"
       },
       "id": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "useLowercase"
       },
       "@type": {
         "type": "keyword"
       },
       "DNAExtractionInstrument": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "additionalIDs": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "bold": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "collectionID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "condition": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "datasetID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "elutionMedium": {
         "type": "keyword",
@@ -47,11 +64,13 @@
       },
       "event": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "genbank": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "individualsInPreparation": {
         "type": "keyword",
@@ -63,7 +82,8 @@
       },
       "notes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "preparationType": {
         "type": "keyword",
@@ -71,11 +91,13 @@
       },
       "preservation": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "publication": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "quality": {
         "type": "keyword",
@@ -83,23 +105,28 @@
       },
       "qualityCheckDate": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "qualityCheckMethod": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "qualityNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "sampleLocation": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "specimenID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "status": {
         "type": "keyword",
@@ -188,7 +215,8 @@
       },
       "creator": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "dateCreated": {
         "type": "date"
@@ -198,11 +226,13 @@
       },
       "editor": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "owner": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "_meta": {
         "properties": {

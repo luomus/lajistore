@@ -469,6 +469,7 @@
           "MX.finnishEnvironmentInstitute2020conservationProjectVascularSpecies",
           "MX.cropWildRelative",
           "MX.finnishEnvironmentInstitute20192021forestSpecies",
+          "MX.forestCentreSpecies",
           "MX.finlex160_1997_appendix4",
           "MX.finlex160_1997_appendix4_specialInterest"
         ],
@@ -522,6 +523,7 @@
           "Vascular plants – SUMI Project 2022",
           "Crop wild relative (CWR Priority species)",
           "Safeguarding Endangered Species in Forestry – Lajiturva Project 2019–2021",
+          "Species used in the automatic procedure for forest use notifications (MKI-OHKE 2023)",
           "OUTDATED Threatened species (NCD 1997/160, Appendix 4 2013/471)",
           "OUTDATED Species under strict protection (NCD 1997/160, Appendix 4 2013/471)"
         ]
@@ -776,7 +778,15 @@
           "MVL.1201",
           "MX.taxonSetSykeBumblebeeOther",
           "MX.taxonSetBirdAtlasCommon",
-          "MX.taxonSetBiomonCompleteListOdonata"
+          "MX.taxonSetBiomonCompleteListOdonata",
+          "MX.taxonSetBiomonCompleteListButterflies",
+          "MX.taxonSetBiomonCompleteListMoths",
+          "MX.taxonSetBiomonCompleteListBombus",
+          "MX.taxonSetBiomonCompleteListAmphibiaReptilia",
+          "MX.taxonSetBiomonCompleteListLargeFlowers",
+          "MX.taxonSetBiomonCompleteListSubarcticPlants",
+          "MX.taxonSetBiomonCompleteListMacrolichens",
+          "MX.taxonSetBiomonCompleteListBracketFungi"
         ],
         "enumNames": [
           "",
@@ -791,7 +801,15 @@
           "Spring monitoring species",
           "Syken kimalaistutkimus: Ylemmät taksonit",
           "Bird atlas: common breeders",
-          "Biomon: Suomen sudenkorennot"
+          "Biomon: Finnish dragonflies",
+          "Biomon: Finnish butterflies",
+          "Biomon: Diurnal moths",
+          "Biomon: Bumblebee list",
+          "Biomon: Reptiles and amphibians",
+          "Biomon: Visible flowering plants",
+          "Biomon: Fell plants",
+          "Biomon: Macrolichens",
+          "Biomon: Bracket fungi"
         ]
       },
       "minItems": 0,

@@ -23,6 +23,14 @@ export interface TaxonCensus {
     | "MVL.1201"
     | "MX.taxonSetSykeBumblebeeOther"
     | "MX.taxonSetBirdAtlasCommon"
-    | "MX.taxonSetBiomonCompleteListOdonata";
+    | "MX.taxonSetBiomonCompleteListOdonata"
+    | "MX.taxonSetBiomonCompleteListButterflies"
+    | "MX.taxonSetBiomonCompleteListMoths"
+    | "MX.taxonSetBiomonCompleteListBombus"
+    | "MX.taxonSetBiomonCompleteListAmphibiaReptilia"
+    | "MX.taxonSetBiomonCompleteListLargeFlowers"
+    | "MX.taxonSetBiomonCompleteListSubarcticPlants"
+    | "MX.taxonSetBiomonCompleteListMacrolichens"
+    | "MX.taxonSetBiomonCompleteListBracketFungi";
   taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
 }

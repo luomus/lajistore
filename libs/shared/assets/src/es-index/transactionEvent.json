@@ -4,7 +4,17 @@
     "index.mapping.ignore_malformed": true,
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
-    "index.mapping.nested_objects.limit": 100000
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
   },
   "mappings": {
     "properties": {
@@ -12,7 +22,8 @@
         "type": "keyword"
       },
       "id": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "useLowercase"
       },
       "@type": {
         "type": "keyword"
@@ -22,7 +33,8 @@
       },
       "eventHandler": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "eventType": {
         "type": "keyword",
@@ -32,7 +44,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "keyword"
+            "type": "keyword",
+            "normalizer": "useLowercase"
           },
           "@type": {
             "type": "keyword"
@@ -42,18 +55,21 @@
           },
           "collectionID": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "itemCount": {
             "type": "integer"
           },
           "itemID": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "itemLabel": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "itemType": {
             "type": "keyword",
@@ -61,7 +77,8 @@
           },
           "notes": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "status": {
             "type": "keyword",
@@ -71,7 +88,8 @@
       },
       "notes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "numberOfPackages": {
         "type": "integer"

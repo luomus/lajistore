@@ -498,7 +498,15 @@ export interface NamedPlace {
           | "MVL.1201"
           | "MX.taxonSetSykeBumblebeeOther"
           | "MX.taxonSetBirdAtlasCommon"
-          | "MX.taxonSetBiomonCompleteListOdonata";
+          | "MX.taxonSetBiomonCompleteListOdonata"
+          | "MX.taxonSetBiomonCompleteListButterflies"
+          | "MX.taxonSetBiomonCompleteListMoths"
+          | "MX.taxonSetBiomonCompleteListBombus"
+          | "MX.taxonSetBiomonCompleteListAmphibiaReptilia"
+          | "MX.taxonSetBiomonCompleteListLargeFlowers"
+          | "MX.taxonSetBiomonCompleteListSubarcticPlants"
+          | "MX.taxonSetBiomonCompleteListMacrolichens"
+          | "MX.taxonSetBiomonCompleteListBracketFungi";
         taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
       }[];
       temperature?: number;
@@ -1446,7 +1454,15 @@ export interface NamedPlace {
             | "MVL.1201"
             | "MX.taxonSetSykeBumblebeeOther"
             | "MX.taxonSetBirdAtlasCommon"
-            | "MX.taxonSetBiomonCompleteListOdonata";
+            | "MX.taxonSetBiomonCompleteListOdonata"
+            | "MX.taxonSetBiomonCompleteListButterflies"
+            | "MX.taxonSetBiomonCompleteListMoths"
+            | "MX.taxonSetBiomonCompleteListBombus"
+            | "MX.taxonSetBiomonCompleteListAmphibiaReptilia"
+            | "MX.taxonSetBiomonCompleteListLargeFlowers"
+            | "MX.taxonSetBiomonCompleteListSubarcticPlants"
+            | "MX.taxonSetBiomonCompleteListMacrolichens"
+            | "MX.taxonSetBiomonCompleteListBracketFungi";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -1540,12 +1556,7 @@ export interface NamedPlace {
             | "MY.atlasCodeEnum8"
             | "MY.atlasCodeEnum81"
             | "MY.atlasCodeEnum82";
-          batBehavior?:
-            | ""
-            | "MY.batBehaviorHibernating"
-            | "MY.batBehaviorRoosting"
-            | "MY.batBehaviorHunting"
-            | "MY.batBehaviorDead";
+          batBehavior?: "" | "MY.batBehaviorHibernating" | "MY.batBehaviorRoosting" | "MY.batBehaviorHunting";
           beakInMillimeters?: string[];
           birdAge?:
             | ""
@@ -1935,6 +1946,9 @@ export interface NamedPlace {
             | "MY.preservationPlastinated"
             | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
           )[];
+          /**
+           * Can be used to highlight one unit as primary specimen/observation if there are many in one document. Only one unit per document can be marked as primary.
+           */
           primarySpecimen?: boolean;
           /**
            * Origin or source of the garden accession
@@ -1952,8 +1966,7 @@ export interface NamedPlace {
           /**
            * Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
            */
-          recordBasis?:
-            | ""
+          recordBasis:
             | "MY.recordBasisPreservedSpecimen"
             | "MY.recordBasisHumanObservation"
             | "MY.recordBasisHumanObservationSeen"
@@ -3371,7 +3384,15 @@ export interface NamedPlace {
             | "MVL.1201"
             | "MX.taxonSetSykeBumblebeeOther"
             | "MX.taxonSetBirdAtlasCommon"
-            | "MX.taxonSetBiomonCompleteListOdonata";
+            | "MX.taxonSetBiomonCompleteListOdonata"
+            | "MX.taxonSetBiomonCompleteListButterflies"
+            | "MX.taxonSetBiomonCompleteListMoths"
+            | "MX.taxonSetBiomonCompleteListBombus"
+            | "MX.taxonSetBiomonCompleteListAmphibiaReptilia"
+            | "MX.taxonSetBiomonCompleteListLargeFlowers"
+            | "MX.taxonSetBiomonCompleteListSubarcticPlants"
+            | "MX.taxonSetBiomonCompleteListMacrolichens"
+            | "MX.taxonSetBiomonCompleteListBracketFungi";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -3465,12 +3486,7 @@ export interface NamedPlace {
             | "MY.atlasCodeEnum8"
             | "MY.atlasCodeEnum81"
             | "MY.atlasCodeEnum82";
-          batBehavior?:
-            | ""
-            | "MY.batBehaviorHibernating"
-            | "MY.batBehaviorRoosting"
-            | "MY.batBehaviorHunting"
-            | "MY.batBehaviorDead";
+          batBehavior?: "" | "MY.batBehaviorHibernating" | "MY.batBehaviorRoosting" | "MY.batBehaviorHunting";
           beakInMillimeters?: string[];
           birdAge?:
             | ""
@@ -3860,6 +3876,9 @@ export interface NamedPlace {
             | "MY.preservationPlastinated"
             | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
           )[];
+          /**
+           * Can be used to highlight one unit as primary specimen/observation if there are many in one document. Only one unit per document can be marked as primary.
+           */
           primarySpecimen?: boolean;
           /**
            * Origin or source of the garden accession
@@ -3877,8 +3896,7 @@ export interface NamedPlace {
           /**
            * Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
            */
-          recordBasis?:
-            | ""
+          recordBasis:
             | "MY.recordBasisPreservedSpecimen"
             | "MY.recordBasisHumanObservation"
             | "MY.recordBasisHumanObservationSeen"
@@ -5060,7 +5078,15 @@ export interface NamedPlace {
           | "MVL.1201"
           | "MX.taxonSetSykeBumblebeeOther"
           | "MX.taxonSetBirdAtlasCommon"
-          | "MX.taxonSetBiomonCompleteListOdonata";
+          | "MX.taxonSetBiomonCompleteListOdonata"
+          | "MX.taxonSetBiomonCompleteListButterflies"
+          | "MX.taxonSetBiomonCompleteListMoths"
+          | "MX.taxonSetBiomonCompleteListBombus"
+          | "MX.taxonSetBiomonCompleteListAmphibiaReptilia"
+          | "MX.taxonSetBiomonCompleteListLargeFlowers"
+          | "MX.taxonSetBiomonCompleteListSubarcticPlants"
+          | "MX.taxonSetBiomonCompleteListMacrolichens"
+          | "MX.taxonSetBiomonCompleteListBracketFungi";
         taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
       }[];
       temperature?: number;
@@ -6008,7 +6034,15 @@ export interface NamedPlace {
             | "MVL.1201"
             | "MX.taxonSetSykeBumblebeeOther"
             | "MX.taxonSetBirdAtlasCommon"
-            | "MX.taxonSetBiomonCompleteListOdonata";
+            | "MX.taxonSetBiomonCompleteListOdonata"
+            | "MX.taxonSetBiomonCompleteListButterflies"
+            | "MX.taxonSetBiomonCompleteListMoths"
+            | "MX.taxonSetBiomonCompleteListBombus"
+            | "MX.taxonSetBiomonCompleteListAmphibiaReptilia"
+            | "MX.taxonSetBiomonCompleteListLargeFlowers"
+            | "MX.taxonSetBiomonCompleteListSubarcticPlants"
+            | "MX.taxonSetBiomonCompleteListMacrolichens"
+            | "MX.taxonSetBiomonCompleteListBracketFungi";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -6102,12 +6136,7 @@ export interface NamedPlace {
             | "MY.atlasCodeEnum8"
             | "MY.atlasCodeEnum81"
             | "MY.atlasCodeEnum82";
-          batBehavior?:
-            | ""
-            | "MY.batBehaviorHibernating"
-            | "MY.batBehaviorRoosting"
-            | "MY.batBehaviorHunting"
-            | "MY.batBehaviorDead";
+          batBehavior?: "" | "MY.batBehaviorHibernating" | "MY.batBehaviorRoosting" | "MY.batBehaviorHunting";
           beakInMillimeters?: string[];
           birdAge?:
             | ""
@@ -6497,6 +6526,9 @@ export interface NamedPlace {
             | "MY.preservationPlastinated"
             | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
           )[];
+          /**
+           * Can be used to highlight one unit as primary specimen/observation if there are many in one document. Only one unit per document can be marked as primary.
+           */
           primarySpecimen?: boolean;
           /**
            * Origin or source of the garden accession
@@ -6514,8 +6546,7 @@ export interface NamedPlace {
           /**
            * Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
            */
-          recordBasis?:
-            | ""
+          recordBasis:
             | "MY.recordBasisPreservedSpecimen"
             | "MY.recordBasisHumanObservation"
             | "MY.recordBasisHumanObservationSeen"
@@ -7933,7 +7964,15 @@ export interface NamedPlace {
             | "MVL.1201"
             | "MX.taxonSetSykeBumblebeeOther"
             | "MX.taxonSetBirdAtlasCommon"
-            | "MX.taxonSetBiomonCompleteListOdonata";
+            | "MX.taxonSetBiomonCompleteListOdonata"
+            | "MX.taxonSetBiomonCompleteListButterflies"
+            | "MX.taxonSetBiomonCompleteListMoths"
+            | "MX.taxonSetBiomonCompleteListBombus"
+            | "MX.taxonSetBiomonCompleteListAmphibiaReptilia"
+            | "MX.taxonSetBiomonCompleteListLargeFlowers"
+            | "MX.taxonSetBiomonCompleteListSubarcticPlants"
+            | "MX.taxonSetBiomonCompleteListMacrolichens"
+            | "MX.taxonSetBiomonCompleteListBracketFungi";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -8027,12 +8066,7 @@ export interface NamedPlace {
             | "MY.atlasCodeEnum8"
             | "MY.atlasCodeEnum81"
             | "MY.atlasCodeEnum82";
-          batBehavior?:
-            | ""
-            | "MY.batBehaviorHibernating"
-            | "MY.batBehaviorRoosting"
-            | "MY.batBehaviorHunting"
-            | "MY.batBehaviorDead";
+          batBehavior?: "" | "MY.batBehaviorHibernating" | "MY.batBehaviorRoosting" | "MY.batBehaviorHunting";
           beakInMillimeters?: string[];
           birdAge?:
             | ""
@@ -8422,6 +8456,9 @@ export interface NamedPlace {
             | "MY.preservationPlastinated"
             | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
           )[];
+          /**
+           * Can be used to highlight one unit as primary specimen/observation if there are many in one document. Only one unit per document can be marked as primary.
+           */
           primarySpecimen?: boolean;
           /**
            * Origin or source of the garden accession
@@ -8439,8 +8476,7 @@ export interface NamedPlace {
           /**
            * Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
            */
-          recordBasis?:
-            | ""
+          recordBasis:
             | "MY.recordBasisPreservedSpecimen"
             | "MY.recordBasisHumanObservation"
             | "MY.recordBasisHumanObservationSeen"
@@ -9118,6 +9154,7 @@ export interface NamedPlace {
     | "MNP.tagHabitatFarmland"
     | "MNP.tagHabitatMire"
     | "MNP.tagHabitatMountain"
+    | "MNP.tagSuitable"
   )[];
   taxonIDs?: string[];
 }

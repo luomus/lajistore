@@ -4,7 +4,17 @@
     "index.mapping.ignore_malformed": true,
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
-    "index.mapping.nested_objects.limit": 100000
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
   },
   "mappings": {
     "properties": {
@@ -12,7 +22,8 @@
         "type": "keyword"
       },
       "id": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "useLowercase"
       },
       "@type": {
         "type": "keyword"
@@ -23,28 +34,33 @@
       },
       "abbreviation": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "allowedForDwStatistics": {
         "type": "boolean"
       },
       "citation": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "collectionLocation": {
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -52,15 +68,18 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -70,7 +89,8 @@
       },
       "collectionSize": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "collectionType": {
         "type": "keyword",
@@ -80,35 +100,42 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
       "contactEmail": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "coverageBasis": {
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -116,21 +143,25 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
       "dataNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "dataQuality": {
         "type": "keyword",
@@ -140,15 +171,18 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -159,15 +193,18 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -175,47 +212,57 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
       "digitizedSize": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "downloadRequestHandler": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "editNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "gbifDoi": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "geographicCoverage": {
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -223,21 +270,25 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
       "intellectualOwner": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "intellectualRights": {
         "type": "keyword",
@@ -252,11 +303,13 @@
       },
       "language": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "metadataCreator": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "metadataStatus": {
         "type": "keyword",
@@ -266,41 +319,49 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
       "notes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "onlineUrl": {
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
       "personResponsible": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "publicAccess": {
         "type": "boolean"
@@ -309,15 +370,18 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -329,35 +393,42 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
       "shareToGbif": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "taxonomicCoverage": {
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -365,25 +436,30 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
       "typesSize": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "creator": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "dateCreated": {
         "type": "date"
@@ -393,11 +469,13 @@
       },
       "editor": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "owner": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "publicityRestrictions": {
         "type": "keyword",

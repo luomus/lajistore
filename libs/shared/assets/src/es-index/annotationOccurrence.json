@@ -4,7 +4,17 @@
     "index.mapping.ignore_malformed": true,
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
-    "index.mapping.nested_objects.limit": 100000
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
   },
   "mappings": {
     "properties": {
@@ -12,38 +22,46 @@
         "type": "keyword"
       },
       "id": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "useLowercase"
       },
       "@type": {
         "type": "keyword"
       },
       "countryVerbatim": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "dateBegin": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "dateEnd": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "locality": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "municipalityVerbatim": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "taxonId": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "taxonVerbatim": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "wgs84centerPointLat": {
         "type": "float"

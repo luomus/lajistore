@@ -4,7 +4,17 @@
     "index.mapping.ignore_malformed": true,
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
-    "index.mapping.nested_objects.limit": 100000
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
   },
   "mappings": {
     "properties": {
@@ -12,22 +22,26 @@
         "type": "keyword"
       },
       "id": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "useLowercase"
       },
       "@type": {
         "type": "keyword"
       },
       "DBH": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "DNASampleLocation": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "abundanceString": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "abundanceUnit": {
         "type": "keyword",
@@ -35,25 +49,29 @@
       },
       "additionalIDs": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "adultIndividualCount": {
         "type": "integer"
       },
       "age": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "ageNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "alive": {
         "type": "boolean"
       },
       "ankleInMillimeters": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "areaInSquareMeters": {
         "type": "integer"
@@ -68,7 +86,8 @@
       },
       "beakInMillimeters": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "birdAge": {
         "type": "keyword",
@@ -76,7 +95,8 @@
       },
       "birdBehavior": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "birdPlumage": {
         "type": "keyword",
@@ -90,23 +110,28 @@
       },
       "causeOfDeath": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "checklistID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "chemistry": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "count": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "decayStage": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "distance": {
         "type": "keyword",
@@ -125,39 +150,48 @@
       },
       "genotype": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "gonadInMillimeters": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "growthMediumName": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "growthOtherConditions": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "growthTemperature": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "hasIdentification": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "hasSubUnit": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "hostID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "hostInformalNameString": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "indirectObservationType": {
         "type": "keyword",
@@ -168,23 +202,28 @@
       },
       "infestation": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "informalNameString": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "informalTaxonGroup": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "informalTaxonGroups": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "infrasubspecificSubdivision": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "isPartOf": {
         "type": "keyword",
@@ -195,7 +234,8 @@
       },
       "keywords": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "larvaIndividualCount": {
         "type": "integer"
@@ -206,7 +246,8 @@
       },
       "lengthInMillimeters": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "lifeStage": {
         "type": "keyword",
@@ -214,14 +255,16 @@
       },
       "lifeStageDescription": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "likelyMigrant": {
         "type": "boolean"
       },
       "macroscopy": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "maleIndividualCount": {
         "type": "integer"
@@ -309,7 +352,8 @@
       },
       "microscopy": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "movingDirection": {
         "type": "keyword",
@@ -317,11 +361,13 @@
       },
       "movingStatus": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "mutant": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "nativeStatus": {
         "type": "keyword",
@@ -332,7 +378,8 @@
       },
       "nestNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "nestTreeDiameterInCentimeters": {
         "type": "integer"
@@ -343,7 +390,8 @@
       },
       "notes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "pairCount": {
         "type": "integer"
@@ -361,15 +409,18 @@
       },
       "populationAbundance": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "preparations": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "preservation": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "primarySpecimen": {
         "type": "boolean"
@@ -384,11 +435,13 @@
       },
       "recordParts": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "ring": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "samplingMethod": {
         "type": "keyword",
@@ -396,7 +449,8 @@
       },
       "samplingMethodNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "seedMaturity": {
         "type": "keyword",
@@ -412,11 +466,13 @@
       },
       "sexNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "shortHandText": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "smell": {
         "type": "keyword",
@@ -424,11 +480,13 @@
       },
       "smellNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "stratigraphyVerbatim": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "substrateClassification": {
         "type": "keyword",
@@ -440,27 +498,33 @@
       },
       "substrateNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "substrateSpecies": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "substrateSpeciesID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "substrateSpeciesInformalNameString": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "substrateTreeClassification": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "tailInMillimeters": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "taste": {
         "type": "keyword",
@@ -468,7 +532,8 @@
       },
       "tasteNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "taxonConfidence": {
         "type": "keyword",
@@ -484,7 +549,8 @@
           },
           "autocompleteSelectedTaxonID": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "glowWormMicrohabitat": {
             "type": "keyword",
@@ -534,7 +600,8 @@
           },
           "pointCountFlock": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "runningWaterInVicinity": {
             "type": "boolean"
@@ -586,7 +653,8 @@
       "unitGathering": {
         "properties": {
           "id": {
-            "type": "keyword"
+            "type": "keyword",
+            "normalizer": "useLowercase"
           },
           "@type": {
             "type": "keyword"
@@ -607,25 +675,30 @@
           },
           "habitatDescription": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "habitatIUCN": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "substrate": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
       "unitType": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "weightInGrams": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "wild": {
         "type": "keyword",
@@ -633,15 +706,18 @@
       },
       "wingInMillimeters": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "audio": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "images": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "publicityRestrictions": {
         "type": "keyword",
@@ -651,7 +727,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "keyword"
+            "type": "keyword",
+            "normalizer": "useLowercase"
           },
           "@type": {
             "type": "keyword"
@@ -664,19 +741,23 @@
           },
           "associatedObservationTaxa": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "author": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "det": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "detDate": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "detMethod": {
             "type": "keyword",
@@ -684,27 +765,33 @@
           },
           "detVerbatim": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "genusQualifier": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "identificationBasis": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "identificationNotes": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "infraAuthor": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "infraEpithet": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "infraRank": {
             "type": "keyword",
@@ -712,7 +799,8 @@
           },
           "infrasubspecificSubdivision": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "isPartOf": {
             "type": "keyword",
@@ -723,23 +811,28 @@
           },
           "preferredIdentification": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sec": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "speciesQualifier": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "taxon": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "taxonID": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "taxonRank": {
             "type": "keyword",
@@ -747,15 +840,18 @@
           },
           "taxonSpecifier": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "taxonURI": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "taxonVerbatim": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "publicityRestrictions": {
             "type": "keyword",
@@ -770,7 +866,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "keyword"
+            "type": "keyword",
+            "normalizer": "useLowercase"
           },
           "@type": {
             "type": "keyword"
@@ -784,27 +881,33 @@
           },
           "typeAuthor": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "typeBasionymePubl": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "typeNotes": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "typePubl": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "typeSeriesID": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "typeSpecies": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "typeStatus": {
             "type": "keyword",
@@ -812,11 +915,13 @@
           },
           "typeSubspecies": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "typeSubspeciesAuthor": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "typeVerification": {
             "type": "keyword",
@@ -824,11 +929,13 @@
           },
           "typif": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "typifDate": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "publicityRestrictions": {
             "type": "keyword",

@@ -4,7 +4,17 @@
     "index.mapping.ignore_malformed": true,
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
-    "index.mapping.nested_objects.limit": 100000
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
   },
   "mappings": {
     "properties": {
@@ -12,22 +22,26 @@
         "type": "keyword"
       },
       "id": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "useLowercase"
       },
       "@type": {
         "type": "keyword"
       },
       "addedTags": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "annotationByPerson": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "annotationBySystem": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "annotationClass": {
         "type": "keyword",
@@ -39,7 +53,8 @@
       },
       "censusAnnotation": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "created": {
         "type": "date"
@@ -53,7 +68,8 @@
       "identification": {
         "properties": {
           "id": {
-            "type": "keyword"
+            "type": "keyword",
+            "normalizer": "useLowercase"
           },
           "@type": {
             "type": "keyword"
@@ -66,19 +82,23 @@
           },
           "associatedObservationTaxa": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "author": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "det": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "detDate": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "detMethod": {
             "type": "keyword",
@@ -86,27 +106,33 @@
           },
           "detVerbatim": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "genusQualifier": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "identificationBasis": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "identificationNotes": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "infraAuthor": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "infraEpithet": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "infraRank": {
             "type": "keyword",
@@ -114,7 +140,8 @@
           },
           "infrasubspecificSubdivision": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "isPartOf": {
             "type": "keyword",
@@ -125,23 +152,28 @@
           },
           "preferredIdentification": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sec": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "speciesQualifier": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "taxon": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "taxonID": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "taxonRank": {
             "type": "keyword",
@@ -149,15 +181,18 @@
           },
           "taxonSpecifier": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "taxonURI": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "taxonVerbatim": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "publicityRestrictions": {
             "type": "keyword",
@@ -174,41 +209,50 @@
       },
       "lineTransectAnnotation": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "notes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "occurrenceAtTimeOfAnnotation": {
         "properties": {
           "countryVerbatim": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "dateBegin": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "dateEnd": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "locality": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "municipalityVerbatim": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "taxonId": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "taxonVerbatim": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "wgs84centerPointLat": {
             "type": "float"
@@ -220,19 +264,23 @@
       },
       "opinion": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "removedTags": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "rootID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "targetID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "type": {
         "type": "keyword",
@@ -240,14 +288,16 @@
       },
       "createdBySystem": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "deleted": {
         "type": "boolean"
       },
       "deletedByPerson": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "deletedDateTime": {
         "type": "date"

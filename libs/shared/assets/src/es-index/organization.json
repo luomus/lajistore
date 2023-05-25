@@ -4,7 +4,17 @@
     "index.mapping.ignore_malformed": true,
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
-    "index.mapping.nested_objects.limit": 100000
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
   },
   "mappings": {
     "properties": {
@@ -12,18 +22,21 @@
         "type": "keyword"
       },
       "id": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "useLowercase"
       },
       "@type": {
         "type": "keyword"
       },
       "URL": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "abbreviation": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "abbreviationExplanation": {
         "type": "keyword",
@@ -31,63 +44,76 @@
       },
       "ad": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "contentContact": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "country": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "datasetID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "dateOrdersDue": {
         "type": "date"
       },
       "editNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "email": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "fax": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "hidden": {
         "type": "boolean"
       },
       "locality": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "logo": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "notes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "organizationLevel1": {
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -95,15 +121,18 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -111,15 +140,18 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -127,45 +159,55 @@
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
       "phone": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "postOfficeBox": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "postalCode": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "region": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "streetAddress": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "contentContactID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "creator": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "dateCreated": {
         "type": "date"
@@ -175,11 +217,13 @@
       },
       "editor": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "owner": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "_meta": {
         "properties": {

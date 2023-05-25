@@ -169,7 +169,8 @@
         "MF.materialSection",
         "MF.materialChromosomes",
         "MF.materialShell",
-        "MF.materialOther"
+        "MF.materialOther",
+        "MF.materialHair"
       ],
       "enumNames": [
         "",
@@ -189,7 +190,7 @@
         "Blood",
         "Leg",
         "Skin",
-        "Feather",
+        "Feather(s)",
         "Egg(s)",
         "Egg contents",
         "Genomic DNA",
@@ -204,7 +205,8 @@
         "Section",
         "Chromosomes",
         "Shell",
-        "Other"
+        "Other",
+        "Hair"
       ],
       "range": "MF.materialEnum",
       "subject": "MF.material",

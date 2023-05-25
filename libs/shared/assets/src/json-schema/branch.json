@@ -44,6 +44,12 @@
       "description": "Is the branch alive or not?",
       "title": "Exists"
     },
+    "gardenLocationNotes": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "PUU.gardenLocationNotes",
+      "title": "Garden location notes"
+    },
     "location": {
       "type": "string",
       "range": "xsd:string",
@@ -56,6 +62,18 @@
       "range": "xsd:string",
       "subject": "PUU.notes",
       "title": "Notes"
+    },
+    "wgs84Latitude": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "PUU.wgs84Latitude",
+      "title": "Latitude (WGS 84)"
+    },
+    "wgs84Longitude": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "PUU.wgs84Longitude",
+      "title": "Longitude (WGS 84)"
     }
   },
   "required": [

@@ -80,12 +80,7 @@ export interface Unit {
     | "MY.atlasCodeEnum8"
     | "MY.atlasCodeEnum81"
     | "MY.atlasCodeEnum82";
-  batBehavior?:
-    | ""
-    | "MY.batBehaviorHibernating"
-    | "MY.batBehaviorRoosting"
-    | "MY.batBehaviorHunting"
-    | "MY.batBehaviorDead";
+  batBehavior?: "" | "MY.batBehaviorHibernating" | "MY.batBehaviorRoosting" | "MY.batBehaviorHunting";
   beakInMillimeters?: string[];
   birdAge?:
     | ""
@@ -475,6 +470,9 @@ export interface Unit {
     | "MY.preservationPlastinated"
     | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
   )[];
+  /**
+   * Can be used to highlight one unit as primary specimen/observation if there are many in one document. Only one unit per document can be marked as primary.
+   */
   primarySpecimen?: boolean;
   /**
    * Origin or source of the garden accession
@@ -492,8 +490,7 @@ export interface Unit {
   /**
    * Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
    */
-  recordBasis?:
-    | ""
+  recordBasis:
     | "MY.recordBasisPreservedSpecimen"
     | "MY.recordBasisHumanObservation"
     | "MY.recordBasisHumanObservationSeen"

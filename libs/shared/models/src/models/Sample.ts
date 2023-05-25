@@ -85,7 +85,8 @@ export interface Sample {
     | "MF.materialSection"
     | "MF.materialChromosomes"
     | "MF.materialShell"
-    | "MF.materialOther";
+    | "MF.materialOther"
+    | "MF.materialHair";
   /**
    * Additional information about the preparation/sample
    */

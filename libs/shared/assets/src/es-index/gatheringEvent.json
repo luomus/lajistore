@@ -4,7 +4,17 @@
     "index.mapping.ignore_malformed": true,
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
-    "index.mapping.nested_objects.limit": 100000
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
   },
   "mappings": {
     "properties": {
@@ -12,7 +22,8 @@
         "type": "keyword"
       },
       "id": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "useLowercase"
       },
       "@type": {
         "type": "keyword"
@@ -58,7 +69,8 @@
         "properties": {
           "completeListTaxonID": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "completeListType": {
             "type": "keyword",
@@ -105,7 +117,8 @@
           },
           "lolifeSiteClassificationComments": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "observedAreaHectares": {
             "type": "integer"
@@ -145,7 +158,8 @@
           },
           "ykjSquareNumber": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "ACAFLAonAlder": {
             "type": "integer"
@@ -237,7 +251,8 @@
           },
           "descriptionBiotopeF": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "feedingStationCount": {
             "type": "integer"
@@ -378,7 +393,8 @@
           },
           "wayOfTravelNotes": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "wind": {
             "type": "keyword",
@@ -396,25 +412,29 @@
       },
       "leg": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "legPublic": {
         "type": "boolean"
       },
       "legUserID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "namedPlaceNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "nextMonitoringYear": {
         "type": "integer"
       },
       "notes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "rainIntensity": {
         "type": "keyword",
@@ -428,7 +448,8 @@
       },
       "startDistanceFromNECorner": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "startPointDeviation": {
         "type": "integer"
@@ -438,7 +459,8 @@
         "properties": {
           "censusTaxonID": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "censusTaxonSetID": {
             "type": "keyword",
@@ -461,11 +483,13 @@
       },
       "timeEnd": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "timeStart": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "_meta": {
         "properties": {

@@ -4,7 +4,17 @@
     "index.mapping.ignore_malformed": true,
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
-    "index.mapping.nested_objects.limit": 100000
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
   },
   "mappings": {
     "properties": {
@@ -12,14 +22,16 @@
         "type": "keyword"
       },
       "id": {
-        "type": "keyword"
+        "type": "keyword",
+        "normalizer": "useLowercase"
       },
       "@type": {
         "type": "keyword"
       },
       "IRCC": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "availableForGeneticResearch": {
         "type": "keyword",
@@ -27,57 +39,69 @@
       },
       "availableForGeneticResearchNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "away": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "collectionID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "correspondenceHeaderOrganizationCode": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "correspondentOrganization": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "correspondentPerson": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "dueDate": {
         "type": "date"
       },
       "editNotes": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "externalTransactionID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "geneticResourceAcquisitionCountry": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "geneticResourceAcquisitionDate": {
         "type": "date"
       },
       "geneticResourceDescription": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "geneticResourceRightsAndObligations": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "geneticResourceSource": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "geneticResourceType": {
         "type": "keyword",
@@ -88,21 +112,25 @@
       },
       "ids": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "internalRemarks": {
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -112,53 +140,64 @@
       },
       "localPerson": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "localPersonEmail": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "localResearcher": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "material": {
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
       "missing": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "oldLoanID": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "publicRemarks": {
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -171,21 +210,25 @@
       },
       "returned": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "sentParcels": {
         "properties": {
           "en": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "fi": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "sv": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },
@@ -197,7 +240,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "keyword"
+            "type": "keyword",
+            "normalizer": "useLowercase"
           },
           "@type": {
             "type": "keyword"
@@ -210,7 +254,8 @@
           },
           "eventHandler": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "eventType": {
             "type": "keyword",
@@ -220,7 +265,8 @@
             "type": "object",
             "properties": {
               "id": {
-                "type": "keyword"
+                "type": "keyword",
+                "normalizer": "useLowercase"
               },
               "@type": {
                 "type": "keyword"
@@ -230,18 +276,21 @@
               },
               "collectionID": {
                 "type": "keyword",
-                "ignore_above": 200
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
               },
               "itemCount": {
                 "type": "integer"
               },
               "itemID": {
                 "type": "keyword",
-                "ignore_above": 200
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
               },
               "itemLabel": {
                 "type": "keyword",
-                "ignore_above": 200
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
               },
               "itemType": {
                 "type": "keyword",
@@ -249,7 +298,8 @@
               },
               "notes": {
                 "type": "keyword",
-                "ignore_above": 200
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
               },
               "status": {
                 "type": "keyword",
@@ -259,7 +309,8 @@
           },
           "notes": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "numberOfPackages": {
             "type": "integer"
@@ -295,7 +346,8 @@
       },
       "damaged": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "damagedOther": {
         "type": "integer"
@@ -308,7 +360,8 @@
       },
       "creator": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "dateCreated": {
         "type": "date"
@@ -318,11 +371,13 @@
       },
       "editor": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "owner": {
         "type": "keyword",
-        "ignore_above": 200
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "publicityRestrictions": {
         "type": "keyword",
@@ -332,7 +387,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "keyword"
+            "type": "keyword",
+            "normalizer": "useLowercase"
           },
           "@type": {
             "type": "keyword"
@@ -345,11 +401,13 @@
           },
           "permitFile": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "permitNotes": {
             "type": "keyword",
-            "ignore_above": 200
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "permitStartDate": {
             "type": "date"

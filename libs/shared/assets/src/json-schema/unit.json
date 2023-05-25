@@ -206,7 +206,7 @@
       ],
       "range": "MY.atlasCodeEnum",
       "subject": "MY.atlasCode",
-      "title": "Breeding code"
+      "title": "Breeding index"
     },
     "batBehavior": {
       "type": "string",
@@ -214,15 +214,13 @@
         "",
         "MY.batBehaviorHibernating",
         "MY.batBehaviorRoosting",
-        "MY.batBehaviorHunting",
-        "MY.batBehaviorDead"
+        "MY.batBehaviorHunting"
       ],
       "enumNames": [
         "",
         "hibernating",
         "roosting",
-        "hunting",
-        "dead"
+        "hunting"
       ],
       "range": "MY.batBehaviorEnum",
       "subject": "MY.batBehavior",
@@ -1449,6 +1447,7 @@
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.primarySpecimen",
+      "description": "Can be used to highlight one unit as primary specimen/observation if there are many in one document. Only one unit per document can be marked as primary.",
       "title": "Primary specimen"
     },
     "provenance": {
@@ -1483,7 +1482,6 @@
     "recordBasis": {
       "type": "string",
       "enum": [
-        "",
         "MY.recordBasisPreservedSpecimen",
         "MY.recordBasisHumanObservation",
         "MY.recordBasisHumanObservationSeen",
@@ -1508,7 +1506,6 @@
         "MY.recordBasisSubfossilSpecimenAmberInclusion"
       ],
       "enumNames": [
-        "",
         "Preserved specimen",
         "Observation",
         "Seen",
@@ -3317,5 +3314,8 @@
       "subject": "MY.typeSpecimens",
       "title": "Type identification"
     }
-  }
+  },
+  "required": [
+    "recordBasis"
+  ]
 }

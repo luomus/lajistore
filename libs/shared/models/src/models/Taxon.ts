@@ -198,6 +198,7 @@ export interface Taxon {
     | "MX.finnishEnvironmentInstitute2020conservationProjectVascularSpecies"
     | "MX.cropWildRelative"
     | "MX.finnishEnvironmentInstitute20192021forestSpecies"
+    | "MX.forestCentreSpecies"
     | "MX.finlex160_1997_appendix4"
     | "MX.finlex160_1997_appendix4_specialInterest"
   )[];
@@ -247,6 +248,14 @@ export interface Taxon {
     | "MX.taxonSetSykeBumblebeeOther"
     | "MX.taxonSetBirdAtlasCommon"
     | "MX.taxonSetBiomonCompleteListOdonata"
+    | "MX.taxonSetBiomonCompleteListButterflies"
+    | "MX.taxonSetBiomonCompleteListMoths"
+    | "MX.taxonSetBiomonCompleteListBombus"
+    | "MX.taxonSetBiomonCompleteListAmphibiaReptilia"
+    | "MX.taxonSetBiomonCompleteListLargeFlowers"
+    | "MX.taxonSetBiomonCompleteListSubarcticPlants"
+    | "MX.taxonSetBiomonCompleteListMacrolichens"
+    | "MX.taxonSetBiomonCompleteListBracketFungi"
   )[];
   /**
    * Eliön elinkierto
