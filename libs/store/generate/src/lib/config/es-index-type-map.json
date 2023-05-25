@@ -1,9 +1,9 @@
 {
-  "id": { "type": "keyword" },
+  "id": { "type": "keyword", "normalizer": "useLowercase" },
   "@context": { "type": "keyword" },
   "@type": { "type": "keyword" },
-  "string": { "type": "keyword", "ignore_above": 200 },
-  "xsd:string": { "type": "keyword", "ignore_above": 200 },
+  "string": { "type": "keyword", "ignore_above": 200, "normalizer": "useLowercase" },
+  "xsd:string": { "type": "keyword", "ignore_above": 200, "normalizer": "useLowercase" },
   "xsd:integer": { "type": "integer" },
   "xsd:decimal": { "type": "float" },
   "xsd:boolean": { "type": "boolean" },
