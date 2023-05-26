@@ -73,8 +73,8 @@
       "minItems": 0,
       "range": "GX.dataset",
       "subject": "MF.datasetID",
-      "description": "Datasets for the preparation/sample. For specimen level datasets, use the dataset field in the basic information section (document level).",
-      "title": "Preparation/sample dataset(s)"
+      "description": "Tag for the preparation/sample. For specimen level tags, use the tag field in the basic information section (document level).",
+      "title": "Preparation/sample tag(s)"
     },
     "elutionMedium": {
       "type": "string",

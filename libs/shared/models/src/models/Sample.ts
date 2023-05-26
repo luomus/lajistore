@@ -30,7 +30,7 @@ export interface Sample {
    */
   condition?: string;
   /**
-   * Datasets for the preparation/sample. For specimen level datasets, use the dataset field in the basic information section (document level).
+   * Tag for the preparation/sample. For specimen level tags, use the tag field in the basic information section (document level).
    */
   datasetID?: string[];
   /**

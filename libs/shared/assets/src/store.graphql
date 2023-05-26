@@ -7315,6 +7315,7 @@ enum Category {
   MHL_CATEGORYTAXONOMICGROUP
   MHL_CATEGORYBIRDMONITORINGSCHEMES
   MHL_CATEGORYCITIZENSCIENCE
+  MHL_CATEGORYBIOMONCOMPLETELISTS
 }
 
 enum Language {
@@ -9024,7 +9025,7 @@ type Sample2 {
   # Name of the instrument or device used for DNA extraction
   dNAExtractionInstrument: String
 
-  # Datasets for the preparation/sample. For specimen level datasets, use the dataset field in the basic information section (document level).
+  # Tag for the preparation/sample. For specimen level tags, use the tag field in the basic information section (document level).
   datasetID: [String]
   dateCreated: String
   dateEdited: String
@@ -23344,7 +23345,7 @@ input Sample2Input {
   # Name of the instrument or device used for DNA extraction
   dNAExtractionInstrument: String
 
-  # Datasets for the preparation/sample. For specimen level datasets, use the dataset field in the basic information section (document level).
+  # Tag for the preparation/sample. For specimen level tags, use the tag field in the basic information section (document level).
   datasetID: [String]
   dateCreated: String
   dateEdited: String

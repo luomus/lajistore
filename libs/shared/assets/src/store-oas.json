@@ -49857,7 +49857,8 @@
               "MHL.categorySurvey",
               "MHL.categoryTaxonomicGroup",
               "MHL.categoryBirdMonitoringSchemes",
-              "MHL.categoryCitizenScience"
+              "MHL.categoryCitizenScience",
+              "MHL.categoryBiomonCompleteLists"
             ],
             "title": "Category"
           },
@@ -55536,8 +55537,8 @@
               "type": "string"
             },
             "minItems": 0,
-            "description": "Datasets for the preparation/sample. For specimen level datasets, use the dataset field in the basic information section (document level).",
-            "title": "Preparation/sample dataset(s)"
+            "description": "Tag for the preparation/sample. For specimen level tags, use the tag field in the basic information section (document level).",
+            "title": "Preparation/sample tag(s)"
           },
           "elutionMedium": {
             "type": "string",

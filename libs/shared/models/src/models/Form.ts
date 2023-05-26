@@ -16,7 +16,8 @@ export interface Form {
     | "MHL.categorySurvey"
     | "MHL.categoryTaxonomicGroup"
     | "MHL.categoryBirdMonitoringSchemes"
-    | "MHL.categoryCitizenScience";
+    | "MHL.categoryCitizenScience"
+    | "MHL.categoryBiomonCompleteLists";
   /**
    * Id for the collection to where observation useing this form are connected
    */

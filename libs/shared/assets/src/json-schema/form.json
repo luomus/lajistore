@@ -38,7 +38,8 @@
         "MHL.categorySurvey",
         "MHL.categoryTaxonomicGroup",
         "MHL.categoryBirdMonitoringSchemes",
-        "MHL.categoryCitizenScience"
+        "MHL.categoryCitizenScience",
+        "MHL.categoryBiomonCompleteLists"
       ],
       "enumNames": [
         "",
@@ -46,7 +47,8 @@
         "Other surveys",
         "Customized forms",
         "Bird monitoring schemes",
-        "Citizen science"
+        "Citizen science",
+        "MHL.categoryBiomonCompleteLists"
       ],
       "range": "MHL.categoryEnum",
       "subject": "MHL.category",
