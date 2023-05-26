@@ -58652,6 +58652,7 @@
           "recordBasis": {
             "type": "string",
             "enum": [
+              "",
               "MY.recordBasisPreservedSpecimen",
               "MY.recordBasisHumanObservation",
               "MY.recordBasisHumanObservationSeen",
@@ -59097,10 +59098,7 @@
               "$ref": "#/components/schemas/typeSpecimen"
             }
           }
-        },
-        "required": [
-          "recordBasis"
-        ]
+        }
       },
       "unitFact": {
         "type": "object",

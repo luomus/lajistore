@@ -6914,6 +6914,7 @@
                     "recordBasis": {
                       "type": "string",
                       "enum": [
+                        "",
                         "MY.recordBasisPreservedSpecimen",
                         "MY.recordBasisHumanObservation",
                         "MY.recordBasisHumanObservationSeen",
@@ -6938,6 +6939,7 @@
                         "MY.recordBasisSubfossilSpecimenAmberInclusion"
                       ],
                       "enumNames": [
+                        "",
                         "Preserved specimen",
                         "Observation",
                         "Seen",
@@ -8746,10 +8748,7 @@
                       "subject": "MY.typeSpecimens",
                       "title": "Type identification"
                     }
-                  },
-                  "required": [
-                    "recordBasis"
-                  ]
+                  }
                 },
                 "minItems": 0,
                 "range": "MY.unit",

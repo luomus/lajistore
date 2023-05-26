@@ -1275,7 +1275,8 @@ export interface Gathering {
     /**
      * Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
      */
-    recordBasis:
+    recordBasis?:
+      | ""
       | "MY.recordBasisPreservedSpecimen"
       | "MY.recordBasisHumanObservation"
       | "MY.recordBasisHumanObservationSeen"

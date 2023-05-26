@@ -6223,7 +6223,7 @@ type Unit {
   publicityRestrictions: PublicityRestrictions
 
   # Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
-  recordBasis: RecordBasis!
+  recordBasis: RecordBasis
 
   # What parts of the record are / have been in storage.
   recordParts: [RecordPartsListItem]
@@ -6640,6 +6640,7 @@ enum Provenance {
 }
 
 enum RecordBasis {
+  _
   MY_RECORDBASISPRESERVEDSPECIMEN
   MY_RECORDBASISHUMANOBSERVATION
   MY_RECORDBASISHUMANOBSERVATIONSEEN
@@ -21977,7 +21978,7 @@ input UnitInput {
   publicityRestrictions: PublicityRestrictions
 
   # Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
-  recordBasis: RecordBasis!
+  recordBasis: RecordBasis
 
   # What parts of the record are / have been in storage.
   recordParts: [RecordPartsListItem]
