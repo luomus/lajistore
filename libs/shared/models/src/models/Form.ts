@@ -2228,7 +2228,7 @@ export interface Form {
               | "MY.epochOrSeriesTriassic";
             lengthInMillimeters?: string[];
             /**
-             * Life stage of the specimen
+             * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.
              */
             lifeStage?:
               | ""
@@ -4168,7 +4168,7 @@ export interface Form {
               | "MY.epochOrSeriesTriassic";
             lengthInMillimeters?: string[];
             /**
-             * Life stage of the specimen
+             * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.
              */
             lifeStage?:
               | ""

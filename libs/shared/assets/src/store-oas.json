@@ -58382,7 +58382,7 @@
               "MY.lifeStageMarks",
               "MY.lifeStageTriungulin"
             ],
-            "description": "Life stage of the specimen",
+            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
             "title": "Life stage"
           },
           "lifeStageDescription": {
