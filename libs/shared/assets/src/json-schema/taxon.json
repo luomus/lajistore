@@ -512,8 +512,8 @@
           "Government Decree on Invasive Alien Species of National Concern (1725/2015)",
           "Invasive alien species of Union concern (EU 2016/1141; 2017/1263; 2019/1262; 2022/1203)",
           "Quarantine plant pest",
-          "Quality plant pests",
-          "Other plant pests",
+          "Quality plant pest",
+          "Other plant pest",
           "Finland’s National Strategy on Invasive Alien Species (GR 2012)",
           "Other invasive species",
           "Government Decree on Managing the Risk Caused by Alien Species (704/2019)",
@@ -729,7 +729,8 @@
         "MX.invasiveSporadic",
         "MX.invasiveNotYetInFinland",
         "MX.invasiveEstablishmentUnknown",
-        "MX.invasiveEstablishmentAccidental"
+        "MX.invasiveEstablishmentAccidental",
+        "MX.invasiveNonWild"
       ],
       "enumNames": [
         "",
@@ -737,7 +738,8 @@
         "Sporadic",
         "Does not occur in Finland",
         "Unknown",
-        "Temporary"
+        "Temporary",
+        "Does not occur in the wild in Finland"
       ],
       "range": "MX.invasiveSpeciesEstablishmentStatuses",
       "subject": "MX.invasiveSpeciesEstablishment",

@@ -125,6 +125,10 @@ import { Reserve } from './Reserve'
 export type { Reserve }
 import { Sample } from './Sample'
 export type { Sample }
+import { SpecimenTransaction } from './SpecimenTransaction'
+export type { SpecimenTransaction }
+import { SpecimentTransactionEvent } from './SpecimentTransactionEvent'
+export type { SpecimentTransactionEvent }
 import { SubUnit } from './SubUnit'
 export type { SubUnit }
 import { Tag } from './Tag'
@@ -225,6 +229,8 @@ export type StoreObject = BibliographicResource
    | RegionalStatus
    | Reserve
    | Sample
+   | SpecimenTransaction
+   | SpecimentTransactionEvent
    | SubUnit
    | Tag
    | Taxon
@@ -572,6 +578,16 @@ export function isReserve(data: unknown): data is Reserve {
 export function isSample(data: unknown): data is Sample {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MF.sample'
+  );
+}
+export function isSpecimenTransaction(data: unknown): data is SpecimenTransaction {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'HRX.specimenTransaction'
+  );
+}
+export function isSpecimentTransactionEvent(data: unknown): data is SpecimentTransactionEvent {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'HRX.specimentTransactionEvent'
   );
 }
 export function isSubUnit(data: unknown): data is SubUnit {

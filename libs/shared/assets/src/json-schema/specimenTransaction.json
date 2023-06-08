@@ -1,0 +1,450 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "subject": "HRX.specimenTransaction",
+  "additionalProperties": false,
+  "title": "Transaction class",
+  "description": "",
+  "properties": {
+    "@context": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "@context",
+      "title": "Context for the Transaction class"
+    },
+    "id": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "id",
+      "title": "Id for the Transaction class"
+    },
+    "@type": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "@type",
+      "title": "Type for the Transaction class"
+    },
+    "availableForGeneticResearch": {
+      "type": "string",
+      "enum": [
+        "",
+        "HRX.availableForGeneticResearchYes",
+        "HRX.availableForGeneticResearchWithRestrictions",
+        "HRX.availableForGeneticResearchNo"
+      ],
+      "enumNames": [
+        "",
+        "Yes, freely",
+        "Yes, with restrictions",
+        "No"
+      ],
+      "range": "HRX.availableForGeneticResearchEnum",
+      "subject": "HRX.availableForGeneticResearch",
+      "description": "If you choose \"Yes, with restrictions\", explain the restrictions in the following field \"Rights and obligations\".",
+      "title": "Is genetic research allowed on the genetic resource(s)?"
+    },
+    "awayCount": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "HRX.awayCount",
+      "title": "Away"
+    },
+    "awayIDs": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "HRX.awayIDs",
+      "title": "Away"
+    },
+    "collectionID": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.collectionID",
+      "description": "For statiscal purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.",
+      "title": "Collection"
+    },
+    "correspondentOrganization": {
+      "type": "string",
+      "range": "MOS.organization",
+      "subject": "HRX.correspondentOrganization",
+      "description": "Select the correspondent organization from a list. If not found on the list, you need to add the new organization first.",
+      "title": "Correspondent organization"
+    },
+    "correspondentPerson": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.correspondentPerson",
+      "description": "Name of the corresponding person. If the transaction goes to a private person, write his/her postal address here.",
+      "title": "Corresponding person/contact info"
+    },
+    "correspondentResearcher": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.correspondentResearcher",
+      "title": "Receiving researcher"
+    },
+    "damagedCount": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "HRX.damagedCount",
+      "title": "Damaged"
+    },
+    "damagedIDs": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "HRX.damagedIDs",
+      "title": "Damaged"
+    },
+    "dueDate": {
+      "type": "string",
+      "format": "date",
+      "range": "xsd:date",
+      "subject": "HRX.dueDate",
+      "description": "Date when the loan needs to be returned.",
+      "title": "Due date"
+    },
+    "externalID": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.externalID",
+      "title": "External transaction ID"
+    },
+    "geneticResourceAcquisitionCountry": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.geneticResourceAcquisitionCountry",
+      "description": "Country where the genetic resource or traditional knowledge was acquired from, provider country, country of origin. List of countries in Kotka is based on ISO 3166 Country Codes -standard and may differ from the country list in ABSCH.",
+      "title": "Acquisition country"
+    },
+    "geneticResourceAcquisitionDate": {
+      "type": "string",
+      "format": "date",
+      "range": "xsd:date",
+      "subject": "HRX.geneticResourceAcquisitionDate",
+      "description": "Date when the genetic resource or traditional knowledge was aqcuired.",
+      "title": "Acquisition date"
+    },
+    "geneticResourceDescription": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.geneticResourceDescription",
+      "description": "Description of the genetic resource or traditional knowledge (possible identifiers, taxa, number of specimens, region etc.). Instruction source EU DECLARE User manual and QA.",
+      "title": "Description"
+    },
+    "geneticResourceRightsAndObligations": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.geneticResourceRightsAndObligations",
+      "description": "Presence or absence of rights and obligations relating to access and benefit sharing, including rights and obligations regarding subsequent applications and commercialization. Instruction source EU DECLARE user manual and QA.",
+      "title": "Rights and obligations"
+    },
+    "geneticResourceSource": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.geneticResourceSource",
+      "description": "Person or legal entity from whom the user obtained the genetic resources directly, i.e. the previous actor in the value chain. Often a museum or other organization. If a genetic resource is obtained directly from the provider country, the name of the country should be provided. Instruction source EU DECLARE User manual and QA.",
+      "title": "Source"
+    },
+    "geneticResourceType": {
+      "type": "string",
+      "enum": [
+        "",
+        "HRX.geneticResourceTypeAnimal",
+        "HRX.geneticResourceTypePlant",
+        "HRX.geneticResourceTypeFungus",
+        "HRX.geneticResourceTypeMicrobe",
+        "HRX.geneticResourceTypeSoil",
+        "HRX.geneticResourceTypeAqua"
+      ],
+      "enumNames": [
+        "",
+        "Animal",
+        "Plant",
+        "Fungus",
+        "Microbe",
+        "Soil",
+        "Aqua"
+      ],
+      "range": "HRX.geneticResourceTypeEnum",
+      "subject": "HRX.geneticResourceType",
+      "description": "Choose the type of the genetic resource for statistical and reporting purposes.",
+      "title": "Type of resource"
+    },
+    "hasIRCC": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "HRX.hasIRCC",
+      "description": "Whether the resource has an IRCC number or not. If not, more information needs to be filled in.",
+      "title": "Do you have IRCC number?"
+    },
+    "incomingReceived": {
+      "type": "string",
+      "format": "date",
+      "range": "xsd:date",
+      "subject": "HRX.incomingReceived",
+      "title": "Date received"
+    },
+    "incomingReturned": {
+      "type": "string",
+      "format": "date",
+      "range": "xsd:date",
+      "subject": "HRX.incomingReturned",
+      "title": "Date returned"
+    },
+    "internalRemarks": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.internalRemarks",
+      "description": "Private remarks that are shown only in Kotka and not to the corresponding organisation.",
+      "title": "Internal remarks"
+    },
+    "legacyID": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.legacyID",
+      "title": "Old transaction number"
+    },
+    "localHandler": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.localHandler",
+      "title": "Handler"
+    },
+    "localPerson": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.localPerson",
+      "description": "Responsible person in our museum.",
+      "title": "Person responsible"
+    },
+    "localPersonEmail": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.localPersonEmail",
+      "description": "Responsible person's email in our museum.",
+      "title": "Email"
+    },
+    "localResearcher": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.localResearcher",
+      "description": "For incoming loans, name of the researcher receiving the loan.",
+      "title": "Receiving researcher"
+    },
+    "material": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.material",
+      "description": "Description of the material included in this transaction.",
+      "title": "Material"
+    },
+    "missingCount": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "HRX.missingCount",
+      "title": "Missing"
+    },
+    "missingIDs": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "HRX.missingIDs",
+      "title": "Missing"
+    },
+    "numberOfParcels": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.numberOfParcels",
+      "description": "In how many parcels was the transaction sent",
+      "title": "Number of parcels"
+    },
+    "outgoingReturned": {
+      "type": "string",
+      "format": "date",
+      "range": "xsd:date",
+      "subject": "HRX.outgoingReturned",
+      "title": "Outgoing loan returned"
+    },
+    "outgoingSent": {
+      "type": "string",
+      "format": "date",
+      "range": "xsd:date",
+      "subject": "HRX.outgoingSent",
+      "title": "Outgoing loan sent"
+    },
+    "permits": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "HRA.permitClass",
+      "subject": "HRX.permits",
+      "title": "Permits"
+    },
+    "publicRemarks": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.publicRemarks",
+      "description": "Remarks that are shown to both parties of the transaction.",
+      "title": "Public remarks"
+    },
+    "receiptReturned": {
+      "type": "string",
+      "format": "date",
+      "range": "xsd:date",
+      "subject": "HRX.receiptReturned",
+      "description": "When signed loan receipt was received from the loanee",
+      "title": "Receipt returned"
+    },
+    "requestReceived": {
+      "type": "string",
+      "format": "date",
+      "range": "xsd:date",
+      "subject": "HRX.requestReceived",
+      "description": "When loan request, loan, gift or exchange was received here.",
+      "title": "Date requested"
+    },
+    "resourceImported": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.resourceImported",
+      "description": "Are you importing genetic resources, traditional knowledge associated to genetic resources or both?",
+      "title": "What are you importing?"
+    },
+    "returnedCount": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "HRX.returnedCount",
+      "title": "Returned"
+    },
+    "returnedIDs": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "HRX.returnedIDs",
+      "title": "Returned"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "",
+        "HRX.statusInProcess",
+        "HRX.statusOutstanding",
+        "HRX.statusClosed"
+      ],
+      "enumNames": [
+        "",
+        "In process",
+        "Outstanding",
+        "Closed"
+      ],
+      "range": "HRX.statusEnum",
+      "subject": "HRX.status",
+      "description": "Whether the transaction is closed, outstanding or in process.",
+      "title": "Transaction status"
+    },
+    "transactionEvents": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "HRX.specimentTransactionEvent",
+      "subject": "HRX.transactionEvents",
+      "title": "Transaction events"
+    },
+    "transportMethod": {
+      "type": "string",
+      "enum": [
+        "",
+        "HRX.transportMethodPriority",
+        "HRX.transportMethodEconomy",
+        "HRX.transportMethodCourier",
+        "HRX.transportMethodCarried",
+        "HRX.transportMethodOther",
+        "HRX.transportMethodImage"
+      ],
+      "enumNames": [
+        "",
+        "Priority mail",
+        "Economy mail",
+        "Courier, see remarks",
+        "Carried, see remarks",
+        "Other, see remarks",
+        "Image(s) (virtual loan)"
+      ],
+      "range": "HRX.transportMethodEnum",
+      "subject": "HRX.transportMethod",
+      "title": "Sent by"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "HRX.typeLoanIncoming",
+        "HRX.typeGiftIncoming",
+        "HRX.typeExchangeIncoming",
+        "HRX.typeLoanOutgoing",
+        "HRX.typeGiftOutgoing",
+        "HRX.typeExchangeOutgoing",
+        "HRX.typeFieldCollection",
+        "HRX.typeImportNotice",
+        "HRX.typeABSNegotiations",
+        "HRX.typeVirtualLoanOutgoing"
+      ],
+      "enumNames": [
+        "Loan, incoming",
+        "Gift, incoming",
+        "Exchange, incoming",
+        "Loan, outgoing",
+        "Gift, outgoing",
+        "Exchange, outgoing",
+        "Field collection",
+        "Import notice only (maahantuonti-ilmoitus)",
+        "ABS negotiations",
+        "Virtual loan, outgoing"
+      ],
+      "range": "HRX.typeEnum",
+      "subject": "HRX.type",
+      "description": "What kind of transaction this is.",
+      "title": "Transaction type"
+    },
+    "underNagoya": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.underNagoya",
+      "description": "Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?",
+      "title": "Does Nagoya protocol apply?"
+    },
+    "owner": {
+      "type": "string",
+      "range": "MOS.organization",
+      "subject": "MZ.owner",
+      "description": "Team or organisation that owns the record and can edit it.",
+      "title": "Owner of record"
+    }
+  },
+  "required": [
+    "requestReceived",
+    "type"
+  ]
+}

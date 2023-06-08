@@ -231,7 +231,8 @@ export interface Taxon {
     | "MX.invasiveSporadic"
     | "MX.invasiveNotYetInFinland"
     | "MX.invasiveEstablishmentUnknown"
-    | "MX.invasiveEstablishmentAccidental";
+    | "MX.invasiveEstablishmentAccidental"
+    | "MX.invasiveNonWild";
   isPartOf?: string;
   isPartOfInformalTaxonGroup?: string[];
   isPartOfSet?: (

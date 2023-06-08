@@ -36104,6 +36104,1146 @@
         }
       }
     },
+    "/specimenTransaction": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimenTransaction"
+        ],
+        "operationId": "listspecimenTransaction",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of Transaction class objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Transaction class.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/specimenTransaction"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimenTransaction"
+        ],
+        "operationId": "storespecimenTransaction",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/specimenTransaction"
+              }
+            }
+          }
+        },
+        "description": "Store Transaction class object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored Transaction class object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/specimenTransaction"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimenTransaction"
+        ],
+        "operationId": "patchspecimenTransaction",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch transaction class (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching transaction class.",
+        "responses": {
+          "200": {
+            "description": "A list of  Transaction class.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/specimenTransaction"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/specimenTransaction/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimenTransaction"
+        ],
+        "operationId": "searchspecimenTransaction",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of Transaction class objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Transaction class.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/specimenTransaction"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/specimenTransaction/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimenTransaction"
+        ],
+        "operationId": "getspecimenTransaction",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Transaction class",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a Transaction class.",
+        "responses": {
+          "200": {
+            "description": "a Transaction class.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/specimenTransaction"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimenTransaction"
+        ],
+        "operationId": "updatespecimenTransaction",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Transaction class",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/specimenTransaction"
+              }
+            }
+          }
+        },
+        "description": "Store Transaction class",
+        "responses": {
+          "200": {
+            "description": "Stored Transaction class",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/specimenTransaction"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimenTransaction"
+        ],
+        "operationId": "deletespecimenTransaction",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Transaction class",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete Transaction class",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/specimenTransaction/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOfspecimenTransaction",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Transaction class",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "specimenTransaction"
+        ],
+        "description": "Return a Transaction class.",
+        "responses": {
+          "200": {
+            "description": "a Transaction class.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/specimenTransaction/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimenTransaction"
+        ],
+        "operationId": "versionspecimenTransaction",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Transaction class",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the Transaction class",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a Transaction class.",
+        "responses": {
+          "200": {
+            "description": "a Transaction class.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/specimenTransaction"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/specimentTransactionEvent": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimentTransactionEvent"
+        ],
+        "operationId": "listspecimentTransactionEvent",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of Transaction Event objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Transaction Event.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/specimentTransactionEvent"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimentTransactionEvent"
+        ],
+        "operationId": "storespecimentTransactionEvent",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/specimentTransactionEvent"
+              }
+            }
+          }
+        },
+        "description": "Store Transaction Event object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored Transaction Event object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/specimentTransactionEvent"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimentTransactionEvent"
+        ],
+        "operationId": "patchspecimentTransactionEvent",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch transaction event (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching transaction event.",
+        "responses": {
+          "200": {
+            "description": "A list of  Transaction Event.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/specimentTransactionEvent"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/specimentTransactionEvent/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimentTransactionEvent"
+        ],
+        "operationId": "searchspecimentTransactionEvent",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of Transaction Event objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Transaction Event.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/specimentTransactionEvent"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/specimentTransactionEvent/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimentTransactionEvent"
+        ],
+        "operationId": "getspecimentTransactionEvent",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Transaction Event",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a Transaction Event.",
+        "responses": {
+          "200": {
+            "description": "a Transaction Event.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/specimentTransactionEvent"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimentTransactionEvent"
+        ],
+        "operationId": "updatespecimentTransactionEvent",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Transaction Event",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/specimentTransactionEvent"
+              }
+            }
+          }
+        },
+        "description": "Store Transaction Event",
+        "responses": {
+          "200": {
+            "description": "Stored Transaction Event",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/specimentTransactionEvent"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimentTransactionEvent"
+        ],
+        "operationId": "deletespecimentTransactionEvent",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Transaction Event",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete Transaction Event",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/specimentTransactionEvent/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOfspecimentTransactionEvent",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Transaction Event",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "specimentTransactionEvent"
+        ],
+        "description": "Return a Transaction Event.",
+        "responses": {
+          "200": {
+            "description": "a Transaction Event.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/specimentTransactionEvent/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "specimentTransactionEvent"
+        ],
+        "operationId": "versionspecimentTransactionEvent",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Transaction Event",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the Transaction Event",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a Transaction Event.",
+        "responses": {
+          "200": {
+            "description": "a Transaction Event.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/specimentTransactionEvent"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/subUnit": {
       "get": {
         "security": [
@@ -46761,6 +47901,18 @@
                       "$ref": "#/components/schemas/sample"
                     }
                   },
+                  "specimenTransaction": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/specimenTransaction"
+                    }
+                  },
+                  "specimentTransactionEvent": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/specimentTransactionEvent"
+                    }
+                  },
                   "subUnit": {
                     "type": "array",
                     "items": {
@@ -47261,6 +48413,18 @@
                       "type": "array",
                       "items": {
                         "$ref": "#/components/schemas/sample"
+                      }
+                    },
+                    "specimenTransaction": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/specimenTransaction"
+                      }
+                    },
+                    "specimentTransactionEvent": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/specimentTransactionEvent"
                       }
                     },
                     "subUnit": {
@@ -55807,6 +56971,347 @@
           "specimenID"
         ]
       },
+      "specimenTransaction": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the Transaction class"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the Transaction class"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the Transaction class"
+          },
+          "availableForGeneticResearch": {
+            "type": "string",
+            "enum": [
+              "",
+              "HRX.availableForGeneticResearchYes",
+              "HRX.availableForGeneticResearchWithRestrictions",
+              "HRX.availableForGeneticResearchNo"
+            ],
+            "description": "If you choose \"Yes, with restrictions\", explain the restrictions in the following field \"Rights and obligations\".",
+            "title": "Is genetic research allowed on the genetic resource(s)?"
+          },
+          "awayCount": {
+            "type": "integer",
+            "title": "Away"
+          },
+          "awayIDs": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Away"
+          },
+          "collectionID": {
+            "type": "string",
+            "description": "For statiscal purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.",
+            "title": "Collection"
+          },
+          "correspondentOrganization": {
+            "type": "string",
+            "description": "Select the correspondent organization from a list. If not found on the list, you need to add the new organization first.",
+            "title": "Correspondent organization"
+          },
+          "correspondentPerson": {
+            "type": "string",
+            "description": "Name of the corresponding person. If the transaction goes to a private person, write his/her postal address here.",
+            "title": "Corresponding person/contact info"
+          },
+          "correspondentResearcher": {
+            "type": "string",
+            "title": "Receiving researcher"
+          },
+          "damagedCount": {
+            "type": "integer",
+            "title": "Damaged"
+          },
+          "damagedIDs": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Damaged"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date when the loan needs to be returned.",
+            "title": "Due date"
+          },
+          "externalID": {
+            "type": "string",
+            "title": "External transaction ID"
+          },
+          "geneticResourceAcquisitionCountry": {
+            "type": "string",
+            "description": "Country where the genetic resource or traditional knowledge was acquired from, provider country, country of origin. List of countries in Kotka is based on ISO 3166 Country Codes -standard and may differ from the country list in ABSCH.",
+            "title": "Acquisition country"
+          },
+          "geneticResourceAcquisitionDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date when the genetic resource or traditional knowledge was aqcuired.",
+            "title": "Acquisition date"
+          },
+          "geneticResourceDescription": {
+            "type": "string",
+            "description": "Description of the genetic resource or traditional knowledge (possible identifiers, taxa, number of specimens, region etc.). Instruction source EU DECLARE User manual and QA.",
+            "title": "Description"
+          },
+          "geneticResourceRightsAndObligations": {
+            "type": "string",
+            "description": "Presence or absence of rights and obligations relating to access and benefit sharing, including rights and obligations regarding subsequent applications and commercialization. Instruction source EU DECLARE user manual and QA.",
+            "title": "Rights and obligations"
+          },
+          "geneticResourceSource": {
+            "type": "string",
+            "description": "Person or legal entity from whom the user obtained the genetic resources directly, i.e. the previous actor in the value chain. Often a museum or other organization. If a genetic resource is obtained directly from the provider country, the name of the country should be provided. Instruction source EU DECLARE User manual and QA.",
+            "title": "Source"
+          },
+          "geneticResourceType": {
+            "type": "string",
+            "enum": [
+              "",
+              "HRX.geneticResourceTypeAnimal",
+              "HRX.geneticResourceTypePlant",
+              "HRX.geneticResourceTypeFungus",
+              "HRX.geneticResourceTypeMicrobe",
+              "HRX.geneticResourceTypeSoil",
+              "HRX.geneticResourceTypeAqua"
+            ],
+            "description": "Choose the type of the genetic resource for statistical and reporting purposes.",
+            "title": "Type of resource"
+          },
+          "hasIRCC": {
+            "type": "boolean",
+            "description": "Whether the resource has an IRCC number or not. If not, more information needs to be filled in.",
+            "title": "Do you have IRCC number?"
+          },
+          "incomingReceived": {
+            "type": "string",
+            "format": "date",
+            "title": "Date received"
+          },
+          "incomingReturned": {
+            "type": "string",
+            "format": "date",
+            "title": "Date returned"
+          },
+          "internalRemarks": {
+            "type": "string",
+            "description": "Private remarks that are shown only in Kotka and not to the corresponding organisation.",
+            "title": "Internal remarks"
+          },
+          "legacyID": {
+            "type": "string",
+            "title": "Old transaction number"
+          },
+          "localHandler": {
+            "type": "string",
+            "title": "Handler"
+          },
+          "localPerson": {
+            "type": "string",
+            "description": "Responsible person in our museum.",
+            "title": "Person responsible"
+          },
+          "localPersonEmail": {
+            "type": "string",
+            "description": "Responsible person's email in our museum.",
+            "title": "Email"
+          },
+          "localResearcher": {
+            "type": "string",
+            "description": "For incoming loans, name of the researcher receiving the loan.",
+            "title": "Receiving researcher"
+          },
+          "material": {
+            "type": "string",
+            "description": "Description of the material included in this transaction.",
+            "title": "Material"
+          },
+          "missingCount": {
+            "type": "integer",
+            "title": "Missing"
+          },
+          "missingIDs": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Missing"
+          },
+          "numberOfParcels": {
+            "type": "string",
+            "description": "In how many parcels was the transaction sent",
+            "title": "Number of parcels"
+          },
+          "outgoingReturned": {
+            "type": "string",
+            "format": "date",
+            "title": "Outgoing loan returned"
+          },
+          "outgoingSent": {
+            "type": "string",
+            "format": "date",
+            "title": "Outgoing loan sent"
+          },
+          "permits": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Permits"
+          },
+          "publicRemarks": {
+            "type": "string",
+            "description": "Remarks that are shown to both parties of the transaction.",
+            "title": "Public remarks"
+          },
+          "receiptReturned": {
+            "type": "string",
+            "format": "date",
+            "description": "When signed loan receipt was received from the loanee",
+            "title": "Receipt returned"
+          },
+          "requestReceived": {
+            "type": "string",
+            "format": "date",
+            "description": "When loan request, loan, gift or exchange was received here.",
+            "title": "Date requested"
+          },
+          "resourceImported": {
+            "type": "string",
+            "description": "Are you importing genetic resources, traditional knowledge associated to genetic resources or both?",
+            "title": "What are you importing?"
+          },
+          "returnedCount": {
+            "type": "integer",
+            "title": "Returned"
+          },
+          "returnedIDs": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Returned"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "",
+              "HRX.statusInProcess",
+              "HRX.statusOutstanding",
+              "HRX.statusClosed"
+            ],
+            "description": "Whether the transaction is closed, outstanding or in process.",
+            "title": "Transaction status"
+          },
+          "transactionEvents": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Transaction events"
+          },
+          "transportMethod": {
+            "type": "string",
+            "enum": [
+              "",
+              "HRX.transportMethodPriority",
+              "HRX.transportMethodEconomy",
+              "HRX.transportMethodCourier",
+              "HRX.transportMethodCarried",
+              "HRX.transportMethodOther",
+              "HRX.transportMethodImage"
+            ],
+            "title": "Sent by"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "HRX.typeLoanIncoming",
+              "HRX.typeGiftIncoming",
+              "HRX.typeExchangeIncoming",
+              "HRX.typeLoanOutgoing",
+              "HRX.typeGiftOutgoing",
+              "HRX.typeExchangeOutgoing",
+              "HRX.typeFieldCollection",
+              "HRX.typeImportNotice",
+              "HRX.typeABSNegotiations",
+              "HRX.typeVirtualLoanOutgoing"
+            ],
+            "description": "What kind of transaction this is.",
+            "title": "Transaction type"
+          },
+          "underNagoya": {
+            "type": "string",
+            "description": "Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?",
+            "title": "Does Nagoya protocol apply?"
+          },
+          "owner": {
+            "type": "string",
+            "description": "Team or organisation that owns the record and can edit it.",
+            "title": "Owner of record"
+          }
+        },
+        "required": [
+          "requestReceived",
+          "type"
+        ]
+      },
+      "specimentTransactionEvent": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the Transaction Event"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the Transaction Event"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the Transaction Event"
+          },
+          "eventDate": {
+            "type": "string",
+            "format": "date",
+            "title": "Date"
+          },
+          "eventDocumentIDs": {
+            "type": "string",
+            "title": "Specimen IDs"
+          },
+          "eventHandler": {
+            "type": "string",
+            "title": "Handler"
+          },
+          "eventNotes": {
+            "type": "string",
+            "title": "Notes"
+          }
+        }
+      },
       "subUnit": {
         "type": "object",
         "properties": {
@@ -56435,7 +57940,8 @@
               "MX.invasiveSporadic",
               "MX.invasiveNotYetInFinland",
               "MX.invasiveEstablishmentUnknown",
-              "MX.invasiveEstablishmentAccidental"
+              "MX.invasiveEstablishmentAccidental",
+              "MX.invasiveNonWild"
             ],
             "title": "Establishment"
           },
@@ -57947,8 +59453,8 @@
               "MY.abundanceUnitPairCount",
               "MY.abundanceUnitNest",
               "MY.abundanceUnitBreedingSite",
+              "MY.abundanceUnitFeedingSite",
               "MY.abundanceUnitColony",
-              "MY.abundanceUnitQueen",
               "MY.abundanceUnitFruitbody",
               "MY.abundanceUnitSprout",
               "MY.abundanceUnitHummock",
@@ -57956,6 +59462,7 @@
               "MY.abundanceUnitFlower",
               "MY.abundanceUnitSpot",
               "MY.abundanceUnitTrunk",
+              "MY.abundanceUnitQueen",
               "MY.abundanceUnitShell",
               "MY.abundanceUnitDroppings",
               "MY.abundanceUnitMarks",
@@ -60279,6 +61786,14 @@
     {
       "name": "sample",
       "description": "Specimen sample"
+    },
+    {
+      "name": "specimenTransaction",
+      "description": "Transaction class"
+    },
+    {
+      "name": "specimentTransactionEvent",
+      "description": "Transaction Event"
     },
     {
       "name": "subUnit",

@@ -1,0 +1,215 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "http://tun.fi/",
+    "@base": "http://tun.fi/",
+    "default": "http://tun.fi/",
+    "luomus": "http://id.luomus.fi/",
+    "zmuo": "http://id.zmuo.oulu.fi/",
+    "herbo": "http://id.herb.oulu.fi/",
+    "utu": "http://mus.utu.fi/",
+    "xsd": "https://www.w3.org/TR/xmlschema-2/#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xml": "http://www.w3.org/XML/1998/namespace#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dwc": "http://rs.tdwg.org/dwc/terms/",
+    "dc": "http://purl.org/dc/terms/",
+    "dwctype": "http://rs.tdwg.org/dwc/dwctype/",
+    "abcd": "http://www.tdwg.org/schemas/abcd/2.06#",
+    "naturforskaren": "http://naturforskaren.se/",
+    "eol": "http://eol.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dyntaxa": "http://dyntaxa.se/Taxon/Info/",
+    "taxonid": "http://taxonid.org/",
+    "@context": {
+      "@id": "default:@context",
+      "@type": "xsd:string"
+    },
+    "id": "@id",
+    "@type": {
+      "@id": "default:@type",
+      "@type": "xsd:string"
+    },
+    "availableForGeneticResearch": {
+      "@id": "default:HRX.availableForGeneticResearch",
+      "@type": "@id"
+    },
+    "awayCount": {
+      "@id": "default:HRX.awayCount",
+      "@type": "xsd:integer"
+    },
+    "awayIDs": {
+      "@id": "default:HRX.awayIDs",
+      "@type": "xsd:string"
+    },
+    "collectionID": {
+      "@id": "default:HRX.collectionID",
+      "@type": "xsd:string"
+    },
+    "correspondentOrganization": {
+      "@id": "default:HRX.correspondentOrganization",
+      "@type": "@id"
+    },
+    "correspondentPerson": {
+      "@id": "default:HRX.correspondentPerson",
+      "@type": "xsd:string"
+    },
+    "correspondentResearcher": {
+      "@id": "default:HRX.correspondentResearcher",
+      "@type": "xsd:string"
+    },
+    "damagedCount": {
+      "@id": "default:HRX.damagedCount",
+      "@type": "xsd:integer"
+    },
+    "damagedIDs": {
+      "@id": "default:HRX.damagedIDs",
+      "@type": "xsd:string"
+    },
+    "dueDate": {
+      "@id": "default:HRX.dueDate",
+      "@type": "xsd:date"
+    },
+    "externalID": {
+      "@id": "default:HRX.externalID",
+      "@type": "xsd:string"
+    },
+    "geneticResourceAcquisitionCountry": {
+      "@id": "default:HRX.geneticResourceAcquisitionCountry",
+      "@type": "xsd:string"
+    },
+    "geneticResourceAcquisitionDate": {
+      "@id": "default:HRX.geneticResourceAcquisitionDate",
+      "@type": "xsd:date"
+    },
+    "geneticResourceDescription": {
+      "@id": "default:HRX.geneticResourceDescription",
+      "@type": "xsd:string"
+    },
+    "geneticResourceRightsAndObligations": {
+      "@id": "default:HRX.geneticResourceRightsAndObligations",
+      "@type": "xsd:string"
+    },
+    "geneticResourceSource": {
+      "@id": "default:HRX.geneticResourceSource",
+      "@type": "xsd:string"
+    },
+    "geneticResourceType": {
+      "@id": "default:HRX.geneticResourceType",
+      "@type": "@id"
+    },
+    "hasIRCC": {
+      "@id": "default:HRX.hasIRCC",
+      "@type": "xsd:boolean"
+    },
+    "incomingReceived": {
+      "@id": "default:HRX.incomingReceived",
+      "@type": "xsd:date"
+    },
+    "incomingReturned": {
+      "@id": "default:HRX.incomingReturned",
+      "@type": "xsd:date"
+    },
+    "internalRemarks": {
+      "@id": "default:HRX.internalRemarks",
+      "@type": "xsd:string"
+    },
+    "legacyID": {
+      "@id": "default:HRX.legacyID",
+      "@type": "xsd:string"
+    },
+    "localHandler": {
+      "@id": "default:HRX.localHandler",
+      "@type": "xsd:string"
+    },
+    "localPerson": {
+      "@id": "default:HRX.localPerson",
+      "@type": "xsd:string"
+    },
+    "localPersonEmail": {
+      "@id": "default:HRX.localPersonEmail",
+      "@type": "xsd:string"
+    },
+    "localResearcher": {
+      "@id": "default:HRX.localResearcher",
+      "@type": "xsd:string"
+    },
+    "material": {
+      "@id": "default:HRX.material",
+      "@type": "xsd:string"
+    },
+    "missingCount": {
+      "@id": "default:HRX.missingCount",
+      "@type": "xsd:integer"
+    },
+    "missingIDs": {
+      "@id": "default:HRX.missingIDs",
+      "@type": "xsd:string"
+    },
+    "numberOfParcels": {
+      "@id": "default:HRX.numberOfParcels",
+      "@type": "xsd:string"
+    },
+    "outgoingReturned": {
+      "@id": "default:HRX.outgoingReturned",
+      "@type": "xsd:date"
+    },
+    "outgoingSent": {
+      "@id": "default:HRX.outgoingSent",
+      "@type": "xsd:date"
+    },
+    "permits": {
+      "@id": "default:HRX.permits",
+      "@type": "@id"
+    },
+    "publicRemarks": {
+      "@id": "default:HRX.publicRemarks",
+      "@type": "xsd:string"
+    },
+    "receiptReturned": {
+      "@id": "default:HRX.receiptReturned",
+      "@type": "xsd:date"
+    },
+    "requestReceived": {
+      "@id": "default:HRX.requestReceived",
+      "@type": "xsd:date"
+    },
+    "resourceImported": {
+      "@id": "default:HRX.resourceImported",
+      "@type": "xsd:string"
+    },
+    "returnedCount": {
+      "@id": "default:HRX.returnedCount",
+      "@type": "xsd:integer"
+    },
+    "returnedIDs": {
+      "@id": "default:HRX.returnedIDs",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "default:HRX.status",
+      "@type": "@id"
+    },
+    "transactionEvents": {
+      "@id": "default:HRX.transactionEvents",
+      "@type": "@id"
+    },
+    "transportMethod": {
+      "@id": "default:HRX.transportMethod",
+      "@type": "@id"
+    },
+    "type": {
+      "@id": "default:HRX.type",
+      "@type": "@id"
+    },
+    "underNagoya": {
+      "@id": "default:HRX.underNagoya",
+      "@type": "xsd:string"
+    },
+    "owner": {
+      "@id": "default:MZ.owner",
+      "@type": "@id"
+    }
+  }
+}
