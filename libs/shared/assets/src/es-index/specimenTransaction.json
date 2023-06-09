@@ -28,6 +28,11 @@
       "@type": {
         "type": "keyword"
       },
+      "IRCC": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "availableForGeneticResearch": {
         "type": "keyword",
         "ignore_above": 200
@@ -167,9 +172,47 @@
         "type": "date"
       },
       "permits": {
-        "type": "keyword",
-        "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "keyword",
+            "normalizer": "useLowercase"
+          },
+          "@type": {
+            "type": "keyword"
+          },
+          "@context": {
+            "type": "keyword"
+          },
+          "permitEndDate": {
+            "type": "date"
+          },
+          "permitFile": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "permitNotes": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "permitStartDate": {
+            "type": "date"
+          },
+          "permitStatus": {
+            "type": "keyword",
+            "ignore_above": 200
+          },
+          "permitType": {
+            "type": "keyword",
+            "ignore_above": 200
+          },
+          "isPartOf": {
+            "type": "keyword",
+            "ignore_above": 200
+          }
+        }
       },
       "publicRemarks": {
         "type": "keyword",

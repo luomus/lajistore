@@ -9366,6 +9366,9 @@ type SpecimenTransaction2 {
 
   # Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
   hasIRCC: Boolean
+
+  # Internationally Recognized Certificate of Compliance. Kotka checks from the ABS Clearing House that the entered IRCC number exists and is valid.
+  iRCC: String
   id: String
   incomingReceived: String
   incomingReturned: String
@@ -9396,7 +9399,7 @@ type SpecimenTransaction2 {
 
   # Team or organisation that owns the record and can edit it.
   owner: String
-  permits: [String]
+  permits: [Permit2]
 
   # Remarks that are shown to both parties of the transaction.
   publicRemarks: String
@@ -23973,6 +23976,9 @@ input SpecimenTransaction2Input {
 
   # Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
   hasIRCC: Boolean
+
+  # Internationally Recognized Certificate of Compliance. Kotka checks from the ABS Clearing House that the entered IRCC number exists and is valid.
+  iRCC: String
   id: String
   incomingReceived: String
   incomingReturned: String
@@ -24003,7 +24009,7 @@ input SpecimenTransaction2Input {
 
   # Team or organisation that owns the record and can edit it.
   owner: String
-  permits: [String]
+  permits: [Permit2Input]
 
   # Remarks that are shown to both parties of the transaction.
   publicRemarks: String

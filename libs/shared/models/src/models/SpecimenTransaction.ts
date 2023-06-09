@@ -10,6 +10,10 @@ export interface SpecimenTransaction {
   id?: string;
   "@type"?: string;
   /**
+   * Internationally Recognized Certificate of Compliance. Kotka checks from the ABS Clearing House that the entered IRCC number exists and is valid.
+   */
+  IRCC?: string;
+  /**
    * If you choose "Yes, with restrictions", explain the restrictions in the following field "Rights and obligations".
    */
   availableForGeneticResearch?:
@@ -106,7 +110,29 @@ export interface SpecimenTransaction {
   numberOfParcels?: string;
   outgoingReturned?: string;
   outgoingSent?: string;
-  permits?: string[];
+  permits?: {
+    id?: string;
+    "@type"?: string;
+    "@context"?: string;
+    permitEndDate?: string;
+    permitFile?: string;
+    permitNotes?: string;
+    permitStartDate?: string;
+    permitStatus?: "" | "HRA.permitStatusAvailable" | "HRA.permitStatusNotRequired";
+    permitType?:
+      | ""
+      | "HRA.permitTypePIC"
+      | "HRA.permitTypeMAT"
+      | "HRA.permitTypeMTA"
+      | "HRA.permitCollectingPermit"
+      | "HRA.permitTypeExportPermit"
+      | "HRA.permitTypeOther"
+      | "HRA.permitTypeMemorandumOfUnderstanding";
+    /**
+     * Which parent or larger collection this is part of.
+     */
+    isPartOf?: string;
+  }[];
   /**
    * Remarks that are shown to both parties of the transaction.
    */

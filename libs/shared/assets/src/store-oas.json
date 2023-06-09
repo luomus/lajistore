@@ -56986,6 +56986,11 @@
             "type": "string",
             "title": "Type for the Transaction class"
           },
+          "IRCC": {
+            "type": "string",
+            "description": "Internationally Recognized Certificate of Compliance. Kotka checks from the ABS Clearing House that the entered IRCC number exists and is valid.",
+            "title": "IRCC number"
+          },
           "availableForGeneticResearch": {
             "type": "string",
             "enum": [
@@ -57170,12 +57175,9 @@
           },
           "permits": {
             "type": "array",
-            "uniqueItems": false,
             "items": {
-              "type": "string"
-            },
-            "minItems": 0,
-            "title": "Permits"
+              "$ref": "#/components/schemas/permit"
+            }
           },
           "publicRemarks": {
             "type": "string",

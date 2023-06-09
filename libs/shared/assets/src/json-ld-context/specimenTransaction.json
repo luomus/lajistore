@@ -31,6 +31,10 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
+    "IRCC": {
+      "@id": "default:HRX.IRCC",
+      "@type": "xsd:string"
+    },
     "availableForGeneticResearch": {
       "@id": "default:HRX.availableForGeneticResearch",
       "@type": "@id"
@@ -161,7 +165,7 @@
     },
     "permits": {
       "@id": "default:HRX.permits",
-      "@type": "@id"
+      "@container": "@set"
     },
     "publicRemarks": {
       "@id": "default:HRX.publicRemarks",
