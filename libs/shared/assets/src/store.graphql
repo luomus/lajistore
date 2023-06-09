@@ -588,7 +588,7 @@ type ViewerBasicAuth {
   getspecimentTransactionEvent(
     # Id for the Transaction Event
     id: String!
-  ): SpecimentTransactionEvent2
+  ): SpecimentTransactionEvent
 
   # Return a subUnit.
   #
@@ -2032,7 +2032,7 @@ type ViewerBasicAuth {
 
     # Sort by
     sort: String
-  ): SpecimentTransactionEvent
+  ): SpecimentTransactionEvent2
 
   # Return list of subUnit objects.
   #
@@ -4020,7 +4020,7 @@ type ViewerBasicAuth {
 
     # Version number for the Transaction Event
     number: Float!
-  ): SpecimentTransactionEvent2
+  ): SpecimentTransactionEvent
 
   # Return a subUnit.
   #
@@ -9417,7 +9417,7 @@ type SpecimenTransaction2 {
 
   # Whether the transaction is closed, outstanding or in process.
   status: TransactionStatus
-  transactionEvents: [String]
+  transactionEvents: [SpecimentTransactionEvent]
   transportMethod: TransportMethod
 
   # What kind of transaction this is.
@@ -9451,6 +9451,16 @@ enum TransactionStatus {
   HRX_STATUSCLOSED
 }
 
+type SpecimentTransactionEvent {
+  context: String
+  eventDate: String
+  eventDocumentIDs: String
+  eventHandler: String
+  eventNotes: String
+  id: String
+  type: String
+}
+
 enum TransportMethod {
   _
   HRX_TRANSPORTMETHODPRIORITY
@@ -9472,16 +9482,6 @@ enum TransactionType {
   HRX_TYPEIMPORTNOTICE
   HRX_TYPEABSNEGOTIATIONS
   HRX_TYPEVIRTUALLOANOUTGOING
-}
-
-type SpecimentTransactionEvent2 {
-  context: String
-  eventDate: String
-  eventDocumentIDs: String
-  eventHandler: String
-  eventNotes: String
-  id: String
-  type: String
 }
 
 type SubUnit2 {
@@ -11148,11 +11148,11 @@ type SpecimenTransaction {
   view: PagedView!
 }
 
-type SpecimentTransactionEvent {
+type SpecimentTransactionEvent2 {
   context: String!
   currentPage: Int
   lastPage: Int!
-  member: [SpecimentTransactionEvent2]!
+  member: [SpecimentTransactionEvent]!
   pageSize: Int!
   totalItems: Int!
   type: String!
@@ -12375,7 +12375,7 @@ type ViewerAnyAuth {
   getspecimentTransactionEvent(
     # Id for the Transaction Event
     id: String!
-  ): SpecimentTransactionEvent2
+  ): SpecimentTransactionEvent
 
   # Return a subUnit.
   #
@@ -13819,7 +13819,7 @@ type ViewerAnyAuth {
 
     # Sort by
     sort: String
-  ): SpecimentTransactionEvent
+  ): SpecimentTransactionEvent2
 
   # Return list of subUnit objects.
   #
@@ -15807,7 +15807,7 @@ type ViewerAnyAuth {
 
     # Version number for the Transaction Event
     number: Float!
-  ): SpecimentTransactionEvent2
+  ): SpecimentTransactionEvent
 
   # Return a subUnit.
   #
@@ -20336,7 +20336,7 @@ type MutationViewerBasicAuth {
   # Store Transaction Event object(s)
   #
   # Equivalent to POST /specimentTransactionEvent
-  storespecimentTransactionEvent(requestBody: SpecimentTransactionEvent2Input): SpecimentTransactionEvent2
+  storespecimentTransactionEvent(requestBody: SpecimentTransactionEventInput): SpecimentTransactionEvent
 
   # Store subUnit object(s)
   #
@@ -21010,8 +21010,8 @@ type MutationViewerBasicAuth {
   updatespecimentTransactionEvent(
     # Id for the Transaction Event
     id: String!
-    requestBody: SpecimentTransactionEvent2Input
-  ): SpecimentTransactionEvent2
+    requestBody: SpecimentTransactionEventInput
+  ): SpecimentTransactionEvent
 
   # Store subUnit
   #
@@ -21241,7 +21241,7 @@ type Bulk {
   reserve: [Reserve]
   sample: [Sample2]
   specimenTransaction: [SpecimenTransaction2]
-  specimentTransactionEvent: [SpecimentTransactionEvent2]
+  specimentTransactionEvent: [SpecimentTransactionEvent]
   subUnit: [SubUnit2]
   tag: [Tag2]
   taxon: [Taxon2]
@@ -21327,7 +21327,7 @@ input BulkInput {
   reserve: [ReserveInput]
   sample: [Sample2Input]
   specimenTransaction: [SpecimenTransaction2Input]
-  specimentTransactionEvent: [SpecimentTransactionEvent2Input]
+  specimentTransactionEvent: [SpecimentTransactionEventInput]
   subUnit: [SubUnit2Input]
   tag: [Tag2Input]
   taxon: [Taxon2Input]
@@ -24027,7 +24027,7 @@ input SpecimenTransaction2Input {
 
   # Whether the transaction is closed, outstanding or in process.
   status: TransactionStatus
-  transactionEvents: [String]
+  transactionEvents: [SpecimentTransactionEventInput]
   transportMethod: TransportMethod
 
   # What kind of transaction this is.
@@ -24037,7 +24037,7 @@ input SpecimenTransaction2Input {
   underNagoya: String
 }
 
-input SpecimentTransactionEvent2Input {
+input SpecimentTransactionEventInput {
   context: String
   eventDate: String
   eventDocumentIDs: String
@@ -25591,7 +25591,7 @@ type SpecimentTransactionEventSearch2 {
   context: String!
   currentPage: Int
   lastPage: Int!
-  member: [SpecimentTransactionEvent2]!
+  member: [SpecimentTransactionEvent]!
   pageSize: Int!
   totalItems: Int!
   type: String!
@@ -30128,7 +30128,7 @@ type MutationViewerAnyAuth {
   # Store Transaction Event object(s)
   #
   # Equivalent to POST /specimentTransactionEvent
-  storespecimentTransactionEvent(requestBody: SpecimentTransactionEvent2Input): SpecimentTransactionEvent2
+  storespecimentTransactionEvent(requestBody: SpecimentTransactionEventInput): SpecimentTransactionEvent
 
   # Store subUnit object(s)
   #
@@ -30802,8 +30802,8 @@ type MutationViewerAnyAuth {
   updatespecimentTransactionEvent(
     # Id for the Transaction Event
     id: String!
-    requestBody: SpecimentTransactionEvent2Input
-  ): SpecimentTransactionEvent2
+    requestBody: SpecimentTransactionEventInput
+  ): SpecimentTransactionEvent
 
   # Store subUnit
   #

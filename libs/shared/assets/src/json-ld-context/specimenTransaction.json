@@ -197,7 +197,7 @@
     },
     "transactionEvents": {
       "@id": "default:HRX.transactionEvents",
-      "@type": "@id"
+      "@container": "@set"
     },
     "transportMethod": {
       "@id": "default:HRX.transportMethod",

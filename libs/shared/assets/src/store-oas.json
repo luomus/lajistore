@@ -57227,12 +57227,9 @@
           },
           "transactionEvents": {
             "type": "array",
-            "uniqueItems": false,
             "items": {
-              "type": "string"
-            },
-            "minItems": 0,
-            "title": "Transaction events"
+              "$ref": "#/components/schemas/specimentTransactionEvent"
+            }
           },
           "transportMethod": {
             "type": "string",

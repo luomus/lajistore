@@ -472,7 +472,38 @@
       "type": "array",
       "uniqueItems": false,
       "items": {
-        "type": "string"
+        "type": "object",
+        "subject": "HRX.specimentTransactionEvent",
+        "additionalProperties": false,
+        "title": "Transaction Event",
+        "description": "",
+        "properties": {
+          "eventDate": {
+            "type": "string",
+            "format": "date",
+            "range": "xsd:date",
+            "subject": "HRX.eventDate",
+            "title": "Date"
+          },
+          "eventDocumentIDs": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "HRX.eventDocumentIDs",
+            "title": "Specimen IDs"
+          },
+          "eventHandler": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "HRX.eventHandler",
+            "title": "Handler"
+          },
+          "eventNotes": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "HRX.eventNotes",
+            "title": "Notes"
+          }
+        }
       },
       "minItems": 0,
       "range": "HRX.specimentTransactionEvent",

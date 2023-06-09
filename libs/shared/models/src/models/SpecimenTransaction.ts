@@ -155,7 +155,12 @@ export interface SpecimenTransaction {
    * Whether the transaction is closed, outstanding or in process.
    */
   status?: "" | "HRX.statusInProcess" | "HRX.statusOutstanding" | "HRX.statusClosed";
-  transactionEvents?: string[];
+  transactionEvents?: {
+    eventDate?: string;
+    eventDocumentIDs?: string;
+    eventHandler?: string;
+    eventNotes?: string;
+  }[];
   transportMethod?:
     | ""
     | "HRX.transportMethodPriority"

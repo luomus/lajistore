@@ -243,9 +243,27 @@
         "ignore_above": 200
       },
       "transactionEvents": {
-        "type": "keyword",
-        "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "type": "object",
+        "properties": {
+          "eventDate": {
+            "type": "date"
+          },
+          "eventDocumentIDs": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "eventHandler": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "eventNotes": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          }
+        }
       },
       "transportMethod": {
         "type": "keyword",
