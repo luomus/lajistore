@@ -50,7 +50,8 @@ export interface Event {
     | "MY.eventTypeGerminationRetesting"
     | "MY.eventTypeGerminationControlling"
     | "MY.eventTypeTZTesting"
-    | "MY.eventTypeSeedExchange";
+    | "MY.eventTypeSeedExchange"
+    | "MY.eventTypeTPuska";
   germinationConditions?: string;
   germinationPercentage?: number;
   germinationRate?: number;

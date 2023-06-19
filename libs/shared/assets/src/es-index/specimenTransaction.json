@@ -278,6 +278,22 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "creator": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "dateCreated": {
+        "type": "date"
+      },
+      "dateEdited": {
+        "type": "date"
+      },
+      "editor": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "owner": {
         "type": "keyword",
         "ignore_above": 200,

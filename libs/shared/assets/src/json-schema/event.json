@@ -99,7 +99,8 @@
         "MY.eventTypeGerminationRetesting",
         "MY.eventTypeGerminationControlling",
         "MY.eventTypeTZTesting",
-        "MY.eventTypeSeedExchange"
+        "MY.eventTypeSeedExchange",
+        "MY.eventTypeTPuska"
       ],
       "enumNames": [
         "Discarded",
@@ -129,7 +130,8 @@
         "Germination retested",
         "Germination controlled",
         "TZ-tested",
-        "Seeds exchanged"
+        "Seeds exchanged",
+        "T-Puska"
       ],
       "range": "MY.eventType",
       "subject": "PUU.eventType",

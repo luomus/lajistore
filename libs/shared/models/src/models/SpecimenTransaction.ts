@@ -144,7 +144,7 @@ export interface SpecimenTransaction {
   /**
    * When loan request, loan, gift or exchange was received here.
    */
-  requestReceived: string;
+  requestReceived?: string;
   /**
    * Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
    */
@@ -187,6 +187,10 @@ export interface SpecimenTransaction {
    * Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?
    */
   underNagoya?: string;
+  creator?: string;
+  dateCreated?: string;
+  dateEdited?: string;
+  editor?: string;
   /**
    * Team or organisation that owns the record and can edit it.
    */

@@ -473,7 +473,7 @@
       "uniqueItems": false,
       "items": {
         "type": "object",
-        "subject": "HRX.specimentTransactionEvent",
+        "subject": "HRX.specimenTransactionEvent",
         "additionalProperties": false,
         "title": "Transaction Event",
         "description": "",
@@ -506,7 +506,7 @@
         }
       },
       "minItems": 0,
-      "range": "HRX.specimentTransactionEvent",
+      "range": "HRX.specimenTransactionEvent",
       "subject": "HRX.transactionEvents",
       "title": "Transaction events"
     },
@@ -572,6 +572,32 @@
       "description": "Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?",
       "title": "Does Nagoya protocol apply?"
     },
+    "creator": {
+      "type": "string",
+      "range": "MA.person",
+      "subject": "MZ.creator",
+      "title": "Creator"
+    },
+    "dateCreated": {
+      "type": "string",
+      "format": "date-time",
+      "range": "xsd:dateTime",
+      "subject": "MZ.dateCreated",
+      "title": "Created"
+    },
+    "dateEdited": {
+      "type": "string",
+      "format": "date-time",
+      "range": "xsd:dateTime",
+      "subject": "MZ.dateEdited",
+      "title": "Edited"
+    },
+    "editor": {
+      "type": "string",
+      "range": "MA.person",
+      "subject": "MZ.editor",
+      "title": "Editor"
+    },
     "owner": {
       "type": "string",
       "range": "MOS.organization",
@@ -581,7 +607,6 @@
     }
   },
   "required": [
-    "requestReceived",
     "type"
   ]
 }

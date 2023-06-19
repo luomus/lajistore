@@ -211,6 +211,22 @@
       "@id": "default:HRX.underNagoya",
       "@type": "xsd:string"
     },
+    "creator": {
+      "@id": "default:MZ.creator",
+      "@type": "@id"
+    },
+    "dateCreated": {
+      "@id": "default:MZ.dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "dateEdited": {
+      "@id": "default:MZ.dateEdited",
+      "@type": "xsd:dateTime"
+    },
+    "editor": {
+      "@id": "default:MZ.editor",
+      "@type": "@id"
+    },
     "owner": {
       "@id": "default:MZ.owner",
       "@type": "@id"

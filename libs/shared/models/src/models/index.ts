@@ -127,6 +127,8 @@ import { Sample } from './Sample'
 export type { Sample }
 import { SpecimenTransaction } from './SpecimenTransaction'
 export type { SpecimenTransaction }
+import { SpecimenTransactionEvent } from './SpecimenTransactionEvent'
+export type { SpecimenTransactionEvent }
 import { SpecimentTransactionEvent } from './SpecimentTransactionEvent'
 export type { SpecimentTransactionEvent }
 import { SubUnit } from './SubUnit'
@@ -230,6 +232,7 @@ export type StoreObject = BibliographicResource
    | Reserve
    | Sample
    | SpecimenTransaction
+   | SpecimenTransactionEvent
    | SpecimentTransactionEvent
    | SubUnit
    | Tag
@@ -583,6 +586,11 @@ export function isSample(data: unknown): data is Sample {
 export function isSpecimenTransaction(data: unknown): data is SpecimenTransaction {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'HRX.specimenTransaction'
+  );
+}
+export function isSpecimenTransactionEvent(data: unknown): data is SpecimenTransactionEvent {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'HRX.specimenTransactionEvent'
   );
 }
 export function isSpecimentTransactionEvent(data: unknown): data is SpecimentTransactionEvent {

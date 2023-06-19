@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "subject": "HRX.specimenTransactionEvent",
+  "additionalProperties": false,
+  "title": "Transaction Event",
+  "description": "",
+  "properties": {
+    "@context": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "@context",
+      "title": "Context for the Transaction Event"
+    },
+    "id": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "id",
+      "title": "Id for the Transaction Event"
+    },
+    "@type": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "@type",
+      "title": "Type for the Transaction Event"
+    },
+    "eventDate": {
+      "type": "string",
+      "format": "date",
+      "range": "xsd:date",
+      "subject": "HRX.eventDate",
+      "title": "Date"
+    },
+    "eventDocumentIDs": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.eventDocumentIDs",
+      "title": "Specimen IDs"
+    },
+    "eventHandler": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.eventHandler",
+      "title": "Handler"
+    },
+    "eventNotes": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.eventNotes",
+      "title": "Notes"
+    }
+  }
+}
