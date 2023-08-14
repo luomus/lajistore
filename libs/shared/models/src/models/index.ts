@@ -97,6 +97,8 @@ import { IucnRedListTaxonGroup } from './IucnRedListTaxonGroup'
 export type { IucnRedListTaxonGroup }
 import { Measurement } from './Measurement'
 export type { Measurement }
+import { Model } from './Model'
+export type { Model }
 import { Multimedia } from './Multimedia'
 export type { Multimedia }
 import { NamedPlace } from './NamedPlace'
@@ -217,6 +219,7 @@ export type StoreObject = BibliographicResource
    | IucnRedListEvaluationYear
    | IucnRedListTaxonGroup
    | Measurement
+   | Model
    | Multimedia
    | NamedPlace
    | News
@@ -511,6 +514,11 @@ export function isIucnRedListTaxonGroup(data: unknown): data is IucnRedListTaxon
 export function isMeasurement(data: unknown): data is Measurement {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MY.measurementClass'
+  );
+}
+export function isModel(data: unknown): data is Model {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MM.model'
   );
 }
 export function isMultimedia(data: unknown): data is Multimedia {

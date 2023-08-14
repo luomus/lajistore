@@ -163,10 +163,6 @@
       "@id": "default:HRA.sentType",
       "@type": "@id"
     },
-    "transactionEvents": {
-      "@id": "default:HRA.transactionEvents",
-      "@container": "@set"
-    },
     "transactionRequestReceived": {
       "@id": "default:HRA.transactionRequestReceived",
       "@type": "xsd:date"

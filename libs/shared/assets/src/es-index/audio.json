@@ -28,10 +28,6 @@
       "@type": {
         "type": "keyword"
       },
-      "LuomusIntellectualRights": {
-        "type": "keyword",
-        "ignore_above": 200
-      },
       "caption": {
         "type": "keyword",
         "ignore_above": 200,
@@ -68,6 +64,11 @@
         "normalizer": "useLowercase"
       },
       "originalFilename": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "primaryForTaxon": {
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"
@@ -111,6 +112,13 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "type": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "uploadDateTime": {
+        "type": "date"
+      },
       "uploadedBy": {
         "type": "keyword",
         "ignore_above": 200,
@@ -120,6 +128,18 @@
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"
+      },
+      "lifeStage": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "plantLifeStage": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "sex": {
+        "type": "keyword",
+        "ignore_above": 200
       },
       "intellectualOwner": {
         "type": "keyword",
@@ -133,6 +153,9 @@
       "publicityRestrictions": {
         "type": "keyword",
         "ignore_above": 200
+      },
+      "sortOrder": {
+        "type": "integer"
       },
       "_meta": {
         "properties": {

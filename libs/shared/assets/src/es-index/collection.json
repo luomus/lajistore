@@ -306,6 +306,25 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "longName": {
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "fi": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "sv": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          }
+        }
+      },
       "metadataCreator": {
         "type": "keyword",
         "ignore_above": 200,

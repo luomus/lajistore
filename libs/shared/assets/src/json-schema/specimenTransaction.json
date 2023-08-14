@@ -123,7 +123,8 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.externalID",
-      "title": "External transaction ID"
+      "description": "Sender's ID for the transaction.",
+      "title": "Sender's transaction ID"
     },
     "geneticResourceAcquisitionCountry": {
       "type": "string",
@@ -198,6 +199,7 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "HRX.incomingReceived",
+      "description": "Date when incoming transaction was received.",
       "title": "Date received"
     },
     "incomingReturned": {
@@ -205,6 +207,7 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "HRX.incomingReturned",
+      "description": "Date when the incoming loan was returned to the sender.",
       "title": "Date returned"
     },
     "internalRemarks": {
@@ -218,6 +221,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.legacyID",
+      "description": "Loan/transaction number used in paper loan catalogs or old software (e.g. Curator)",
       "title": "Old transaction number"
     },
     "localHandler": {
@@ -275,7 +279,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.numberOfParcels",
-      "description": "In how many parcels was the transaction sent",
+      "description": "In how many parcels was the transaction sent/carried.",
       "title": "Number of parcels"
     },
     "outgoingReturned": {
@@ -290,6 +294,7 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "HRX.outgoingSent",
+      "description": "When the transaction was sent out from us",
       "title": "Outgoing loan sent"
     },
     "permits": {
@@ -422,7 +427,7 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "HRX.requestReceived",
-      "description": "When loan request, loan, gift or exchange was received here.",
+      "description": "When loan request was received here.",
       "title": "Date requested"
     },
     "resourceImported": {
@@ -486,7 +491,12 @@
             "title": "Date"
           },
           "eventDocumentIDs": {
-            "type": "string",
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
             "range": "xsd:string",
             "subject": "HRX.eventDocumentIDs",
             "title": "Specimen IDs"
@@ -532,6 +542,7 @@
       ],
       "range": "HRX.transportMethodEnum",
       "subject": "HRX.transportMethod",
+      "description": "Means of sending, mail, courier etc.",
       "title": "Sent by"
     },
     "type": {

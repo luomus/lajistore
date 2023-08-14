@@ -47,16 +47,16 @@
       "@id": "default:MM.documentURI",
       "@type": "xsd:string"
     },
-    "fullURL": {
-      "@id": "default:MM.fullURL",
+    "highDetailModelURL": {
+      "@id": "default:MM.highDetailModelURL",
       "@type": "xsd:string"
     },
     "keyword": {
       "@id": "default:MM.keyword",
       "@type": "xsd:string"
     },
-    "mp3URL": {
-      "@id": "default:MM.mp3URL",
+    "lowDetailModelURL": {
+      "@id": "default:MM.lowDetailModelURL",
       "@type": "xsd:string"
     },
     "originalFilename": {
@@ -99,8 +99,8 @@
       "@id": "default:MM.uploadedBy",
       "@type": "xsd:string"
     },
-    "wavURL": {
-      "@id": "default:MM.wavURL",
+    "videoURL": {
+      "@id": "default:MM.videoURL",
       "@type": "xsd:string"
     },
     "lifeStage": {

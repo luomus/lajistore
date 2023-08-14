@@ -151,6 +151,10 @@
       "@id": "default:MY.language",
       "@type": "xsd:string"
     },
+    "longName": {
+      "@id": "default:MY.longName",
+      "@container": "@language"
+    },
     "metadataCreator": {
       "@id": "default:MY.metadataCreator",
       "@type": "xsd:string"

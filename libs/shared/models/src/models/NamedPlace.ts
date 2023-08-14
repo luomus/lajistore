@@ -1984,13 +1984,14 @@ export interface NamedPlace {
             | "MY.recordBasisMachineObservationAudio"
             | "MY.recordBasisMachineObservationGeologger"
             | "MY.recordBasisMachineObservationSatelliteTransmitter"
+            | "MY.recordBasisMachineObservationDNA"
             | "MY.recordBasisFossilSpecimen"
             | "MY.recordBasisSubfossilSpecimen"
-            | "MY.recordBasisLivingSpecimen"
-            | "MY.recordBasisMicrobialSpecimen"
-            | "MY.recordBasisLiterature"
+            | "MY.recordBasisSubfossilSpecimenAmberInclusion"
             | "MY.recordBasisMaterialSample"
-            | "MY.recordBasisSubfossilSpecimenAmberInclusion";
+            | "MY.recordBasisMicrobialSpecimen"
+            | "MY.recordBasisLivingSpecimen"
+            | "MY.recordBasisLiterature";
           /**
            * What parts of the record are / have been in storage.
            */
@@ -3916,13 +3917,14 @@ export interface NamedPlace {
             | "MY.recordBasisMachineObservationAudio"
             | "MY.recordBasisMachineObservationGeologger"
             | "MY.recordBasisMachineObservationSatelliteTransmitter"
+            | "MY.recordBasisMachineObservationDNA"
             | "MY.recordBasisFossilSpecimen"
             | "MY.recordBasisSubfossilSpecimen"
-            | "MY.recordBasisLivingSpecimen"
-            | "MY.recordBasisMicrobialSpecimen"
-            | "MY.recordBasisLiterature"
+            | "MY.recordBasisSubfossilSpecimenAmberInclusion"
             | "MY.recordBasisMaterialSample"
-            | "MY.recordBasisSubfossilSpecimenAmberInclusion";
+            | "MY.recordBasisMicrobialSpecimen"
+            | "MY.recordBasisLivingSpecimen"
+            | "MY.recordBasisLiterature";
           /**
            * What parts of the record are / have been in storage.
            */
@@ -6568,13 +6570,14 @@ export interface NamedPlace {
             | "MY.recordBasisMachineObservationAudio"
             | "MY.recordBasisMachineObservationGeologger"
             | "MY.recordBasisMachineObservationSatelliteTransmitter"
+            | "MY.recordBasisMachineObservationDNA"
             | "MY.recordBasisFossilSpecimen"
             | "MY.recordBasisSubfossilSpecimen"
-            | "MY.recordBasisLivingSpecimen"
-            | "MY.recordBasisMicrobialSpecimen"
-            | "MY.recordBasisLiterature"
+            | "MY.recordBasisSubfossilSpecimenAmberInclusion"
             | "MY.recordBasisMaterialSample"
-            | "MY.recordBasisSubfossilSpecimenAmberInclusion";
+            | "MY.recordBasisMicrobialSpecimen"
+            | "MY.recordBasisLivingSpecimen"
+            | "MY.recordBasisLiterature";
           /**
            * What parts of the record are / have been in storage.
            */
@@ -8500,13 +8503,14 @@ export interface NamedPlace {
             | "MY.recordBasisMachineObservationAudio"
             | "MY.recordBasisMachineObservationGeologger"
             | "MY.recordBasisMachineObservationSatelliteTransmitter"
+            | "MY.recordBasisMachineObservationDNA"
             | "MY.recordBasisFossilSpecimen"
             | "MY.recordBasisSubfossilSpecimen"
-            | "MY.recordBasisLivingSpecimen"
-            | "MY.recordBasisMicrobialSpecimen"
-            | "MY.recordBasisLiterature"
+            | "MY.recordBasisSubfossilSpecimenAmberInclusion"
             | "MY.recordBasisMaterialSample"
-            | "MY.recordBasisSubfossilSpecimenAmberInclusion";
+            | "MY.recordBasisMicrobialSpecimen"
+            | "MY.recordBasisLivingSpecimen"
+            | "MY.recordBasisLiterature";
           /**
            * What parts of the record are / have been in storage.
            */

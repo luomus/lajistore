@@ -9,16 +9,16 @@ export interface Image {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  LuomusIntellectualRights?: "" | "MM.LuomusRightsFreeToUse" | "MM.LuomusRightsInternalOnly";
   caption?: string;
   captureDateTime?: string;
   capturerVerbatim?: string[];
-  documentURI?: string;
+  documentURI?: string[];
   fullURL: string;
   keyword?: string[];
   largeURL: string;
-  originalFilename: string;
-  originalURL: string;
+  originalFilename?: string;
+  originalURL?: string;
+  primaryForTaxon?: string[];
   sourceSystem: string;
   squareThumbnailURL: string;
   taxonDescriptionCaption?: {
@@ -29,9 +29,51 @@ export interface Image {
   taxonURI?: string[];
   taxonVerbatim?: string[];
   thumbnailURL: string;
-  uploadedBy: string;
-  wgs84Lat?: string;
-  wgs84Lon?: string;
+  type?: "" | "MM.typeEnumLive" | "MM.typeEnumSpecimen" | "MM.typeEnumGenitalia" | "MM.typeEnumMicroscopy";
+  uploadDateTime?: string;
+  uploadedBy?: string;
+  /**
+   * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.
+   */
+  lifeStage?:
+    | ""
+    | "MY.lifeStageEgg"
+    | "MY.lifeStageLarva"
+    | "MY.lifeStagePupa"
+    | "MY.lifeStageJuvenile"
+    | "MY.lifeStageNymph"
+    | "MY.lifeStageSubimago"
+    | "MY.lifeStageImmature"
+    | "MY.lifeStageAdult"
+    | "MY.lifeStageFertile"
+    | "MY.lifeStageSterile"
+    | "MY.lifeStageTadpole"
+    | "MY.lifeStageEmbryo"
+    | "MY.lifeStageSubadult"
+    | "MY.lifeStageMature"
+    | "MY.lifeStagePullus"
+    | "MY.lifeStageHatchedEgg"
+    | "MY.lifeStageHatchedPupa"
+    | "MY.lifeStageGall"
+    | "MY.lifeStageMarks"
+    | "MY.lifeStageTriungulin";
+  plantLifeStage?:
+    | ""
+    | "MY.plantLifeStageSterile"
+    | "MY.plantLifeStageFertile"
+    | "MY.plantLifeStageSeed"
+    | "MY.plantLifeStageSprout"
+    | "MY.plantLifeStageBud"
+    | "MY.plantLifeStageFlower"
+    | "MY.plantLifeStageWitheredFlower"
+    | "MY.plantLifeStageRipeningFruit"
+    | "MY.plantLifeStageRipeFruit"
+    | "MY.plantLifeStageDeadSprout"
+    | "MY.plantLifeStageSubterranean";
+  /**
+   * Sex of the individual(s)
+   */
+  sex?: "" | "MY.sexM" | "MY.sexF" | "MY.sexW" | "MY.sexU" | "MY.sexN" | "MY.sexX" | "MY.sexE" | "MY.sexC";
   intellectualOwner: string;
   intellectualRights:
     | "MZ.intellectualRightsCC-BY-SA-4.0"
@@ -63,4 +105,5 @@ export interface Image {
     | "MZ.publicityRestrictionsPublic"
     | "MZ.publicityRestrictionsProtected"
     | "MZ.publicityRestrictionsPrivate";
+  sortOrder?: number;
 }

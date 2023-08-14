@@ -32,7 +32,12 @@
       "title": "Date"
     },
     "eventDocumentIDs": {
-      "type": "string",
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
       "range": "xsd:string",
       "subject": "HRX.eventDocumentIDs",
       "title": "Specimen IDs"

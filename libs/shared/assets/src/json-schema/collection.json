@@ -453,6 +453,24 @@
       "description": "Language the data is (mainly) written in, if applicable.",
       "title": "Language"
     },
+    "longName": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "en": {
+          "type": "string"
+        },
+        "fi": {
+          "type": "string"
+        },
+        "sv": {
+          "type": "string"
+        }
+      },
+      "range": "xsd:string",
+      "subject": "MY.longName",
+      "title": "Collection's long name"
+    },
     "metadataCreator": {
       "type": "string",
       "range": "xsd:string",

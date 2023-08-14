@@ -48,7 +48,17 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "highDetailModelURL": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "keyword": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "lowDetailModelURL": {
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"

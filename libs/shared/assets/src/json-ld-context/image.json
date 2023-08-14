@@ -31,10 +31,6 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
-    "LuomusIntellectualRights": {
-      "@id": "default:MM.LuomusIntellectualRights",
-      "@type": "@id"
-    },
     "caption": {
       "@id": "default:MM.caption",
       "@type": "xsd:string"
@@ -71,6 +67,10 @@
       "@id": "default:MM.originalURL",
       "@type": "xsd:string"
     },
+    "primaryForTaxon": {
+      "@id": "default:MM.primaryForTaxon",
+      "@type": "@id"
+    },
     "sourceSystem": {
       "@id": "default:MM.sourceSystem",
       "@type": "@id"
@@ -95,17 +95,29 @@
       "@id": "default:MM.thumbnailURL",
       "@type": "xsd:string"
     },
+    "type": {
+      "@id": "default:MM.type",
+      "@type": "@id"
+    },
+    "uploadDateTime": {
+      "@id": "default:MM.uploadDateTime",
+      "@type": "xsd:dateTime"
+    },
     "uploadedBy": {
       "@id": "default:MM.uploadedBy",
       "@type": "xsd:string"
     },
-    "wgs84Lat": {
-      "@id": "default:MM.wgs84Lat",
-      "@type": "xsd:string"
+    "lifeStage": {
+      "@id": "default:MY.lifeStage",
+      "@type": "@id"
     },
-    "wgs84Lon": {
-      "@id": "default:MM.wgs84Lon",
-      "@type": "xsd:string"
+    "plantLifeStage": {
+      "@id": "default:MY.plantLifeStage",
+      "@type": "@id"
+    },
+    "sex": {
+      "@id": "default:MY.sex",
+      "@type": "@id"
     },
     "intellectualOwner": {
       "@id": "default:MZ.intellectualOwner",
@@ -118,6 +130,10 @@
     "publicityRestrictions": {
       "@id": "default:MZ.publicityRestrictions",
       "@type": "@id"
+    },
+    "sortOrder": {
+      "@id": "default:sortOrder",
+      "@type": "xsd:integer"
     }
   }
 }

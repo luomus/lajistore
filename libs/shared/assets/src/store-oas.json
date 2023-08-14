@@ -28124,6 +28124,576 @@
         }
       }
     },
+    "/model": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "model"
+        ],
+        "operationId": "listmodel",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of 3D model objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  3D model.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/model"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "model"
+        ],
+        "operationId": "storemodel",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/model"
+              }
+            }
+          }
+        },
+        "description": "Store 3D model object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored 3D model object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/model"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "model"
+        ],
+        "operationId": "patchmodel",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch 3d model (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching 3d model.",
+        "responses": {
+          "200": {
+            "description": "A list of  3D model.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/model"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/model/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "model"
+        ],
+        "operationId": "searchmodel",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of 3D model objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  3D model.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/model"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/model/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "model"
+        ],
+        "operationId": "getmodel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the 3D model",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a 3D model.",
+        "responses": {
+          "200": {
+            "description": "a 3D model.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/model"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "model"
+        ],
+        "operationId": "updatemodel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the 3D model",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/model"
+              }
+            }
+          }
+        },
+        "description": "Store 3D model",
+        "responses": {
+          "200": {
+            "description": "Stored 3D model",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/model"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "model"
+        ],
+        "operationId": "deletemodel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the 3D model",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete 3D model",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/model/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOfmodel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the 3D model",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "model"
+        ],
+        "description": "Return a 3D model.",
+        "responses": {
+          "200": {
+            "description": "a 3D model.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/model/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "model"
+        ],
+        "operationId": "versionmodel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the 3D model",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the 3D model",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a 3D model.",
+        "responses": {
+          "200": {
+            "description": "a 3D model.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/model"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/multimedia": {
       "get": {
         "security": [
@@ -48387,6 +48957,12 @@
                       "$ref": "#/components/schemas/measurement"
                     }
                   },
+                  "model": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/model"
+                    }
+                  },
                   "multimedia": {
                     "type": "array",
                     "items": {
@@ -48905,6 +49481,12 @@
                       "type": "array",
                       "items": {
                         "$ref": "#/components/schemas/measurement"
+                      }
+                    },
+                    "model": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/model"
                       }
                     },
                     "multimedia": {
@@ -49652,15 +50234,6 @@
             "type": "string",
             "title": "Type for the Audio recording"
           },
-          "LuomusIntellectualRights": {
-            "type": "string",
-            "enum": [
-              "",
-              "MM.LuomusRightsFreeToUse",
-              "MM.LuomusRightsInternalOnly"
-            ],
-            "title": "Intellectual rights given to LUOMUS"
-          },
           "caption": {
             "type": "string",
             "title": "Caption"
@@ -49679,8 +50252,13 @@
             "title": "Photographer/recorder (Forename Surname)"
           },
           "documentURI": {
-            "type": "string",
-            "title": "documentURI"
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Assosiated with document"
           },
           "fullURL": {
             "type": "string",
@@ -49702,6 +50280,15 @@
           "originalFilename": {
             "type": "string",
             "title": "Original filename"
+          },
+          "primaryForTaxon": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Taxon ids for which this media item is primary item"
           },
           "sourceSystem": {
             "type": "string",
@@ -49732,6 +50319,22 @@
             "type": "string",
             "title": "URL of a thumbnail version of the image (maintains aspect ratio, max. 200px height or width)"
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "",
+              "MM.typeEnumLive",
+              "MM.typeEnumSpecimen",
+              "MM.typeEnumGenitalia",
+              "MM.typeEnumMicroscopy"
+            ],
+            "title": "Type of taxon media"
+          },
+          "uploadDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when the image was uploaded to Media API"
+          },
           "uploadedBy": {
             "type": "string",
             "title": "Uploaded by"
@@ -49740,9 +50343,71 @@
             "type": "string",
             "title": "URL of wav audio file (stripped original)"
           },
+          "lifeStage": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.lifeStageEgg",
+              "MY.lifeStageLarva",
+              "MY.lifeStagePupa",
+              "MY.lifeStageJuvenile",
+              "MY.lifeStageNymph",
+              "MY.lifeStageSubimago",
+              "MY.lifeStageImmature",
+              "MY.lifeStageAdult",
+              "MY.lifeStageFertile",
+              "MY.lifeStageSterile",
+              "MY.lifeStageTadpole",
+              "MY.lifeStageEmbryo",
+              "MY.lifeStageSubadult",
+              "MY.lifeStageMature",
+              "MY.lifeStagePullus",
+              "MY.lifeStageHatchedEgg",
+              "MY.lifeStageHatchedPupa",
+              "MY.lifeStageGall",
+              "MY.lifeStageMarks",
+              "MY.lifeStageTriungulin"
+            ],
+            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
+            "title": "Life stage"
+          },
+          "plantLifeStage": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.plantLifeStageSterile",
+              "MY.plantLifeStageFertile",
+              "MY.plantLifeStageSeed",
+              "MY.plantLifeStageSprout",
+              "MY.plantLifeStageBud",
+              "MY.plantLifeStageFlower",
+              "MY.plantLifeStageWitheredFlower",
+              "MY.plantLifeStageRipeningFruit",
+              "MY.plantLifeStageRipeFruit",
+              "MY.plantLifeStageDeadSprout",
+              "MY.plantLifeStageSubterranean"
+            ],
+            "title": "Plant life stage"
+          },
+          "sex": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.sexM",
+              "MY.sexF",
+              "MY.sexW",
+              "MY.sexU",
+              "MY.sexN",
+              "MY.sexX",
+              "MY.sexE",
+              "MY.sexC"
+            ],
+            "description": "Sex of the individual(s)",
+            "title": "Sex"
+          },
           "intellectualOwner": {
             "type": "string",
-            "title": "Tillverkare"
+            "title": "Creative rights owner"
           },
           "intellectualRights": {
             "type": "string",
@@ -49781,15 +50446,17 @@
             ],
             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
             "title": "Publicity restrictions"
+          },
+          "sortOrder": {
+            "type": "integer",
+            "title": "sortOrder"
           }
         },
         "required": [
           "fullURL",
           "mp3URL",
-          "originalFilename",
           "sourceSystem",
           "thumbnailURL",
-          "uploadedBy",
           "intellectualOwner",
           "intellectualRights"
         ]
@@ -50153,6 +50820,9 @@
             "type": "string",
             "description": "Language the data is (mainly) written in, if applicable.",
             "title": "Language"
+          },
+          "longName": {
+            "$ref": "#/components/schemas/multiLang"
           },
           "metadataCreator": {
             "type": "string",
@@ -52267,7 +52937,8 @@
               "MHL.resultServiceTypeNafi",
               "MHL.resultServiceTypeBirdPointCount",
               "MHL.resultServiceTypeWinterBirdCount",
-              "MHL.resultServiceTypeSykeInsectProjects"
+              "MHL.resultServiceTypeSykeInsectProjects",
+              "MHL.resultServiceTypeInvasiveControl"
             ],
             "title": "Type of result service"
           },
@@ -54623,15 +55294,6 @@
             "type": "string",
             "title": "Type for the Image"
           },
-          "LuomusIntellectualRights": {
-            "type": "string",
-            "enum": [
-              "",
-              "MM.LuomusRightsFreeToUse",
-              "MM.LuomusRightsInternalOnly"
-            ],
-            "title": "Intellectual rights given to LUOMUS"
-          },
           "caption": {
             "type": "string",
             "title": "Caption"
@@ -54650,8 +55312,13 @@
             "title": "Photographer/recorder (Forename Surname)"
           },
           "documentURI": {
-            "type": "string",
-            "title": "documentURI"
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Assosiated with document"
           },
           "fullURL": {
             "type": "string",
@@ -54677,6 +55344,15 @@
           "originalURL": {
             "type": "string",
             "title": "URL of the original multimedia object (original format)"
+          },
+          "primaryForTaxon": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Taxon ids for which this media item is primary item"
           },
           "sourceSystem": {
             "type": "string",
@@ -54711,21 +55387,91 @@
             "type": "string",
             "title": "URL of a thumbnail version of the image (maintains aspect ratio, max. 200px height or width)"
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "",
+              "MM.typeEnumLive",
+              "MM.typeEnumSpecimen",
+              "MM.typeEnumGenitalia",
+              "MM.typeEnumMicroscopy"
+            ],
+            "title": "Type of taxon media"
+          },
+          "uploadDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when the image was uploaded to Media API"
+          },
           "uploadedBy": {
             "type": "string",
             "title": "Uploaded by"
           },
-          "wgs84Lat": {
+          "lifeStage": {
             "type": "string",
-            "title": "Latitude (N) coordinates in WGS84 format"
+            "enum": [
+              "",
+              "MY.lifeStageEgg",
+              "MY.lifeStageLarva",
+              "MY.lifeStagePupa",
+              "MY.lifeStageJuvenile",
+              "MY.lifeStageNymph",
+              "MY.lifeStageSubimago",
+              "MY.lifeStageImmature",
+              "MY.lifeStageAdult",
+              "MY.lifeStageFertile",
+              "MY.lifeStageSterile",
+              "MY.lifeStageTadpole",
+              "MY.lifeStageEmbryo",
+              "MY.lifeStageSubadult",
+              "MY.lifeStageMature",
+              "MY.lifeStagePullus",
+              "MY.lifeStageHatchedEgg",
+              "MY.lifeStageHatchedPupa",
+              "MY.lifeStageGall",
+              "MY.lifeStageMarks",
+              "MY.lifeStageTriungulin"
+            ],
+            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
+            "title": "Life stage"
           },
-          "wgs84Lon": {
+          "plantLifeStage": {
             "type": "string",
-            "title": "Longitude (E) coordinates in WGS84 format"
+            "enum": [
+              "",
+              "MY.plantLifeStageSterile",
+              "MY.plantLifeStageFertile",
+              "MY.plantLifeStageSeed",
+              "MY.plantLifeStageSprout",
+              "MY.plantLifeStageBud",
+              "MY.plantLifeStageFlower",
+              "MY.plantLifeStageWitheredFlower",
+              "MY.plantLifeStageRipeningFruit",
+              "MY.plantLifeStageRipeFruit",
+              "MY.plantLifeStageDeadSprout",
+              "MY.plantLifeStageSubterranean"
+            ],
+            "title": "Plant life stage"
+          },
+          "sex": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.sexM",
+              "MY.sexF",
+              "MY.sexW",
+              "MY.sexU",
+              "MY.sexN",
+              "MY.sexX",
+              "MY.sexE",
+              "MY.sexC"
+            ],
+            "description": "Sex of the individual(s)",
+            "title": "Sex"
           },
           "intellectualOwner": {
             "type": "string",
-            "title": "Tillverkare"
+            "title": "Creative rights owner"
           },
           "intellectualRights": {
             "type": "string",
@@ -54764,17 +55510,18 @@
             ],
             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
             "title": "Publicity restrictions"
+          },
+          "sortOrder": {
+            "type": "integer",
+            "title": "sortOrder"
           }
         },
         "required": [
           "fullURL",
           "largeURL",
-          "originalFilename",
-          "originalURL",
           "sourceSystem",
           "squareThumbnailURL",
           "thumbnailURL",
-          "uploadedBy",
           "intellectualOwner",
           "intellectualRights"
         ]
@@ -56008,6 +56755,247 @@
             "title": "Wing min (mm)"
           }
         }
+      },
+      "model": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the 3D model"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the 3D model"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the 3D model"
+          },
+          "caption": {
+            "type": "string",
+            "title": "Caption"
+          },
+          "captureDateTime": {
+            "type": "string",
+            "title": "Date taken"
+          },
+          "capturerVerbatim": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Photographer/recorder (Forename Surname)"
+          },
+          "documentURI": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Assosiated with document"
+          },
+          "highDetailModelURL": {
+            "type": "string",
+            "title": "URL of high detail model"
+          },
+          "keyword": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Keywords"
+          },
+          "lowDetailModelURL": {
+            "type": "string",
+            "title": "URL of low detail model"
+          },
+          "originalFilename": {
+            "type": "string",
+            "title": "Original filename"
+          },
+          "primaryForTaxon": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Taxon ids for which this media item is primary item"
+          },
+          "sourceSystem": {
+            "type": "string",
+            "title": "Source information system of the multimedia object"
+          },
+          "taxonDescriptionCaption": {
+            "$ref": "#/components/schemas/multiLang"
+          },
+          "taxonURI": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Taxon ID"
+          },
+          "taxonVerbatim": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Verbatim taxon name"
+          },
+          "thumbnailURL": {
+            "type": "string",
+            "title": "URL of a thumbnail version of the image (maintains aspect ratio, max. 200px height or width)"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "",
+              "MM.typeEnumLive",
+              "MM.typeEnumSpecimen",
+              "MM.typeEnumGenitalia",
+              "MM.typeEnumMicroscopy"
+            ],
+            "title": "Type of taxon media"
+          },
+          "uploadDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when the image was uploaded to Media API"
+          },
+          "uploadedBy": {
+            "type": "string",
+            "title": "Uploaded by"
+          },
+          "videoURL": {
+            "type": "string",
+            "title": "videoURL"
+          },
+          "lifeStage": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.lifeStageEgg",
+              "MY.lifeStageLarva",
+              "MY.lifeStagePupa",
+              "MY.lifeStageJuvenile",
+              "MY.lifeStageNymph",
+              "MY.lifeStageSubimago",
+              "MY.lifeStageImmature",
+              "MY.lifeStageAdult",
+              "MY.lifeStageFertile",
+              "MY.lifeStageSterile",
+              "MY.lifeStageTadpole",
+              "MY.lifeStageEmbryo",
+              "MY.lifeStageSubadult",
+              "MY.lifeStageMature",
+              "MY.lifeStagePullus",
+              "MY.lifeStageHatchedEgg",
+              "MY.lifeStageHatchedPupa",
+              "MY.lifeStageGall",
+              "MY.lifeStageMarks",
+              "MY.lifeStageTriungulin"
+            ],
+            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
+            "title": "Life stage"
+          },
+          "plantLifeStage": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.plantLifeStageSterile",
+              "MY.plantLifeStageFertile",
+              "MY.plantLifeStageSeed",
+              "MY.plantLifeStageSprout",
+              "MY.plantLifeStageBud",
+              "MY.plantLifeStageFlower",
+              "MY.plantLifeStageWitheredFlower",
+              "MY.plantLifeStageRipeningFruit",
+              "MY.plantLifeStageRipeFruit",
+              "MY.plantLifeStageDeadSprout",
+              "MY.plantLifeStageSubterranean"
+            ],
+            "title": "Plant life stage"
+          },
+          "sex": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.sexM",
+              "MY.sexF",
+              "MY.sexW",
+              "MY.sexU",
+              "MY.sexN",
+              "MY.sexX",
+              "MY.sexE",
+              "MY.sexC"
+            ],
+            "description": "Sex of the individual(s)",
+            "title": "Sex"
+          },
+          "intellectualOwner": {
+            "type": "string",
+            "title": "Creative rights owner"
+          },
+          "intellectualRights": {
+            "type": "string",
+            "enum": [
+              "MZ.intellectualRightsCC-BY-SA-4.0",
+              "MZ.intellectualRightsCC-BY-NC-4.0",
+              "MZ.intellectualRightsCC-BY-NC-SA-4.0",
+              "MZ.intellectualRightsCC-BY-4.0",
+              "MZ.intellectualRightsCC0-4.0",
+              "MZ.intellectualRightsODBL-1.0",
+              "MZ.intellectualRightsPD",
+              "MZ.intellectualRightsARR",
+              "MZ.intellectualRightsCC-BY-2.0",
+              "MZ.intellectualRightsCC-BY-SA-2.0",
+              "MZ.intellectualRightsCC-BY-SA-2.0-DE",
+              "MZ.intellectualRightsCC-BY-NC-2.0",
+              "MZ.intellectualRightsCC-BY-NC-SA-2.0",
+              "MZ.intellectualRightsCC-BY-NC-ND-2.0",
+              "MZ.intellectualRightsCC-BY-SA-2.5",
+              "MZ.intellectualRightsCC-BY-SA-2.5-SE",
+              "MZ.intellectualRightsCC-BY-3.0",
+              "MZ.intellectualRightsCC-BY-SA-3.0",
+              "MZ.intellectualRightsCC-BY-NC-SA-3.0",
+              "MZ.intellectualRightsCC-BY-ND-4.0",
+              "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+            ],
+            "title": "License"
+          },
+          "publicityRestrictions": {
+            "type": "string",
+            "enum": [
+              "",
+              "MZ.publicityRestrictionsPublic",
+              "MZ.publicityRestrictionsProtected",
+              "MZ.publicityRestrictionsPrivate"
+            ],
+            "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
+            "title": "Publicity restrictions"
+          },
+          "sortOrder": {
+            "type": "integer",
+            "title": "sortOrder"
+          }
+        },
+        "required": [
+          "sourceSystem",
+          "thumbnailURL",
+          "videoURL",
+          "intellectualOwner",
+          "intellectualRights"
+        ]
       },
       "multimedia": {
         "type": "object",
@@ -57638,7 +58626,8 @@
           },
           "externalID": {
             "type": "string",
-            "title": "External transaction ID"
+            "description": "Sender's ID for the transaction.",
+            "title": "Sender's transaction ID"
           },
           "geneticResourceAcquisitionCountry": {
             "type": "string",
@@ -57688,11 +58677,13 @@
           "incomingReceived": {
             "type": "string",
             "format": "date",
+            "description": "Date when incoming transaction was received.",
             "title": "Date received"
           },
           "incomingReturned": {
             "type": "string",
             "format": "date",
+            "description": "Date when the incoming loan was returned to the sender.",
             "title": "Date returned"
           },
           "internalRemarks": {
@@ -57702,6 +58693,7 @@
           },
           "legacyID": {
             "type": "string",
+            "description": "Loan/transaction number used in paper loan catalogs or old software (e.g. Curator)",
             "title": "Old transaction number"
           },
           "localHandler": {
@@ -57743,7 +58735,7 @@
           },
           "numberOfParcels": {
             "type": "string",
-            "description": "In how many parcels was the transaction sent",
+            "description": "In how many parcels was the transaction sent/carried.",
             "title": "Number of parcels"
           },
           "outgoingReturned": {
@@ -57754,6 +58746,7 @@
           "outgoingSent": {
             "type": "string",
             "format": "date",
+            "description": "When the transaction was sent out from us",
             "title": "Outgoing loan sent"
           },
           "permits": {
@@ -57776,7 +58769,7 @@
           "requestReceived": {
             "type": "string",
             "format": "date",
-            "description": "When loan request, loan, gift or exchange was received here.",
+            "description": "When loan request was received here.",
             "title": "Date requested"
           },
           "resourceImported": {
@@ -57825,6 +58818,7 @@
               "HRX.transportMethodOther",
               "HRX.transportMethodImage"
             ],
+            "description": "Means of sending, mail, courier etc.",
             "title": "Sent by"
           },
           "type": {
@@ -57898,7 +58892,12 @@
             "title": "Date"
           },
           "eventDocumentIDs": {
-            "type": "string",
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
             "title": "Specimen IDs"
           },
           "eventHandler": {
@@ -59607,12 +60606,6 @@
             "description": "Means of sending, mail, courier etc.",
             "title": "Sent by"
           },
-          "transactionEvents": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/transactionEvent"
-            }
-          },
           "transactionRequestReceived": {
             "type": "string",
             "format": "date",
@@ -60808,13 +61801,14 @@
               "MY.recordBasisMachineObservationAudio",
               "MY.recordBasisMachineObservationGeologger",
               "MY.recordBasisMachineObservationSatelliteTransmitter",
+              "MY.recordBasisMachineObservationDNA",
               "MY.recordBasisFossilSpecimen",
               "MY.recordBasisSubfossilSpecimen",
-              "MY.recordBasisLivingSpecimen",
-              "MY.recordBasisMicrobialSpecimen",
-              "MY.recordBasisLiterature",
+              "MY.recordBasisSubfossilSpecimenAmberInclusion",
               "MY.recordBasisMaterialSample",
-              "MY.recordBasisSubfossilSpecimenAmberInclusion"
+              "MY.recordBasisMicrobialSpecimen",
+              "MY.recordBasisLivingSpecimen",
+              "MY.recordBasisLiterature"
             ],
             "description": "Type of record, most commonly preserved specimen for museum specimens and observation for associated observations (\"seuralaislajihavainto\").",
             "title": "Record type"
@@ -61548,8 +62542,224 @@
           "@type": {
             "type": "string",
             "title": "Type for the Video"
+          },
+          "caption": {
+            "type": "string",
+            "title": "Caption"
+          },
+          "captureDateTime": {
+            "type": "string",
+            "title": "Date taken"
+          },
+          "capturerVerbatim": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Photographer/recorder (Forename Surname)"
+          },
+          "documentURI": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Assosiated with document"
+          },
+          "keyword": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Keywords"
+          },
+          "originalFilename": {
+            "type": "string",
+            "title": "Original filename"
+          },
+          "primaryForTaxon": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Taxon ids for which this media item is primary item"
+          },
+          "sourceSystem": {
+            "type": "string",
+            "title": "Source information system of the multimedia object"
+          },
+          "taxonDescriptionCaption": {
+            "$ref": "#/components/schemas/multiLang"
+          },
+          "taxonURI": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Taxon ID"
+          },
+          "taxonVerbatim": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Verbatim taxon name"
+          },
+          "thumbnailURL": {
+            "type": "string",
+            "title": "URL of a thumbnail version of the image (maintains aspect ratio, max. 200px height or width)"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "",
+              "MM.typeEnumLive",
+              "MM.typeEnumSpecimen",
+              "MM.typeEnumGenitalia",
+              "MM.typeEnumMicroscopy"
+            ],
+            "title": "Type of taxon media"
+          },
+          "uploadDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when the image was uploaded to Media API"
+          },
+          "uploadedBy": {
+            "type": "string",
+            "title": "Uploaded by"
+          },
+          "videoURL": {
+            "type": "string",
+            "title": "videoURL"
+          },
+          "lifeStage": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.lifeStageEgg",
+              "MY.lifeStageLarva",
+              "MY.lifeStagePupa",
+              "MY.lifeStageJuvenile",
+              "MY.lifeStageNymph",
+              "MY.lifeStageSubimago",
+              "MY.lifeStageImmature",
+              "MY.lifeStageAdult",
+              "MY.lifeStageFertile",
+              "MY.lifeStageSterile",
+              "MY.lifeStageTadpole",
+              "MY.lifeStageEmbryo",
+              "MY.lifeStageSubadult",
+              "MY.lifeStageMature",
+              "MY.lifeStagePullus",
+              "MY.lifeStageHatchedEgg",
+              "MY.lifeStageHatchedPupa",
+              "MY.lifeStageGall",
+              "MY.lifeStageMarks",
+              "MY.lifeStageTriungulin"
+            ],
+            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
+            "title": "Life stage"
+          },
+          "plantLifeStage": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.plantLifeStageSterile",
+              "MY.plantLifeStageFertile",
+              "MY.plantLifeStageSeed",
+              "MY.plantLifeStageSprout",
+              "MY.plantLifeStageBud",
+              "MY.plantLifeStageFlower",
+              "MY.plantLifeStageWitheredFlower",
+              "MY.plantLifeStageRipeningFruit",
+              "MY.plantLifeStageRipeFruit",
+              "MY.plantLifeStageDeadSprout",
+              "MY.plantLifeStageSubterranean"
+            ],
+            "title": "Plant life stage"
+          },
+          "sex": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.sexM",
+              "MY.sexF",
+              "MY.sexW",
+              "MY.sexU",
+              "MY.sexN",
+              "MY.sexX",
+              "MY.sexE",
+              "MY.sexC"
+            ],
+            "description": "Sex of the individual(s)",
+            "title": "Sex"
+          },
+          "intellectualOwner": {
+            "type": "string",
+            "title": "Creative rights owner"
+          },
+          "intellectualRights": {
+            "type": "string",
+            "enum": [
+              "MZ.intellectualRightsCC-BY-SA-4.0",
+              "MZ.intellectualRightsCC-BY-NC-4.0",
+              "MZ.intellectualRightsCC-BY-NC-SA-4.0",
+              "MZ.intellectualRightsCC-BY-4.0",
+              "MZ.intellectualRightsCC0-4.0",
+              "MZ.intellectualRightsODBL-1.0",
+              "MZ.intellectualRightsPD",
+              "MZ.intellectualRightsARR",
+              "MZ.intellectualRightsCC-BY-2.0",
+              "MZ.intellectualRightsCC-BY-SA-2.0",
+              "MZ.intellectualRightsCC-BY-SA-2.0-DE",
+              "MZ.intellectualRightsCC-BY-NC-2.0",
+              "MZ.intellectualRightsCC-BY-NC-SA-2.0",
+              "MZ.intellectualRightsCC-BY-NC-ND-2.0",
+              "MZ.intellectualRightsCC-BY-SA-2.5",
+              "MZ.intellectualRightsCC-BY-SA-2.5-SE",
+              "MZ.intellectualRightsCC-BY-3.0",
+              "MZ.intellectualRightsCC-BY-SA-3.0",
+              "MZ.intellectualRightsCC-BY-NC-SA-3.0",
+              "MZ.intellectualRightsCC-BY-ND-4.0",
+              "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+            ],
+            "title": "License"
+          },
+          "publicityRestrictions": {
+            "type": "string",
+            "enum": [
+              "",
+              "MZ.publicityRestrictionsPublic",
+              "MZ.publicityRestrictionsProtected",
+              "MZ.publicityRestrictionsPrivate"
+            ],
+            "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
+            "title": "Publicity restrictions"
+          },
+          "sortOrder": {
+            "type": "integer",
+            "title": "sortOrder"
           }
-        }
+        },
+        "required": [
+          "sourceSystem",
+          "thumbnailURL",
+          "videoURL",
+          "intellectualOwner",
+          "intellectualRights"
+        ]
       },
       "patchObj": {
         "title": "JSONPatch",
@@ -62363,6 +63573,10 @@
     {
       "name": "measurement",
       "description": "measurement"
+    },
+    {
+      "name": "model",
+      "description": "3D model"
     },
     {
       "name": "multimedia",

@@ -170,49 +170,6 @@ export interface Transaction {
     | "HRA.sentTypeCarried"
     | "HRA.sentTypeOther"
     | "HRA.sentTypeImage";
-  transactionEvents?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
-    eventDate: string;
-    eventHandler: string;
-    eventType: "HRAA.eventTypeSend" | "HRAA.eventTypeReceive" | "HRAA.eventTypeOther";
-    items: [
-      {
-        id?: string;
-        "@type"?: string;
-        "@context"?: string;
-        collectionID?: string;
-        itemCount: number;
-        itemID?: string;
-        itemLabel?: string;
-        itemType: "HRAB.itemTypeSpecimen" | "HRAB.itemTypeSpecimenBatch" | "HRAB.itemTypeImage" | "HRAB.itemTypeOther";
-        notes?: string;
-        status: "HRAB.statusOk" | "HRAB.statusMissing" | "HRAB.statusDamaged";
-      },
-      ...{
-        id?: string;
-        "@type"?: string;
-        "@context"?: string;
-        collectionID?: string;
-        itemCount: number;
-        itemID?: string;
-        itemLabel?: string;
-        itemType: "HRAB.itemTypeSpecimen" | "HRAB.itemTypeSpecimenBatch" | "HRAB.itemTypeImage" | "HRAB.itemTypeOther";
-        notes?: string;
-        status: "HRAB.statusOk" | "HRAB.statusMissing" | "HRAB.statusDamaged";
-      }[]
-    ];
-    notes?: string;
-    numberOfPackages?: number;
-    sentBy?:
-      | ""
-      | "HRAA.sentByPriority"
-      | "HRAA.sentByEconomy"
-      | "HRAA.sentByCourier"
-      | "HRAA.sentByCarried"
-      | "HRAA.sentByOther";
-  }[];
   /**
    * When loan request, loan, gift or exchange was received here.
    */

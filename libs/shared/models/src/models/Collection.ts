@@ -202,6 +202,11 @@ export interface Collection {
    * Language the data is (mainly) written in, if applicable.
    */
   language?: string;
+  longName?: {
+    en?: string;
+    fi?: string;
+    sv?: string;
+  };
   metadataCreator?: string;
   /**
    * Indication of how comprehensive the information on this form is.

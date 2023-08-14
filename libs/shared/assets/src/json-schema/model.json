@@ -1,28 +1,28 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
-  "subject": "MM.audio",
+  "subject": "MM.model",
   "additionalProperties": false,
-  "title": "Audio recording",
+  "title": "3D model",
   "description": "",
   "properties": {
     "@context": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@context",
-      "title": "Context for the Audio recording"
+      "title": "Context for the 3D model"
     },
     "id": {
       "type": "string",
       "range": "xsd:string",
       "subject": "id",
-      "title": "Id for the Audio recording"
+      "title": "Id for the 3D model"
     },
     "@type": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@type",
-      "title": "Type for the Audio recording"
+      "title": "Type for the 3D model"
     },
     "caption": {
       "type": "string",
@@ -58,11 +58,11 @@
       "subject": "MM.documentURI",
       "title": "Assosiated with document"
     },
-    "fullURL": {
+    "highDetailModelURL": {
       "type": "string",
       "range": "xsd:string",
-      "subject": "MM.fullURL",
-      "title": "URL of full size version of the image (converted to JPG)"
+      "subject": "MM.highDetailModelURL",
+      "title": "URL of high detail model"
     },
     "keyword": {
       "type": "array",
@@ -75,11 +75,11 @@
       "subject": "MM.keyword",
       "title": "Keywords"
     },
-    "mp3URL": {
+    "lowDetailModelURL": {
       "type": "string",
       "range": "xsd:string",
-      "subject": "MM.mp3URL",
-      "title": "URL of mp3 audio file (stripped original or compressed from original)"
+      "subject": "MM.lowDetailModelURL",
+      "title": "URL of low detail model"
     },
     "originalFilename": {
       "type": "string",
@@ -183,11 +183,11 @@
       "subject": "MM.uploadedBy",
       "title": "Uploaded by"
     },
-    "wavURL": {
+    "videoURL": {
       "type": "string",
       "range": "xsd:string",
-      "subject": "MM.wavURL",
-      "title": "URL of wav audio file (stripped original)"
+      "subject": "MM.videoURL",
+      "title": "videoURL"
     },
     "lifeStage": {
       "type": "string",
@@ -390,10 +390,9 @@
     }
   },
   "required": [
-    "fullURL",
-    "mp3URL",
     "sourceSystem",
     "thumbnailURL",
+    "videoURL",
     "intellectualOwner",
     "intellectualRights"
   ]

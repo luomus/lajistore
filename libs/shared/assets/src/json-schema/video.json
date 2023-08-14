@@ -23,6 +23,365 @@
       "range": "xsd:string",
       "subject": "@type",
       "title": "Type for the Video"
+    },
+    "caption": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MM.caption",
+      "title": "Caption"
+    },
+    "captureDateTime": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MM.captureDateTime",
+      "title": "Date taken"
+    },
+    "capturerVerbatim": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "MM.capturerVerbatim",
+      "title": "Photographer/recorder (Forename Surname)"
+    },
+    "documentURI": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "MM.documentURI",
+      "title": "Assosiated with document"
+    },
+    "keyword": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "MM.keyword",
+      "title": "Keywords"
+    },
+    "originalFilename": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MM.originalFilename",
+      "title": "Original filename"
+    },
+    "primaryForTaxon": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "MX.taxon",
+      "subject": "MM.primaryForTaxon",
+      "title": "Taxon ids for which this media item is primary item"
+    },
+    "sourceSystem": {
+      "type": "string",
+      "range": "KE.informationSystem",
+      "subject": "MM.sourceSystem",
+      "title": "Source information system of the multimedia object"
+    },
+    "taxonDescriptionCaption": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "en": {
+          "type": "string"
+        },
+        "fi": {
+          "type": "string"
+        },
+        "sv": {
+          "type": "string"
+        }
+      },
+      "range": "xsd:string",
+      "subject": "MM.taxonDescriptionCaption",
+      "title": "Species image caption"
+    },
+    "taxonURI": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "MX.taxon",
+      "subject": "MM.taxonURI",
+      "title": "Taxon ID"
+    },
+    "taxonVerbatim": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "MM.taxonVerbatim",
+      "title": "Verbatim taxon name"
+    },
+    "thumbnailURL": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MM.thumbnailURL",
+      "title": "URL of a thumbnail version of the image (maintains aspect ratio, max. 200px height or width)"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "",
+        "MM.typeEnumLive",
+        "MM.typeEnumSpecimen",
+        "MM.typeEnumGenitalia",
+        "MM.typeEnumMicroscopy"
+      ],
+      "enumNames": [
+        "",
+        "Live",
+        "Specimen",
+        "Genitalia",
+        "Microscopy"
+      ],
+      "range": "MM.typeEnum",
+      "subject": "MM.type",
+      "title": "Type of taxon media"
+    },
+    "uploadDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "range": "xsd:dateTime",
+      "subject": "MM.uploadDateTime",
+      "title": "Date/time when the image was uploaded to Media API"
+    },
+    "uploadedBy": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MM.uploadedBy",
+      "title": "Uploaded by"
+    },
+    "videoURL": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MM.videoURL",
+      "title": "videoURL"
+    },
+    "lifeStage": {
+      "type": "string",
+      "enum": [
+        "",
+        "MY.lifeStageEgg",
+        "MY.lifeStageLarva",
+        "MY.lifeStagePupa",
+        "MY.lifeStageJuvenile",
+        "MY.lifeStageNymph",
+        "MY.lifeStageSubimago",
+        "MY.lifeStageImmature",
+        "MY.lifeStageAdult",
+        "MY.lifeStageFertile",
+        "MY.lifeStageSterile",
+        "MY.lifeStageTadpole",
+        "MY.lifeStageEmbryo",
+        "MY.lifeStageSubadult",
+        "MY.lifeStageMature",
+        "MY.lifeStagePullus",
+        "MY.lifeStageHatchedEgg",
+        "MY.lifeStageHatchedPupa",
+        "MY.lifeStageGall",
+        "MY.lifeStageMarks",
+        "MY.lifeStageTriungulin"
+      ],
+      "enumNames": [
+        "",
+        "egg",
+        "larva",
+        "pupa",
+        "juvenile",
+        "nymph",
+        "subimago",
+        "immature",
+        "adult",
+        "fertile",
+        "sterile",
+        "tadpole",
+        "embryo or fetus",
+        "subadult",
+        "mature",
+        "pullus",
+        "hatched egg",
+        "hatched pupa",
+        "gall",
+        "marks (feeding marks etc.)",
+        "triungulin"
+      ],
+      "range": "MY.lifeStages",
+      "subject": "MY.lifeStage",
+      "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
+      "title": "Life stage"
+    },
+    "plantLifeStage": {
+      "type": "string",
+      "enum": [
+        "",
+        "MY.plantLifeStageSterile",
+        "MY.plantLifeStageFertile",
+        "MY.plantLifeStageSeed",
+        "MY.plantLifeStageSprout",
+        "MY.plantLifeStageBud",
+        "MY.plantLifeStageFlower",
+        "MY.plantLifeStageWitheredFlower",
+        "MY.plantLifeStageRipeningFruit",
+        "MY.plantLifeStageRipeFruit",
+        "MY.plantLifeStageDeadSprout",
+        "MY.plantLifeStageSubterranean"
+      ],
+      "enumNames": [
+        "",
+        "sterile",
+        "fertile",
+        "seed / spore / fruit",
+        "sprout",
+        "bud",
+        "flower",
+        "withered flower",
+        "ripening seed / fruit / spore",
+        "ripe seed / fruit / spore",
+        "dead sprout",
+        "subterranean"
+      ],
+      "range": "MY.plantLifeStageEnum",
+      "subject": "MY.plantLifeStage",
+      "title": "Plant life stage"
+    },
+    "sex": {
+      "type": "string",
+      "enum": [
+        "",
+        "MY.sexM",
+        "MY.sexF",
+        "MY.sexW",
+        "MY.sexU",
+        "MY.sexN",
+        "MY.sexX",
+        "MY.sexE",
+        "MY.sexC"
+      ],
+      "enumNames": [
+        "",
+        "M - Male",
+        "F - Female",
+        "W - Worker",
+        "U - Unknown",
+        "N - Not applicable",
+        "X - Gynandromorph",
+        "E - multiple",
+        "C - Conflicting"
+      ],
+      "range": "MY.sexes",
+      "subject": "MY.sex",
+      "description": "Sex of the individual(s)",
+      "title": "Sex"
+    },
+    "intellectualOwner": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MZ.intellectualOwner",
+      "title": "Creative rights owner"
+    },
+    "intellectualRights": {
+      "type": "string",
+      "enum": [
+        "MZ.intellectualRightsCC-BY-SA-4.0",
+        "MZ.intellectualRightsCC-BY-NC-4.0",
+        "MZ.intellectualRightsCC-BY-NC-SA-4.0",
+        "MZ.intellectualRightsCC-BY-4.0",
+        "MZ.intellectualRightsCC0-4.0",
+        "MZ.intellectualRightsODBL-1.0",
+        "MZ.intellectualRightsPD",
+        "MZ.intellectualRightsARR",
+        "MZ.intellectualRightsCC-BY-2.0",
+        "MZ.intellectualRightsCC-BY-SA-2.0",
+        "MZ.intellectualRightsCC-BY-SA-2.0-DE",
+        "MZ.intellectualRightsCC-BY-NC-2.0",
+        "MZ.intellectualRightsCC-BY-NC-SA-2.0",
+        "MZ.intellectualRightsCC-BY-NC-ND-2.0",
+        "MZ.intellectualRightsCC-BY-SA-2.5",
+        "MZ.intellectualRightsCC-BY-SA-2.5-SE",
+        "MZ.intellectualRightsCC-BY-3.0",
+        "MZ.intellectualRightsCC-BY-SA-3.0",
+        "MZ.intellectualRightsCC-BY-NC-SA-3.0",
+        "MZ.intellectualRightsCC-BY-ND-4.0",
+        "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+      ],
+      "enumNames": [
+        "Creative Commons Attribution Share-Alike 4.0",
+        "Creative Commons Attribution Noncommercial 4.0",
+        "Creative Commons Attribution Noncommercial Share-Alike 4.0",
+        "Creative Commons Attribution 4.0",
+        "Creative Commons Zero 4.0",
+        "Open Data Commons Open Database License (ODbL)",
+        "Public domain",
+        "All rights reserved",
+        "Creative Commons Attribution 2.0",
+        "Creative Commons Attribution Share-Alike 2.0",
+        "Creative Commons Attribution Share-Alike 2.0 Germany",
+        "Creative Commons Attribution Noncommercial 2.0",
+        "Creative Commons Attribution Noncommercial Share-Alike 2.0",
+        "Creative Commons Attribution Noncommercial Noderivs 2.0",
+        "Creative Commons Attribution Share-Alike 2.5",
+        "Creative Commons Attribution Share-Alike 2.5 Sweden",
+        "Creative Commons Attribution 3.0",
+        "Creative Commons Attribution Share-Alike 3.0",
+        "Creative Commons Attribution Noncommercial Share-Alike 3.0",
+        "Creative Commons Attribution Noderivatives 4.0",
+        "Creative Commons Attribution Noncommercial Noderivatives 4.0"
+      ],
+      "range": "MZ.intellectualRightsEnum",
+      "subject": "MZ.intellectualRights",
+      "title": "License"
+    },
+    "publicityRestrictions": {
+      "type": "string",
+      "enum": [
+        "",
+        "MZ.publicityRestrictionsPublic",
+        "MZ.publicityRestrictionsProtected",
+        "MZ.publicityRestrictionsPrivate"
+      ],
+      "enumNames": [
+        "",
+        "public",
+        "protected",
+        "private"
+      ],
+      "range": "MZ.publicityRestrictionsEnum",
+      "subject": "MZ.publicityRestrictions",
+      "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
+      "title": "Publicity restrictions"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "sortOrder",
+      "title": "sortOrder"
     }
-  }
+  },
+  "required": [
+    "sourceSystem",
+    "thumbnailURL",
+    "videoURL",
+    "intellectualOwner",
+    "intellectualRights"
+  ]
 }

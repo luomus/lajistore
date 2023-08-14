@@ -42,6 +42,9 @@ export interface SpecimenTransaction {
    * Date when the loan needs to be returned.
    */
   dueDate?: string;
+  /**
+   * Sender's ID for the transaction.
+   */
   externalID?: string;
   /**
    * Country where the genetic resource or traditional knowledge was acquired from, provider country, country of origin. List of countries in Kotka is based on ISO 3166 Country Codes -standard and may differ from the country list in ABSCH.
@@ -78,12 +81,21 @@ export interface SpecimenTransaction {
    * Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
    */
   hasIRCC?: boolean;
+  /**
+   * Date when incoming transaction was received.
+   */
   incomingReceived?: string;
+  /**
+   * Date when the incoming loan was returned to the sender.
+   */
   incomingReturned?: string;
   /**
    * Private remarks that are shown only in Kotka and not to the corresponding organisation.
    */
   internalRemarks?: string;
+  /**
+   * Loan/transaction number used in paper loan catalogs or old software (e.g. Curator)
+   */
   legacyID?: string;
   localHandler?: string;
   /**
@@ -105,10 +117,13 @@ export interface SpecimenTransaction {
   missingCount?: number;
   missingIDs?: string[];
   /**
-   * In how many parcels was the transaction sent
+   * In how many parcels was the transaction sent/carried.
    */
   numberOfParcels?: string;
   outgoingReturned?: string;
+  /**
+   * When the transaction was sent out from us
+   */
   outgoingSent?: string;
   permits?: {
     id?: string;
@@ -142,7 +157,7 @@ export interface SpecimenTransaction {
    */
   receiptReturned?: string;
   /**
-   * When loan request, loan, gift or exchange was received here.
+   * When loan request was received here.
    */
   requestReceived?: string;
   /**
@@ -157,10 +172,13 @@ export interface SpecimenTransaction {
   status?: "" | "HRX.statusInProcess" | "HRX.statusOutstanding" | "HRX.statusClosed";
   transactionEvents?: {
     eventDate?: string;
-    eventDocumentIDs?: string;
+    eventDocumentIDs?: string[];
     eventHandler?: string;
     eventNotes?: string;
   }[];
+  /**
+   * Means of sending, mail, courier etc.
+   */
   transportMethod?:
     | ""
     | "HRX.transportMethodPriority"

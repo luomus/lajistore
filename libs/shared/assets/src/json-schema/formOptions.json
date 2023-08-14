@@ -6932,13 +6932,14 @@
                         "MY.recordBasisMachineObservationAudio",
                         "MY.recordBasisMachineObservationGeologger",
                         "MY.recordBasisMachineObservationSatelliteTransmitter",
+                        "MY.recordBasisMachineObservationDNA",
                         "MY.recordBasisFossilSpecimen",
                         "MY.recordBasisSubfossilSpecimen",
-                        "MY.recordBasisLivingSpecimen",
-                        "MY.recordBasisMicrobialSpecimen",
-                        "MY.recordBasisLiterature",
+                        "MY.recordBasisSubfossilSpecimenAmberInclusion",
                         "MY.recordBasisMaterialSample",
-                        "MY.recordBasisSubfossilSpecimenAmberInclusion"
+                        "MY.recordBasisMicrobialSpecimen",
+                        "MY.recordBasisLivingSpecimen",
+                        "MY.recordBasisLiterature"
                       ],
                       "enumNames": [
                         "",
@@ -6957,13 +6958,14 @@
                         "Machine observation audio",
                         "Geologger",
                         "Satellite positioning",
+                        "DNA",
                         "Fossil",
                         "Subfossil",
-                        "Living specimen",
-                        "Microbial specimen",
-                        "Literature",
+                        "Amber inclusion",
                         "Material sample",
-                        "Amber inclusion"
+                        "Microbial specimen",
+                        "Living specimen",
+                        "Literature"
                       ],
                       "range": "MY.recordBases",
                       "subject": "MY.recordBasis",
@@ -8809,7 +8811,8 @@
         "MHL.resultServiceTypeNafi",
         "MHL.resultServiceTypeBirdPointCount",
         "MHL.resultServiceTypeWinterBirdCount",
-        "MHL.resultServiceTypeSykeInsectProjects"
+        "MHL.resultServiceTypeSykeInsectProjects",
+        "MHL.resultServiceTypeInvasiveControl"
       ],
       "enumNames": [
         "",
@@ -8817,7 +8820,8 @@
         "MHL.resultServiceTypeNafi",
         "MHL.resultServiceTypeBirdPointCount",
         "MHL.resultServiceTypeWinterBirdCount",
-        "MHL.resultServiceTypeSykeInsectProjects"
+        "MHL.resultServiceTypeSykeInsectProjects",
+        "MHL.resultServiceTypeInvasiveControl"
       ],
       "range": "MHL.resultServiceTypeEnum",
       "subject": "MHL.resultServiceType",

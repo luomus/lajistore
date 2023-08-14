@@ -5,7 +5,7 @@
  * and run the command to regenerate this file.
  */
 
-export interface Video {
+export interface Model {
   "@context"?: string;
   id?: string;
   "@type"?: string;
@@ -13,7 +13,9 @@ export interface Video {
   captureDateTime?: string;
   capturerVerbatim?: string[];
   documentURI?: string[];
+  highDetailModelURL?: string;
   keyword?: string[];
+  lowDetailModelURL?: string;
   originalFilename?: string;
   primaryForTaxon?: string[];
   sourceSystem: string;

@@ -30,6 +30,98 @@
     "@type": {
       "@id": "default:@type",
       "@type": "xsd:string"
+    },
+    "caption": {
+      "@id": "default:MM.caption",
+      "@type": "xsd:string"
+    },
+    "captureDateTime": {
+      "@id": "default:MM.captureDateTime",
+      "@type": "xsd:string"
+    },
+    "capturerVerbatim": {
+      "@id": "default:MM.capturerVerbatim",
+      "@type": "xsd:string"
+    },
+    "documentURI": {
+      "@id": "default:MM.documentURI",
+      "@type": "xsd:string"
+    },
+    "keyword": {
+      "@id": "default:MM.keyword",
+      "@type": "xsd:string"
+    },
+    "originalFilename": {
+      "@id": "default:MM.originalFilename",
+      "@type": "xsd:string"
+    },
+    "primaryForTaxon": {
+      "@id": "default:MM.primaryForTaxon",
+      "@type": "@id"
+    },
+    "sourceSystem": {
+      "@id": "default:MM.sourceSystem",
+      "@type": "@id"
+    },
+    "taxonDescriptionCaption": {
+      "@id": "default:MM.taxonDescriptionCaption",
+      "@container": "@language"
+    },
+    "taxonURI": {
+      "@id": "default:MM.taxonURI",
+      "@type": "@id"
+    },
+    "taxonVerbatim": {
+      "@id": "default:MM.taxonVerbatim",
+      "@type": "xsd:string"
+    },
+    "thumbnailURL": {
+      "@id": "default:MM.thumbnailURL",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "default:MM.type",
+      "@type": "@id"
+    },
+    "uploadDateTime": {
+      "@id": "default:MM.uploadDateTime",
+      "@type": "xsd:dateTime"
+    },
+    "uploadedBy": {
+      "@id": "default:MM.uploadedBy",
+      "@type": "xsd:string"
+    },
+    "videoURL": {
+      "@id": "default:MM.videoURL",
+      "@type": "xsd:string"
+    },
+    "lifeStage": {
+      "@id": "default:MY.lifeStage",
+      "@type": "@id"
+    },
+    "plantLifeStage": {
+      "@id": "default:MY.plantLifeStage",
+      "@type": "@id"
+    },
+    "sex": {
+      "@id": "default:MY.sex",
+      "@type": "@id"
+    },
+    "intellectualOwner": {
+      "@id": "default:MZ.intellectualOwner",
+      "@type": "xsd:string"
+    },
+    "intellectualRights": {
+      "@id": "default:MZ.intellectualRights",
+      "@type": "@id"
+    },
+    "publicityRestrictions": {
+      "@id": "default:MZ.publicityRestrictions",
+      "@type": "@id"
+    },
+    "sortOrder": {
+      "@id": "default:sortOrder",
+      "@type": "xsd:integer"
     }
   }
 }
