@@ -1452,7 +1452,8 @@
               "MX.taxonSetBiomonCompleteListLargeFlowers",
               "MX.taxonSetBiomonCompleteListSubarcticPlants",
               "MX.taxonSetBiomonCompleteListMacrolichens",
-              "MX.taxonSetBiomonCompleteListBracketFungi"
+              "MX.taxonSetBiomonCompleteListBracketFungi",
+              "MX.taxonSetBiomonCompleteListPracticalFungi"
             ],
             "enumNames": [
               "",
@@ -1475,7 +1476,8 @@
               "Biomon: Visible flowering plants",
               "Biomon: Fell plants",
               "Biomon: Macrolichens",
-              "Biomon: Bracket fungi"
+              "Biomon: Bracket fungi",
+              "Biomon: Practical fungi"
             ],
             "range": "MX.taxonSetEnum",
             "subject": "MY.censusTaxonSetID",

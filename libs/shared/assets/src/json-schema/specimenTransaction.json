@@ -54,7 +54,7 @@
       "type": "integer",
       "range": "xsd:integer",
       "subject": "HRX.awayCount",
-      "title": "Away"
+      "title": "Away count"
     },
     "awayIDs": {
       "type": "array",
@@ -65,13 +65,13 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "HRX.awayIDs",
-      "title": "Away"
+      "title": "Away IDs"
     },
     "collectionID": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.collectionID",
-      "description": "For statiscal purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.",
+      "description": "For statistical purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.",
       "title": "Collection"
     },
     "correspondentOrganization": {
@@ -85,20 +85,21 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.correspondentPerson",
-      "description": "Name of the corresponding person. If the transaction goes to a private person, write his/her postal address here.",
+      "description": "Name of the corresponding person. If the transaction goes to a private person, write their postal address here.",
       "title": "Corresponding person/contact info"
     },
     "correspondentResearcher": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.correspondentResearcher",
+      "description": "Receicing researcher in the correspondent organisation for outgoing transactions.",
       "title": "Receiving researcher"
     },
     "damagedCount": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "HRX.damagedCount",
-      "title": "Damaged"
+      "title": "Damaged count"
     },
     "damagedIDs": {
       "type": "array",
@@ -109,7 +110,7 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "HRX.damagedIDs",
-      "title": "Damaged"
+      "title": "Damaged IDs"
     },
     "dueDate": {
       "type": "string",
@@ -228,27 +229,34 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localHandler",
+      "description": "Person handling the transaction at local Kotka institution.",
       "title": "Handler"
+    },
+    "localHandlerEmail": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.localHandlerEmail",
+      "title": "Email"
     },
     "localPerson": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localPerson",
-      "description": "Responsible person in our museum.",
+      "description": "Person responsible for the transaction in our museum/local Kotka institution",
       "title": "Person responsible"
     },
     "localPersonEmail": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localPersonEmail",
-      "description": "Responsible person's email in our museum.",
+      "description": "Contact email for the person responsible in our museum.",
       "title": "Email"
     },
     "localResearcher": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localResearcher",
-      "description": "For incoming loans, name of the researcher receiving the loan.",
+      "description": "For incoming loans, name of the researcher receiving the loan at our local institution.",
       "title": "Receiving researcher"
     },
     "material": {
@@ -262,7 +270,7 @@
       "type": "integer",
       "range": "xsd:integer",
       "subject": "HRX.missingCount",
-      "title": "Missing"
+      "title": "Missing count"
     },
     "missingIDs": {
       "type": "array",
@@ -273,7 +281,7 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "HRX.missingIDs",
-      "title": "Missing"
+      "title": "Missing IDs"
     },
     "numberOfParcels": {
       "type": "string",
@@ -287,6 +295,7 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "HRX.outgoingReturned",
+      "description": "Date when the outgoing loan was returned to us",
       "title": "Outgoing loan returned"
     },
     "outgoingSent": {
@@ -441,7 +450,7 @@
       "type": "integer",
       "range": "xsd:integer",
       "subject": "HRX.returnedCount",
-      "title": "Returned"
+      "title": "Returned count"
     },
     "returnedIDs": {
       "type": "array",
@@ -452,7 +461,7 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "HRX.returnedIDs",
-      "title": "Returned"
+      "title": "Returned IDs"
     },
     "status": {
       "type": "string",
@@ -512,6 +521,22 @@
             "range": "xsd:string",
             "subject": "HRX.eventNotes",
             "title": "Notes"
+          },
+          "eventType": {
+            "type": "string",
+            "enum": [
+              "",
+              "HRX.eventTypeReturn",
+              "HRX.eventTypeAddition"
+            ],
+            "enumNames": [
+              "",
+              "Return",
+              "Addition"
+            ],
+            "range": "HRX.eventTypeEnum",
+            "subject": "HRX.eventType",
+            "title": "Event type"
           }
         }
       },

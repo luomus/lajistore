@@ -29,7 +29,15 @@ export interface Image {
   taxonURI?: string[];
   taxonVerbatim?: string[];
   thumbnailURL: string;
-  type?: "" | "MM.typeEnumLive" | "MM.typeEnumSpecimen" | "MM.typeEnumGenitalia" | "MM.typeEnumMicroscopy";
+  type?:
+    | ""
+    | "MM.typeEnumLive"
+    | "MM.typeEnumSpecimen"
+    | "MM.typeEnumGenitalia"
+    | "MM.typeEnumMicroscopy"
+    | "MM.typeEnumCarcass"
+    | "MM.typeEnumHabitat"
+    | "MM.typeEnumLabel";
   uploadDateTime?: string;
   uploadedBy?: string;
   /**

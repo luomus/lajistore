@@ -132,6 +132,11 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "localHandlerEmail": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "localPerson": {
         "type": "keyword",
         "ignore_above": 200,
@@ -262,6 +267,10 @@
             "type": "keyword",
             "ignore_above": 200,
             "normalizer": "useLowercase"
+          },
+          "eventType": {
+            "type": "keyword",
+            "ignore_above": 200
           }
         }
       },

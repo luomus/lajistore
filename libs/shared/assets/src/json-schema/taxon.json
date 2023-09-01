@@ -30,6 +30,49 @@
       "subject": "herbo:sortOrder",
       "title": "herbo:sortOrder"
     },
+    "invasiveSpeciesMainGroup": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string",
+        "enum": [
+          "",
+          "HBE.MG2",
+          "HBE.MG3",
+          "HBE.MG4",
+          "HBE.MG5",
+          "HBE.MG6",
+          "HBE.MG7",
+          "HBE.MG8",
+          "HBE.MG9",
+          "HBE.MG12",
+          "HBE.MG11",
+          "HBE.MG10",
+          "HBE.MG13",
+          "HBE.MG14"
+        ],
+        "enumNames": [
+          "",
+          "Plants",
+          "Snails",
+          "Baltic Sea",
+          "Freshwater",
+          "Forestry pests",
+          "Aggricultural pests",
+          "Mammals and birds",
+          "Domestic pests",
+          "Nationally regulated invasive species",
+          "EU regulated invasive species",
+          "Other invasive species",
+          "Kasvintuhoojat",
+          "Vieraslajit.fi portaalin lajit"
+        ]
+      },
+      "minItems": 0,
+      "range": "HBE.invasiveSpeciesMainGroups",
+      "subject": "HBE.invasiveSpeciesMainGroup",
+      "title": "Main portal group"
+    },
     "primaryHabitat": {
       "type": "string",
       "range": "MKV.habitatObject",
@@ -788,7 +831,8 @@
           "MX.taxonSetBiomonCompleteListLargeFlowers",
           "MX.taxonSetBiomonCompleteListSubarcticPlants",
           "MX.taxonSetBiomonCompleteListMacrolichens",
-          "MX.taxonSetBiomonCompleteListBracketFungi"
+          "MX.taxonSetBiomonCompleteListBracketFungi",
+          "MX.taxonSetBiomonCompleteListPracticalFungi"
         ],
         "enumNames": [
           "",
@@ -811,7 +855,8 @@
           "Biomon: Visible flowering plants",
           "Biomon: Fell plants",
           "Biomon: Macrolichens",
-          "Biomon: Bracket fungi"
+          "Biomon: Bracket fungi",
+          "Biomon: Practical fungi"
         ]
       },
       "minItems": 0,

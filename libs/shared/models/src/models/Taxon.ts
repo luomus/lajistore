@@ -10,6 +10,22 @@ export interface Taxon {
   id?: string;
   "@type"?: string;
   "herbo:sortOrder"?: number;
+  invasiveSpeciesMainGroup?: (
+    | ""
+    | "HBE.MG2"
+    | "HBE.MG3"
+    | "HBE.MG4"
+    | "HBE.MG5"
+    | "HBE.MG6"
+    | "HBE.MG7"
+    | "HBE.MG8"
+    | "HBE.MG9"
+    | "HBE.MG12"
+    | "HBE.MG11"
+    | "HBE.MG10"
+    | "HBE.MG13"
+    | "HBE.MG14"
+  )[];
   /**
    * <p>Lisämerkinnät:</p>
    * <ul>
@@ -257,6 +273,7 @@ export interface Taxon {
     | "MX.taxonSetBiomonCompleteListSubarcticPlants"
     | "MX.taxonSetBiomonCompleteListMacrolichens"
     | "MX.taxonSetBiomonCompleteListBracketFungi"
+    | "MX.taxonSetBiomonCompleteListPracticalFungi"
   )[];
   /**
    * Eliön elinkierto

@@ -184,6 +184,12 @@
           "description": "Verbatim specimen data from clad book",
           "title": "Clad data verbatim"
         },
+        "collectionCode": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "MY.collectionCode",
+          "title": "Collection code"
+        },
         "collectionID": {
           "type": "string",
           "range": "MY.collection",
@@ -1772,7 +1778,8 @@
                       "MX.taxonSetBiomonCompleteListLargeFlowers",
                       "MX.taxonSetBiomonCompleteListSubarcticPlants",
                       "MX.taxonSetBiomonCompleteListMacrolichens",
-                      "MX.taxonSetBiomonCompleteListBracketFungi"
+                      "MX.taxonSetBiomonCompleteListBracketFungi",
+                      "MX.taxonSetBiomonCompleteListPracticalFungi"
                     ],
                     "enumNames": [
                       "",
@@ -1795,7 +1802,8 @@
                       "Biomon: Visible flowering plants",
                       "Biomon: Fell plants",
                       "Biomon: Macrolichens",
-                      "Biomon: Bracket fungi"
+                      "Biomon: Bracket fungi",
+                      "Biomon: Practical fungi"
                     ],
                     "range": "MX.taxonSetEnum",
                     "subject": "MY.censusTaxonSetID",
@@ -1882,6 +1890,12 @@
           "range": "MY.gathering",
           "subject": "MY.hasGathering",
           "title": "hasGathering"
+        },
+        "institutionCode": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "MY.institutionCode",
+          "title": "Institution code"
         },
         "isTemplate": {
           "type": "boolean",
@@ -4625,7 +4639,8 @@
                         "MX.taxonSetBiomonCompleteListLargeFlowers",
                         "MX.taxonSetBiomonCompleteListSubarcticPlants",
                         "MX.taxonSetBiomonCompleteListMacrolichens",
-                        "MX.taxonSetBiomonCompleteListBracketFungi"
+                        "MX.taxonSetBiomonCompleteListBracketFungi",
+                        "MX.taxonSetBiomonCompleteListPracticalFungi"
                       ],
                       "enumNames": [
                         "",
@@ -4648,7 +4663,8 @@
                         "Biomon: Visible flowering plants",
                         "Biomon: Fell plants",
                         "Biomon: Macrolichens",
-                        "Biomon: Bracket fungi"
+                        "Biomon: Bracket fungi",
+                        "Biomon: Practical fungi"
                       ],
                       "range": "MX.taxonSetEnum",
                       "subject": "MY.censusTaxonSetID",
@@ -6256,11 +6272,13 @@
                         "MY.recordBasisMachineObservationAudio",
                         "MY.recordBasisMachineObservationGeologger",
                         "MY.recordBasisMachineObservationSatelliteTransmitter",
-                        "MY.recordBasisMachineObservationDNA",
                         "MY.recordBasisFossilSpecimen",
                         "MY.recordBasisSubfossilSpecimen",
                         "MY.recordBasisSubfossilSpecimenAmberInclusion",
                         "MY.recordBasisMaterialSample",
+                        "MY.recordBasisMaterialSampleAir",
+                        "MY.recordBasisMaterialSampleSoil",
+                        "MY.recordBasisMaterialSampleWater",
                         "MY.recordBasisMicrobialSpecimen",
                         "MY.recordBasisLivingSpecimen",
                         "MY.recordBasisLiterature"
@@ -6282,11 +6300,13 @@
                         "Machine observation audio",
                         "Geologger",
                         "Satellite positioning",
-                        "DNA",
                         "Fossil",
                         "Subfossil",
                         "Amber inclusion",
                         "Material sample",
+                        "Material sample, air",
+                        "Material sample, soil",
+                        "Material sample, water",
                         "Microbial specimen",
                         "Living specimen",
                         "Literature"
@@ -8416,6 +8436,12 @@
           "description": "Verbatim specimen data from clad book",
           "title": "Clad data verbatim"
         },
+        "collectionCode": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "MY.collectionCode",
+          "title": "Collection code"
+        },
         "collectionID": {
           "type": "string",
           "range": "MY.collection",
@@ -10004,7 +10030,8 @@
                       "MX.taxonSetBiomonCompleteListLargeFlowers",
                       "MX.taxonSetBiomonCompleteListSubarcticPlants",
                       "MX.taxonSetBiomonCompleteListMacrolichens",
-                      "MX.taxonSetBiomonCompleteListBracketFungi"
+                      "MX.taxonSetBiomonCompleteListBracketFungi",
+                      "MX.taxonSetBiomonCompleteListPracticalFungi"
                     ],
                     "enumNames": [
                       "",
@@ -10027,7 +10054,8 @@
                       "Biomon: Visible flowering plants",
                       "Biomon: Fell plants",
                       "Biomon: Macrolichens",
-                      "Biomon: Bracket fungi"
+                      "Biomon: Bracket fungi",
+                      "Biomon: Practical fungi"
                     ],
                     "range": "MX.taxonSetEnum",
                     "subject": "MY.censusTaxonSetID",
@@ -10114,6 +10142,12 @@
           "range": "MY.gathering",
           "subject": "MY.hasGathering",
           "title": "hasGathering"
+        },
+        "institutionCode": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "MY.institutionCode",
+          "title": "Institution code"
         },
         "isTemplate": {
           "type": "boolean",
@@ -12857,7 +12891,8 @@
                         "MX.taxonSetBiomonCompleteListLargeFlowers",
                         "MX.taxonSetBiomonCompleteListSubarcticPlants",
                         "MX.taxonSetBiomonCompleteListMacrolichens",
-                        "MX.taxonSetBiomonCompleteListBracketFungi"
+                        "MX.taxonSetBiomonCompleteListBracketFungi",
+                        "MX.taxonSetBiomonCompleteListPracticalFungi"
                       ],
                       "enumNames": [
                         "",
@@ -12880,7 +12915,8 @@
                         "Biomon: Visible flowering plants",
                         "Biomon: Fell plants",
                         "Biomon: Macrolichens",
-                        "Biomon: Bracket fungi"
+                        "Biomon: Bracket fungi",
+                        "Biomon: Practical fungi"
                       ],
                       "range": "MX.taxonSetEnum",
                       "subject": "MY.censusTaxonSetID",
@@ -14488,11 +14524,13 @@
                         "MY.recordBasisMachineObservationAudio",
                         "MY.recordBasisMachineObservationGeologger",
                         "MY.recordBasisMachineObservationSatelliteTransmitter",
-                        "MY.recordBasisMachineObservationDNA",
                         "MY.recordBasisFossilSpecimen",
                         "MY.recordBasisSubfossilSpecimen",
                         "MY.recordBasisSubfossilSpecimenAmberInclusion",
                         "MY.recordBasisMaterialSample",
+                        "MY.recordBasisMaterialSampleAir",
+                        "MY.recordBasisMaterialSampleSoil",
+                        "MY.recordBasisMaterialSampleWater",
                         "MY.recordBasisMicrobialSpecimen",
                         "MY.recordBasisLivingSpecimen",
                         "MY.recordBasisLiterature"
@@ -14514,11 +14552,13 @@
                         "Machine observation audio",
                         "Geologger",
                         "Satellite positioning",
-                        "DNA",
                         "Fossil",
                         "Subfossil",
                         "Amber inclusion",
                         "Material sample",
+                        "Material sample, air",
+                        "Material sample, soil",
+                        "Material sample, water",
                         "Microbial specimen",
                         "Living specimen",
                         "Literature"

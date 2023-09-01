@@ -145,14 +145,20 @@
         "MM.typeEnumLive",
         "MM.typeEnumSpecimen",
         "MM.typeEnumGenitalia",
-        "MM.typeEnumMicroscopy"
+        "MM.typeEnumMicroscopy",
+        "MM.typeEnumCarcass",
+        "MM.typeEnumHabitat",
+        "MM.typeEnumLabel"
       ],
       "enumNames": [
         "",
         "Live",
         "Specimen",
         "Genitalia",
-        "Microscopy"
+        "Microscopy",
+        "Carcass",
+        "Habitat",
+        "Label"
       ],
       "range": "MM.typeEnum",
       "subject": "MM.type",

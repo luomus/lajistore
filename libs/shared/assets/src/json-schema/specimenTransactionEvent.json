@@ -53,6 +53,22 @@
       "range": "xsd:string",
       "subject": "HRX.eventNotes",
       "title": "Notes"
+    },
+    "eventType": {
+      "type": "string",
+      "enum": [
+        "",
+        "HRX.eventTypeReturn",
+        "HRX.eventTypeAddition"
+      ],
+      "enumNames": [
+        "",
+        "Return",
+        "Addition"
+      ],
+      "range": "HRX.eventTypeEnum",
+      "subject": "HRX.eventType",
+      "title": "Event type"
     }
   }
 }

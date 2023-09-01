@@ -50326,7 +50326,10 @@
               "MM.typeEnumLive",
               "MM.typeEnumSpecimen",
               "MM.typeEnumGenitalia",
-              "MM.typeEnumMicroscopy"
+              "MM.typeEnumMicroscopy",
+              "MM.typeEnumCarcass",
+              "MM.typeEnumHabitat",
+              "MM.typeEnumLabel"
             ],
             "title": "Type of taxon media"
           },
@@ -51393,6 +51396,10 @@
             "description": "Verbatim specimen data from clad book",
             "title": "Clad data verbatim"
           },
+          "collectionCode": {
+            "type": "string",
+            "title": "Collection code"
+          },
           "collectionID": {
             "type": "string",
             "description": "The collection which this specimen belongs to",
@@ -51511,6 +51518,10 @@
             },
             "minItems": 0,
             "title": "hasGathering"
+          },
+          "institutionCode": {
+            "type": "string",
+            "title": "Institution code"
           },
           "isTemplate": {
             "type": "boolean",
@@ -55394,7 +55405,10 @@
               "MM.typeEnumLive",
               "MM.typeEnumSpecimen",
               "MM.typeEnumGenitalia",
-              "MM.typeEnumMicroscopy"
+              "MM.typeEnumMicroscopy",
+              "MM.typeEnumCarcass",
+              "MM.typeEnumHabitat",
+              "MM.typeEnumLabel"
             ],
             "title": "Type of taxon media"
           },
@@ -56863,7 +56877,10 @@
               "MM.typeEnumLive",
               "MM.typeEnumSpecimen",
               "MM.typeEnumGenitalia",
-              "MM.typeEnumMicroscopy"
+              "MM.typeEnumMicroscopy",
+              "MM.typeEnumCarcass",
+              "MM.typeEnumHabitat",
+              "MM.typeEnumLabel"
             ],
             "title": "Type of taxon media"
           },
@@ -58575,7 +58592,7 @@
           },
           "awayCount": {
             "type": "integer",
-            "title": "Away"
+            "title": "Away count"
           },
           "awayIDs": {
             "type": "array",
@@ -58584,11 +58601,11 @@
               "type": "string"
             },
             "minItems": 0,
-            "title": "Away"
+            "title": "Away IDs"
           },
           "collectionID": {
             "type": "string",
-            "description": "For statiscal purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.",
+            "description": "For statistical purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.",
             "title": "Collection"
           },
           "correspondentOrganization": {
@@ -58598,16 +58615,17 @@
           },
           "correspondentPerson": {
             "type": "string",
-            "description": "Name of the corresponding person. If the transaction goes to a private person, write his/her postal address here.",
+            "description": "Name of the corresponding person. If the transaction goes to a private person, write their postal address here.",
             "title": "Corresponding person/contact info"
           },
           "correspondentResearcher": {
             "type": "string",
+            "description": "Receicing researcher in the correspondent organisation for outgoing transactions.",
             "title": "Receiving researcher"
           },
           "damagedCount": {
             "type": "integer",
-            "title": "Damaged"
+            "title": "Damaged count"
           },
           "damagedIDs": {
             "type": "array",
@@ -58616,7 +58634,7 @@
               "type": "string"
             },
             "minItems": 0,
-            "title": "Damaged"
+            "title": "Damaged IDs"
           },
           "dueDate": {
             "type": "string",
@@ -58698,21 +58716,26 @@
           },
           "localHandler": {
             "type": "string",
+            "description": "Person handling the transaction at local Kotka institution.",
             "title": "Handler"
+          },
+          "localHandlerEmail": {
+            "type": "string",
+            "title": "Email"
           },
           "localPerson": {
             "type": "string",
-            "description": "Responsible person in our museum.",
+            "description": "Person responsible for the transaction in our museum/local Kotka institution",
             "title": "Person responsible"
           },
           "localPersonEmail": {
             "type": "string",
-            "description": "Responsible person's email in our museum.",
+            "description": "Contact email for the person responsible in our museum.",
             "title": "Email"
           },
           "localResearcher": {
             "type": "string",
-            "description": "For incoming loans, name of the researcher receiving the loan.",
+            "description": "For incoming loans, name of the researcher receiving the loan at our local institution.",
             "title": "Receiving researcher"
           },
           "material": {
@@ -58722,7 +58745,7 @@
           },
           "missingCount": {
             "type": "integer",
-            "title": "Missing"
+            "title": "Missing count"
           },
           "missingIDs": {
             "type": "array",
@@ -58731,7 +58754,7 @@
               "type": "string"
             },
             "minItems": 0,
-            "title": "Missing"
+            "title": "Missing IDs"
           },
           "numberOfParcels": {
             "type": "string",
@@ -58741,6 +58764,7 @@
           "outgoingReturned": {
             "type": "string",
             "format": "date",
+            "description": "Date when the outgoing loan was returned to us",
             "title": "Outgoing loan returned"
           },
           "outgoingSent": {
@@ -58779,7 +58803,7 @@
           },
           "returnedCount": {
             "type": "integer",
-            "title": "Returned"
+            "title": "Returned count"
           },
           "returnedIDs": {
             "type": "array",
@@ -58788,7 +58812,7 @@
               "type": "string"
             },
             "minItems": 0,
-            "title": "Returned"
+            "title": "Returned IDs"
           },
           "status": {
             "type": "string",
@@ -58907,6 +58931,15 @@
           "eventNotes": {
             "type": "string",
             "title": "Notes"
+          },
+          "eventType": {
+            "type": "string",
+            "enum": [
+              "",
+              "HRX.eventTypeReturn",
+              "HRX.eventTypeAddition"
+            ],
+            "title": "Event type"
           }
         }
       },
@@ -59076,6 +59109,31 @@
           "herbo:sortOrder": {
             "type": "integer",
             "title": "herbo:sortOrder"
+          },
+          "invasiveSpeciesMainGroup": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string",
+              "enum": [
+                "",
+                "HBE.MG2",
+                "HBE.MG3",
+                "HBE.MG4",
+                "HBE.MG5",
+                "HBE.MG6",
+                "HBE.MG7",
+                "HBE.MG8",
+                "HBE.MG9",
+                "HBE.MG12",
+                "HBE.MG11",
+                "HBE.MG10",
+                "HBE.MG13",
+                "HBE.MG14"
+              ]
+            },
+            "minItems": 0,
+            "title": "Main portal group"
           },
           "primaryHabitat": {
             "type": "string",
@@ -59616,7 +59674,8 @@
                 "MX.taxonSetBiomonCompleteListLargeFlowers",
                 "MX.taxonSetBiomonCompleteListSubarcticPlants",
                 "MX.taxonSetBiomonCompleteListMacrolichens",
-                "MX.taxonSetBiomonCompleteListBracketFungi"
+                "MX.taxonSetBiomonCompleteListBracketFungi",
+                "MX.taxonSetBiomonCompleteListPracticalFungi"
               ]
             },
             "minItems": 0,
@@ -60151,7 +60210,8 @@
               "MX.taxonSetBiomonCompleteListLargeFlowers",
               "MX.taxonSetBiomonCompleteListSubarcticPlants",
               "MX.taxonSetBiomonCompleteListMacrolichens",
-              "MX.taxonSetBiomonCompleteListBracketFungi"
+              "MX.taxonSetBiomonCompleteListBracketFungi",
+              "MX.taxonSetBiomonCompleteListPracticalFungi"
             ],
             "title": "Censused taxon set"
           },
@@ -61801,11 +61861,13 @@
               "MY.recordBasisMachineObservationAudio",
               "MY.recordBasisMachineObservationGeologger",
               "MY.recordBasisMachineObservationSatelliteTransmitter",
-              "MY.recordBasisMachineObservationDNA",
               "MY.recordBasisFossilSpecimen",
               "MY.recordBasisSubfossilSpecimen",
               "MY.recordBasisSubfossilSpecimenAmberInclusion",
               "MY.recordBasisMaterialSample",
+              "MY.recordBasisMaterialSampleAir",
+              "MY.recordBasisMaterialSampleSoil",
+              "MY.recordBasisMaterialSampleWater",
               "MY.recordBasisMicrobialSpecimen",
               "MY.recordBasisLivingSpecimen",
               "MY.recordBasisLiterature"
@@ -62627,7 +62689,10 @@
               "MM.typeEnumLive",
               "MM.typeEnumSpecimen",
               "MM.typeEnumGenitalia",
-              "MM.typeEnumMicroscopy"
+              "MM.typeEnumMicroscopy",
+              "MM.typeEnumCarcass",
+              "MM.typeEnumHabitat",
+              "MM.typeEnumLabel"
             ],
             "title": "Type of taxon media"
           },

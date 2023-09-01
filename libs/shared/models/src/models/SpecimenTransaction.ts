@@ -24,7 +24,7 @@ export interface SpecimenTransaction {
   awayCount?: number;
   awayIDs?: string[];
   /**
-   * For statiscal purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.
+   * For statistical purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.
    */
   collectionID?: string;
   /**
@@ -32,9 +32,12 @@ export interface SpecimenTransaction {
    */
   correspondentOrganization?: string;
   /**
-   * Name of the corresponding person. If the transaction goes to a private person, write his/her postal address here.
+   * Name of the corresponding person. If the transaction goes to a private person, write their postal address here.
    */
   correspondentPerson?: string;
+  /**
+   * Receicing researcher in the correspondent organisation for outgoing transactions.
+   */
   correspondentResearcher?: string;
   damagedCount?: number;
   damagedIDs?: string[];
@@ -97,17 +100,21 @@ export interface SpecimenTransaction {
    * Loan/transaction number used in paper loan catalogs or old software (e.g. Curator)
    */
   legacyID?: string;
-  localHandler?: string;
   /**
-   * Responsible person in our museum.
+   * Person handling the transaction at local Kotka institution.
+   */
+  localHandler?: string;
+  localHandlerEmail?: string;
+  /**
+   * Person responsible for the transaction in our museum/local Kotka institution
    */
   localPerson?: string;
   /**
-   * Responsible person's email in our museum.
+   * Contact email for the person responsible in our museum.
    */
   localPersonEmail?: string;
   /**
-   * For incoming loans, name of the researcher receiving the loan.
+   * For incoming loans, name of the researcher receiving the loan at our local institution.
    */
   localResearcher?: string;
   /**
@@ -120,6 +127,9 @@ export interface SpecimenTransaction {
    * In how many parcels was the transaction sent/carried.
    */
   numberOfParcels?: string;
+  /**
+   * Date when the outgoing loan was returned to us
+   */
   outgoingReturned?: string;
   /**
    * When the transaction was sent out from us
@@ -175,6 +185,7 @@ export interface SpecimenTransaction {
     eventDocumentIDs?: string[];
     eventHandler?: string;
     eventNotes?: string;
+    eventType?: "" | "HRX.eventTypeReturn" | "HRX.eventTypeAddition";
   }[];
   /**
    * Means of sending, mail, courier etc.

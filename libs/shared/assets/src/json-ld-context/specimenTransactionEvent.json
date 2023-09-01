@@ -46,6 +46,10 @@
     "eventNotes": {
       "@id": "default:HRX.eventNotes",
       "@type": "xsd:string"
+    },
+    "eventType": {
+      "@id": "default:HRX.eventType",
+      "@type": "@id"
     }
   }
 }

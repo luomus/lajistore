@@ -127,6 +127,10 @@
       "@id": "default:HRX.localHandler",
       "@type": "xsd:string"
     },
+    "localHandlerEmail": {
+      "@id": "default:HRX.localHandlerEmail",
+      "@type": "xsd:string"
+    },
     "localPerson": {
       "@id": "default:HRX.localPerson",
       "@type": "xsd:string"

@@ -771,7 +771,8 @@ export interface Gathering {
       | "MX.taxonSetBiomonCompleteListLargeFlowers"
       | "MX.taxonSetBiomonCompleteListSubarcticPlants"
       | "MX.taxonSetBiomonCompleteListMacrolichens"
-      | "MX.taxonSetBiomonCompleteListBracketFungi";
+      | "MX.taxonSetBiomonCompleteListBracketFungi"
+      | "MX.taxonSetBiomonCompleteListPracticalFungi";
     taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
   }[];
   temperature?: number;
@@ -1293,11 +1294,13 @@ export interface Gathering {
       | "MY.recordBasisMachineObservationAudio"
       | "MY.recordBasisMachineObservationGeologger"
       | "MY.recordBasisMachineObservationSatelliteTransmitter"
-      | "MY.recordBasisMachineObservationDNA"
       | "MY.recordBasisFossilSpecimen"
       | "MY.recordBasisSubfossilSpecimen"
       | "MY.recordBasisSubfossilSpecimenAmberInclusion"
       | "MY.recordBasisMaterialSample"
+      | "MY.recordBasisMaterialSampleAir"
+      | "MY.recordBasisMaterialSampleSoil"
+      | "MY.recordBasisMaterialSampleWater"
       | "MY.recordBasisMicrobialSpecimen"
       | "MY.recordBasisLivingSpecimen"
       | "MY.recordBasisLiterature";

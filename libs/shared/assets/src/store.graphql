@@ -4808,6 +4808,9 @@ enum TypeOfTaxonMedia {
   MM_TYPEENUMSPECIMEN
   MM_TYPEENUMGENITALIA
   MM_TYPEENUMMICROSCOPY
+  MM_TYPEENUMCARCASS
+  MM_TYPEENUMHABITAT
+  MM_TYPEENUMLABEL
 }
 
 type BirdSongRecognitionSkillLevel2 {
@@ -5200,6 +5203,7 @@ type Document2 {
 
   # Verbatim specimen data from clad book
   cladVerbatim: String
+  collectionCode: String
 
   # The collection which this specimen belongs to
   collectionID: String
@@ -5259,6 +5263,7 @@ type Document2 {
   iPEN: String
   id: String
   images: [String]
+  institutionCode: String
   isTemplate: Boolean
   keywords: [String]
 
@@ -5836,6 +5841,7 @@ enum CensusTaxonSetID {
   MX_TAXONSETBIOMONCOMPLETELISTSUBARCTICPLANTS
   MX_TAXONSETBIOMONCOMPLETELISTMACROLICHENS
   MX_TAXONSETBIOMONCOMPLETELISTBRACKETFUNGI
+  MX_TAXONSETBIOMONCOMPLETELISTPRACTICALFUNGI
 }
 
 enum TaxonCensusType {
@@ -6881,11 +6887,13 @@ enum RecordBasis {
   MY_RECORDBASISMACHINEOBSERVATIONAUDIO
   MY_RECORDBASISMACHINEOBSERVATIONGEOLOGGER
   MY_RECORDBASISMACHINEOBSERVATIONSATELLITETRANSMITTER
-  MY_RECORDBASISMACHINEOBSERVATIONDNA
   MY_RECORDBASISFOSSILSPECIMEN
   MY_RECORDBASISSUBFOSSILSPECIMEN
   MY_RECORDBASISSUBFOSSILSPECIMENAMBERINCLUSION
   MY_RECORDBASISMATERIALSAMPLE
+  MY_RECORDBASISMATERIALSAMPLEAIR
+  MY_RECORDBASISMATERIALSAMPLESOIL
+  MY_RECORDBASISMATERIALSAMPLEWATER
   MY_RECORDBASISMICROBIALSPECIMEN
   MY_RECORDBASISLIVINGSPECIMEN
   MY_RECORDBASISLITERATURE
@@ -9487,15 +9495,17 @@ type SpecimenTransaction2 {
   awayCount: Int
   awayIDs: [String]
 
-  # For statiscal purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.
+  # For statistical purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.
   collectionID: String
   context: String
 
   # Select the correspondent organization from a list. If not found on the list, you need to add the new organization first.
   correspondentOrganization: String
 
-  # Name of the corresponding person. If the transaction goes to a private person, write his/her postal address here.
+  # Name of the corresponding person. If the transaction goes to a private person, write their postal address here.
   correspondentPerson: String
+
+  # Receicing researcher in the correspondent organisation for outgoing transactions.
   correspondentResearcher: String
   creator: String
   damagedCount: Int
@@ -9546,15 +9556,18 @@ type SpecimenTransaction2 {
 
   # Loan/transaction number used in paper loan catalogs or old software (e.g. Curator)
   legacyID: String
-  localHandler: String
 
-  # Responsible person in our museum.
+  # Person handling the transaction at local Kotka institution.
+  localHandler: String
+  localHandlerEmail: String
+
+  # Person responsible for the transaction in our museum/local Kotka institution
   localPerson: String
 
-  # Responsible person's email in our museum.
+  # Contact email for the person responsible in our museum.
   localPersonEmail: String
 
-  # For incoming loans, name of the researcher receiving the loan.
+  # For incoming loans, name of the researcher receiving the loan at our local institution.
   localResearcher: String
 
   # Description of the material included in this transaction.
@@ -9564,6 +9577,8 @@ type SpecimenTransaction2 {
 
   # In how many parcels was the transaction sent/carried.
   numberOfParcels: String
+
+  # Date when the outgoing loan was returned to us
   outgoingReturned: String
 
   # When the transaction was sent out from us
@@ -9631,8 +9646,15 @@ type SpecimenTransactionEvent {
   eventDocumentIDs: [String]
   eventHandler: String
   eventNotes: String
+  eventType: EventType2
   id: String
   type: String
+}
+
+enum EventType2 {
+  _
+  HRX_EVENTTYPERETURN
+  HRX_EVENTTYPEADDITION
 }
 
 enum TransportMethod {
@@ -9830,6 +9852,7 @@ type Taxon2 {
   invasiveSpeciesClassificationDescription: String
   invasiveSpeciesEarlyWarning: Boolean
   invasiveSpeciesEstablishment: InvasiveSpeciesEstablishment
+  invasiveSpeciesMainGroup: [InvasiveSpeciesMainGroupListItem]
   isPartOf: String
   isPartOfInformalTaxonGroup: [String]
   isPartOfSet: [IsPartOfSetListItem]
@@ -10007,6 +10030,23 @@ enum InvasiveSpeciesEstablishment {
   MX_INVASIVENONWILD
 }
 
+enum InvasiveSpeciesMainGroupListItem {
+  _
+  HBE_MG2
+  HBE_MG3
+  HBE_MG4
+  HBE_MG5
+  HBE_MG6
+  HBE_MG7
+  HBE_MG8
+  HBE_MG9
+  HBE_MG12
+  HBE_MG11
+  HBE_MG10
+  HBE_MG13
+  HBE_MG14
+}
+
 enum IsPartOfSetListItem {
   _
   MX_TAXONSETSYKEBUTTERFLYCENSUSPAPILIONOIDEA
@@ -10029,6 +10069,7 @@ enum IsPartOfSetListItem {
   MX_TAXONSETBIOMONCOMPLETELISTSUBARCTICPLANTS
   MX_TAXONSETBIOMONCOMPLETELISTMACROLICHENS
   MX_TAXONSETBIOMONCOMPLETELISTBRACKETFUNGI
+  MX_TAXONSETBIOMONCOMPLETELISTPRACTICALFUNGI
 }
 
 enum NaturaAreaSecureLevel {
@@ -10546,7 +10587,7 @@ type TransactionEvent2 {
   context: String
   eventDate: String!
   eventHandler: String!
-  eventType: EventType2!
+  eventType: EventType3!
   id: String
   items: [TransactionItem]!
   notes: String
@@ -10555,7 +10596,7 @@ type TransactionEvent2 {
   type: String
 }
 
-enum EventType2 {
+enum EventType3 {
   HRAA_EVENTTYPESEND
   HRAA_EVENTTYPERECEIVE
   HRAA_EVENTTYPEOTHER
@@ -22352,6 +22393,7 @@ input Document2Input {
 
   # Verbatim specimen data from clad book
   cladVerbatim: String
+  collectionCode: String
 
   # The collection which this specimen belongs to
   collectionID: String
@@ -22411,6 +22453,7 @@ input Document2Input {
   iPEN: String
   id: String
   images: [String]
+  institutionCode: String
   isTemplate: Boolean
   keywords: [String]
 
@@ -24465,15 +24508,17 @@ input SpecimenTransaction2Input {
   awayCount: Int
   awayIDs: [String]
 
-  # For statiscal purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.
+  # For statistical purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.
   collectionID: String
   context: String
 
   # Select the correspondent organization from a list. If not found on the list, you need to add the new organization first.
   correspondentOrganization: String
 
-  # Name of the corresponding person. If the transaction goes to a private person, write his/her postal address here.
+  # Name of the corresponding person. If the transaction goes to a private person, write their postal address here.
   correspondentPerson: String
+
+  # Receicing researcher in the correspondent organisation for outgoing transactions.
   correspondentResearcher: String
   creator: String
   damagedCount: Int
@@ -24524,15 +24569,18 @@ input SpecimenTransaction2Input {
 
   # Loan/transaction number used in paper loan catalogs or old software (e.g. Curator)
   legacyID: String
-  localHandler: String
 
-  # Responsible person in our museum.
+  # Person handling the transaction at local Kotka institution.
+  localHandler: String
+  localHandlerEmail: String
+
+  # Person responsible for the transaction in our museum/local Kotka institution
   localPerson: String
 
-  # Responsible person's email in our museum.
+  # Contact email for the person responsible in our museum.
   localPersonEmail: String
 
-  # For incoming loans, name of the researcher receiving the loan.
+  # For incoming loans, name of the researcher receiving the loan at our local institution.
   localResearcher: String
 
   # Description of the material included in this transaction.
@@ -24542,6 +24590,8 @@ input SpecimenTransaction2Input {
 
   # In how many parcels was the transaction sent/carried.
   numberOfParcels: String
+
+  # Date when the outgoing loan was returned to us
   outgoingReturned: String
 
   # When the transaction was sent out from us
@@ -24585,6 +24635,7 @@ input SpecimenTransactionEventInput {
   eventDocumentIDs: [String]
   eventHandler: String
   eventNotes: String
+  eventType: EventType2
   id: String
   type: String
 }
@@ -24732,6 +24783,7 @@ input Taxon2Input {
   invasiveSpeciesClassificationDescription: String
   invasiveSpeciesEarlyWarning: Boolean
   invasiveSpeciesEstablishment: InvasiveSpeciesEstablishment
+  invasiveSpeciesMainGroup: [InvasiveSpeciesMainGroupListItem]
   isPartOf: String
   isPartOfInformalTaxonGroup: [String]
   isPartOfSet: [IsPartOfSetListItem]
@@ -24989,7 +25041,7 @@ input TransactionEvent2Input {
   context: String
   eventDate: String!
   eventHandler: String!
-  eventType: EventType2!
+  eventType: EventType3!
   id: String
   items: [TransactionItemInput]!
   notes: String

@@ -46,6 +46,10 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "eventType": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "_meta": {
         "properties": {
           "created": {

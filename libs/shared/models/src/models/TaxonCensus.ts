@@ -31,6 +31,7 @@ export interface TaxonCensus {
     | "MX.taxonSetBiomonCompleteListLargeFlowers"
     | "MX.taxonSetBiomonCompleteListSubarcticPlants"
     | "MX.taxonSetBiomonCompleteListMacrolichens"
-    | "MX.taxonSetBiomonCompleteListBracketFungi";
+    | "MX.taxonSetBiomonCompleteListBracketFungi"
+    | "MX.taxonSetBiomonCompleteListPracticalFungi";
   taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
 }

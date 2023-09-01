@@ -35,6 +35,10 @@
       "@id": "default:herbo:sortOrder",
       "@type": "xsd:integer"
     },
+    "invasiveSpeciesMainGroup": {
+      "@id": "default:HBE.invasiveSpeciesMainGroup",
+      "@type": "@id"
+    },
     "primaryHabitat": {
       "@id": "default:MKV.primaryHabitat",
       "@type": "@id"
