@@ -8,6 +8,7 @@ cd ${SCRIPT_PATH}/../../libs/shared/models
 WHO=$(npm whoami)
 
 if [[ $WHO = "luomus" ]]; then
+  npm version patch
   npm publish
 else
   echo "NPM not logged in as LUOMUS"

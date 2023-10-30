@@ -1,0 +1,17 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "strict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": ["es2017", "dom"],
+  },
+  "root": ".",
+  "baseUrl": ".",
+  "include": ["**/*.ts"],
+  "exclude": ["**/*.spec.ts"]
+}
