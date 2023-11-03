@@ -41,7 +41,7 @@ BEGIN
 
     IF UPDATING THEN
       :new.VERSION := v_version + 1;
-      :new.EDITED := sysdate;
+      :new.EDITED := CAST(SYS_EXTRACT_UTC(SYSTIMESTAMP) AS DATE);
     END IF;
 
     INSERT INTO laji_document_history
@@ -68,7 +68,7 @@ BEGIN
         :old.SOURCE,
         :old.CREATED,
         :old.EDITED,
-        SYSDATE
+        CAST(SYS_EXTRACT_UTC(SYSTIMESTAMP) AS DATE)
       );
   END TR_LAJI_DOCUMENT_HISTORY;`);
   }
