@@ -13,6 +13,7 @@ export interface Video {
   captureDateTime?: string;
   capturerVerbatim?: string[];
   documentURI?: string[];
+  fullResolutionMediaAvailable?: boolean;
   keyword?: string[];
   originalFilename?: string;
   primaryForTaxon?: string[];
@@ -32,13 +33,14 @@ export interface Video {
     | "MM.typeEnumGenitalia"
     | "MM.typeEnumMicroscopy"
     | "MM.typeEnumCarcass"
+    | "MM.typeEnumSkeletal"
     | "MM.typeEnumHabitat"
     | "MM.typeEnumLabel";
   uploadDateTime?: string;
   uploadedBy?: string;
   videoURL: string;
   /**
-   * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.
+   * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
    */
   lifeStage?:
     | ""

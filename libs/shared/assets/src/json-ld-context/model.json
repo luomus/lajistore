@@ -47,6 +47,10 @@
       "@id": "default:MM.documentURI",
       "@type": "xsd:string"
     },
+    "fullResolutionMediaAvailable": {
+      "@id": "default:MM.fullResolutionMediaAvailable",
+      "@type": "xsd:boolean"
+    },
     "highDetailModelURL": {
       "@id": "default:MM.highDetailModelURL",
       "@type": "xsd:string"

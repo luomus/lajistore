@@ -32,6 +32,7 @@ export interface TaxonCensus {
     | "MX.taxonSetBiomonCompleteListSubarcticPlants"
     | "MX.taxonSetBiomonCompleteListMacrolichens"
     | "MX.taxonSetBiomonCompleteListBracketFungi"
-    | "MX.taxonSetBiomonCompleteListPracticalFungi";
+    | "MX.taxonSetBiomonCompleteListPracticalFungi"
+    | "MX.taxonSetSykeMacrozoobenthos";
   taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
 }

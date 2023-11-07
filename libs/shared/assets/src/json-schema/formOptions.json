@@ -860,12 +860,6 @@
           "description": "Verbatim specimen data from clad book",
           "title": "Clad data verbatim"
         },
-        "collectionCode": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "MY.collectionCode",
-          "title": "Collection code"
-        },
         "collectionID": {
           "type": "string",
           "range": "MY.collection",
@@ -2455,7 +2449,8 @@
                       "MX.taxonSetBiomonCompleteListSubarcticPlants",
                       "MX.taxonSetBiomonCompleteListMacrolichens",
                       "MX.taxonSetBiomonCompleteListBracketFungi",
-                      "MX.taxonSetBiomonCompleteListPracticalFungi"
+                      "MX.taxonSetBiomonCompleteListPracticalFungi",
+                      "MX.taxonSetSykeMacrozoobenthos"
                     ],
                     "enumNames": [
                       "",
@@ -2479,7 +2474,8 @@
                       "Biomon: Fell plants",
                       "Biomon: Macrolichens",
                       "Biomon: Bracket fungi",
-                      "Biomon: Practical fungi"
+                      "Biomon: Practical fungi",
+                      "Syke POHJE database taxonomy update"
                     ],
                     "range": "MX.taxonSetEnum",
                     "subject": "MY.censusTaxonSetID",
@@ -2566,12 +2562,6 @@
           "range": "MY.gathering",
           "subject": "MY.hasGathering",
           "title": "hasGathering"
-        },
-        "institutionCode": {
-          "type": "string",
-          "range": "xsd:string",
-          "subject": "MY.institutionCode",
-          "title": "Institution code"
         },
         "isTemplate": {
           "type": "boolean",
@@ -5316,7 +5306,8 @@
                         "MX.taxonSetBiomonCompleteListSubarcticPlants",
                         "MX.taxonSetBiomonCompleteListMacrolichens",
                         "MX.taxonSetBiomonCompleteListBracketFungi",
-                        "MX.taxonSetBiomonCompleteListPracticalFungi"
+                        "MX.taxonSetBiomonCompleteListPracticalFungi",
+                        "MX.taxonSetSykeMacrozoobenthos"
                       ],
                       "enumNames": [
                         "",
@@ -5340,7 +5331,8 @@
                         "Biomon: Fell plants",
                         "Biomon: Macrolichens",
                         "Biomon: Bracket fungi",
-                        "Biomon: Practical fungi"
+                        "Biomon: Practical fungi",
+                        "Syke POHJE database taxonomy update"
                       ],
                       "range": "MX.taxonSetEnum",
                       "subject": "MY.censusTaxonSetID",
@@ -6211,14 +6203,14 @@
                       ],
                       "range": "MY.lifeStages",
                       "subject": "MY.lifeStage",
-                      "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
+                      "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
                       "title": "Life stage"
                     },
                     "lifeStageDescription": {
                       "type": "string",
                       "range": "xsd:string",
                       "subject": "MY.lifeStageDescription",
-                      "description": "Free-text notes or addtional information about the life stage",
+                      "description": "Free-text notes or addtional information about the life stage. If multiple values present, describe them here.",
                       "title": "Life stage description"
                     },
                     "likelyMigrant": {

@@ -31,6 +31,17 @@
       "description": "Internationally Recognized Certificate of Compliance. Kotka checks from the ABS Clearing House that the entered IRCC number exists and is valid.",
       "title": "IRCC number"
     },
+    "attachments": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "MM.pdf",
+      "subject": "HRX.attachments",
+      "title": "Attachments"
+    },
     "availableForGeneticResearch": {
       "type": "string",
       "enum": [
@@ -236,7 +247,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localHandlerEmail",
-      "title": "Email"
+      "title": "Handler email"
     },
     "localPerson": {
       "type": "string",
@@ -250,7 +261,7 @@
       "range": "xsd:string",
       "subject": "HRX.localPersonEmail",
       "description": "Contact email for the person responsible in our museum.",
-      "title": "Email"
+      "title": "Person responsible email"
     },
     "localResearcher": {
       "type": "string",
@@ -525,12 +536,10 @@
           "eventType": {
             "type": "string",
             "enum": [
-              "",
               "HRX.eventTypeReturn",
               "HRX.eventTypeAddition"
             ],
             "enumNames": [
-              "",
               "Return",
               "Addition"
             ],
@@ -538,7 +547,11 @@
             "subject": "HRX.eventType",
             "title": "Event type"
           }
-        }
+        },
+        "required": [
+          "eventDate",
+          "eventType"
+        ]
       },
       "minItems": 0,
       "range": "HRX.specimenTransactionEvent",
@@ -602,8 +615,8 @@
       "title": "Transaction type"
     },
     "underNagoya": {
-      "type": "string",
-      "range": "xsd:string",
+      "type": "boolean",
+      "range": "xsd:boolean",
       "subject": "HRX.underNagoya",
       "description": "Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?",
       "title": "Does Nagoya protocol apply?"

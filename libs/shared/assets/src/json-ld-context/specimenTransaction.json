@@ -35,6 +35,10 @@
       "@id": "default:HRX.IRCC",
       "@type": "xsd:string"
     },
+    "attachments": {
+      "@id": "default:HRX.attachments",
+      "@type": "@id"
+    },
     "availableForGeneticResearch": {
       "@id": "default:HRX.availableForGeneticResearch",
       "@type": "@id"
@@ -213,7 +217,7 @@
     },
     "underNagoya": {
       "@id": "default:HRX.underNagoya",
-      "@type": "xsd:string"
+      "@type": "xsd:boolean"
     },
     "creator": {
       "@id": "default:MZ.creator",

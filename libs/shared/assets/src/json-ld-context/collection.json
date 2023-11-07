@@ -43,8 +43,28 @@
       "@id": "default:MY.allowedForDwStatistics",
       "@type": "xsd:boolean"
     },
+    "boundingBoxLatMax": {
+      "@id": "default:MY.boundingBoxLatMax",
+      "@type": "xsd:string"
+    },
+    "boundingBoxLatMin": {
+      "@id": "default:MY.boundingBoxLatMin",
+      "@type": "xsd:string"
+    },
+    "boundingBoxLonMax": {
+      "@id": "default:MY.boundingBoxLonMax",
+      "@type": "xsd:string"
+    },
+    "boundingBoxLonMin": {
+      "@id": "default:MY.boundingBoxLonMin",
+      "@type": "xsd:string"
+    },
     "citation": {
       "@id": "default:MY.citation",
+      "@type": "xsd:string"
+    },
+    "collectionCode": {
+      "@id": "default:MY.collectionCode",
       "@type": "xsd:string"
     },
     "collectionLocation": {
@@ -127,6 +147,10 @@
       "@id": "default:MY.geographicCoverage",
       "@container": "@language"
     },
+    "institutionCode": {
+      "@id": "default:MY.institutionCode",
+      "@type": "xsd:string"
+    },
     "intellectualDescription": {
       "@id": "default:MY.intellectualDescription",
       "@container": "@language"
@@ -194,6 +218,10 @@
     "publisherShortname": {
       "@id": "default:MY.publisherShortname",
       "@container": "@language"
+    },
+    "shareToFEO": {
+      "@id": "default:MY.shareToFEO",
+      "@type": "xsd:string"
     },
     "shareToGbif": {
       "@id": "default:MY.shareToGbif",

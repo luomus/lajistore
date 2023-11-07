@@ -85,8 +85,13 @@ export interface Sample {
     | "MF.materialSection"
     | "MF.materialChromosomes"
     | "MF.materialShell"
-    | "MF.materialOther"
-    | "MF.materialHair";
+    | "MF.materialHair"
+    | "MF.materialClutch"
+    | "MF.materialEggshell"
+    | "MF.materialEggshellFragments"
+    | "MF.materialNest"
+    | "MF.materialNestMaterial"
+    | "MF.materialOther";
   /**
    * Additional information about the preparation/sample
    */
@@ -103,6 +108,8 @@ export interface Sample {
     | "MF.preparationTypeLiquid"
     | "MF.preparationTypeMicroscopeSlide"
     | "MF.preparationTypeDNAExtract"
+    | "MF.preparationTypeEgg"
+    | "MF.preparationTypeNest"
     | "MF.preparationTypeOther";
   /**
    * Preservation methods and materials of the preparation/sample. It is possible to choose several

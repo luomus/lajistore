@@ -58,6 +58,12 @@
       "subject": "MM.documentURI",
       "title": "Assosiated with document"
     },
+    "fullResolutionMediaAvailable": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "MM.fullResolutionMediaAvailable",
+      "title": "Full resolution media available"
+    },
     "highDetailModelURL": {
       "type": "string",
       "range": "xsd:string",
@@ -159,6 +165,7 @@
         "MM.typeEnumGenitalia",
         "MM.typeEnumMicroscopy",
         "MM.typeEnumCarcass",
+        "MM.typeEnumSkeletal",
         "MM.typeEnumHabitat",
         "MM.typeEnumLabel"
       ],
@@ -169,6 +176,7 @@
         "Genitalia",
         "Microscopy",
         "Carcass",
+        "Skeletal",
         "Habitat",
         "Label"
       ],
@@ -245,7 +253,7 @@
       ],
       "range": "MY.lifeStages",
       "subject": "MY.lifeStage",
-      "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
+      "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
       "title": "Life stage"
     },
     "plantLifeStage": {

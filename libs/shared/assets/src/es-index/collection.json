@@ -40,7 +40,32 @@
       "allowedForDwStatistics": {
         "type": "boolean"
       },
+      "boundingBoxLatMax": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "boundingBoxLatMin": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "boundingBoxLonMax": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "boundingBoxLonMin": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "citation": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "collectionCode": {
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"
@@ -266,6 +291,11 @@
           }
         }
       },
+      "institutionCode": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "intellectualDescription": {
         "properties": {
           "en": {
@@ -426,6 +456,11 @@
             "normalizer": "useLowercase"
           }
         }
+      },
+      "shareToFEO": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "shareToGbif": {
         "type": "keyword",

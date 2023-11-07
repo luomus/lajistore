@@ -35,21 +35,9 @@
       "@id": "default:MM.caption",
       "@type": "xsd:string"
     },
-    "captureDateTime": {
-      "@id": "default:MM.captureDateTime",
-      "@type": "xsd:string"
-    },
-    "capturerVerbatim": {
-      "@id": "default:MM.capturerVerbatim",
-      "@type": "xsd:string"
-    },
     "documentURI": {
       "@id": "default:MM.documentURI",
       "@type": "xsd:string"
-    },
-    "fullResolutionMediaAvailable": {
-      "@id": "default:MM.fullResolutionMediaAvailable",
-      "@type": "xsd:boolean"
     },
     "fullURL": {
       "@id": "default:MM.fullURL",
@@ -59,41 +47,33 @@
       "@id": "default:MM.keyword",
       "@type": "xsd:string"
     },
-    "mp3URL": {
-      "@id": "default:MM.mp3URL",
+    "largeURL": {
+      "@id": "default:MM.largeURL",
       "@type": "xsd:string"
     },
     "originalFilename": {
       "@id": "default:MM.originalFilename",
       "@type": "xsd:string"
     },
-    "primaryForTaxon": {
-      "@id": "default:MM.primaryForTaxon",
-      "@type": "@id"
+    "originalURL": {
+      "@id": "default:MM.originalURL",
+      "@type": "xsd:string"
+    },
+    "pdfURL": {
+      "@id": "default:MM.pdfURL",
+      "@type": "xsd:string"
     },
     "sourceSystem": {
       "@id": "default:MM.sourceSystem",
       "@type": "@id"
     },
-    "taxonDescriptionCaption": {
-      "@id": "default:MM.taxonDescriptionCaption",
-      "@container": "@language"
-    },
-    "taxonURI": {
-      "@id": "default:MM.taxonURI",
-      "@type": "@id"
-    },
-    "taxonVerbatim": {
-      "@id": "default:MM.taxonVerbatim",
+    "squareThumbnailURL": {
+      "@id": "default:MM.squareThumbnailURL",
       "@type": "xsd:string"
     },
     "thumbnailURL": {
       "@id": "default:MM.thumbnailURL",
       "@type": "xsd:string"
-    },
-    "type": {
-      "@id": "default:MM.type",
-      "@type": "@id"
     },
     "uploadDateTime": {
       "@id": "default:MM.uploadDateTime",
@@ -102,22 +82,6 @@
     "uploadedBy": {
       "@id": "default:MM.uploadedBy",
       "@type": "xsd:string"
-    },
-    "wavURL": {
-      "@id": "default:MM.wavURL",
-      "@type": "xsd:string"
-    },
-    "lifeStage": {
-      "@id": "default:MY.lifeStage",
-      "@type": "@id"
-    },
-    "plantLifeStage": {
-      "@id": "default:MY.plantLifeStage",
-      "@type": "@id"
-    },
-    "sex": {
-      "@id": "default:MY.sex",
-      "@type": "@id"
     },
     "intellectualOwner": {
       "@id": "default:MZ.intellectualOwner",
@@ -130,10 +94,6 @@
     "publicityRestrictions": {
       "@id": "default:MZ.publicityRestrictions",
       "@type": "@id"
-    },
-    "sortOrder": {
-      "@id": "default:sortOrder",
-      "@type": "xsd:integer"
     }
   }
 }

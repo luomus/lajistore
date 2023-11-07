@@ -64,8 +64,8 @@
           "Nationally regulated invasive species",
           "EU regulated invasive species",
           "Other invasive species",
-          "Kasvintuhoojat",
-          "Vieraslajit.fi portaalin lajit"
+          "Plant Pests",
+          "Species shown on Vieraslajit.fi"
         ]
       },
       "minItems": 0,
@@ -832,7 +832,8 @@
           "MX.taxonSetBiomonCompleteListSubarcticPlants",
           "MX.taxonSetBiomonCompleteListMacrolichens",
           "MX.taxonSetBiomonCompleteListBracketFungi",
-          "MX.taxonSetBiomonCompleteListPracticalFungi"
+          "MX.taxonSetBiomonCompleteListPracticalFungi",
+          "MX.taxonSetSykeMacrozoobenthos"
         ],
         "enumNames": [
           "",
@@ -856,7 +857,8 @@
           "Biomon: Fell plants",
           "Biomon: Macrolichens",
           "Biomon: Bracket fungi",
-          "Biomon: Practical fungi"
+          "Biomon: Practical fungi",
+          "Syke POHJE database taxonomy update"
         ]
       },
       "minItems": 0,
