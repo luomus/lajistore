@@ -13,6 +13,7 @@ import { UndoCommand } from './commands/undo.command';
 import { UserCommand } from './commands/user.command';
 import { JobCommand } from './commands/job.command';
 import { LinkUserCommand } from './commands/link-user.command'
+import { SplitDocumentCommand } from './commands/split-document.command'
 import { ConfigService } from './services/config.service';
 import { LajiApiService } from './services/laji-api.service'
 
@@ -27,7 +28,7 @@ import { LajiApiService } from './services/laji-api.service'
     HttpModule
   ],
   controllers: [],
-  providers: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand, ValidateCommand, LinkUserCommand, ConfigService, LajiApiService],
-  exports: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand, ValidateCommand, LinkUserCommand, ConfigService, LajiApiService]
+  providers: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand, ValidateCommand, LinkUserCommand, SplitDocumentCommand, ConfigService, LajiApiService],
+  exports: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand, ValidateCommand, LinkUserCommand, SplitDocumentCommand, ConfigService, LajiApiService]
 })
 export class StoreCliModule {}
