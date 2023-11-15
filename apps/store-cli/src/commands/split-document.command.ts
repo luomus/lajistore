@@ -55,7 +55,7 @@ export class SplitDocumentCommand {
 
         const doc = (await this.storeService.findById(options.source, 'MY.document', id, false)) as Document;
 
-        const overflowGatherings = doc.gatherings.slice(limit).map(gathering => this.omitClone(gathering, ['id']));
+        const overflowGatherings = doc.gatherings.slice(limit).map(gathering => this.omitIdClone(gathering, [id]));
         const splitGatherings = [];
 
         if (!(overflowGatherings.length > 0)) {
@@ -71,8 +71,10 @@ export class SplitDocumentCommand {
     
         docs.push(doc)
 
+        const { gatherings, ...baseDoc } = doc;
+
         for (const split of splitGatherings) {
-          const newDoc = this.omitClone(doc, ['gatherings', 'id']);
+          const newDoc = this.omitIdClone(baseDoc, [id]);
           set(newDoc, 'gatherings', split);
           docs.push(newDoc);
         }
@@ -107,17 +109,21 @@ export class SplitDocumentCommand {
     }
   }
 
-  omitClone(value: any, omitList: Array<string>): any {
+  omitIdClone(value: any, idList: Array<string> = []): any {
     if (Array.isArray(value)) {
       return value.map(val => {
-        return this.omitClone(val, omitList);
+        return this.omitIdClone(val, idList);
       })
     } else if (typeof value === 'object' && value !== undefined) { 
       const toRetun: Record<string, any> = {};
       Object.keys(value).forEach(key => {
-        if (omitList.includes(key)) return;
+        if (key === 'id'
+          && (!idList.length
+            || (value[key] && idList.some((id) => value[key] === id || value[key].startsWith(`${id}#`) ))
+          )
+        ) return;
 
-        toRetun[key] = this.omitClone(value[key], omitList);
+        toRetun[key] = this.omitIdClone(value[key], idList);
       })
 
       return toRetun;
