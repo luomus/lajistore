@@ -57,12 +57,10 @@
     "eventType": {
       "type": "string",
       "enum": [
-        "",
         "HRX.eventTypeReturn",
         "HRX.eventTypeAddition"
       ],
       "enumNames": [
-        "",
         "Return",
         "Addition"
       ],
@@ -70,5 +68,9 @@
       "subject": "HRX.eventType",
       "title": "Event type"
     }
-  }
+  },
+  "required": [
+    "eventDate",
+    "eventType"
+  ]
 }

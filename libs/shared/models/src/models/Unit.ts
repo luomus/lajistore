@@ -253,7 +253,7 @@ export interface Unit {
     | "MY.epochOrSeriesTriassic";
   lengthInMillimeters?: string[];
   /**
-   * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.
+   * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
    */
   lifeStage?:
     | ""
@@ -278,7 +278,7 @@ export interface Unit {
     | "MY.lifeStageMarks"
     | "MY.lifeStageTriungulin";
   /**
-   * Free-text notes or addtional information about the life stage
+   * Free-text notes or addtional information about the life stage. If multiple values present, describe them here.
    */
   lifeStageDescription?: string;
   likelyMigrant?: boolean;

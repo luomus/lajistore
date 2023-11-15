@@ -40,6 +40,7 @@ export interface Preparation {
     | "MF.preparationMaterialsNucleospinPlantTwo"
     | "MF.preparationMaterialsSaltExtraction"
     | "MF.preparationMaterialsDNeasyPlantMiniKit"
+    | "MF.preparationMaterialsMagAttractHMWDNAKit"
   )[];
   /**
    * Processes used in the preparation. It is possible to choose several.

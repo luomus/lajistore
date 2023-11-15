@@ -169,8 +169,13 @@
         "MF.materialSection",
         "MF.materialChromosomes",
         "MF.materialShell",
-        "MF.materialOther",
-        "MF.materialHair"
+        "MF.materialHair",
+        "MF.materialClutch",
+        "MF.materialEggshell",
+        "MF.materialEggshellFragments",
+        "MF.materialNest",
+        "MF.materialNestMaterial",
+        "MF.materialOther"
       ],
       "enumNames": [
         "",
@@ -205,8 +210,13 @@
         "Section",
         "Chromosomes",
         "Shell",
-        "Other",
-        "Hair"
+        "Hair",
+        "Clutch",
+        "Eggshell",
+        "Eggshell fragments",
+        "Nest",
+        "Nest material",
+        "Other"
       ],
       "range": "MF.materialEnum",
       "subject": "MF.material",
@@ -231,6 +241,8 @@
         "MF.preparationTypeLiquid",
         "MF.preparationTypeMicroscopeSlide",
         "MF.preparationTypeDNAExtract",
+        "MF.preparationTypeEgg",
+        "MF.preparationTypeNest",
         "MF.preparationTypeOther"
       ],
       "enumNames": [
@@ -242,6 +254,8 @@
         "Liquid",
         "Microscope slide",
         "DNA extract",
+        "Egg",
+        "Nest",
         "Other"
       ],
       "range": "MF.preparationTypeEnum",

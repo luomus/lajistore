@@ -13,6 +13,7 @@ export interface Audio {
   captureDateTime?: string;
   capturerVerbatim?: string[];
   documentURI?: string[];
+  fullResolutionMediaAvailable?: boolean;
   fullURL: string;
   keyword?: string[];
   mp3URL: string;
@@ -34,13 +35,14 @@ export interface Audio {
     | "MM.typeEnumGenitalia"
     | "MM.typeEnumMicroscopy"
     | "MM.typeEnumCarcass"
+    | "MM.typeEnumSkeletal"
     | "MM.typeEnumHabitat"
     | "MM.typeEnumLabel";
   uploadDateTime?: string;
   uploadedBy?: string;
   wavURL?: string;
   /**
-   * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.
+   * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
    */
   lifeStage?:
     | ""

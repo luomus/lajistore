@@ -840,11 +840,6 @@
                 "ignore_above": 200,
                 "normalizer": "useLowercase"
               },
-              "collectionCode": {
-                "type": "keyword",
-                "ignore_above": 200,
-                "normalizer": "useLowercase"
-              },
               "collectionID": {
                 "type": "keyword",
                 "ignore_above": 200,
@@ -1408,11 +1403,6 @@
                 "normalizer": "useLowercase"
               },
               "hasGathering": {
-                "type": "keyword",
-                "ignore_above": 200,
-                "normalizer": "useLowercase"
-              },
-              "institutionCode": {
                 "type": "keyword",
                 "ignore_above": 200,
                 "normalizer": "useLowercase"

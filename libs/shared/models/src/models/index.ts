@@ -111,6 +111,8 @@ import { Occurrence } from './Occurrence'
 export type { Occurrence }
 import { Organization } from './Organization'
 export type { Organization }
+import { Pdf } from './Pdf'
+export type { Pdf }
 import { Permit } from './Permit'
 export type { Permit }
 import { Person } from './Person'
@@ -226,6 +228,7 @@ export type StoreObject = BibliographicResource
    | Notification
    | Occurrence
    | Organization
+   | Pdf
    | Permit
    | Person
    | Preparation
@@ -549,6 +552,11 @@ export function isOccurrence(data: unknown): data is Occurrence {
 export function isOrganization(data: unknown): data is Organization {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MOS.organization'
+  );
+}
+export function isPdf(data: unknown): data is Pdf {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MM.pdf'
   );
 }
 export function isPermit(data: unknown): data is Permit {

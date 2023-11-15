@@ -87,10 +87,6 @@
       "@id": "default:MY.cladVerbatim",
       "@type": "xsd:string"
     },
-    "collectionCode": {
-      "@id": "default:MY.collectionCode",
-      "@type": "xsd:string"
-    },
     "collectionID": {
       "@id": "default:MY.collectionID",
       "@type": "@id"
@@ -166,10 +162,6 @@
     "hasGathering": {
       "@id": "default:MY.hasGathering",
       "@type": "@id"
-    },
-    "institutionCode": {
-      "@id": "default:MY.institutionCode",
-      "@type": "xsd:string"
     },
     "isTemplate": {
       "@id": "default:MY.isTemplate",

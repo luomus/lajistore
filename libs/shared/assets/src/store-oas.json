@@ -32114,6 +32114,576 @@
         }
       }
     },
+    "/pdf": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "pdf"
+        ],
+        "operationId": "listpdf",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of PDF objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  PDF.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/pdf"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "pdf"
+        ],
+        "operationId": "storepdf",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/pdf"
+              }
+            }
+          }
+        },
+        "description": "Store PDF object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored PDF object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/pdf"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "pdf"
+        ],
+        "operationId": "patchpdf",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch pdf (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching pdf.",
+        "responses": {
+          "200": {
+            "description": "A list of  PDF.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/pdf"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "pdf"
+        ],
+        "operationId": "searchpdf",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of PDF objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  PDF.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/pdf"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "pdf"
+        ],
+        "operationId": "getpdf",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the PDF",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a PDF.",
+        "responses": {
+          "200": {
+            "description": "a PDF.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/pdf"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "pdf"
+        ],
+        "operationId": "updatepdf",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the PDF",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/pdf"
+              }
+            }
+          }
+        },
+        "description": "Store PDF",
+        "responses": {
+          "200": {
+            "description": "Stored PDF",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/pdf"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "pdf"
+        ],
+        "operationId": "deletepdf",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the PDF",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete PDF",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOfpdf",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the PDF",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "pdf"
+        ],
+        "description": "Return a PDF.",
+        "responses": {
+          "200": {
+            "description": "a PDF.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "pdf"
+        ],
+        "operationId": "versionpdf",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the PDF",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the PDF",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a PDF.",
+        "responses": {
+          "200": {
+            "description": "a PDF.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/pdf"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/permit": {
       "get": {
         "security": [
@@ -48999,6 +49569,12 @@
                       "$ref": "#/components/schemas/organization"
                     }
                   },
+                  "pdf": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/pdf"
+                    }
+                  },
                   "permit": {
                     "type": "array",
                     "items": {
@@ -49523,6 +50099,12 @@
                       "type": "array",
                       "items": {
                         "$ref": "#/components/schemas/organization"
+                      }
+                    },
+                    "pdf": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/pdf"
                       }
                     },
                     "permit": {
@@ -50260,6 +50842,10 @@
             "minItems": 0,
             "title": "Assosiated with document"
           },
+          "fullResolutionMediaAvailable": {
+            "type": "boolean",
+            "title": "Full resolution media available"
+          },
           "fullURL": {
             "type": "string",
             "title": "URL of full size version of the image (converted to JPG)"
@@ -50328,6 +50914,7 @@
               "MM.typeEnumGenitalia",
               "MM.typeEnumMicroscopy",
               "MM.typeEnumCarcass",
+              "MM.typeEnumSkeletal",
               "MM.typeEnumHabitat",
               "MM.typeEnumLabel"
             ],
@@ -50371,7 +50958,7 @@
               "MY.lifeStageMarks",
               "MY.lifeStageTriungulin"
             ],
-            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
+            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
             "title": "Life stage"
           },
           "plantLifeStage": {
@@ -50662,18 +51249,39 @@
           },
           "abbreviation": {
             "type": "string",
-            "description": "Official abbreviation (or acronym) for this collection",
-            "title": "Collection code"
+            "description": "Unofficial abbreviation (or acronym) for this collection",
+            "title": "Unofficial abbreviation"
           },
           "allowedForDwStatistics": {
             "type": "boolean",
             "description": "Admin field. Is it allowed to use collection with data warehouse /statistic endpoints.",
             "title": "Allowed for DW statistics"
           },
+          "boundingBoxLatMax": {
+            "type": "string",
+            "title": "Bounding box latitude max (WGS84)"
+          },
+          "boundingBoxLatMin": {
+            "type": "string",
+            "title": "Bounding box latitude min (WGS84)"
+          },
+          "boundingBoxLonMax": {
+            "type": "string",
+            "title": "Bounding box longitude max (WGS84)"
+          },
+          "boundingBoxLonMin": {
+            "type": "string",
+            "title": "Bounding box longitude min (WGS84)"
+          },
           "citation": {
             "type": "string",
             "description": "Example how to cite this collection in a scientific article, if using organization, name and abbreviation is not enough.",
             "title": "Citation recommendation"
+          },
+          "collectionCode": {
+            "type": "string",
+            "description": "Collection code for natural history specimen collection, such as H-BR",
+            "title": "Specimen collection code"
           },
           "collectionLocation": {
             "$ref": "#/components/schemas/multiLang"
@@ -50790,6 +51398,11 @@
           "geographicCoverage": {
             "$ref": "#/components/schemas/multiLang"
           },
+          "institutionCode": {
+            "type": "string",
+            "description": "Institution code for natural history specimen collection holding institution, such as H, MHZ or TUR",
+            "title": "Institution code"
+          },
           "intellectualDescription": {
             "$ref": "#/components/schemas/multiLang"
           },
@@ -50881,6 +51494,10 @@
           },
           "publisherShortname": {
             "$ref": "#/components/schemas/multiLang"
+          },
+          "shareToFEO": {
+            "type": "string",
+            "title": "Share to FEO"
           },
           "shareToGbif": {
             "type": "string",
@@ -51396,10 +52013,6 @@
             "description": "Verbatim specimen data from clad book",
             "title": "Clad data verbatim"
           },
-          "collectionCode": {
-            "type": "string",
-            "title": "Collection code"
-          },
           "collectionID": {
             "type": "string",
             "description": "The collection which this specimen belongs to",
@@ -51518,10 +52131,6 @@
             },
             "minItems": 0,
             "title": "hasGathering"
-          },
-          "institutionCode": {
-            "type": "string",
-            "title": "Institution code"
           },
           "isTemplate": {
             "type": "boolean",
@@ -55331,6 +55940,10 @@
             "minItems": 0,
             "title": "Assosiated with document"
           },
+          "fullResolutionMediaAvailable": {
+            "type": "boolean",
+            "title": "Full resolution media available"
+          },
           "fullURL": {
             "type": "string",
             "title": "URL of full size version of the image (converted to JPG)"
@@ -55407,6 +56020,7 @@
               "MM.typeEnumGenitalia",
               "MM.typeEnumMicroscopy",
               "MM.typeEnumCarcass",
+              "MM.typeEnumSkeletal",
               "MM.typeEnumHabitat",
               "MM.typeEnumLabel"
             ],
@@ -55446,7 +56060,7 @@
               "MY.lifeStageMarks",
               "MY.lifeStageTriungulin"
             ],
-            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
+            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
             "title": "Life stage"
           },
           "plantLifeStage": {
@@ -56811,6 +57425,10 @@
             "minItems": 0,
             "title": "Assosiated with document"
           },
+          "fullResolutionMediaAvailable": {
+            "type": "boolean",
+            "title": "Full resolution media available"
+          },
           "highDetailModelURL": {
             "type": "string",
             "title": "URL of high detail model"
@@ -56879,6 +57497,7 @@
               "MM.typeEnumGenitalia",
               "MM.typeEnumMicroscopy",
               "MM.typeEnumCarcass",
+              "MM.typeEnumSkeletal",
               "MM.typeEnumHabitat",
               "MM.typeEnumLabel"
             ],
@@ -56922,7 +57541,7 @@
               "MY.lifeStageMarks",
               "MY.lifeStageTriungulin"
             ],
-            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
+            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
             "title": "Life stage"
           },
           "plantLifeStage": {
@@ -57606,6 +58225,138 @@
           "organizationLevel1"
         ]
       },
+      "pdf": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the PDF"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the PDF"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the PDF"
+          },
+          "caption": {
+            "type": "string",
+            "title": "Caption"
+          },
+          "documentURI": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Assosiated with document"
+          },
+          "fullURL": {
+            "type": "string",
+            "title": "URL of full size version of the image (converted to JPG)"
+          },
+          "keyword": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Keywords"
+          },
+          "largeURL": {
+            "type": "string",
+            "title": "URL of a large version of the image (reduced to max 1280px height or width)"
+          },
+          "originalFilename": {
+            "type": "string",
+            "title": "Original filename"
+          },
+          "originalURL": {
+            "type": "string",
+            "title": "URL of the original multimedia object (original format)"
+          },
+          "pdfURL": {
+            "type": "string",
+            "title": "URL of PDF file (original file)"
+          },
+          "sourceSystem": {
+            "type": "string",
+            "title": "Source information system of the multimedia object"
+          },
+          "squareThumbnailURL": {
+            "type": "string",
+            "title": "URL of a square thumbnail (max 400px)"
+          },
+          "thumbnailURL": {
+            "type": "string",
+            "title": "URL of a thumbnail version of the image (maintains aspect ratio, max. 200px height or width)"
+          },
+          "uploadDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when the image was uploaded to Media API"
+          },
+          "uploadedBy": {
+            "type": "string",
+            "title": "Uploaded by"
+          },
+          "intellectualOwner": {
+            "type": "string",
+            "title": "Creative rights owner"
+          },
+          "intellectualRights": {
+            "type": "string",
+            "enum": [
+              "MZ.intellectualRightsCC-BY-SA-4.0",
+              "MZ.intellectualRightsCC-BY-NC-4.0",
+              "MZ.intellectualRightsCC-BY-NC-SA-4.0",
+              "MZ.intellectualRightsCC-BY-4.0",
+              "MZ.intellectualRightsCC0-4.0",
+              "MZ.intellectualRightsODBL-1.0",
+              "MZ.intellectualRightsPD",
+              "MZ.intellectualRightsARR",
+              "MZ.intellectualRightsCC-BY-2.0",
+              "MZ.intellectualRightsCC-BY-SA-2.0",
+              "MZ.intellectualRightsCC-BY-SA-2.0-DE",
+              "MZ.intellectualRightsCC-BY-NC-2.0",
+              "MZ.intellectualRightsCC-BY-NC-SA-2.0",
+              "MZ.intellectualRightsCC-BY-NC-ND-2.0",
+              "MZ.intellectualRightsCC-BY-SA-2.5",
+              "MZ.intellectualRightsCC-BY-SA-2.5-SE",
+              "MZ.intellectualRightsCC-BY-3.0",
+              "MZ.intellectualRightsCC-BY-SA-3.0",
+              "MZ.intellectualRightsCC-BY-NC-SA-3.0",
+              "MZ.intellectualRightsCC-BY-ND-4.0",
+              "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+            ],
+            "title": "License"
+          },
+          "publicityRestrictions": {
+            "type": "string",
+            "enum": [
+              "",
+              "MZ.publicityRestrictionsPublic",
+              "MZ.publicityRestrictionsProtected",
+              "MZ.publicityRestrictionsPrivate"
+            ],
+            "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
+            "title": "Publicity restrictions"
+          }
+        },
+        "required": [
+          "fullURL",
+          "largeURL",
+          "pdfURL",
+          "sourceSystem",
+          "squareThumbnailURL",
+          "thumbnailURL",
+          "intellectualOwner",
+          "intellectualRights"
+        ]
+      },
       "permit": {
         "type": "object",
         "properties": {
@@ -57948,7 +58699,8 @@
                 "MF.preparationMaterialsNucleospinTissueKit",
                 "MF.preparationMaterialsNucleospinPlantTwo",
                 "MF.preparationMaterialsSaltExtraction",
-                "MF.preparationMaterialsDNeasyPlantMiniKit"
+                "MF.preparationMaterialsDNeasyPlantMiniKit",
+                "MF.preparationMaterialsMagAttractHMWDNAKit"
               ]
             },
             "minItems": 0,
@@ -58367,8 +59119,13 @@
               "MF.materialSection",
               "MF.materialChromosomes",
               "MF.materialShell",
-              "MF.materialOther",
-              "MF.materialHair"
+              "MF.materialHair",
+              "MF.materialClutch",
+              "MF.materialEggshell",
+              "MF.materialEggshellFragments",
+              "MF.materialNest",
+              "MF.materialNestMaterial",
+              "MF.materialOther"
             ],
             "description": "Preparation/sample material. Choose preparation/sample type first.",
             "title": "Material"
@@ -58389,6 +59146,8 @@
               "MF.preparationTypeLiquid",
               "MF.preparationTypeMicroscopeSlide",
               "MF.preparationTypeDNAExtract",
+              "MF.preparationTypeEgg",
+              "MF.preparationTypeNest",
               "MF.preparationTypeOther"
             ],
             "description": "Type of preparation/sample",
@@ -58579,6 +59338,15 @@
             "description": "Internationally Recognized Certificate of Compliance. Kotka checks from the ABS Clearing House that the entered IRCC number exists and is valid.",
             "title": "IRCC number"
           },
+          "attachments": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Attachments"
+          },
           "availableForGeneticResearch": {
             "type": "string",
             "enum": [
@@ -58721,7 +59489,7 @@
           },
           "localHandlerEmail": {
             "type": "string",
-            "title": "Email"
+            "title": "Handler email"
           },
           "localPerson": {
             "type": "string",
@@ -58731,7 +59499,7 @@
           "localPersonEmail": {
             "type": "string",
             "description": "Contact email for the person responsible in our museum.",
-            "title": "Email"
+            "title": "Person responsible email"
           },
           "localResearcher": {
             "type": "string",
@@ -58863,7 +59631,7 @@
             "title": "Transaction type"
           },
           "underNagoya": {
-            "type": "string",
+            "type": "boolean",
             "description": "Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?",
             "title": "Does Nagoya protocol apply?"
           },
@@ -58935,13 +59703,16 @@
           "eventType": {
             "type": "string",
             "enum": [
-              "",
               "HRX.eventTypeReturn",
               "HRX.eventTypeAddition"
             ],
             "title": "Event type"
           }
-        }
+        },
+        "required": [
+          "eventDate",
+          "eventType"
+        ]
       },
       "specimentTransactionEvent": {
         "type": "object",
@@ -59675,7 +60446,8 @@
                 "MX.taxonSetBiomonCompleteListSubarcticPlants",
                 "MX.taxonSetBiomonCompleteListMacrolichens",
                 "MX.taxonSetBiomonCompleteListBracketFungi",
-                "MX.taxonSetBiomonCompleteListPracticalFungi"
+                "MX.taxonSetBiomonCompleteListPracticalFungi",
+                "MX.taxonSetSykeMacrozoobenthos"
               ]
             },
             "minItems": 0,
@@ -60211,7 +60983,8 @@
               "MX.taxonSetBiomonCompleteListSubarcticPlants",
               "MX.taxonSetBiomonCompleteListMacrolichens",
               "MX.taxonSetBiomonCompleteListBracketFungi",
-              "MX.taxonSetBiomonCompleteListPracticalFungi"
+              "MX.taxonSetBiomonCompleteListPracticalFungi",
+              "MX.taxonSetSykeMacrozoobenthos"
             ],
             "title": "Censused taxon set"
           },
@@ -61575,12 +62348,12 @@
               "MY.lifeStageMarks",
               "MY.lifeStageTriungulin"
             ],
-            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
+            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
             "title": "Life stage"
           },
           "lifeStageDescription": {
             "type": "string",
-            "description": "Free-text notes or addtional information about the life stage",
+            "description": "Free-text notes or addtional information about the life stage. If multiple values present, describe them here.",
             "title": "Life stage description"
           },
           "likelyMigrant": {
@@ -62631,6 +63404,10 @@
             "minItems": 0,
             "title": "Assosiated with document"
           },
+          "fullResolutionMediaAvailable": {
+            "type": "boolean",
+            "title": "Full resolution media available"
+          },
           "keyword": {
             "type": "array",
             "uniqueItems": false,
@@ -62691,6 +63468,7 @@
               "MM.typeEnumGenitalia",
               "MM.typeEnumMicroscopy",
               "MM.typeEnumCarcass",
+              "MM.typeEnumSkeletal",
               "MM.typeEnumHabitat",
               "MM.typeEnumLabel"
             ],
@@ -62734,7 +63512,7 @@
               "MY.lifeStageMarks",
               "MY.lifeStageTriungulin"
             ],
-            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.",
+            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
             "title": "Life stage"
           },
           "plantLifeStage": {
@@ -63666,6 +64444,10 @@
     {
       "name": "organization",
       "description": "Organization"
+    },
+    {
+      "name": "pdf",
+      "description": "PDF"
     },
     {
       "name": "permit",

@@ -48,6 +48,9 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "fullResolutionMediaAvailable": {
+        "type": "boolean"
+      },
       "highDetailModelURL": {
         "type": "keyword",
         "ignore_above": 200,

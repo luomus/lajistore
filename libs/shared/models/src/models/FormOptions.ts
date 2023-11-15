@@ -395,7 +395,6 @@ export interface FormOptions {
      * Verbatim specimen data from clad book
      */
     cladVerbatim?: string;
-    collectionCode?: string;
     /**
      * The collection which this specimen belongs to
      */
@@ -828,7 +827,8 @@ export interface FormOptions {
           | "MX.taxonSetBiomonCompleteListSubarcticPlants"
           | "MX.taxonSetBiomonCompleteListMacrolichens"
           | "MX.taxonSetBiomonCompleteListBracketFungi"
-          | "MX.taxonSetBiomonCompleteListPracticalFungi";
+          | "MX.taxonSetBiomonCompleteListPracticalFungi"
+          | "MX.taxonSetSykeMacrozoobenthos";
         taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
       }[];
       temperature?: number;
@@ -842,7 +842,6 @@ export interface FormOptions {
      */
     genbank?: string[];
     hasGathering?: string[];
-    institutionCode?: string;
     isTemplate?: boolean;
     keywords?: string[];
     /**
@@ -1786,7 +1785,8 @@ export interface FormOptions {
             | "MX.taxonSetBiomonCompleteListSubarcticPlants"
             | "MX.taxonSetBiomonCompleteListMacrolichens"
             | "MX.taxonSetBiomonCompleteListBracketFungi"
-            | "MX.taxonSetBiomonCompleteListPracticalFungi";
+            | "MX.taxonSetBiomonCompleteListPracticalFungi"
+            | "MX.taxonSetSykeMacrozoobenthos";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -2053,7 +2053,7 @@ export interface FormOptions {
             | "MY.epochOrSeriesTriassic";
           lengthInMillimeters?: string[];
           /**
-           * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.
+           * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
            */
           lifeStage?:
             | ""
@@ -2078,7 +2078,7 @@ export interface FormOptions {
             | "MY.lifeStageMarks"
             | "MY.lifeStageTriungulin";
           /**
-           * Free-text notes or addtional information about the life stage
+           * Free-text notes or addtional information about the life stage. If multiple values present, describe them here.
            */
           lifeStageDescription?: string;
           likelyMigrant?: boolean;
@@ -3722,7 +3722,8 @@ export interface FormOptions {
             | "MX.taxonSetBiomonCompleteListSubarcticPlants"
             | "MX.taxonSetBiomonCompleteListMacrolichens"
             | "MX.taxonSetBiomonCompleteListBracketFungi"
-            | "MX.taxonSetBiomonCompleteListPracticalFungi";
+            | "MX.taxonSetBiomonCompleteListPracticalFungi"
+            | "MX.taxonSetSykeMacrozoobenthos";
           taxonCensusType: "MY.taxonCensusTypeCounted" | "MY.taxonCensusTypeEstimated" | "MY.taxonCensusTypeNotCounted";
         }[];
         temperature?: number;
@@ -3989,7 +3990,7 @@ export interface FormOptions {
             | "MY.epochOrSeriesTriassic";
           lengthInMillimeters?: string[];
           /**
-           * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.
+           * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
            */
           lifeStage?:
             | ""
@@ -4014,7 +4015,7 @@ export interface FormOptions {
             | "MY.lifeStageMarks"
             | "MY.lifeStageTriungulin";
           /**
-           * Free-text notes or addtional information about the life stage
+           * Free-text notes or addtional information about the life stage. If multiple values present, describe them here.
            */
           lifeStageDescription?: string;
           likelyMigrant?: boolean;

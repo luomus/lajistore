@@ -24,17 +24,25 @@ export interface Collection {
     | "MX.secureLevelHighest"
     | "MX.secureLevelNoShow";
   /**
-   * Official abbreviation (or acronym) for this collection
+   * Unofficial abbreviation (or acronym) for this collection
    */
   abbreviation?: string;
   /**
    * Admin field. Is it allowed to use collection with data warehouse /statistic endpoints.
    */
   allowedForDwStatistics?: boolean;
+  boundingBoxLatMax?: string;
+  boundingBoxLatMin?: string;
+  boundingBoxLonMax?: string;
+  boundingBoxLonMin?: string;
   /**
    * Example how to cite this collection in a scientific article, if using organization, name and abbreviation is not enough.
    */
   citation?: string;
+  /**
+   * Collection code for natural history specimen collection, such as H-BR
+   */
+  collectionCode?: string;
   /**
    * Where is the collection physically located? E.g. building name and room number. [not shown in public]
    */
@@ -171,6 +179,10 @@ export interface Collection {
     sv?: string;
   };
   /**
+   * Institution code for natural history specimen collection holding institution, such as H, MHZ or TUR
+   */
+  institutionCode?: string;
+  /**
    * Description of the rights governing the data (for example, what contracts have been made about this). If left blank, Luomus data policy is followed.
    */
   intellectualDescription?: {
@@ -270,6 +282,7 @@ export interface Collection {
     fi?: string;
     sv?: string;
   };
+  shareToFEO?: string;
   /**
    * Admin field. Can the data be shared to GBIF or not: Given collection ID means data is shared under that collection.
    */

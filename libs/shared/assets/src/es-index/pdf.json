@@ -33,23 +33,10 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
-      "captureDateTime": {
-        "type": "keyword",
-        "ignore_above": 200,
-        "normalizer": "useLowercase"
-      },
-      "capturerVerbatim": {
-        "type": "keyword",
-        "ignore_above": 200,
-        "normalizer": "useLowercase"
-      },
       "documentURI": {
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"
-      },
-      "fullResolutionMediaAvailable": {
-        "type": "boolean"
       },
       "fullURL": {
         "type": "keyword",
@@ -76,7 +63,7 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
-      "primaryForTaxon": {
+      "pdfURL": {
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"
@@ -91,43 +78,10 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
-      "taxonDescriptionCaption": {
-        "properties": {
-          "en": {
-            "type": "keyword",
-            "ignore_above": 200,
-            "normalizer": "useLowercase"
-          },
-          "fi": {
-            "type": "keyword",
-            "ignore_above": 200,
-            "normalizer": "useLowercase"
-          },
-          "sv": {
-            "type": "keyword",
-            "ignore_above": 200,
-            "normalizer": "useLowercase"
-          }
-        }
-      },
-      "taxonURI": {
-        "type": "keyword",
-        "ignore_above": 200,
-        "normalizer": "useLowercase"
-      },
-      "taxonVerbatim": {
-        "type": "keyword",
-        "ignore_above": 200,
-        "normalizer": "useLowercase"
-      },
       "thumbnailURL": {
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"
-      },
-      "type": {
-        "type": "keyword",
-        "ignore_above": 200
       },
       "uploadDateTime": {
         "type": "date"
@@ -136,18 +90,6 @@
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"
-      },
-      "lifeStage": {
-        "type": "keyword",
-        "ignore_above": 200
-      },
-      "plantLifeStage": {
-        "type": "keyword",
-        "ignore_above": 200
-      },
-      "sex": {
-        "type": "keyword",
-        "ignore_above": 200
       },
       "intellectualOwner": {
         "type": "keyword",
@@ -161,9 +103,6 @@
       "publicityRestrictions": {
         "type": "keyword",
         "ignore_above": 200
-      },
-      "sortOrder": {
-        "type": "integer"
       },
       "_meta": {
         "properties": {

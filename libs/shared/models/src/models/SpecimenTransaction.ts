@@ -13,6 +13,7 @@ export interface SpecimenTransaction {
    * Internationally Recognized Certificate of Compliance. Kotka checks from the ABS Clearing House that the entered IRCC number exists and is valid.
    */
   IRCC?: string;
+  attachments?: string[];
   /**
    * If you choose "Yes, with restrictions", explain the restrictions in the following field "Rights and obligations".
    */
@@ -181,11 +182,11 @@ export interface SpecimenTransaction {
    */
   status?: "" | "HRX.statusInProcess" | "HRX.statusOutstanding" | "HRX.statusClosed";
   transactionEvents?: {
-    eventDate?: string;
+    eventDate: string;
     eventDocumentIDs?: string[];
     eventHandler?: string;
     eventNotes?: string;
-    eventType?: "" | "HRX.eventTypeReturn" | "HRX.eventTypeAddition";
+    eventType: "HRX.eventTypeReturn" | "HRX.eventTypeAddition";
   }[];
   /**
    * Means of sending, mail, courier etc.
@@ -215,7 +216,7 @@ export interface SpecimenTransaction {
   /**
    * Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?
    */
-  underNagoya?: string;
+  underNagoya?: boolean;
   creator?: string;
   dateCreated?: string;
   dateEdited?: string;

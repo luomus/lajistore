@@ -274,6 +274,7 @@ export interface Taxon {
     | "MX.taxonSetBiomonCompleteListMacrolichens"
     | "MX.taxonSetBiomonCompleteListBracketFungi"
     | "MX.taxonSetBiomonCompleteListPracticalFungi"
+    | "MX.taxonSetSykeMacrozoobenthos"
   )[];
   /**
    * Eliön elinkierto

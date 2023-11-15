@@ -13,6 +13,7 @@ export interface Image {
   captureDateTime?: string;
   capturerVerbatim?: string[];
   documentURI?: string[];
+  fullResolutionMediaAvailable?: boolean;
   fullURL: string;
   keyword?: string[];
   largeURL: string;
@@ -36,12 +37,13 @@ export interface Image {
     | "MM.typeEnumGenitalia"
     | "MM.typeEnumMicroscopy"
     | "MM.typeEnumCarcass"
+    | "MM.typeEnumSkeletal"
     | "MM.typeEnumHabitat"
     | "MM.typeEnumLabel";
   uploadDateTime?: string;
   uploadedBy?: string;
   /**
-   * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting.
+   * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
    */
   lifeStage?:
     | ""

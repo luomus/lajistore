@@ -9,9 +9,9 @@ export interface SpecimenTransactionEvent {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  eventDate?: string;
+  eventDate: string;
   eventDocumentIDs?: string[];
   eventHandler?: string;
   eventNotes?: string;
-  eventType?: "" | "HRX.eventTypeReturn" | "HRX.eventTypeAddition";
+  eventType: "HRX.eventTypeReturn" | "HRX.eventTypeAddition";
 }

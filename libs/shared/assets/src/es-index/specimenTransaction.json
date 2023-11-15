@@ -33,6 +33,11 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "attachments": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "availableForGeneticResearch": {
         "type": "keyword",
         "ignore_above": 200
@@ -283,9 +288,7 @@
         "ignore_above": 200
       },
       "underNagoya": {
-        "type": "keyword",
-        "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "type": "boolean"
       },
       "creator": {
         "type": "keyword",

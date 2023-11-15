@@ -59,8 +59,8 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.abbreviation",
-      "description": "Official abbreviation (or acronym) for this collection",
-      "title": "Collection code"
+      "description": "Unofficial abbreviation (or acronym) for this collection",
+      "title": "Unofficial abbreviation"
     },
     "allowedForDwStatistics": {
       "type": "boolean",
@@ -69,12 +69,43 @@
       "description": "Admin field. Is it allowed to use collection with data warehouse /statistic endpoints.",
       "title": "Allowed for DW statistics"
     },
+    "boundingBoxLatMax": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.boundingBoxLatMax",
+      "title": "Bounding box latitude max (WGS84)"
+    },
+    "boundingBoxLatMin": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.boundingBoxLatMin",
+      "title": "Bounding box latitude min (WGS84)"
+    },
+    "boundingBoxLonMax": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.boundingBoxLonMax",
+      "title": "Bounding box longitude max (WGS84)"
+    },
+    "boundingBoxLonMin": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.boundingBoxLonMin",
+      "title": "Bounding box longitude min (WGS84)"
+    },
     "citation": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.citation",
       "description": "Example how to cite this collection in a scientific article, if using organization, name and abbreviation is not enough.",
       "title": "Citation recommendation"
+    },
+    "collectionCode": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.collectionCode",
+      "description": "Collection code for natural history specimen collection, such as H-BR",
+      "title": "Specimen collection code"
     },
     "collectionLocation": {
       "type": "object",
@@ -387,6 +418,13 @@
       "description": "Smallest common geographical area for the specimens/data in the collection (for example, country or continent name).",
       "title": "Geographic coverage"
     },
+    "institutionCode": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.institutionCode",
+      "description": "Institution code for natural history specimen collection holding institution, such as H, MHZ or TUR",
+      "title": "Institution code"
+    },
     "intellectualDescription": {
       "type": "object",
       "additionalProperties": false,
@@ -615,6 +653,12 @@
       "subject": "MY.publisherShortname",
       "description": "Admin field. Name that is easy for users to remember and understand. E.g. \"Luomus\", \"University of Turku\".",
       "title": "Publisher short name"
+    },
+    "shareToFEO": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.shareToFEO",
+      "title": "Share to FEO"
     },
     "shareToGbif": {
       "type": "string",

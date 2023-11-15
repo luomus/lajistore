@@ -59,7 +59,8 @@
           "MF.preparationMaterialsNucleospinTissueKit",
           "MF.preparationMaterialsNucleospinPlantTwo",
           "MF.preparationMaterialsSaltExtraction",
-          "MF.preparationMaterialsDNeasyPlantMiniKit"
+          "MF.preparationMaterialsDNeasyPlantMiniKit",
+          "MF.preparationMaterialsMagAttractHMWDNAKit"
         ],
         "enumNames": [
           "",
@@ -84,7 +85,8 @@
           "Nucleospin tissue kit",
           "Nucleospin plant II",
           "Salt extraction",
-          "DNeasy Plant Mini Kit"
+          "DNeasy Plant Mini Kit",
+          "MagAttract HMW DNA kit"
         ]
       },
       "minItems": 0,

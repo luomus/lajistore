@@ -54,7 +54,8 @@
         "MX.taxonSetBiomonCompleteListSubarcticPlants",
         "MX.taxonSetBiomonCompleteListMacrolichens",
         "MX.taxonSetBiomonCompleteListBracketFungi",
-        "MX.taxonSetBiomonCompleteListPracticalFungi"
+        "MX.taxonSetBiomonCompleteListPracticalFungi",
+        "MX.taxonSetSykeMacrozoobenthos"
       ],
       "enumNames": [
         "",
@@ -78,7 +79,8 @@
         "Biomon: Fell plants",
         "Biomon: Macrolichens",
         "Biomon: Bracket fungi",
-        "Biomon: Practical fungi"
+        "Biomon: Practical fungi",
+        "Syke POHJE database taxonomy update"
       ],
       "range": "MX.taxonSetEnum",
       "subject": "MY.censusTaxonSetID",
