@@ -87,7 +87,7 @@ export class SplitDocumentCommand {
           return;
 
         } else {
-          updatedDocs = await this.storeService.createOrUpdate(options.source, {['MY.document']: docs});
+          updatedDocs = await this.storeService.createOrUpdate(options.source, {'MY.document': docs});
         }
 
         if (!updatedDocs) {
