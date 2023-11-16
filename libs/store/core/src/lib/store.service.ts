@@ -204,10 +204,10 @@ export class StoreService {
 
     if (result !== false) {
       const payload: WorkerData[] = [];
-      const types = Object.keys(data);
+      const types = Object.keys(result);
 
       for (const type of types) {
-        data[type].forEach(item => payload.push({ source, type, id: item[PROPERTY_ID] as string }))
+        result[type].forEach(item => payload.push({ source, type, id: item[PROPERTY_ID] as string }))
       }
 
       // Don't await, instead ignore (since we are not interested on when the actual bg job is done)
