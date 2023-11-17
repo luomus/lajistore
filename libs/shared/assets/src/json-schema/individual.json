@@ -108,6 +108,17 @@
       "subject": "MZ.deleted",
       "title": "Soft delete"
     },
+    "images": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "MM.image",
+      "subject": "MZ.images",
+      "title": "Images"
+    },
     "intellectualRights": {
       "type": "string",
       "enum": [

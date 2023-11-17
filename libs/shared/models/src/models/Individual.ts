@@ -29,6 +29,7 @@ export interface Individual {
   ringID?: string;
   taxon?: string;
   deleted?: boolean;
+  images?: string[];
   intellectualRights:
     | "MZ.intellectualRightsCC-BY-SA-4.0"
     | "MZ.intellectualRightsCC-BY-NC-4.0"

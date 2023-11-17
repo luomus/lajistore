@@ -63,6 +63,10 @@
       "@id": "default:MZ.deleted",
       "@type": "xsd:boolean"
     },
+    "images": {
+      "@id": "default:MZ.images",
+      "@type": "@id"
+    },
     "intellectualRights": {
       "@id": "default:MZ.intellectualRights",
       "@type": "@id"
