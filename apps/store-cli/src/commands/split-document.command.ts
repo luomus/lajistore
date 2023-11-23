@@ -97,7 +97,7 @@ export class SplitDocumentCommand {
 
         output += `${id}: `;
 
-        for (const doc of updatedDocs['MY.document'] as Document[]) {
+        for (const doc of updatedDocs['document'] as Document[]) {
           if (doc.id === id) continue;
           
           output += `${doc.id}, `;
