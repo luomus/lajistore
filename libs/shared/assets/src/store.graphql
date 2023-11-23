@@ -8157,6 +8157,7 @@ type Individual2 {
   descriptionURL: MultiLang
   hasPublicLocations: Boolean
   id: String
+  images: [String]
   intellectualRights: IntellectualRights!
   nickname: String
   ownerPerson: [String]
@@ -23967,6 +23968,7 @@ input Individual2Input {
   descriptionURL: MultiLangInput
   hasPublicLocations: Boolean
   id: String
+  images: [String]
   intellectualRights: IntellectualRights!
   nickname: String
   ownerPerson: [String]

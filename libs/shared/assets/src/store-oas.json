@@ -56198,6 +56198,15 @@
             "type": "boolean",
             "title": "Soft delete"
           },
+          "images": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Images"
+          },
           "intellectualRights": {
             "type": "string",
             "enum": [
