@@ -659,7 +659,7 @@ export interface NamedPlace {
      */
     unreliableFields?: string;
     /**
-     * Information about the quality of the specimen data. Possible to select several. Empty value means same as OK.
+     * Information about the quality of the specimen data. Possible to select several.
      */
     verificationStatus?: (
       | ""
@@ -1822,14 +1822,15 @@ export interface NamedPlace {
             | "MY.movingDirectionESE"
             | "MY.movingDirectionSE"
             | "MY.movingDirectionSSE"
-            | "MY.MovingDirectionS"
+            | "MY.movingDirectionS"
             | "MY.movingDirectionSSW"
             | "MY.movingDirectionSW"
             | "MY.movingDirectionWSW"
             | "MY.movingDirectionW"
             | "MY.movingDirectionWNW"
             | "MY.movingDirectionNW"
-            | "MY.movingDirectionNNW";
+            | "MY.movingDirectionNNW"
+            | "MY.MovingDirectionS";
           movingStatus?: string[];
           /**
            * Information on mutant microbial strain.
@@ -3759,14 +3760,15 @@ export interface NamedPlace {
             | "MY.movingDirectionESE"
             | "MY.movingDirectionSE"
             | "MY.movingDirectionSSE"
-            | "MY.MovingDirectionS"
+            | "MY.movingDirectionS"
             | "MY.movingDirectionSSW"
             | "MY.movingDirectionSW"
             | "MY.movingDirectionWSW"
             | "MY.movingDirectionW"
             | "MY.movingDirectionWNW"
             | "MY.movingDirectionNW"
-            | "MY.movingDirectionNNW";
+            | "MY.movingDirectionNNW"
+            | "MY.MovingDirectionS";
           movingStatus?: string[];
           /**
            * Information on mutant microbial strain.
@@ -5255,7 +5257,7 @@ export interface NamedPlace {
      */
     unreliableFields?: string;
     /**
-     * Information about the quality of the specimen data. Possible to select several. Empty value means same as OK.
+     * Information about the quality of the specimen data. Possible to select several.
      */
     verificationStatus?: (
       | ""
@@ -6418,14 +6420,15 @@ export interface NamedPlace {
             | "MY.movingDirectionESE"
             | "MY.movingDirectionSE"
             | "MY.movingDirectionSSE"
-            | "MY.MovingDirectionS"
+            | "MY.movingDirectionS"
             | "MY.movingDirectionSSW"
             | "MY.movingDirectionSW"
             | "MY.movingDirectionWSW"
             | "MY.movingDirectionW"
             | "MY.movingDirectionWNW"
             | "MY.movingDirectionNW"
-            | "MY.movingDirectionNNW";
+            | "MY.movingDirectionNNW"
+            | "MY.MovingDirectionS";
           movingStatus?: string[];
           /**
            * Information on mutant microbial strain.
@@ -8355,14 +8358,15 @@ export interface NamedPlace {
             | "MY.movingDirectionESE"
             | "MY.movingDirectionSE"
             | "MY.movingDirectionSSE"
-            | "MY.MovingDirectionS"
+            | "MY.movingDirectionS"
             | "MY.movingDirectionSSW"
             | "MY.movingDirectionSW"
             | "MY.movingDirectionWSW"
             | "MY.movingDirectionW"
             | "MY.movingDirectionWNW"
             | "MY.movingDirectionNW"
-            | "MY.movingDirectionNNW";
+            | "MY.movingDirectionNNW"
+            | "MY.MovingDirectionS";
           movingStatus?: string[];
           /**
            * Information on mutant microbial strain.

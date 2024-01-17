@@ -9,6 +9,7 @@ export interface Organization {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  EORINumber?: string;
   /**
    * Organisation website. Include http://
    */
@@ -36,6 +37,7 @@ export interface Organization {
    * Name of the country as on a postal address.
    */
   country?: string;
+  courierAddress?: string;
   /**
    * Tags this organisation has
    */

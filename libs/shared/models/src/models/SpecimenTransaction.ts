@@ -81,6 +81,7 @@ export interface SpecimenTransaction {
     | "HRX.geneticResourceTypeMicrobe"
     | "HRX.geneticResourceTypeSoil"
     | "HRX.geneticResourceTypeAqua";
+  harmonizedSystemCode?: string;
   /**
    * Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
    */

@@ -24,6 +24,12 @@
       "subject": "@type",
       "title": "Type for the Organization"
     },
+    "EORINumber": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MOS.EORINumber",
+      "title": "EORI number"
+    },
     "URL": {
       "type": "string",
       "range": "xsd:string",
@@ -75,6 +81,12 @@
       "subject": "MOS.country",
       "description": "Name of the country as on a postal address.",
       "title": "Country"
+    },
+    "courierAddress": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MOS.courierAddress",
+      "title": "Address for courier services"
     },
     "datasetID": {
       "type": "array",

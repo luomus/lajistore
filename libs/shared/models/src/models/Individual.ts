@@ -51,6 +51,8 @@ export interface Individual {
     | "MZ.intellectualRightsCC-BY-SA-3.0"
     | "MZ.intellectualRightsCC-BY-NC-SA-3.0"
     | "MZ.intellectualRightsCC-BY-ND-4.0"
-    | "MZ.intellectualRightsCC-BY-NC-ND-4.0";
+    | "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+    | "MY.intellectualRightsCC-BY"
+    | "MY.intellectualRightsCC0";
   ownerPerson?: string[];
 }

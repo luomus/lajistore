@@ -354,7 +354,9 @@
         "MZ.intellectualRightsCC-BY-SA-3.0",
         "MZ.intellectualRightsCC-BY-NC-SA-3.0",
         "MZ.intellectualRightsCC-BY-ND-4.0",
-        "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+        "MZ.intellectualRightsCC-BY-NC-ND-4.0",
+        "MY.intellectualRightsCC-BY",
+        "MY.intellectualRightsCC0"
       ],
       "enumNames": [
         "Creative Commons Attribution Share-Alike 4.0",
@@ -377,7 +379,9 @@
         "Creative Commons Attribution Share-Alike 3.0",
         "Creative Commons Attribution Noncommercial Share-Alike 3.0",
         "Creative Commons Attribution Noderivatives 4.0",
-        "Creative Commons Attribution Noncommercial Noderivatives 4.0"
+        "Creative Commons Attribution Noncommercial Noderivatives 4.0",
+        "Creative Commons Attribution",
+        "Creative Commons Zero"
       ],
       "range": "MZ.intellectualRightsEnum",
       "subject": "MZ.intellectualRights",

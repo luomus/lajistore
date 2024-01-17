@@ -113,6 +113,11 @@
         "type": "keyword",
         "ignore_above": 200
       },
+      "harmonizedSystemCode": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "hasIRCC": {
         "type": "boolean"
       },

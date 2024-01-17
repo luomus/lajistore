@@ -31,6 +31,10 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
+    "EORINumber": {
+      "@id": "default:MOS.EORINumber",
+      "@type": "xsd:string"
+    },
     "URL": {
       "@id": "default:MOS.URL",
       "@type": "xsd:string"
@@ -53,6 +57,10 @@
     },
     "country": {
       "@id": "default:MOS.country",
+      "@type": "xsd:string"
+    },
+    "courierAddress": {
+      "@id": "default:MOS.courierAddress",
       "@type": "xsd:string"
     },
     "datasetID": {

@@ -3542,14 +3542,15 @@
               "MY.movingDirectionESE",
               "MY.movingDirectionSE",
               "MY.movingDirectionSSE",
-              "MY.MovingDirectionS",
+              "MY.movingDirectionS",
               "MY.movingDirectionSSW",
               "MY.movingDirectionSW",
               "MY.movingDirectionWSW",
               "MY.movingDirectionW",
               "MY.movingDirectionWNW",
               "MY.movingDirectionNW",
-              "MY.movingDirectionNNW"
+              "MY.movingDirectionNNW",
+              "MY.MovingDirectionS"
             ],
             "enumNames": [
               "",
@@ -3568,7 +3569,8 @@
               "west",
               "west-northwest",
               "north-west",
-              "noth-northwest"
+              "noth-northwest",
+              "south"
             ],
             "range": "MY.movingDirectionEnum",
             "subject": "MY.movingDirection",

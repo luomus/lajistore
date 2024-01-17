@@ -2212,7 +2212,7 @@
       "minItems": 0,
       "range": "MY.verificationStatuses",
       "subject": "MY.verificationStatus",
-      "description": "Information about the quality of the specimen data. Possible to select several. Empty value means same as OK.",
+      "description": "Information about the quality of the specimen data. Possible to select several.",
       "title": "Verification status"
     },
     "voucherSpecimenID": {
@@ -5842,14 +5842,15 @@
                     "MY.movingDirectionESE",
                     "MY.movingDirectionSE",
                     "MY.movingDirectionSSE",
-                    "MY.MovingDirectionS",
+                    "MY.movingDirectionS",
                     "MY.movingDirectionSSW",
                     "MY.movingDirectionSW",
                     "MY.movingDirectionWSW",
                     "MY.movingDirectionW",
                     "MY.movingDirectionWNW",
                     "MY.movingDirectionNW",
-                    "MY.movingDirectionNNW"
+                    "MY.movingDirectionNNW",
+                    "MY.MovingDirectionS"
                   ],
                   "enumNames": [
                     "",
@@ -5868,7 +5869,8 @@
                     "west",
                     "west-northwest",
                     "north-west",
-                    "noth-northwest"
+                    "noth-northwest",
+                    "south"
                   ],
                   "range": "MY.movingDirectionEnum",
                   "subject": "MY.movingDirection",

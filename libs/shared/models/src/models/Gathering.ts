@@ -1129,14 +1129,15 @@ export interface Gathering {
       | "MY.movingDirectionESE"
       | "MY.movingDirectionSE"
       | "MY.movingDirectionSSE"
-      | "MY.MovingDirectionS"
+      | "MY.movingDirectionS"
       | "MY.movingDirectionSSW"
       | "MY.movingDirectionSW"
       | "MY.movingDirectionWSW"
       | "MY.movingDirectionW"
       | "MY.movingDirectionWNW"
       | "MY.movingDirectionNW"
-      | "MY.movingDirectionNNW";
+      | "MY.movingDirectionNNW"
+      | "MY.MovingDirectionS";
     movingStatus?: string[];
     /**
      * Information on mutant microbial strain.

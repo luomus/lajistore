@@ -51022,7 +51022,9 @@
               "MZ.intellectualRightsCC-BY-SA-3.0",
               "MZ.intellectualRightsCC-BY-NC-SA-3.0",
               "MZ.intellectualRightsCC-BY-ND-4.0",
-              "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+              "MZ.intellectualRightsCC-BY-NC-ND-4.0",
+              "MY.intellectualRightsCC-BY",
+              "MY.intellectualRightsCC0"
             ],
             "title": "License"
           },
@@ -52358,7 +52360,7 @@
               ]
             },
             "minItems": 0,
-            "description": "Information about the quality of the specimen data. Possible to select several. Empty value means same as OK.",
+            "description": "Information about the quality of the specimen data. Possible to select several.",
             "title": "Verification status"
           },
           "voucherSpecimenID": {
@@ -56124,7 +56126,9 @@
               "MZ.intellectualRightsCC-BY-SA-3.0",
               "MZ.intellectualRightsCC-BY-NC-SA-3.0",
               "MZ.intellectualRightsCC-BY-ND-4.0",
-              "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+              "MZ.intellectualRightsCC-BY-NC-ND-4.0",
+              "MY.intellectualRightsCC-BY",
+              "MY.intellectualRightsCC0"
             ],
             "title": "License"
           },
@@ -56230,7 +56234,9 @@
               "MZ.intellectualRightsCC-BY-SA-3.0",
               "MZ.intellectualRightsCC-BY-NC-SA-3.0",
               "MZ.intellectualRightsCC-BY-ND-4.0",
-              "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+              "MZ.intellectualRightsCC-BY-NC-ND-4.0",
+              "MY.intellectualRightsCC-BY",
+              "MY.intellectualRightsCC0"
             ],
             "title": "License"
           },
@@ -57614,7 +57620,9 @@
               "MZ.intellectualRightsCC-BY-SA-3.0",
               "MZ.intellectualRightsCC-BY-NC-SA-3.0",
               "MZ.intellectualRightsCC-BY-ND-4.0",
-              "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+              "MZ.intellectualRightsCC-BY-NC-ND-4.0",
+              "MY.intellectualRightsCC-BY",
+              "MY.intellectualRightsCC0"
             ],
             "title": "License"
           },
@@ -58077,6 +58085,10 @@
             "type": "string",
             "title": "Type for the Organization"
           },
+          "EORINumber": {
+            "type": "string",
+            "title": "EORI number"
+          },
           "URL": {
             "type": "string",
             "description": "Organisation website. Include http://",
@@ -58111,6 +58123,10 @@
             "type": "string",
             "description": "Name of the country as on a postal address.",
             "title": "Country"
+          },
+          "courierAddress": {
+            "type": "string",
+            "title": "Address for courier services"
           },
           "datasetID": {
             "type": "array",
@@ -58339,7 +58355,9 @@
               "MZ.intellectualRightsCC-BY-SA-3.0",
               "MZ.intellectualRightsCC-BY-NC-SA-3.0",
               "MZ.intellectualRightsCC-BY-ND-4.0",
-              "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+              "MZ.intellectualRightsCC-BY-NC-ND-4.0",
+              "MY.intellectualRightsCC-BY",
+              "MY.intellectualRightsCC0"
             ],
             "title": "License"
           },
@@ -59369,7 +59387,7 @@
           },
           "awayCount": {
             "type": "integer",
-            "title": "Away count"
+            "title": "Included in/On loan count"
           },
           "awayIDs": {
             "type": "array",
@@ -59378,7 +59396,7 @@
               "type": "string"
             },
             "minItems": 0,
-            "title": "Away IDs"
+            "title": "Included in/On loan IDs"
           },
           "collectionID": {
             "type": "string",
@@ -59463,6 +59481,10 @@
             ],
             "description": "Choose the type of the genetic resource for statistical and reporting purposes.",
             "title": "Type of resource"
+          },
+          "harmonizedSystemCode": {
+            "type": "string",
+            "title": "HS Code for customs"
           },
           "hasIRCC": {
             "type": "boolean",
@@ -62411,14 +62433,15 @@
               "MY.movingDirectionESE",
               "MY.movingDirectionSE",
               "MY.movingDirectionSSE",
-              "MY.MovingDirectionS",
+              "MY.movingDirectionS",
               "MY.movingDirectionSSW",
               "MY.movingDirectionSW",
               "MY.movingDirectionWSW",
               "MY.movingDirectionW",
               "MY.movingDirectionWNW",
               "MY.movingDirectionNW",
-              "MY.movingDirectionNNW"
+              "MY.movingDirectionNNW",
+              "MY.MovingDirectionS"
             ],
             "title": "Moving direction"
           },
@@ -63585,7 +63608,9 @@
               "MZ.intellectualRightsCC-BY-SA-3.0",
               "MZ.intellectualRightsCC-BY-NC-SA-3.0",
               "MZ.intellectualRightsCC-BY-ND-4.0",
-              "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+              "MZ.intellectualRightsCC-BY-NC-ND-4.0",
+              "MY.intellectualRightsCC-BY",
+              "MY.intellectualRightsCC0"
             ],
             "title": "License"
           },

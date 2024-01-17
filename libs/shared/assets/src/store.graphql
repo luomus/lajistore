@@ -4800,6 +4800,8 @@ enum IntellectualRights {
   MZ_INTELLECTUALRIGHTSCC_BY_NC_SA_3_0
   MZ_INTELLECTUALRIGHTSCC_BY_ND_4_0
   MZ_INTELLECTUALRIGHTSCC_BY_NC_ND_4_0
+  MY_INTELLECTUALRIGHTSCC_BY
+  MY_INTELLECTUALRIGHTSCC0
 }
 
 enum LifeStage {
@@ -5403,7 +5405,7 @@ type Document2 {
   # List of those fields that contain unreliable data. The list is created automatically.
   unreliableFields: String
 
-  # Information about the quality of the specimen data. Possible to select several. Empty value means same as OK.
+  # Information about the quality of the specimen data. Possible to select several.
   verificationStatus: [VerificationStatusListItem]
 
   # Identifier of the herbarium voucher specimen or information about it if the identifier is unknown.
@@ -9012,6 +9014,7 @@ type Organization2 {
 
   # Name of the country as on a postal address.
   country: String
+  courierAddress: String
   creator: String
 
   # Tags this organisation has
@@ -9021,6 +9024,7 @@ type Organization2 {
 
   # Last date for sending seed orders to this organization.
   dateOrdersDue: String
+  eORINumber: String
   editNotes: String
   editor: String
 
@@ -9636,6 +9640,7 @@ type SpecimenTransaction2 {
 
   # Choose the type of the genetic resource for statistical and reporting purposes.
   geneticResourceType: GeneticResourceType
+  harmonizedSystemCode: String
 
   # Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
   hasIRCC: Boolean
@@ -22773,7 +22778,7 @@ input Document2Input {
   # List of those fields that contain unreliable data. The list is created automatically.
   unreliableFields: String
 
-  # Information about the quality of the specimen data. Possible to select several. Empty value means same as OK.
+  # Information about the quality of the specimen data. Possible to select several.
   verificationStatus: [VerificationStatusListItem]
 
   # Identifier of the herbarium voucher specimen or information about it if the identifier is unknown.
@@ -24487,6 +24492,7 @@ input Organization2Input {
 
   # Name of the country as on a postal address.
   country: String
+  courierAddress: String
   creator: String
 
   # Tags this organisation has
@@ -24496,6 +24502,7 @@ input Organization2Input {
 
   # Last date for sending seed orders to this organization.
   dateOrdersDue: String
+  eORINumber: String
   editNotes: String
   editor: String
 
@@ -24820,6 +24827,7 @@ input SpecimenTransaction2Input {
 
   # Choose the type of the genetic resource for statistical and reporting purposes.
   geneticResourceType: GeneticResourceType
+  harmonizedSystemCode: String
 
   # Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
   hasIRCC: Boolean

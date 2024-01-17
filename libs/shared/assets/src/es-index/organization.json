@@ -28,6 +28,11 @@
       "@type": {
         "type": "keyword"
       },
+      "EORINumber": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "URL": {
         "type": "keyword",
         "ignore_above": 200,
@@ -53,6 +58,11 @@
         "normalizer": "useLowercase"
       },
       "country": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "courierAddress": {
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"

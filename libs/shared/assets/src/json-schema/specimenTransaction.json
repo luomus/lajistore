@@ -65,7 +65,7 @@
       "type": "integer",
       "range": "xsd:integer",
       "subject": "HRX.awayCount",
-      "title": "Away count"
+      "title": "Included in/On loan count"
     },
     "awayIDs": {
       "type": "array",
@@ -76,7 +76,7 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "HRX.awayIDs",
-      "title": "Away IDs"
+      "title": "Included in/On loan IDs"
     },
     "collectionID": {
       "type": "string",
@@ -198,6 +198,12 @@
       "subject": "HRX.geneticResourceType",
       "description": "Choose the type of the genetic resource for statistical and reporting purposes.",
       "title": "Type of resource"
+    },
+    "harmonizedSystemCode": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HRX.harmonizedSystemCode",
+      "title": "HS Code for customs"
     },
     "hasIRCC": {
       "type": "boolean",

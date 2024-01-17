@@ -107,6 +107,10 @@
       "@id": "default:HRX.geneticResourceType",
       "@type": "@id"
     },
+    "harmonizedSystemCode": {
+      "@id": "default:HRX.harmonizedSystemCode",
+      "@type": "xsd:string"
+    },
     "hasIRCC": {
       "@id": "default:HRX.hasIRCC",
       "@type": "xsd:boolean"

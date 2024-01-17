@@ -103,7 +103,9 @@ export interface Video {
     | "MZ.intellectualRightsCC-BY-SA-3.0"
     | "MZ.intellectualRightsCC-BY-NC-SA-3.0"
     | "MZ.intellectualRightsCC-BY-ND-4.0"
-    | "MZ.intellectualRightsCC-BY-NC-ND-4.0";
+    | "MZ.intellectualRightsCC-BY-NC-ND-4.0"
+    | "MY.intellectualRightsCC-BY"
+    | "MY.intellectualRightsCC0";
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
