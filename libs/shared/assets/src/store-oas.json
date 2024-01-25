@@ -53560,7 +53560,8 @@
               "MHL.resultServiceTypeBirdPointCount",
               "MHL.resultServiceTypeWinterBirdCount",
               "MHL.resultServiceTypeSykeInsectProjects",
-              "MHL.resultServiceTypeInvasiveControl"
+              "MHL.resultServiceTypeInvasiveControl",
+              "MHL.resultServiceTypeCompleteLists"
             ],
             "title": "Type of result service"
           },
@@ -59406,12 +59407,12 @@
           "correspondentOrganization": {
             "type": "string",
             "description": "Select the correspondent organization from a list. If not found on the list, you need to add the new organization first.",
-            "title": "Correspondent organization"
+            "title": "Counterparty organization"
           },
           "correspondentPerson": {
             "type": "string",
             "description": "Name of the corresponding person. If the transaction goes to a private person, write their postal address here.",
-            "title": "Corresponding person/contact info"
+            "title": "Counterparty person/contact info"
           },
           "correspondentResearcher": {
             "type": "string",
@@ -59440,7 +59441,7 @@
           "externalID": {
             "type": "string",
             "description": "Sender's ID for the transaction.",
-            "title": "Sender's transaction ID"
+            "title": "Transaction ID by counterparty"
           },
           "geneticResourceAcquisitionCountry": {
             "type": "string",
@@ -59688,6 +59689,17 @@
             "type": "string",
             "description": "Team or organisation that owns the record and can edit it.",
             "title": "Owner of record"
+          },
+          "publicityRestrictions": {
+            "type": "string",
+            "enum": [
+              "",
+              "MZ.publicityRestrictionsPublic",
+              "MZ.publicityRestrictionsProtected",
+              "MZ.publicityRestrictionsPrivate"
+            ],
+            "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
+            "title": "Publicity restrictions"
           }
         },
         "required": [
@@ -62440,8 +62452,7 @@
               "MY.movingDirectionW",
               "MY.movingDirectionWNW",
               "MY.movingDirectionNW",
-              "MY.movingDirectionNNW",
-              "MY.MovingDirectionS"
+              "MY.movingDirectionNNW"
             ],
             "title": "Moving direction"
           },

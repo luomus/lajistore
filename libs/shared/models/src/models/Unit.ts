@@ -349,8 +349,7 @@ export interface Unit {
     | "MY.movingDirectionW"
     | "MY.movingDirectionWNW"
     | "MY.movingDirectionNW"
-    | "MY.movingDirectionNNW"
-    | "MY.MovingDirectionS";
+    | "MY.movingDirectionNNW";
   movingStatus?: string[];
   /**
    * Information on mutant microbial strain.

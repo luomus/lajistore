@@ -61,8 +61,8 @@
         "HRX.eventTypeAddition"
       ],
       "enumNames": [
-        "Return",
-        "Addition"
+        "Returned specimens",
+        "Added specimens"
       ],
       "range": "HRX.eventTypeEnum",
       "subject": "HRX.eventType",

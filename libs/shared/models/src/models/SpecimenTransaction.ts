@@ -226,4 +226,12 @@ export interface SpecimenTransaction {
    * Team or organisation that owns the record and can edit it.
    */
   owner?: string;
+  /**
+   * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
+   */
+  publicityRestrictions?:
+    | ""
+    | "MZ.publicityRestrictionsPublic"
+    | "MZ.publicityRestrictionsProtected"
+    | "MZ.publicityRestrictionsPrivate";
 }

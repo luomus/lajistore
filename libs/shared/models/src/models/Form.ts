@@ -2329,8 +2329,7 @@ export interface Form {
               | "MY.movingDirectionW"
               | "MY.movingDirectionWNW"
               | "MY.movingDirectionNW"
-              | "MY.movingDirectionNNW"
-              | "MY.MovingDirectionS";
+              | "MY.movingDirectionNNW";
             movingStatus?: string[];
             /**
              * Information on mutant microbial strain.
@@ -4276,8 +4275,7 @@ export interface Form {
               | "MY.movingDirectionW"
               | "MY.movingDirectionWNW"
               | "MY.movingDirectionNW"
-              | "MY.movingDirectionNNW"
-              | "MY.MovingDirectionS";
+              | "MY.movingDirectionNNW";
             movingStatus?: string[];
             /**
              * Information on mutant microbial strain.
@@ -5099,7 +5097,8 @@ export interface Form {
       | "MHL.resultServiceTypeBirdPointCount"
       | "MHL.resultServiceTypeWinterBirdCount"
       | "MHL.resultServiceTypeSykeInsectProjects"
-      | "MHL.resultServiceTypeInvasiveControl";
+      | "MHL.resultServiceTypeInvasiveControl"
+      | "MHL.resultServiceTypeCompleteLists";
     /**
      * Message shown when document save failed
      */

@@ -90,14 +90,14 @@
       "range": "MOS.organization",
       "subject": "HRX.correspondentOrganization",
       "description": "Select the correspondent organization from a list. If not found on the list, you need to add the new organization first.",
-      "title": "Correspondent organization"
+      "title": "Counterparty organization"
     },
     "correspondentPerson": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.correspondentPerson",
       "description": "Name of the corresponding person. If the transaction goes to a private person, write their postal address here.",
-      "title": "Corresponding person/contact info"
+      "title": "Counterparty person/contact info"
     },
     "correspondentResearcher": {
       "type": "string",
@@ -136,7 +136,7 @@
       "range": "xsd:string",
       "subject": "HRX.externalID",
       "description": "Sender's ID for the transaction.",
-      "title": "Sender's transaction ID"
+      "title": "Transaction ID by counterparty"
     },
     "geneticResourceAcquisitionCountry": {
       "type": "string",
@@ -546,8 +546,8 @@
               "HRX.eventTypeAddition"
             ],
             "enumNames": [
-              "Return",
-              "Addition"
+              "Returned specimens",
+              "Added specimens"
             ],
             "range": "HRX.eventTypeEnum",
             "subject": "HRX.eventType",
@@ -659,6 +659,25 @@
       "subject": "MZ.owner",
       "description": "Team or organisation that owns the record and can edit it.",
       "title": "Owner of record"
+    },
+    "publicityRestrictions": {
+      "type": "string",
+      "enum": [
+        "",
+        "MZ.publicityRestrictionsPublic",
+        "MZ.publicityRestrictionsProtected",
+        "MZ.publicityRestrictionsPrivate"
+      ],
+      "enumNames": [
+        "",
+        "public",
+        "protected",
+        "private"
+      ],
+      "range": "MZ.publicityRestrictionsEnum",
+      "subject": "MZ.publicityRestrictions",
+      "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
+      "title": "Publicity restrictions"
     }
   },
   "required": [

@@ -242,6 +242,10 @@
     "owner": {
       "@id": "default:MZ.owner",
       "@type": "@id"
+    },
+    "publicityRestrictions": {
+      "@id": "default:MZ.publicityRestrictions",
+      "@type": "@id"
     }
   }
 }
