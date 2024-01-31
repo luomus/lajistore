@@ -37244,6 +37244,576 @@
         }
       }
     },
+    "/satelliteTrackingProject": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "satelliteTrackingProject"
+        ],
+        "operationId": "listsatelliteTrackingProject",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of Satellite Tracking Project objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Satellite Tracking Project.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/satelliteTrackingProject"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "satelliteTrackingProject"
+        ],
+        "operationId": "storesatelliteTrackingProject",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/satelliteTrackingProject"
+              }
+            }
+          }
+        },
+        "description": "Store Satellite Tracking Project object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored Satellite Tracking Project object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/satelliteTrackingProject"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "satelliteTrackingProject"
+        ],
+        "operationId": "patchsatelliteTrackingProject",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch satellite tracking project (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching satellite tracking project.",
+        "responses": {
+          "200": {
+            "description": "A list of  Satellite Tracking Project.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/satelliteTrackingProject"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/satelliteTrackingProject/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "satelliteTrackingProject"
+        ],
+        "operationId": "searchsatelliteTrackingProject",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of Satellite Tracking Project objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Satellite Tracking Project.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/satelliteTrackingProject"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/satelliteTrackingProject/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "satelliteTrackingProject"
+        ],
+        "operationId": "getsatelliteTrackingProject",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Satellite Tracking Project",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a Satellite Tracking Project.",
+        "responses": {
+          "200": {
+            "description": "a Satellite Tracking Project.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/satelliteTrackingProject"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "satelliteTrackingProject"
+        ],
+        "operationId": "updatesatelliteTrackingProject",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Satellite Tracking Project",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/satelliteTrackingProject"
+              }
+            }
+          }
+        },
+        "description": "Store Satellite Tracking Project",
+        "responses": {
+          "200": {
+            "description": "Stored Satellite Tracking Project",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/satelliteTrackingProject"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "satelliteTrackingProject"
+        ],
+        "operationId": "deletesatelliteTrackingProject",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Satellite Tracking Project",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete Satellite Tracking Project",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/satelliteTrackingProject/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOfsatelliteTrackingProject",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Satellite Tracking Project",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "satelliteTrackingProject"
+        ],
+        "description": "Return a Satellite Tracking Project.",
+        "responses": {
+          "200": {
+            "description": "a Satellite Tracking Project.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/satelliteTrackingProject/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "satelliteTrackingProject"
+        ],
+        "operationId": "versionsatelliteTrackingProject",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Satellite Tracking Project",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the Satellite Tracking Project",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a Satellite Tracking Project.",
+        "responses": {
+          "200": {
+            "description": "a Satellite Tracking Project.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/satelliteTrackingProject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/specimenTransaction": {
       "get": {
         "security": [
@@ -49623,6 +50193,12 @@
                       "$ref": "#/components/schemas/sample"
                     }
                   },
+                  "satelliteTrackingProject": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/satelliteTrackingProject"
+                    }
+                  },
                   "specimenTransaction": {
                     "type": "array",
                     "items": {
@@ -50153,6 +50729,12 @@
                       "type": "array",
                       "items": {
                         "$ref": "#/components/schemas/sample"
+                      }
+                    },
+                    "satelliteTrackingProject": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/satelliteTrackingProject"
                       }
                     },
                     "specimenTransaction": {
@@ -59346,6 +59928,39 @@
           "specimenID"
         ]
       },
+      "satelliteTrackingProject": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the Satellite Tracking Project"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the Satellite Tracking Project"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the Satellite Tracking Project"
+          },
+          "targetIndividualIds": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Individual for the news"
+          },
+          "description": {
+            "$ref": "#/components/schemas/multiLang"
+          },
+          "name": {
+            "type": "string",
+            "title": "name"
+          }
+        }
+      },
       "specimenTransaction": {
         "type": "object",
         "properties": {
@@ -64526,6 +65141,10 @@
     {
       "name": "sample",
       "description": "Specimen sample"
+    },
+    {
+      "name": "satelliteTrackingProject",
+      "description": "Satellite Tracking Project"
     },
     {
       "name": "specimenTransaction",
