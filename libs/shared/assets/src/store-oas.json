@@ -59657,7 +59657,8 @@
               "HRX.typeFieldCollection",
               "HRX.typeImportNotice",
               "HRX.typeABSNegotiations",
-              "HRX.typeVirtualLoanOutgoing"
+              "HRX.typeVirtualLoanOutgoing",
+              "HRX.typeDeaccession"
             ],
             "description": "What kind of transaction this is.",
             "title": "Transaction type"

@@ -213,7 +213,8 @@ export interface SpecimenTransaction {
     | "HRX.typeFieldCollection"
     | "HRX.typeImportNotice"
     | "HRX.typeABSNegotiations"
-    | "HRX.typeVirtualLoanOutgoing";
+    | "HRX.typeVirtualLoanOutgoing"
+    | "HRX.typeDeaccession";
   /**
    * Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?
    */

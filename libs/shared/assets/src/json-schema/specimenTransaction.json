@@ -601,7 +601,8 @@
         "HRX.typeFieldCollection",
         "HRX.typeImportNotice",
         "HRX.typeABSNegotiations",
-        "HRX.typeVirtualLoanOutgoing"
+        "HRX.typeVirtualLoanOutgoing",
+        "HRX.typeDeaccession"
       ],
       "enumNames": [
         "Loan, incoming",
@@ -613,7 +614,8 @@
         "Field collection",
         "Import notice only (maahantuonti-ilmoitus)",
         "ABS negotiations",
-        "Virtual loan, outgoing"
+        "Virtual loan, outgoing",
+        "HRX.typeDeaccession"
       ],
       "range": "HRX.typeEnum",
       "subject": "HRX.type",
