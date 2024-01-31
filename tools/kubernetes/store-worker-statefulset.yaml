@@ -125,25 +125,6 @@ spec:
             limits:
               cpu: "0.5"
               memory: 2Gi
-          livenessProbe:
-            exec:
-              command:
-                - node
-                - cli.js
-                - status
-            initialDelaySeconds: 10
-            timeoutSeconds: 10
-            periodSeconds: 60
-            successThreshold: 1
-            failureThreshold: 3
-          readinessProbe:
-            exec:
-              command:
-                - node
-                - cli.js
-                - status
-            initialDelaySeconds: 10
-            periodSeconds: 5
           ports:
             - containerPort: 3000
               name: http
