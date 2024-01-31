@@ -615,7 +615,7 @@
         "Import notice only (maahantuonti-ilmoitus)",
         "ABS negotiations",
         "Virtual loan, outgoing",
-        "HRX.typeDeaccession"
+        "Deaccession / Discarding"
       ],
       "range": "HRX.typeEnum",
       "subject": "HRX.type",
