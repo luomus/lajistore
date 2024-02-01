@@ -129,6 +129,8 @@ import { Reserve } from './Reserve'
 export type { Reserve }
 import { Sample } from './Sample'
 export type { Sample }
+import { SatelliteTrackingProject } from './SatelliteTrackingProject'
+export type { SatelliteTrackingProject }
 import { SpecimenTransaction } from './SpecimenTransaction'
 export type { SpecimenTransaction }
 import { SpecimenTransactionEvent } from './SpecimenTransactionEvent'
@@ -235,6 +237,7 @@ export type StoreObject = BibliographicResource
    | RegionalStatus
    | Reserve
    | Sample
+   | SatelliteTrackingProject
    | SpecimenTransaction
    | SpecimenTransactionEvent
    | SubUnit
@@ -594,6 +597,11 @@ export function isReserve(data: unknown): data is Reserve {
 export function isSample(data: unknown): data is Sample {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MF.sample'
+  );
+}
+export function isSatelliteTrackingProject(data: unknown): data is SatelliteTrackingProject {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MXA.satelliteTrackingProject'
   );
 }
 export function isSpecimenTransaction(data: unknown): data is SpecimenTransaction {
