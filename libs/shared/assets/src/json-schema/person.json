@@ -244,6 +244,7 @@
           "MA.haukkaUser",
           "MA.satelliteDataManagementUser",
           "MA.invasivePortalAdmin",
+          "MA.speciesChallengeAdmin",
           "MA.luomusSpaceCalendarUser",
           "MA.luomusSpaceOpeningTimesUser",
           "MA.taxonIdEditor"
@@ -258,6 +259,7 @@
           "Haukka bird station app user",
           "Satelliitti.laji.fi user",
           "Invasive species portal administrator",
+          "MA.speciesChallengeAdmin",
           "Luomus space reservation calendar",
           "Luomuksen yleisökohteiden aukioloajat",
           "Taxonid.org Editoriin pääsyoikeus"
