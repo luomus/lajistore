@@ -20,7 +20,7 @@
     "store-api": { "tags": ["type:app", "scope:node-app"] },
     "store-cli": { "tags": ["type:app", "scope:cli"] },
     "store-worker": { "tags": ["type:app", "scope:node-app"] },
-    "shared-models": { "tags": ["scope:shared"] },
+    "shared-schemas": { "tags": ["scope:shared"] },
     "shared-assets": { "tags": ["scope:node-shared"] },
     "store-core": { "tags": ["scope:node"] },
     "store-api-core": { "tags": ["scope:node"] },
