@@ -33,6 +33,11 @@ docker-compose -f "${COMPOSE_FILE}" run --rm store npm run store:cli generate in
 
 echo ""
 echo ""
+echo "Generating Typescript classes..."
+docker-compose -f "${COMPOSE_FILE}" run --rm store npm run store:cli generate class
+
+echo ""
+echo ""
 echo "Generating Json-LD context..."
 docker-compose -f "${COMPOSE_FILE}" run --rm store npm run store:cli generate json-ld-context
 
