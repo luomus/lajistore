@@ -52,6 +52,7 @@ export interface Person {
     | "MA.haukkaUser"
     | "MA.satelliteDataManagementUser"
     | "MA.invasivePortalAdmin"
+    | "MA.speciesChallengeAdmin"
     | "MA.luomusSpaceCalendarUser"
     | "MA.luomusSpaceOpeningTimesUser"
     | "MA.taxonIdEditor"

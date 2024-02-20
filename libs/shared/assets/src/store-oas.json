@@ -51320,7 +51320,8 @@
               "MY.collectionTypeGardenArea",
               "MY.collectionTypeIndoorGardenArea",
               "MY.collectionTypeOutdoorGardenArea",
-              "MY.collectionTypeGardenSublocation"
+              "MY.collectionTypeGardenSublocation",
+              "MY.collectionTypeTrait"
             ],
             "description": "Type of the collection (specimen, monitoring etc).",
             "title": "Type"
@@ -58629,6 +58630,7 @@
                 "MA.haukkaUser",
                 "MA.satelliteDataManagementUser",
                 "MA.invasivePortalAdmin",
+                "MA.speciesChallengeAdmin",
                 "MA.luomusSpaceCalendarUser",
                 "MA.luomusSpaceOpeningTimesUser",
                 "MA.taxonIdEditor"

@@ -82,7 +82,8 @@ export interface Collection {
     | "MY.collectionTypeGardenArea"
     | "MY.collectionTypeIndoorGardenArea"
     | "MY.collectionTypeOutdoorGardenArea"
-    | "MY.collectionTypeGardenSublocation";
+    | "MY.collectionTypeGardenSublocation"
+    | "MY.collectionTypeTrait";
   /**
    * Legal basis for concealment or embargo
    */

@@ -184,7 +184,8 @@
         "MY.collectionTypeGardenArea",
         "MY.collectionTypeIndoorGardenArea",
         "MY.collectionTypeOutdoorGardenArea",
-        "MY.collectionTypeGardenSublocation"
+        "MY.collectionTypeGardenSublocation",
+        "MY.collectionTypeTrait"
       ],
       "enumNames": [
         "Specimens",
@@ -198,7 +199,8 @@
         "Garden area",
         "Indoor garden area",
         "Outdoor garden area",
-        "Garden sublocation"
+        "Garden sublocation",
+        "Trait data"
       ],
       "range": "MY.collectionTypes",
       "subject": "MY.collectionType",
