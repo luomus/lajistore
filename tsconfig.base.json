@@ -25,7 +25,7 @@
     "baseUrl": ".",
     "paths": {
       "@luomus/laji/client": ["libs/laji/client/src/index.ts"],
-      "@luomus/shared/models": ["libs/shared/models/src/index.ts"],
+      "@luomus/shared/models": ["libs/shared/schemas/src/index.ts"],
       "@luomus/shared/assets": ["libs/shared/assets/src/index.ts"],
       "@luomus/shared/services": ["libs/shared/services/src/index.ts"],
       "@luomus/shared/utility": ["libs/shared/utility/src/index.ts"],

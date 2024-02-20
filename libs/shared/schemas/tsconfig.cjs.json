@@ -1,14 +1,15 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./lib",
+    "outDir": "./dist/cjs",
     "rootDir": "./src",
     "strict": true,
-    "declaration": true,
     "esModuleInterop": true,
     "target": "es2017",
+    "moduleResolution": "node",
     "module": "commonjs",
     "lib": ["es2017", "dom"],
+    "strictPropertyInitialization": false,
   },
   "root": ".",
   "baseUrl": ".",

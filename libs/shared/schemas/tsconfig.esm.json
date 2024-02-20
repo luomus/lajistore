@@ -1,0 +1,18 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/esm",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "target": "es2017",
+    "moduleResolution": "node",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "strictPropertyInitialization": false,
+  },
+  "root": ".",
+  "baseUrl": ".",
+  "include": ["**/*.ts"],
+  "exclude": ["**/*.spec.ts"]
+}

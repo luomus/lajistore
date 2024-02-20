@@ -8,7 +8,7 @@ module.exports = {
     '<rootDir>/apps/store-api/core-worker',
     '<rootDir>/apps/store-api/generate',
     '<rootDir>/apps/store-api/api',
-    '<rootDir>/libs/shared/models',
+    '<rootDir>/libs/shared/schemas',
     '<rootDir>/libs/shared/assets',
     '<rootDir>/apps/store-api/interface',
     '<rootDir>/libs/store/config',

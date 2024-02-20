@@ -17,6 +17,7 @@ interface Configuration {
   DB_DATABASE?: string;
   DB_CONNECT_STRING?: string;
   MODELS_PATH: string;
+  CLASSES_PATH: string;
   GRAPHQL_FILE: string;
   OPENAPI_SPEC_FILE: string;
   CONFIG_SPEC_BASE_FILE: string;
@@ -31,6 +32,7 @@ interface Configuration {
   JSON_LD_CONTEXT_PATH: string;
   MAX_PATCH_SIZE: string;
   MODELS_FILENAME_PATTERN: string;
+  CLASSES_FILENAME_PATTERN: string;
   JSON_FILENAME_PATTERN: string;
   // comma separated list of types that should have generated fields id and type
   // (all root elements have this automatically)
@@ -53,6 +55,7 @@ const DEFAULT_VALUES: Configuration = {
   INTERNAL_ADDRESS: 'http://127.0.0.1:3000',
   RESOLVE_URL: 'http://tun.fi/',
   MODELS_FILENAME_PATTERN: '%name%.ts',
+  CLASSES_FILENAME_PATTERN: '%name%.ts',
   JSON_FILENAME_PATTERN: '%name%.json',
   IS_WORKER: 'false',
   CONTEXT_IRI: 'http://tun.fi/%type%.json',
@@ -73,7 +76,8 @@ const DEFAULT_VALUES: Configuration = {
   ID_SEPARATOR: '#',
   RABBITMQ_PORT: '5672',
   MAX_PATCH_SIZE: '10000',
-  MODELS_PATH: 'libs/shared/models/src/models',
+  MODELS_PATH: 'libs/shared/schemas/src/models',
+  CLASSES_PATH: 'libs/shared/schemas/src/classes',
   ES_INDEX_PATH: 'libs/shared/assets/src/es-index',
   JSON_SCHEMA_PATH: 'libs/shared/assets/src/json-schema',
   JSON_LD_CONTEXT_PATH: 'libs/shared/assets/src/json-ld-context',

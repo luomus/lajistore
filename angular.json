@@ -22,22 +22,22 @@
         }
       }
     },
-    "shared-models": {
-      "root": "libs/shared/models",
-      "sourceRoot": "libs/shared/models/src",
+    "shared-schemas": {
+      "root": "libs/shared/schemas",
+      "sourceRoot": "libs/shared/schemas/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/shared/models/**/*.ts"]
+            "lintFilePatterns": ["libs/shared/schemas/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/models"],
+          "outputs": ["coverage/libs/shared/schemas"],
           "options": {
-            "jestConfig": "libs/shared/models/jest.config.js",
+            "jestConfig": "libs/shared/schemas/jest.config.js",
             "passWithNoTests": true
           }
         }

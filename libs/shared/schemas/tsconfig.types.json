@@ -1,0 +1,19 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/types",
+    "rootDir": "./src",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "target": "es2017",
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
+    "strictPropertyInitialization": false,
+  },
+  "root": ".",
+  "baseUrl": ".",
+  "include": ["**/*.ts"],
+  "exclude": ["**/*.spec.ts"]
+}

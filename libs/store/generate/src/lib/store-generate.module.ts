@@ -8,6 +8,7 @@ import { GenerateInterfaceService } from './generate/generate-interface.service'
 import { GenerateJsonSchemaService } from './generate/generate-json-schema.service';
 import { GenerateJsonLdContextService } from './generate/generate-json-ld-context.service';
 import { StoreSharedModule } from '@luomus/store/shared';
+import { GenerateClassService } from './generate/generate-class.service';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { StoreSharedModule } from '@luomus/store/shared';
     GenerateEsIndexService,
     GenerateGraphQLService,
     GenerateInterfaceService,
+    GenerateClassService,
     GenerateJsonSchemaService,
     GenerateJsonLdContextService,
   ],
@@ -28,6 +30,7 @@ import { StoreSharedModule } from '@luomus/store/shared';
     GenerateEsIndexService,
     GenerateGraphQLService,
     GenerateInterfaceService,
+    GenerateClassService,
     GenerateJsonSchemaService,
     GenerateJsonLdContextService,
   ],

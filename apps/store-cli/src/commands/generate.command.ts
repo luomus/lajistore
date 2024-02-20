@@ -3,6 +3,7 @@ import {
   GenerateEsIndexService,
   GenerateGraphQLService,
   GenerateInterfaceService,
+  GenerateClassService,
   GenerateJsonLdContextService,
   GenerateJsonSchemaService,
   GenerateSwaggerService,
@@ -14,6 +15,7 @@ export class GenerateCommand {
     private generateSwaggerService: GenerateSwaggerService,
     private generateEsIndexService: GenerateEsIndexService,
     private generateInterfaceService: GenerateInterfaceService,
+    private generateClassService: GenerateClassService,
     private generateJsonSchemaService: GenerateJsonSchemaService,
     private generateGraphQLService: GenerateGraphQLService,
     private generateJsonLdContextService: GenerateJsonLdContextService
@@ -35,6 +37,9 @@ export class GenerateCommand {
         break;
       case 'interface':
         result = await this.generateInterfaceService.generate();
+        break;
+      case 'class':
+        result = await this.generateClassService.generate();
         break;
       case 'open-api':
         result = await this.generateSwaggerService.generate();
