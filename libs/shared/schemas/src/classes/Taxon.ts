@@ -5,7 +5,7 @@
  * and run the command to regenerate this file.
  */
 
-export interface Taxon {
+export class Taxon {
   "@context"?: string;
   id?: string;
   "@type"?: string;

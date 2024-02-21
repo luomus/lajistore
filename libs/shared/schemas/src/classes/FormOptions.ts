@@ -5,7 +5,7 @@
  * and run the command to regenerate this file.
  */
 
-export interface FormOptions {
+export class FormOptions {
   "@context"?: string;
   id?: string;
   "@type"?: string;

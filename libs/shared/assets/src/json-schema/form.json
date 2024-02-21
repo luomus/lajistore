@@ -9530,7 +9530,7 @@
           "type": "boolean",
           "range": "xsd:boolean",
           "subject": "MHL.strict",
-          "description": "Documents can't have data not defined in form fields.",
+          "description": "Documents can't have data not defined in form fields. Defaults to true.",
           "title": "Strict"
         },
         "tempLabel": {

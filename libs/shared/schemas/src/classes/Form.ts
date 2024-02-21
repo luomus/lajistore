@@ -5,7 +5,7 @@
  * and run the command to regenerate this file.
  */
 
-export interface Form {
+export class Form {
   "@context"?: string;
   id?: string;
   "@type"?: string;

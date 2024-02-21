@@ -7751,7 +7751,7 @@ type FormOptions {
   # Has only a form page, no sidebar
   simple: Boolean
 
-  # Documents can't have data not defined in form fields.
+  # Documents can't have data not defined in form fields. Defaults to true.
   strict: Boolean
 
   # Label for the draft button at the form footer
@@ -10118,6 +10118,17 @@ enum HasAdminStatusListItem {
   MX_CROPWILDRELATIVE
   MX_FINNISHENVIRONMENTINSTITUTE20192021FORESTSPECIES
   MX_FORESTCENTRESPECIES
+  MX_REGIONALLYTHREATENED2020_1A
+  MX_REGIONALLYTHREATENED2020_1B
+  MX_REGIONALLYTHREATENED2020_2A
+  MX_REGIONALLYTHREATENED2020_2B
+  MX_REGIONALLYTHREATENED2020_3A
+  MX_REGIONALLYTHREATENED2020_3B
+  MX_REGIONALLYTHREATENED2020_3C
+  MX_REGIONALLYTHREATENED2020_4A
+  MX_REGIONALLYTHREATENED2020_4B
+  MX_REGIONALLYTHREATENED2020_4C
+  MX_REGIONALLYTHREATENED2020_4D
   MX_FINLEX160_1997_APPENDIX4
   MX_FINLEX160_1997_APPENDIX4_SPECIALINTEREST
 }
@@ -23722,7 +23733,7 @@ input FormOptionsInput {
   # Has only a form page, no sidebar
   simple: Boolean
 
-  # Documents can't have data not defined in form fields.
+  # Documents can't have data not defined in form fields. Defaults to true.
   strict: Boolean
 
   # Label for the draft button at the form footer
