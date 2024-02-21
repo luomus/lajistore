@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "tsc": "npx tsc -b tsconfig.cjs.json tsconfig.esm.json tsconfig.types.json",
+    "prepublishOnly": "npm run tsc",
     "postpublish": "rm -rf dist"
   },
   "publishConfig": {
