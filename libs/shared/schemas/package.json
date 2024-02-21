@@ -43,5 +43,8 @@
       "models": ["./dist/types/models/index.d.ts"],
       "*": ["./dist/types/index.d.ts"]
     }
+  },
+  "devDependencies": {
+    "typescript": "~4.1.5"
   }
 }
