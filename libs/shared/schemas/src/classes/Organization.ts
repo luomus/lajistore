@@ -9,6 +9,9 @@ export class Organization {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  /**
+   * Economic Operators Registration and Identification number for customs clearance, if needed.
+   */
   EORINumber?: string;
   /**
    * Organisation website. Include http://
@@ -37,6 +40,9 @@ export class Organization {
    * Name of the country as on a postal address.
    */
   country?: string;
+  /**
+   * Address and other contact details to be given for courier services, if different from normal postal address. Appears on transaction PDFs like formulated here.
+   */
   courierAddress?: string;
   /**
    * Tags this organisation has

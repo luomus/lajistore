@@ -28,6 +28,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.EORINumber",
+      "description": "Economic Operators Registration and Identification number for customs clearance, if needed.",
       "title": "EORI number"
     },
     "URL": {
@@ -86,6 +87,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.courierAddress",
+      "description": "Address and other contact details to be given for courier services, if different from normal postal address. Appears on transaction PDFs like formulated here.",
       "title": "Address for courier services"
     },
     "datasetID": {

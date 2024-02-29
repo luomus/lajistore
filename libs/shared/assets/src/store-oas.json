@@ -58089,6 +58089,7 @@
           },
           "EORINumber": {
             "type": "string",
+            "description": "Economic Operators Registration and Identification number for customs clearance, if needed.",
             "title": "EORI number"
           },
           "URL": {
@@ -58128,6 +58129,7 @@
           },
           "courierAddress": {
             "type": "string",
+            "description": "Address and other contact details to be given for courier services, if different from normal postal address. Appears on transaction PDFs like formulated here.",
             "title": "Address for courier services"
           },
           "datasetID": {
