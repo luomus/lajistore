@@ -33,7 +33,7 @@
       "minItems": 0,
       "range": "MXA.individual",
       "subject": "MPO.targetIndividualIds",
-      "title": "Individual for the news"
+      "title": "Target individuals"
     },
     "description": {
       "type": "object",
@@ -54,10 +54,26 @@
       "title": "Description"
     },
     "name": {
-      "type": "string",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "en": {
+          "type": "string"
+        },
+        "fi": {
+          "type": "string"
+        },
+        "sv": {
+          "type": "string"
+        }
+      },
+      "minProperties": 1,
       "range": "xsd:string",
       "subject": "MXA.name",
-      "title": "name"
+      "title": "Name"
     }
-  }
+  },
+  "required": [
+    "name"
+  ]
 }

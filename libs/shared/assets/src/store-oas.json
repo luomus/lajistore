@@ -57898,7 +57898,7 @@
               "type": "string"
             },
             "minItems": 0,
-            "title": "Individual for the news"
+            "title": "Target individuals"
           },
           "targets": {
             "type": "array",
@@ -59372,16 +59372,18 @@
               "type": "string"
             },
             "minItems": 0,
-            "title": "Individual for the news"
+            "title": "Target individuals"
           },
           "description": {
             "$ref": "#/components/schemas/multiLang"
           },
           "name": {
-            "type": "string",
-            "title": "name"
+            "$ref": "#/components/schemas/multiLang"
           }
-        }
+        },
+        "required": [
+          "name"
+        ]
       },
       "specimenTransaction": {
         "type": "object",

@@ -9601,7 +9601,7 @@ type SatelliteTrackingProject2 {
   context: String
   description: MultiLang
   id: String
-  name: String
+  name: MultiLang!
   targetIndividualIds: [String]
   type: String
 }
@@ -24806,7 +24806,7 @@ input SatelliteTrackingProject2Input {
   context: String
   description: MultiLangInput
   id: String
-  name: String
+  name: MultiLangInput!
   targetIndividualIds: [String]
   type: String
 }
