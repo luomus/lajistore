@@ -7751,7 +7751,7 @@ type FormOptions {
   # Has only a form page, no sidebar
   simple: Boolean
 
-  # Documents can't have data not defined in form fields.
+  # Documents can't have data not defined in form fields. Defaults to true.
   strict: Boolean
 
   # Label for the draft button at the form footer
@@ -9016,6 +9016,8 @@ type Organization2 {
 
   # Name of the country as on a postal address.
   country: String
+
+  # Address and other contact details to be given for courier services, if different from normal postal address. Appears on transaction PDFs like formulated here.
   courierAddress: String
   creator: String
 
@@ -9026,6 +9028,8 @@ type Organization2 {
 
   # Last date for sending seed orders to this organization.
   dateOrdersDue: String
+
+  # Economic Operators Registration and Identification number for customs clearance, if needed.
   eORINumber: String
   editNotes: String
   editor: String
@@ -9597,7 +9601,7 @@ type SatelliteTrackingProject2 {
   context: String
   description: MultiLang
   id: String
-  name: String
+  name: MultiLang!
   targetIndividualIds: [String]
   type: String
 }
@@ -10118,6 +10122,17 @@ enum HasAdminStatusListItem {
   MX_CROPWILDRELATIVE
   MX_FINNISHENVIRONMENTINSTITUTE20192021FORESTSPECIES
   MX_FORESTCENTRESPECIES
+  MX_REGIONALLYTHREATENED2020_1A
+  MX_REGIONALLYTHREATENED2020_1B
+  MX_REGIONALLYTHREATENED2020_2A
+  MX_REGIONALLYTHREATENED2020_2B
+  MX_REGIONALLYTHREATENED2020_3A
+  MX_REGIONALLYTHREATENED2020_3B
+  MX_REGIONALLYTHREATENED2020_3C
+  MX_REGIONALLYTHREATENED2020_4A
+  MX_REGIONALLYTHREATENED2020_4B
+  MX_REGIONALLYTHREATENED2020_4C
+  MX_REGIONALLYTHREATENED2020_4D
   MX_FINLEX160_1997_APPENDIX4
   MX_FINLEX160_1997_APPENDIX4_SPECIALINTEREST
 }
@@ -23722,7 +23737,7 @@ input FormOptionsInput {
   # Has only a form page, no sidebar
   simple: Boolean
 
-  # Documents can't have data not defined in form fields.
+  # Documents can't have data not defined in form fields. Defaults to true.
   strict: Boolean
 
   # Label for the draft button at the form footer
@@ -24498,6 +24513,8 @@ input Organization2Input {
 
   # Name of the country as on a postal address.
   country: String
+
+  # Address and other contact details to be given for courier services, if different from normal postal address. Appears on transaction PDFs like formulated here.
   courierAddress: String
   creator: String
 
@@ -24508,6 +24525,8 @@ input Organization2Input {
 
   # Last date for sending seed orders to this organization.
   dateOrdersDue: String
+
+  # Economic Operators Registration and Identification number for customs clearance, if needed.
   eORINumber: String
   editNotes: String
   editor: String
@@ -24787,7 +24806,7 @@ input SatelliteTrackingProject2Input {
   context: String
   description: MultiLangInput
   id: String
-  name: String
+  name: MultiLangInput!
   targetIndividualIds: [String]
   type: String
 }

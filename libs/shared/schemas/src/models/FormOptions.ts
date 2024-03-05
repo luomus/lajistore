@@ -4950,7 +4950,7 @@ export interface FormOptions {
    */
   simple?: boolean;
   /**
-   * Documents can't have data not defined in form fields.
+   * Documents can't have data not defined in form fields. Defaults to true.
    */
   strict?: boolean;
   /**

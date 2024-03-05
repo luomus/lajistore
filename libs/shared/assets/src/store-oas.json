@@ -53611,7 +53611,7 @@
           },
           "strict": {
             "type": "boolean",
-            "description": "Documents can't have data not defined in form fields.",
+            "description": "Documents can't have data not defined in form fields. Defaults to true.",
             "title": "Strict"
           },
           "tempLabel": {
@@ -57898,7 +57898,7 @@
               "type": "string"
             },
             "minItems": 0,
-            "title": "Individual for the news"
+            "title": "Target individuals"
           },
           "targets": {
             "type": "array",
@@ -58089,6 +58089,7 @@
           },
           "EORINumber": {
             "type": "string",
+            "description": "Economic Operators Registration and Identification number for customs clearance, if needed.",
             "title": "EORI number"
           },
           "URL": {
@@ -58128,6 +58129,7 @@
           },
           "courierAddress": {
             "type": "string",
+            "description": "Address and other contact details to be given for courier services, if different from normal postal address. Appears on transaction PDFs like formulated here.",
             "title": "Address for courier services"
           },
           "datasetID": {
@@ -59370,16 +59372,18 @@
               "type": "string"
             },
             "minItems": 0,
-            "title": "Individual for the news"
+            "title": "Target individuals"
           },
           "description": {
             "$ref": "#/components/schemas/multiLang"
           },
           "name": {
-            "type": "string",
-            "title": "name"
+            "$ref": "#/components/schemas/multiLang"
           }
-        }
+        },
+        "required": [
+          "name"
+        ]
       },
       "specimenTransaction": {
         "type": "object",
@@ -60289,6 +60293,17 @@
                 "MX.cropWildRelative",
                 "MX.finnishEnvironmentInstitute20192021forestSpecies",
                 "MX.forestCentreSpecies",
+                "MX.regionallyThreatened2020_1a",
+                "MX.regionallyThreatened2020_1b",
+                "MX.regionallyThreatened2020_2a",
+                "MX.regionallyThreatened2020_2b",
+                "MX.regionallyThreatened2020_3a",
+                "MX.regionallyThreatened2020_3b",
+                "MX.regionallyThreatened2020_3c",
+                "MX.regionallyThreatened2020_4a",
+                "MX.regionallyThreatened2020_4b",
+                "MX.regionallyThreatened2020_4c",
+                "MX.regionallyThreatened2020_4d",
                 "MX.finlex160_1997_appendix4",
                 "MX.finlex160_1997_appendix4_specialInterest"
               ]

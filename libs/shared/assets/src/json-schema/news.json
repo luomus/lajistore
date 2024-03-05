@@ -69,7 +69,7 @@
       "minItems": 0,
       "range": "MXA.individual",
       "subject": "MPO.targetIndividualIds",
-      "title": "Individual for the news"
+      "title": "Target individuals"
     },
     "targets": {
       "type": "array",

@@ -41,7 +41,7 @@
     },
     "name": {
       "@id": "default:MXA.name",
-      "@type": "xsd:string"
+      "@container": "@language"
     }
   }
 }

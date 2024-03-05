@@ -15,5 +15,9 @@ export interface SatelliteTrackingProject {
     fi?: string;
     sv?: string;
   };
-  name?: string;
+  name: {
+    en?: string;
+    fi?: string;
+    sv?: string;
+  };
 }

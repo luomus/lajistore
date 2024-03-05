@@ -53,9 +53,23 @@
         }
       },
       "name": {
-        "type": "keyword",
-        "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "properties": {
+          "en": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "fi": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "sv": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          }
+        }
       },
       "_meta": {
         "properties": {
