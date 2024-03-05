@@ -2,8 +2,7 @@ import { Command, Console, createSpinner } from 'nestjs-console';
 import {
   GenerateEsIndexService,
   GenerateGraphQLService,
-  GenerateInterfaceService,
-  GenerateClassService,
+  GenerateInterfaceOrClassService,
   GenerateJsonLdContextService,
   GenerateJsonSchemaService,
   GenerateSwaggerService,
@@ -14,8 +13,7 @@ export class GenerateCommand {
   constructor(
     private generateSwaggerService: GenerateSwaggerService,
     private generateEsIndexService: GenerateEsIndexService,
-    private generateInterfaceService: GenerateInterfaceService,
-    private generateClassService: GenerateClassService,
+    private generateInterfaceOrClassService: GenerateInterfaceOrClassService,
     private generateJsonSchemaService: GenerateJsonSchemaService,
     private generateGraphQLService: GenerateGraphQLService,
     private generateJsonLdContextService: GenerateJsonLdContextService
@@ -36,10 +34,10 @@ export class GenerateCommand {
         result = await this.generateJsonSchemaService.generate();
         break;
       case 'interface':
-        result = await this.generateInterfaceService.generate();
+        result = await this.generateInterfaceOrClassService.generateInterface();
         break;
       case 'class':
-        result = await this.generateClassService.generate();
+        result = await this.generateInterfaceOrClassService.generateClass();
         break;
       case 'open-api':
         result = await this.generateSwaggerService.generate();

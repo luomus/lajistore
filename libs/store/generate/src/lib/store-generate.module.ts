@@ -4,11 +4,10 @@ import { LajiClientModule } from '@luomus/laji/client';
 import { GenerateSwaggerService } from './generate/generate-swagger.service';
 import { GenerateEsIndexService } from './generate/generate-es-index.service';
 import { GenerateGraphQLService } from './generate/generate-graphql.service';
-import { GenerateInterfaceService } from './generate/generate-interface.service';
+import { GenerateInterfaceOrClassService } from './generate/generate-interface-or-class.service';
 import { GenerateJsonSchemaService } from './generate/generate-json-schema.service';
 import { GenerateJsonLdContextService } from './generate/generate-json-ld-context.service';
 import { StoreSharedModule } from '@luomus/store/shared';
-import { GenerateClassService } from './generate/generate-class.service';
 
 @Module({
   imports: [
@@ -20,8 +19,7 @@ import { GenerateClassService } from './generate/generate-class.service';
     GenerateSwaggerService,
     GenerateEsIndexService,
     GenerateGraphQLService,
-    GenerateInterfaceService,
-    GenerateClassService,
+    GenerateInterfaceOrClassService,
     GenerateJsonSchemaService,
     GenerateJsonLdContextService,
   ],
@@ -29,8 +27,7 @@ import { GenerateClassService } from './generate/generate-class.service';
     GenerateSwaggerService,
     GenerateEsIndexService,
     GenerateGraphQLService,
-    GenerateInterfaceService,
-    GenerateClassService,
+    GenerateInterfaceOrClassService,
     GenerateJsonSchemaService,
     GenerateJsonLdContextService,
   ],
