@@ -1,35 +1,30 @@
+import { BirdSongRecognitionSkillLevel } from './';
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export type BirdwatchingActivityLevelEnum =
+  | ""
+  | "MA.birdwatchingActivityLevelEnum1"
+  | "MA.birdwatchingActivityLevelEnum2"
+  | "MA.birdwatchingActivityLevelEnum3"
+  | "MA.birdwatchingActivityLevelEnum4";
+export type FinnishBirdSongRecognitionSkillLevelEnum =
+  | ""
+  | "MA.finnishBirdSongRecognitionSkillLevelEnum1"
+  | "MA.finnishBirdSongRecognitionSkillLevelEnum2"
+  | "MA.finnishBirdSongRecognitionSkillLevelEnum3"
+  | "MA.finnishBirdSongRecognitionSkillLevelEnum4";
 export interface Profile {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  birdSongRecognitionSkillLevels?: {
-    birdSongRecognitionArea: string;
-    birdSongRecognitionSkillLevel:
-      | "MA.birdSongRecognitionSkillLevelEnum1"
-      | "MA.birdSongRecognitionSkillLevelEnum2"
-      | "MA.birdSongRecognitionSkillLevelEnum3"
-      | "MA.birdSongRecognitionSkillLevelEnum4";
-  }[];
-  birdwatchingActivityLevel?:
-    | ""
-    | "MA.birdwatchingActivityLevelEnum1"
-    | "MA.birdwatchingActivityLevelEnum2"
-    | "MA.birdwatchingActivityLevelEnum3"
-    | "MA.birdwatchingActivityLevelEnum4";
+  birdSongRecognitionSkillLevels?: BirdSongRecognitionSkillLevel[];
+  birdwatchingActivityLevel?: BirdwatchingActivityLevelEnum;
   blocked?: string[];
-  finnishBirdSongRecognitionSkillLevel?:
-    | ""
-    | "MA.finnishBirdSongRecognitionSkillLevelEnum1"
-    | "MA.finnishBirdSongRecognitionSkillLevelEnum2"
-    | "MA.finnishBirdSongRecognitionSkillLevelEnum3"
-    | "MA.finnishBirdSongRecognitionSkillLevelEnum4";
+  finnishBirdSongRecognitionSkillLevel?: FinnishBirdSongRecognitionSkillLevelEnum;
   friendRequests?: string[];
   friends?: string[];
   image?: string;

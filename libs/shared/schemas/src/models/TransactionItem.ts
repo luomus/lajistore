@@ -1,10 +1,18 @@
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export type ItemTypeEnum =
+  | "HRAB.itemTypeSpecimen"
+  | "HRAB.itemTypeSpecimenBatch"
+  | "HRAB.itemTypeImage"
+  | "HRAB.itemTypeOther";
+export type StatusEnum =
+  | "HRAB.statusOk"
+  | "HRAB.statusMissing"
+  | "HRAB.statusDamaged";
 export interface TransactionItem {
   "@context"?: string;
   id?: string;
@@ -13,7 +21,7 @@ export interface TransactionItem {
   itemCount: number;
   itemID?: string;
   itemLabel?: string;
-  itemType: "HRAB.itemTypeSpecimen" | "HRAB.itemTypeSpecimenBatch" | "HRAB.itemTypeImage" | "HRAB.itemTypeOther";
+  itemType: ItemTypeEnum;
   notes?: string;
-  status: "HRAB.statusOk" | "HRAB.statusMissing" | "HRAB.statusDamaged";
+  status: StatusEnum;
 }

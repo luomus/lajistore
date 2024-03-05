@@ -1,122 +1,124 @@
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export enum HabitatEnum {
+  "habitatM" = "MKV.habitatM",
+  "habitatMk" = "MKV.habitatMk",
+  "habitatMkk" = "MKV.habitatMkk",
+  "habitatMkt" = "MKV.habitatMkt",
+  "habitatMl" = "MKV.habitatMl",
+  "habitatMlt" = "MKV.habitatMlt",
+  "habitatMlk" = "MKV.habitatMlk",
+  "habitatMt" = "MKV.habitatMt",
+  "habitatMtl" = "MKV.habitatMtl",
+  "habitatS" = "MKV.habitatS",
+  "habitatSl" = "MKV.habitatSl",
+  "habitatSla" = "MKV.habitatSla",
+  "habitatSlr" = "MKV.habitatSlr",
+  "habitatSlk" = "MKV.habitatSlk",
+  "habitatSn" = "MKV.habitatSn",
+  "habitatSnk" = "MKV.habitatSnk",
+  "habitatSnr" = "MKV.habitatSnr",
+  "habitatSr" = "MKV.habitatSr",
+  "habitatSrk" = "MKV.habitatSrk",
+  "habitatSrr" = "MKV.habitatSrr",
+  "habitatSk" = "MKV.habitatSk",
+  "habitatSkk" = "MKV.habitatSkk",
+  "habitatSkr" = "MKV.habitatSkr",
+  "habitatV" = "MKV.habitatV",
+  "habitatVi" = "MKV.habitatVi",
+  "habitatVik" = "MKV.habitatVik",
+  "habitatVim" = "MKV.habitatVim",
+  "habitatVis" = "MKV.habitatVis",
+  "habitatVih" = "MKV.habitatVih",
+  "habitatVie" = "MKV.habitatVie",
+  "habitatVip" = "MKV.habitatVip",
+  "habitatVs" = "MKV.habitatVs",
+  "habitatVsk" = "MKV.habitatVsk",
+  "habitatVsr" = "MKV.habitatVsr",
+  "habitatVa" = "MKV.habitatVa",
+  "habitatVj" = "MKV.habitatVj",
+  "habitatVp" = "MKV.habitatVp",
+  "habitatVk" = "MKV.habitatVk",
+  "habitatVl" = "MKV.habitatVl",
+  "habitatR" = "MKV.habitatR",
+  "habitatRi" = "MKV.habitatRi",
+  "habitatRim" = "MKV.habitatRim",
+  "habitatRimt" = "MKV.habitatRimt",
+  "habitatRiml" = "MKV.habitatRiml",
+  "habitatRip" = "MKV.habitatRip",
+  "habitatRin" = "MKV.habitatRin",
+  "habitatRil" = "MKV.habitatRil",
+  "habitatRir" = "MKV.habitatRir",
+  "habitatRis" = "MKV.habitatRis",
+  "habitatRih" = "MKV.habitatRih",
+  "habitatRit" = "MKV.habitatRit",
+  "habitatRj" = "MKV.habitatRj",
+  "habitatRjm" = "MKV.habitatRjm",
+  "habitatRjmt" = "MKV.habitatRjmt",
+  "habitatRjml" = "MKV.habitatRjml",
+  "habitatRjp" = "MKV.habitatRjp",
+  "habitatRjn" = "MKV.habitatRjn",
+  "habitatRjl" = "MKV.habitatRjl",
+  "habitatRjr" = "MKV.habitatRjr",
+  "habitatRjs" = "MKV.habitatRjs",
+  "habitatRjh" = "MKV.habitatRjh",
+  "habitatRjt" = "MKV.habitatRjt",
+  "habitatK" = "MKV.habitatK",
+  "habitatKk" = "MKV.habitatKk",
+  "habitatKs" = "MKV.habitatKs",
+  "habitatKr" = "MKV.habitatKr",
+  "habitatKl" = "MKV.habitatKl",
+  "habitatKm" = "MKV.habitatKm",
+  "habitatT" = "MKV.habitatT",
+  "habitatTk" = "MKV.habitatTk",
+  "habitatTn" = "MKV.habitatTn",
+  "habitatTu" = "MKV.habitatTu",
+  "habitatTp" = "MKV.habitatTp",
+  "habitatTl" = "MKV.habitatTl",
+  "habitatTll" = "MKV.habitatTll",
+  "habitatTlk" = "MKV.habitatTlk",
+  "habitatTls" = "MKV.habitatTls",
+  "habitatTlr" = "MKV.habitatTlr",
+  "habitatTlä" = "MKV.habitatTlä",
+  "habitatTs" = "MKV.habitatTs",
+  "habitatTj" = "MKV.habitatTj",
+  "habitatTv" = "MKV.habitatTv",
+  "habitatTa" = "MKV.habitatTa",
+  "habitatI" = "MKV.habitatI",
+  "habitatIn" = "MKV.habitatIn",
+  "habitatIt" = "MKV.habitatIt",
+  "habitatIh" = "MKV.habitatIh",
+  "habitatIk" = "MKV.habitatIk",
+  "habitatIo" = "MKV.habitatIo",
+  "habitatIv" = "MKV.habitatIv",
+  "habitatIp" = "MKV.habitatIp",
+  "habitatIu" = "MKV.habitatIu",
+  "habitatIr" = "MKV.habitatIr",
+  "habitatU" = "MKV.habitatU"
+}
+export enum HabitatSpecificTypeEnum {
+  "empty" = "",
+  "habitatSpecificTypeV" = "MKV.habitatSpecificTypeV",
+  "habitatSpecificTypeH" = "MKV.habitatSpecificTypeH",
+  "habitatSpecificTypeP" = "MKV.habitatSpecificTypeP",
+  "habitatSpecificTypeJ" = "MKV.habitatSpecificTypeJ",
+  "habitatSpecificTypePAK" = "MKV.habitatSpecificTypePAK",
+  "habitatSpecificTypeVAK" = "MKV.habitatSpecificTypeVAK",
+  "habitatSpecificTypeRA" = "MKV.habitatSpecificTypeRA",
+  "habitatSpecificTypeKA" = "MKV.habitatSpecificTypeKA",
+  "habitatSpecificTypeKE" = "MKV.habitatSpecificTypeKE",
+  "habitatSpecificTypeCA" = "MKV.habitatSpecificTypeCA"
+}
 export class Habitat {
   "@context"?: string;
   id?: string;
   "@type"?: string;
   "herbo:sortOrder"?: number;
-  habitat:
-    | "MKV.habitatM"
-    | "MKV.habitatMk"
-    | "MKV.habitatMkk"
-    | "MKV.habitatMkt"
-    | "MKV.habitatMl"
-    | "MKV.habitatMlt"
-    | "MKV.habitatMlk"
-    | "MKV.habitatMt"
-    | "MKV.habitatMtl"
-    | "MKV.habitatS"
-    | "MKV.habitatSl"
-    | "MKV.habitatSla"
-    | "MKV.habitatSlr"
-    | "MKV.habitatSlk"
-    | "MKV.habitatSn"
-    | "MKV.habitatSnk"
-    | "MKV.habitatSnr"
-    | "MKV.habitatSr"
-    | "MKV.habitatSrk"
-    | "MKV.habitatSrr"
-    | "MKV.habitatSk"
-    | "MKV.habitatSkk"
-    | "MKV.habitatSkr"
-    | "MKV.habitatV"
-    | "MKV.habitatVi"
-    | "MKV.habitatVik"
-    | "MKV.habitatVim"
-    | "MKV.habitatVis"
-    | "MKV.habitatVih"
-    | "MKV.habitatVie"
-    | "MKV.habitatVip"
-    | "MKV.habitatVs"
-    | "MKV.habitatVsk"
-    | "MKV.habitatVsr"
-    | "MKV.habitatVa"
-    | "MKV.habitatVj"
-    | "MKV.habitatVp"
-    | "MKV.habitatVk"
-    | "MKV.habitatVl"
-    | "MKV.habitatR"
-    | "MKV.habitatRi"
-    | "MKV.habitatRim"
-    | "MKV.habitatRimt"
-    | "MKV.habitatRiml"
-    | "MKV.habitatRip"
-    | "MKV.habitatRin"
-    | "MKV.habitatRil"
-    | "MKV.habitatRir"
-    | "MKV.habitatRis"
-    | "MKV.habitatRih"
-    | "MKV.habitatRit"
-    | "MKV.habitatRj"
-    | "MKV.habitatRjm"
-    | "MKV.habitatRjmt"
-    | "MKV.habitatRjml"
-    | "MKV.habitatRjp"
-    | "MKV.habitatRjn"
-    | "MKV.habitatRjl"
-    | "MKV.habitatRjr"
-    | "MKV.habitatRjs"
-    | "MKV.habitatRjh"
-    | "MKV.habitatRjt"
-    | "MKV.habitatK"
-    | "MKV.habitatKk"
-    | "MKV.habitatKs"
-    | "MKV.habitatKr"
-    | "MKV.habitatKl"
-    | "MKV.habitatKm"
-    | "MKV.habitatT"
-    | "MKV.habitatTk"
-    | "MKV.habitatTn"
-    | "MKV.habitatTu"
-    | "MKV.habitatTp"
-    | "MKV.habitatTl"
-    | "MKV.habitatTll"
-    | "MKV.habitatTlk"
-    | "MKV.habitatTls"
-    | "MKV.habitatTlr"
-    | "MKV.habitatTlä"
-    | "MKV.habitatTs"
-    | "MKV.habitatTj"
-    | "MKV.habitatTv"
-    | "MKV.habitatTa"
-    | "MKV.habitatI"
-    | "MKV.habitatIn"
-    | "MKV.habitatIt"
-    | "MKV.habitatIh"
-    | "MKV.habitatIk"
-    | "MKV.habitatIo"
-    | "MKV.habitatIv"
-    | "MKV.habitatIp"
-    | "MKV.habitatIu"
-    | "MKV.habitatIr"
-    | "MKV.habitatU";
-  habitatSpecificType?: (
-    | ""
-    | "MKV.habitatSpecificTypeV"
-    | "MKV.habitatSpecificTypeH"
-    | "MKV.habitatSpecificTypeP"
-    | "MKV.habitatSpecificTypeJ"
-    | "MKV.habitatSpecificTypePAK"
-    | "MKV.habitatSpecificTypeVAK"
-    | "MKV.habitatSpecificTypeRA"
-    | "MKV.habitatSpecificTypeKA"
-    | "MKV.habitatSpecificTypeKE"
-    | "MKV.habitatSpecificTypeCA"
-  )[];
+  habitat: HabitatEnum;
+  habitatSpecificType?: HabitatSpecificTypeEnum[];
   sortOrder?: number;
 }

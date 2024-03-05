@@ -1,10 +1,76 @@
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export enum SecureLevels {
+  "empty" = "",
+  "MX.secureLevelNone" = "MX.secureLevelNone",
+  "MX.secureLevelKM1" = "MX.secureLevelKM1",
+  "MX.secureLevelKM5" = "MX.secureLevelKM5",
+  "MX.secureLevelKM10" = "MX.secureLevelKM10",
+  "MX.secureLevelKM25" = "MX.secureLevelKM25",
+  "MX.secureLevelKM50" = "MX.secureLevelKM50",
+  "MX.secureLevelKM100" = "MX.secureLevelKM100",
+  "MX.secureLevelHighest" = "MX.secureLevelHighest",
+  "MX.secureLevelNoShow" = "MX.secureLevelNoShow"
+}
+export enum CollectionQualityEnum {
+  "collectionQualityEnum3" = "MY.collectionQualityEnum3",
+  "collectionQualityEnum2" = "MY.collectionQualityEnum2",
+  "collectionQualityEnum1" = "MY.collectionQualityEnum1"
+}
+export enum CollectionTypes {
+  "collectionTypeSpecimens" = "MY.collectionTypeSpecimens",
+  "collectionTypeLiving" = "MY.collectionTypeLiving",
+  "collectionTypeMonitoring" = "MY.collectionTypeMonitoring",
+  "collectionTypeObservations" = "MY.collectionTypeObservations",
+  "collectionTypePublicationdata" = "MY.collectionTypePublicationdata",
+  "collectionTypePublication" = "MY.collectionTypePublication",
+  "collectionTypeMixed" = "MY.collectionTypeMixed",
+  "collectionTypeOther" = "MY.collectionTypeOther",
+  "collectionTypeGardenArea" = "MY.collectionTypeGardenArea",
+  "collectionTypeIndoorGardenArea" = "MY.collectionTypeIndoorGardenArea",
+  "collectionTypeOutdoorGardenArea" = "MY.collectionTypeOutdoorGardenArea",
+  "collectionTypeGardenSublocation" = "MY.collectionTypeGardenSublocation",
+  "collectionTypeTrait" = "MY.collectionTypeTrait"
+}
+export enum DataQualityEnum {
+  "empty" = "",
+  "dataQuality1" = "MY.dataQuality1",
+  "dataQuality2" = "MY.dataQuality2",
+  "dataQuality3" = "MY.dataQuality3",
+  "dataQuality4" = "MY.dataQuality4",
+  "dataQuality5" = "MY.dataQuality5",
+  "dataQualityNA" = "MY.dataQualityNA"
+}
+export enum IntellectualRightsEnum {
+  "intellectualRightsCC-BY" = "MY.intellectualRightsCC-BY",
+  "intellectualRightsCC0" = "MY.intellectualRightsCC0",
+  "intellectualRightsPD" = "MY.intellectualRightsPD",
+  "intellectualRightsARR" = "MY.intellectualRightsARR"
+}
+export enum MetadataStatuses {
+  "empty" = "",
+  "metadataStatusPreliminary" = "MY.metadataStatusPreliminary",
+  "metadataStatusSatisfactory" = "MY.metadataStatusSatisfactory",
+  "metadataStatusComprehensive" = "MY.metadataStatusComprehensive",
+  "metadataStatusHidden" = "MY.metadataStatusHidden"
+}
+export enum PublicationTermsEnum {
+  "empty" = "",
+  "publicationTermsFree" = "MY.publicationTermsFree",
+  "publicationTermsOfficial" = "MY.publicationTermsOfficial",
+  "publicationTermsInternal" = "MY.publicationTermsInternal",
+  "publicationTermsNone" = "MY.publicationTermsNone"
+}
+export enum PublicityRestrictionsEnum {
+  "empty" = "",
+  "publicityRestrictionsPublic" = "MZ.publicityRestrictionsPublic",
+  "publicityRestrictionsProtected" = "MZ.publicityRestrictionsProtected",
+  "publicityRestrictionsPrivate" = "MZ.publicityRestrictionsPrivate"
+}
 export class Collection {
   "@context"?: string;
   id?: string;
@@ -12,17 +78,7 @@ export class Collection {
   /**
    * Secure level (salaus-/karkeistustaso) for the data
    */
-  secureLevel?:
-    | ""
-    | "MX.secureLevelNone"
-    | "MX.secureLevelKM1"
-    | "MX.secureLevelKM5"
-    | "MX.secureLevelKM10"
-    | "MX.secureLevelKM25"
-    | "MX.secureLevelKM50"
-    | "MX.secureLevelKM100"
-    | "MX.secureLevelHighest"
-    | "MX.secureLevelNoShow";
+  secureLevel?: SecureLevels;
   /**
    * Unofficial abbreviation (or acronym) for this collection
    */
@@ -62,7 +118,7 @@ export class Collection {
   /**
    * Quality classification for the collection.
    */
-  collectionQuality: "MY.collectionQualityEnum3" | "MY.collectionQualityEnum2" | "MY.collectionQualityEnum1";
+  collectionQuality: CollectionQualityEnum;
   /**
    * How many specimens, records or such does the collection contain? Fill in approximate number, describe more in notes if necessary.
    */
@@ -70,20 +126,7 @@ export class Collection {
   /**
    * Type of the collection (specimen, monitoring etc).
    */
-  collectionType:
-    | "MY.collectionTypeSpecimens"
-    | "MY.collectionTypeLiving"
-    | "MY.collectionTypeMonitoring"
-    | "MY.collectionTypeObservations"
-    | "MY.collectionTypePublicationdata"
-    | "MY.collectionTypePublication"
-    | "MY.collectionTypeMixed"
-    | "MY.collectionTypeOther"
-    | "MY.collectionTypeGardenArea"
-    | "MY.collectionTypeIndoorGardenArea"
-    | "MY.collectionTypeOutdoorGardenArea"
-    | "MY.collectionTypeGardenSublocation"
-    | "MY.collectionTypeTrait";
+  collectionType: CollectionTypes;
   /**
    * Legal basis for concealment or embargo
    */
@@ -119,14 +162,7 @@ export class Collection {
   /**
    * Quality estimation for the data in this collection
    */
-  dataQuality?:
-    | ""
-    | "MY.dataQuality1"
-    | "MY.dataQuality2"
-    | "MY.dataQuality3"
-    | "MY.dataQuality4"
-    | "MY.dataQuality5"
-    | "MY.dataQualityNA";
+  dataQuality?: DataQualityEnum;
   /**
    * Description and reasons for the data quality in different languages.
    */
@@ -198,11 +234,7 @@ export class Collection {
   /**
    * License which is used when publishing data that belongs to this collection.
    */
-  intellectualRights:
-    | "MY.intellectualRightsCC-BY"
-    | "MY.intellectualRightsCC0"
-    | "MY.intellectualRightsPD"
-    | "MY.intellectualRightsARR";
+  intellectualRights: IntellectualRightsEnum;
   /**
    * Is the data to be used only within Kotka?
    */
@@ -224,12 +256,7 @@ export class Collection {
   /**
    * Indication of how comprehensive the information on this form is.
    */
-  metadataStatus?:
-    | ""
-    | "MY.metadataStatusPreliminary"
-    | "MY.metadataStatusSatisfactory"
-    | "MY.metadataStatusComprehensive"
-    | "MY.metadataStatusHidden";
+  metadataStatus?: MetadataStatuses;
   /**
    * Methods used when creating this collection, if they are standardized. Includes information on items such as census methods, tools, instrument calibration and software.
    */
@@ -269,12 +296,7 @@ export class Collection {
   /**
    * How can Luomus publish the data, if it is owned by third party?
    */
-  publicationTerms?:
-    | ""
-    | "MY.publicationTermsFree"
-    | "MY.publicationTermsOfficial"
-    | "MY.publicationTermsInternal"
-    | "MY.publicationTermsNone";
+  publicationTerms?: PublicationTermsEnum;
   /**
    * Admin field. Name that is easy for users to remember and understand. E.g. "Luomus", "University of Turku".
    */
@@ -319,9 +341,5 @@ export class Collection {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?:
-    | ""
-    | "MZ.publicityRestrictionsPublic"
-    | "MZ.publicityRestrictionsProtected"
-    | "MZ.publicityRestrictionsPrivate";
+  publicityRestrictions?: PublicityRestrictionsEnum;
 }

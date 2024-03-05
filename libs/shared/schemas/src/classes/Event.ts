@@ -1,10 +1,54 @@
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export enum EventType {
+  "eventTypeDiscarded" = "MY.eventTypeDiscarded",
+  "eventTypeDonating" = "MY.eventTypeDonating",
+  "eventTypeInventory" = "MY.eventTypeInventory",
+  "eventTypeMarkedDead" = "MY.eventTypeMarkedDead",
+  "eventTypeOccasionalRemark" = "MY.eventTypeOccasionalRemark",
+  "eventTypeTemporaryPlacement" = "MY.eventTypeTemporaryPlacement",
+  "eventTypePlanting" = "MY.eventTypePlanting",
+  "eventTypePlantedBackToWild" = "MY.eventTypePlantedBackToWild",
+  "eventTypePollination" = "MY.eventTypePollination",
+  "eventTypePrickingOut" = "MY.eventTypePrickingOut",
+  "eventTypePotting" = "MY.eventTypePotting",
+  "eventTypePropagation" = "MY.eventTypePropagation",
+  "eventTypePropagationMaterialCollected" = "MY.eventTypePropagationMaterialCollected",
+  "eventTypePruning" = "MY.eventTypePruning",
+  "eventTypeSowing" = "MY.eventTypeSowing",
+  "eventTypeStoring" = "MY.eventTypeStoring",
+  "eventTypeTransferring" = "MY.eventTypeTransferring",
+  "eventTypeOther" = "MY.eventTypeOther",
+  "eventTypeAtlantis" = "MY.eventTypeAtlantis",
+  "eventTypeCleaning" = "MY.eventTypeCleaning",
+  "eventTypeQuantityEstimation" = "MY.eventTypeQuantityEstimation",
+  "eventTypeCutTesting" = "MY.eventTypeCutTesting",
+  "eventTypeDrying" = "MY.eventTypeDrying",
+  "eventTypeGerminationTesting" = "MY.eventTypeGerminationTesting",
+  "eventTypeGerminationRetesting" = "MY.eventTypeGerminationRetesting",
+  "eventTypeGerminationControlling" = "MY.eventTypeGerminationControlling",
+  "eventTypeTZTesting" = "MY.eventTypeTZTesting",
+  "eventTypeSeedExchange" = "MY.eventTypeSeedExchange",
+  "eventTypeTPuska" = "MY.eventTypeTPuska"
+}
+export enum PlantLifeStageEnum {
+  "empty" = "",
+  "plantLifeStageSterile" = "MY.plantLifeStageSterile",
+  "plantLifeStageFertile" = "MY.plantLifeStageFertile",
+  "plantLifeStageSeed" = "MY.plantLifeStageSeed",
+  "plantLifeStageSprout" = "MY.plantLifeStageSprout",
+  "plantLifeStageBud" = "MY.plantLifeStageBud",
+  "plantLifeStageFlower" = "MY.plantLifeStageFlower",
+  "plantLifeStageWitheredFlower" = "MY.plantLifeStageWitheredFlower",
+  "plantLifeStageRipeningFruit" = "MY.plantLifeStageRipeningFruit",
+  "plantLifeStageRipeFruit" = "MY.plantLifeStageRipeFruit",
+  "plantLifeStageDeadSprout" = "MY.plantLifeStageDeadSprout",
+  "plantLifeStageSubterranean" = "MY.plantLifeStageSubterranean"
+}
 export class Event {
   "@context"?: string;
   id?: string;
@@ -22,52 +66,11 @@ export class Event {
   date?: string;
   eRH?: string;
   estimatedSeedQuantity?: number;
-  eventType:
-    | "MY.eventTypeDiscarded"
-    | "MY.eventTypeDonating"
-    | "MY.eventTypeInventory"
-    | "MY.eventTypeMarkedDead"
-    | "MY.eventTypeOccasionalRemark"
-    | "MY.eventTypeTemporaryPlacement"
-    | "MY.eventTypePlanting"
-    | "MY.eventTypePlantedBackToWild"
-    | "MY.eventTypePollination"
-    | "MY.eventTypePrickingOut"
-    | "MY.eventTypePotting"
-    | "MY.eventTypePropagation"
-    | "MY.eventTypePropagationMaterialCollected"
-    | "MY.eventTypePruning"
-    | "MY.eventTypeSowing"
-    | "MY.eventTypeStoring"
-    | "MY.eventTypeTransferring"
-    | "MY.eventTypeOther"
-    | "MY.eventTypeAtlantis"
-    | "MY.eventTypeCleaning"
-    | "MY.eventTypeQuantityEstimation"
-    | "MY.eventTypeCutTesting"
-    | "MY.eventTypeDrying"
-    | "MY.eventTypeGerminationTesting"
-    | "MY.eventTypeGerminationRetesting"
-    | "MY.eventTypeGerminationControlling"
-    | "MY.eventTypeTZTesting"
-    | "MY.eventTypeSeedExchange"
-    | "MY.eventTypeTPuska";
+  eventType: EventType;
   germinationConditions?: string;
   germinationPercentage?: number;
   germinationRate?: number;
-  lifeStage?:
-    | ""
-    | "MY.plantLifeStageSterile"
-    | "MY.plantLifeStageFertile"
-    | "MY.plantLifeStageSeed"
-    | "MY.plantLifeStageSprout"
-    | "MY.plantLifeStageBud"
-    | "MY.plantLifeStageFlower"
-    | "MY.plantLifeStageWitheredFlower"
-    | "MY.plantLifeStageRipeningFruit"
-    | "MY.plantLifeStageRipeFruit"
-    | "MY.plantLifeStageDeadSprout"
-    | "MY.plantLifeStageSubterranean";
+  lifeStage?: PlantLifeStageEnum;
   notes?: string;
   numberOfSeedsEmpty?: number;
   numberOfSeedsFull?: number;

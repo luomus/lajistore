@@ -1,10 +1,202 @@
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export type DdReasonEnum =
+  | ""
+  | "MKV.ddReasonIncompleteSpatialData"
+  | "MKV.ddReasonIncompleteTaxonomicData"
+  | "MKV.ddReasonIncompleteOtherData";
+export type ExternalPopulationImpactOnRedListStatusEnum =
+  | ""
+  | "MKV.externalPopulationImpactOnRedListStatusEnumMinus1"
+  | "MKV.externalPopulationImpactOnRedListStatusEnumMinus2"
+  | "MKV.externalPopulationImpactOnRedListStatusEnumPlus1"
+  | "MKV.externalPopulationImpactOnRedListStatusEnumPlus2";
+export type PossiblyREEnum =
+  | ""
+  | "MX.iucnRE"
+  | "MX.iucnEW"
+  | "MX.iucnEX";
+export type ReasonForStatusChangeEnum =
+  | ""
+  | "MKV.reasonForStatusChangeGenuine"
+  | "MKV.reasonForStatusChangeGenuineBeforePreviousEvaluation"
+  | "MKV.reasonForStatusChangeChangesInCriteria"
+  | "MKV.reasonForStatusChangeMoreInformation"
+  | "MKV.reasonForStatusChangeChangesInTaxonomy"
+  | "MKV.reasonForStatusChangeError"
+  | "MKV.reasonForStatusChangeErroneousInformation"
+  | "MKV.reasonForStatusChangeOther";
+export type IucnStatuses =
+  | ""
+  | "MX.iucnEX"
+  | "MX.iucnEW"
+  | "MX.iucnRE"
+  | "MX.iucnCR"
+  | "MX.iucnEN"
+  | "MX.iucnVU"
+  | "MX.iucnNT"
+  | "MX.iucnLC"
+  | "MX.iucnDD"
+  | "MX.iucnNA"
+  | "MX.iucnNE";
+export type IucnStatuses1 =
+  | "MX.iucnEX"
+  | "MX.iucnEW"
+  | "MX.iucnRE"
+  | "MX.iucnCR"
+  | "MX.iucnEN"
+  | "MX.iucnVU"
+  | "MX.iucnNT"
+  | "MX.iucnLC"
+  | "MX.iucnDD"
+  | "MX.iucnNA"
+  | "MX.iucnNE";
+export type IucnStatuses2 =
+  | ""
+  | "MX.iucnEX"
+  | "MX.iucnEW"
+  | "MX.iucnRE"
+  | "MX.iucnCR"
+  | "MX.iucnEN"
+  | "MX.iucnVU"
+  | "MX.iucnNT"
+  | "MX.iucnLC"
+  | "MX.iucnDD"
+  | "MX.iucnNA"
+  | "MX.iucnNE";
+export type IucnStatuses3 =
+  | ""
+  | "MX.iucnEX"
+  | "MX.iucnEW"
+  | "MX.iucnRE"
+  | "MX.iucnCR"
+  | "MX.iucnEN"
+  | "MX.iucnVU"
+  | "MX.iucnNT"
+  | "MX.iucnLC"
+  | "MX.iucnDD"
+  | "MX.iucnNA"
+  | "MX.iucnNE";
+export type StateEnum =
+  | "MKV.stateReady"
+  | "MKV.stateReadyForComments"
+  | "MKV.stateStarted";
+export type IucnStatuses4 =
+  | ""
+  | "MX.iucnEX"
+  | "MX.iucnEW"
+  | "MX.iucnRE"
+  | "MX.iucnCR"
+  | "MX.iucnEN"
+  | "MX.iucnVU"
+  | "MX.iucnNT"
+  | "MX.iucnLC"
+  | "MX.iucnDD"
+  | "MX.iucnNA"
+  | "MX.iucnNE";
+export type IucnStatuses5 =
+  | ""
+  | "MX.iucnEX"
+  | "MX.iucnEW"
+  | "MX.iucnRE"
+  | "MX.iucnCR"
+  | "MX.iucnEN"
+  | "MX.iucnVU"
+  | "MX.iucnNT"
+  | "MX.iucnLC"
+  | "MX.iucnDD"
+  | "MX.iucnNA"
+  | "MX.iucnNE";
+export type IucnStatuses6 =
+  | ""
+  | "MX.iucnEX"
+  | "MX.iucnEW"
+  | "MX.iucnRE"
+  | "MX.iucnCR"
+  | "MX.iucnEN"
+  | "MX.iucnVU"
+  | "MX.iucnNT"
+  | "MX.iucnLC"
+  | "MX.iucnDD"
+  | "MX.iucnNA"
+  | "MX.iucnNE";
+export type IucnStatuses7 =
+  | ""
+  | "MX.iucnEX"
+  | "MX.iucnEW"
+  | "MX.iucnRE"
+  | "MX.iucnCR"
+  | "MX.iucnEN"
+  | "MX.iucnVU"
+  | "MX.iucnNT"
+  | "MX.iucnLC"
+  | "MX.iucnDD"
+  | "MX.iucnNA"
+  | "MX.iucnNE";
+export type IucnStatuses8 =
+  | ""
+  | "MX.iucnEX"
+  | "MX.iucnEW"
+  | "MX.iucnRE"
+  | "MX.iucnCR"
+  | "MX.iucnEN"
+  | "MX.iucnVU"
+  | "MX.iucnNT"
+  | "MX.iucnLC"
+  | "MX.iucnDD"
+  | "MX.iucnNA"
+  | "MX.iucnNE";
+export type TypeOfOccurrenceEnum =
+  | ""
+  | "MX.doesNotOccur"
+  | "MX.typeOfOccurrenceOccurs"
+  | "MX.typeOfOccurrenceStablePopulation"
+  | "MX.typeOfOccurrenceCommon"
+  | "MX.typeOfOccurrenceRare"
+  | "MX.typeOfOccurrenceVeryRare"
+  | "MX.typeOfOccurrenceVagrant"
+  | "MX.typeOfOccurrenceRareVagrant"
+  | "MX.typeOfOccurrenceMigrant"
+  | "MX.typeOfOccurrenceImport"
+  | "MX.typeOfOccurrenceAnthropogenic"
+  | "MX.typeOfOccurrenceNotEstablished"
+  | "MX.typeOfOccurrenceExtirpated"
+  | "MX.typeOfOccurrenceOldRecords"
+  | "MX.typeOfOccurrenceUncertain"
+  | "MX.typeOfOccurrenceSpontaneousOldResident"
+  | "MX.typeOfOccurrenceSpontaneousNewResident"
+  | "MX.typeOfOccurrenceAlienOldResident"
+  | "MX.typeOfOccurrenceSpontaneousNewEphemeral"
+  | "MX.typeOfOccurrenceSpontaneousNewEphemeralOnlyOld"
+  | "MX.typeOfOccurrenceSpontaneousOldFormerlyResidentPossiblyExtinct"
+  | "MX.typeOfOccurrenceSpontaneousOldFormerlyResidentExtinct"
+  | "MX.typeOfOccurrenceAlienNewEphemeral"
+  | "MX.typeOfOccurrenceAlienNewEphemeralOnlyold"
+  | "MX.typeOfOccurrenceAlienNewResident"
+  | "MX.typeOfOccurrenceAlienOldFormerlyResidentPossiblyExtinct"
+  | "MX.typeOfOccurrenceAlienOldExtinct"
+  | "MX.typeOfOccurrenceSmallDegreeCultivatedOrigin"
+  | "MX.typeOfOccurrenceNotableDegreeCultivatedOrigin"
+  | "MX.typeOfOccurrenceCompletelyCultivatedOrigin"
+  | "MX.typeOfOccurrenceOnlyCultivated"
+  | "MX.typeOfOccurrenceMaxShortDistanceEscape"
+  | "MX.typeOfOccurrenceMaxSoilImmigrant"
+  | "MX.typeOfOccurrenceMaxReplanted"
+  | "MX.typeOfOccurrenceMaxRelict"
+  | "MX.typeOfOccurrenceNotEvaluated"
+  | "MX.typeOfOccurrenceRegularBreeder"
+  | "MX.typeOfOccurrenceIrregularBreeder"
+  | "MX.typeOfOccurrencePassageMigrant"
+  | "MX.typeOfOccurrenceBirdLifeCategoryA"
+  | "MX.typeOfOccurrenceBirdLifeCategoryB"
+  | "MX.typeOfOccurrenceBirdLifeCategoryC"
+  | "MX.typeOfOccurrenceBirdLifeCategoryD"
+  | "MX.typeOfOccurrenceBirdLifeCategoryE"
+  | "MX.typeOfOccurrenceOccursBasedOnOccurrences";
 export interface IucnRedListEvaluation {
   "@context"?: string;
   id?: string;
@@ -181,11 +373,7 @@ export interface IucnRedListEvaluation {
   /**
    * <ul> <li><b>1. Tuntematon alkuperä.</b> Taksoni tunnetaan vain yhdestä tai muutamasta yksilöstä/ näyteestä, joiden löytöpaikkaa ei tunneta tai paikkatiedot ovat hyvin epätarkat, joten taksonin tilaa ei voida päätellä. </li><li><b>2. Taksonominen epävarmuus.</b> Tietojen vähäisyys voi olla seurausta taksonomisesta epävarmuudesta eli levinneisyydestä, ekologiasta, tilasta, ja uhkista on vähän tietoa, koska vähäinen näytteiden ja/ tai havaintojenmäärä johtuu siitä että taksonia edustaa poikkeava yksilö, hybridi, harvinainen värimuoto tai muun lajin alalajia. Se voi selittää tiedon puutetta yhtä todennäköisesti tai todennäköisemmin kuin se, että taksoni on aidosti harvinainen, uhanalainen tai riittämättömästi etsitty. Tästä on kuitenkin erotettava ne taksonit, joiden taksonomiassa/ taksonomisessa asemassa on jotain epäselvää: ne on joko arvioitava normaalisti tai jätettävä arvioinnin ulkopuolelle (NE) ja tästä arviointilistalle mukaan ottamisesta on päätettävä arvioinnin vaiheessa 1 (luku 2). </li><li><b>3. Puutteelliset tiedot.</b> Tiedot ovat riittämättömät arviointikriteerien soveltamiseksi eli kaikki muut syyt tietojen vähäisyyteen. </li></ul>
    */
-  ddReason?:
-    | ""
-    | "MKV.ddReasonIncompleteSpatialData"
-    | "MKV.ddReasonIncompleteTaxonomicData"
-    | "MKV.ddReasonIncompleteOtherData";
+  ddReason?: DdReasonEnum;
   ddReasonNotes?: string;
   decreaseDuringPeriod?: string;
   decreaseDuringPeriodNotes?: string;
@@ -208,15 +396,10 @@ export interface IucnRedListEvaluation {
   evaluationYear: string;
   /**
    * <p>Arvioinnin viimeisessä vaiheessa otetaan huomioon Suomen ulkopuolella olevien populaatioiden mahdollinen vaikutus arvioitavaan Suomen populaatioon. Tarvittaessa alennetaan tai korotetaan luokkaa sen perusteella. Luokkaa alennetaan, jos ulkopuolelta saatava täydennys voi vähentää lajin häviämisriskiä. Alennettu tai korotettu luokka on lajin lopullinen uhanalaisuusluokka. </p>
-   *
-   * <p>Luokka-kenttään asetetaan alennuksen tai korotuksen aiheuttama lopputulos. Tähän kenttään asetetaan tieto tehdystä alennuksesta tai korotuksesta.</p>
+
+<p>Luokka-kenttään asetetaan alennuksen tai korotuksen aiheuttama lopputulos. Tähän kenttään asetetaan tieto tehdystä alennuksesta tai korotuksesta.</p>
    */
-  externalPopulationImpactOnRedListStatus?:
-    | ""
-    | "MKV.externalPopulationImpactOnRedListStatusEnumMinus1"
-    | "MKV.externalPopulationImpactOnRedListStatusEnumMinus2"
-    | "MKV.externalPopulationImpactOnRedListStatusEnumPlus1"
-    | "MKV.externalPopulationImpactOnRedListStatusEnumPlus2";
+  externalPopulationImpactOnRedListStatus?: ExternalPopulationImpactOnRedListStatusEnum;
   externalPopulationImpactOnRedListStatusNotes?: string;
   /**
    * <p>Onko populaatio voimakkaasti pirstoutunut? = enemmän kuin puolet yksilöistä (tai enemmän kuin puolet asutusta elinympäristöstä) on pienissä eristyneissä laikuissa, jotka ovat </p> <li>liian pieniä ylläpitämään elinvoimaista populaatiota ja</li> <li>kaukana muista elinympäristölaikuista suhteessa lajin leviämiskykyyn.</li>
@@ -288,7 +471,7 @@ export interface IucnRedListEvaluation {
    */
   populationVaries?: boolean;
   populationVariesNotes?: string;
-  possiblyRE?: "" | "MX.iucnRE" | "MX.iucnEW" | "MX.iucnEX";
+  possiblyRE?: PossiblyREEnum;
   possiblyRENotes?: string;
   /**
    * <p>Lisämerkinnät:</p>
@@ -314,206 +497,43 @@ export interface IucnRedListEvaluation {
   publication?: string[];
   /**
    * <p><b>Aito muutos (uusi):</b> muutos johtuu aidosta muutoksesta, joka on tapahtunut edellisen arvioinnin jälkeen (populaation tila huonontunut/ parantunut tms.)</p>
-   * <p><b>Aito muutos (ennen edellistä arviointia):</b> luokkaa käytetään taksoneihin, jotka arvioidaan vähintään kolmatta kertaa ja joista lasketaan uhanalaisuusindeksi (Red List Index). Muutos on tapahtunut ennen edellistä arviointia, mutta ensimmäisen jälkeen. Muutos on havaittu uuden tiedon perusteella ja mikäli se olisi ollut käytettävissä aiemmin, uusi luokka olisi annettu jo aiemmalla kerralla (aiemmilla kerroilla). Muutoksen ajankohta on dokumentoitava.</p>
-   * <p><b>Kriteerien muutos:</b> kategorian muutos johtuu arviointikriteerien muutoksista.</p>
-   * <p><b>Uusi tieto:</b> muutos johtuu siitä, että taksonin statuksesta on saatu uutta tietoa/tieto on lisääntynyt; esim. populaatio on osoittautunut aiempaa käsitystä suuremmaksi tai pienemmäksi.</p>
-   * <p><b>Taksonominen muutos:</b> kategorian muutos johtuu taksonomisen aseman muuttumisesta; taksoni on vastikään jaettu kahtia (alalajista laji) tai yhdistetty toisen kanssa tai kuvattu uutena tieteelle tai taksoni ei ole enää validi (pidetään nykyisin hybridinä, varianttina tms.).</p>
-   * <p><b>Virhe:</b> luokka on väärä, koska arvioinnissa on aiemmin tapahtunut virhe.</p>
-   * <p><b>Virheellinen tieto:</b> aiempi luokka on valittu virheellisen tiedon vuoksi väärin (esim. määritysvirhe).</p>
-   * <p><b>Muu syy:</b> muutos johtuu muusta syystä kuin aiemmista ja/tai vaatii lisäselvitystä (esimerkiksi arvioijien suhtautuminen epävarmuuteen muuttuu tai arvioinnin tulkintaohjeet ovat muuttuneet.</p>
+<p><b>Aito muutos (ennen edellistä arviointia):</b> luokkaa käytetään taksoneihin, jotka arvioidaan vähintään kolmatta kertaa ja joista lasketaan uhanalaisuusindeksi (Red List Index). Muutos on tapahtunut ennen edellistä arviointia, mutta ensimmäisen jälkeen. Muutos on havaittu uuden tiedon perusteella ja mikäli se olisi ollut käytettävissä aiemmin, uusi luokka olisi annettu jo aiemmalla kerralla (aiemmilla kerroilla). Muutoksen ajankohta on dokumentoitava.</p>
+<p><b>Kriteerien muutos:</b> kategorian muutos johtuu arviointikriteerien muutoksista.</p>
+<p><b>Uusi tieto:</b> muutos johtuu siitä, että taksonin statuksesta on saatu uutta tietoa/tieto on lisääntynyt; esim. populaatio on osoittautunut aiempaa käsitystä suuremmaksi tai pienemmäksi.</p>
+<p><b>Taksonominen muutos:</b> kategorian muutos johtuu taksonomisen aseman muuttumisesta; taksoni on vastikään jaettu kahtia (alalajista laji) tai yhdistetty toisen kanssa tai kuvattu uutena tieteelle tai taksoni ei ole enää validi (pidetään nykyisin hybridinä, varianttina tms.).</p>
+<p><b>Virhe:</b> luokka on väärä, koska arvioinnissa on aiemmin tapahtunut virhe.</p>
+<p><b>Virheellinen tieto:</b> aiempi luokka on valittu virheellisen tiedon vuoksi väärin (esim. määritysvirhe).</p>
+<p><b>Muu syy:</b> muutos johtuu muusta syystä kuin aiemmista ja/tai vaatii lisäselvitystä (esimerkiksi arvioijien suhtautuminen epävarmuuteen muuttuu tai arvioinnin tulkintaohjeet ovat muuttuneet.</p>
    */
-  reasonForStatusChange?: (
-    | ""
-    | "MKV.reasonForStatusChangeGenuine"
-    | "MKV.reasonForStatusChangeGenuineBeforePreviousEvaluation"
-    | "MKV.reasonForStatusChangeChangesInCriteria"
-    | "MKV.reasonForStatusChangeMoreInformation"
-    | "MKV.reasonForStatusChangeChangesInTaxonomy"
-    | "MKV.reasonForStatusChangeError"
-    | "MKV.reasonForStatusChangeErroneousInformation"
-    | "MKV.reasonForStatusChangeOther"
-  )[];
+  reasonForStatusChange?: ReasonForStatusChangeEnum[];
   reasonForStatusChangeNotes?: string;
   /**
    * Tätä ei täytetä kuluvalle vuodelle. Muuttujaa käytetään ainoastaan tarvittaessa jälkikäteen uhanalaisuusindeksin laskemisessa. Jos tätä arviointia jälkikäteen halutaan korjata, arvioinnissa annettua luokkaa ei muuteta, vaan annetaan tässä korjattu luokka.
    */
-  redListIndexCorrection?:
-    | ""
-    | "MX.iucnEX"
-    | "MX.iucnEW"
-    | "MX.iucnRE"
-    | "MX.iucnCR"
-    | "MX.iucnEN"
-    | "MX.iucnVU"
-    | "MX.iucnNT"
-    | "MX.iucnLC"
-    | "MX.iucnDD"
-    | "MX.iucnNA"
-    | "MX.iucnNE";
+  redListIndexCorrection?: IucnStatuses;
   redListIndexCorrectionNotes?: string;
-  redListStatus:
-    | "MX.iucnEX"
-    | "MX.iucnEW"
-    | "MX.iucnRE"
-    | "MX.iucnCR"
-    | "MX.iucnEN"
-    | "MX.iucnVU"
-    | "MX.iucnNT"
-    | "MX.iucnLC"
-    | "MX.iucnDD"
-    | "MX.iucnNA"
-    | "MX.iucnNE";
+  redListStatus: IucnStatuses;
   redListStatusAccuracyNotes?: string;
-  redListStatusMax?:
-    | ""
-    | "MX.iucnEX"
-    | "MX.iucnEW"
-    | "MX.iucnRE"
-    | "MX.iucnCR"
-    | "MX.iucnEN"
-    | "MX.iucnVU"
-    | "MX.iucnNT"
-    | "MX.iucnLC"
-    | "MX.iucnDD"
-    | "MX.iucnNA"
-    | "MX.iucnNE";
-  redListStatusMin?:
-    | ""
-    | "MX.iucnEX"
-    | "MX.iucnEW"
-    | "MX.iucnRE"
-    | "MX.iucnCR"
-    | "MX.iucnEN"
-    | "MX.iucnVU"
-    | "MX.iucnNT"
-    | "MX.iucnLC"
-    | "MX.iucnDD"
-    | "MX.iucnNA"
-    | "MX.iucnNE";
+  redListStatusMax?: IucnStatuses;
+  redListStatusMin?: IucnStatuses;
   redListStatusNotes?: string;
   regionallyThreatenedNotes?: string;
   regionallyThreatenedPrivateNotes?: string;
   remarks?: string[];
   secondaryHabitat?: string[];
-  state: "MKV.stateReady" | "MKV.stateReadyForComments" | "MKV.stateStarted";
-  statusA?:
-    | ""
-    | "MX.iucnEX"
-    | "MX.iucnEW"
-    | "MX.iucnRE"
-    | "MX.iucnCR"
-    | "MX.iucnEN"
-    | "MX.iucnVU"
-    | "MX.iucnNT"
-    | "MX.iucnLC"
-    | "MX.iucnDD"
-    | "MX.iucnNA"
-    | "MX.iucnNE";
+  state: StateEnum;
+  statusA?: IucnStatuses;
   statusANotes?: string;
-  statusB?:
-    | ""
-    | "MX.iucnEX"
-    | "MX.iucnEW"
-    | "MX.iucnRE"
-    | "MX.iucnCR"
-    | "MX.iucnEN"
-    | "MX.iucnVU"
-    | "MX.iucnNT"
-    | "MX.iucnLC"
-    | "MX.iucnDD"
-    | "MX.iucnNA"
-    | "MX.iucnNE";
+  statusB?: IucnStatuses;
   statusBNotes?: string;
-  statusC?:
-    | ""
-    | "MX.iucnEX"
-    | "MX.iucnEW"
-    | "MX.iucnRE"
-    | "MX.iucnCR"
-    | "MX.iucnEN"
-    | "MX.iucnVU"
-    | "MX.iucnNT"
-    | "MX.iucnLC"
-    | "MX.iucnDD"
-    | "MX.iucnNA"
-    | "MX.iucnNE";
+  statusC?: IucnStatuses;
   statusCNotes?: string;
-  statusD?:
-    | ""
-    | "MX.iucnEX"
-    | "MX.iucnEW"
-    | "MX.iucnRE"
-    | "MX.iucnCR"
-    | "MX.iucnEN"
-    | "MX.iucnVU"
-    | "MX.iucnNT"
-    | "MX.iucnLC"
-    | "MX.iucnDD"
-    | "MX.iucnNA"
-    | "MX.iucnNE";
+  statusD?: IucnStatuses;
   statusDNotes?: string;
-  statusE?:
-    | ""
-    | "MX.iucnEX"
-    | "MX.iucnEW"
-    | "MX.iucnRE"
-    | "MX.iucnCR"
-    | "MX.iucnEN"
-    | "MX.iucnVU"
-    | "MX.iucnNT"
-    | "MX.iucnLC"
-    | "MX.iucnDD"
-    | "MX.iucnNA"
-    | "MX.iucnNE";
+  statusE?: IucnStatuses;
   statusENotes?: string;
   taxonomicNotes?: string;
   threatNotes?: string;
-  typeOfOccurrenceInFinland?:
-    | ""
-    | "MX.doesNotOccur"
-    | "MX.typeOfOccurrenceOccurs"
-    | "MX.typeOfOccurrenceStablePopulation"
-    | "MX.typeOfOccurrenceCommon"
-    | "MX.typeOfOccurrenceRare"
-    | "MX.typeOfOccurrenceVeryRare"
-    | "MX.typeOfOccurrenceVagrant"
-    | "MX.typeOfOccurrenceRareVagrant"
-    | "MX.typeOfOccurrenceMigrant"
-    | "MX.typeOfOccurrenceImport"
-    | "MX.typeOfOccurrenceAnthropogenic"
-    | "MX.typeOfOccurrenceNotEstablished"
-    | "MX.typeOfOccurrenceExtirpated"
-    | "MX.typeOfOccurrenceOldRecords"
-    | "MX.typeOfOccurrenceUncertain"
-    | "MX.typeOfOccurrenceSpontaneousOldResident"
-    | "MX.typeOfOccurrenceSpontaneousNewResident"
-    | "MX.typeOfOccurrenceAlienOldResident"
-    | "MX.typeOfOccurrenceSpontaneousNewEphemeral"
-    | "MX.typeOfOccurrenceSpontaneousNewEphemeralOnlyOld"
-    | "MX.typeOfOccurrenceSpontaneousOldFormerlyResidentPossiblyExtinct"
-    | "MX.typeOfOccurrenceSpontaneousOldFormerlyResidentExtinct"
-    | "MX.typeOfOccurrenceAlienNewEphemeral"
-    | "MX.typeOfOccurrenceAlienNewEphemeralOnlyold"
-    | "MX.typeOfOccurrenceAlienNewResident"
-    | "MX.typeOfOccurrenceAlienOldFormerlyResidentPossiblyExtinct"
-    | "MX.typeOfOccurrenceAlienOldExtinct"
-    | "MX.typeOfOccurrenceSmallDegreeCultivatedOrigin"
-    | "MX.typeOfOccurrenceNotableDegreeCultivatedOrigin"
-    | "MX.typeOfOccurrenceCompletelyCultivatedOrigin"
-    | "MX.typeOfOccurrenceOnlyCultivated"
-    | "MX.typeOfOccurrenceMaxShortDistanceEscape"
-    | "MX.typeOfOccurrenceMaxSoilImmigrant"
-    | "MX.typeOfOccurrenceMaxReplanted"
-    | "MX.typeOfOccurrenceMaxRelict"
-    | "MX.typeOfOccurrenceNotEvaluated"
-    | "MX.typeOfOccurrenceRegularBreeder"
-    | "MX.typeOfOccurrenceIrregularBreeder"
-    | "MX.typeOfOccurrencePassageMigrant"
-    | "MX.typeOfOccurrenceBirdLifeCategoryA"
-    | "MX.typeOfOccurrenceBirdLifeCategoryB"
-    | "MX.typeOfOccurrenceBirdLifeCategoryC"
-    | "MX.typeOfOccurrenceBirdLifeCategoryD"
-    | "MX.typeOfOccurrenceBirdLifeCategoryE"
-    | "MX.typeOfOccurrenceOccursBasedOnOccurrences";
+  typeOfOccurrenceInFinland?: TypeOfOccurrenceEnum;
   typeOfOccurrenceInFinlandNotes?: string;
 }

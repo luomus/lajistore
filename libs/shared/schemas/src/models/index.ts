@@ -1,4 +1,4 @@
-export * from './list-response';
+
 import { BibliographicResource } from './BibliographicResource'
 export type { BibliographicResource }
 import { Concept } from './Concept'
