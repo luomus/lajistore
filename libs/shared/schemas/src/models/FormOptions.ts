@@ -23,7 +23,8 @@ export type ResultServiceTypeEnum =
   | "MHL.resultServiceTypeWinterBirdCount"
   | "MHL.resultServiceTypeSykeInsectProjects"
   | "MHL.resultServiceTypeInvasiveControl"
-  | "MHL.resultServiceTypeCompleteLists";
+  | "MHL.resultServiceTypeCompleteLists"
+  | "MHL.resultServiceTypeBirdCount";
 export type ViewerTypeEnum =
   | ""
   | "MHL.viewerTypeLineTransect"

@@ -25,7 +25,8 @@ export enum ResultServiceTypeEnum {
   "resultServiceTypeWinterBirdCount" = "MHL.resultServiceTypeWinterBirdCount",
   "resultServiceTypeSykeInsectProjects" = "MHL.resultServiceTypeSykeInsectProjects",
   "resultServiceTypeInvasiveControl" = "MHL.resultServiceTypeInvasiveControl",
-  "resultServiceTypeCompleteLists" = "MHL.resultServiceTypeCompleteLists"
+  "resultServiceTypeCompleteLists" = "MHL.resultServiceTypeCompleteLists",
+  "resultServiceTypeBirdCount" = "MHL.resultServiceTypeBirdCount"
 }
 export enum ViewerTypeEnum {
   "empty" = "",

@@ -9430,7 +9430,8 @@
             "MHL.resultServiceTypeWinterBirdCount",
             "MHL.resultServiceTypeSykeInsectProjects",
             "MHL.resultServiceTypeInvasiveControl",
-            "MHL.resultServiceTypeCompleteLists"
+            "MHL.resultServiceTypeCompleteLists",
+            "MHL.resultServiceTypeBirdCount"
           ],
           "enumNames": [
             "",
@@ -9440,7 +9441,8 @@
             "MHL.resultServiceTypeWinterBirdCount",
             "MHL.resultServiceTypeSykeInsectProjects",
             "MHL.resultServiceTypeInvasiveControl",
-            "MHL.resultServiceTypeCompleteLists"
+            "MHL.resultServiceTypeCompleteLists",
+            "MHL.resultServiceTypeBirdCount"
           ],
           "range": "MHL.resultServiceTypeEnum",
           "subject": "MHL.resultServiceType",
