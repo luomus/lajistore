@@ -151,6 +151,12 @@ import { TaxonInteraction } from './TaxonInteraction'
 export type { TaxonInteraction }
 import { TaxonSet } from './TaxonSet'
 export type { TaxonSet }
+import { Trait } from './Trait'
+export type { Trait }
+import { TraitEnumValue } from './TraitEnumValue'
+export type { TraitEnumValue }
+import { TraitGroup } from './TraitGroup'
+export type { TraitGroup }
 import { Transaction } from './Transaction'
 export type { Transaction }
 import { TransactionEvent } from './TransactionEvent'
@@ -167,6 +173,8 @@ import { UnitFact } from './UnitFact'
 export type { UnitFact }
 import { UnitGathering } from './UnitGathering'
 export type { UnitGathering }
+import { UnitOfMeasurement } from './UnitOfMeasurement'
+export type { UnitOfMeasurement }
 import { Validator } from './Validator'
 export type { Validator }
 import { Video } from './Video'

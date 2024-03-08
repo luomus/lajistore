@@ -62,6 +62,17 @@
       "description": "Unofficial abbreviation (or acronym) for this collection",
       "title": "Unofficial abbreviation"
     },
+    "additionalIdentifier": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "MY.additionalIdentifier",
+      "title": "Identifier of this dataset/collection in other databases"
+    },
     "allowedForDwStatistics": {
       "type": "boolean",
       "range": "xsd:boolean",
@@ -374,6 +385,12 @@
       "subject": "MY.digitizedSize",
       "description": "How many percent of the collection is in digital form, e.g. in a database or Excel file? Fill in approximate number, describe more in notes if necessary.",
       "title": "% digitized (approx.)"
+    },
+    "doi": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.doi",
+      "title": "DOI provided by FinBIF"
     },
     "downloadRequestHandler": {
       "type": "array",

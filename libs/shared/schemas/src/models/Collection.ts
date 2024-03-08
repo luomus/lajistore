@@ -75,6 +75,7 @@ export interface Collection {
    * Unofficial abbreviation (or acronym) for this collection
    */
   abbreviation?: string;
+  additionalIdentifier?: string[];
   /**
    * Admin field. Is it allowed to use collection with data warehouse /statistic endpoints.
    */
@@ -187,6 +188,7 @@ export interface Collection {
    * How many percent of the collection is in digital form, e.g. in a database or Excel file? Fill in approximate number, describe more in notes if necessary.
    */
   digitizedSize?: string;
+  doi?: string;
   /**
    * Admin field. The identifier of the person responsible for handling requests for restricted data for this set (typically same person who's responsible for the collection)
    */

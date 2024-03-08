@@ -37,6 +37,11 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "additionalIdentifier": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "allowedForDwStatistics": {
         "type": "boolean"
       },
@@ -253,6 +258,11 @@
         }
       },
       "digitizedSize": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "doi": {
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"
