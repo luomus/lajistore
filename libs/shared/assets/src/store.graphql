@@ -7822,9 +7822,6 @@ type FormOptions {
   # Form admin can lock documents. Locked documents can't be edited
   adminLockable: Boolean
 
-  # Form users can create new named places for the form
-  allowAddingPublicNamedPlaces: Boolean
-
   # Allows usage in spreadsheet upload component
   allowExcel: Boolean
 
@@ -7834,9 +7831,6 @@ type FormOptions {
   # Label for the cancel button at the form footer
   cancelLabel: String
   context: String
-
-  # The latest document is copied to named place's prepopulatedDocument. if documents date is same or after the current prepopulated document's date, or if prepopulated document doesn't have date. Date is checked from gatheringEvent or from gatherings
-  copyLatestDocumentToNamedPlace: Boolean
 
   # Has dataset about page
   dataset: Boolean
@@ -7862,15 +7856,6 @@ type FormOptions {
 
   # Excludes from the Vihko excel tools
   excludeFromGlobalExcel: Boolean
-
-  # The named place UI allows filtering by bird association area
-  filterNamedPlacesByBirdAssociationArea: Boolean
-
-  # The named place UI allows filtering by municipality
-  filterNamedPlacesByMunicipality: Boolean
-
-  # The named place UI allows filtering by tags
-  filterNamedPlacesByTags: Boolean
   footer: FormFooter
 
   # Label for the own submissions list at the header of document form
@@ -24384,9 +24369,6 @@ input FormOptionsInput {
   # Form admin can lock documents. Locked documents can't be edited
   adminLockable: Boolean
 
-  # Form users can create new named places for the form
-  allowAddingPublicNamedPlaces: Boolean
-
   # Allows usage in spreadsheet upload component
   allowExcel: Boolean
 
@@ -24396,9 +24378,6 @@ input FormOptionsInput {
   # Label for the cancel button at the form footer
   cancelLabel: String
   context: String
-
-  # The latest document is copied to named place's prepopulatedDocument. if documents date is same or after the current prepopulated document's date, or if prepopulated document doesn't have date. Date is checked from gatheringEvent or from gatherings
-  copyLatestDocumentToNamedPlace: Boolean
 
   # Has dataset about page
   dataset: Boolean
@@ -24424,15 +24403,6 @@ input FormOptionsInput {
 
   # Excludes from the Vihko excel tools
   excludeFromGlobalExcel: Boolean
-
-  # The named place UI allows filtering by bird association area
-  filterNamedPlacesByBirdAssociationArea: Boolean
-
-  # The named place UI allows filtering by municipality
-  filterNamedPlacesByMunicipality: Boolean
-
-  # The named place UI allows filtering by tags
-  filterNamedPlacesByTags: Boolean
   footer: FormFooterInput
 
   # Label for the own submissions list at the header of document form

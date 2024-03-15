@@ -50,9 +50,6 @@
       "adminLockable": {
         "type": "boolean"
       },
-      "allowAddingPublicNamedPlaces": {
-        "type": "boolean"
-      },
       "allowExcel": {
         "type": "boolean"
       },
@@ -63,9 +60,6 @@
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"
-      },
-      "copyLatestDocumentToNamedPlace": {
-        "type": "boolean"
       },
       "dataset": {
         "type": "boolean"
@@ -96,15 +90,6 @@
         "type": "boolean"
       },
       "excludeFromGlobalExcel": {
-        "type": "boolean"
-      },
-      "filterNamedPlacesByBirdAssociationArea": {
-        "type": "boolean"
-      },
-      "filterNamedPlacesByMunicipality": {
-        "type": "boolean"
-      },
-      "filterNamedPlacesByTags": {
         "type": "boolean"
       },
       "footer": {

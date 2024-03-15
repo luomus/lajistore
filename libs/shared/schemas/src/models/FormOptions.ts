@@ -43,10 +43,6 @@ export interface FormOptions {
    */
   adminLockable?: boolean;
   /**
-   * Form users can create new named places for the form
-   */
-  allowAddingPublicNamedPlaces?: boolean;
-  /**
    * Allows usage in spreadsheet upload component
    */
   allowExcel?: boolean;
@@ -58,10 +54,6 @@ export interface FormOptions {
    * Label for the cancel button at the form footer
    */
   cancelLabel?: string;
-  /**
-   * The latest document is copied to named place's prepopulatedDocument. if documents date is same or after the current prepopulated document's date, or if prepopulated document doesn't have date. Date is checked from gatheringEvent or from gatherings
-   */
-  copyLatestDocumentToNamedPlace?: boolean;
   /**
    * Has dataset about page
    */
@@ -95,18 +87,6 @@ export interface FormOptions {
    * Excludes from the Vihko excel tools
    */
   excludeFromGlobalExcel?: boolean;
-  /**
-   * The named place UI allows filtering by bird association area
-   */
-  filterNamedPlacesByBirdAssociationArea?: boolean;
-  /**
-   * The named place UI allows filtering by municipality
-   */
-  filterNamedPlacesByMunicipality?: boolean;
-  /**
-   * The named place UI allows filtering by tags
-   */
-  filterNamedPlacesByTags?: boolean;
   /**
    * Options for footer of the observation form
    */
