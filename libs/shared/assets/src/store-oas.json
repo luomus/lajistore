@@ -61744,6 +61744,7 @@
           },
           "awayCount": {
             "type": "integer",
+            "minimum": 0,
             "title": "Included in/On loan count"
           },
           "awayIDs": {
@@ -61777,6 +61778,7 @@
           },
           "damagedCount": {
             "type": "integer",
+            "minimum": 0,
             "title": "Damaged count"
           },
           "damagedIDs": {
@@ -61901,6 +61903,7 @@
           },
           "missingCount": {
             "type": "integer",
+            "minimum": 0,
             "title": "Missing count"
           },
           "missingIDs": {
@@ -61959,6 +61962,7 @@
           },
           "returnedCount": {
             "type": "integer",
+            "minimum": 0,
             "title": "Returned count"
           },
           "returnedIDs": {

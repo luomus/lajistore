@@ -63,7 +63,8 @@
     },
     "awayCount": {
       "type": "integer",
-      "range": "xsd:integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
       "subject": "HRX.awayCount",
       "title": "Included in/On loan count"
     },
@@ -108,7 +109,8 @@
     },
     "damagedCount": {
       "type": "integer",
-      "range": "xsd:integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
       "subject": "HRX.damagedCount",
       "title": "Damaged count"
     },
@@ -285,7 +287,8 @@
     },
     "missingCount": {
       "type": "integer",
-      "range": "xsd:integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
       "subject": "HRX.missingCount",
       "title": "Missing count"
     },
@@ -465,7 +468,8 @@
     },
     "returnedCount": {
       "type": "integer",
-      "range": "xsd:integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
       "subject": "HRX.returnedCount",
       "title": "Returned count"
     },
