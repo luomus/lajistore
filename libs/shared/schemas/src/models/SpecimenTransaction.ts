@@ -19,6 +19,11 @@ export type GeneticResourceTypeEnum =
   | "HRX.geneticResourceTypeMicrobe"
   | "HRX.geneticResourceTypeSoil"
   | "HRX.geneticResourceTypeAqua";
+export type ResourceImportedEnum =
+  | ""
+  | "HRX.resourceImportedGeneticResources"
+  | "HRX.resourceImportedTraditionalKnowledge"
+  | "HRX.resourceImportedBoth";
 export type StatusEnum =
   | ""
   | "HRX.statusInProcess"
@@ -186,7 +191,7 @@ export interface SpecimenTransaction {
   /**
    * Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
    */
-  resourceImported?: string;
+  resourceImported?: ResourceImportedEnum;
   returnedCount?: number;
   returnedIDs?: string[];
   /**

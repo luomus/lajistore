@@ -461,7 +461,19 @@
     },
     "resourceImported": {
       "type": "string",
-      "range": "xsd:string",
+      "enum": [
+        "",
+        "HRX.resourceImportedGeneticResources",
+        "HRX.resourceImportedTraditionalKnowledge",
+        "HRX.resourceImportedBoth"
+      ],
+      "enumNames": [
+        "",
+        "Genetic resources",
+        "Traditional knowledge",
+        "Both"
+      ],
+      "range": "HRX.resourceImportedEnum",
       "subject": "HRX.resourceImported",
       "description": "Are you importing genetic resources, traditional knowledge associated to genetic resources or both?",
       "title": "What are you importing?"

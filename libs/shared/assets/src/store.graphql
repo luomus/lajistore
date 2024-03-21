@@ -9909,7 +9909,7 @@ type SpecimenTransaction2 {
   requestReceived: String
 
   # Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
-  resourceImported: String
+  resourceImported: ResourceImported
   returnedCount: Int
   returnedIDs: [String]
 
@@ -9942,6 +9942,13 @@ enum GeneticResourceType {
   HRX_GENETICRESOURCETYPEMICROBE
   HRX_GENETICRESOURCETYPESOIL
   HRX_GENETICRESOURCETYPEAQUA
+}
+
+enum ResourceImported {
+  _
+  HRX_RESOURCEIMPORTEDGENETICRESOURCES
+  HRX_RESOURCEIMPORTEDTRADITIONALKNOWLEDGE
+  HRX_RESOURCEIMPORTEDBOTH
 }
 
 enum TransactionStatus {
@@ -10835,7 +10842,7 @@ type Transaction2 {
   receiptReturned: String
 
   # Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
-  resourceImported: ResourceImported
+  resourceImported: WhatAreYouImporting
   returned: [String]
   returnedOther: Int
   sentParcels: MultiLang
@@ -10892,7 +10899,7 @@ enum LocalDepartment {
   HRA_LOCALDEPARTMENTVASCULARPLANTS
 }
 
-enum ResourceImported {
+enum WhatAreYouImporting {
   _
   HRA_RESOURCEIMPORTEDGENETICRESOURCES
   HRA_RESOURCEIMPORTEDTRADITIONALKNOWLEDGE
@@ -25674,7 +25681,7 @@ input SpecimenTransaction2Input {
   requestReceived: String
 
   # Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
-  resourceImported: String
+  resourceImported: ResourceImported
   returnedCount: Int
   returnedIDs: [String]
 
@@ -26095,7 +26102,7 @@ input Transaction2Input {
   receiptReturned: String
 
   # Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
-  resourceImported: ResourceImported
+  resourceImported: WhatAreYouImporting
   returned: [String]
   returnedOther: Int
   sentParcels: MultiLangInput

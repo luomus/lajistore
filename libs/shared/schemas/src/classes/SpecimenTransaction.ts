@@ -21,6 +21,12 @@ export enum GeneticResourceTypeEnum {
   "geneticResourceTypeSoil" = "HRX.geneticResourceTypeSoil",
   "geneticResourceTypeAqua" = "HRX.geneticResourceTypeAqua"
 }
+export enum ResourceImportedEnum {
+  "empty" = "",
+  "resourceImportedGeneticResources" = "HRX.resourceImportedGeneticResources",
+  "resourceImportedTraditionalKnowledge" = "HRX.resourceImportedTraditionalKnowledge",
+  "resourceImportedBoth" = "HRX.resourceImportedBoth"
+}
 export enum StatusEnum {
   "empty" = "",
   "statusInProcess" = "HRX.statusInProcess",
@@ -192,7 +198,7 @@ export class SpecimenTransaction {
   /**
    * Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
    */
-  resourceImported?: string;
+  resourceImported?: ResourceImportedEnum;
   returnedCount?: number;
   returnedIDs?: string[];
   /**

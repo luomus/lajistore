@@ -61957,6 +61957,12 @@
           },
           "resourceImported": {
             "type": "string",
+            "enum": [
+              "",
+              "HRX.resourceImportedGeneticResources",
+              "HRX.resourceImportedTraditionalKnowledge",
+              "HRX.resourceImportedBoth"
+            ],
             "description": "Are you importing genetic resources, traditional knowledge associated to genetic resources or both?",
             "title": "What are you importing?"
           },

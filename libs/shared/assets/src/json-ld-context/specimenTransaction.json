@@ -193,7 +193,7 @@
     },
     "resourceImported": {
       "@id": "default:HRX.resourceImported",
-      "@type": "xsd:string"
+      "@type": "@id"
     },
     "returnedCount": {
       "@id": "default:HRX.returnedCount",
