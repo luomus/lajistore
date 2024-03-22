@@ -8791,7 +8791,7 @@
         "MHL.resultServiceTypeSykeInsectProjects",
         "MHL.resultServiceTypeInvasiveControl",
         "MHL.resultServiceTypeCompleteLists",
-        "MHL.resultServiceTypeBirdCount"
+        "MHL.resultServiceTypeWaterBirdCount"
       ],
       "enumNames": [
         "",
@@ -8802,7 +8802,7 @@
         "MHL.resultServiceTypeSykeInsectProjects",
         "MHL.resultServiceTypeInvasiveControl",
         "MHL.resultServiceTypeCompleteLists",
-        "MHL.resultServiceTypeBirdCount"
+        "MHL.resultServiceTypeWaterBirdCount"
       ],
       "range": "MHL.resultServiceTypeEnum",
       "subject": "MHL.resultServiceType",

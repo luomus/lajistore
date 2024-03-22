@@ -55879,7 +55879,7 @@
               "MHL.resultServiceTypeSykeInsectProjects",
               "MHL.resultServiceTypeInvasiveControl",
               "MHL.resultServiceTypeCompleteLists",
-              "MHL.resultServiceTypeBirdCount"
+              "MHL.resultServiceTypeWaterBirdCount"
             ],
             "title": "Type of result service"
           },
