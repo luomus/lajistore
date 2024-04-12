@@ -61930,7 +61930,7 @@
             "type": "string",
             "format": "date",
             "description": "When the transaction was sent out from us",
-            "title": "Outgoing loan sent"
+            "title": "Outgoing transaction sent"
           },
           "permits": {
             "type": "array",
@@ -61986,7 +61986,8 @@
               "",
               "HRX.statusInProcess",
               "HRX.statusOutstanding",
-              "HRX.statusClosed"
+              "HRX.statusClosed",
+              "HRX.statusOnLoan"
             ],
             "description": "Whether the transaction is closed, outstanding or in process.",
             "title": "Transaction status"
@@ -62015,10 +62016,10 @@
             "type": "string",
             "enum": [
               "HRX.typeLoanIncoming",
-              "HRX.typeGiftIncoming",
-              "HRX.typeExchangeIncoming",
               "HRX.typeLoanOutgoing",
+              "HRX.typeGiftIncoming",
               "HRX.typeGiftOutgoing",
+              "HRX.typeExchangeIncoming",
               "HRX.typeExchangeOutgoing",
               "HRX.typeFieldCollection",
               "HRX.typeImportNotice",

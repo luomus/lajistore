@@ -28,7 +28,8 @@ export type StatusEnum =
   | ""
   | "HRX.statusInProcess"
   | "HRX.statusOutstanding"
-  | "HRX.statusClosed";
+  | "HRX.statusClosed"
+  | "HRX.statusOnLoan";
 export type TransportMethodEnum =
   | ""
   | "HRX.transportMethodPriority"
@@ -39,10 +40,10 @@ export type TransportMethodEnum =
   | "HRX.transportMethodImage";
 export type TypeEnum =
   | "HRX.typeLoanIncoming"
-  | "HRX.typeGiftIncoming"
-  | "HRX.typeExchangeIncoming"
   | "HRX.typeLoanOutgoing"
+  | "HRX.typeGiftIncoming"
   | "HRX.typeGiftOutgoing"
+  | "HRX.typeExchangeIncoming"
   | "HRX.typeExchangeOutgoing"
   | "HRX.typeFieldCollection"
   | "HRX.typeImportNotice"

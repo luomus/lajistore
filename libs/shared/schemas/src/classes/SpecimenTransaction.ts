@@ -31,7 +31,8 @@ export enum StatusEnum {
   "empty" = "",
   "statusInProcess" = "HRX.statusInProcess",
   "statusOutstanding" = "HRX.statusOutstanding",
-  "statusClosed" = "HRX.statusClosed"
+  "statusClosed" = "HRX.statusClosed",
+  "statusOnLoan" = "HRX.statusOnLoan"
 }
 export enum TransportMethodEnum {
   "empty" = "",
@@ -44,10 +45,10 @@ export enum TransportMethodEnum {
 }
 export enum TypeEnum {
   "typeLoanIncoming" = "HRX.typeLoanIncoming",
-  "typeGiftIncoming" = "HRX.typeGiftIncoming",
-  "typeExchangeIncoming" = "HRX.typeExchangeIncoming",
   "typeLoanOutgoing" = "HRX.typeLoanOutgoing",
+  "typeGiftIncoming" = "HRX.typeGiftIncoming",
   "typeGiftOutgoing" = "HRX.typeGiftOutgoing",
+  "typeExchangeIncoming" = "HRX.typeExchangeIncoming",
   "typeExchangeOutgoing" = "HRX.typeExchangeOutgoing",
   "typeFieldCollection" = "HRX.typeFieldCollection",
   "typeImportNotice" = "HRX.typeImportNotice",
