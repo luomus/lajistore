@@ -56704,6 +56704,19 @@
             "description": "Longitude. For western longitudes, use negative value.",
             "title": "Lon (E)"
           },
+          "mothSamplingMethod": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.mothSamplingMethodJA500",
+              "MY.mothSamplingMethodLHG",
+              "MY.mothSamplingMethodLS",
+              "MY.mothSamplingMethodMAARY",
+              "MY.mothSamplingMethodPR125",
+              "MY.mothSamplingMethodPR250"
+            ],
+            "title": "Moth sampling method"
+          },
           "municipality": {
             "type": "string",
             "description": "Municipality, commune, town, city or civil parish",

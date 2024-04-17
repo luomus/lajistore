@@ -220,6 +220,14 @@ export type InvasiveControlMethodsEnum =
   | "MY.invasiveControlMethodsChemical"
   | "MY.invasiveControlMethodsBiological"
   | "MY.invasiveControlMethodsOther";
+export type MothSamplingMethodEnum =
+  | ""
+  | "MY.mothSamplingMethodJA500"
+  | "MY.mothSamplingMethodLHG"
+  | "MY.mothSamplingMethodLS"
+  | "MY.mothSamplingMethodMAARY"
+  | "MY.mothSamplingMethodPR125"
+  | "MY.mothSamplingMethodPR250";
 export type PredominantTreeEnum =
   | ""
   | "MX.37819"
@@ -464,6 +472,7 @@ export interface Gathering {
    * Longitude. For western longitudes, use negative value.
    */
   longitude?: string;
+  mothSamplingMethod?: MothSamplingMethodEnum;
   /**
    * Municipality, commune, town, city or civil parish
    */

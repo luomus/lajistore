@@ -230,6 +230,15 @@ export enum InvasiveControlMethodsEnum {
   "invasiveControlMethodsBiological" = "MY.invasiveControlMethodsBiological",
   "invasiveControlMethodsOther" = "MY.invasiveControlMethodsOther"
 }
+export enum MothSamplingMethodEnum {
+  "empty" = "",
+  "mothSamplingMethodJA500" = "MY.mothSamplingMethodJA500",
+  "mothSamplingMethodLHG" = "MY.mothSamplingMethodLHG",
+  "mothSamplingMethodLS" = "MY.mothSamplingMethodLS",
+  "mothSamplingMethodMAARY" = "MY.mothSamplingMethodMAARY",
+  "mothSamplingMethodPR125" = "MY.mothSamplingMethodPR125",
+  "mothSamplingMethodPR250" = "MY.mothSamplingMethodPR250"
+}
 export enum PredominantTreeEnum {
   "empty" = "",
   "MX.37819" = "MX.37819",
@@ -477,6 +486,7 @@ export class Gathering {
    * Longitude. For western longitudes, use negative value.
    */
   longitude?: string;
+  mothSamplingMethod?: MothSamplingMethodEnum;
   /**
    * Municipality, commune, town, city or civil parish
    */

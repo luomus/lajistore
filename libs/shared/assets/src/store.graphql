@@ -6247,6 +6247,7 @@ type Gathering {
 
   # Longitude. For western longitudes, use negative value.
   longitude: String
+  mothSamplingMethod: MothSamplingMethod
 
   # Municipality, commune, town, city or civil parish
   municipality: String
@@ -6530,6 +6531,16 @@ enum InvasiveControlMethodsListItem {
   MY_INVASIVECONTROLMETHODSCHEMICAL
   MY_INVASIVECONTROLMETHODSBIOLOGICAL
   MY_INVASIVECONTROLMETHODSOTHER
+}
+
+enum MothSamplingMethod {
+  _
+  MY_MOTHSAMPLINGMETHODJA500
+  MY_MOTHSAMPLINGMETHODLHG
+  MY_MOTHSAMPLINGMETHODLS
+  MY_MOTHSAMPLINGMETHODMAARY
+  MY_MOTHSAMPLINGMETHODPR125
+  MY_MOTHSAMPLINGMETHODPR250
 }
 
 enum PredominantTree {
@@ -23862,6 +23873,7 @@ input GatheringInput {
 
   # Longitude. For western longitudes, use negative value.
   longitude: String
+  mothSamplingMethod: MothSamplingMethod
 
   # Municipality, commune, town, city or civil parish
   municipality: String

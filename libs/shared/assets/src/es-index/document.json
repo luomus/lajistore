@@ -1449,6 +1449,10 @@
             "ignore_above": 200,
             "normalizer": "useLowercase"
           },
+          "mothSamplingMethod": {
+            "type": "keyword",
+            "ignore_above": 200
+          },
           "municipality": {
             "type": "keyword",
             "ignore_above": 200,
