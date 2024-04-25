@@ -2015,12 +2015,12 @@
       ],
       "enumNames": [
         "",
-        "MY.mothSamplingMethodJA500",
-        "MY.mothSamplingMethodLHG",
-        "MY.mothSamplingMethodLS",
-        "MY.mothSamplingMethodMAARY",
-        "MY.mothSamplingMethodPR125",
-        "MY.mothSamplingMethodPR250"
+        "Valorysä Jalas 500W (Ja 500)",
+        "Valorysä 125W Hg-lamppu (LHg)",
+        "Valorysä 160W sekavalo (LS)",
+        "Maarysä 125W (MaaRy)",
+        "Pakastinrysä 125W Hg-lamppu (PR125)",
+        "Pakastinrysä 250W Hg-lamppu (PR250)"
       ],
       "range": "MY.mothSamplingMethodEnum",
       "subject": "MY.mothSamplingMethod",
