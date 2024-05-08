@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "../../../dist/libs/schema-cache",
+    "declaration": true,
+    "types": ["node"],
+    "target": "es6"
+  },
+  "include": ["**/**/*.ts"],
+  "exclude": ["**/*.spec.ts"]
+}

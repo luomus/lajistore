@@ -9,7 +9,7 @@ import { StoreObject } from '@luomus/shared/models';
 @Injectable()
 export class ValidatorService {
   private readonly ajv: Ajv;
-  private validators: { [type: string]: ValidateFunction<any> } = {};
+  private validators: { [type: string]: { schemaHash?: string, validator: ValidateFunction<any> } } = {};
 
   constructor(private jsonSchema: JsonSchemaService) {
     this.ajv = new Ajv({
@@ -39,13 +39,23 @@ export class ValidatorService {
   }
 
   private async getValidator(type: string): Promise<any> {
-    const normaliseType = UtilityService.normalize(type);
-    if (!this.validators[normaliseType]) {
-      const schema = await this.jsonSchema.getSchema(type);
-      this.validators[normaliseType] = await this.ajv.compileAsync(
-        JsonSchemaService.removeExtraProperties(schema)
-      );
+    const hash = await this.jsonSchema.getSchemaHash(type);
+
+    if (this.validators[type] && (hash === undefined || hash === this.validators[type]?.schemaHash)) {
+      return this.validators[type].validator;
     }
-    return this.validators[normaliseType];
+
+    const schema = await this.jsonSchema.getSchema(type);
+
+    const validator = await this.ajv.compileAsync(
+      JsonSchemaService.removeExtraProperties(schema)
+    );
+
+    this.validators[type] = {
+      validator: validator,
+      schemaHash: hash
+    }
+
+    return this.validators[type].validator;
   }
 }

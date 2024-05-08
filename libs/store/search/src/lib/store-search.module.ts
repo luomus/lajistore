@@ -3,6 +3,7 @@ import { ElasticsearchModule } from '@nestjs/elasticsearch';
 import { StoreConfigModule, StoreConfigService } from '@luomus/store/config';
 import { StoreSharedModule } from '@luomus/store/shared';
 import { StoreSearchService } from './store-search.service';
+import { SchemaCacheModule } from '@luomus/store/schema-cache';
 
 @Module({
   providers: [StoreSearchService],
@@ -18,7 +19,8 @@ import { StoreSearchService } from './store-search.service';
         maxRetries: 7,
       }),
       inject: [StoreConfigService],
-    })
+    }),
+    SchemaCacheModule
   ]
 })
 export class StoreSearchModule {}

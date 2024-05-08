@@ -2,6 +2,14 @@ version: '3'
 
 services:
 
+  redis:
+    env_file:
+      - .env.staging
+    extends:
+      file: tools/docker/docker-compose.shared.yml
+      service: redis
+    command: sh -c 'redis-server --requirepass $${REDIS_PASSWORD}'
+
   rabbit:
     env_file:
       - .env.staging
@@ -23,6 +31,8 @@ services:
 
   store:
     depends_on:
+      redis:
+        condition: service_healthy
       rabbit:
         condition: service_healthy
       elastic:
@@ -77,4 +87,5 @@ services:
 volumes:
   elastic_data:
     driver: local
-
+  redis:
+    driver: local

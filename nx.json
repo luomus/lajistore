@@ -30,6 +30,7 @@
     "store-config": { "tags": ["scope:node-shared"] },
     "store-database": { "tags": ["scope:data"] },
     "store-search": { "tags": ["scope:data"] },
-    "store-shared": { "tags": ["scope:node-shared"] }
+    "store-shared": { "tags": ["scope:node-shared"] },
+    "schema-cache": { "tags": ["scope:shared"] }
   }
 }

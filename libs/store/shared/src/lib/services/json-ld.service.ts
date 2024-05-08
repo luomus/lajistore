@@ -3,6 +3,7 @@ import { JsonLdDocument } from 'jsonld';
 import { StoreConfigService } from '@luomus/store/config';
 import { FileService } from './file.service';
 import { UtilityService } from './utility.service';
+import { SchemaCacheService } from '@luomus/store/schema-cache';
 
 @Injectable()
 export class JsonLdService {
@@ -10,11 +11,17 @@ export class JsonLdService {
 
   constructor(
     private configService: StoreConfigService,
-    private fileService: FileService
+    private fileService: FileService,
+    private schemaCacheService: SchemaCacheService
   ) {}
 
   async getContext(type: string) {
     const name = UtilityService.normalize(type);
+
+    const jsonLd = await this.schemaCacheService.getCachedJsonLd(name);
+
+    if (jsonLd) return jsonLd;
+
     if (!this.schemes[name]) {
       this.schemes[name] = await this.fileService
         .readJsonFile<JsonLdDocument>(

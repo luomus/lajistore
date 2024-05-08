@@ -16,6 +16,8 @@ import { LinkUserCommand } from './commands/link-user.command'
 import { SplitDocumentCommand } from './commands/split-document.command'
 import { ConfigService } from './services/config.service';
 import { LajiApiService } from './services/laji-api.service'
+import { CacheCommand } from './commands/cache.command';
+import { SchemaCacheModule } from '@luomus/store/schema-cache';
 
 @Module({
   imports: [
@@ -25,10 +27,11 @@ import { LajiApiService } from './services/laji-api.service'
     StoreSharedModule,
     StoreSearchModule,
     TerminusModule,
+    SchemaCacheModule,
     HttpModule
   ],
   controllers: [],
-  providers: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand, ValidateCommand, LinkUserCommand, SplitDocumentCommand, ConfigService, LajiApiService],
-  exports: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand, ValidateCommand, LinkUserCommand, SplitDocumentCommand, ConfigService, LajiApiService]
+  providers: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand, ValidateCommand, LinkUserCommand, SplitDocumentCommand, ConfigService, LajiApiService, CacheCommand],
+  exports: [IndexCommand, UserCommand, GenerateCommand, JobCommand, StatusCommand, UndoCommand, ValidateCommand, LinkUserCommand, SplitDocumentCommand, ConfigService, LajiApiService, CacheCommand]
 })
 export class StoreCliModule {}

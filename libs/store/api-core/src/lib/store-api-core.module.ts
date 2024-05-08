@@ -11,9 +11,10 @@ import { graphqlHTTP } from 'express-graphql';
 import { ApiConfigService } from './services/api-config.service';
 import { StoreSearchModule } from '@luomus/store/search';
 import { StoreSharedModule } from '@luomus/store/shared';
+import { SchemaCacheModule } from '@luomus/store/schema-cache';
 
 @Module({
-  imports: [StoreCoreModule, StoreSearchModule, StoreSharedModule],
+  imports: [StoreCoreModule, StoreSearchModule, StoreSharedModule, SchemaCacheModule],
   providers: [ApiUtilService, ApiConfigService],
   exports: [ApiUtilService, ApiConfigService, StoreCoreModule, StoreSharedModule],
 })

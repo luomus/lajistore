@@ -17,7 +17,9 @@ import {
 import { RequestParams } from '@elastic/elasticsearch';
 import { ResponseError } from '@elastic/elasticsearch/lib/errors';
 import { FileService, UtilityService } from '@luomus/store/shared';
-import { map } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
+import { from, of } from 'rxjs';
+import { SchemaCacheService } from '@luomus/store/schema-cache';
 
 @Injectable()
 export class StoreSearchService extends HealthIndicator {
@@ -42,7 +44,8 @@ export class StoreSearchService extends HealthIndicator {
   constructor(
     private readonly configService: StoreConfigService,
     private readonly fileService: FileService,
-    private readonly es: ElasticsearchService
+    private readonly es: ElasticsearchService,
+    private readonly schemaCacheService: SchemaCacheService
   ) {
     super();
   }
@@ -370,18 +373,34 @@ export class StoreSearchService extends HealthIndicator {
   }
 
   private getAllTypes() {
-    const pattern = this.configService.get('JSON_FILENAME_PATTERN').replace('%name%', '');
-    return this.fileService.listFiles(this.configService.get('ES_INDEX_PATH')).pipe(
-      map(files => files.map(file => file.replace(pattern, '')))
-    ).toPromise();
+    return from(this.schemaCacheService.getCachedTypes()).pipe(
+      switchMap(data => {
+        if (data) {
+          return of(data);
+        } else {
+          const pattern = this.configService.get('JSON_FILENAME_PATTERN').replace('%name%', '');
+          return this.fileService.listFiles(this.configService.get('ES_INDEX_PATH')).pipe(
+            map(files => files.map(file => file.replace(pattern, '')))
+          );
+        }
+      })
+    ).toPromise()
   }
 
   private getMapping(type: string) {
-    return this.fileService.readJsonFile(
-      this.fileService.getFilename(
-        type,
-        this.configService.get('ES_INDEX_PATH')
-      )
+    return from(this.schemaCacheService.getCachedEsIndex(type)).pipe(
+      switchMap(data => {
+        if (data) {
+          return of(data);
+        } else {
+          return this.fileService.readJsonFile(
+            this.fileService.getFilename(
+              type,
+              this.configService.get('ES_INDEX_PATH')
+            )
+          );
+        }
+      })
     );
   }
 

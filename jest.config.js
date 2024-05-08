@@ -15,5 +15,6 @@ module.exports = {
     '<rootDir>/libs/store/database',
     '<rootDir>/libs/store/search',
     '<rootDir>/libs/store/shared',
+    '<rootDir>/libs/store/schema-cache',
   ],
 };

@@ -5,6 +5,7 @@ import { Observable, of } from 'rxjs';
 import { StoreConfigService } from '@luomus/store/config';
 import { FileService } from './file.service';
 import { UtilityService } from './utility.service';
+import { SchemaCacheService } from '@luomus/store/schema-cache';
 
 import JsonPatch from '../../../../../shared/assets/src/schemas/json-patch.json';
 import Geometry from '../../../../../shared/assets/src/schemas/geometry.json';
@@ -98,14 +99,27 @@ export class JsonSchemaService {
   constructor(
     private configService: StoreConfigService,
     private fileService: FileService,
-    private httpService: HttpService
+    private httpService: HttpService,
+    private schemaCacheService: SchemaCacheService
   ) {}
+
+  async getSchemaHash(type: string): Promise<string | undefined> {
+    const hashes = await this.schemaCacheService.getCachedSchemaHashes()
+
+    return hashes?.[type];
+  }
 
   async getSchema(type: string): Promise<JSONSchema4> {
     if (SCHEMAS[type]) {
       return SCHEMAS[type];
     }
+
     type = UtilityService.normalize(type);
+
+    const schema = await this.schemaCacheService.getCachedJsonSchema(type);
+
+    if (schema) return schema;
+
     if (!this.schemes[type]) {
       this.schemes[type] = await this.fileService
         .readJsonFile<JSONSchema4>(this.fileService.getFilename(type))
@@ -116,21 +130,31 @@ export class JsonSchemaService {
 
   async getEmbedded(type: string): Promise<{ [prop: string]: string }> {
     type = UtilityService.normalize(type);
+
+    const embedded = await this.schemaCacheService.getCachedEmbeddedSchema(type);
+
+    if (embedded) return embedded;
+
     if (!this.embedded[type]) {
       const schema = await this.getSchema(type);
-      const embedded: { [prop: string]: string } = {};
-
-      if (schema.properties) {
-        const properties = Object.keys(schema.properties);
-        for (const property of properties) {
-          if (await this.isEmbedded(schema.properties[property])) {
-            embedded[property] = schema.properties[property]['range'] ?? property;
-          }
-        }
-      }
-      this.embedded[type] = embedded;
+      this.embedded[type] = await this.getEmbeddedFromSchema(schema);
     }
     return this.embedded[type];
+  }
+
+  async getEmbeddedFromSchema(schema: JSONSchema4): Promise<{ [prop: string]: string }> {
+    const embedded: { [prop: string]: string } = {};
+
+    if (schema.properties) {
+      const properties = Object.keys(schema.properties);
+      for (const property of properties) {
+        if (await this.isEmbedded(schema.properties[property])) {
+          embedded[property] = schema.properties[property]['range'] ?? property;
+        }
+      }
+    }
+
+    return embedded;
   }
 
   async isEmbedded(propertySchema: JSONSchema4): Promise<boolean> {

@@ -37,7 +37,8 @@
       "@luomus/store/config": ["libs/store/config/src/index.ts"],
       "@luomus/store/database": ["libs/store/database/src/index.ts"],
       "@luomus/store/search": ["libs/store/search/src/index.ts"],
-      "@luomus/store/shared": ["libs/store/shared/src/index.ts"]
+      "@luomus/store/shared": ["libs/store/shared/src/index.ts"],
+      "@luomus/store/schema-cache": ["libs/store/schema-cache/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

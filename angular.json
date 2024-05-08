@@ -421,6 +421,30 @@
           }
         }
       }
+    },
+    "schema-cache": {
+      "projectType": "library",
+      "root": "libs/store/schema-cache",
+      "sourceRoot": "libs/store/schema-cache/src",
+      "prefix": "luomus",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/store/schema-cache/src/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/store/schema-cache"],
+          "options": {
+            "jestConfig": "libs/store/schema-cache/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
