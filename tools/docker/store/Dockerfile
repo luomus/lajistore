@@ -1,4 +1,4 @@
-FROM node:14 as builder
+FROM node:16 as builder
 ENV NODE_ENV build
 
 WORKDIR /app
@@ -23,7 +23,7 @@ RUN npm run nx -- build --prod store-api \
  && npm run nx -- build --prod store-worker
 
 
-FROM node:14 as dev
+FROM node:16 as dev
 
 EXPOSE 3000
 
