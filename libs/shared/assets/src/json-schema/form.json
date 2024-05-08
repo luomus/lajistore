@@ -654,13 +654,6 @@
           "description": "Form admin can lock documents. Locked documents can't be edited",
           "title": "Document are lockable by admin"
         },
-        "allowAddingPublicNamedPlaces": {
-          "type": "boolean",
-          "range": "xsd:boolean",
-          "subject": "MHL.allowAddingPublicNamedPlaces",
-          "description": "Form users can create new named places for the form",
-          "title": "Allow adding public named places"
-        },
         "allowExcel": {
           "type": "boolean",
           "range": "xsd:boolean",
@@ -681,13 +674,6 @@
           "subject": "MHL.cancelLabel",
           "description": "Label for the cancel button at the form footer",
           "title": "Footer cancel button label"
-        },
-        "copyLatestDocumentToNamedPlace": {
-          "type": "boolean",
-          "range": "xsd:boolean",
-          "subject": "MHL.copyLatestDocumentToNamedPlace",
-          "description": "The latest document is copied to named place's prepopulatedDocument. if documents date is same or after the current prepopulated document's date, or if prepopulated document doesn't have date. Date is checked from gatheringEvent or from gatherings",
-          "title": "Copy latest document to named place"
         },
         "dataset": {
           "type": "boolean",
@@ -750,27 +736,6 @@
           "subject": "MHL.excludeFromGlobalExcel",
           "description": "Excludes from the Vihko excel tools",
           "title": "Exclude from global excel tools"
-        },
-        "filterNamedPlacesByBirdAssociationArea": {
-          "type": "boolean",
-          "range": "xsd:boolean",
-          "subject": "MHL.filterNamedPlacesByBirdAssociationArea",
-          "description": "The named place UI allows filtering by bird association area",
-          "title": "Filter named places by bird association area"
-        },
-        "filterNamedPlacesByMunicipality": {
-          "type": "boolean",
-          "range": "xsd:boolean",
-          "subject": "MHL.filterNamedPlacesByMunicipality",
-          "description": "The named place UI allows filtering by municipality",
-          "title": "Filter named places by municipality"
-        },
-        "filterNamedPlacesByTags": {
-          "type": "boolean",
-          "range": "xsd:boolean",
-          "subject": "MHL.filterNamedPlacesByTags",
-          "description": "The named place UI allows filtering by tags",
-          "title": "Filter named places by tags"
         },
         "footer": {
           "type": "object",
@@ -5608,6 +5573,30 @@
                     "description": "Longitude. For western longitudes, use negative value.",
                     "title": "Lon (E)"
                   },
+                  "mothSamplingMethod": {
+                    "type": "string",
+                    "enum": [
+                      "",
+                      "MY.mothSamplingMethodJA500",
+                      "MY.mothSamplingMethodLHG",
+                      "MY.mothSamplingMethodLS",
+                      "MY.mothSamplingMethodMAARY",
+                      "MY.mothSamplingMethodPR125",
+                      "MY.mothSamplingMethodPR250"
+                    ],
+                    "enumNames": [
+                      "",
+                      "Valorysä Jalas 500W (Ja 500)",
+                      "Valorysä 125W Hg-lamppu (LHg)",
+                      "Valorysä 160W sekavalo (LS)",
+                      "Maarysä 125W (MaaRy)",
+                      "Pakastinrysä 125W Hg-lamppu (PR125)",
+                      "Pakastinrysä 250W Hg-lamppu (PR250)"
+                    ],
+                    "range": "MY.mothSamplingMethodEnum",
+                    "subject": "MY.mothSamplingMethod",
+                    "title": "Moth sampling method"
+                  },
                   "municipality": {
                     "type": "string",
                     "range": "xsd:string",
@@ -9430,7 +9419,8 @@
             "MHL.resultServiceTypeWinterBirdCount",
             "MHL.resultServiceTypeSykeInsectProjects",
             "MHL.resultServiceTypeInvasiveControl",
-            "MHL.resultServiceTypeCompleteLists"
+            "MHL.resultServiceTypeCompleteLists",
+            "MHL.resultServiceTypeWaterBirdCount"
           ],
           "enumNames": [
             "",
@@ -9440,7 +9430,8 @@
             "MHL.resultServiceTypeWinterBirdCount",
             "MHL.resultServiceTypeSykeInsectProjects",
             "MHL.resultServiceTypeInvasiveControl",
-            "MHL.resultServiceTypeCompleteLists"
+            "MHL.resultServiceTypeCompleteLists",
+            "MHL.resultServiceTypeWaterBirdCount"
           ],
           "range": "MHL.resultServiceTypeEnum",
           "subject": "MHL.resultServiceType",

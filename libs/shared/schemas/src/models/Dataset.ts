@@ -1,10 +1,12 @@
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export type DatasetTypeEnum =
+  | "GX.datasetTypeBasic"
+  | "GX.datasetTypeProject";
 export interface Dataset {
   "@context"?: string;
   id?: string;
@@ -24,7 +26,7 @@ export interface Dataset {
   /**
    * Type of the tag. Usually basic, project type is generally used only to give information on project Nagoya compliance.
    */
-  datasetType: "GX.datasetTypeBasic" | "GX.datasetTypeProject";
+  datasetType: DatasetTypeEnum;
   /**
    * Description of the tag, so that other people understand what it is about.
    */

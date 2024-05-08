@@ -1,4 +1,4 @@
-export * from './list-response';
+
 import { BibliographicResource } from './BibliographicResource'
 export type { BibliographicResource }
 import { Concept } from './Concept'
@@ -151,6 +151,12 @@ import { TaxonInteraction } from './TaxonInteraction'
 export type { TaxonInteraction }
 import { TaxonSet } from './TaxonSet'
 export type { TaxonSet }
+import { Trait } from './Trait'
+export type { Trait }
+import { TraitEnumValue } from './TraitEnumValue'
+export type { TraitEnumValue }
+import { TraitGroup } from './TraitGroup'
+export type { TraitGroup }
 import { Transaction } from './Transaction'
 export type { Transaction }
 import { TransactionEvent } from './TransactionEvent'
@@ -167,6 +173,8 @@ import { UnitFact } from './UnitFact'
 export type { UnitFact }
 import { UnitGathering } from './UnitGathering'
 export type { UnitGathering }
+import { UnitOfMeasurement } from './UnitOfMeasurement'
+export type { UnitOfMeasurement }
 import { Validator } from './Validator'
 export type { Validator }
 import { Video } from './Video'
@@ -248,6 +256,9 @@ export type StoreObject = BibliographicResource
    | TaxonGroupIucnEditors
    | TaxonInteraction
    | TaxonSet
+   | Trait
+   | TraitEnumValue
+   | TraitGroup
    | Transaction
    | TransactionEvent
    | TransactionItem
@@ -256,6 +267,7 @@ export type StoreObject = BibliographicResource
    | Unit
    | UnitFact
    | UnitGathering
+   | UnitOfMeasurement
    | Validator
    | Video;
 
@@ -654,6 +666,21 @@ export function isTaxonSet(data: unknown): data is TaxonSet {
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MX.taxonSet'
   );
 }
+export function isTrait(data: unknown): data is Trait {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'TDF.trait'
+  );
+}
+export function isTraitEnumValue(data: unknown): data is TraitEnumValue {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'TDF.traitEnumValue'
+  );
+}
+export function isTraitGroup(data: unknown): data is TraitGroup {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'TDF.traitGroup'
+  );
+}
 export function isTransaction(data: unknown): data is Transaction {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'HRA.transaction'
@@ -692,6 +719,11 @@ export function isUnitFact(data: unknown): data is UnitFact {
 export function isUnitGathering(data: unknown): data is UnitGathering {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MZ.unitGathering'
+  );
+}
+export function isUnitOfMeasurement(data: unknown): data is UnitOfMeasurement {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'TDF.unitOfMeasurement'
   );
 }
 export function isValidator(data: unknown): data is Validator {

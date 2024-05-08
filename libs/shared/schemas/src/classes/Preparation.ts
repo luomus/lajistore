@@ -1,10 +1,44 @@
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export enum PreparationMaterialsEnum {
+  "empty" = "",
+  "preparationMaterialsAcetone" = "MF.preparationMaterialsAcetone",
+  "preparationMaterialsAmmonia" = "MF.preparationMaterialsAmmonia",
+  "preparationMaterialsBasyntan" = "MF.preparationMaterialsBasyntan",
+  "preparationMaterialsBorax" = "MF.preparationMaterialsBorax",
+  "preparationMaterialsEulan" = "MF.preparationMaterialsEulan",
+  "preparationMaterialsHydrogenPeroxide" = "MF.preparationMaterialsHydrogenPeroxide",
+  "preparationMaterialsMethyleneChloride" = "MF.preparationMaterialsMethyleneChloride",
+  "preparationMaterialsNovaltan" = "MF.preparationMaterialsNovaltan",
+  "preparationMaterialsPapaine" = "MF.preparationMaterialsPapaine",
+  "preparationMaterialsPlaster" = "MF.preparationMaterialsPlaster",
+  "preparationMaterialsPolyurethane" = "MF.preparationMaterialsPolyurethane",
+  "preparationMaterialsPretanix" = "MF.preparationMaterialsPretanix",
+  "preparationMaterialsPurifiedGasoline" = "MF.preparationMaterialsPurifiedGasoline",
+  "preparationMaterialsWoodWool" = "MF.preparationMaterialsWoodWool",
+  "preparationMaterialsCTAB" = "MF.preparationMaterialsCTAB",
+  "preparationMaterialsEZNAForensicKit" = "MF.preparationMaterialsEZNAForensicKit",
+  "preparationMaterialsDNEasyBloodAndTissueKit" = "MF.preparationMaterialsDNEasyBloodAndTissueKit",
+  "preparationMaterialsDNEasyPlantKit" = "MF.preparationMaterialsDNEasyPlantKit",
+  "preparationMaterialsNucleospinTissueKit" = "MF.preparationMaterialsNucleospinTissueKit",
+  "preparationMaterialsNucleospinPlantTwo" = "MF.preparationMaterialsNucleospinPlantTwo",
+  "preparationMaterialsSaltExtraction" = "MF.preparationMaterialsSaltExtraction",
+  "preparationMaterialsDNeasyPlantMiniKit" = "MF.preparationMaterialsDNeasyPlantMiniKit",
+  "preparationMaterialsMagAttractHMWDNAKit" = "MF.preparationMaterialsMagAttractHMWDNAKit"
+}
+export enum PreparationProcessEnum {
+  "empty" = "",
+  "preparationProcessTanning" = "MF.preparationProcessTanning",
+  "preparationProcessEnzymaticMaceration" = "MF.preparationProcessEnzymaticMaceration",
+  "preparationProcessDegreasing" = "MF.preparationProcessDegreasing",
+  "preparationProcessBeetleCleaning" = "MF.preparationProcessBeetleCleaning",
+  "preparationProcessPEG" = "MF.preparationProcessPEG",
+  "preparationProcessFreezeDrying" = "MF.preparationProcessFreezeDrying"
+}
 export class Preparation {
   "@context"?: string;
   id?: string;
@@ -16,44 +50,11 @@ export class Preparation {
   /**
    * Materials (chemicals, kits etc.) used in the preparation process. It is possible to choose several.
    */
-  preparationMaterials?: (
-    | ""
-    | "MF.preparationMaterialsAcetone"
-    | "MF.preparationMaterialsAmmonia"
-    | "MF.preparationMaterialsBasyntan"
-    | "MF.preparationMaterialsBorax"
-    | "MF.preparationMaterialsEulan"
-    | "MF.preparationMaterialsHydrogenPeroxide"
-    | "MF.preparationMaterialsMethyleneChloride"
-    | "MF.preparationMaterialsNovaltan"
-    | "MF.preparationMaterialsPapaine"
-    | "MF.preparationMaterialsPlaster"
-    | "MF.preparationMaterialsPolyurethane"
-    | "MF.preparationMaterialsPretanix"
-    | "MF.preparationMaterialsPurifiedGasoline"
-    | "MF.preparationMaterialsWoodWool"
-    | "MF.preparationMaterialsCTAB"
-    | "MF.preparationMaterialsEZNAForensicKit"
-    | "MF.preparationMaterialsDNEasyBloodAndTissueKit"
-    | "MF.preparationMaterialsDNEasyPlantKit"
-    | "MF.preparationMaterialsNucleospinTissueKit"
-    | "MF.preparationMaterialsNucleospinPlantTwo"
-    | "MF.preparationMaterialsSaltExtraction"
-    | "MF.preparationMaterialsDNeasyPlantMiniKit"
-    | "MF.preparationMaterialsMagAttractHMWDNAKit"
-  )[];
+  preparationMaterials?: PreparationMaterialsEnum[];
   /**
    * Processes used in the preparation. It is possible to choose several.
    */
-  preparationProcess?: (
-    | ""
-    | "MF.preparationProcessTanning"
-    | "MF.preparationProcessEnzymaticMaceration"
-    | "MF.preparationProcessDegreasing"
-    | "MF.preparationProcessBeetleCleaning"
-    | "MF.preparationProcessPEG"
-    | "MF.preparationProcessFreezeDrying"
-  )[];
+  preparationProcess?: PreparationProcessEnum[];
   /**
    * Additional information about the preparation process.
    */

@@ -1,10 +1,19 @@
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export type AreaTypeEnum =
+  | "ML.country"
+  | "ML.biogeographicalProvince"
+  | "ML.municipality"
+  | "ML.oldMunicipality"
+  | "ML.elyCentre"
+  | "ML.province"
+  | "ML.continent"
+  | "ML.iucnEvaluationArea"
+  | "ML.birdAssociationArea";
 export interface Area {
   "@context"?: string;
   id?: string;
@@ -12,16 +21,7 @@ export interface Area {
   /**
    * Aluetyyppi
    */
-  areaType:
-    | "ML.country"
-    | "ML.biogeographicalProvince"
-    | "ML.municipality"
-    | "ML.oldMunicipality"
-    | "ML.elyCentre"
-    | "ML.province"
-    | "ML.continent"
-    | "ML.iucnEvaluationArea"
-    | "ML.birdAssociationArea";
+  areaType: AreaTypeEnum;
   /**
    * Country code ISO alpha 2
    */

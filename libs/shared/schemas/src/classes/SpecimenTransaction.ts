@@ -1,10 +1,67 @@
+import { Permit } from './';
+import { SpecimenTransactionEvent } from './';
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export enum AvailableForGeneticResearchEnum {
+  "empty" = "",
+  "availableForGeneticResearchYes" = "HRX.availableForGeneticResearchYes",
+  "availableForGeneticResearchWithRestrictions" = "HRX.availableForGeneticResearchWithRestrictions",
+  "availableForGeneticResearchNo" = "HRX.availableForGeneticResearchNo"
+}
+export enum GeneticResourceTypeEnum {
+  "empty" = "",
+  "geneticResourceTypeAnimal" = "HRX.geneticResourceTypeAnimal",
+  "geneticResourceTypePlant" = "HRX.geneticResourceTypePlant",
+  "geneticResourceTypeFungus" = "HRX.geneticResourceTypeFungus",
+  "geneticResourceTypeMicrobe" = "HRX.geneticResourceTypeMicrobe",
+  "geneticResourceTypeSoil" = "HRX.geneticResourceTypeSoil",
+  "geneticResourceTypeAqua" = "HRX.geneticResourceTypeAqua"
+}
+export enum ResourceImportedEnum {
+  "empty" = "",
+  "resourceImportedGeneticResources" = "HRX.resourceImportedGeneticResources",
+  "resourceImportedTraditionalKnowledge" = "HRX.resourceImportedTraditionalKnowledge",
+  "resourceImportedBoth" = "HRX.resourceImportedBoth"
+}
+export enum StatusEnum {
+  "empty" = "",
+  "statusInProcess" = "HRX.statusInProcess",
+  "statusOutstanding" = "HRX.statusOutstanding",
+  "statusClosed" = "HRX.statusClosed",
+  "statusOnLoan" = "HRX.statusOnLoan"
+}
+export enum TransportMethodEnum {
+  "empty" = "",
+  "transportMethodPriority" = "HRX.transportMethodPriority",
+  "transportMethodEconomy" = "HRX.transportMethodEconomy",
+  "transportMethodCourier" = "HRX.transportMethodCourier",
+  "transportMethodCarried" = "HRX.transportMethodCarried",
+  "transportMethodOther" = "HRX.transportMethodOther",
+  "transportMethodImage" = "HRX.transportMethodImage"
+}
+export enum TypeEnum {
+  "typeLoanIncoming" = "HRX.typeLoanIncoming",
+  "typeLoanOutgoing" = "HRX.typeLoanOutgoing",
+  "typeGiftIncoming" = "HRX.typeGiftIncoming",
+  "typeGiftOutgoing" = "HRX.typeGiftOutgoing",
+  "typeExchangeIncoming" = "HRX.typeExchangeIncoming",
+  "typeExchangeOutgoing" = "HRX.typeExchangeOutgoing",
+  "typeFieldCollection" = "HRX.typeFieldCollection",
+  "typeImportNotice" = "HRX.typeImportNotice",
+  "typeABSNegotiations" = "HRX.typeABSNegotiations",
+  "typeVirtualLoanOutgoing" = "HRX.typeVirtualLoanOutgoing",
+  "typeDeaccession" = "HRX.typeDeaccession"
+}
+export enum PublicityRestrictionsEnum {
+  "empty" = "",
+  "publicityRestrictionsPublic" = "MZ.publicityRestrictionsPublic",
+  "publicityRestrictionsProtected" = "MZ.publicityRestrictionsProtected",
+  "publicityRestrictionsPrivate" = "MZ.publicityRestrictionsPrivate"
+}
 export class SpecimenTransaction {
   "@context"?: string;
   id?: string;
@@ -17,11 +74,7 @@ export class SpecimenTransaction {
   /**
    * If you choose "Yes, with restrictions", explain the restrictions in the following field "Rights and obligations".
    */
-  availableForGeneticResearch?:
-    | ""
-    | "HRX.availableForGeneticResearchYes"
-    | "HRX.availableForGeneticResearchWithRestrictions"
-    | "HRX.availableForGeneticResearchNo";
+  availableForGeneticResearch?: AvailableForGeneticResearchEnum;
   awayCount?: number;
   awayIDs?: string[];
   /**
@@ -73,14 +126,7 @@ export class SpecimenTransaction {
   /**
    * Choose the type of the genetic resource for statistical and reporting purposes.
    */
-  geneticResourceType?:
-    | ""
-    | "HRX.geneticResourceTypeAnimal"
-    | "HRX.geneticResourceTypePlant"
-    | "HRX.geneticResourceTypeFungus"
-    | "HRX.geneticResourceTypeMicrobe"
-    | "HRX.geneticResourceTypeSoil"
-    | "HRX.geneticResourceTypeAqua";
+  geneticResourceType?: GeneticResourceTypeEnum;
   harmonizedSystemCode?: string;
   /**
    * Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
@@ -137,29 +183,7 @@ export class SpecimenTransaction {
    * When the transaction was sent out from us
    */
   outgoingSent?: string;
-  permits?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
-    permitEndDate?: string;
-    permitFile?: string;
-    permitNotes?: string;
-    permitStartDate?: string;
-    permitStatus?: "" | "HRA.permitStatusAvailable" | "HRA.permitStatusNotRequired";
-    permitType?:
-      | ""
-      | "HRA.permitTypePIC"
-      | "HRA.permitTypeMAT"
-      | "HRA.permitTypeMTA"
-      | "HRA.permitCollectingPermit"
-      | "HRA.permitTypeExportPermit"
-      | "HRA.permitTypeOther"
-      | "HRA.permitTypeMemorandumOfUnderstanding";
-    /**
-     * Which parent or larger collection this is part of.
-     */
-    isPartOf?: string;
-  }[];
+  permits?: Permit[];
   /**
    * Remarks that are shown to both parties of the transaction.
    */
@@ -175,46 +199,22 @@ export class SpecimenTransaction {
   /**
    * Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
    */
-  resourceImported?: string;
+  resourceImported?: ResourceImportedEnum;
   returnedCount?: number;
   returnedIDs?: string[];
   /**
    * Whether the transaction is closed, outstanding or in process.
    */
-  status?: "" | "HRX.statusInProcess" | "HRX.statusOutstanding" | "HRX.statusClosed";
-  transactionEvents?: {
-    eventDate: string;
-    eventDocumentIDs?: string[];
-    eventHandler?: string;
-    eventNotes?: string;
-    eventType: "HRX.eventTypeReturn" | "HRX.eventTypeAddition";
-  }[];
+  status?: StatusEnum;
+  transactionEvents?: SpecimenTransactionEvent[];
   /**
    * Means of sending, mail, courier etc.
    */
-  transportMethod?:
-    | ""
-    | "HRX.transportMethodPriority"
-    | "HRX.transportMethodEconomy"
-    | "HRX.transportMethodCourier"
-    | "HRX.transportMethodCarried"
-    | "HRX.transportMethodOther"
-    | "HRX.transportMethodImage";
+  transportMethod?: TransportMethodEnum;
   /**
    * What kind of transaction this is.
    */
-  type:
-    | "HRX.typeLoanIncoming"
-    | "HRX.typeGiftIncoming"
-    | "HRX.typeExchangeIncoming"
-    | "HRX.typeLoanOutgoing"
-    | "HRX.typeGiftOutgoing"
-    | "HRX.typeExchangeOutgoing"
-    | "HRX.typeFieldCollection"
-    | "HRX.typeImportNotice"
-    | "HRX.typeABSNegotiations"
-    | "HRX.typeVirtualLoanOutgoing"
-    | "HRX.typeDeaccession";
+  type: TypeEnum;
   /**
    * Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?
    */
@@ -230,9 +230,5 @@ export class SpecimenTransaction {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?:
-    | ""
-    | "MZ.publicityRestrictionsPublic"
-    | "MZ.publicityRestrictionsProtected"
-    | "MZ.publicityRestrictionsPrivate";
+  publicityRestrictions?: PublicityRestrictionsEnum;
 }

@@ -1,10 +1,50 @@
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export enum TypeStatuses {
+  "empty" = "",
+  "typeStatusType" = "MY.typeStatusType",
+  "typeStatusHolotype" = "MY.typeStatusHolotype",
+  "typeStatusSyntype" = "MY.typeStatusSyntype",
+  "typeStatusParatype" = "MY.typeStatusParatype",
+  "typeStatusLectotype" = "MY.typeStatusLectotype",
+  "typeStatusParalectotype" = "MY.typeStatusParalectotype",
+  "typeStatusNeotype" = "MY.typeStatusNeotype",
+  "typeStatusAllotype" = "MY.typeStatusAllotype",
+  "typeStatusNeoallotype" = "MY.typeStatusNeoallotype",
+  "typeStatusIsotype" = "MY.typeStatusIsotype",
+  "typeStatusEpitype" = "MY.typeStatusEpitype",
+  "typeStatusIsolectotype" = "MY.typeStatusIsolectotype",
+  "typeStatusIsoepitype" = "MY.typeStatusIsoepitype",
+  "typeStatusIsoneotype" = "MY.typeStatusIsoneotype",
+  "typeStatusIsoparatype" = "MY.typeStatusIsoparatype",
+  "typeStatusIsosyntype" = "MY.typeStatusIsosyntype",
+  "typeStatusOriginalMaterial" = "MY.typeStatusOriginalMaterial",
+  "typeStatusCotype" = "MY.typeStatusCotype",
+  "typeStatusTopotype" = "MY.typeStatusTopotype",
+  "typeStatusHomotype" = "MY.typeStatusHomotype",
+  "typeStatusNo" = "MY.typeStatusNo",
+  "typeStatusPossible" = "MY.typeStatusPossible",
+  "typeStatusObscure" = "MY.typeStatusObscure",
+  "typeStatusTypeStrain" = "MY.typeStatusTypeStrain",
+  "typeStatusPathovarReferenceStrain" = "MY.typeStatusPathovarReferenceStrain"
+}
+export enum TypeVerifications {
+  "empty" = "",
+  "typeVerificationVerified" = "MY.typeVerificationVerified",
+  "typeVerificationUnverified" = "MY.typeVerificationUnverified",
+  "typeVerificationProbable" = "MY.typeVerificationProbable",
+  "typeVerificationDoubtful" = "MY.typeVerificationDoubtful"
+}
+export enum PublicityRestrictionsEnum {
+  "empty" = "",
+  "publicityRestrictionsPublic" = "MZ.publicityRestrictionsPublic",
+  "publicityRestrictionsProtected" = "MZ.publicityRestrictionsProtected",
+  "publicityRestrictionsPrivate" = "MZ.publicityRestrictionsPrivate"
+}
 export class TypeSpecimen {
   "@context"?: string;
   id?: string;
@@ -40,33 +80,7 @@ export class TypeSpecimen {
   /**
    * Is this holotype, paratype, syntype etc...
    */
-  typeStatus?:
-    | ""
-    | "MY.typeStatusType"
-    | "MY.typeStatusHolotype"
-    | "MY.typeStatusSyntype"
-    | "MY.typeStatusParatype"
-    | "MY.typeStatusLectotype"
-    | "MY.typeStatusParalectotype"
-    | "MY.typeStatusNeotype"
-    | "MY.typeStatusAllotype"
-    | "MY.typeStatusNeoallotype"
-    | "MY.typeStatusIsotype"
-    | "MY.typeStatusEpitype"
-    | "MY.typeStatusIsolectotype"
-    | "MY.typeStatusIsoepitype"
-    | "MY.typeStatusIsoneotype"
-    | "MY.typeStatusIsoparatype"
-    | "MY.typeStatusIsosyntype"
-    | "MY.typeStatusOriginalMaterial"
-    | "MY.typeStatusCotype"
-    | "MY.typeStatusTopotype"
-    | "MY.typeStatusHomotype"
-    | "MY.typeStatusNo"
-    | "MY.typeStatusPossible"
-    | "MY.typeStatusObscure"
-    | "MY.typeStatusTypeStrain"
-    | "MY.typeStatusPathovarReferenceStrain";
+  typeStatus?: TypeStatuses;
   /**
    * Name of the type subspecies
    */
@@ -78,12 +92,7 @@ export class TypeSpecimen {
   /**
    * Verification whether this really is a type?
    */
-  typeVerification?:
-    | ""
-    | "MY.typeVerificationVerified"
-    | "MY.typeVerificationUnverified"
-    | "MY.typeVerificationProbable"
-    | "MY.typeVerificationDoubtful";
+  typeVerification?: TypeVerifications;
   /**
    * Name of the person who chose the type, preferably in the format "Lastname, firstname"
    */
@@ -95,9 +104,5 @@ export class TypeSpecimen {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?:
-    | ""
-    | "MZ.publicityRestrictionsPublic"
-    | "MZ.publicityRestrictionsProtected"
-    | "MZ.publicityRestrictionsPrivate";
+  publicityRestrictions?: PublicityRestrictionsEnum;
 }

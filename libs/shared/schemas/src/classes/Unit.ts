@@ -1,10 +1,588 @@
+import { Measurement } from './';
+import { UnitFact } from './';
+import { UnitGathering } from './';
+import { Identification } from './';
+import { TypeSpecimen } from './';
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export enum AbundanceUnitEnum {
+  "empty" = "",
+  "abundanceUnitIndividualCount" = "MY.abundanceUnitIndividualCount",
+  "abundanceUnitPairCount" = "MY.abundanceUnitPairCount",
+  "abundanceUnitNest" = "MY.abundanceUnitNest",
+  "abundanceUnitBreedingSite" = "MY.abundanceUnitBreedingSite",
+  "abundanceUnitFeedingSite" = "MY.abundanceUnitFeedingSite",
+  "abundanceUnitColony" = "MY.abundanceUnitColony",
+  "abundanceUnitFruitbody" = "MY.abundanceUnitFruitbody",
+  "abundanceUnitSprout" = "MY.abundanceUnitSprout",
+  "abundanceUnitHummock" = "MY.abundanceUnitHummock",
+  "abundanceUnitThallus" = "MY.abundanceUnitThallus",
+  "abundanceUnitFlower" = "MY.abundanceUnitFlower",
+  "abundanceUnitSpot" = "MY.abundanceUnitSpot",
+  "abundanceUnitTrunk" = "MY.abundanceUnitTrunk",
+  "abundanceUnitQueen" = "MY.abundanceUnitQueen",
+  "abundanceUnitShell" = "MY.abundanceUnitShell",
+  "abundanceUnitDroppings" = "MY.abundanceUnitDroppings",
+  "abundanceUnitMarks" = "MY.abundanceUnitMarks",
+  "abundanceUnitIndirect" = "MY.abundanceUnitIndirect",
+  "abundanceUnitSquareDM" = "MY.abundanceUnitSquareDM",
+  "abundanceUnitSquareM" = "MY.abundanceUnitSquareM",
+  "abundanceUnitRelativeDensity" = "MY.abundanceUnitRelativeDensity",
+  "abundanceUnitOccursDoesNotOccur" = "MY.abundanceUnitOccursDoesNotOccur"
+}
+export enum AtlasCodeEnum {
+  "empty" = "",
+  "atlasCodeEnum1" = "MY.atlasCodeEnum1",
+  "atlasCodeEnum2" = "MY.atlasCodeEnum2",
+  "atlasCodeEnum3" = "MY.atlasCodeEnum3",
+  "atlasCodeEnum4" = "MY.atlasCodeEnum4",
+  "atlasCodeEnum5" = "MY.atlasCodeEnum5",
+  "atlasCodeEnum6" = "MY.atlasCodeEnum6",
+  "atlasCodeEnum61" = "MY.atlasCodeEnum61",
+  "atlasCodeEnum62" = "MY.atlasCodeEnum62",
+  "atlasCodeEnum63" = "MY.atlasCodeEnum63",
+  "atlasCodeEnum64" = "MY.atlasCodeEnum64",
+  "atlasCodeEnum65" = "MY.atlasCodeEnum65",
+  "atlasCodeEnum66" = "MY.atlasCodeEnum66",
+  "atlasCodeEnum7" = "MY.atlasCodeEnum7",
+  "atlasCodeEnum71" = "MY.atlasCodeEnum71",
+  "atlasCodeEnum72" = "MY.atlasCodeEnum72",
+  "atlasCodeEnum73" = "MY.atlasCodeEnum73",
+  "atlasCodeEnum74" = "MY.atlasCodeEnum74",
+  "atlasCodeEnum75" = "MY.atlasCodeEnum75",
+  "atlasCodeEnum8" = "MY.atlasCodeEnum8",
+  "atlasCodeEnum81" = "MY.atlasCodeEnum81",
+  "atlasCodeEnum82" = "MY.atlasCodeEnum82"
+}
+export enum BatBehaviorEnum {
+  "empty" = "",
+  "batBehaviorHibernating" = "MY.batBehaviorHibernating",
+  "batBehaviorRoosting" = "MY.batBehaviorRoosting",
+  "batBehaviorHunting" = "MY.batBehaviorHunting"
+}
+export enum BirdAgeEnum {
+  "empty" = "",
+  "birdAgePp" = "MY.birdAgePp",
+  "birdAgePm" = "MY.birdAgePm",
+  "birdAgeFl" = "MY.birdAgeFl",
+  "birdAgePlus1kv" = "MY.birdAgePlus1kv",
+  "birdAge1Kv" = "MY.birdAge1Kv",
+  "birdAgePlus2Kv" = "MY.birdAgePlus2Kv",
+  "birdAge2kv" = "MY.birdAge2kv",
+  "birdAgePlus3Kv" = "MY.birdAgePlus3Kv",
+  "birdAge3Kv" = "MY.birdAge3Kv",
+  "birdAgePlus4Kv" = "MY.birdAgePlus4Kv",
+  "birdAge4Kv" = "MY.birdAge4Kv",
+  "birdAgePlus5Kv" = "MY.birdAgePlus5Kv",
+  "birdAge5Kv" = "MY.birdAge5Kv",
+  "birdAgePlus6Kv" = "MY.birdAgePlus6Kv",
+  "birdAge6Kv" = "MY.birdAge6Kv",
+  "birdAgePlus7Kv" = "MY.birdAgePlus7Kv",
+  "birdAge7Kv" = "MY.birdAge7Kv",
+  "birdAgePlus8Kv" = "MY.birdAgePlus8Kv",
+  "birdAge8Kv" = "MY.birdAge8Kv"
+}
+export enum BirdPlumageEnum {
+  "empty" = "",
+  "birdPlumageAd" = "MY.birdPlumageAd",
+  "birdPlumageEijp" = "MY.birdPlumageEijp",
+  "birdPlumageImm" = "MY.birdPlumageImm",
+  "birdPlumageJp" = "MY.birdPlumageJp",
+  "birdPlumageJuv" = "MY.birdPlumageJuv",
+  "birdPlumageNpuk" = "MY.birdPlumageNpuk",
+  "birdPlumagePull" = "MY.birdPlumagePull",
+  "birdPlumageSubad" = "MY.birdPlumageSubad",
+  "birdPlumageTp" = "MY.birdPlumageTp",
+  "birdPlumageVp" = "MY.birdPlumageVp",
+  "birdPlumagePep" = "MY.birdPlumagePep",
+  "birdPlumageSs" = "MY.birdPlumageSs"
+}
+export enum DistanceEnum {
+  "empty" = "",
+  "distanceOverFlight" = "MY.distanceOverFlight",
+  "distanceNear" = "MY.distanceNear",
+  "distanceQuiteFar" = "MY.distanceQuiteFar",
+  "distanceFar" = "MY.distanceFar",
+  "distanceVeryFar" = "MY.distanceVeryFar"
+}
+export enum EpochOrSeries {
+  "empty" = "",
+  "epochOrSeriesCambrian" = "MY.epochOrSeriesCambrian",
+  "epochOrSeriesCarboniferous" = "MY.epochOrSeriesCarboniferous",
+  "epochOrSeriesCretaceous" = "MY.epochOrSeriesCretaceous",
+  "epochOrSeriesDevonian" = "MY.epochOrSeriesDevonian",
+  "epochOrSeriesEdiacaran" = "MY.epochOrSeriesEdiacaran",
+  "epochOrSeriesJurassic" = "MY.epochOrSeriesJurassic",
+  "epochOrSeriesOrdovician" = "MY.epochOrSeriesOrdovician",
+  "epochOrSeriesPermian" = "MY.epochOrSeriesPermian",
+  "epochOrSeriesQuaternary" = "MY.epochOrSeriesQuaternary",
+  "epochOrSeriesRecent" = "MY.epochOrSeriesRecent",
+  "epochOrSeriesSilurian" = "MY.epochOrSeriesSilurian",
+  "epochOrSeriesTertiary" = "MY.epochOrSeriesTertiary",
+  "epochOrSeriesTriassic" = "MY.epochOrSeriesTriassic"
+}
+export enum FruitTypeEnum {
+  "empty" = "",
+  "fruitTypeAchene" = "MY.fruitTypeAchene",
+  "fruitTypeBerry" = "MY.fruitTypeBerry",
+  "fruitTypeCapsule" = "MY.fruitTypeCapsule",
+  "fruitTypeCaryopsis" = "MY.fruitTypeCaryopsis",
+  "fruitTypeCone" = "MY.fruitTypeCone",
+  "fruitTypeDrupe" = "MY.fruitTypeDrupe",
+  "fruitTypeFollicle" = "MY.fruitTypeFollicle",
+  "fruitTypeLegume" = "MY.fruitTypeLegume",
+  "fruitTypeNut" = "MY.fruitTypeNut",
+  "fruitTypeOther" = "MY.fruitTypeOther",
+  "fruitTypePome" = "MY.fruitTypePome",
+  "fruitTypeSchizocarp" = "MY.fruitTypeSchizocarp",
+  "fruitTypeSiliqua" = "MY.fruitTypeSiliqua"
+}
+export enum IndirectObservationTypeEnum {
+  "empty" = "",
+  "indirectObservationTypeFeces" = "MY.indirectObservationTypeFeces",
+  "indirectObservationTypeSnowTracks" = "MY.indirectObservationTypeSnowTracks",
+  "indirectObservationTypeUrine" = "MY.indirectObservationTypeUrine",
+  "indirectObservationTypeFeasting" = "MY.indirectObservationTypeFeasting",
+  "indirectObservationTypeFoodStock" = "MY.indirectObservationTypeFoodStock",
+  "indirectObservationTypeNone" = "MY.indirectObservationTypeNone"
+}
+export enum EpochOrSeries1 {
+  "empty" = "",
+  "epochOrSeriesCambrian" = "MY.epochOrSeriesCambrian",
+  "epochOrSeriesCarboniferous" = "MY.epochOrSeriesCarboniferous",
+  "epochOrSeriesCretaceous" = "MY.epochOrSeriesCretaceous",
+  "epochOrSeriesDevonian" = "MY.epochOrSeriesDevonian",
+  "epochOrSeriesEdiacaran" = "MY.epochOrSeriesEdiacaran",
+  "epochOrSeriesJurassic" = "MY.epochOrSeriesJurassic",
+  "epochOrSeriesOrdovician" = "MY.epochOrSeriesOrdovician",
+  "epochOrSeriesPermian" = "MY.epochOrSeriesPermian",
+  "epochOrSeriesQuaternary" = "MY.epochOrSeriesQuaternary",
+  "epochOrSeriesRecent" = "MY.epochOrSeriesRecent",
+  "epochOrSeriesSilurian" = "MY.epochOrSeriesSilurian",
+  "epochOrSeriesTertiary" = "MY.epochOrSeriesTertiary",
+  "epochOrSeriesTriassic" = "MY.epochOrSeriesTriassic"
+}
+export enum LifeStages {
+  "empty" = "",
+  "lifeStageEgg" = "MY.lifeStageEgg",
+  "lifeStageLarva" = "MY.lifeStageLarva",
+  "lifeStagePupa" = "MY.lifeStagePupa",
+  "lifeStageJuvenile" = "MY.lifeStageJuvenile",
+  "lifeStageNymph" = "MY.lifeStageNymph",
+  "lifeStageSubimago" = "MY.lifeStageSubimago",
+  "lifeStageImmature" = "MY.lifeStageImmature",
+  "lifeStageAdult" = "MY.lifeStageAdult",
+  "lifeStageFertile" = "MY.lifeStageFertile",
+  "lifeStageSterile" = "MY.lifeStageSterile",
+  "lifeStageTadpole" = "MY.lifeStageTadpole",
+  "lifeStageEmbryo" = "MY.lifeStageEmbryo",
+  "lifeStageSubadult" = "MY.lifeStageSubadult",
+  "lifeStageMature" = "MY.lifeStageMature",
+  "lifeStagePullus" = "MY.lifeStagePullus",
+  "lifeStageHatchedEgg" = "MY.lifeStageHatchedEgg",
+  "lifeStageHatchedPupa" = "MY.lifeStageHatchedPupa",
+  "lifeStageGall" = "MY.lifeStageGall",
+  "lifeStageMarks" = "MY.lifeStageMarks",
+  "lifeStageTriungulin" = "MY.lifeStageTriungulin"
+}
+export enum MicrobiologicalRiskGroupEnum {
+  "empty" = "",
+  "microbiologicalRiskGroup1" = "MY.microbiologicalRiskGroup1",
+  "microbiologicalRiskGroup2" = "MY.microbiologicalRiskGroup2",
+  "microbiologicalRiskGroup3" = "MY.microbiologicalRiskGroup3",
+  "microbiologicalRiskGroup4" = "MY.microbiologicalRiskGroup4"
+}
+export enum MovingDirectionEnum {
+  "empty" = "",
+  "movingDirectionN" = "MY.movingDirectionN",
+  "movingDirectionNNE" = "MY.movingDirectionNNE",
+  "movingDirectionNE" = "MY.movingDirectionNE",
+  "movingDirectionENE" = "MY.movingDirectionENE",
+  "movingDirectionE" = "MY.movingDirectionE",
+  "movingDirectionESE" = "MY.movingDirectionESE",
+  "movingDirectionSE" = "MY.movingDirectionSE",
+  "movingDirectionSSE" = "MY.movingDirectionSSE",
+  "movingDirectionS" = "MY.movingDirectionS",
+  "movingDirectionSSW" = "MY.movingDirectionSSW",
+  "movingDirectionSW" = "MY.movingDirectionSW",
+  "movingDirectionWSW" = "MY.movingDirectionWSW",
+  "movingDirectionW" = "MY.movingDirectionW",
+  "movingDirectionWNW" = "MY.movingDirectionWNW",
+  "movingDirectionNW" = "MY.movingDirectionNW",
+  "movingDirectionNNW" = "MY.movingDirectionNNW"
+}
+export enum NativeStatusEnum {
+  "empty" = "",
+  "native" = "MY.native",
+  "nonNative" = "MY.nonNative"
+}
+export enum NestTypeEnum {
+  "empty" = "",
+  "nestTypeTreeCavity" = "MY.nestTypeTreeCavity",
+  "nestTypeTwig" = "MY.nestTypeTwig",
+  "nestTypeNestBox" = "MY.nestTypeNestBox",
+  "nestTypeBuilding" = "MY.nestTypeBuilding",
+  "nestTypeGroundCavity" = "MY.nestTypeGroundCavity",
+  "nestTypeOther" = "MY.nestTypeOther"
+}
+export enum PlantLifeStageEnum {
+  "empty" = "",
+  "plantLifeStageSterile" = "MY.plantLifeStageSterile",
+  "plantLifeStageFertile" = "MY.plantLifeStageFertile",
+  "plantLifeStageSeed" = "MY.plantLifeStageSeed",
+  "plantLifeStageSprout" = "MY.plantLifeStageSprout",
+  "plantLifeStageBud" = "MY.plantLifeStageBud",
+  "plantLifeStageFlower" = "MY.plantLifeStageFlower",
+  "plantLifeStageWitheredFlower" = "MY.plantLifeStageWitheredFlower",
+  "plantLifeStageRipeningFruit" = "MY.plantLifeStageRipeningFruit",
+  "plantLifeStageRipeFruit" = "MY.plantLifeStageRipeFruit",
+  "plantLifeStageDeadSprout" = "MY.plantLifeStageDeadSprout",
+  "plantLifeStageSubterranean" = "MY.plantLifeStageSubterranean"
+}
+export enum PlantStatusCodeEnum {
+  "empty" = "",
+  "plantStatusCodeL" = "MY.plantStatusCodeL",
+  "plantStatusCodeA" = "MY.plantStatusCodeA",
+  "plantStatusCodeAV" = "MY.plantStatusCodeAV",
+  "plantStatusCodeAOV" = "MY.plantStatusCodeAOV",
+  "plantStatusCodeAN" = "MY.plantStatusCodeAN",
+  "plantStatusCodeANV" = "MY.plantStatusCodeANV",
+  "plantStatusCodeANS" = "MY.plantStatusCodeANS",
+  "plantStatusCodeT" = "MY.plantStatusCodeT",
+  "plantStatusCodeTV" = "MY.plantStatusCodeTV",
+  "plantStatusCodeTOV" = "MY.plantStatusCodeTOV",
+  "plantStatusCodeTNV" = "MY.plantStatusCodeTNV",
+  "plantStatusCodeTNS" = "MY.plantStatusCodeTNS",
+  "plantStatusCodeV" = "MY.plantStatusCodeV",
+  "plantStatusCodeOV" = "MY.plantStatusCodeOV",
+  "plantStatusCodeN" = "MY.plantStatusCodeN",
+  "plantStatusCodeNV" = "MY.plantStatusCodeNV",
+  "plantStatusCodeNS" = "MY.plantStatusCodeNS",
+  "plantStatusCodeE" = "MY.plantStatusCodeE",
+  "plantStatusCodeTE" = "MY.plantStatusCodeTE",
+  "plantStatusCodeTVE" = "MY.plantStatusCodeTVE",
+  "plantStatusCodeTOVE" = "MY.plantStatusCodeTOVE",
+  "plantStatusCodeTNVE" = "MY.plantStatusCodeTNVE",
+  "plantStatusCodeTNSE" = "MY.plantStatusCodeTNSE",
+  "plantStatusCodeTN" = "MY.plantStatusCodeTN",
+  "plantStatusCodeTNE" = "MY.plantStatusCodeTNE",
+  "plantStatusCodeR" = "MY.plantStatusCodeR",
+  "plantStatusCodeC" = "MY.plantStatusCodeC",
+  "plantStatusCodeH" = "MY.plantStatusCodeH",
+  "plantStatusCodeG" = "MY.plantStatusCodeG",
+  "plantStatusCodeF" = "MY.plantStatusCodeF"
+}
+export enum Preservations {
+  "empty" = "",
+  "preservationPressed" = "MY.preservationPressed",
+  "preservationDry" = "MY.preservationDry",
+  "preservationCriticalPointDrying" = "MY.preservationCriticalPointDrying",
+  "preservationPinned" = "MY.preservationPinned",
+  "preservationGlued" = "MY.preservationGlued",
+  "preservationLiquid" = "MY.preservationLiquid",
+  "preservationEthanol" = "MY.preservationEthanol",
+  "preservationEthanolPure" = "MY.preservationEthanolPure",
+  "preservationEthanol70" = "MY.preservationEthanol70",
+  "preservationEthanol80" = "MY.preservationEthanol80",
+  "preservationEthanol80Pure" = "MY.preservationEthanol80Pure",
+  "preservationEthanol96" = "MY.preservationEthanol96",
+  "preservationEthanolDenatured" = "MY.preservationEthanolDenatured",
+  "preservationEthanolFormalin" = "MY.preservationEthanolFormalin",
+  "preservationEthanolExFormalin" = "MY.preservationEthanolExFormalin",
+  "preservationFormalin" = "MY.preservationFormalin",
+  "preservationBouinSolution" = "MY.preservationBouinSolution",
+  "preservationPampelsFluid" = "MY.preservationPampelsFluid",
+  "preservationGlycerol" = "MY.preservationGlycerol",
+  "preservationParaffin" = "MY.preservationParaffin",
+  "preservationMercuricChloride" = "MY.preservationMercuricChloride",
+  "preservationCryopreserved" = "MY.preservationCryopreserved",
+  "preservationFrozen" = "MY.preservationFrozen",
+  "preservationFrozenMinus80C" = "MY.preservationFrozenMinus80C",
+  "preservationFreezeDried" = "MY.preservationFreezeDried",
+  "preservationGoldPlated" = "MY.preservationGoldPlated",
+  "preservationActiveCulture" = "MY.preservationActiveCulture",
+  "preservationLiving" = "MY.preservationLiving",
+  "preservationSlide" = "MY.preservationSlide",
+  "preservationSlideCanadaBalsam" = "MY.preservationSlideCanadaBalsam",
+  "preservationSlideEuparal" = "MY.preservationSlideEuparal",
+  "preservationSlidePolyviol" = "MY.preservationSlidePolyviol",
+  "preservationStuffed" = "MY.preservationStuffed",
+  "preservationCast" = "MY.preservationCast",
+  "preservationPlastinated" = "MY.preservationPlastinated",
+  "preservationFrozenMinus80CAndEthanolMinus20C" = "MY.preservationFrozenMinus80CAndEthanolMinus20C"
+}
+export enum ProvenanceEnum {
+  "empty" = "",
+  "provenanceUnknown" = "MY.provenanceUnknown",
+  "provenanceCultivated" = "MY.provenanceCultivated",
+  "provenanceCultivatedUnsure" = "MY.provenanceCultivatedUnsure",
+  "provenanceCultivatedPropagatedFromWildSource" = "MY.provenanceCultivatedPropagatedFromWildSource",
+  "provenanceWildSource" = "MY.provenanceWildSource",
+  "provenanceWildSourceUnsure" = "MY.provenanceWildSourceUnsure",
+  "provenanceEscapedCultivated" = "MY.provenanceEscapedCultivated",
+  "provenancePropagule" = "MY.provenancePropagule"
+}
+export enum RecordBases {
+  "empty" = "",
+  "recordBasisPreservedSpecimen" = "MY.recordBasisPreservedSpecimen",
+  "recordBasisHumanObservation" = "MY.recordBasisHumanObservation",
+  "recordBasisHumanObservationSeen" = "MY.recordBasisHumanObservationSeen",
+  "recordBasisHumanObservationHeard" = "MY.recordBasisHumanObservationHeard",
+  "recordBasisHumanObservationHandled" = "MY.recordBasisHumanObservationHandled",
+  "recordBasisHumanObservationPhoto" = "MY.recordBasisHumanObservationPhoto",
+  "recordBasisHumanObservationAudio" = "MY.recordBasisHumanObservationAudio",
+  "recordBasisHumanObservationVideo" = "MY.recordBasisHumanObservationVideo",
+  "recordBasisHumanObservationIndirect" = "MY.recordBasisHumanObservationIndirect",
+  "recordBasisMachineObservation" = "MY.recordBasisMachineObservation",
+  "recordBasisMachineObservationPhoto" = "MY.recordBasisMachineObservationPhoto",
+  "recordBasisMachineObservationVideo" = "MY.recordBasisMachineObservationVideo",
+  "recordBasisMachineObservationAudio" = "MY.recordBasisMachineObservationAudio",
+  "recordBasisMachineObservationGeologger" = "MY.recordBasisMachineObservationGeologger",
+  "recordBasisMachineObservationSatelliteTransmitter" = "MY.recordBasisMachineObservationSatelliteTransmitter",
+  "recordBasisFossilSpecimen" = "MY.recordBasisFossilSpecimen",
+  "recordBasisSubfossilSpecimen" = "MY.recordBasisSubfossilSpecimen",
+  "recordBasisSubfossilSpecimenAmberInclusion" = "MY.recordBasisSubfossilSpecimenAmberInclusion",
+  "recordBasisMaterialSample" = "MY.recordBasisMaterialSample",
+  "recordBasisMaterialSampleAir" = "MY.recordBasisMaterialSampleAir",
+  "recordBasisMaterialSampleSoil" = "MY.recordBasisMaterialSampleSoil",
+  "recordBasisMaterialSampleWater" = "MY.recordBasisMaterialSampleWater",
+  "recordBasisMicrobialSpecimen" = "MY.recordBasisMicrobialSpecimen",
+  "recordBasisLivingSpecimen" = "MY.recordBasisLivingSpecimen",
+  "recordBasisLiterature" = "MY.recordBasisLiterature"
+}
+export enum RecordPartsEnum {
+  "empty" = "",
+  "recordPartsBones" = "MY.recordPartsBones",
+  "recordPartsAntler" = "MY.recordPartsAntler",
+  "recordPartsHead" = "MY.recordPartsHead",
+  "recordPartsSkull" = "MY.recordPartsSkull",
+  "recordPartsSkin" = "MY.recordPartsSkin",
+  "recordPartsWing" = "MY.recordPartsWing",
+  "recordPartsTail" = "MY.recordPartsTail",
+  "recordPartsTissue" = "MY.recordPartsTissue",
+  "recordPartsFeather" = "MY.recordPartsFeather",
+  "recordPartsEgg" = "MY.recordPartsEgg",
+  "recordPartsIntestine" = "MY.recordPartsIntestine",
+  "recordPartsGonad" = "MY.recordPartsGonad",
+  "recordPartsSeed" = "MY.recordPartsSeed",
+  "recordPartsNest" = "MY.recordPartsNest",
+  "recordPartsFaeces" = "MY.recordPartsFaeces",
+  "recordPartsFeedingMarks" = "MY.recordPartsFeedingMarks",
+  "recordPartsTracks" = "MY.recordPartsTracks",
+  "recordPartsScale" = "MY.recordPartsScale",
+  "recordPartsFin" = "MY.recordPartsFin",
+  "recordPartsFull" = "MY.recordPartsFull",
+  "recordPartsPart" = "MY.recordPartsPart",
+  "recordPartsActiveCulture" = "MY.recordPartsActiveCulture",
+  "recordPartsCutting" = "MY.recordPartsCutting",
+  "recordPartsVegetativePart" = "MY.recordPartsVegetativePart",
+  "recordPartsFreezeDried" = "MY.recordPartsFreezeDried",
+  "recordPartsDryIce" = "MY.recordPartsDryIce",
+  "recordPartsDNA" = "MY.recordPartsDNA",
+  "recordPartsShell" = "MY.recordPartsShell",
+  "recordPartsWholePlant" = "MY.recordPartsWholePlant",
+  "recordPartsTissueCulture" = "MY.recordPartsTissueCulture",
+  "recordPartsMount" = "MY.recordPartsMount",
+  "recordPartsSkullAndBones" = "My.recordPartsSkullAndBones"
+}
+export enum SamplingMethods {
+  "empty" = "",
+  "samplingMethodCarnet" = "MY.samplingMethodCarnet",
+  "samplingMethodFeromonetrap" = "MY.samplingMethodFeromonetrap",
+  "samplingMethodNet" = "MY.samplingMethodNet",
+  "samplingMethodDrag" = "MY.samplingMethodDrag",
+  "samplingMethodWindowtrap" = "MY.samplingMethodWindowtrap",
+  "samplingMethodDigging" = "MY.samplingMethodDigging",
+  "samplingMethodFishNet" = "MY.samplingMethodFishNet",
+  "samplingMethodHand" = "MY.samplingMethodHand",
+  "samplingMethodReared" = "MY.samplingMethodReared",
+  "samplingMethodEpupa" = "MY.samplingMethodEpupa",
+  "samplingMethodExovo" = "MY.samplingMethodExovo",
+  "samplingMethodElarva" = "MY.samplingMethodElarva",
+  "samplingMethodFishTrap" = "MY.samplingMethodFishTrap",
+  "samplingMethodYellowWindowTrap" = "MY.samplingMethodYellowWindowTrap",
+  "samplingMethodYellowpan" = "MY.samplingMethodYellowpan",
+  "samplingMethodTriangleDrag" = "MY.samplingMethodTriangleDrag",
+  "samplingMethodPitfall" = "MY.samplingMethodPitfall",
+  "samplingMethodEclectortrap" = "MY.samplingMethodEclectortrap",
+  "samplingMethodDungTrap" = "MY.samplingMethodDungTrap",
+  "samplingMethodBoard" = "MY.samplingMethodBoard",
+  "samplingMethodYellowtrap" = "MY.samplingMethodYellowtrap",
+  "samplingMethodMistnet" = "MY.samplingMethodMistnet",
+  "samplingMethodSweeping" = "MY.samplingMethodSweeping",
+  "samplingMethodSoilsample" = "MY.samplingMethodSoilsample",
+  "samplingMethodWashing" = "MY.samplingMethodWashing",
+  "samplingMethodMalaise" = "MY.samplingMethodMalaise",
+  "samplingMethodPantrap" = "MY.samplingMethodPantrap",
+  "samplingMethodSeine" = "MY.samplingMethodSeine",
+  "samplingMethodAngleFishing" = "MY.samplingMethodAngleFishing",
+  "samplingMethodTrampling" = "MY.samplingMethodTrampling",
+  "samplingMethodBeamTrawl" = "MY.samplingMethodBeamTrawl",
+  "samplingMethodTrap" = "MY.samplingMethodTrap",
+  "samplingMethodDropping" = "MY.samplingMethodDropping",
+  "samplingMethodTrunkWindowTrap" = "MY.samplingMethodTrunkWindowTrap",
+  "samplingMethodElectrofishing" = "MY.samplingMethodElectrofishing",
+  "samplingMethodSifting" = "MY.samplingMethodSifting",
+  "samplingMethodDiverInsectTrap" = "MY.samplingMethodDiverInsectTrap",
+  "samplingMethodDiving" = "MY.samplingMethodDiving",
+  "samplingMethodBait" = "MY.samplingMethodBait",
+  "samplingMethodBaittrap" = "MY.samplingMethodBaittrap",
+  "samplingMethodTrawling" = "MY.samplingMethodTrawling",
+  "samplingMethodLight" = "MY.samplingMethodLight",
+  "samplingMethodLightTrap" = "MY.samplingMethodLightTrap",
+  "samplingMethodWaterBucket" = "MY.samplingMethodWaterBucket",
+  "samplingMethodAquaticNet" = "MY.samplingMethodAquaticNet",
+  "samplingMethodAquaticEmergenceTrap" = "MY.samplingMethodAquaticEmergenceTrap",
+  "samplingMethodWaterSieve" = "MY.samplingMethodWaterSieve",
+  "samplingMethodOther" = "MY.samplingMethodOther"
+}
+export enum SeedMaturityEnum {
+  "empty" = "",
+  "seedMaturityImmature" = "MY.seedMaturityImmature",
+  "seedMaturityMature" = "MY.seedMaturityMature",
+  "seedMaturityMixed" = "MY.seedMaturityMixed"
+}
+export enum SeedMorphologyEnum {
+  "empty" = "",
+  "seedMorphologyBent" = "MY.seedMorphologyBent",
+  "seedMorphologyBroad" = "MY.seedMorphologyBroad",
+  "seedMorphologyCapitate" = "MY.seedMorphologyCapitate",
+  "seedMorphologyFolded" = "MY.seedMorphologyFolded",
+  "seedMorphologyLateral" = "MY.seedMorphologyLateral",
+  "seedMorphologyLinearFullyDeveloped" = "MY.seedMorphologyLinearFullyDeveloped",
+  "seedMorphologyLinearUnderdeveloped" = "MY.seedMorphologyLinearUnderdeveloped",
+  "seedMorphologyPeripheral" = "MY.seedMorphologyPeripheral",
+  "seedMorphologyRudimentary" = "MY.seedMorphologyRudimentary",
+  "seedMorphologySpatulateFullyDeveloped" = "MY.seedMorphologySpatulateFullyDeveloped",
+  "seedMorphologySpatulateUnderdeveloped" = "MY.seedMorphologySpatulateUnderdeveloped",
+  "seedMorphologyUndifferentiated" = "MY.seedMorphologyUndifferentiated",
+  "seedMorphologyInvesting" = "MY.seedMorphologyInvesting"
+}
+export enum Sexes {
+  "empty" = "",
+  "sexM" = "MY.sexM",
+  "sexF" = "MY.sexF",
+  "sexW" = "MY.sexW",
+  "sexU" = "MY.sexU",
+  "sexN" = "MY.sexN",
+  "sexX" = "MY.sexX",
+  "sexE" = "MY.sexE",
+  "sexC" = "MY.sexC"
+}
+export enum SmellEnum {
+  "empty" = "",
+  "smellNotSmelled" = "MY.smellNotSmelled",
+  "smellNoSmelled" = "MY.smellNoSmelled",
+  "smellWeak" = "MY.smellWeak",
+  "smellModerate" = "MY.smellModerate",
+  "smellStrong" = "MY.smellStrong"
+}
+export enum SubstrateEnum {
+  "empty" = "",
+  "substrateGround" = "MY.substrateGround",
+  "substrateGroundLowShrubs" = "MY.substrateGroundLowShrubs",
+  "substrateGroundLichens" = "MY.substrateGroundLichens",
+  "substrateGroundHerbs" = "MY.substrateGroundHerbs",
+  "substrateGroundMosses" = "MY.substrateGroundMosses",
+  "substrateGroundSphagnum" = "MY.substrateGroundSphagnum",
+  "substrateGroundGrassy" = "MY.substrateGroundGrassy",
+  "substrateGroundNeedleLitter" = "MY.substrateGroundNeedleLitter",
+  "substrateGroundLeafLitter" = "MY.substrateGroundLeafLitter",
+  "substrateGroundMixedLitter" = "MY.substrateGroundMixedLitter",
+  "substrateGroundSandySoil" = "MY.substrateGroundSandySoil",
+  "substrateGroundGravelSoil" = "MY.substrateGroundGravelSoil",
+  "substrateGroundClayeySoil" = "MY.substrateGroundClayeySoil",
+  "substrateGroundHeathHumus" = "MY.substrateGroundHeathHumus",
+  "substrateGroundMull" = "MY.substrateGroundMull",
+  "substrateGroundPeat" = "MY.substrateGroundPeat",
+  "substrateGroundBurnedSoil" = "MY.substrateGroundBurnedSoil",
+  "substrateLivingTree" = "MY.substrateLivingTree",
+  "substrateLivingTreeTrunk" = "MY.substrateLivingTreeTrunk",
+  "substrateLivingTreeBase" = "MY.substrateLivingTreeBase",
+  "substrateLivingTreeRoots" = "MY.substrateLivingTreeRoots",
+  "substrateLivingTreeBranch" = "MY.substrateLivingTreeBranch",
+  "substrateLivingTreeDeadBranch" = "MY.substrateLivingTreeDeadBranch",
+  "substrateLivingTreeDeadLimb" = "MY.substrateLivingTreeDeadLimb",
+  "substrateLivingTreeLeaf" = "MY.substrateLivingTreeLeaf",
+  "substrateLivingTreeNeedle" = "MY.substrateLivingTreeNeedle",
+  "substrateDeadWood" = "MY.substrateDeadWood",
+  "substrateDeadWoodStandingTreeTrunk" = "MY.substrateDeadWoodStandingTreeTrunk",
+  "substrateDeadWoodStandingTreeBranch" = "MY.substrateDeadWoodStandingTreeBranch",
+  "substrateDeadWoodStandingTreeBase" = "MY.substrateDeadWoodStandingTreeBase",
+  "substrateDeadWoodFallenTreeTrunk" = "MY.substrateDeadWoodFallenTreeTrunk",
+  "substrateDeadWoodFallenTreeBranch" = "MY.substrateDeadWoodFallenTreeBranch",
+  "substrateDeadWoodUpturnedRoots" = "MY.substrateDeadWoodUpturnedRoots",
+  "substrateDeadWoodDeadRoots" = "MY.substrateDeadWoodDeadRoots",
+  "substrateDeadWoodStump" = "MY.substrateDeadWoodStump",
+  "substrateDeadWoodFallenBranch" = "MY.substrateDeadWoodFallenBranch",
+  "substrateDeadWoodCone" = "MY.substrateDeadWoodCone",
+  "substrateDeadWoodTwigs" = "MY.substrateDeadWoodTwigs",
+  "substrateDeadWoodBark" = "MY.substrateDeadWoodBark",
+  "substrateDeadWoodSawdust" = "MY.substrateDeadWoodSawdust",
+  "substrateDeadWoodPieceOfWood" = "MY.substrateDeadWoodPieceOfWood",
+  "substrateDeadWoodLoggingResidue" = "MY.substrateDeadWoodLoggingResidue",
+  "substrateDeadWoodLog" = "MY.substrateDeadWoodLog",
+  "substrateDeadWoodDriftwood" = "MY.substrateDeadWoodDriftwood",
+  "substrateDeadWoodConstructionWood" = "MY.substrateDeadWoodConstructionWood",
+  "substrateDung" = "MY.substrateDung",
+  "substrateCompost" = "MY.substrateCompost",
+  "substrateLivingShoot" = "MY.substrateLivingShoot",
+  "substrateDeadShoot" = "MY.substrateDeadShoot",
+  "substrateLivingFungus" = "MY.substrateLivingFungus",
+  "substrateDeadFungus" = "MY.substrateDeadFungus",
+  "substrateLivingAnimal" = "MY.substrateLivingAnimal",
+  "substrateDeadAnimal" = "MY.substrateDeadAnimal",
+  "substrateRockSurface" = "MY.substrateRockSurface",
+  "substrateDeadNeedle" = "MY.substrateDeadNeedle",
+  "substrateDeadLeaf" = "MY.substrateDeadLeaf"
+}
+export enum SubstrateDecayStageEnum {
+  "empty" = "",
+  "substrateDecayStageEnum1" = "MY.substrateDecayStageEnum1",
+  "substrateDecayStageEnum2" = "MY.substrateDecayStageEnum2",
+  "substrateDecayStageEnum3" = "MY.substrateDecayStageEnum3",
+  "substrateDecayStageEnum4" = "MY.substrateDecayStageEnum4",
+  "substrateDecayStageEnum5" = "MY.substrateDecayStageEnum5"
+}
+export enum SubstrateTreeClassificationEnum {
+  "empty" = "",
+  "substrateTreeClassificationEnum1" = "MY.substrateTreeClassificationEnum1",
+  "substrateTreeClassificationEnum2" = "MY.substrateTreeClassificationEnum2",
+  "substrateTreeClassificationEnum3" = "MY.substrateTreeClassificationEnum3",
+  "substrateTreeClassificationEnum4" = "MY.substrateTreeClassificationEnum4",
+  "substrateTreeClassificationEnum5" = "MY.substrateTreeClassificationEnum5",
+  "substrateTreeClassificationEnum6" = "MY.substrateTreeClassificationEnum6"
+}
+export enum TasteEnum {
+  "empty" = "",
+  "tasteNotTasted" = "MY.tasteNotTasted",
+  "tasteNoTaste" = "MY.tasteNoTaste",
+  "tasteWeak" = "MY.tasteWeak",
+  "tasteModerate" = "MY.tasteModerate",
+  "tasteStrong" = "MY.tasteStrong"
+}
+export enum TaxonConfidenceEnum {
+  "empty" = "",
+  "taxonConfidenceSure" = "MY.taxonConfidenceSure",
+  "taxonConfidenceUnsure" = "MY.taxonConfidenceUnsure",
+  "taxonConfidenceSubspeciesUnsure" = "MY.taxonConfidenceSubspeciesUnsure"
+}
+export enum WildEnum {
+  "empty" = "",
+  "wildWild" = "MY.wildWild",
+  "wildUnknown" = "MY.wildUnknown",
+  "wildNonWild" = "MY.wildNonWild"
+}
+export enum PublicityRestrictionsEnum {
+  "empty" = "",
+  "publicityRestrictionsPublic" = "MZ.publicityRestrictionsPublic",
+  "publicityRestrictionsProtected" = "MZ.publicityRestrictionsProtected",
+  "publicityRestrictionsPrivate" = "MZ.publicityRestrictionsPrivate"
+}
 export class Unit {
   "@context"?: string;
   id?: string;
@@ -18,30 +596,7 @@ export class Unit {
    */
   DNASampleLocation?: string;
   abundanceString?: string;
-  abundanceUnit?:
-    | ""
-    | "MY.abundanceUnitIndividualCount"
-    | "MY.abundanceUnitPairCount"
-    | "MY.abundanceUnitNest"
-    | "MY.abundanceUnitBreedingSite"
-    | "MY.abundanceUnitFeedingSite"
-    | "MY.abundanceUnitColony"
-    | "MY.abundanceUnitFruitbody"
-    | "MY.abundanceUnitSprout"
-    | "MY.abundanceUnitHummock"
-    | "MY.abundanceUnitThallus"
-    | "MY.abundanceUnitFlower"
-    | "MY.abundanceUnitSpot"
-    | "MY.abundanceUnitTrunk"
-    | "MY.abundanceUnitQueen"
-    | "MY.abundanceUnitShell"
-    | "MY.abundanceUnitDroppings"
-    | "MY.abundanceUnitMarks"
-    | "MY.abundanceUnitIndirect"
-    | "MY.abundanceUnitSquareDM"
-    | "MY.abundanceUnitSquareM"
-    | "MY.abundanceUnitRelativeDensity"
-    | "MY.abundanceUnitOccursDoesNotOccur";
+  abundanceUnit?: AbundanceUnitEnum;
   /**
    * Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)
    */
@@ -58,67 +613,12 @@ export class Unit {
   alive?: boolean;
   ankleInMillimeters?: string[];
   areaInSquareMeters?: number;
-  atlasCode?:
-    | ""
-    | "MY.atlasCodeEnum1"
-    | "MY.atlasCodeEnum2"
-    | "MY.atlasCodeEnum3"
-    | "MY.atlasCodeEnum4"
-    | "MY.atlasCodeEnum5"
-    | "MY.atlasCodeEnum6"
-    | "MY.atlasCodeEnum61"
-    | "MY.atlasCodeEnum62"
-    | "MY.atlasCodeEnum63"
-    | "MY.atlasCodeEnum64"
-    | "MY.atlasCodeEnum65"
-    | "MY.atlasCodeEnum66"
-    | "MY.atlasCodeEnum7"
-    | "MY.atlasCodeEnum71"
-    | "MY.atlasCodeEnum72"
-    | "MY.atlasCodeEnum73"
-    | "MY.atlasCodeEnum74"
-    | "MY.atlasCodeEnum75"
-    | "MY.atlasCodeEnum8"
-    | "MY.atlasCodeEnum81"
-    | "MY.atlasCodeEnum82";
-  batBehavior?: "" | "MY.batBehaviorHibernating" | "MY.batBehaviorRoosting" | "MY.batBehaviorHunting";
+  atlasCode?: AtlasCodeEnum;
+  batBehavior?: BatBehaviorEnum;
   beakInMillimeters?: string[];
-  birdAge?:
-    | ""
-    | "MY.birdAgePp"
-    | "MY.birdAgePm"
-    | "MY.birdAgeFl"
-    | "MY.birdAgePlus1kv"
-    | "MY.birdAge1Kv"
-    | "MY.birdAgePlus2Kv"
-    | "MY.birdAge2kv"
-    | "MY.birdAgePlus3Kv"
-    | "MY.birdAge3Kv"
-    | "MY.birdAgePlus4Kv"
-    | "MY.birdAge4Kv"
-    | "MY.birdAgePlus5Kv"
-    | "MY.birdAge5Kv"
-    | "MY.birdAgePlus6Kv"
-    | "MY.birdAge6Kv"
-    | "MY.birdAgePlus7Kv"
-    | "MY.birdAge7Kv"
-    | "MY.birdAgePlus8Kv"
-    | "MY.birdAge8Kv";
+  birdAge?: BirdAgeEnum;
   birdBehavior?: string[];
-  birdPlumage?:
-    | ""
-    | "MY.birdPlumageAd"
-    | "MY.birdPlumageEijp"
-    | "MY.birdPlumageImm"
-    | "MY.birdPlumageJp"
-    | "MY.birdPlumageJuv"
-    | "MY.birdPlumageNpuk"
-    | "MY.birdPlumagePull"
-    | "MY.birdPlumageSubad"
-    | "MY.birdPlumageTp"
-    | "MY.birdPlumageVp"
-    | "MY.birdPlumagePep"
-    | "MY.birdPlumageSs";
+  birdPlumage?: BirdPlumageEnum;
   breeding?: boolean;
   broodSize?: number;
   /**
@@ -138,50 +638,16 @@ export class Unit {
    * Estimation of decay stage (lahoaste in Finnish) on the scale of 1 to 5 and/or description
    */
   decayStage?: string;
-  distance?:
-    | ""
-    | "MY.distanceOverFlight"
-    | "MY.distanceNear"
-    | "MY.distanceQuiteFar"
-    | "MY.distanceFar"
-    | "MY.distanceVeryFar";
+  distance?: DistanceEnum;
   /**
    * For palaeontological specimens, earliest possible geochronologic epoch or lowest chronostratigraphic series attributable to the stratigraphic horizon from which the specimen was collected
    */
-  earliestEpochOrLowestSeries?:
-    | ""
-    | "MY.epochOrSeriesCambrian"
-    | "MY.epochOrSeriesCarboniferous"
-    | "MY.epochOrSeriesCretaceous"
-    | "MY.epochOrSeriesDevonian"
-    | "MY.epochOrSeriesEdiacaran"
-    | "MY.epochOrSeriesJurassic"
-    | "MY.epochOrSeriesOrdovician"
-    | "MY.epochOrSeriesPermian"
-    | "MY.epochOrSeriesQuaternary"
-    | "MY.epochOrSeriesRecent"
-    | "MY.epochOrSeriesSilurian"
-    | "MY.epochOrSeriesTertiary"
-    | "MY.epochOrSeriesTriassic";
+  earliestEpochOrLowestSeries?: EpochOrSeries;
   femaleIndividualCount?: number;
   /**
    * Fruit type of the collected fruits, used for botanical garden accessions/seed bank.
    */
-  fruitType?:
-    | ""
-    | "MY.fruitTypeAchene"
-    | "MY.fruitTypeBerry"
-    | "MY.fruitTypeCapsule"
-    | "MY.fruitTypeCaryopsis"
-    | "MY.fruitTypeCone"
-    | "MY.fruitTypeDrupe"
-    | "MY.fruitTypeFollicle"
-    | "MY.fruitTypeLegume"
-    | "MY.fruitTypeNut"
-    | "MY.fruitTypeOther"
-    | "MY.fruitTypePome"
-    | "MY.fruitTypeSchizocarp"
-    | "MY.fruitTypeSiliqua";
+  fruitType?: FruitTypeEnum;
   /**
    * Genotype of the microbial strain
    */
@@ -203,14 +669,7 @@ export class Unit {
   hasSubUnit?: string[];
   hostID?: string;
   hostInformalNameString?: string;
-  indirectObservationType?:
-    | ""
-    | "MY.indirectObservationTypeFeces"
-    | "MY.indirectObservationTypeSnowTracks"
-    | "MY.indirectObservationTypeUrine"
-    | "MY.indirectObservationTypeFeasting"
-    | "MY.indirectObservationTypeFoodStock"
-    | "MY.indirectObservationTypeNone";
+  indirectObservationType?: IndirectObservationTypeEnum;
   individualCount?: number;
   /**
    * Description of the infestation status of the collected seeds, used for botanical garden accessions/seed bank.
@@ -236,47 +695,12 @@ export class Unit {
   /**
    * For palaeontological specimens, latest possible geochronologic epoch or highest chronostratigraphic series attributable to the stratigraphic horizon from which the specimen was collected.
    */
-  latestEpochOrHighestSeries?:
-    | ""
-    | "MY.epochOrSeriesCambrian"
-    | "MY.epochOrSeriesCarboniferous"
-    | "MY.epochOrSeriesCretaceous"
-    | "MY.epochOrSeriesDevonian"
-    | "MY.epochOrSeriesEdiacaran"
-    | "MY.epochOrSeriesJurassic"
-    | "MY.epochOrSeriesOrdovician"
-    | "MY.epochOrSeriesPermian"
-    | "MY.epochOrSeriesQuaternary"
-    | "MY.epochOrSeriesRecent"
-    | "MY.epochOrSeriesSilurian"
-    | "MY.epochOrSeriesTertiary"
-    | "MY.epochOrSeriesTriassic";
+  latestEpochOrHighestSeries?: EpochOrSeries;
   lengthInMillimeters?: string[];
   /**
    * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
    */
-  lifeStage?:
-    | ""
-    | "MY.lifeStageEgg"
-    | "MY.lifeStageLarva"
-    | "MY.lifeStagePupa"
-    | "MY.lifeStageJuvenile"
-    | "MY.lifeStageNymph"
-    | "MY.lifeStageSubimago"
-    | "MY.lifeStageImmature"
-    | "MY.lifeStageAdult"
-    | "MY.lifeStageFertile"
-    | "MY.lifeStageSterile"
-    | "MY.lifeStageTadpole"
-    | "MY.lifeStageEmbryo"
-    | "MY.lifeStageSubadult"
-    | "MY.lifeStageMature"
-    | "MY.lifeStagePullus"
-    | "MY.lifeStageHatchedEgg"
-    | "MY.lifeStageHatchedPupa"
-    | "MY.lifeStageGall"
-    | "MY.lifeStageMarks"
-    | "MY.lifeStageTriungulin";
+  lifeStage?: LifeStages;
   /**
    * Free-text notes or addtional information about the life stage. If multiple values present, describe them here.
    */
@@ -290,137 +714,37 @@ export class Unit {
   /**
    * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
    */
-  measurement?: {
-    DNAConcentrationNgPerMicroliter?: number[];
-    DNARatioOfAbsorbance260And280?: number[];
-    DNAVolumeMicroliters?: number[];
-    beakMillimeters?: number[];
-    bodyCentimeters?: number[];
-    bodyMillimeters?: number[];
-    earLengthMillimeters?: number[];
-    embryoCount?: number[];
-    follicleDiameterMillimeters?: number[];
-    footLengthMillimeters?: number[];
-    forearmMillimeters?: number[];
-    gonadMillimeters?: number[];
-    /**
-     * Which parent or larger collection this is part of.
-     */
-    isPartOf?: string;
-    tailCentimeters?: number[];
-    tailMillimeters?: number[];
-    tarsusLengthMillimeters?: number[];
-    totalLengthCentimeters?: number[];
-    totalLengthMillimeters?: number[];
-    uterineScarCount?: number[];
-    weightGrams?: number[];
-    weightKilograms?: number[];
-    wingMaxMillimeters?: number[];
-    wingMillimeters?: number[];
-    wingMinMillimeters?: number[];
-  };
+  measurement?: Measurement;
   /**
    * According to German TRBA August 2015, which is more comprehensive than the EU or Finnish list for bacterial risk groups
    */
-  microbiologicalRiskGroup?:
-    | ""
-    | "MY.microbiologicalRiskGroup1"
-    | "MY.microbiologicalRiskGroup2"
-    | "MY.microbiologicalRiskGroup3"
-    | "MY.microbiologicalRiskGroup4";
+  microbiologicalRiskGroup?: MicrobiologicalRiskGroupEnum;
   /**
    * Microscopic features and measurements, if not recorded separately into measurement fields.
    */
   microscopy?: string;
-  movingDirection?:
-    | ""
-    | "MY.movingDirectionN"
-    | "MY.movingDirectionNNE"
-    | "MY.movingDirectionNE"
-    | "MY.movingDirectionENE"
-    | "MY.movingDirectionE"
-    | "MY.movingDirectionESE"
-    | "MY.movingDirectionSE"
-    | "MY.movingDirectionSSE"
-    | "MY.movingDirectionS"
-    | "MY.movingDirectionSSW"
-    | "MY.movingDirectionSW"
-    | "MY.movingDirectionWSW"
-    | "MY.movingDirectionW"
-    | "MY.movingDirectionWNW"
-    | "MY.movingDirectionNW"
-    | "MY.movingDirectionNNW";
+  movingDirection?: MovingDirectionEnum;
   movingStatus?: string[];
   /**
    * Information on mutant microbial strain.
    */
   mutant?: string;
-  nativeStatus?: "" | "MY.native" | "MY.nonNative";
+  nativeStatus?: NativeStatusEnum;
   nestCount?: number;
   nestNotes?: string;
   nestTreeDiameterInCentimeters?: number;
-  nestType?:
-    | ""
-    | "MY.nestTypeTreeCavity"
-    | "MY.nestTypeTwig"
-    | "MY.nestTypeNestBox"
-    | "MY.nestTypeBuilding"
-    | "MY.nestTypeGroundCavity"
-    | "MY.nestTypeOther";
+  nestType?: NestTypeEnum;
   /**
    * Additional information to the data in each section.
    */
   notes?: string;
   pairCount?: number;
   pairCountOpinion?: number;
-  plantLifeStage?:
-    | ""
-    | "MY.plantLifeStageSterile"
-    | "MY.plantLifeStageFertile"
-    | "MY.plantLifeStageSeed"
-    | "MY.plantLifeStageSprout"
-    | "MY.plantLifeStageBud"
-    | "MY.plantLifeStageFlower"
-    | "MY.plantLifeStageWitheredFlower"
-    | "MY.plantLifeStageRipeningFruit"
-    | "MY.plantLifeStageRipeFruit"
-    | "MY.plantLifeStageDeadSprout"
-    | "MY.plantLifeStageSubterranean";
+  plantLifeStage?: PlantLifeStageEnum;
   /**
    * Status code for the plant (wild, alien etc.)
    */
-  plantStatusCode?:
-    | ""
-    | "MY.plantStatusCodeL"
-    | "MY.plantStatusCodeA"
-    | "MY.plantStatusCodeAV"
-    | "MY.plantStatusCodeAOV"
-    | "MY.plantStatusCodeAN"
-    | "MY.plantStatusCodeANV"
-    | "MY.plantStatusCodeANS"
-    | "MY.plantStatusCodeT"
-    | "MY.plantStatusCodeTV"
-    | "MY.plantStatusCodeTOV"
-    | "MY.plantStatusCodeTNV"
-    | "MY.plantStatusCodeTNS"
-    | "MY.plantStatusCodeV"
-    | "MY.plantStatusCodeOV"
-    | "MY.plantStatusCodeN"
-    | "MY.plantStatusCodeNV"
-    | "MY.plantStatusCodeNS"
-    | "MY.plantStatusCodeE"
-    | "MY.plantStatusCodeTE"
-    | "MY.plantStatusCodeTVE"
-    | "MY.plantStatusCodeTOVE"
-    | "MY.plantStatusCodeTNVE"
-    | "MY.plantStatusCodeTNSE"
-    | "MY.plantStatusCodeTN"
-    | "MY.plantStatusCodeTNE"
-    | "MY.plantStatusCodeR"
-    | "MY.plantStatusCodeC"
-    | "MY.plantStatusCodeH"
-    | "MY.plantStatusCodeG"
-    | "MY.plantStatusCodeF";
+  plantStatusCode?: PlantStatusCodeEnum;
   /**
    * Abundance of the taxon in the field
    */
@@ -432,45 +756,7 @@ export class Unit {
   /**
    * Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.
    */
-  preservation?: (
-    | ""
-    | "MY.preservationPressed"
-    | "MY.preservationDry"
-    | "MY.preservationCriticalPointDrying"
-    | "MY.preservationPinned"
-    | "MY.preservationGlued"
-    | "MY.preservationLiquid"
-    | "MY.preservationEthanol"
-    | "MY.preservationEthanolPure"
-    | "MY.preservationEthanol70"
-    | "MY.preservationEthanol80"
-    | "MY.preservationEthanol80Pure"
-    | "MY.preservationEthanol96"
-    | "MY.preservationEthanolDenatured"
-    | "MY.preservationEthanolFormalin"
-    | "MY.preservationEthanolExFormalin"
-    | "MY.preservationFormalin"
-    | "MY.preservationBouinSolution"
-    | "MY.preservationPampelsFluid"
-    | "MY.preservationGlycerol"
-    | "MY.preservationParaffin"
-    | "MY.preservationMercuricChloride"
-    | "MY.preservationCryopreserved"
-    | "MY.preservationFrozen"
-    | "MY.preservationFrozenMinus80C"
-    | "MY.preservationFreezeDried"
-    | "MY.preservationGoldPlated"
-    | "MY.preservationActiveCulture"
-    | "MY.preservationLiving"
-    | "MY.preservationSlide"
-    | "MY.preservationSlideCanadaBalsam"
-    | "MY.preservationSlideEuparal"
-    | "MY.preservationSlidePolyviol"
-    | "MY.preservationStuffed"
-    | "MY.preservationCast"
-    | "MY.preservationPlastinated"
-    | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
-  )[];
+  preservation?: Preservations[];
   /**
    * Can be used to highlight one unit as primary specimen/observation if there are many in one document. Only one unit per document can be marked as primary.
    */
@@ -478,84 +764,15 @@ export class Unit {
   /**
    * Origin or source of the garden accession
    */
-  provenance?:
-    | ""
-    | "MY.provenanceUnknown"
-    | "MY.provenanceCultivated"
-    | "MY.provenanceCultivatedUnsure"
-    | "MY.provenanceCultivatedPropagatedFromWildSource"
-    | "MY.provenanceWildSource"
-    | "MY.provenanceWildSourceUnsure"
-    | "MY.provenanceEscapedCultivated"
-    | "MY.provenancePropagule";
+  provenance?: ProvenanceEnum;
   /**
    * Type of record, most commonly preserved specimen for museum specimens and observation for associated observations ("seuralaislajihavainto").
    */
-  recordBasis?:
-    | ""
-    | "MY.recordBasisPreservedSpecimen"
-    | "MY.recordBasisHumanObservation"
-    | "MY.recordBasisHumanObservationSeen"
-    | "MY.recordBasisHumanObservationHeard"
-    | "MY.recordBasisHumanObservationHandled"
-    | "MY.recordBasisHumanObservationPhoto"
-    | "MY.recordBasisHumanObservationAudio"
-    | "MY.recordBasisHumanObservationVideo"
-    | "MY.recordBasisHumanObservationIndirect"
-    | "MY.recordBasisMachineObservation"
-    | "MY.recordBasisMachineObservationPhoto"
-    | "MY.recordBasisMachineObservationVideo"
-    | "MY.recordBasisMachineObservationAudio"
-    | "MY.recordBasisMachineObservationGeologger"
-    | "MY.recordBasisMachineObservationSatelliteTransmitter"
-    | "MY.recordBasisFossilSpecimen"
-    | "MY.recordBasisSubfossilSpecimen"
-    | "MY.recordBasisSubfossilSpecimenAmberInclusion"
-    | "MY.recordBasisMaterialSample"
-    | "MY.recordBasisMaterialSampleAir"
-    | "MY.recordBasisMaterialSampleSoil"
-    | "MY.recordBasisMaterialSampleWater"
-    | "MY.recordBasisMicrobialSpecimen"
-    | "MY.recordBasisLivingSpecimen"
-    | "MY.recordBasisLiterature";
+  recordBasis?: RecordBases;
   /**
    * What parts of the record are / have been in storage.
    */
-  recordParts?: (
-    | ""
-    | "MY.recordPartsBones"
-    | "MY.recordPartsAntler"
-    | "MY.recordPartsHead"
-    | "MY.recordPartsSkull"
-    | "MY.recordPartsSkin"
-    | "MY.recordPartsWing"
-    | "MY.recordPartsTail"
-    | "MY.recordPartsTissue"
-    | "MY.recordPartsFeather"
-    | "MY.recordPartsEgg"
-    | "MY.recordPartsIntestine"
-    | "MY.recordPartsGonad"
-    | "MY.recordPartsSeed"
-    | "MY.recordPartsNest"
-    | "MY.recordPartsFaeces"
-    | "MY.recordPartsFeedingMarks"
-    | "MY.recordPartsTracks"
-    | "MY.recordPartsScale"
-    | "MY.recordPartsFin"
-    | "MY.recordPartsFull"
-    | "MY.recordPartsPart"
-    | "MY.recordPartsActiveCulture"
-    | "MY.recordPartsCutting"
-    | "MY.recordPartsVegetativePart"
-    | "MY.recordPartsFreezeDried"
-    | "MY.recordPartsDryIce"
-    | "MY.recordPartsDNA"
-    | "MY.recordPartsShell"
-    | "MY.recordPartsWholePlant"
-    | "MY.recordPartsTissueCulture"
-    | "MY.recordPartsMount"
-    | "My.recordPartsSkullAndBones"
-  )[];
+  recordParts?: RecordPartsEnum[];
   /**
    * Bird or bat ring number, code, colour code or such
    */
@@ -563,577 +780,52 @@ export class Unit {
   /**
    * Main method for (usually intentional) sampling
    */
-  samplingMethod?:
-    | ""
-    | "MY.samplingMethodCarnet"
-    | "MY.samplingMethodFeromonetrap"
-    | "MY.samplingMethodNet"
-    | "MY.samplingMethodDrag"
-    | "MY.samplingMethodWindowtrap"
-    | "MY.samplingMethodDigging"
-    | "MY.samplingMethodFishNet"
-    | "MY.samplingMethodHand"
-    | "MY.samplingMethodReared"
-    | "MY.samplingMethodEpupa"
-    | "MY.samplingMethodExovo"
-    | "MY.samplingMethodElarva"
-    | "MY.samplingMethodFishTrap"
-    | "MY.samplingMethodYellowWindowTrap"
-    | "MY.samplingMethodYellowpan"
-    | "MY.samplingMethodTriangleDrag"
-    | "MY.samplingMethodPitfall"
-    | "MY.samplingMethodEclectortrap"
-    | "MY.samplingMethodDungTrap"
-    | "MY.samplingMethodBoard"
-    | "MY.samplingMethodYellowtrap"
-    | "MY.samplingMethodMistnet"
-    | "MY.samplingMethodSweeping"
-    | "MY.samplingMethodSoilsample"
-    | "MY.samplingMethodWashing"
-    | "MY.samplingMethodMalaise"
-    | "MY.samplingMethodPantrap"
-    | "MY.samplingMethodSeine"
-    | "MY.samplingMethodAngleFishing"
-    | "MY.samplingMethodTrampling"
-    | "MY.samplingMethodBeamTrawl"
-    | "MY.samplingMethodTrap"
-    | "MY.samplingMethodDropping"
-    | "MY.samplingMethodTrunkWindowTrap"
-    | "MY.samplingMethodElectrofishing"
-    | "MY.samplingMethodSifting"
-    | "MY.samplingMethodDiverInsectTrap"
-    | "MY.samplingMethodDiving"
-    | "MY.samplingMethodBait"
-    | "MY.samplingMethodBaittrap"
-    | "MY.samplingMethodTrawling"
-    | "MY.samplingMethodLight"
-    | "MY.samplingMethodLightTrap"
-    | "MY.samplingMethodWaterBucket"
-    | "MY.samplingMethodAquaticNet"
-    | "MY.samplingMethodAquaticEmergenceTrap"
-    | "MY.samplingMethodWaterSieve"
-    | "MY.samplingMethodOther";
+  samplingMethod?: SamplingMethods;
   samplingMethodNotes?: string;
   /**
    * Maturity of the collected seeds, used for botanical garden accessions/seed bank.
    */
-  seedMaturity?: "" | "MY.seedMaturityImmature" | "MY.seedMaturityMature" | "MY.seedMaturityMixed";
+  seedMaturity?: SeedMaturityEnum;
   /**
    * Seed morphology of the collected seeds, used for botanical garden accessions/seed bank.
    */
-  seedMorphology?:
-    | ""
-    | "MY.seedMorphologyBent"
-    | "MY.seedMorphologyBroad"
-    | "MY.seedMorphologyCapitate"
-    | "MY.seedMorphologyFolded"
-    | "MY.seedMorphologyLateral"
-    | "MY.seedMorphologyLinearFullyDeveloped"
-    | "MY.seedMorphologyLinearUnderdeveloped"
-    | "MY.seedMorphologyPeripheral"
-    | "MY.seedMorphologyRudimentary"
-    | "MY.seedMorphologySpatulateFullyDeveloped"
-    | "MY.seedMorphologySpatulateUnderdeveloped"
-    | "MY.seedMorphologyUndifferentiated"
-    | "MY.seedMorphologyInvesting";
+  seedMorphology?: SeedMorphologyEnum;
   /**
    * Sex of the individual(s)
    */
-  sex?: "" | "MY.sexM" | "MY.sexF" | "MY.sexW" | "MY.sexU" | "MY.sexN" | "MY.sexX" | "MY.sexE" | "MY.sexC";
+  sex?: Sexes;
   /**
    * E.g. how sex was determined, by whom and when.
    */
   sexNotes?: string;
   shortHandText?: string;
-  smell?: "" | "MY.smellNotSmelled" | "MY.smellNoSmelled" | "MY.smellWeak" | "MY.smellModerate" | "MY.smellStrong";
+  smell?: SmellEnum;
   smellNotes?: string;
   stratigraphyVerbatim?: string;
-  substrateClassification?:
-    | ""
-    | "MY.substrateGround"
-    | "MY.substrateGroundLowShrubs"
-    | "MY.substrateGroundLichens"
-    | "MY.substrateGroundHerbs"
-    | "MY.substrateGroundMosses"
-    | "MY.substrateGroundSphagnum"
-    | "MY.substrateGroundGrassy"
-    | "MY.substrateGroundNeedleLitter"
-    | "MY.substrateGroundLeafLitter"
-    | "MY.substrateGroundMixedLitter"
-    | "MY.substrateGroundSandySoil"
-    | "MY.substrateGroundGravelSoil"
-    | "MY.substrateGroundClayeySoil"
-    | "MY.substrateGroundHeathHumus"
-    | "MY.substrateGroundMull"
-    | "MY.substrateGroundPeat"
-    | "MY.substrateGroundBurnedSoil"
-    | "MY.substrateLivingTree"
-    | "MY.substrateLivingTreeTrunk"
-    | "MY.substrateLivingTreeBase"
-    | "MY.substrateLivingTreeRoots"
-    | "MY.substrateLivingTreeBranch"
-    | "MY.substrateLivingTreeDeadBranch"
-    | "MY.substrateLivingTreeDeadLimb"
-    | "MY.substrateLivingTreeLeaf"
-    | "MY.substrateLivingTreeNeedle"
-    | "MY.substrateDeadWood"
-    | "MY.substrateDeadWoodStandingTreeTrunk"
-    | "MY.substrateDeadWoodStandingTreeBranch"
-    | "MY.substrateDeadWoodStandingTreeBase"
-    | "MY.substrateDeadWoodFallenTreeTrunk"
-    | "MY.substrateDeadWoodFallenTreeBranch"
-    | "MY.substrateDeadWoodUpturnedRoots"
-    | "MY.substrateDeadWoodDeadRoots"
-    | "MY.substrateDeadWoodStump"
-    | "MY.substrateDeadWoodFallenBranch"
-    | "MY.substrateDeadWoodCone"
-    | "MY.substrateDeadWoodTwigs"
-    | "MY.substrateDeadWoodBark"
-    | "MY.substrateDeadWoodSawdust"
-    | "MY.substrateDeadWoodPieceOfWood"
-    | "MY.substrateDeadWoodLoggingResidue"
-    | "MY.substrateDeadWoodLog"
-    | "MY.substrateDeadWoodDriftwood"
-    | "MY.substrateDeadWoodConstructionWood"
-    | "MY.substrateDung"
-    | "MY.substrateCompost"
-    | "MY.substrateLivingShoot"
-    | "MY.substrateDeadShoot"
-    | "MY.substrateLivingFungus"
-    | "MY.substrateDeadFungus"
-    | "MY.substrateLivingAnimal"
-    | "MY.substrateDeadAnimal"
-    | "MY.substrateRockSurface"
-    | "MY.substrateDeadNeedle"
-    | "MY.substrateDeadLeaf";
-  substrateDecayStage?:
-    | ""
-    | "MY.substrateDecayStageEnum1"
-    | "MY.substrateDecayStageEnum2"
-    | "MY.substrateDecayStageEnum3"
-    | "MY.substrateDecayStageEnum4"
-    | "MY.substrateDecayStageEnum5";
+  substrateClassification?: SubstrateEnum;
+  substrateDecayStage?: SubstrateDecayStageEnum;
   substrateNotes?: string;
   substrateSpecies?: string;
   substrateSpeciesID?: string;
   substrateSpeciesInformalNameString?: string;
-  substrateTreeClassification?: (
-    | ""
-    | "MY.substrateTreeClassificationEnum1"
-    | "MY.substrateTreeClassificationEnum2"
-    | "MY.substrateTreeClassificationEnum3"
-    | "MY.substrateTreeClassificationEnum4"
-    | "MY.substrateTreeClassificationEnum5"
-    | "MY.substrateTreeClassificationEnum6"
-  )[];
+  substrateTreeClassification?: SubstrateTreeClassificationEnum[];
   tailInMillimeters?: string[];
-  taste?: "" | "MY.tasteNotTasted" | "MY.tasteNoTaste" | "MY.tasteWeak" | "MY.tasteModerate" | "MY.tasteStrong";
+  taste?: TasteEnum;
   tasteNotes?: string;
-  taxonConfidence?: "" | "MY.taxonConfidenceSure" | "MY.taxonConfidenceUnsure" | "MY.taxonConfidenceSubspeciesUnsure";
+  taxonConfidence?: TaxonConfidenceEnum;
   twitched?: boolean;
-  unitFact?: {
-    adultIndividualCount?: number;
-    autocompleteSelectedTaxonID?: string;
-    glowWormMicrohabitat?:
-      | ""
-      | "MY.glowWormMicrohabitatEnum1"
-      | "MY.glowWormMicrohabitatEnum2"
-      | "MY.glowWormMicrohabitatEnum3"
-      | "MY.glowWormMicrohabitatEnum4"
-      | "MY.glowWormMicrohabitatEnum5"
-      | "MY.glowWormMicrohabitatEnum6"
-      | "MY.glowWormMicrohabitatEnumOther";
-    individualCountFlock?: number;
-    individualCountInner?: number;
-    individualCountOuter?: number;
-    juvenileIndividualCount?: number;
-    lineTransectObsType?:
-      | ""
-      | "MY.lineTransectObsTypeSong"
-      | "MY.lineTransectObsTypeOtherSound"
-      | "MY.lineTransectObsTypeSeen"
-      | "MY.lineTransectObsTypeSeenMale"
-      | "MY.lineTransectObsTypeSeenFemale"
-      | "MY.lineTransectObsTypeFlyingOverhead"
-      | "MY.lineTransectObsTypeFlock"
-      | "MY.lineTransectObsTypeFlockFlyingOverhead"
-      | "MY.lineTransectObsTypeSeenPair"
-      | "MY.lineTransectObsTypeSeenBrood"
-      | "MY.lineTransectObsTypeSeenNest"
-      | "MY.lineTransectObsTypeUnknown";
-    lineTransectRouteFieldType?: "" | "MY.lineTransectRouteFieldTypeInner" | "MY.lineTransectRouteFieldTypeOuter";
-    lolifeDroppingsCount?:
-      | ""
-      | "MY.lolifeDroppingsCount0"
-      | "MY.lolifeDroppingsCount1"
-      | "MY.lolifeDroppingsCount2"
-      | "MY.lolifeDroppingsCount25"
-      | "MY.lolifeDroppingsCount3"
-      | "MY.lolifeDroppingsCount4";
-    lolifeDroppingsQuality?: "" | "MY.lolifeDroppingsQuality1" | "MY.lolifeDroppingsQuality2";
-    lolifeDroppingsType?:
-      | ""
-      | "MY.lolifeDroppingsTypeRock"
-      | "MY.lolifeDroppingsTypeTree"
-      | "MY.lolifeDroppingsTypeTreeGroup"
-      | "MY.lolifeDroppingsTypeOther";
-    lolifeNestTree?:
-      | ""
-      | "MX.38590"
-      | "MX.37812"
-      | "MX.37999"
-      | "MX.37993"
-      | "MX.38010"
-      | "MX.38008"
-      | "MY.lolifeNestTreeOther";
-    pairCountInner?: number;
-    pairCountOuter?: number;
-    pointCountFlock?: string;
-    runningWaterInVicinity?: boolean;
-    waterbirdFemale?:
-      | ""
-      | "MY.waterbirdFemaleEnumYes"
-      | "MY.waterbirdFemaleEnumNo"
-      | "MY.waterbirdFemaleEnumLonelyPanicking";
-    waterbirdJuvenileAgeClass?:
-      | ""
-      | "MY.waterbirdJuvenileAgeClassIa"
-      | "MY.waterbirdJuvenileAgeClassIb"
-      | "MY.waterbirdJuvenileAgeClassIc"
-      | "MY.waterbirdJuvenileAgeClassIIa"
-      | "MY.waterbirdJuvenileAgeClassIIb"
-      | "MY.waterbirdJuvenileAgeClassIIc"
-      | "MY.waterbirdJuvenileAgeClassIIIa"
-      | "MY.waterbirdJuvenileAgeClassUnknown";
-    waterbirdJuvenileCountAccurate?: boolean;
-    waterbirdObserverOpinionSelectedCensus?: boolean;
-    waterbirdPairCountOpinionReasoning?:
-      | ""
-      | "MY.waterbirdPairCountOpinionReasoningEnum1"
-      | "MY.waterbirdPairCountOpinionReasoningEnum2"
-      | "MY.waterbirdPairCountOpinionReasoningEnum3"
-      | "MY.waterbirdPairCountOpinionReasoningEnumOther";
-    individualCountBiotopeA?: number;
-    individualCountBiotopeB?: number;
-    individualCountBiotopeC?: number;
-    individualCountBiotopeD?: number;
-    individualCountBiotopeE?: number;
-    individualCountBiotopeF?: number;
-    individualCountBiotopeG?: number;
-    individualCountBiotopeH?: number;
-  };
-  unitGathering?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
-    dateBegin?: string;
-    dateEnd?: string;
-    geometry?: {
-      [k: string]: unknown | undefined;
-    };
-    /**
-     * Informal description of the habitat.
-     */
-    habitatDescription?: string;
-    habitatIUCN?: string;
-    /**
-     * Type of substrate or name of substrate species.
-     */
-    substrate?: string;
-  };
+  unitFact?: UnitFact;
+  unitGathering?: UnitGathering;
   unitType?: string[];
   weightInGrams?: string[];
-  wild?: "" | "MY.wildWild" | "MY.wildUnknown" | "MY.wildNonWild";
+  wild?: WildEnum;
   wingInMillimeters?: string[];
   audio?: string[];
   images?: string[];
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?:
-    | ""
-    | "MZ.publicityRestrictionsPublic"
-    | "MZ.publicityRestrictionsProtected"
-    | "MZ.publicityRestrictionsPrivate";
-  identifications?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
-    "herbo:sortOrder"?: number;
-    /**
-     * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
-     */
-    associatedObservationTaxa?: string;
-    /**
-     * Author for the taxon
-     */
-    author?: string;
-    /**
-     * Name of the identifier (person) preferably in format "lastname, firstname"
-     */
-    det?: string;
-    /**
-     * Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
-     */
-    detDate?: string;
-    detMethod?: "" | "MY.detMethodFreshSample" | "MY.detMethodMicroscopy" | "MY.detMethodPhoto";
-    /**
-     * Name of the identifier and date of identification in original format (e.g. from the label), errors and all
-     */
-    detVerbatim?: string;
-    /**
-     * Additional qualifier or specifier at genus level (e.g. aff., cf.)
-     */
-    genusQualifier?: string;
-    identificationBasis?: (
-      | ""
-      | "MY.identificationBasisDNA"
-      | "MY.identificationBasisGenitals"
-      | "MY.identificationBasisGenitalPreparate"
-      | "MY.identificationBasisSpores"
-      | "MY.identificationBasisHandled"
-      | "MY.identificationBasisChemical"
-      | "MY.identificationBasisHeard"
-      | "MY.identificationBasisMicroscope"
-      | "MY.identificationBasisSeen"
-      | "MY.identificationBasisPreservedSpecimen"
-      | "MY.identificationBasisFreshSpecimen"
-      | "MY.identificationBasisMedia"
-    )[];
-    /**
-     * Additional information on the identification, basis or such
-     */
-    identificationNotes?: string;
-    /**
-     * Author for the taxon below species level/infra epithet
-     */
-    infraAuthor?: string;
-    /**
-     * Taxon name for the epithet below species level
-     */
-    infraEpithet?: string;
-    /**
-     * Taxonomic level of the epithet below species level
-     */
-    infraRank?:
-      | ""
-      | "MY.infraRankSsp"
-      | "MY.infraRankVar"
-      | "MY.infraRankBeta"
-      | "MY.infraRankB"
-      | "MY.infraRankForma"
-      | "MY.infraRankHybrid"
-      | "MY.infraRankAnamorph"
-      | "MY.infraRankAggregate"
-      | "MY.infraRankAberration"
-      | "MY.infraRankCultivar"
-      | "MY.infraRankMorpha"
-      | "MY.infraRankUnknown"
-      | "MY.infraRankNothosubspecies"
-      | "MY.infraRankCultivarGroup"
-      | "MY.infraRankFsp";
-    /**
-     * Pathovars, serovars and other infrasubspecific subdivisions of microbes.
-     */
-    infrasubspecificSubdivision?: string;
-    /**
-     * Which parent or larger collection this is part of.
-     */
-    isPartOf?: string;
-    isTaxonGroup?: boolean;
-    /**
-     * This can be used to select one of the identifications as 'recommended', which is the used as default when displaying information about the specimen.
-     */
-    preferredIdentification?: string;
-    /**
-     * Publication reference for the taxon concept, that was used in identification
-     */
-    sec?: string;
-    /**
-     * Additional qualifier at species level (e.g. aff., cf., sp. n., coll.)
-     */
-    speciesQualifier?: string;
-    /**
-     * Taxon name
-     */
-    taxon?: string;
-    /**
-     * ID for the taxon if has some other than an MX code
-     */
-    taxonID?: string;
-    /**
-     * Taxonomic level for the identification
-     */
-    taxonRank?:
-      | ""
-      | "MX.superdomain"
-      | "MX.domain"
-      | "MX.kingdom"
-      | "MX.subkingdom"
-      | "MX.infrakingdom"
-      | "MX.superphylum"
-      | "MX.phylum"
-      | "MX.subphylum"
-      | "MX.infraphylum"
-      | "MX.superdivision"
-      | "MX.division"
-      | "MX.subdivision"
-      | "MX.infradivision"
-      | "MX.superclass"
-      | "MX.class"
-      | "MX.subclass"
-      | "MX.infraclass"
-      | "MX.parvclass"
-      | "MX.superorder"
-      | "MX.order"
-      | "MX.suborder"
-      | "MX.infraorder"
-      | "MX.parvorder"
-      | "MX.superfamily"
-      | "MX.family"
-      | "MX.subfamily"
-      | "MX.tribe"
-      | "MX.subtribe"
-      | "MX.supergenus"
-      | "MX.genus"
-      | "MX.nothogenus"
-      | "MX.subgenus"
-      | "MX.section"
-      | "MX.subsection"
-      | "MX.series"
-      | "MX.subseries"
-      | "MX.infragenericTaxon"
-      | "MX.aggregate"
-      | "MX.speciesAggregate"
-      | "MX.species"
-      | "MX.nothospecies"
-      | "MX.infraspecificTaxon"
-      | "MX.subspecificAggregate"
-      | "MX.subspecies"
-      | "MX.nothosubspecies"
-      | "MX.variety"
-      | "MX.subvariety"
-      | "MX.form"
-      | "MX.subform"
-      | "MX.hybrid"
-      | "MX.anamorph"
-      | "MX.ecotype"
-      | "MX.populationGroup"
-      | "MX.intergenericHybrid"
-      | "MX.infragenericHybrid"
-      | "MX.cultivar"
-      | "MX.group"
-      | "MX.grex";
-    taxonSpecifier?: string;
-    taxonURI?: string;
-    /**
-     * Taxon name in original format (e.g. from the label), errors and all
-     */
-    taxonVerbatim?: string;
-    /**
-     * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
-     */
-    publicityRestrictions?:
-      | ""
-      | "MZ.publicityRestrictionsPublic"
-      | "MZ.publicityRestrictionsProtected"
-      | "MZ.publicityRestrictionsPrivate";
-    sortOrder?: number;
-  }[];
-  typeSpecimens?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
-    /**
-     * Which parent or larger collection this is part of.
-     */
-    isPartOf?: string;
-    /**
-     * Author of the type species
-     */
-    typeAuthor?: string;
-    /**
-     * Publication reference for original description or basionyme
-     */
-    typeBasionymePubl?: string;
-    /**
-     * Additional information on the type
-     */
-    typeNotes?: string;
-    /**
-     * Publication reference for type publication
-     */
-    typePubl?: string;
-    /**
-     * ID for the type series, if part of one
-     */
-    typeSeriesID?: string;
-    /**
-     * Name of the type species
-     */
-    typeSpecies?: string;
-    /**
-     * Is this holotype, paratype, syntype etc...
-     */
-    typeStatus?:
-      | ""
-      | "MY.typeStatusType"
-      | "MY.typeStatusHolotype"
-      | "MY.typeStatusSyntype"
-      | "MY.typeStatusParatype"
-      | "MY.typeStatusLectotype"
-      | "MY.typeStatusParalectotype"
-      | "MY.typeStatusNeotype"
-      | "MY.typeStatusAllotype"
-      | "MY.typeStatusNeoallotype"
-      | "MY.typeStatusIsotype"
-      | "MY.typeStatusEpitype"
-      | "MY.typeStatusIsolectotype"
-      | "MY.typeStatusIsoepitype"
-      | "MY.typeStatusIsoneotype"
-      | "MY.typeStatusIsoparatype"
-      | "MY.typeStatusIsosyntype"
-      | "MY.typeStatusOriginalMaterial"
-      | "MY.typeStatusCotype"
-      | "MY.typeStatusTopotype"
-      | "MY.typeStatusHomotype"
-      | "MY.typeStatusNo"
-      | "MY.typeStatusPossible"
-      | "MY.typeStatusObscure"
-      | "MY.typeStatusTypeStrain"
-      | "MY.typeStatusPathovarReferenceStrain";
-    /**
-     * Name of the type subspecies
-     */
-    typeSubspecies?: string;
-    /**
-     * Author of the type subspecies
-     */
-    typeSubspeciesAuthor?: string;
-    /**
-     * Verification whether this really is a type?
-     */
-    typeVerification?:
-      | ""
-      | "MY.typeVerificationVerified"
-      | "MY.typeVerificationUnverified"
-      | "MY.typeVerificationProbable"
-      | "MY.typeVerificationDoubtful";
-    /**
-     * Name of the person who chose the type, preferably in the format "Lastname, firstname"
-     */
-    typif?: string;
-    /**
-     * Date when the specimen was chosen as a type
-     */
-    typifDate?: string;
-    /**
-     * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
-     */
-    publicityRestrictions?:
-      | ""
-      | "MZ.publicityRestrictionsPublic"
-      | "MZ.publicityRestrictionsProtected"
-      | "MZ.publicityRestrictionsPrivate";
-  }[];
+  publicityRestrictions?: PublicityRestrictionsEnum;
+  identifications?: Identification[];
+  typeSpecimens?: TypeSpecimen[];
 }

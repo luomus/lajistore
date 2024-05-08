@@ -1,10 +1,68 @@
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export type SecureLevels =
+  | ""
+  | "MX.secureLevelNone"
+  | "MX.secureLevelKM1"
+  | "MX.secureLevelKM5"
+  | "MX.secureLevelKM10"
+  | "MX.secureLevelKM25"
+  | "MX.secureLevelKM50"
+  | "MX.secureLevelKM100"
+  | "MX.secureLevelHighest"
+  | "MX.secureLevelNoShow";
+export type CollectionQualityEnum =
+  | "MY.collectionQualityEnum3"
+  | "MY.collectionQualityEnum2"
+  | "MY.collectionQualityEnum1";
+export type CollectionTypes =
+  | "MY.collectionTypeSpecimens"
+  | "MY.collectionTypeLiving"
+  | "MY.collectionTypeMonitoring"
+  | "MY.collectionTypeObservations"
+  | "MY.collectionTypePublicationdata"
+  | "MY.collectionTypePublication"
+  | "MY.collectionTypeMixed"
+  | "MY.collectionTypeOther"
+  | "MY.collectionTypeGardenArea"
+  | "MY.collectionTypeIndoorGardenArea"
+  | "MY.collectionTypeOutdoorGardenArea"
+  | "MY.collectionTypeGardenSublocation"
+  | "MY.collectionTypeTrait";
+export type DataQualityEnum =
+  | ""
+  | "MY.dataQuality1"
+  | "MY.dataQuality2"
+  | "MY.dataQuality3"
+  | "MY.dataQuality4"
+  | "MY.dataQuality5"
+  | "MY.dataQualityNA";
+export type IntellectualRightsEnum =
+  | "MY.intellectualRightsCC-BY"
+  | "MY.intellectualRightsCC0"
+  | "MY.intellectualRightsPD"
+  | "MY.intellectualRightsARR";
+export type MetadataStatuses =
+  | ""
+  | "MY.metadataStatusPreliminary"
+  | "MY.metadataStatusSatisfactory"
+  | "MY.metadataStatusComprehensive"
+  | "MY.metadataStatusHidden";
+export type PublicationTermsEnum =
+  | ""
+  | "MY.publicationTermsFree"
+  | "MY.publicationTermsOfficial"
+  | "MY.publicationTermsInternal"
+  | "MY.publicationTermsNone";
+export type PublicityRestrictionsEnum =
+  | ""
+  | "MZ.publicityRestrictionsPublic"
+  | "MZ.publicityRestrictionsProtected"
+  | "MZ.publicityRestrictionsPrivate";
 export interface Collection {
   "@context"?: string;
   id?: string;
@@ -12,21 +70,12 @@ export interface Collection {
   /**
    * Secure level (salaus-/karkeistustaso) for the data
    */
-  secureLevel?:
-    | ""
-    | "MX.secureLevelNone"
-    | "MX.secureLevelKM1"
-    | "MX.secureLevelKM5"
-    | "MX.secureLevelKM10"
-    | "MX.secureLevelKM25"
-    | "MX.secureLevelKM50"
-    | "MX.secureLevelKM100"
-    | "MX.secureLevelHighest"
-    | "MX.secureLevelNoShow";
+  secureLevel?: SecureLevels;
   /**
    * Unofficial abbreviation (or acronym) for this collection
    */
   abbreviation?: string;
+  additionalIdentifier?: string[];
   /**
    * Admin field. Is it allowed to use collection with data warehouse /statistic endpoints.
    */
@@ -62,7 +111,7 @@ export interface Collection {
   /**
    * Quality classification for the collection.
    */
-  collectionQuality: "MY.collectionQualityEnum3" | "MY.collectionQualityEnum2" | "MY.collectionQualityEnum1";
+  collectionQuality: CollectionQualityEnum;
   /**
    * How many specimens, records or such does the collection contain? Fill in approximate number, describe more in notes if necessary.
    */
@@ -70,20 +119,7 @@ export interface Collection {
   /**
    * Type of the collection (specimen, monitoring etc).
    */
-  collectionType:
-    | "MY.collectionTypeSpecimens"
-    | "MY.collectionTypeLiving"
-    | "MY.collectionTypeMonitoring"
-    | "MY.collectionTypeObservations"
-    | "MY.collectionTypePublicationdata"
-    | "MY.collectionTypePublication"
-    | "MY.collectionTypeMixed"
-    | "MY.collectionTypeOther"
-    | "MY.collectionTypeGardenArea"
-    | "MY.collectionTypeIndoorGardenArea"
-    | "MY.collectionTypeOutdoorGardenArea"
-    | "MY.collectionTypeGardenSublocation"
-    | "MY.collectionTypeTrait";
+  collectionType: CollectionTypes;
   /**
    * Legal basis for concealment or embargo
    */
@@ -119,14 +155,7 @@ export interface Collection {
   /**
    * Quality estimation for the data in this collection
    */
-  dataQuality?:
-    | ""
-    | "MY.dataQuality1"
-    | "MY.dataQuality2"
-    | "MY.dataQuality3"
-    | "MY.dataQuality4"
-    | "MY.dataQuality5"
-    | "MY.dataQualityNA";
+  dataQuality?: DataQualityEnum;
   /**
    * Description and reasons for the data quality in different languages.
    */
@@ -159,6 +188,7 @@ export interface Collection {
    * How many percent of the collection is in digital form, e.g. in a database or Excel file? Fill in approximate number, describe more in notes if necessary.
    */
   digitizedSize?: string;
+  doi?: string;
   /**
    * Admin field. The identifier of the person responsible for handling requests for restricted data for this set (typically same person who's responsible for the collection)
    */
@@ -198,11 +228,7 @@ export interface Collection {
   /**
    * License which is used when publishing data that belongs to this collection.
    */
-  intellectualRights:
-    | "MY.intellectualRightsCC-BY"
-    | "MY.intellectualRightsCC0"
-    | "MY.intellectualRightsPD"
-    | "MY.intellectualRightsARR";
+  intellectualRights: IntellectualRightsEnum;
   /**
    * Is the data to be used only within Kotka?
    */
@@ -224,12 +250,7 @@ export interface Collection {
   /**
    * Indication of how comprehensive the information on this form is.
    */
-  metadataStatus?:
-    | ""
-    | "MY.metadataStatusPreliminary"
-    | "MY.metadataStatusSatisfactory"
-    | "MY.metadataStatusComprehensive"
-    | "MY.metadataStatusHidden";
+  metadataStatus?: MetadataStatuses;
   /**
    * Methods used when creating this collection, if they are standardized. Includes information on items such as census methods, tools, instrument calibration and software.
    */
@@ -269,12 +290,7 @@ export interface Collection {
   /**
    * How can Luomus publish the data, if it is owned by third party?
    */
-  publicationTerms?:
-    | ""
-    | "MY.publicationTermsFree"
-    | "MY.publicationTermsOfficial"
-    | "MY.publicationTermsInternal"
-    | "MY.publicationTermsNone";
+  publicationTerms?: PublicationTermsEnum;
   /**
    * Admin field. Name that is easy for users to remember and understand. E.g. "Luomus", "University of Turku".
    */
@@ -319,9 +335,5 @@ export interface Collection {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?:
-    | ""
-    | "MZ.publicityRestrictionsPublic"
-    | "MZ.publicityRestrictionsProtected"
-    | "MZ.publicityRestrictionsPrivate";
+  publicityRestrictions?: PublicityRestrictionsEnum;
 }

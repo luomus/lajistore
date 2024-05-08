@@ -63,7 +63,8 @@
     },
     "awayCount": {
       "type": "integer",
-      "range": "xsd:integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
       "subject": "HRX.awayCount",
       "title": "Included in/On loan count"
     },
@@ -108,7 +109,8 @@
     },
     "damagedCount": {
       "type": "integer",
-      "range": "xsd:integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
       "subject": "HRX.damagedCount",
       "title": "Damaged count"
     },
@@ -285,7 +287,8 @@
     },
     "missingCount": {
       "type": "integer",
-      "range": "xsd:integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
       "subject": "HRX.missingCount",
       "title": "Missing count"
     },
@@ -321,7 +324,7 @@
       "range": "xsd:date",
       "subject": "HRX.outgoingSent",
       "description": "When the transaction was sent out from us",
-      "title": "Outgoing loan sent"
+      "title": "Outgoing transaction sent"
     },
     "permits": {
       "type": "array",
@@ -458,14 +461,27 @@
     },
     "resourceImported": {
       "type": "string",
-      "range": "xsd:string",
+      "enum": [
+        "",
+        "HRX.resourceImportedGeneticResources",
+        "HRX.resourceImportedTraditionalKnowledge",
+        "HRX.resourceImportedBoth"
+      ],
+      "enumNames": [
+        "",
+        "Genetic resources",
+        "Traditional knowledge",
+        "Both"
+      ],
+      "range": "HRX.resourceImportedEnum",
       "subject": "HRX.resourceImported",
       "description": "Are you importing genetic resources, traditional knowledge associated to genetic resources or both?",
       "title": "What are you importing?"
     },
     "returnedCount": {
       "type": "integer",
-      "range": "xsd:integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
       "subject": "HRX.returnedCount",
       "title": "Returned count"
     },
@@ -486,13 +502,15 @@
         "",
         "HRX.statusInProcess",
         "HRX.statusOutstanding",
-        "HRX.statusClosed"
+        "HRX.statusClosed",
+        "HRX.statusOnLoan"
       ],
       "enumNames": [
         "",
         "In process",
         "Outstanding",
-        "Closed"
+        "Closed",
+        "On loan"
       ],
       "range": "HRX.statusEnum",
       "subject": "HRX.status",
@@ -593,10 +611,10 @@
       "type": "string",
       "enum": [
         "HRX.typeLoanIncoming",
-        "HRX.typeGiftIncoming",
-        "HRX.typeExchangeIncoming",
         "HRX.typeLoanOutgoing",
+        "HRX.typeGiftIncoming",
         "HRX.typeGiftOutgoing",
+        "HRX.typeExchangeIncoming",
         "HRX.typeExchangeOutgoing",
         "HRX.typeFieldCollection",
         "HRX.typeImportNotice",
@@ -606,10 +624,10 @@
       ],
       "enumNames": [
         "Loan, incoming",
-        "Gift, incoming",
-        "Exchange, incoming",
         "Loan, outgoing",
+        "Gift, incoming",
         "Gift, outgoing",
+        "Exchange, incoming",
         "Exchange, outgoing",
         "Field collection",
         "Import notice only (maahantuonti-ilmoitus)",

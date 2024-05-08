@@ -1,10 +1,67 @@
+import { Permit } from './';
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export type AvailableForGeneticResearchEnum =
+  | ""
+  | "HRA.availableForGeneticResearchYes"
+  | "HRA.availableForGeneticResearchWithRestrictions"
+  | "HRA.availableForGeneticResearchNo";
+export type GeneticResourceTypeEnum =
+  | ""
+  | "HRA.geneticResourceTypeAnimal"
+  | "HRA.geneticResourceTypePlant"
+  | "HRA.geneticResourceTypeFungus"
+  | "HRA.geneticResourceTypeMicrobe"
+  | "HRA.geneticResourceTypeSoil"
+  | "HRA.geneticResourceTypeAqua";
+export type LocalDepartments =
+  | ""
+  | "HRA.localDepartmentDipteraHymenoptera"
+  | "HRA.localDepartmentLepidopteraColeoptera"
+  | "HRA.localDepartmentMetazoa"
+  | "HRA.localDepartmentMonitoring"
+  | "HRA.localDepartmentBryology"
+  | "HRA.localDepartmentGarden"
+  | "HRA.localDepartmentMycology"
+  | "HRA.localDepartmentVascularPlants";
+export type ResourceImportedEnum =
+  | ""
+  | "HRA.resourceImportedGeneticResources"
+  | "HRA.resourceImportedTraditionalKnowledge"
+  | "HRA.resourceImportedBoth";
+export type SentTypes =
+  | ""
+  | "HRA.sentTypePriority"
+  | "HRA.sentTypeEconomy"
+  | "HRA.sentTypeCourier"
+  | "HRA.sentTypeCarried"
+  | "HRA.sentTypeOther"
+  | "HRA.sentTypeImage";
+export type TransactionStatuses =
+  | ""
+  | "HRA.transactionStatusInProcess"
+  | "HRA.transactionStatusOutstanding"
+  | "HRA.transactionStatusClosed";
+export type TransactionTypes =
+  | "HRA.transactionTypeLoanIncoming"
+  | "HRA.transactionTypeGiftIncoming"
+  | "HRA.transactionTypeExchangeIncoming"
+  | "HRA.transactionTypeLoanOutgoing"
+  | "HRA.transactionTypeGiftOutgoing"
+  | "HRA.transactionTypeExchangeOutgoing"
+  | "HRA.transactionTypeFieldCollection"
+  | "HRA.transactionTypeImportNotice"
+  | "HRA.transactionTypeABSNegotiations"
+  | "HRA.transactionTypeVirtualLoanOutgoing";
+export type PublicityRestrictionsEnum =
+  | ""
+  | "MZ.publicityRestrictionsPublic"
+  | "MZ.publicityRestrictionsProtected"
+  | "MZ.publicityRestrictionsPrivate";
 export interface Transaction {
   "@context"?: string;
   id?: string;
@@ -16,11 +73,7 @@ export interface Transaction {
   /**
    * If you choose "Yes, with restrictions", explain the restrictions in the following field "Rights and obligations".
    */
-  availableForGeneticResearch?:
-    | ""
-    | "HRA.availableForGeneticResearchYes"
-    | "HRA.availableForGeneticResearchWithRestrictions"
-    | "HRA.availableForGeneticResearchNo";
+  availableForGeneticResearch?: AvailableForGeneticResearchEnum;
   availableForGeneticResearchNotes?: string;
   away?: string[];
   /**
@@ -71,14 +124,7 @@ export interface Transaction {
   /**
    * Choose the type of the genetic resource for statistical and reporting purposes.
    */
-  geneticResourceType?:
-    | ""
-    | "HRA.geneticResourceTypeAnimal"
-    | "HRA.geneticResourceTypePlant"
-    | "HRA.geneticResourceTypeFungus"
-    | "HRA.geneticResourceTypeMicrobe"
-    | "HRA.geneticResourceTypeSoil"
-    | "HRA.geneticResourceTypeAqua";
+  geneticResourceType?: GeneticResourceTypeEnum;
   /**
    * Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
    */
@@ -95,16 +141,7 @@ export interface Transaction {
   /**
    * Responsible team in our museum.
    */
-  localDepartment?:
-    | ""
-    | "HRA.localDepartmentDipteraHymenoptera"
-    | "HRA.localDepartmentLepidopteraColeoptera"
-    | "HRA.localDepartmentMetazoa"
-    | "HRA.localDepartmentMonitoring"
-    | "HRA.localDepartmentBryology"
-    | "HRA.localDepartmentGarden"
-    | "HRA.localDepartmentMycology"
-    | "HRA.localDepartmentVascularPlants";
+  localDepartment?: LocalDepartments;
   /**
    * Responsible person in our museum.
    */
@@ -145,11 +182,7 @@ export interface Transaction {
   /**
    * Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
    */
-  resourceImported?:
-    | ""
-    | "HRA.resourceImportedGeneticResources"
-    | "HRA.resourceImportedTraditionalKnowledge"
-    | "HRA.resourceImportedBoth";
+  resourceImported?: ResourceImportedEnum;
   returned?: string[];
   /**
    * In how many parcels was the transaction sent
@@ -162,14 +195,7 @@ export interface Transaction {
   /**
    * Means of sending, mail, courier etc.
    */
-  sentType?:
-    | ""
-    | "HRA.sentTypePriority"
-    | "HRA.sentTypeEconomy"
-    | "HRA.sentTypeCourier"
-    | "HRA.sentTypeCarried"
-    | "HRA.sentTypeOther"
-    | "HRA.sentTypeImage";
+  sentType?: SentTypes;
   /**
    * When loan request, loan, gift or exchange was received here.
    */
@@ -185,25 +211,11 @@ export interface Transaction {
   /**
    * Whether the transaction is closed, outstanding or in process.
    */
-  transactionStatus?:
-    | ""
-    | "HRA.transactionStatusInProcess"
-    | "HRA.transactionStatusOutstanding"
-    | "HRA.transactionStatusClosed";
+  transactionStatus?: TransactionStatuses;
   /**
    * What kind of transaction this is.
    */
-  transactionType:
-    | "HRA.transactionTypeLoanIncoming"
-    | "HRA.transactionTypeGiftIncoming"
-    | "HRA.transactionTypeExchangeIncoming"
-    | "HRA.transactionTypeLoanOutgoing"
-    | "HRA.transactionTypeGiftOutgoing"
-    | "HRA.transactionTypeExchangeOutgoing"
-    | "HRA.transactionTypeFieldCollection"
-    | "HRA.transactionTypeImportNotice"
-    | "HRA.transactionTypeABSNegotiations"
-    | "HRA.transactionTypeVirtualLoanOutgoing";
+  transactionType: TransactionTypes;
   /**
    * Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?
    */
@@ -224,32 +236,6 @@ export interface Transaction {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?:
-    | ""
-    | "MZ.publicityRestrictionsPublic"
-    | "MZ.publicityRestrictionsProtected"
-    | "MZ.publicityRestrictionsPrivate";
-  permits?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
-    permitEndDate?: string;
-    permitFile?: string;
-    permitNotes?: string;
-    permitStartDate?: string;
-    permitStatus?: "" | "HRA.permitStatusAvailable" | "HRA.permitStatusNotRequired";
-    permitType?:
-      | ""
-      | "HRA.permitTypePIC"
-      | "HRA.permitTypeMAT"
-      | "HRA.permitTypeMTA"
-      | "HRA.permitCollectingPermit"
-      | "HRA.permitTypeExportPermit"
-      | "HRA.permitTypeOther"
-      | "HRA.permitTypeMemorandumOfUnderstanding";
-    /**
-     * Which parent or larger collection this is part of.
-     */
-    isPartOf?: string;
-  }[];
+  publicityRestrictions?: PublicityRestrictionsEnum;
+  permits?: Permit[];
 }

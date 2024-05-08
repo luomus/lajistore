@@ -1,50 +1,32 @@
+import { TransactionItem } from './';
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export enum EventTypeEnum {
+  "eventTypeSend" = "HRAA.eventTypeSend",
+  "eventTypeReceive" = "HRAA.eventTypeReceive",
+  "eventTypeOther" = "HRAA.eventTypeOther"
+}
+export enum SentByEnum {
+  "empty" = "",
+  "sentByPriority" = "HRAA.sentByPriority",
+  "sentByEconomy" = "HRAA.sentByEconomy",
+  "sentByCourier" = "HRAA.sentByCourier",
+  "sentByCarried" = "HRAA.sentByCarried",
+  "sentByOther" = "HRAA.sentByOther"
+}
 export class TransactionEvent {
   "@context"?: string;
   id?: string;
   "@type"?: string;
   eventDate: string;
   eventHandler: string;
-  eventType: "HRAA.eventTypeSend" | "HRAA.eventTypeReceive" | "HRAA.eventTypeOther";
-  items: [
-    {
-      id?: string;
-      "@type"?: string;
-      "@context"?: string;
-      collectionID?: string;
-      itemCount: number;
-      itemID?: string;
-      itemLabel?: string;
-      itemType: "HRAB.itemTypeSpecimen" | "HRAB.itemTypeSpecimenBatch" | "HRAB.itemTypeImage" | "HRAB.itemTypeOther";
-      notes?: string;
-      status: "HRAB.statusOk" | "HRAB.statusMissing" | "HRAB.statusDamaged";
-    },
-    ...{
-      id?: string;
-      "@type"?: string;
-      "@context"?: string;
-      collectionID?: string;
-      itemCount: number;
-      itemID?: string;
-      itemLabel?: string;
-      itemType: "HRAB.itemTypeSpecimen" | "HRAB.itemTypeSpecimenBatch" | "HRAB.itemTypeImage" | "HRAB.itemTypeOther";
-      notes?: string;
-      status: "HRAB.statusOk" | "HRAB.statusMissing" | "HRAB.statusDamaged";
-    }[]
-  ];
+  eventType: EventTypeEnum;
+  items: [TransactionItem, ...[TransactionItem]];
   notes?: string;
   numberOfPackages?: number;
-  sentBy?:
-    | ""
-    | "HRAA.sentByPriority"
-    | "HRAA.sentByEconomy"
-    | "HRAA.sentByCourier"
-    | "HRAA.sentByCarried"
-    | "HRAA.sentByOther";
+  sentBy?: SentByEnum;
 }

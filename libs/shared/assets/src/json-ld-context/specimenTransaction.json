@@ -45,7 +45,7 @@
     },
     "awayCount": {
       "@id": "default:HRX.awayCount",
-      "@type": "xsd:integer"
+      "@type": "xsd:nonNegativeInteger"
     },
     "awayIDs": {
       "@id": "default:HRX.awayIDs",
@@ -69,7 +69,7 @@
     },
     "damagedCount": {
       "@id": "default:HRX.damagedCount",
-      "@type": "xsd:integer"
+      "@type": "xsd:nonNegativeInteger"
     },
     "damagedIDs": {
       "@id": "default:HRX.damagedIDs",
@@ -157,7 +157,7 @@
     },
     "missingCount": {
       "@id": "default:HRX.missingCount",
-      "@type": "xsd:integer"
+      "@type": "xsd:nonNegativeInteger"
     },
     "missingIDs": {
       "@id": "default:HRX.missingIDs",
@@ -193,11 +193,11 @@
     },
     "resourceImported": {
       "@id": "default:HRX.resourceImported",
-      "@type": "xsd:string"
+      "@type": "@id"
     },
     "returnedCount": {
       "@id": "default:HRX.returnedCount",
-      "@type": "xsd:integer"
+      "@type": "xsd:nonNegativeInteger"
     },
     "returnedIDs": {
       "@id": "default:HRX.returnedIDs",

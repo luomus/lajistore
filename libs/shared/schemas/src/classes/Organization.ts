@@ -1,10 +1,14 @@
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export enum Explanations {
+  "empty" = "",
+  "abbreviation-explanationIndexHerbariorum" = "MOS.abbreviation-explanationIndexHerbariorum",
+  "abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld" = "MOS.abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld"
+}
 export class Organization {
   "@context"?: string;
   id?: string;
@@ -24,10 +28,7 @@ export class Organization {
   /**
    * If organisation code is given, the source for it must be chosen.
    */
-  abbreviationExplanation?:
-    | ""
-    | "MOS.abbreviation-explanationIndexHerbariorum"
-    | "MOS.abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld";
+  abbreviationExplanation?: Explanations;
   /**
    * Filled in by ICT team
    */

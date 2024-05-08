@@ -1,10 +1,13 @@
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export type Explanations =
+  | ""
+  | "MOS.abbreviation-explanationIndexHerbariorum"
+  | "MOS.abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld";
 export interface Organization {
   "@context"?: string;
   id?: string;
@@ -24,10 +27,7 @@ export interface Organization {
   /**
    * If organisation code is given, the source for it must be chosen.
    */
-  abbreviationExplanation?:
-    | ""
-    | "MOS.abbreviation-explanationIndexHerbariorum"
-    | "MOS.abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld";
+  abbreviationExplanation?: Explanations;
   /**
    * Filled in by ICT team
    */

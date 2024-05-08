@@ -1,10 +1,143 @@
+import { Measurement } from './';
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export enum ElutionMediumEnum {
+  "empty" = "",
+  "elutionMediumUltrapureWater" = "MF.elutionMediumUltrapureWater",
+  "elutionMediumElutionBuffer" = "MF.elutionMediumElutionBuffer"
+}
+export enum IndividualsInPreparationEnum {
+  "empty" = "",
+  "individualsInPreparationMultiple" = "MF.individualsInPreparationMultiple",
+  "individualsInPreparationSingle" = "MF.individualsInPreparationSingle"
+}
+export enum MaterialEnum {
+  "empty" = "",
+  "materialBirdStudySkin" = "MF.materialBirdStudySkin",
+  "materialWing" = "MF.materialWing",
+  "materialTail" = "MF.materialTail",
+  "materialWingAndTail" = "MF.materialWingAndTail",
+  "materialSkull" = "MF.materialSkull",
+  "materialEntireSkeleton" = "MF.materialEntireSkeleton",
+  "materialBones" = "MF.materialBones",
+  "materialSkullAndBones" = "MF.materialSkullAndBones",
+  "materialAntlers" = "MF.materialAntlers",
+  "materialHead" = "MF.materialHead",
+  "materialMuscle" = "MF.materialMuscle",
+  "materialLiver" = "MF.materialLiver",
+  "materialLeaf" = "MF.materialLeaf",
+  "materialBlood" = "MF.materialBlood",
+  "materialLeg" = "MF.materialLeg",
+  "materialSkin" = "MF.materialSkin",
+  "materialFeather" = "MF.materialFeather",
+  "materialEgg" = "MF.materialEgg",
+  "materialEggContent" = "MF.materialEggContent",
+  "materialGenomicDNA" = "MF.materialGenomicDNA",
+  "materialMitochondrialDNA" = "MF.materialMitochondrialDNA",
+  "materialChloroplastDNA" = "MF.materialChloroplastDNA",
+  "materialEnvironmentalDNA" = "MF.materialEnvironmentalDNA",
+  "materialTeeth" = "MF.materialTeeth",
+  "materialBodyParts" = "MF.materialBodyParts",
+  "materialEntireOrganism" = "MF.materialEntireOrganism",
+  "materialAppendages" = "MF.materialAppendages",
+  "materialGenitalPreparation" = "MF.materialGenitalPreparation",
+  "materialSection" = "MF.materialSection",
+  "materialChromosomes" = "MF.materialChromosomes",
+  "materialShell" = "MF.materialShell",
+  "materialHair" = "MF.materialHair",
+  "materialClutch" = "MF.materialClutch",
+  "materialEggshell" = "MF.materialEggshell",
+  "materialEggshellFragments" = "MF.materialEggshellFragments",
+  "materialNest" = "MF.materialNest",
+  "materialNestMaterial" = "MF.materialNestMaterial",
+  "materialOther" = "MF.materialOther"
+}
+export enum PreparationTypeEnum {
+  "preparationTypeSkin" = "MF.preparationTypeSkin",
+  "preparationTypeSkeletal" = "MF.preparationTypeSkeletal",
+  "preparationTypeMount" = "MF.preparationTypeMount",
+  "preparationTypeTissue" = "MF.preparationTypeTissue",
+  "preparationTypeTissueEcotoxicology" = "MF.preparationTypeTissueEcotoxicology",
+  "preparationTypeLiquid" = "MF.preparationTypeLiquid",
+  "preparationTypeMicroscopeSlide" = "MF.preparationTypeMicroscopeSlide",
+  "preparationTypeDNAExtract" = "MF.preparationTypeDNAExtract",
+  "preparationTypeEgg" = "MF.preparationTypeEgg",
+  "preparationTypeNest" = "MF.preparationTypeNest",
+  "preparationTypeOther" = "MF.preparationTypeOther"
+}
+export enum Preservations {
+  "empty" = "",
+  "preservationPressed" = "MY.preservationPressed",
+  "preservationDry" = "MY.preservationDry",
+  "preservationCriticalPointDrying" = "MY.preservationCriticalPointDrying",
+  "preservationPinned" = "MY.preservationPinned",
+  "preservationGlued" = "MY.preservationGlued",
+  "preservationLiquid" = "MY.preservationLiquid",
+  "preservationEthanol" = "MY.preservationEthanol",
+  "preservationEthanolPure" = "MY.preservationEthanolPure",
+  "preservationEthanol70" = "MY.preservationEthanol70",
+  "preservationEthanol80" = "MY.preservationEthanol80",
+  "preservationEthanol80Pure" = "MY.preservationEthanol80Pure",
+  "preservationEthanol96" = "MY.preservationEthanol96",
+  "preservationEthanolDenatured" = "MY.preservationEthanolDenatured",
+  "preservationEthanolFormalin" = "MY.preservationEthanolFormalin",
+  "preservationEthanolExFormalin" = "MY.preservationEthanolExFormalin",
+  "preservationFormalin" = "MY.preservationFormalin",
+  "preservationBouinSolution" = "MY.preservationBouinSolution",
+  "preservationPampelsFluid" = "MY.preservationPampelsFluid",
+  "preservationGlycerol" = "MY.preservationGlycerol",
+  "preservationParaffin" = "MY.preservationParaffin",
+  "preservationMercuricChloride" = "MY.preservationMercuricChloride",
+  "preservationCryopreserved" = "MY.preservationCryopreserved",
+  "preservationFrozen" = "MY.preservationFrozen",
+  "preservationFrozenMinus80C" = "MY.preservationFrozenMinus80C",
+  "preservationFreezeDried" = "MY.preservationFreezeDried",
+  "preservationGoldPlated" = "MY.preservationGoldPlated",
+  "preservationActiveCulture" = "MY.preservationActiveCulture",
+  "preservationLiving" = "MY.preservationLiving",
+  "preservationSlide" = "MY.preservationSlide",
+  "preservationSlideCanadaBalsam" = "MY.preservationSlideCanadaBalsam",
+  "preservationSlideEuparal" = "MY.preservationSlideEuparal",
+  "preservationSlidePolyviol" = "MY.preservationSlidePolyviol",
+  "preservationStuffed" = "MY.preservationStuffed",
+  "preservationCast" = "MY.preservationCast",
+  "preservationPlastinated" = "MY.preservationPlastinated",
+  "preservationFrozenMinus80CAndEthanolMinus20C" = "MY.preservationFrozenMinus80CAndEthanolMinus20C"
+}
+export enum QualityEnum {
+  "empty" = "",
+  "qualityLow" = "MF.qualityLow",
+  "qualityMedium" = "MF.qualityMedium",
+  "qualityHigh" = "MF.qualityHigh"
+}
+export enum QualityCheckMethodEnum {
+  "empty" = "",
+  "qualityCheckMethodNanoDrop" = "MF.qualityCheckMethodNanoDrop",
+  "qualityCheckMethodCubit" = "MF.qualityCheckMethodCubit"
+}
+export enum Statuses {
+  "empty" = "",
+  "statusOk" = "MY.statusOk",
+  "statusMissing" = "MY.statusMissing",
+  "statusUnrecoverable" = "MY.statusUnrecoverable",
+  "statusLost" = "MY.statusLost",
+  "statusDonated" = "MY.statusDonated",
+  "statusDeposited" = "MY.statusDeposited",
+  "statusDeaccessioned" = "MY.statusDeaccessioned",
+  "statusDiscarded" = "MY.statusDiscarded",
+  "statusSpent" = "MY.statusSpent",
+  "statusDestroyed" = "MY.statusDestroyed",
+  "statusUndefined" = "MY.statusUndefined",
+  "statusAxenic" = "MY.statusAxenic",
+  "statusNonAxenic" = "MY.statusNonAxenic",
+  "statusNotAvailable" = "MY.statusNotAvailable",
+  "statusDead" = "MY.statusDead",
+  "statusNoVoucherRetained" = "MY.statusNoVoucherRetained"
+}
 export class Sample {
   "@context"?: string;
   id?: string;
@@ -36,7 +169,7 @@ export class Sample {
   /**
    * DNA sample elution medium
    */
-  elutionMedium?: "" | "MF.elutionMediumUltrapureWater" | "MF.elutionMediumElutionBuffer";
+  elutionMedium?: ElutionMediumEnum;
   /**
    * Diary-style information about what has been done to the preparation/sample
    */
@@ -48,50 +181,11 @@ export class Sample {
   /**
    * For example a jar that contains multiple fish individuals can be recorded as one specimen and one preparation. Can also be used for DNA samples (was DNA extracted from single or multiple individuals?).
    */
-  individualsInPreparation?: "" | "MF.individualsInPreparationMultiple" | "MF.individualsInPreparationSingle";
+  individualsInPreparation?: IndividualsInPreparationEnum;
   /**
    * Preparation/sample material. Choose preparation/sample type first.
    */
-  material?:
-    | ""
-    | "MF.materialBirdStudySkin"
-    | "MF.materialWing"
-    | "MF.materialTail"
-    | "MF.materialWingAndTail"
-    | "MF.materialSkull"
-    | "MF.materialEntireSkeleton"
-    | "MF.materialBones"
-    | "MF.materialSkullAndBones"
-    | "MF.materialAntlers"
-    | "MF.materialHead"
-    | "MF.materialMuscle"
-    | "MF.materialLiver"
-    | "MF.materialLeaf"
-    | "MF.materialBlood"
-    | "MF.materialLeg"
-    | "MF.materialSkin"
-    | "MF.materialFeather"
-    | "MF.materialEgg"
-    | "MF.materialEggContent"
-    | "MF.materialGenomicDNA"
-    | "MF.materialMitochondrialDNA"
-    | "MF.materialChloroplastDNA"
-    | "MF.materialEnvironmentalDNA"
-    | "MF.materialTeeth"
-    | "MF.materialBodyParts"
-    | "MF.materialEntireOrganism"
-    | "MF.materialAppendages"
-    | "MF.materialGenitalPreparation"
-    | "MF.materialSection"
-    | "MF.materialChromosomes"
-    | "MF.materialShell"
-    | "MF.materialHair"
-    | "MF.materialClutch"
-    | "MF.materialEggshell"
-    | "MF.materialEggshellFragments"
-    | "MF.materialNest"
-    | "MF.materialNestMaterial"
-    | "MF.materialOther";
+  material?: MaterialEnum;
   /**
    * Additional information about the preparation/sample
    */
@@ -99,60 +193,11 @@ export class Sample {
   /**
    * Type of preparation/sample
    */
-  preparationType:
-    | "MF.preparationTypeSkin"
-    | "MF.preparationTypeSkeletal"
-    | "MF.preparationTypeMount"
-    | "MF.preparationTypeTissue"
-    | "MF.preparationTypeTissueEcotoxicology"
-    | "MF.preparationTypeLiquid"
-    | "MF.preparationTypeMicroscopeSlide"
-    | "MF.preparationTypeDNAExtract"
-    | "MF.preparationTypeEgg"
-    | "MF.preparationTypeNest"
-    | "MF.preparationTypeOther";
+  preparationType: PreparationTypeEnum;
   /**
    * Preservation methods and materials of the preparation/sample. It is possible to choose several
    */
-  preservation?: (
-    | ""
-    | "MY.preservationPressed"
-    | "MY.preservationDry"
-    | "MY.preservationCriticalPointDrying"
-    | "MY.preservationPinned"
-    | "MY.preservationGlued"
-    | "MY.preservationLiquid"
-    | "MY.preservationEthanol"
-    | "MY.preservationEthanolPure"
-    | "MY.preservationEthanol70"
-    | "MY.preservationEthanol80"
-    | "MY.preservationEthanol80Pure"
-    | "MY.preservationEthanol96"
-    | "MY.preservationEthanolDenatured"
-    | "MY.preservationEthanolFormalin"
-    | "MY.preservationEthanolExFormalin"
-    | "MY.preservationFormalin"
-    | "MY.preservationBouinSolution"
-    | "MY.preservationPampelsFluid"
-    | "MY.preservationGlycerol"
-    | "MY.preservationParaffin"
-    | "MY.preservationMercuricChloride"
-    | "MY.preservationCryopreserved"
-    | "MY.preservationFrozen"
-    | "MY.preservationFrozenMinus80C"
-    | "MY.preservationFreezeDried"
-    | "MY.preservationGoldPlated"
-    | "MY.preservationActiveCulture"
-    | "MY.preservationLiving"
-    | "MY.preservationSlide"
-    | "MY.preservationSlideCanadaBalsam"
-    | "MY.preservationSlideEuparal"
-    | "MY.preservationSlidePolyviol"
-    | "MY.preservationStuffed"
-    | "MY.preservationCast"
-    | "MY.preservationPlastinated"
-    | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
-  )[];
+  preservation?: Preservations[];
   /**
    * Publication references or doi's that refer to this preparations/sample. For publications referring to the specimen, use publications field in the Other section (document level).
    */
@@ -160,7 +205,7 @@ export class Sample {
   /**
    * DNA sample quality on a three step scale. The quality is defined by quality check measurements
    */
-  quality?: "" | "MF.qualityLow" | "MF.qualityMedium" | "MF.qualityHigh";
+  quality?: QualityEnum;
   /**
    * Date of the latest quality check measurements
    */
@@ -168,7 +213,7 @@ export class Sample {
   /**
    * Method or instrument used for quality measurements
    */
-  qualityCheckMethod?: ("" | "MF.qualityCheckMethodNanoDrop" | "MF.qualityCheckMethodCubit")[];
+  qualityCheckMethod?: QualityCheckMethodEnum[];
   /**
    * Additional information about the DNA sample quality
    */
@@ -181,24 +226,7 @@ export class Sample {
   /**
    * Status of the preparation/sample. For specimen level status use the status field in the basic information section. Empty value means same as "ok" - that there is nothing special about the status of the sample.
    */
-  status?:
-    | ""
-    | "MY.statusOk"
-    | "MY.statusMissing"
-    | "MY.statusUnrecoverable"
-    | "MY.statusLost"
-    | "MY.statusDonated"
-    | "MY.statusDeposited"
-    | "MY.statusDeaccessioned"
-    | "MY.statusDiscarded"
-    | "MY.statusSpent"
-    | "MY.statusDestroyed"
-    | "MY.statusUndefined"
-    | "MY.statusAxenic"
-    | "MY.statusNonAxenic"
-    | "MY.statusNotAvailable"
-    | "MY.statusDead"
-    | "MY.statusNoVoucherRetained";
+  status?: Statuses;
   /**
    * Which parent or larger collection this is part of.
    */
@@ -206,35 +234,7 @@ export class Sample {
   /**
    * For measurements taken from the preparation/sample, use the measurement field in the preparation/sample section. For measurements taken from the specimen, use the measurements field on unit level.
    */
-  measurement?: {
-    DNAConcentrationNgPerMicroliter?: number[];
-    DNARatioOfAbsorbance260And280?: number[];
-    DNAVolumeMicroliters?: number[];
-    beakMillimeters?: number[];
-    bodyCentimeters?: number[];
-    bodyMillimeters?: number[];
-    earLengthMillimeters?: number[];
-    embryoCount?: number[];
-    follicleDiameterMillimeters?: number[];
-    footLengthMillimeters?: number[];
-    forearmMillimeters?: number[];
-    gonadMillimeters?: number[];
-    /**
-     * Which parent or larger collection this is part of.
-     */
-    isPartOf?: string;
-    tailCentimeters?: number[];
-    tailMillimeters?: number[];
-    tarsusLengthMillimeters?: number[];
-    totalLengthCentimeters?: number[];
-    totalLengthMillimeters?: number[];
-    uterineScarCount?: number[];
-    weightGrams?: number[];
-    weightKilograms?: number[];
-    wingMaxMillimeters?: number[];
-    wingMillimeters?: number[];
-    wingMinMillimeters?: number[];
-  };
+  measurement?: Measurement;
   creator?: string;
   dateCreated?: string;
   dateEdited?: string;

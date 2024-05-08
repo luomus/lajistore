@@ -39,10 +39,6 @@
       "@id": "default:MHL.adminLockable",
       "@type": "xsd:boolean"
     },
-    "allowAddingPublicNamedPlaces": {
-      "@id": "default:MHL.allowAddingPublicNamedPlaces",
-      "@type": "xsd:boolean"
-    },
     "allowExcel": {
       "@id": "default:MHL.allowExcel",
       "@type": "xsd:boolean"
@@ -54,10 +50,6 @@
     "cancelLabel": {
       "@id": "default:MHL.cancelLabel",
       "@type": "xsd:string"
-    },
-    "copyLatestDocumentToNamedPlace": {
-      "@id": "default:MHL.copyLatestDocumentToNamedPlace",
-      "@type": "xsd:boolean"
     },
     "dataset": {
       "@id": "default:MHL.dataset",
@@ -93,18 +85,6 @@
     },
     "excludeFromGlobalExcel": {
       "@id": "default:MHL.excludeFromGlobalExcel",
-      "@type": "xsd:boolean"
-    },
-    "filterNamedPlacesByBirdAssociationArea": {
-      "@id": "default:MHL.filterNamedPlacesByBirdAssociationArea",
-      "@type": "xsd:boolean"
-    },
-    "filterNamedPlacesByMunicipality": {
-      "@id": "default:MHL.filterNamedPlacesByMunicipality",
-      "@type": "xsd:boolean"
-    },
-    "filterNamedPlacesByTags": {
-      "@id": "default:MHL.filterNamedPlacesByTags",
       "@type": "xsd:boolean"
     },
     "footer": {

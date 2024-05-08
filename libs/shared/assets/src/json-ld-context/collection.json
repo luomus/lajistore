@@ -39,6 +39,10 @@
       "@id": "default:MY.abbreviation",
       "@type": "xsd:string"
     },
+    "additionalIdentifier": {
+      "@id": "default:MY.additionalIdentifier",
+      "@type": "xsd:string"
+    },
     "allowedForDwStatistics": {
       "@id": "default:MY.allowedForDwStatistics",
       "@type": "xsd:boolean"
@@ -129,6 +133,10 @@
     },
     "digitizedSize": {
       "@id": "default:MY.digitizedSize",
+      "@type": "xsd:string"
+    },
+    "doi": {
+      "@id": "default:MY.doi",
       "@type": "xsd:string"
     },
     "downloadRequestHandler": {

@@ -1,10 +1,60 @@
+import { Permit } from './';
+import { SpecimenTransactionEvent } from './';
 /* tslint:disable */
-/**
- * This file was automatically generated.
- * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
- * and run the command to regenerate this file.
- */
-
+/*
+* This file was automatically generated.
+* DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
+* and run the command to regenerate this file.
+*/
+export type AvailableForGeneticResearchEnum =
+  | ""
+  | "HRX.availableForGeneticResearchYes"
+  | "HRX.availableForGeneticResearchWithRestrictions"
+  | "HRX.availableForGeneticResearchNo";
+export type GeneticResourceTypeEnum =
+  | ""
+  | "HRX.geneticResourceTypeAnimal"
+  | "HRX.geneticResourceTypePlant"
+  | "HRX.geneticResourceTypeFungus"
+  | "HRX.geneticResourceTypeMicrobe"
+  | "HRX.geneticResourceTypeSoil"
+  | "HRX.geneticResourceTypeAqua";
+export type ResourceImportedEnum =
+  | ""
+  | "HRX.resourceImportedGeneticResources"
+  | "HRX.resourceImportedTraditionalKnowledge"
+  | "HRX.resourceImportedBoth";
+export type StatusEnum =
+  | ""
+  | "HRX.statusInProcess"
+  | "HRX.statusOutstanding"
+  | "HRX.statusClosed"
+  | "HRX.statusOnLoan";
+export type TransportMethodEnum =
+  | ""
+  | "HRX.transportMethodPriority"
+  | "HRX.transportMethodEconomy"
+  | "HRX.transportMethodCourier"
+  | "HRX.transportMethodCarried"
+  | "HRX.transportMethodOther"
+  | "HRX.transportMethodImage";
+export type TypeEnum =
+  | "HRX.typeLoanIncoming"
+  | "HRX.typeLoanOutgoing"
+  | "HRX.typeGiftIncoming"
+  | "HRX.typeGiftOutgoing"
+  | "HRX.typeExchangeIncoming"
+  | "HRX.typeExchangeOutgoing"
+  | "HRX.typeFieldCollection"
+  | "HRX.typeImportNotice"
+  | "HRX.typeABSNegotiations"
+  | "HRX.typeVirtualLoanOutgoing"
+  | "HRX.typeDeaccession";
+export type PublicityRestrictionsEnum =
+  | ""
+  | "MZ.publicityRestrictionsPublic"
+  | "MZ.publicityRestrictionsProtected"
+  | "MZ.publicityRestrictionsPrivate";
 export interface SpecimenTransaction {
   "@context"?: string;
   id?: string;
@@ -17,11 +67,7 @@ export interface SpecimenTransaction {
   /**
    * If you choose "Yes, with restrictions", explain the restrictions in the following field "Rights and obligations".
    */
-  availableForGeneticResearch?:
-    | ""
-    | "HRX.availableForGeneticResearchYes"
-    | "HRX.availableForGeneticResearchWithRestrictions"
-    | "HRX.availableForGeneticResearchNo";
+  availableForGeneticResearch?: AvailableForGeneticResearchEnum;
   awayCount?: number;
   awayIDs?: string[];
   /**
@@ -73,14 +119,7 @@ export interface SpecimenTransaction {
   /**
    * Choose the type of the genetic resource for statistical and reporting purposes.
    */
-  geneticResourceType?:
-    | ""
-    | "HRX.geneticResourceTypeAnimal"
-    | "HRX.geneticResourceTypePlant"
-    | "HRX.geneticResourceTypeFungus"
-    | "HRX.geneticResourceTypeMicrobe"
-    | "HRX.geneticResourceTypeSoil"
-    | "HRX.geneticResourceTypeAqua";
+  geneticResourceType?: GeneticResourceTypeEnum;
   harmonizedSystemCode?: string;
   /**
    * Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
@@ -137,29 +176,7 @@ export interface SpecimenTransaction {
    * When the transaction was sent out from us
    */
   outgoingSent?: string;
-  permits?: {
-    id?: string;
-    "@type"?: string;
-    "@context"?: string;
-    permitEndDate?: string;
-    permitFile?: string;
-    permitNotes?: string;
-    permitStartDate?: string;
-    permitStatus?: "" | "HRA.permitStatusAvailable" | "HRA.permitStatusNotRequired";
-    permitType?:
-      | ""
-      | "HRA.permitTypePIC"
-      | "HRA.permitTypeMAT"
-      | "HRA.permitTypeMTA"
-      | "HRA.permitCollectingPermit"
-      | "HRA.permitTypeExportPermit"
-      | "HRA.permitTypeOther"
-      | "HRA.permitTypeMemorandumOfUnderstanding";
-    /**
-     * Which parent or larger collection this is part of.
-     */
-    isPartOf?: string;
-  }[];
+  permits?: Permit[];
   /**
    * Remarks that are shown to both parties of the transaction.
    */
@@ -175,46 +192,22 @@ export interface SpecimenTransaction {
   /**
    * Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
    */
-  resourceImported?: string;
+  resourceImported?: ResourceImportedEnum;
   returnedCount?: number;
   returnedIDs?: string[];
   /**
    * Whether the transaction is closed, outstanding or in process.
    */
-  status?: "" | "HRX.statusInProcess" | "HRX.statusOutstanding" | "HRX.statusClosed";
-  transactionEvents?: {
-    eventDate: string;
-    eventDocumentIDs?: string[];
-    eventHandler?: string;
-    eventNotes?: string;
-    eventType: "HRX.eventTypeReturn" | "HRX.eventTypeAddition";
-  }[];
+  status?: StatusEnum;
+  transactionEvents?: SpecimenTransactionEvent[];
   /**
    * Means of sending, mail, courier etc.
    */
-  transportMethod?:
-    | ""
-    | "HRX.transportMethodPriority"
-    | "HRX.transportMethodEconomy"
-    | "HRX.transportMethodCourier"
-    | "HRX.transportMethodCarried"
-    | "HRX.transportMethodOther"
-    | "HRX.transportMethodImage";
+  transportMethod?: TransportMethodEnum;
   /**
    * What kind of transaction this is.
    */
-  type:
-    | "HRX.typeLoanIncoming"
-    | "HRX.typeGiftIncoming"
-    | "HRX.typeExchangeIncoming"
-    | "HRX.typeLoanOutgoing"
-    | "HRX.typeGiftOutgoing"
-    | "HRX.typeExchangeOutgoing"
-    | "HRX.typeFieldCollection"
-    | "HRX.typeImportNotice"
-    | "HRX.typeABSNegotiations"
-    | "HRX.typeVirtualLoanOutgoing"
-    | "HRX.typeDeaccession";
+  type: TypeEnum;
   /**
    * Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?
    */
@@ -230,9 +223,5 @@ export interface SpecimenTransaction {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?:
-    | ""
-    | "MZ.publicityRestrictionsPublic"
-    | "MZ.publicityRestrictionsProtected"
-    | "MZ.publicityRestrictionsPrivate";
+  publicityRestrictions?: PublicityRestrictionsEnum;
 }
