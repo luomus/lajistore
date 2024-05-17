@@ -1,6 +1,13 @@
 version: '3'
 
 services:
+  redis:
+    env_file:
+      - .env.e2e
+    extends:
+      file: tools/docker/docker-compose.shared.yml
+      service: redis
+    command: sh -c 'redis-server --requirepass $${REDIS_PASSWORD}'
 
   rabbit:
     env_file:
