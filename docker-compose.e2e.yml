@@ -94,4 +94,6 @@ volumes:
     driver: local
   postgre_data:
     driver: local
+  redis:
+    driver: local
 
