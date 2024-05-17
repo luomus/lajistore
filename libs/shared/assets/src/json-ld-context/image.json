@@ -75,6 +75,10 @@
       "@id": "default:MM.primaryForTaxon",
       "@type": "@id"
     },
+    "side": {
+      "@id": "default:MM.side",
+      "@type": "@id"
+    },
     "sourceSystem": {
       "@id": "default:MM.sourceSystem",
       "@type": "@id"

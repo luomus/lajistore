@@ -110,6 +110,25 @@
       "subject": "MM.primaryForTaxon",
       "title": "Taxon ids for which this media item is primary item"
     },
+    "side": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string",
+        "enum": [
+          "MM.sideUpside",
+          "MM.sideDownside"
+        ],
+        "enumNames": [
+          "Upside",
+          "Downside"
+        ]
+      },
+      "minItems": 1,
+      "range": "MM.sideEnum",
+      "subject": "MM.side",
+      "title": "Upside/downside"
+    },
     "sourceSystem": {
       "type": "string",
       "range": "KE.informationSystem",
@@ -416,6 +435,7 @@
   "required": [
     "fullURL",
     "largeURL",
+    "side",
     "sourceSystem",
     "squareThumbnailURL",
     "thumbnailURL",

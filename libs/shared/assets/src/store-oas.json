@@ -58312,6 +58312,19 @@
             "minItems": 0,
             "title": "Taxon ids for which this media item is primary item"
           },
+          "side": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string",
+              "enum": [
+                "MM.sideUpside",
+                "MM.sideDownside"
+              ]
+            },
+            "minItems": 1,
+            "title": "Upside/downside"
+          },
           "sourceSystem": {
             "type": "string",
             "title": "Source information system of the multimedia object"
@@ -58483,6 +58496,7 @@
         "required": [
           "fullURL",
           "largeURL",
+          "side",
           "sourceSystem",
           "squareThumbnailURL",
           "thumbnailURL",

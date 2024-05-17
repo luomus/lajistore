@@ -4,6 +4,9 @@
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
+export type SideEnum =
+  | "MM.sideUpside"
+  | "MM.sideDownside";
 export type TypeEnum =
   | ""
   | "MM.typeEnumLive"
@@ -103,6 +106,7 @@ export interface Image {
   originalFilename?: string;
   originalURL?: string;
   primaryForTaxon?: string[];
+  side: [SideEnum, ...[SideEnum]];
   sourceSystem: string;
   squareThumbnailURL: string;
   taxonDescriptionCaption?: {
