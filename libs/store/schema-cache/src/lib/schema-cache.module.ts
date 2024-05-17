@@ -9,20 +9,6 @@ import Redis from 'ioredis';
 import { REDIS_CACHE } from './schema-cache.constants';
 
 @Module({
-  /**
-    imports: [
-      CacheModule.registerAsync({
-        useFactory: async () => ({
-          store: async () => ({
-            create: async () => await redisStore({
-              host: process.env['REDIS_HOST'],
-              port: 6379,
-              password: process.env['REDIS_PASSWORD']
-            }),
-          }) 
-        })
-      }),
-    ],*/
     imports: [
       CacheModule.register({
         ttl: 300
