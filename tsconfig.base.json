@@ -30,7 +30,6 @@
       "@luomus/shared/services": ["libs/shared/services/src/index.ts"],
       "@luomus/shared/utility": ["libs/shared/utility/src/index.ts"],
       "@luomus/store/api-core": ["libs/store/api-core/src/index.ts"],
-      "@luomus/store/client": ["libs/store/client/src/index.ts"],
       "@luomus/store/config": ["libs/store/config/src/index.ts"],
       "@luomus/store/core": ["libs/store/core/src/index.ts"],
       "@luomus/store/database": ["libs/store/database/src/index.ts"],
