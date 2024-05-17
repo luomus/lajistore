@@ -4,6 +4,6 @@
     "outDir": "../../../dist/libs/store-client",
     "types": []
   },
-  "exclude": ["**/*.spec.ts"],
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"],
   "include": ["**/*.ts"]
 }

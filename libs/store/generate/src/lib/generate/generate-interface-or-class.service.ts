@@ -6,6 +6,7 @@ import { StoreConfigService } from '@luomus/store/config';
 import { FileService, UtilityService } from '@luomus/store/shared';
 import { StoreObject } from '@luomus/shared/models';
 import { map } from 'rxjs/operators';
+import { lastValueFrom } from 'rxjs';
 
 @Injectable()
 export class GenerateInterfaceOrClassService extends AbstractSchemaGenerateService {
@@ -50,28 +51,25 @@ export class GenerateInterfaceOrClassService extends AbstractSchemaGenerateServi
    */
   async generate(classes?: string[]): Promise<boolean> {
     if (!classes) {
-      this.classes = await this.fileService
+      this.classes = await lastValueFrom(this.fileService
         .listFiles(this.configService.get('JSON_SCHEMA_PATH'))
         .pipe(
           map((filenames) =>
             filenames.map((filename) => filename.split('.')[0])
           )
-        )
-        .toPromise();
+        ));
     }
 
-    this.blackList = await this.fileService
+    this.blackList = await lastValueFrom(this.fileService
       .readJsonFile<string[]>(
         this.configService.get('CONFIG_BLACKLIST_CLASS_FILE')
-      )
-      .toPromise();
+      ));
 
     await super.generate(this.classes);
 
     if (this.type === 'interface') {
-      this.languages = await this.fileService
-      .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE'))
-      .toPromise();
+      this.languages = await lastValueFrom(this.fileService
+      .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE')));
 
       this.indexContent += `
 

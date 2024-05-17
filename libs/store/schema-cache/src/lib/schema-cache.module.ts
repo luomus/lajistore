@@ -3,7 +3,7 @@ https://docs.nestjs.com/modules
 */
 
 import { Module } from '@nestjs/common';
-import { CacheModule } from '@nestjs/common';
+import { CacheModule } from '@nestjs/cache-manager';
 import { SchemaCacheService } from './schema-cache.service';
 import Redis from 'ioredis';
 import { REDIS_CACHE } from './schema-cache.constants';

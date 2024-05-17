@@ -4,6 +4,7 @@ import { Operation } from 'fast-json-patch/module/core';
 import { StoreService } from '../store.service';
 import { StoreConfigService } from '@luomus/store/config';
 import { SearchQuery } from '@luomus/store/interface';
+import { StoreObject } from '@luomus/shared/models';
 
 @Injectable()
 export class PatchService {
@@ -12,7 +13,7 @@ export class PatchService {
     private configService: StoreConfigService
   ) {}
 
-  async patchByQuery<T>(
+  async patchByQuery<T extends StoreObject>(
     query: Pick<SearchQuery, 'source' | 'type' | 'query' | 'body'>,
     patch: Operation[],
     limit?: number

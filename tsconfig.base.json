@@ -25,20 +25,20 @@
     "baseUrl": ".",
     "paths": {
       "@luomus/laji/client": ["libs/laji/client/src/index.ts"],
-      "@luomus/shared/models": ["libs/shared/schemas/src/index.ts"],
       "@luomus/shared/assets": ["libs/shared/assets/src/index.ts"],
+      "@luomus/shared/models": ["libs/shared/schemas/src/index.ts"],
       "@luomus/shared/services": ["libs/shared/services/src/index.ts"],
       "@luomus/shared/utility": ["libs/shared/utility/src/index.ts"],
-      "@luomus/store/core": ["libs/store/core/src/index.ts"],
       "@luomus/store/api-core": ["libs/store/api-core/src/index.ts"],
       "@luomus/store/client": ["libs/store/client/src/index.ts"],
+      "@luomus/store/config": ["libs/store/config/src/index.ts"],
+      "@luomus/store/core": ["libs/store/core/src/index.ts"],
+      "@luomus/store/database": ["libs/store/database/src/index.ts"],
       "@luomus/store/generate": ["libs/store/generate/src/index.ts"],
       "@luomus/store/interface": ["libs/store/interface/src/index.ts"],
-      "@luomus/store/config": ["libs/store/config/src/index.ts"],
-      "@luomus/store/database": ["libs/store/database/src/index.ts"],
+      "@luomus/store/schema-cache": ["libs/store/schema-cache/src/index.ts"],
       "@luomus/store/search": ["libs/store/search/src/index.ts"],
-      "@luomus/store/shared": ["libs/store/shared/src/index.ts"],
-      "@luomus/store/schema-cache": ["libs/store/schema-cache/src/index.ts"]
+      "@luomus/store/shared": ["libs/store/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

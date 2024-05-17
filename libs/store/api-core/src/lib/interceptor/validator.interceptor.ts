@@ -9,7 +9,7 @@ import { concatMap, map, switchMap, toArray } from 'rxjs/operators';
 import { ApiUtilService } from '../services/api-util-service';
 import { PARAM_TYPE } from '@luomus/store/interface';
 import { StoreObject } from '@luomus/shared/models';
-import { ErrorObject } from 'ajv/lib/types/index';
+import { ErrorObject } from 'ajv';
 import { ValidatorService } from '@luomus/store/shared';
 
 enum Status {
@@ -156,7 +156,7 @@ export class ValidatorInterceptor implements NestInterceptor {
       keyword: 'errorMessage',
       message: msg,
       schemaPath: '',
-      dataPath: '',
+      instancePath: '',
       params: {},
     };
   }

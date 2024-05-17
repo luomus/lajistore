@@ -12,7 +12,7 @@ import { StoreConfigService } from '@luomus/store/config';
 import { UtilityService } from '@luomus/store/shared';
 import { Document } from '@luomus/store/database';
 import { StoreSearchService } from '@luomus/store/search';
-import { from } from 'rxjs';
+import { from, lastValueFrom } from 'rxjs';
 import { concatMap, toArray } from 'rxjs/operators';
 
 @Injectable()
@@ -109,10 +109,10 @@ export class StoreService {
       single = id.length < 2;
     }
     const source$ = useHistory ?
-      from(id).pipe(
+      lastValueFrom(from(id).pipe(
         concatMap(id => from(this.documentHistoryService.findById(source, type, id))),
         toArray()
-      ).toPromise() :
+      )) :
       this.documentService.findById(source, type, id);
 
     return source$

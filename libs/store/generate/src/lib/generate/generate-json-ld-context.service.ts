@@ -5,6 +5,7 @@ import { ContextDefinition, NodeObject } from 'jsonld';
 import { StoreConfigService } from '@luomus/store/config';
 import { FileService, JsonSchemaService } from '@luomus/store/shared';
 import { PROPERTY_ID } from '@luomus/store/interface';
+import { lastValueFrom } from 'rxjs';
 
 @Injectable()
 export class GenerateJsonLdContextService extends AbstractSchemaGenerateService {
@@ -20,9 +21,8 @@ export class GenerateJsonLdContextService extends AbstractSchemaGenerateService 
    * @param classes
    */
   async generate(classes?: string[]): Promise<boolean> {
-    this.languages = await this.fileService
-      .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE'))
-      .toPromise();
+    this.languages = await lastValueFrom(this.fileService
+      .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE')));
 
     return super.generate(classes);
   }
@@ -31,11 +31,9 @@ export class GenerateJsonLdContextService extends AbstractSchemaGenerateService 
     name: string,
     schema: JSONSchema4
   ): Promise<boolean> {
-    const jsonLdBase = await this.fileService
+    const jsonLdBase = await lastValueFrom(this.fileService
       .readJsonFile<NodeObject>(
-        this.configService.get('CONFIG_JSON_LD_BASE_FILE')
-      )
-      .toPromise();
+        this.configService.get('CONFIG_JSON_LD_BASE_FILE')));
 
     if (!jsonLdBase['@context']) {
       jsonLdBase['@context'] = {};
