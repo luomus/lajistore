@@ -62,7 +62,7 @@ export class FileService {
 
   readTextFile(filename: string, encoding = 'utf8'): Observable<string> {
     return new Observable((sub: Subscriber<string>) => {
-      fs.readFile(filename, encoding, function (err, data) {
+      fs.readFile(filename as fs.PathOrFileDescriptor, { encoding: encoding as BufferEncoding }, function (err: any, data: string) {
         if (err) {
           console.log('Error loading text file', filename);
           return sub.error(err);

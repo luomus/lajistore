@@ -66238,6 +66238,7 @@
                 "op",
                 "path"
               ],
+              "type": "object",
               "properties": {
                 "path": {
                   "description": "A JSON Pointer path.",
@@ -66263,6 +66264,7 @@
                 "op",
                 "path"
               ],
+              "type": "object",
               "properties": {
                 "path": {
                   "description": "A JSON Pointer path.",
@@ -66284,6 +66286,7 @@
                 "op",
                 "path"
               ],
+              "type": "object",
               "properties": {
                 "path": {
                   "description": "A JSON Pointer path.",
