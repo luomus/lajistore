@@ -41,7 +41,7 @@ const typeOrmConfig: TypeOrmModuleOptions = {
   entities: [DocumentHistory, Document, User],
   //logger: "advanced-console",
   //logging: "all",
-  autoLoadEntities: sync,
+  synchronize: sync,
   migrations: [
     join(__dirname, '..', '..', '..', 'tools', 'database', 'migrations', type, '*.js')
   ],
