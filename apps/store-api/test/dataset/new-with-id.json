@@ -8,5 +8,10 @@
     "fi": "Testi datesetti nimi",
     "sv": "SV"
   },
+  "description": {
+    "en": "Test description",
+    "fi": "Testi kuvaus",
+    "sv": "SV"
+  },
   "datasetType": "GX.datasetTypeProject"
 }
