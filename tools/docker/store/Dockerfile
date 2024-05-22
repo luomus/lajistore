@@ -44,7 +44,6 @@ RUN apt update \
 
 SHELL ["/bin/bash", "-c"]
 WORKDIR /app
-RUN chown -Rh node:node /app
 USER node
 
 # To run this you need to mount ./ (with corrent node_modules included) to this image
