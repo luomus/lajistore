@@ -67,7 +67,7 @@ FROM api as cli
 ENV NODE_ENV production
 
 COPY --chown=node:node --from=builder /app/dist/apps/store-cli ./
-COPY --chown=node:node --chmod=666 --from=builder /app/dist/apps/store-cli/libs/shared ./libs/shared
+COPY --chown=node:node --chmod=766 --from=builder /app/dist/apps/store-cli/libs/shared ./libs/shared
 
 # This will keep the pod running so that you can connect terminal to it when ever
 CMD [ "tail", "-f", "/dev/null"]
