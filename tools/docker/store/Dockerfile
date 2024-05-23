@@ -67,7 +67,6 @@ FROM api as cli
 ENV NODE_ENV production
 
 COPY --chown=node:node --from=builder /app/dist/apps/store-cli ./
-RUN chomd 666 -R /app/libs
 
 # This will keep the pod running so that you can connect terminal to it when ever
 CMD [ "tail", "-f", "/dev/null"]

@@ -83,7 +83,7 @@ spec:
                   name: store-config
             - name: LAJI_API_TOKEN
               valueFrom:
-                secretKeyRef:
+                configMapKeyRef:
                   key: LAJI_API_TOKEN
                   name: store-config
             - name: SOURCE_ID
