@@ -283,7 +283,7 @@
       "range": "xsd:string",
       "subject": "HRX.material",
       "description": "Description of the material included in this transaction.",
-      "title": "Material"
+      "title": "Material description"
     },
     "missingCount": {
       "type": "integer",
@@ -534,17 +534,6 @@
             "subject": "HRX.eventDate",
             "title": "Date"
           },
-          "eventDocumentIDs": {
-            "type": "array",
-            "uniqueItems": false,
-            "items": {
-              "type": "string"
-            },
-            "minItems": 0,
-            "range": "xsd:string",
-            "subject": "HRX.eventDocumentIDs",
-            "title": "Specimen IDs"
-          },
           "eventHandler": {
             "type": "string",
             "range": "xsd:string",
@@ -574,6 +563,8 @@
         },
         "required": [
           "eventDate",
+          "eventHandler",
+          "eventNotes",
           "eventType"
         ]
       },

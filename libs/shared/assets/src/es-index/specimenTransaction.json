@@ -262,11 +262,6 @@
           "eventDate": {
             "type": "date"
           },
-          "eventDocumentIDs": {
-            "type": "keyword",
-            "ignore_above": 200,
-            "normalizer": "useLowercase"
-          },
           "eventHandler": {
             "type": "keyword",
             "ignore_above": 200,

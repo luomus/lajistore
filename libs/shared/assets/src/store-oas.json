@@ -61926,7 +61926,7 @@
           "material": {
             "type": "string",
             "description": "Description of the material included in this transaction.",
-            "title": "Material"
+            "title": "Material description"
           },
           "missingCount": {
             "type": "integer",
@@ -62121,15 +62121,6 @@
             "format": "date",
             "title": "Date"
           },
-          "eventDocumentIDs": {
-            "type": "array",
-            "uniqueItems": false,
-            "items": {
-              "type": "string"
-            },
-            "minItems": 0,
-            "title": "Specimen IDs"
-          },
           "eventHandler": {
             "type": "string",
             "title": "Handler"
@@ -62149,6 +62140,8 @@
         },
         "required": [
           "eventDate",
+          "eventHandler",
+          "eventNotes",
           "eventType"
         ]
       },
