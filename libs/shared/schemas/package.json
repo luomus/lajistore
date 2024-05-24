@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "tsc": "npx tsc -b tsconfig.cjs.json tsconfig.esm.json tsconfig.types.json",
-    "prepublishOnly": "npm run tsc",
+    "gen-dto": "mkdir -p dist/dto && cp src/classes/*.ts dist/dto/ && cd dist/dto && for f in *.ts; do mv -- \"$f\" \"${f%.ts}.dto.ts\"; done && sed -i \"s/'$/.dto'/g\" index.dto.ts && sed -i \"s/'\\.\\/'/'\\.\\/index.dto'/gm\" *.dto.ts && cd ../..",
+    "prepublishOnly": "npm run tsc && npm run gen-dto",
     "postpublish": "rm -rf dist"
   },
   "publishConfig": {
@@ -35,6 +36,9 @@
       "types": "./dist/types/models/index.d.ts",
       "require": "./dist/cjs/models/index.js",
       "import": "./dist/esm/models/index.js"
+    },
+    "./dto": {
+      "import": "./dist/dto/index.dto.ts"
     }
   },
   "typesVersions": {
