@@ -31,17 +31,6 @@
       "subject": "HRX.eventDate",
       "title": "Date"
     },
-    "eventDocumentIDs": {
-      "type": "array",
-      "uniqueItems": false,
-      "items": {
-        "type": "string"
-      },
-      "minItems": 0,
-      "range": "xsd:string",
-      "subject": "HRX.eventDocumentIDs",
-      "title": "Specimen IDs"
-    },
     "eventHandler": {
       "type": "string",
       "range": "xsd:string",
@@ -71,6 +60,8 @@
   },
   "required": [
     "eventDate",
+    "eventHandler",
+    "eventNotes",
     "eventType"
   ]
 }

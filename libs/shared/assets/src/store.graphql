@@ -8340,6 +8340,7 @@ type Image2 {
 
   # Sex of the individual(s)
   sex: Sex
+  side: [SideListItem]!
   sortOrder: Int
   sourceSystem: String!
   squareThumbnailURL: String!
@@ -8350,6 +8351,11 @@ type Image2 {
   type: TypeOfTaxonMedia
   uploadDateTime: String
   uploadedBy: String
+}
+
+enum SideListItem {
+  MM_SIDEUPSIDE
+  MM_SIDEDOWNSIDE
 }
 
 type Individual2 {
@@ -9973,9 +9979,8 @@ enum TransactionStatus {
 type SpecimenTransactionEvent {
   context: String
   eventDate: String!
-  eventDocumentIDs: [String]
-  eventHandler: String
-  eventNotes: String
+  eventHandler: String!
+  eventNotes: String!
   eventType: EventType2!
   id: String
   type: String
@@ -24742,6 +24747,7 @@ input Image2Input {
 
   # Sex of the individual(s)
   sex: Sex
+  side: [SideListItem]!
   sortOrder: Int
   sourceSystem: String!
   squareThumbnailURL: String!
@@ -25715,9 +25721,8 @@ input SpecimenTransaction2Input {
 input SpecimenTransactionEventInput {
   context: String
   eventDate: String!
-  eventDocumentIDs: [String]
-  eventHandler: String
-  eventNotes: String
+  eventHandler: String!
+  eventNotes: String!
   eventType: EventType2!
   id: String
   type: String

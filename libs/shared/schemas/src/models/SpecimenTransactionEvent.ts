@@ -12,8 +12,7 @@ export interface SpecimenTransactionEvent {
   id?: string;
   "@type"?: string;
   eventDate: string;
-  eventDocumentIDs?: string[];
-  eventHandler?: string;
-  eventNotes?: string;
+  eventHandler: string;
+  eventNotes: string;
   eventType: EventTypeEnum;
 }

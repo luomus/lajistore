@@ -81,6 +81,11 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "side": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "sourceSystem": {
         "type": "keyword",
         "ignore_above": 200,
