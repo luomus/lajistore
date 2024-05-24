@@ -4947,8 +4947,10 @@ type Audio2 {
   capturerVerbatim: [String]
   context: String
   documentURI: [String]
+  flacURL: String
   fullResolutionMediaAvailable: Boolean
   fullURL: String!
+  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -5346,6 +5348,7 @@ type DataField2 {
   # Information for data users about the contents/source/etc of the field
   description: String
   example: String
+  herboSortOrder: Int
   id: String
   includeFull: Boolean
   includeSecurePortalUI: Boolean
@@ -8322,6 +8325,7 @@ type Image2 {
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
   fullURL: String!
+  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -8993,6 +8997,7 @@ type Model2 {
   context: String
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
+  herboSortOrder: Int
   highDetailModelURL: String
   id: String
   intellectualOwner: String!
@@ -10755,6 +10760,7 @@ type TraitEnumValue2 {
   context: String
   dataEntryName: String!
   description: String!
+  herboSortOrder: Int
   id: String
   name: String!
   sortOrder: Int
@@ -11045,6 +11051,7 @@ type Video2 {
   context: String
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
+  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -23081,8 +23088,10 @@ input Audio2Input {
   capturerVerbatim: [String]
   context: String
   documentURI: [String]
+  flacURL: String
   fullResolutionMediaAvailable: Boolean
   fullURL: String!
+  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -23329,6 +23338,7 @@ input DataField2Input {
   # Information for data users about the contents/source/etc of the field
   description: String
   example: String
+  herboSortOrder: Int
   id: String
   includeFull: Boolean
   includeSecurePortalUI: Boolean
@@ -24729,6 +24739,7 @@ input Image2Input {
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
   fullURL: String!
+  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -25148,6 +25159,7 @@ input Model2Input {
   context: String
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
+  herboSortOrder: Int
   highDetailModelURL: String
   id: String
   intellectualOwner: String!
@@ -26016,6 +26028,7 @@ input TraitEnumValue2Input {
   context: String
   dataEntryName: String!
   description: String!
+  herboSortOrder: Int
   id: String
   name: String!
   sortOrder: Int
@@ -26212,6 +26225,7 @@ input Video2Input {
   context: String
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
+  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!

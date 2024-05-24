@@ -24,6 +24,12 @@
       "subject": "@type",
       "title": "Type for the Audio recording"
     },
+    "herbo:sortOrder": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "herbo:sortOrder",
+      "title": "herbo:sortOrder"
+    },
     "caption": {
       "type": "string",
       "range": "xsd:string",
@@ -57,6 +63,12 @@
       "range": "xsd:string",
       "subject": "MM.documentURI",
       "title": "Assosiated with document"
+    },
+    "flacURL": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MM.flacURL",
+      "title": "URL of flac audio file (stripped original)"
     },
     "fullResolutionMediaAvailable": {
       "type": "boolean",

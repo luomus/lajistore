@@ -31,6 +31,10 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
+    "herbo:sortOrder": {
+      "@id": "default:herbo:sortOrder",
+      "@type": "xsd:integer"
+    },
     "caption": {
       "@id": "default:MM.caption",
       "@type": "xsd:string"
@@ -45,6 +49,10 @@
     },
     "documentURI": {
       "@id": "default:MM.documentURI",
+      "@type": "xsd:string"
+    },
+    "flacURL": {
+      "@id": "default:MM.flacURL",
       "@type": "xsd:string"
     },
     "fullResolutionMediaAvailable": {

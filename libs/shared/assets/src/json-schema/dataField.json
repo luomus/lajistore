@@ -24,6 +24,12 @@
       "subject": "@type",
       "title": "Type for the Data field"
     },
+    "herbo:sortOrder": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "herbo:sortOrder",
+      "title": "herbo:sortOrder"
+    },
     "apiName": {
       "type": "string",
       "range": "xsd:string",

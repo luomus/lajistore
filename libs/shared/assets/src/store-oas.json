@@ -53144,6 +53144,10 @@
             "type": "string",
             "title": "Type for the Audio recording"
           },
+          "herbo:sortOrder": {
+            "type": "integer",
+            "title": "herbo:sortOrder"
+          },
           "caption": {
             "type": "string",
             "title": "Caption"
@@ -53169,6 +53173,10 @@
             },
             "minItems": 0,
             "title": "Assosiated with document"
+          },
+          "flacURL": {
+            "type": "string",
+            "title": "URL of flac audio file (stripped original)"
           },
           "fullResolutionMediaAvailable": {
             "type": "boolean",
@@ -53966,6 +53974,10 @@
           "@type": {
             "type": "string",
             "title": "Type for the Data field"
+          },
+          "herbo:sortOrder": {
+            "type": "integer",
+            "title": "herbo:sortOrder"
           },
           "apiName": {
             "type": "string",
@@ -58248,6 +58260,10 @@
             "type": "string",
             "title": "Type for the Image"
           },
+          "herbo:sortOrder": {
+            "type": "integer",
+            "title": "herbo:sortOrder"
+          },
           "caption": {
             "type": "string",
             "title": "Caption"
@@ -59759,6 +59775,10 @@
           "@type": {
             "type": "string",
             "title": "Type for the 3D model"
+          },
+          "herbo:sortOrder": {
+            "type": "integer",
+            "title": "herbo:sortOrder"
           },
           "caption": {
             "type": "string",
@@ -63711,6 +63731,10 @@
             "type": "string",
             "title": "Type for the Trait enumeration"
           },
+          "herbo:sortOrder": {
+            "type": "integer",
+            "title": "herbo:sortOrder"
+          },
           "dataEntryName": {
             "type": "string",
             "title": "Data entry short name/code"
@@ -65990,6 +66014,10 @@
           "@type": {
             "type": "string",
             "title": "Type for the Video"
+          },
+          "herbo:sortOrder": {
+            "type": "integer",
+            "title": "herbo:sortOrder"
           },
           "caption": {
             "type": "string",
