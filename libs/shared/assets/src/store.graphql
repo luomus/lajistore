@@ -8392,6 +8392,9 @@ type InformalTaxonGroup2 {
 
 type InformationSystem2 {
   allowedDatawarehouseOverridingSourceId: [String]
+
+  # System is allowed to use data warehouse 'useEditorOrObserverIdIsNot' query param
+  allowedToUseDatawarehouseEditorOrObserverIdIsNot: Boolean
   context: String
   description: MultiLang!
   documentation: String!
@@ -24801,6 +24804,9 @@ input InformalTaxonGroup2Input {
 
 input InformationSystem2Input {
   allowedDatawarehouseOverridingSourceId: [String]
+
+  # System is allowed to use data warehouse 'useEditorOrObserverIdIsNot' query param
+  allowedToUseDatawarehouseEditorOrObserverIdIsNot: Boolean
   context: String
   description: MultiLangInput!
   documentation: String!

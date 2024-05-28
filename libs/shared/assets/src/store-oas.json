@@ -58681,6 +58681,11 @@
             "minItems": 0,
             "title": "allowedDatawarehouseOverridingSourceId"
           },
+          "allowedToUseDatawarehouseEditorOrObserverIdIsNot": {
+            "type": "boolean",
+            "description": "System is allowed to use data warehouse 'useEditorOrObserverIdIsNot' query param",
+            "title": "Allowed to use warehouse editorOrObserverIsNot"
+          },
           "description": {
             "$ref": "#/components/schemas/multiLang"
           },

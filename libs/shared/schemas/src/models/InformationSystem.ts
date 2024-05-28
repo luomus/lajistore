@@ -28,6 +28,10 @@ export interface InformationSystem {
   "@type"?: string;
   URI: string;
   allowedDatawarehouseOverridingSourceId?: string[];
+  /**
+   * System is allowed to use data warehouse 'useEditorOrObserverIdIsNot' query param
+   */
+  allowedToUseDatawarehouseEditorOrObserverIdIsNot?: boolean;
   description: {
     en?: string;
     fi?: string;

@@ -41,6 +41,13 @@
       "subject": "KE.allowedDatawarehouseOverridingSourceId",
       "title": "allowedDatawarehouseOverridingSourceId"
     },
+    "allowedToUseDatawarehouseEditorOrObserverIdIsNot": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "KE.allowedToUseDatawarehouseEditorOrObserverIdIsNot",
+      "description": "System is allowed to use data warehouse 'useEditorOrObserverIdIsNot' query param",
+      "title": "Allowed to use warehouse editorOrObserverIsNot"
+    },
     "description": {
       "type": "object",
       "additionalProperties": false,
