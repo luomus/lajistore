@@ -90,21 +90,21 @@
       "type": "string",
       "range": "MOS.organization",
       "subject": "HRX.correspondentOrganization",
-      "description": "Select the correspondent organization from a list. If not found on the list, you need to add the new organization first.",
+      "description": "Select the counterparty organisation from a list. If not found on the list, you need to add the new organisation first.",
       "title": "Counterparty organization"
     },
     "correspondentPerson": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.correspondentPerson",
-      "description": "Name of the corresponding person. If the transaction goes to a private person, write their postal address here.",
+      "description": "Name of the counterparty person. If the transaction goes to a private person, write their postal address here.",
       "title": "Counterparty person/contact info"
     },
     "correspondentResearcher": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.correspondentResearcher",
-      "description": "Receicing researcher in the correspondent organisation for outgoing transactions.",
+      "description": "For outgoing transactions the receiving researcher in the counterparty organisation.",
       "title": "Receiving researcher"
     },
     "damagedCount": {
@@ -137,7 +137,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.externalID",
-      "description": "Sender's ID for the transaction.",
+      "description": "Counterparty's ID for the transaction.",
       "title": "Transaction ID by counterparty"
     },
     "geneticResourceAcquisitionCountry": {
@@ -152,7 +152,7 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "HRX.geneticResourceAcquisitionDate",
-      "description": "Date when the genetic resource or traditional knowledge was aqcuired.",
+      "description": "Date when the genetic resource or traditional knowledge was acquired.",
       "title": "Acquisition date"
     },
     "geneticResourceDescription": {
@@ -205,6 +205,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.harmonizedSystemCode",
+      "description": "Harmonized System code for the customs",
       "title": "HS Code for customs"
     },
     "hasIRCC": {
@@ -234,7 +235,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.internalRemarks",
-      "description": "Private remarks that are shown only in Kotka and not to the corresponding organisation.",
+      "description": "Private remarks that are shown only in Kotka and not to the counterparty organisation.",
       "title": "Internal remarks"
     },
     "legacyID": {
@@ -255,13 +256,14 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localHandlerEmail",
+      "description": "Contact email for the person handling the transaction in our museum.",
       "title": "Handler email"
     },
     "localPerson": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localPerson",
-      "description": "Person responsible for the transaction in our museum/local Kotka institution",
+      "description": "Person responsible for the transaction in our museum/local Kotka institution.",
       "title": "Person responsible"
     },
     "localPersonEmail": {
@@ -275,7 +277,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localResearcher",
-      "description": "For incoming loans, name of the researcher receiving the loan at our local institution.",
+      "description": "For incoming transactions, name of the researcher receiving the loan at our museum/ local Kotka institution.",
       "title": "Receiving researcher"
     },
     "material": {
@@ -315,7 +317,7 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "HRX.outgoingReturned",
-      "description": "Date when the outgoing loan was returned to us",
+      "description": "Date when the outgoing loan was returned to us.",
       "title": "Outgoing loan returned"
     },
     "outgoingSent": {
@@ -323,7 +325,7 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "HRX.outgoingSent",
-      "description": "When the transaction was sent out from us",
+      "description": "When the ougoing transaction was sent out from us.",
       "title": "Outgoing transaction sent"
     },
     "permits": {
@@ -440,7 +442,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.publicRemarks",
-      "description": "Remarks that are shown to both parties of the transaction.",
+      "description": "Remarks that are shown to both parties of the transaction on transaction PDFs.",
       "title": "Public remarks"
     },
     "receiptReturned": {
@@ -448,7 +450,7 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "HRX.receiptReturned",
-      "description": "When signed loan receipt was received from the loanee",
+      "description": "When signed transaction receipt was received (outgoing) or sent (incoming).",
       "title": "Receipt returned"
     },
     "requestReceived": {
@@ -456,7 +458,7 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "HRX.requestReceived",
-      "description": "When loan request was received here.",
+      "description": "When transaction request was received here.",
       "title": "Date requested"
     },
     "resourceImported": {
@@ -514,7 +516,7 @@
       ],
       "range": "HRX.statusEnum",
       "subject": "HRX.status",
-      "description": "Whether the transaction is closed, outstanding or in process.",
+      "description": "Whether the transaction is closed, outstanding, in process or still on loan..",
       "title": "Transaction status"
     },
     "transactionEvents": {
@@ -532,18 +534,21 @@
             "format": "date",
             "range": "xsd:date",
             "subject": "HRX.eventDate",
+            "description": "Date when the transaction event occurred.",
             "title": "Date"
           },
           "eventHandler": {
             "type": "string",
             "range": "xsd:string",
             "subject": "HRX.eventHandler",
+            "description": "Name of the person who handled the transaction event.",
             "title": "Handler"
           },
           "eventNotes": {
             "type": "string",
             "range": "xsd:string",
             "subject": "HRX.eventNotes",
+            "description": "More information about the transactions event. You can e.g. list the specimens included in the event in this field.",
             "title": "Notes"
           },
           "eventType": {
@@ -558,6 +563,7 @@
             ],
             "range": "HRX.eventTypeEnum",
             "subject": "HRX.eventType",
+            "description": "Type of the transaction event. Return for e.g. partial returns and addition e.g. for when more specimens are added to the transaction later.",
             "title": "Event type"
           }
         },

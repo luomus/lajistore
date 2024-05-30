@@ -29,18 +29,21 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "HRX.eventDate",
+      "description": "Date when the transaction event occurred.",
       "title": "Date"
     },
     "eventHandler": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.eventHandler",
+      "description": "Name of the person who handled the transaction event.",
       "title": "Handler"
     },
     "eventNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.eventNotes",
+      "description": "More information about the transactions event. You can e.g. list the specimens included in the event in this field.",
       "title": "Notes"
     },
     "eventType": {
@@ -55,6 +58,7 @@
       ],
       "range": "HRX.eventTypeEnum",
       "subject": "HRX.eventType",
+      "description": "Type of the transaction event. Return for e.g. partial returns and addition e.g. for when more specimens are added to the transaction later.",
       "title": "Event type"
     }
   },
