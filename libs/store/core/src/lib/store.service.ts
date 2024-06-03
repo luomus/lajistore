@@ -59,6 +59,9 @@ export class StoreService {
     query: SearchQuery
   ): Promise<PagedResponse<T>> {
     const results = await this.searchService.search(query);
+    if (!results.member?.length) {
+      return results as any;
+    }
     if (UtilityService.hasSelectedFields(query)) {
       return results as any;
     }
