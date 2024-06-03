@@ -35,10 +35,6 @@
       "@id": "default:HRX.eventDate",
       "@type": "xsd:date"
     },
-    "eventDocumentIDs": {
-      "@id": "default:HRX.eventDocumentIDs",
-      "@type": "xsd:string"
-    },
     "eventHandler": {
       "@id": "default:HRX.eventHandler",
       "@type": "xsd:string"

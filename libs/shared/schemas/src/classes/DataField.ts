@@ -8,6 +8,7 @@ export class DataField {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  "herbo:sortOrder"?: number;
   apiName?: string;
   /**
    * Information for data users about the contents/source/etc of the field

@@ -38,6 +38,9 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "allowedToUseDatawarehouseEditorOrObserverIdIsNot": {
+        "type": "boolean"
+      },
       "description": {
         "properties": {
           "en": {

@@ -4947,8 +4947,10 @@ type Audio2 {
   capturerVerbatim: [String]
   context: String
   documentURI: [String]
+  flacURL: String
   fullResolutionMediaAvailable: Boolean
   fullURL: String!
+  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -5346,6 +5348,7 @@ type DataField2 {
   # Information for data users about the contents/source/etc of the field
   description: String
   example: String
+  herboSortOrder: Int
   id: String
   includeFull: Boolean
   includeSecurePortalUI: Boolean
@@ -8322,6 +8325,7 @@ type Image2 {
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
   fullURL: String!
+  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -8388,6 +8392,9 @@ type InformalTaxonGroup2 {
 
 type InformationSystem2 {
   allowedDatawarehouseOverridingSourceId: [String]
+
+  # System is allowed to use data warehouse 'useEditorOrObserverIdIsNot' query param
+  allowedToUseDatawarehouseEditorOrObserverIdIsNot: Boolean
   context: String
   description: MultiLang!
   documentation: String!
@@ -8993,6 +9000,7 @@ type Model2 {
   context: String
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
+  herboSortOrder: Int
   highDetailModelURL: String
   id: String
   intellectualOwner: String!
@@ -9823,13 +9831,13 @@ type SpecimenTransaction2 {
   collectionID: String
   context: String
 
-  # Select the correspondent organization from a list. If not found on the list, you need to add the new organization first.
+  # Select the counterparty organisation from a list. If not found on the list, you need to add the new organisation first.
   correspondentOrganization: String
 
-  # Name of the corresponding person. If the transaction goes to a private person, write their postal address here.
+  # Name of the counterparty person. If the transaction goes to a private person, write their postal address here.
   correspondentPerson: String
 
-  # Receicing researcher in the correspondent organisation for outgoing transactions.
+  # For outgoing transactions the receiving researcher in the counterparty organisation.
   correspondentResearcher: String
   creator: String
   damagedCount: Int
@@ -9841,13 +9849,13 @@ type SpecimenTransaction2 {
   dueDate: String
   editor: String
 
-  # Sender's ID for the transaction.
+  # Counterparty's ID for the transaction.
   externalID: String
 
   # Country where the genetic resource or traditional knowledge was acquired from, provider country, country of origin. List of countries in Kotka is based on ISO 3166 Country Codes -standard and may differ from the country list in ABSCH.
   geneticResourceAcquisitionCountry: String
 
-  # Date when the genetic resource or traditional knowledge was aqcuired.
+  # Date when the genetic resource or traditional knowledge was acquired.
   geneticResourceAcquisitionDate: String
 
   # Description of the genetic resource or traditional knowledge (possible identifiers, taxa, number of specimens, region etc.). Instruction source EU DECLARE User manual and QA.
@@ -9861,6 +9869,8 @@ type SpecimenTransaction2 {
 
   # Choose the type of the genetic resource for statistical and reporting purposes.
   geneticResourceType: GeneticResourceType
+
+  # Harmonized System code for the customs
   harmonizedSystemCode: String
 
   # Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
@@ -9876,7 +9886,7 @@ type SpecimenTransaction2 {
   # Date when the incoming loan was returned to the sender.
   incomingReturned: String
 
-  # Private remarks that are shown only in Kotka and not to the corresponding organisation.
+  # Private remarks that are shown only in Kotka and not to the counterparty organisation.
   internalRemarks: String
 
   # Loan/transaction number used in paper loan catalogs or old software (e.g. Curator)
@@ -9884,15 +9894,17 @@ type SpecimenTransaction2 {
 
   # Person handling the transaction at local Kotka institution.
   localHandler: String
+
+  # Contact email for the person handling the transaction in our museum.
   localHandlerEmail: String
 
-  # Person responsible for the transaction in our museum/local Kotka institution
+  # Person responsible for the transaction in our museum/local Kotka institution.
   localPerson: String
 
   # Contact email for the person responsible in our museum.
   localPersonEmail: String
 
-  # For incoming loans, name of the researcher receiving the loan at our local institution.
+  # For incoming transactions, name of the researcher receiving the loan at our museum/ local Kotka institution.
   localResearcher: String
 
   # Description of the material included in this transaction.
@@ -9903,26 +9915,26 @@ type SpecimenTransaction2 {
   # In how many parcels was the transaction sent/carried.
   numberOfParcels: String
 
-  # Date when the outgoing loan was returned to us
+  # Date when the outgoing loan was returned to us.
   outgoingReturned: String
 
-  # When the transaction was sent out from us
+  # When the ougoing transaction was sent out from us.
   outgoingSent: String
 
   # Team or organisation that owns the record and can edit it.
   owner: String
   permits: [Permit2]
 
-  # Remarks that are shown to both parties of the transaction.
+  # Remarks that are shown to both parties of the transaction on transaction PDFs.
   publicRemarks: String
 
   # PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
   publicityRestrictions: PublicityRestrictions
 
-  # When signed loan receipt was received from the loanee
+  # When signed transaction receipt was received (outgoing) or sent (incoming).
   receiptReturned: String
 
-  # When loan request was received here.
+  # When transaction request was received here.
   requestReceived: String
 
   # Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
@@ -9930,7 +9942,7 @@ type SpecimenTransaction2 {
   returnedCount: Int
   returnedIDs: [String]
 
-  # Whether the transaction is closed, outstanding or in process.
+  # Whether the transaction is closed, outstanding, in process or still on loan..
   status: TransactionStatus
   transactionEvents: [SpecimenTransactionEvent]
 
@@ -9978,10 +9990,17 @@ enum TransactionStatus {
 
 type SpecimenTransactionEvent {
   context: String
+
+  # Date when the transaction event occurred.
   eventDate: String!
-  eventDocumentIDs: [String]
-  eventHandler: String
-  eventNotes: String
+
+  # Name of the person who handled the transaction event.
+  eventHandler: String!
+
+  # More information about the transactions event. You can e.g. list the specimens included in the event in this field.
+  eventNotes: String!
+
+  # Type of the transaction event. Return for e.g. partial returns and addition e.g. for when more specimens are added to the transaction later.
   eventType: EventType2!
   id: String
   type: String
@@ -10756,6 +10775,7 @@ type TraitEnumValue2 {
   context: String
   dataEntryName: String!
   description: String!
+  herboSortOrder: Int
   id: String
   name: String!
   sortOrder: Int
@@ -11046,6 +11066,7 @@ type Video2 {
   context: String
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
+  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -23082,8 +23103,10 @@ input Audio2Input {
   capturerVerbatim: [String]
   context: String
   documentURI: [String]
+  flacURL: String
   fullResolutionMediaAvailable: Boolean
   fullURL: String!
+  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -23330,6 +23353,7 @@ input DataField2Input {
   # Information for data users about the contents/source/etc of the field
   description: String
   example: String
+  herboSortOrder: Int
   id: String
   includeFull: Boolean
   includeSecurePortalUI: Boolean
@@ -24730,6 +24754,7 @@ input Image2Input {
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
   fullURL: String!
+  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -24791,6 +24816,9 @@ input InformalTaxonGroup2Input {
 
 input InformationSystem2Input {
   allowedDatawarehouseOverridingSourceId: [String]
+
+  # System is allowed to use data warehouse 'useEditorOrObserverIdIsNot' query param
+  allowedToUseDatawarehouseEditorOrObserverIdIsNot: Boolean
   context: String
   description: MultiLangInput!
   documentation: String!
@@ -25149,6 +25177,7 @@ input Model2Input {
   context: String
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
+  herboSortOrder: Int
   highDetailModelURL: String
   id: String
   intellectualOwner: String!
@@ -25598,13 +25627,13 @@ input SpecimenTransaction2Input {
   collectionID: String
   context: String
 
-  # Select the correspondent organization from a list. If not found on the list, you need to add the new organization first.
+  # Select the counterparty organisation from a list. If not found on the list, you need to add the new organisation first.
   correspondentOrganization: String
 
-  # Name of the corresponding person. If the transaction goes to a private person, write their postal address here.
+  # Name of the counterparty person. If the transaction goes to a private person, write their postal address here.
   correspondentPerson: String
 
-  # Receicing researcher in the correspondent organisation for outgoing transactions.
+  # For outgoing transactions the receiving researcher in the counterparty organisation.
   correspondentResearcher: String
   creator: String
   damagedCount: Int
@@ -25616,13 +25645,13 @@ input SpecimenTransaction2Input {
   dueDate: String
   editor: String
 
-  # Sender's ID for the transaction.
+  # Counterparty's ID for the transaction.
   externalID: String
 
   # Country where the genetic resource or traditional knowledge was acquired from, provider country, country of origin. List of countries in Kotka is based on ISO 3166 Country Codes -standard and may differ from the country list in ABSCH.
   geneticResourceAcquisitionCountry: String
 
-  # Date when the genetic resource or traditional knowledge was aqcuired.
+  # Date when the genetic resource or traditional knowledge was acquired.
   geneticResourceAcquisitionDate: String
 
   # Description of the genetic resource or traditional knowledge (possible identifiers, taxa, number of specimens, region etc.). Instruction source EU DECLARE User manual and QA.
@@ -25636,6 +25665,8 @@ input SpecimenTransaction2Input {
 
   # Choose the type of the genetic resource for statistical and reporting purposes.
   geneticResourceType: GeneticResourceType
+
+  # Harmonized System code for the customs
   harmonizedSystemCode: String
 
   # Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
@@ -25651,7 +25682,7 @@ input SpecimenTransaction2Input {
   # Date when the incoming loan was returned to the sender.
   incomingReturned: String
 
-  # Private remarks that are shown only in Kotka and not to the corresponding organisation.
+  # Private remarks that are shown only in Kotka and not to the counterparty organisation.
   internalRemarks: String
 
   # Loan/transaction number used in paper loan catalogs or old software (e.g. Curator)
@@ -25659,15 +25690,17 @@ input SpecimenTransaction2Input {
 
   # Person handling the transaction at local Kotka institution.
   localHandler: String
+
+  # Contact email for the person handling the transaction in our museum.
   localHandlerEmail: String
 
-  # Person responsible for the transaction in our museum/local Kotka institution
+  # Person responsible for the transaction in our museum/local Kotka institution.
   localPerson: String
 
   # Contact email for the person responsible in our museum.
   localPersonEmail: String
 
-  # For incoming loans, name of the researcher receiving the loan at our local institution.
+  # For incoming transactions, name of the researcher receiving the loan at our museum/ local Kotka institution.
   localResearcher: String
 
   # Description of the material included in this transaction.
@@ -25678,26 +25711,26 @@ input SpecimenTransaction2Input {
   # In how many parcels was the transaction sent/carried.
   numberOfParcels: String
 
-  # Date when the outgoing loan was returned to us
+  # Date when the outgoing loan was returned to us.
   outgoingReturned: String
 
-  # When the transaction was sent out from us
+  # When the ougoing transaction was sent out from us.
   outgoingSent: String
 
   # Team or organisation that owns the record and can edit it.
   owner: String
   permits: [Permit2Input]
 
-  # Remarks that are shown to both parties of the transaction.
+  # Remarks that are shown to both parties of the transaction on transaction PDFs.
   publicRemarks: String
 
   # PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
   publicityRestrictions: PublicityRestrictions
 
-  # When signed loan receipt was received from the loanee
+  # When signed transaction receipt was received (outgoing) or sent (incoming).
   receiptReturned: String
 
-  # When loan request was received here.
+  # When transaction request was received here.
   requestReceived: String
 
   # Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
@@ -25705,7 +25738,7 @@ input SpecimenTransaction2Input {
   returnedCount: Int
   returnedIDs: [String]
 
-  # Whether the transaction is closed, outstanding or in process.
+  # Whether the transaction is closed, outstanding, in process or still on loan..
   status: TransactionStatus
   transactionEvents: [SpecimenTransactionEventInput]
 
@@ -25721,10 +25754,17 @@ input SpecimenTransaction2Input {
 
 input SpecimenTransactionEventInput {
   context: String
+
+  # Date when the transaction event occurred.
   eventDate: String!
-  eventDocumentIDs: [String]
-  eventHandler: String
-  eventNotes: String
+
+  # Name of the person who handled the transaction event.
+  eventHandler: String!
+
+  # More information about the transactions event. You can e.g. list the specimens included in the event in this field.
+  eventNotes: String!
+
+  # Type of the transaction event. Return for e.g. partial returns and addition e.g. for when more specimens are added to the transaction later.
   eventType: EventType2!
   id: String
   type: String
@@ -26018,6 +26058,7 @@ input TraitEnumValue2Input {
   context: String
   dataEntryName: String!
   description: String!
+  herboSortOrder: Int
   id: String
   name: String!
   sortOrder: Int
@@ -26214,6 +26255,7 @@ input Video2Input {
   context: String
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
+  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!

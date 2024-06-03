@@ -92,10 +92,12 @@ export interface Audio {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  "herbo:sortOrder"?: number;
   caption?: string;
   captureDateTime?: string;
   capturerVerbatim?: string[];
   documentURI?: string[];
+  flacURL?: string;
   fullResolutionMediaAvailable?: boolean;
   fullURL: string;
   keyword?: string[];

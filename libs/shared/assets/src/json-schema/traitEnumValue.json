@@ -24,6 +24,12 @@
       "subject": "@type",
       "title": "Type for the Trait enumeration"
     },
+    "herbo:sortOrder": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "herbo:sortOrder",
+      "title": "herbo:sortOrder"
+    },
     "dataEntryName": {
       "type": "string",
       "range": "xsd:string",

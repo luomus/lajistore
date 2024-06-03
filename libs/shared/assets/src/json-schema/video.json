@@ -24,6 +24,12 @@
       "subject": "@type",
       "title": "Type for the Video"
     },
+    "herbo:sortOrder": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "herbo:sortOrder",
+      "title": "herbo:sortOrder"
+    },
     "caption": {
       "type": "string",
       "range": "xsd:string",
