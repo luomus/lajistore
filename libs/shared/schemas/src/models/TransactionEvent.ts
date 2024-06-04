@@ -23,7 +23,7 @@ export interface TransactionEvent {
   eventDate: string;
   eventHandler: string;
   eventType: EventTypeEnum;
-  items: [TransactionItem, ...[TransactionItem]];
+  items: [TransactionItem, ...TransactionItem[]];
   notes?: string;
   numberOfPackages?: number;
   sentBy?: SentByEnum;
