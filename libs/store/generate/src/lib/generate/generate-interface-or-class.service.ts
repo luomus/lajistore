@@ -133,7 +133,7 @@ export function isLangObject<T>(value: unknown): value is Record<Lang, T> {
     '*/\n';
 
     this.indexContent += `\nimport { ${normalized} } from './${fileName}'`;
-    this.indexContent += `\nexport type { ${normalized} }`;
+    this.indexContent += `\nexport ${this.type === 'interface' ? 'type' : 'class' } { ${normalized} }`;
 
     if (this.type === 'interface') {
       this.isOfType += `
