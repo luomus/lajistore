@@ -309,5 +309,5 @@ export interface Document {
    */
   publicityRestrictions?: PublicityRestrictionsEnum;
   scheduledForDeletion?: boolean;
-  gatherings: [Gathering, ...[Gathering]];
+  gatherings: [Gathering, ...Gathering[]];
 }

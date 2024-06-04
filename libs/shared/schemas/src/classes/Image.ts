@@ -114,7 +114,7 @@ export class Image {
   originalFilename?: string;
   originalURL?: string;
   primaryForTaxon?: string[];
-  side: [SideEnum, ...[SideEnum]];
+  side: [SideEnum, ...SideEnum[]];
   sourceSystem: string;
   squareThumbnailURL: string;
   taxonDescriptionCaption?: {
