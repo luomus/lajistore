@@ -214,7 +214,7 @@ export function is${normalized}(data: unknown): data is ${normalized} {
     if (!props) return;
 
     if (props.isArray) {
-      return props.minItems ? `[${(normalized + ', ').repeat(props.minItems)}...[${normalized}]]` : `${normalized}[]`;
+      return props.minItems ? `[${(normalized + ', ').repeat(props.minItems)}...${normalized}[]]` : `${normalized}[]`;
     }
 
     return normalized;
