@@ -38,6 +38,7 @@
       "import": "./dist/esm/models/index.js"
     },
     "./dto": {
+      "types": "./dist/dto/index.dto.ts",
       "import": "./dist/dto/index.dto.ts"
     }
   },
@@ -48,6 +49,9 @@
       ],
       "models": [
         "./dist/types/models/index.d.ts"
+      ],
+      "dto": [
+        "./dist/dto/index.dto.ts"
       ],
       "*": [
         "./dist/types/index.d.ts"
