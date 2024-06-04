@@ -75,7 +75,7 @@ export class IndexCommand {
         required: false
       },{
         flags: '--size <size>',
-        description: 'The size of the batch to be send for indexing at ones (defaults to 1000)',
+        description: 'The size of the batch to be send for indexing at ones (defaults to 200)',
         required: false
       },{
         flags: '--skip <skip>',
@@ -87,7 +87,7 @@ export class IndexCommand {
   async indexAll(command: IndexOptions) {
     const {removeDeleted, size, skip, ...where} = command;
     const spin = ora();
-    const batchSize = Math.max(Number(size) || 1000, 1);
+    const batchSize = Math.max(Number(size) || 200, 1);
     const startPage = Math.floor(Math.max(Number(skip) || 0, 0) / batchSize);
 
     spin.start(`Indexing`);
@@ -116,7 +116,7 @@ export class IndexCommand {
     }
   }
 
-  private async removeDeleted(where: Omit<IndexOptions, 'removeDeleted'>, removeBatchSize = 1000) {
+  private async removeDeleted(where: Omit<IndexOptions, 'removeDeleted'>, removeBatchSize = 200) {
     const spin = ora();
 
     spin.start(`Removing deleted`);
