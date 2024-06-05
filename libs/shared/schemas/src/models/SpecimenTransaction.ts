@@ -75,15 +75,15 @@ export interface SpecimenTransaction {
    */
   collectionID?: string;
   /**
-   * Select the correspondent organization from a list. If not found on the list, you need to add the new organization first.
+   * Select the counterparty organisation from a list. If not found on the list, you need to add the new organisation first.
    */
   correspondentOrganization?: string;
   /**
-   * Name of the corresponding person. If the transaction goes to a private person, write their postal address here.
+   * Name of the counterparty person. If the transaction goes to a private person, write their postal address here.
    */
   correspondentPerson?: string;
   /**
-   * Receicing researcher in the correspondent organisation for outgoing transactions.
+   * For outgoing transactions the receiving researcher in the counterparty organisation.
    */
   correspondentResearcher?: string;
   damagedCount?: number;
@@ -93,7 +93,7 @@ export interface SpecimenTransaction {
    */
   dueDate?: string;
   /**
-   * Sender's ID for the transaction.
+   * Counterparty's ID for the transaction.
    */
   externalID?: string;
   /**
@@ -101,7 +101,7 @@ export interface SpecimenTransaction {
    */
   geneticResourceAcquisitionCountry?: string;
   /**
-   * Date when the genetic resource or traditional knowledge was aqcuired.
+   * Date when the genetic resource or traditional knowledge was acquired.
    */
   geneticResourceAcquisitionDate?: string;
   /**
@@ -120,6 +120,9 @@ export interface SpecimenTransaction {
    * Choose the type of the genetic resource for statistical and reporting purposes.
    */
   geneticResourceType?: GeneticResourceTypeEnum;
+  /**
+   * Harmonized System code for the customs
+   */
   harmonizedSystemCode?: string;
   /**
    * Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
@@ -134,7 +137,7 @@ export interface SpecimenTransaction {
    */
   incomingReturned?: string;
   /**
-   * Private remarks that are shown only in Kotka and not to the corresponding organisation.
+   * Private remarks that are shown only in Kotka and not to the counterparty organisation.
    */
   internalRemarks?: string;
   /**
@@ -145,9 +148,12 @@ export interface SpecimenTransaction {
    * Person handling the transaction at local Kotka institution.
    */
   localHandler?: string;
+  /**
+   * Contact email for the person handling the transaction in our museum.
+   */
   localHandlerEmail?: string;
   /**
-   * Person responsible for the transaction in our museum/local Kotka institution
+   * Person responsible for the transaction in our museum/local Kotka institution.
    */
   localPerson?: string;
   /**
@@ -155,7 +161,7 @@ export interface SpecimenTransaction {
    */
   localPersonEmail?: string;
   /**
-   * For incoming loans, name of the researcher receiving the loan at our local institution.
+   * For incoming transactions, name of the researcher receiving the loan at our museum/ local Kotka institution.
    */
   localResearcher?: string;
   /**
@@ -169,24 +175,24 @@ export interface SpecimenTransaction {
    */
   numberOfParcels?: string;
   /**
-   * Date when the outgoing loan was returned to us
+   * Date when the outgoing loan was returned to us.
    */
   outgoingReturned?: string;
   /**
-   * When the transaction was sent out from us
+   * When the ougoing transaction was sent out from us.
    */
   outgoingSent?: string;
   permits?: Permit[];
   /**
-   * Remarks that are shown to both parties of the transaction.
+   * Remarks that are shown to both parties of the transaction on transaction PDFs.
    */
   publicRemarks?: string;
   /**
-   * When signed loan receipt was received from the loanee
+   * When signed transaction receipt was received (outgoing) or sent (incoming).
    */
   receiptReturned?: string;
   /**
-   * When loan request was received here.
+   * When transaction request was received here.
    */
   requestReceived?: string;
   /**
@@ -196,7 +202,7 @@ export interface SpecimenTransaction {
   returnedCount?: number;
   returnedIDs?: string[];
   /**
-   * Whether the transaction is closed, outstanding or in process.
+   * Whether the transaction is closed, outstanding, in process or still on loan..
    */
   status?: StatusEnum;
   transactionEvents?: SpecimenTransactionEvent[];

@@ -39,6 +39,10 @@
       "@id": "default:KE.allowedDatawarehouseOverridingSourceId",
       "@type": "@id"
     },
+    "allowedToUseDatawarehouseEditorOrObserverIdIsNot": {
+      "@id": "default:KE.allowedToUseDatawarehouseEditorOrObserverIdIsNot",
+      "@type": "xsd:boolean"
+    },
     "description": {
       "@id": "default:KE.description",
       "@container": "@language"

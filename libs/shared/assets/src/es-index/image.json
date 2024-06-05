@@ -28,6 +28,9 @@
       "@type": {
         "type": "keyword"
       },
+      "herbo:sortOrder": {
+        "type": "integer"
+      },
       "caption": {
         "type": "keyword",
         "ignore_above": 200,
@@ -80,6 +83,10 @@
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"
+      },
+      "side": {
+        "type": "keyword",
+        "ignore_above": 200
       },
       "sourceSystem": {
         "type": "keyword",

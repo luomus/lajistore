@@ -98,6 +98,7 @@ export class Video {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  "herbo:sortOrder"?: number;
   caption?: string;
   captureDateTime?: string;
   capturerVerbatim?: string[];

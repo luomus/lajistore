@@ -8,6 +8,7 @@ export interface TraitEnumValue {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  "herbo:sortOrder"?: number;
   dataEntryName: string;
   description: string;
   name: string;

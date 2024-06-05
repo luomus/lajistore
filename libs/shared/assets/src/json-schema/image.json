@@ -24,6 +24,12 @@
       "subject": "@type",
       "title": "Type for the Image"
     },
+    "herbo:sortOrder": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "herbo:sortOrder",
+      "title": "herbo:sortOrder"
+    },
     "caption": {
       "type": "string",
       "range": "xsd:string",
@@ -109,6 +115,22 @@
       "range": "MX.taxon",
       "subject": "MM.primaryForTaxon",
       "title": "Taxon ids for which this media item is primary item"
+    },
+    "side": {
+      "type": "string",
+      "enum": [
+        "",
+        "MM.sideUpside",
+        "MM.sideDownside"
+      ],
+      "enumNames": [
+        "",
+        "Upside",
+        "Downside"
+      ],
+      "range": "MM.sideEnum",
+      "subject": "MM.side",
+      "title": "Upside/downside"
     },
     "sourceSystem": {
       "type": "string",

@@ -4,6 +4,11 @@
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
+export enum SideEnum {
+  "empty" = "",
+  "sideUpside" = "MM.sideUpside",
+  "sideDownside" = "MM.sideDownside"
+}
 export enum TypeEnum {
   "empty" = "",
   "typeEnumLive" = "MM.typeEnumLive",
@@ -98,6 +103,7 @@ export class Image {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  "herbo:sortOrder"?: number;
   caption?: string;
   captureDateTime?: string;
   capturerVerbatim?: string[];
@@ -109,6 +115,7 @@ export class Image {
   originalFilename?: string;
   originalURL?: string;
   primaryForTaxon?: string[];
+  side?: SideEnum;
   sourceSystem: string;
   squareThumbnailURL: string;
   taxonDescriptionCaption?: {
