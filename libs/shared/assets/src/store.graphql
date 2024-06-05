@@ -8344,7 +8344,7 @@ type Image2 {
 
   # Sex of the individual(s)
   sex: Sex
-  side: [SideListItem]!
+  side: Side
   sortOrder: Int
   sourceSystem: String!
   squareThumbnailURL: String!
@@ -8357,7 +8357,8 @@ type Image2 {
   uploadedBy: String
 }
 
-enum SideListItem {
+enum Side {
+  _
   MM_SIDEUPSIDE
   MM_SIDEDOWNSIDE
 }
@@ -24773,7 +24774,7 @@ input Image2Input {
 
   # Sex of the individual(s)
   sex: Sex
-  side: [SideListItem]!
+  side: Side
   sortOrder: Int
   sourceSystem: String!
   squareThumbnailURL: String!

@@ -58329,16 +58329,12 @@
             "title": "Taxon ids for which this media item is primary item"
           },
           "side": {
-            "type": "array",
-            "uniqueItems": false,
-            "items": {
-              "type": "string",
-              "enum": [
-                "MM.sideUpside",
-                "MM.sideDownside"
-              ]
-            },
-            "minItems": 1,
+            "type": "string",
+            "enum": [
+              "",
+              "MM.sideUpside",
+              "MM.sideDownside"
+            ],
             "title": "Upside/downside"
           },
           "sourceSystem": {
@@ -58512,7 +58508,6 @@
         "required": [
           "fullURL",
           "largeURL",
-          "side",
           "sourceSystem",
           "squareThumbnailURL",
           "thumbnailURL",

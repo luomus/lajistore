@@ -86,8 +86,7 @@
       },
       "side": {
         "type": "keyword",
-        "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "ignore_above": 200
       },
       "sourceSystem": {
         "type": "keyword",

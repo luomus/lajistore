@@ -5,6 +5,7 @@
 * and run the command to regenerate this file.
 */
 export enum SideEnum {
+  "empty" = "",
   "sideUpside" = "MM.sideUpside",
   "sideDownside" = "MM.sideDownside"
 }
@@ -114,7 +115,7 @@ export class Image {
   originalFilename?: string;
   originalURL?: string;
   primaryForTaxon?: string[];
-  side: [SideEnum, ...SideEnum[]];
+  side?: SideEnum;
   sourceSystem: string;
   squareThumbnailURL: string;
   taxonDescriptionCaption?: {

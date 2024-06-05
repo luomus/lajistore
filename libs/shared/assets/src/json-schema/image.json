@@ -117,20 +117,17 @@
       "title": "Taxon ids for which this media item is primary item"
     },
     "side": {
-      "type": "array",
-      "uniqueItems": false,
-      "items": {
-        "type": "string",
-        "enum": [
-          "MM.sideUpside",
-          "MM.sideDownside"
-        ],
-        "enumNames": [
-          "Upside",
-          "Downside"
-        ]
-      },
-      "minItems": 1,
+      "type": "string",
+      "enum": [
+        "",
+        "MM.sideUpside",
+        "MM.sideDownside"
+      ],
+      "enumNames": [
+        "",
+        "Upside",
+        "Downside"
+      ],
       "range": "MM.sideEnum",
       "subject": "MM.side",
       "title": "Upside/downside"
@@ -441,7 +438,6 @@
   "required": [
     "fullURL",
     "largeURL",
-    "side",
     "sourceSystem",
     "squareThumbnailURL",
     "thumbnailURL",

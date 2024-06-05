@@ -5,6 +5,7 @@
 * and run the command to regenerate this file.
 */
 export type SideEnum =
+  | ""
   | "MM.sideUpside"
   | "MM.sideDownside";
 export type TypeEnum =
@@ -107,7 +108,7 @@ export interface Image {
   originalFilename?: string;
   originalURL?: string;
   primaryForTaxon?: string[];
-  side: [SideEnum, ...SideEnum[]];
+  side?: SideEnum;
   sourceSystem: string;
   squareThumbnailURL: string;
   taxonDescriptionCaption?: {
