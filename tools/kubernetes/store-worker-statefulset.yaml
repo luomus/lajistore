@@ -118,6 +118,16 @@ spec:
                 secretKeyRef:
                   key: LAJI_API_DB_PASSWORD
                   name: store-config
+            - name: REDIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: redis
+                  key: database-password
+            - name: REDIS_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: store-config
+                  key: REDIS_HOST
           resources:
             requests:
               cpu: "0.1"
