@@ -1,8 +1,10 @@
 import { Document, GatheringEvent } from '@luomus/shared/models';
 import { StoreService } from '@luomus/store/core';
-import { Command, Console, createSpinner } from 'nestjs-console';
+import { Command, Console } from 'nestjs-console';
 import { ConfigService } from '../services/config.service';
 import { LajiApiService, UserLink } from '../services/laji-api.service'
+import { lastValueFrom } from 'rxjs';
+import ora from 'ora';
 
 interface LinkUserOptions {
   dryRun: boolean
@@ -28,14 +30,14 @@ export class LinkUserCommand {
     ]
   })
   async link(command: LinkUserOptions) {
-    const spin = createSpinner();
+    const spin = ora();
     
     spin.start('Fetching linked user ID:s')
 
     let users: UserLink[] = []
 
     try {
-      users = await this.lajiApiService.getLinkedUsers().toPromise();
+      users = await lastValueFrom(this.lajiApiService.getLinkedUsers());
     } catch (e) {
       spin.fail('Failed fetching linked user ID:s');
       console.log('');

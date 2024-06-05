@@ -17,7 +17,7 @@ export function toDbWhere<T>(where: Where<T>): ObjectLiteral {
         dbWhere[key as string] = MoreThanOrEqual(toStartDate(value));
       } else if (Array.isArray(value)) {
         if (value.length > 1000) {
-          throw new Error(`Cannot use more than 1000 parameters for '${key}' where`)
+          throw new Error(`Cannot use more than 1000 parameters for '${key as string}' where`)
         }
         dbWhere[key as string] = value.length > 1 ? In(value) : value[0];
       } else {

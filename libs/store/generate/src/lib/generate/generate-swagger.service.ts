@@ -24,6 +24,7 @@ import {
   PARAM_LIMIT,
   PARAM_VERSION_NUMBER
 } from '@luomus/store/interface';
+import { lastValueFrom } from 'rxjs';
 
 const MULTI_LANG_OBJ = 'multiLangObject';
 const PAGED_VIEW = 'pagedView';
@@ -63,14 +64,12 @@ export class GenerateSwaggerService extends AbstractSchemaGenerateService {
    */
   async generate(classes?: string[]): Promise<boolean> {
     this.bulk = {};
-    this.languages = await this.fileService
-      .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE'))
-      .toPromise();
-    this.spec = await this.fileService
+    this.languages = await lastValueFrom(this.fileService
+      .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE')));
+    this.spec = await lastValueFrom(this.fileService
       .readJsonFile<OpenAPIV3.Document>(
         this.configService.get('CONFIG_SPEC_BASE_FILE')
-      )
-      .toPromise();
+      ));
     this.prepareBaseSpec();
 
     if (!(await super.generate(classes))) {

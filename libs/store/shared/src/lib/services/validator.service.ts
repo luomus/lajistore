@@ -1,10 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import Ajv from 'ajv';
+import Ajv, { ErrorObject, ValidateFunction } from 'ajv';
 import addFormats from 'ajv-formats';
-import { ErrorObject, ValidateFunction } from 'ajv/lib/types/index';
 import { JsonSchemaService } from './json-schema.service';
-import { UtilityService } from './utility.service';
 import { StoreObject } from '@luomus/shared/models';
+import { lastValueFrom } from 'rxjs';
 
 @Injectable()
 export class ValidatorService {
@@ -15,7 +14,7 @@ export class ValidatorService {
     this.ajv = new Ajv({
       allErrors: true,
       strict: true,
-      loadSchema: (uri: string) => this.jsonSchema.fetchSchema(uri).toPromise(),
+      loadSchema: (uri: string) => lastValueFrom(this.jsonSchema.fetchSchema(uri)),
     });
     addFormats(this.ajv);
   }
@@ -30,8 +29,8 @@ export class ValidatorService {
         {
           keyword: 'errorMessage',
           message: `Couldn't find type '${type}'`,
-          dataPath: '',
           schemaPath: '',
+          instancePath: '',
           params: {},
         }
       ]

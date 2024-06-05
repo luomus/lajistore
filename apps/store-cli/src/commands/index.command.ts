@@ -1,7 +1,8 @@
 import { DocumentHistoryService, DocumentService, StoreService } from '@luomus/store/core';
-import { Command, Console, createSpinner } from 'nestjs-console';
+import { Command, Console } from 'nestjs-console';
 import { StoreSearchService } from '@luomus/store/search';
 import type { Document } from '@luomus/store/database';
+import ora from 'ora';
 
 interface IndexOptions {
   id?: string[];
@@ -27,7 +28,7 @@ export class IndexCommand {
   })
   async updateIndexes() {
     const failed = [];
-    const spin = createSpinner();
+    const spin = ora();
     const indexes = await this.searchService.getAllIndexes();
 
     for (const index of indexes) {
@@ -74,7 +75,7 @@ export class IndexCommand {
         required: false
       },{
         flags: '--size <size>',
-        description: 'The size of the batch to be send for indexing at ones (defaults to 1000)',
+        description: 'The size of the batch to be send for indexing at ones (defaults to 200)',
         required: false
       },{
         flags: '--skip <skip>',
@@ -85,8 +86,8 @@ export class IndexCommand {
   })
   async indexAll(command: IndexOptions) {
     const {removeDeleted, size, skip, ...where} = command;
-    const spin = createSpinner();
-    const batchSize = Math.max(Number(size) || 1000, 1);
+    const spin = ora();
+    const batchSize = Math.max(Number(size) || 200, 1);
     const startPage = Math.floor(Math.max(Number(skip) || 0, 0) / batchSize);
 
     spin.start(`Indexing`);
@@ -106,7 +107,7 @@ export class IndexCommand {
         }
       }
       spin.succeed(`Indexed (${total}/${total})`);
-    } catch (e) {
+    } catch (e: any) {
       spin.fail(`Failed to index data!!! ${e.message}`);
     }
 
@@ -115,8 +116,8 @@ export class IndexCommand {
     }
   }
 
-  private async removeDeleted(where: Omit<IndexOptions, 'removeDeleted'>, removeBatchSize = 1000) {
-    const spin = createSpinner();
+  private async removeDeleted(where: Omit<IndexOptions, 'removeDeleted'>, removeBatchSize = 200) {
+    const spin = ora();
 
     spin.start(`Removing deleted`);
 
@@ -165,7 +166,7 @@ export class IndexCommand {
       }
 
       spin.succeed(`All removed`);
-    } catch (e) {
+    } catch (e: any) {
       spin.fail(`Failed to remove data!!! ${e.message}`);
     }
   }

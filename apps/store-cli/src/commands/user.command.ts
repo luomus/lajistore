@@ -1,5 +1,6 @@
 import { AuthenticationService } from '@luomus/store/core';
-import { Command, Console, createSpinner } from 'nestjs-console';
+import { Command, Console } from 'nestjs-console';
+import ora from 'ora';
 
 @Console()
 export class UserCommand {
@@ -13,7 +14,7 @@ export class UserCommand {
     systemID: string,
     password: string
   ) {
-    const spin = createSpinner();
+    const spin = ora();
     spin.start(`Adding ${systemID}...`)
     return this.authenticationService
       .register({

@@ -66,9 +66,9 @@ docker-compose -f "docker-compose.${TYPE}.yml" run --rm store npm run store:cli 
 docker-compose -f "docker-compose.${TYPE}.yml" down --remove-orphans -v
 
 echo "Building..."
-docker build -t store-api -f tools/docker/store/Dockerfile --target api --build-arg STORE_VERSION=api .
-docker build -t store-cli -f tools/docker/store/Dockerfile --target cli --build-arg STORE_VERSION=cli .
-docker build -t store-worker -f tools/docker/store/Dockerfile --target worker --build-arg STORE_VERSION=worker .
+DOCKER_BUILDKIT=1 docker build -t store-api -f tools/docker/store/Dockerfile --target api --build-arg STORE_VERSION=api .
+DOCKER_BUILDKIT=1 docker build -t store-cli -f tools/docker/store/Dockerfile --target cli --build-arg STORE_VERSION=cli .
+DOCKER_BUILDKIT=1 docker build -t store-worker -f tools/docker/store/Dockerfile --target worker --build-arg STORE_VERSION=worker .
 
 echo "Tagging..."
 docker tag store-api "${REGISTRY}/store-api:latest"

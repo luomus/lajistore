@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import ApolloClient from 'apollo-boost';
+import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
 import * as fetcher from 'isomorphic-fetch';
 import gql from 'graphql-tag';
 
@@ -80,13 +80,16 @@ export class LajiGraphQlService {
 
   constructor() {
     this.client = new ApolloClient({
-      uri: `${process.env.LAJI_API_URL}/graphql`,
-      headers: {
-        authorization: process.env.LAJI_API_TOKEN,
-      },
-      fetchOptions: {
-        fetch: fetcher as any,
-      },
+      link: new HttpLink({
+        uri: `${process.env.LAJI_API_URL}/graphql`,
+        headers: {
+          authorization: process.env.LAJI_API_TOKEN || '',
+        },
+        fetchOptions: {
+          fetch: fetcher as any,
+        }
+      }),
+      cache: new InMemoryCache()
     });
   }
 
@@ -94,8 +97,9 @@ export class LajiGraphQlService {
     return this.client
       .query<QueryResponse>({
         query: GET_ALL_CLASSES,
+        fetchPolicy: 'no-cache'
       })
-      .then(({ data: { classes } }) => (classes || []).map((c) => c.class));
+      .then(({ data: { classes } }) => (classes || []).map((c) => c.class)).catch(e => {console.log(e); return [];});
   }
 
   getClassData(id: string): Promise<ClassData> {
@@ -103,6 +107,7 @@ export class LajiGraphQlService {
       .query<QueryResponse>({
         query: GET_CLASS_DATA,
         variables: { id: id },
+        fetchPolicy: 'no-cache'
       })
       .then(({ data: { classes } }) => classes[0]);
   }

@@ -1,5 +1,5 @@
 import { catchError, map } from 'rxjs/operators';
-import { of } from 'rxjs';
+import { lastValueFrom, of } from 'rxjs';
 import { GeneratorInterface } from './generator.interface';
 import { StoreConfigService } from '@luomus/store/config';
 import { FileService } from '@luomus/store/shared';
@@ -31,13 +31,13 @@ export abstract class AbstractGenerateService implements GeneratorInterface {
       if (!this.folderChecked) {
         this.folderChecked = true;
         try {
-          await this.fileService.makeFolder(folder).toPromise();
+          await lastValueFrom(this.fileService.makeFolder(folder));
         } catch (e) {
           // pass
         }
       }
     }
-    return this.fileService
+    return lastValueFrom(this.fileService
       .writeTextFile(file, data)
       .pipe(
         map(() => true),
@@ -45,7 +45,6 @@ export abstract class AbstractGenerateService implements GeneratorInterface {
           console.error(e);
           return of(false);
         })
-      )
-      .toPromise();
+      ));
   }
 }

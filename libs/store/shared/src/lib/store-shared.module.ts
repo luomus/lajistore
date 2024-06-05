@@ -1,4 +1,5 @@
-import { HttpModule, Module } from '@nestjs/common';
+import { Module } from '@nestjs/common';
+import { HttpModule } from '@nestjs/axios';
 import { FileService } from './services/file.service';
 import { IdService } from './services/id.service';
 import { UtilityService } from './services/utility.service';

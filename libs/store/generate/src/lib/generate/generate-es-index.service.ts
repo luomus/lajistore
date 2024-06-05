@@ -4,6 +4,7 @@ import { AbstractSchemaGenerateService } from './abstract-schema-generate.servic
 import { StoreSearchObject } from '@luomus/store/interface';
 import { StoreConfigService } from '@luomus/store/config';
 import { FileService, JsonSchemaService } from '@luomus/store/shared';
+import { lastValueFrom } from 'rxjs';
 
 const MAPPING_MULTI_LANG = '_MULTI_LANG_';
 const MAPPING_DEFAULT = '_DEFAULT_';
@@ -25,14 +26,12 @@ export class GenerateEsIndexService extends AbstractSchemaGenerateService {
    * @param classes
    */
   async generate(classes?: string[]): Promise<boolean> {
-    this.languages = await this.fileService
-      .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE'))
-      .toPromise();
-    this.mapping = await this.fileService
+    this.languages = await lastValueFrom(this.fileService
+      .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE')));
+    this.mapping = await lastValueFrom(this.fileService
       .readJsonFile<{ [key: string]: any }>(
         this.configService.get('CONFIG_ES_INDEX_TYPE_MAP')
-      )
-      .toPromise();
+      ));
 
     return super.generate(classes);
   }
@@ -44,9 +43,8 @@ export class GenerateEsIndexService extends AbstractSchemaGenerateService {
     if (!schema.properties) {
       return false;
     }
-    const esIndexBase = await this.fileService
-      .readJsonFile<any>(this.configService.get('CONFIG_ES_INDEX_BASE_FILE'))
-      .toPromise();
+    const esIndexBase = await lastValueFrom(this.fileService
+      .readJsonFile<any>(this.configService.get('CONFIG_ES_INDEX_BASE_FILE')));
     const properties = Object.keys(schema.properties);
 
     if (!esIndexBase.mappings) {

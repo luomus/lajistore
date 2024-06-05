@@ -1,7 +1,8 @@
 import { Document } from '@luomus/shared/models';
 import { StoreService } from '@luomus/store/core';
-import { Command, Console, createSpinner } from 'nestjs-console';
+import { Command, Console } from 'nestjs-console';
 import { set } from 'lodash';
+import ora from 'ora';
 
 interface SplitDocumentOptions {
   id: string,
@@ -44,7 +45,7 @@ export class SplitDocumentCommand {
   })
   async splitDocuments(options: SplitDocumentOptions) {
     let output = '';
-    const spin = createSpinner();
+    const spin = ora();
 
     try {
         const id = options.id;
@@ -104,7 +105,7 @@ export class SplitDocumentCommand {
         }
 
       spin.succeed(`Split done, original id and split id(s):\n ${output}`);
-    } catch (e) {
+    } catch (e: any) {
       spin.fail(`Failed in splitting!!! ${e.message}`);
     }
   }

@@ -1,9 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "outDir": "../../../dist/libs/store-client",
-    "types": []
-  },
-  "exclude": ["**/*.spec.ts"],
-  "include": ["**/*.ts"]
-}
