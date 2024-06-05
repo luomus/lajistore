@@ -130,8 +130,6 @@ export function isLangObject<T>(value: unknown): value is Record<Lang, T> {
     '* and run the command to regenerate this file.\n' +
     '*/\n';
 
-    this.indexContent += `\nexport * from './${fileName}'`;
-
     if (this.type === 'interface') {
       this.indexContent += `\nimport { ${normalized} } from './${fileName}'`;
       this.indexContent += `\nexport type { ${normalized} }`;
@@ -144,6 +142,8 @@ export function is${normalized}(data: unknown): data is ${normalized} {
 }`
 
       this.models.push(normalized);
+    } else {
+      this.indexContent += `\nexport { ${normalized} } from './${fileName}'`;
     }
 
     let ownInterface = this.getOwnInterface(normalized, tsInterface);
