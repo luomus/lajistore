@@ -7,7 +7,6 @@
       {
         "additionalProperties": false,
         "required": ["value", "op", "path"],
-        "type": "object",
         "properties": {
           "path": {
             "description": "A JSON Pointer path.",
@@ -26,7 +25,6 @@
       {
         "additionalProperties": false,
         "required": ["op", "path"],
-        "type": "object",
         "properties": {
           "path": {
             "description": "A JSON Pointer path.",
@@ -42,7 +40,6 @@
       {
         "additionalProperties": false,
         "required": ["from", "op", "path"],
-        "type": "object",
         "properties": {
           "path": {
             "description": "A JSON Pointer path.",

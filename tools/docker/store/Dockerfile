@@ -1,4 +1,4 @@
-FROM node:18 as builder
+FROM node:14 as builder
 ENV NODE_ENV build
 
 WORKDIR /app
@@ -18,12 +18,12 @@ COPY --chown=node:node ./apps ./apps
 COPY --chown=node:node ./libs ./libs
 
 # Build all versions of store so that they can be cherry-picked in other targets as needed
-RUN npm run nx build --configuration=production store-api \
- && npm run nx build --configuration=production store-cli \
- && npm run nx build --configuration=production store-worker
+RUN npm run nx -- build --prod store-api \
+ && npm run nx -- build --prod store-cli \
+ && npm run nx -- build --prod store-worker
 
 
-FROM node:18 as dev
+FROM node:14 as dev
 
 EXPOSE 3000
 
@@ -67,7 +67,6 @@ FROM api as cli
 ENV NODE_ENV production
 
 COPY --chown=node:node --from=builder /app/dist/apps/store-cli ./
-COPY --chown=node:node --chmod=777 --from=builder /app/dist/apps/store-cli/libs/shared ./libs/shared
 
 # This will keep the pod running so that you can connect terminal to it when ever
 CMD [ "tail", "-f", "/dev/null"]

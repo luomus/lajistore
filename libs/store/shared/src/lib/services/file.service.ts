@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
-import { Observable, Subscriber } from 'rxjs';
+import { Observable } from 'rxjs';
 import { join } from 'path';
 import { map } from 'rxjs/operators';
 import { UtilityService } from './utility.service';
@@ -28,7 +28,7 @@ export class FileService {
   }
 
   listFiles(folder: string): Observable<string[]> {
-    return new Observable((sub: Subscriber<string[]>) => {
+    return new Observable((sub) => {
       fs.readdir(folder, (err, files) => {
         if (err) {
           console.log('Error loading list of files ', folder);
@@ -41,7 +41,7 @@ export class FileService {
   }
 
   makeFolder(folder: string | string[]): Observable<void> {
-    return new Observable((sub: Subscriber<void>) => {
+    return new Observable((sub) => {
       fs.mkdir(
         Array.isArray(folder) ? join(...folder) : folder,
         0o770,
@@ -56,13 +56,13 @@ export class FileService {
 
   readJsonFile<T>(filename: string, encoding = 'utf8'): Observable<T> {
     return this.readTextFile(filename, encoding).pipe(
-      map((txt: string) => JSON.parse(txt))
+      map((txt) => JSON.parse(txt))
     );
   }
 
   readTextFile(filename: string, encoding = 'utf8'): Observable<string> {
-    return new Observable((sub: Subscriber<string>) => {
-      fs.readFile(filename as fs.PathOrFileDescriptor, { encoding: encoding as BufferEncoding }, function (err: any, data: string) {
+    return new Observable((sub) => {
+      fs.readFile(filename, encoding, function (err, data) {
         if (err) {
           console.log('Error loading text file', filename);
           return sub.error(err);
@@ -74,7 +74,7 @@ export class FileService {
   }
 
   writeTextFile(filename: string, data: string): Observable<void> {
-    return new Observable((sub: Subscriber<void>) => {
+    return new Observable((sub) => {
       fs.writeFile(filename, data, (err) => {
         if (err) return sub.error(err);
         sub.next();
@@ -84,7 +84,7 @@ export class FileService {
   }
 
   fileExists(filename: string): Observable<boolean> {
-    return new Observable((sub: Subscriber<boolean>) => {
+    return new Observable((sub) => {
       fs.exists(filename, (exists) => {
         sub.next(exists);
         sub.complete();

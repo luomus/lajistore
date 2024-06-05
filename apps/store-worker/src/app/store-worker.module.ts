@@ -1,5 +1,4 @@
-import { Module } from '@nestjs/common';
-import { HttpModule } from '@nestjs/axios';
+import { HttpModule, Module } from '@nestjs/common';
 import { StoreCoreModule } from '@luomus/store/core';
 import { DataWarehouseService } from './services/data-warehouse.service';
 import { LajiApiService } from './services/laji-api.service';
@@ -25,7 +24,6 @@ const config = new WorkerConfigService();
       synchronize: false,
       retryAttempts: 100,
       retryDelay: 3000,
-      thickMode: true
     })
   ],
   controllers: [WarehouseController],

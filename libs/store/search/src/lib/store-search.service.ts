@@ -15,11 +15,11 @@ import {
   SearchQuery, StoreSearchObject
 } from '@luomus/store/interface';
 import { RequestParams } from '@elastic/elasticsearch';
+import { ResponseError } from '@elastic/elasticsearch/lib/errors';
 import { FileService, UtilityService } from '@luomus/store/shared';
 import { map, switchMap } from 'rxjs/operators';
-import { from, lastValueFrom, of } from 'rxjs';
+import { from, of } from 'rxjs';
 import { SchemaCacheService } from '@luomus/store/schema-cache';
-import { ResponseError } from '@elastic/elasticsearch/lib/errors';
 
 @Injectable()
 export class StoreSearchService extends HealthIndicator {
@@ -95,7 +95,7 @@ export class StoreSearchService extends HealthIndicator {
       const { body } = await this.es.search(params);
 
       return this.esResponseToResult(+size, page, query, body);
-    } catch (e: any) {
+    } catch (e) {
       if (e instanceof ResponseError && e.statusCode === 404) {
         return this.pagedResponse(size, page, query, 0, 1, {})
       }
@@ -342,7 +342,7 @@ export class StoreSearchService extends HealthIndicator {
       return;
     }
 
-    const idxData = await lastValueFrom(this.getMapping(type));
+    const idxData = await this.getMapping(type).toPromise();
     const [oldAlias, newAlias] = await this.getAliasNames(index);
 
     if (oldAlias) {
@@ -373,7 +373,7 @@ export class StoreSearchService extends HealthIndicator {
   }
 
   private getAllTypes() {
-    return lastValueFrom(from(this.schemaCacheService.getCachedTypes()).pipe(
+    return from(this.schemaCacheService.getCachedTypes()).pipe(
       switchMap(data => {
         if (data) {
           return of(data);
@@ -384,7 +384,7 @@ export class StoreSearchService extends HealthIndicator {
           );
         }
       })
-    ));
+    ).toPromise()
   }
 
   private getMapping(type: string) {

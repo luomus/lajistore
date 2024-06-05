@@ -1,13 +1,6 @@
 version: '3'
 
 services:
-  redis:
-    env_file:
-      - .env.e2e
-    extends:
-      file: tools/docker/docker-compose.shared.yml
-      service: redis
-    command: sh -c 'redis-server --requirepass $${REDIS_PASSWORD}'
 
   rabbit:
     env_file:
@@ -51,8 +44,6 @@ services:
         condition: service_healthy
       elastic:
         condition: service_healthy
-      redis:
-        condition: service_healthy
     env_file:
       - .env.e2e
     build:
@@ -95,7 +86,5 @@ volumes:
   elastic_data:
     driver: local
   postgre_data:
-    driver: local
-  redis:
     driver: local
 

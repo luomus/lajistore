@@ -1,4 +1,4 @@
-import { Command, Console } from 'nestjs-console';
+import { Command, Console, createSpinner } from 'nestjs-console';
 import {
   GenerateEsIndexService,
   GenerateGraphQLService,
@@ -13,9 +13,6 @@ import { JsonLdDocument } from 'jsonld';
 import { map } from 'rxjs/operators';
 import { StoreConfigService } from '@luomus/store/config';
 import { createHash } from 'crypto'
-import { lastValueFrom } from 'rxjs';
-import ora from 'ora';
-
 @Console()
 export class CacheCommand {
   constructor(
@@ -35,7 +32,7 @@ export class CacheCommand {
     description: `Generates updated schemas, like <generate>, and sets them to redis cache.`
   })
   async updateCache() {
-    const spin = ora();    
+    const spin = createSpinner();    
     let result;
 
     const genServices = [
@@ -69,13 +66,14 @@ export class CacheCommand {
   }
 
   async getClasses() {
-    return await lastValueFrom(this.fileService
+    return await this.fileService
     .listFiles(this.configService.get('JSON_SCHEMA_PATH'))
     .pipe(
       map((filenames: string[]) =>
         filenames.map((filename) => filename.split('.')[0])
       )
-    ));
+    )
+    .toPromise();
   }
   async addSharesToCache() {
     try {
@@ -83,8 +81,9 @@ export class CacheCommand {
       const hashes: {[prop: string]: string} = {};
   
       for (const className of classes.sort((a, b) => a.localeCompare(b))) {
-        const schema = await lastValueFrom(this.fileService
-          .readJsonFile<JSONSchema4>(this.fileService.getFilename(className)));
+        const schema = await this.fileService
+          .readJsonFile<JSONSchema4>(this.fileService.getFilename(className))
+          .toPromise();
 
         const embedded = await this.jsonSchemaService.getEmbeddedFromSchema(schema);
 
@@ -94,29 +93,31 @@ export class CacheCommand {
         await this.schemaCacheService.setCachedEmbeddedSchema(className, embedded);
         await this.schemaCacheService.setCachedTypes(classes);
 
-        const context = await lastValueFrom(this.fileService
+        const context = await this.fileService
           .readJsonFile<JsonLdDocument>(
             this.fileService.getFilename(
               className,
               this.configService.get('JSON_LD_CONTEXT_PATH')
             )
-          ));
+          )
+          .toPromise();
 
         this.schemaCacheService.setCachedJsonLd(className, context);
 
-        const esIndex = await lastValueFrom(this.fileService
+        const esIndex = await this.fileService
           .readJsonFile<any>(
             this.fileService.getFilename(
               className,
               this.configService.get('ES_INDEX_PATH')
             )
-          ));
+          ).toPromise();
 
         this.schemaCacheService.setCachedEsIndex(className, esIndex);
       }
 
-      const swagger = await lastValueFrom(this.fileService
-        .readJsonFile<any>(this.configService.get('OPENAPI_SPEC_FILE')));
+      const swagger = await this.fileService
+        .readJsonFile<any>(this.configService.get('OPENAPI_SPEC_FILE'))
+        .toPromise();
       this.schemaCacheService.setCachedOpenAPI(swagger);
 
       this.schemaCacheService.setCachedSchemaHashes(hashes);

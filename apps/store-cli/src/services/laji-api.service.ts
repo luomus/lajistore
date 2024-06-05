@@ -1,10 +1,10 @@
-import { Injectable } from '@nestjs/common';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { HttpService, Injectable } from '@nestjs/common';
+import { Observable, of } from 'rxjs';
+import { map, shareReplay, tap } from 'rxjs/operators';
 import { ConfigService } from './config.service';
-import { HttpService } from '@nestjs/axios';
 
 const ENDPOINT_USER_LINKS = '/warehouse/user-linking';
+const ENDPOINT_DW_PUSH = '/warehouse/push';
 
 export interface UserLink {
   userId: string,

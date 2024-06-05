@@ -4,7 +4,6 @@ import { StoreConfigService } from '@luomus/store/config';
 import { FileService } from './file.service';
 import { UtilityService } from './utility.service';
 import { SchemaCacheService } from '@luomus/store/schema-cache';
-import { lastValueFrom } from 'rxjs';
 
 @Injectable()
 export class JsonLdService {
@@ -24,13 +23,14 @@ export class JsonLdService {
     if (jsonLd) return jsonLd;
 
     if (!this.schemes[name]) {
-      this.schemes[name] = await lastValueFrom(this.fileService
+      this.schemes[name] = await this.fileService
         .readJsonFile<JsonLdDocument>(
           this.fileService.getFilename(
             name,
             this.configService.get('JSON_LD_CONTEXT_PATH')
           )
-        ));
+        )
+        .toPromise();
     }
     return this.schemes[name];
   }

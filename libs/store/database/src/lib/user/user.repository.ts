@@ -1,4 +1,4 @@
-import { Connection, FindOptionsWhere } from 'typeorm';
+import { Connection } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { User } from './user.entity';
 
@@ -12,8 +12,8 @@ export class UserRepository {
     return repo.save(newUser);
   }
 
-  findOne(where: FindOptionsWhere<User>) {
+  findOne(where: Partial<Record<keyof User, any>>) {
     const repo = this.connection.getRepository(User);
-    return repo.findOneBy(where)
+    return repo.findOne(where)
   }
 }

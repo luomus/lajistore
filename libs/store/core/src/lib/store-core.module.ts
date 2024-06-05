@@ -1,5 +1,4 @@
-import { Module } from '@nestjs/common';
-import { HttpModule } from '@nestjs/axios';
+import { HttpModule, Module } from '@nestjs/common';
 import { StoreConfigService, StoreConfigModule } from '@luomus/store/config';
 import { ClientProxyFactory, Transport } from '@nestjs/microservices';
 import { StoreDatabaseModule } from '@luomus/store/database';

@@ -1,4 +1,4 @@
-import { Command, Console } from 'nestjs-console';
+import { Command, Console, createSpinner } from 'nestjs-console';
 import {
   GenerateEsIndexService,
   GenerateGraphQLService,
@@ -7,7 +7,6 @@ import {
   GenerateJsonSchemaService,
   GenerateSwaggerService,
 } from '@luomus/store/generate';
-import ora from 'ora';
 
 @Console()
 export class GenerateCommand {
@@ -25,7 +24,7 @@ export class GenerateCommand {
     description: `Generate content. Should be either: json-schema, interface, open-api, json-ld-context, es-index, graphql`
   })
   async generate(type: string) {
-    const spin = ora();
+    const spin = createSpinner();
     let result;
 
     spin.start(`Generating...`)

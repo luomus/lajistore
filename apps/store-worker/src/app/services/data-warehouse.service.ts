@@ -13,7 +13,6 @@ import {
 } from '@luomus/shared/models';
 import { WorkerConfigService } from './worker-config.service';
 import { LajiApiTokenService } from './laji-api-token.service';
-import { lastValueFrom } from 'rxjs';
 
 const BATCH_SIZE = 50;
 
@@ -156,7 +155,7 @@ export class DataWarehouseService {
     }
 
     const form = document.formID
-      ? await lastValueFrom(this.lajiApiService.getForm(document.formID))
+      ? await this.lajiApiService.getForm(document.formID).toPromise()
       : null;
     if (!form) {
       return { document };
@@ -187,14 +186,14 @@ export class DataWarehouseService {
           batch.push(toDelete);
 
           if (cnt >= BATCH_SIZE) {
-            await lastValueFrom(this.lajiApiService.sendToWarehouse(this.prepareDeletePayload(batch), accessToken));
+            await this.lajiApiService.sendToWarehouse(this.prepareDeletePayload(batch), accessToken).toPromise();
             batch = [];
             cnt = 0;
           }
         }
 
         if (cnt > 0) {
-          await lastValueFrom(this.lajiApiService.sendToWarehouse(this.prepareDeletePayload(batch), accessToken));
+          await this.lajiApiService.sendToWarehouse(this.prepareDeletePayload(batch), accessToken).toPromise();
         }
       }
 
@@ -207,14 +206,14 @@ export class DataWarehouseService {
           batch.push(toUpdate);
 
           if (cnt >= BATCH_SIZE) {
-            await lastValueFrom(this.lajiApiService.sendToWarehouse({ 'schema': 'lajistore', 'roots': batch }, accessToken));
+            await this.lajiApiService.sendToWarehouse({ 'schema': 'lajistore', 'roots': batch }, accessToken).toPromise();
             batch= [];
             cnt = 0;
           }
         }
 
         if (cnt > 0) {
-          await lastValueFrom(this.lajiApiService.sendToWarehouse({ 'schema': 'lajistore', 'roots': batch }, accessToken));
+          await this.lajiApiService.sendToWarehouse({ 'schema': 'lajistore', 'roots': batch }, accessToken).toPromise();
         }
       }
     }

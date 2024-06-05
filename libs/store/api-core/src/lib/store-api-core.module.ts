@@ -7,7 +7,7 @@ import { StoreCoreModule } from '@luomus/store/core';
 import { ApiUtilService } from './services/api-util-service';
 import { json, urlencoded } from 'express';
 import { SwaggerModule } from '@nestjs/swagger';
-import { createHandler } from 'graphql-http/lib/use/express';
+import { graphqlHTTP } from 'express-graphql';
 import { ApiConfigService } from './services/api-config.service';
 import { StoreSearchModule } from '@luomus/store/search';
 import { StoreSharedModule } from '@luomus/store/shared';
@@ -49,8 +49,9 @@ export class StoreApiCoreModule {
     });
     app.use(
       '/graphql',
-      createHandler({
+      graphqlHTTP({
         schema,
+        graphiql: true,
       })
     );
   }

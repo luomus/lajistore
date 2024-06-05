@@ -1,5 +1,5 @@
 import { JSONSchema4 } from 'json-schema';
-import { Injectable } from '@nestjs/common';
+import { HttpService, Injectable } from '@nestjs/common';
 import { pluck, tap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { StoreConfigService } from '@luomus/store/config';
@@ -10,8 +10,6 @@ import { SchemaCacheService } from '@luomus/store/schema-cache';
 import JsonPatch from '../../../../../shared/assets/src/schemas/json-patch.json';
 import Geometry from '../../../../../shared/assets/src/schemas/geometry.json';
 import GeometryCollection from '../../../../../shared/assets/src/schemas/geometry-collection.json';
-import { HttpService } from '@nestjs/axios';
-import { lastValueFrom } from 'rxjs';
 
 export const JSON_PATCH_SCHEMA = 'jsonPatch';
 export const GEOMETRY_SCHEMA = 'Geometry';
@@ -123,8 +121,9 @@ export class JsonSchemaService {
     if (schema) return schema;
 
     if (!this.schemes[type]) {
-      this.schemes[type] = await lastValueFrom(this.fileService
-        .readJsonFile<JSONSchema4>(this.fileService.getFilename(type)));
+      this.schemes[type] = await this.fileService
+        .readJsonFile<JSONSchema4>(this.fileService.getFilename(type))
+        .toPromise();
     }
     return this.schemes[type];
   }
@@ -160,14 +159,10 @@ export class JsonSchemaService {
 
   async isEmbedded(propertySchema: JSONSchema4): Promise<boolean> {
     if (!this.languages) {
-      this.languages = await lastValueFrom(this.fileService
-        .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE')));
+      this.languages = await this.fileService
+        .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE'))
+        .toPromise();
     }
-
-    if (!this.languages) {
-      throw new Error('Cannot find languages');
-    }
-
     return (
       !JsonSchemaService.isMultiLang(propertySchema, this.languages) &&
       JsonSchemaService.isEmbedded(propertySchema)

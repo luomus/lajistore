@@ -4,7 +4,6 @@ import { AbstractGenerateService } from './abstract-generate.service';
 import { printSchema } from 'graphql';
 import { StoreConfigService } from '@luomus/store/config';
 import { FileService, JsonSchemaService } from '@luomus/store/shared';
-import { lastValueFrom } from 'rxjs';
 
 @Injectable()
 export class GenerateGraphQLService extends AbstractGenerateService {
@@ -18,8 +17,9 @@ export class GenerateGraphQLService extends AbstractGenerateService {
    * @param classes
    */
   async generate(classes?: string[]): Promise<boolean> {
-    const spec = await lastValueFrom(this.fileService
-      .readJsonFile<any>(this.configService.get('OPENAPI_SPEC_FILE')));
+    const spec = await this.fileService
+      .readJsonFile<any>(this.configService.get('OPENAPI_SPEC_FILE'))
+      .toPromise();
     const { schema, report } = await createGraphQLSchema(
       JsonSchemaService.removeExtraProperties(spec, [
         '$id',
@@ -36,7 +36,7 @@ export class GenerateGraphQLService extends AbstractGenerateService {
 
     return this.writeToFile(
       this.configService.get('GRAPHQL_FILE'),
-      printSchema(schema)
+      printSchema(schema, { commentDescriptions: true })
     );
   }
 }

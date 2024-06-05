@@ -3,8 +3,7 @@ import {
   DocumentService,
   WorkerMessagePattern
 } from '@luomus/store/core';
-import { Command, Console } from 'nestjs-console';
-import ora from 'ora';
+import { Command, Console, createSpinner } from 'nestjs-console';
 
 const PAGE_SIZE = 1000;
 
@@ -52,7 +51,7 @@ export class JobCommand {
     ],
   })
   async jobsAll(options: JobOptions) {
-    const spin = ora();
+    const spin = createSpinner();
     const {removeDeleted, ...where} = options;
 
     spin.start(`Sending Jobs`);
@@ -76,7 +75,7 @@ export class JobCommand {
         }
       }
       spin.succeed(`Sent Jobs (${total}/${total})`);
-    } catch (e: any) {
+    } catch (e) {
       spin.fail(`Failed to send jobs!!! ${e.message}`);
     }
 
@@ -86,7 +85,7 @@ export class JobCommand {
   }
 
   async removeDeleted(where: Omit<JobOptions, 'removeDeleted'>) {
-    const spin = ora();
+    const spin = createSpinner();
 
     spin.start(`Adding deleted jobs`);
 
@@ -111,7 +110,7 @@ export class JobCommand {
       }
 
       spin.succeed(`All added`);
-    } catch (e: any) {
+    } catch (e) {
       spin.fail(`Failed to add deleted data!!! ${e.message}`);
     }
   }

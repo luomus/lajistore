@@ -3,8 +3,7 @@ https://docs.nestjs.com/providers#services
 */
 
 import { Cache } from 'cache-manager';
-import { Inject, Injectable } from '@nestjs/common';
-import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { CACHE_MANAGER, Inject, Injectable } from '@nestjs/common';
 import { JSONSchema4 } from 'json-schema';
 import { JsonLdDocument } from 'jsonld';
 import { REDIS_CACHE } from './schema-cache.constants';

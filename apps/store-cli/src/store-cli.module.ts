@@ -1,5 +1,4 @@
-import { Module } from '@nestjs/common';
-import { HttpModule } from '@nestjs/axios';
+import { HttpModule, Module } from '@nestjs/common';
 import { ConsoleModule } from 'nestjs-console';
 import { TerminusModule } from '@nestjs/terminus';
 import { StoreCoreModule } from '@luomus/store/core';

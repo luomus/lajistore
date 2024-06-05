@@ -3,7 +3,6 @@ import { map } from 'rxjs/operators';
 import { FileService } from './file.service';
 import { UtilityService } from './utility.service';
 import { StoreConfigService } from '@luomus/store/config';
-import { lastValueFrom } from 'rxjs';
 
 const DEFAULT_TYPE = '_DEFAULT_';
 
@@ -59,18 +58,18 @@ export class IdService {
 
   private async getIdTypeMap() {
     if (!this.idTypeMap) {
-      this.idTypeMap = await lastValueFrom(this.fileService
+      this.idTypeMap = await this.fileService
         .readJsonFile<IdTypeMap>(
           this.configService.get('CONFIG_ID_TYPE_MAP_FILE')
         )
         .pipe(
-          map((map: IdTypeMap) => {
+          map((map) => {
             if (!map[DEFAULT_TYPE]) {
               map[DEFAULT_TYPE] = { sequence: 'uuid', value: '%value%' };
             }
             return map;
           }),
-          map((data:IdTypeMap) =>
+          map((data) =>
             Object.keys(data).reduce((result, type) => {
               const resultType =
                 type === DEFAULT_TYPE
@@ -85,7 +84,8 @@ export class IdService {
               return result;
             }, {} as IdTypeMap)
           )
-        ));
+        )
+        .toPromise();
     }
     return this.idTypeMap;
   }

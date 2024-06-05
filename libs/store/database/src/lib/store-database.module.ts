@@ -31,13 +31,12 @@ const typeOrmConfig: TypeOrmModuleOptions = {
       {
         host: config.get('DB_HOST'),
         port: +config.get('DB_PORT'),
-        database: config.get('DB_DATABASE'),
+        database: config.get('DB_DATABASE')
       }
   ),
   type: type,
   username: config.get('DB_USERNAME'),
   password: config.get('DB_PASSWORD'),
-  thickMode: true,
   entities: [DocumentHistory, Document, User],
   //logger: "advanced-console",
   //logging: "all",

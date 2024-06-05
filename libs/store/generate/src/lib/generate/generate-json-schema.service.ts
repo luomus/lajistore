@@ -5,7 +5,6 @@ import { JSONSchema4 } from 'json-schema';
 import { StoreConfigService } from '@luomus/store/config';
 import { FileService, UtilityService } from '@luomus/store/shared';
 import { PROPERTY_CONTEXT, PROPERTY_ID, PROPERTY_TYPE } from '@luomus/store/interface';
-import { lastValueFrom } from 'rxjs';
 
 const MAX_NESTED_DEPTH = 7;
 
@@ -35,29 +34,30 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
    * @param classes
    */
   public async generate(classes?: string[]): Promise<boolean> {
-    this.formatMap = await lastValueFrom(this.fileService
+    this.formatMap = await this.fileService
       .readJsonFile<Record<string, JSONSchema4>>(
         this.configService.get('CONFIG_RDF_TO_SCHEMA_TYPE_MAP')
-      ));
-    this.languages = await lastValueFrom(this.fileService
-      .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE')));
-    this.blackList = await lastValueFrom(this.fileService
+      )
+      .toPromise();
+    this.languages = await this.fileService
+      .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE'))
+      .toPromise();
+    this.blackList = await this.fileService
       .readJsonFile<string[]>(
         this.configService.get('CONFIG_BLACKLIST_CLASS_FILE')
-      ));
+      )
+      .toPromise();
     let result = true;
 
     if (!classes) {
       classes = await this.lajiGraphQlService.getAllClasses();
     }
-
     classes.sort((a, b) => a.localeCompare(b));
     for (const className of classes) {
       if (!(await this.generateClassSchema(className))) {
         result = false;
       }
     }
-
     return result;
   }
 
@@ -209,7 +209,7 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
 
     if (embeddedOverride[property.property]) {
       property.embedded = true;
-      property.range = [embeddedOverride[property.property]]; 
+      property.range = [embeddedOverride[property.property]];
       range = embeddedOverride[property.property];
     }
     if (this.formatMap[range]) {

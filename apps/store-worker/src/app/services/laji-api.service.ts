@@ -1,9 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { HttpService, Injectable } from '@nestjs/common';
 import { Observable, of } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { WorkerConfigService } from './worker-config.service';
 import { Form, FormOptions } from '@luomus/shared/models';
-import { HttpService } from '@nestjs/axios';
 
 const ENDPOINT_FORMS = '/forms';
 const ENDPOINT_DW_PUSH = '/warehouse/push';

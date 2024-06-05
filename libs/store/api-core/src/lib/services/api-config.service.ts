@@ -3,7 +3,6 @@ import { createGraphQLSchema } from 'openapi-to-graphql';
 import { StoreConfigService } from '@luomus/store/config';
 import { FileService, JsonSchemaService } from '@luomus/store/shared';
 import { SchemaCacheService } from '@luomus/store/schema-cache';
-import { lastValueFrom } from 'rxjs';
 
 @Injectable()
 export class ApiConfigService {
@@ -18,8 +17,9 @@ export class ApiConfigService {
     let swagger = await this.schemaCacheService.getCachedOpenAPI();
 
     if (!swagger) {
-      swagger = await lastValueFrom(this.fileService
-      .readJsonFile<any>(this.configService.get('OPENAPI_SPEC_FILE')));
+      swagger = await this.fileService
+      .readJsonFile<any>(this.configService.get('OPENAPI_SPEC_FILE'))
+      .toPromise();
     }
 
     const { schema } = await createGraphQLSchema(

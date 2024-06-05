@@ -1,5 +1,5 @@
 # base image
-FROM node:18
+FROM node:14
 
 RUN apt-get update \
  && apt-get install -y alien libaio1 curl libaio1 libaio-dev libssl-dev musl-dev \

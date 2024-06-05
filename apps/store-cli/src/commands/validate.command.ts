@@ -2,9 +2,8 @@ import {
   DocumentHistoryService,
   DocumentService, StoreService
 } from '@luomus/store/core';
-import { Command, Console } from 'nestjs-console';
+import { Command, Console, createSpinner } from 'nestjs-console';
 import { ValidatorService } from '@luomus/store/shared';
-import ora from 'ora';
 
 interface JobOptions {
   id?: string[];
@@ -39,7 +38,7 @@ export class ValidateCommand {
     ],
   })
   async validate(where: JobOptions) {
-    const spin = ora();
+    const spin = createSpinner();
     const batchSize = 100;
 
     spin.start(`Validating`);
@@ -67,7 +66,7 @@ export class ValidateCommand {
         }
       }
       spin.succeed(`Validated (${total}/${total})`);
-    } catch (e: any) {
+    } catch (e) {
       spin.fail(`Failed to validate data!!! ${e.message}`);
     }
   }
