@@ -125,7 +125,7 @@ spec:
                   key: database-password
             - name: REDIS_HOST
               valueFrom:
-                secretKeyRef:
+                configMapKeyRef:
                   name: store-config
                   key: REDIS_HOST
           resources:
