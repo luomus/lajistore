@@ -168,11 +168,15 @@ export class DocumentService {
     const types = Object.keys(data);
 
     for (const type of types) {
+      const ids = data[type].filter((i) => i[PROPERTY_ID]).map((i) => i[PROPERTY_ID] as string);
+
+      if (!ids.length) continue;
+
       const documents = await this.documentRepository.find(
         this.getRepoConditions(
           source,
           type,
-          data[type].map((i) => i[PROPERTY_ID] as string),
+          ids,
         ),
         true
       );
