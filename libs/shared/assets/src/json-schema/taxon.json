@@ -3,26 +3,26 @@
   "type": "object",
   "subject": "MX.taxon",
   "additionalProperties": false,
-  "title": "Taxon",
+  "title": "taxon",
   "description": "",
   "properties": {
     "@context": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@context",
-      "title": "Context for the Taxon"
+      "title": "Context for the taxon"
     },
     "id": {
       "type": "string",
       "range": "xsd:string",
       "subject": "id",
-      "title": "Id for the Taxon"
+      "title": "Id for the taxon"
     },
     "@type": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@type",
-      "title": "Type for the Taxon"
+      "title": "Type for the taxon"
     },
     "herbo:sortOrder": {
       "type": "integer",
@@ -539,7 +539,7 @@
           "Vascular Plant species that are protected in the regions of North Ostrobothnia, Kainuu and Lapland (NCD 2023/1066, Appendix 5)",
           "Large birds of prey (NCD 2023/9, 73 §)",
           "EU Habitats Directive Annex II",
-          "EU Habitats Directive Annex IV / NCD 2023/1066, Appendix 7",
+          "EU Habitats Directive Annex IV",
           "EU Habitats Directive Annex V",
           "Priority species (EU Habitats Directive, Appendix II)",
           "EU Habitats Directive Annex II, exception granted for Finnish populations",
