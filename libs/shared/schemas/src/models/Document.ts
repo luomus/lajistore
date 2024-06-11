@@ -59,7 +59,8 @@ export type Preservations =
   | "MY.preservationStuffed"
   | "MY.preservationCast"
   | "MY.preservationPlastinated"
-  | "MY.preservationFrozenMinus80CAndEthanolMinus20C";
+  | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
+  | "MY.preservationEthanolMinus20C";
 export type Statuses =
   | ""
   | "MY.statusOk"

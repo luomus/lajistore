@@ -2641,7 +2641,8 @@
               "MY.preservationStuffed",
               "MY.preservationCast",
               "MY.preservationPlastinated",
-              "MY.preservationFrozenMinus80CAndEthanolMinus20C"
+              "MY.preservationFrozenMinus80CAndEthanolMinus20C",
+              "MY.preservationEthanolMinus20C"
             ],
             "enumNames": [
               "",
@@ -2680,7 +2681,8 @@
               "Stuffed",
               "Cast",
               "Plastinated",
-              "Frozen -80 °C and ethanol -20 °C (duplicate)"
+              "Frozen -80 °C and ethanol -20 °C (duplicate)",
+              "Ethanol -20 °C"
             ]
           },
           "minItems": 0,
@@ -6826,7 +6828,8 @@
                           "MY.preservationStuffed",
                           "MY.preservationCast",
                           "MY.preservationPlastinated",
-                          "MY.preservationFrozenMinus80CAndEthanolMinus20C"
+                          "MY.preservationFrozenMinus80CAndEthanolMinus20C",
+                          "MY.preservationEthanolMinus20C"
                         ],
                         "enumNames": [
                           "",
@@ -6865,7 +6868,8 @@
                           "Stuffed",
                           "Cast",
                           "Plastinated",
-                          "Frozen -80 °C and ethanol -20 °C (duplicate)"
+                          "Frozen -80 °C and ethanol -20 °C (duplicate)",
+                          "Ethanol -20 °C"
                         ]
                       },
                       "minItems": 0,

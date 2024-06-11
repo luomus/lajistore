@@ -313,7 +313,8 @@ export enum Preservations {
   "preservationStuffed" = "MY.preservationStuffed",
   "preservationCast" = "MY.preservationCast",
   "preservationPlastinated" = "MY.preservationPlastinated",
-  "preservationFrozenMinus80CAndEthanolMinus20C" = "MY.preservationFrozenMinus80CAndEthanolMinus20C"
+  "preservationFrozenMinus80CAndEthanolMinus20C" = "MY.preservationFrozenMinus80CAndEthanolMinus20C",
+  "preservationEthanolMinus20C" = "MY.preservationEthanolMinus20C"
 }
 export enum ProvenanceEnum {
   "empty" = "",
