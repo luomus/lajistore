@@ -23,6 +23,10 @@
     "sequence": "DATASET_SEQUENCE",
     "value": "GX.%value%"
   },
+  "specimenTransaction": {
+    "sequence": "TRANSACTION_SEQ",
+    "value": "HRA.%value%"
+  },
   "_DEFAULT_": {
     "sequence": "LAJISTORE_SEQ",
     "value": "JX.%value%"
