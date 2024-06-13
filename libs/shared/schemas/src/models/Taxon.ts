@@ -34,13 +34,13 @@ export type AdminStatusEnum =
   | ""
   | "MX.finlex160_1997_appendix4_2021"
   | "MX.finlex160_1997_appendix4_specialInterest_2021"
-  | "MX.finlex160_1997_appendix1"
   | "MX.finlex160_1997_appendix2a"
   | "MX.finlex160_1997_appendix2b"
   | "MX.finlex160_1997_appendix3a"
   | "MX.finlex160_1997_appendix3b"
   | "MX.finlex160_1997_appendix3c"
   | "MX.finlex160_1997_largeBirdsOfPrey"
+  | "MX.finlex1066_2023_appendix7"
   | "MX.habitatsDirectiveAnnexII"
   | "MX.habitatsDirectiveAnnexIV"
   | "MX.habitatsDirectiveAnnexV"
@@ -92,6 +92,7 @@ export type AdminStatusEnum =
   | "MX.regionallyThreatened2020_4b"
   | "MX.regionallyThreatened2020_4c"
   | "MX.regionallyThreatened2020_4d"
+  | "MX.finlex160_1997_appendix1"
   | "MX.finlex160_1997_appendix4"
   | "MX.finlex160_1997_appendix4_specialInterest";
 export type InvasiveSpeciesCategories =

@@ -38,6 +38,7 @@ export enum Preservations {
   "preservationEthanol80" = "MY.preservationEthanol80",
   "preservationEthanol80Pure" = "MY.preservationEthanol80Pure",
   "preservationEthanol96" = "MY.preservationEthanol96",
+  "preservationEthanolMinus20C" = "MY.preservationEthanolMinus20C",
   "preservationEthanolDenatured" = "MY.preservationEthanolDenatured",
   "preservationEthanolFormalin" = "MY.preservationEthanolFormalin",
   "preservationEthanolExFormalin" = "MY.preservationEthanolExFormalin",
@@ -61,8 +62,7 @@ export enum Preservations {
   "preservationStuffed" = "MY.preservationStuffed",
   "preservationCast" = "MY.preservationCast",
   "preservationPlastinated" = "MY.preservationPlastinated",
-  "preservationFrozenMinus80CAndEthanolMinus20C" = "MY.preservationFrozenMinus80CAndEthanolMinus20C",
-  "preservationEthanolMinus20C" = "MY.preservationEthanolMinus20C"
+  "preservationFrozenMinus80CAndEthanolMinus20C" = "MY.preservationFrozenMinus80CAndEthanolMinus20C"
 }
 export enum Statuses {
   "empty" = "",

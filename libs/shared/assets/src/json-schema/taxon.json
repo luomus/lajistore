@@ -3,26 +3,26 @@
   "type": "object",
   "subject": "MX.taxon",
   "additionalProperties": false,
-  "title": "taxon",
+  "title": "Taxon",
   "description": "",
   "properties": {
     "@context": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@context",
-      "title": "Context for the taxon"
+      "title": "Context for the Taxon"
     },
     "id": {
       "type": "string",
       "range": "xsd:string",
       "subject": "id",
-      "title": "Id for the taxon"
+      "title": "Id for the Taxon"
     },
     "@type": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@type",
-      "title": "Type for the taxon"
+      "title": "Type for the Taxon"
     },
     "herbo:sortOrder": {
       "type": "integer",
@@ -466,13 +466,13 @@
           "",
           "MX.finlex160_1997_appendix4_2021",
           "MX.finlex160_1997_appendix4_specialInterest_2021",
-          "MX.finlex160_1997_appendix1",
           "MX.finlex160_1997_appendix2a",
           "MX.finlex160_1997_appendix2b",
           "MX.finlex160_1997_appendix3a",
           "MX.finlex160_1997_appendix3b",
           "MX.finlex160_1997_appendix3c",
           "MX.finlex160_1997_largeBirdsOfPrey",
+          "MX.finlex1066_2023_appendix7",
           "MX.habitatsDirectiveAnnexII",
           "MX.habitatsDirectiveAnnexIV",
           "MX.habitatsDirectiveAnnexV",
@@ -524,6 +524,7 @@
           "MX.regionallyThreatened2020_4b",
           "MX.regionallyThreatened2020_4c",
           "MX.regionallyThreatened2020_4d",
+          "MX.finlex160_1997_appendix1",
           "MX.finlex160_1997_appendix4",
           "MX.finlex160_1997_appendix4_specialInterest"
         ],
@@ -531,13 +532,13 @@
           "",
           "Threatened species (NCD 2023/1066, Appendix 6)",
           "Species under strict protection (NCD 2023/1066, Appendix 6)",
-          "OUTDATED Fish species subject to the Nature Conservation Act (NCD 1997/160, Appendix 1)",
-          "Animal species that are protected in the whole country\n(NCD 2023/1066, Appendix 1)",
-          "Animal species that are protected south of the regions of North Ostrobothnia and Kainuu\n(NCD 2023/1066, Appendix 2)",
+          "Animal species that are protected in the whole country(NCD 2023/1066, Appendix 1)",
+          "Animal species that are protected south of the regions of North Ostrobothnia and Kainuu(NCD 2023/1066, Appendix 2)",
           "Plant species that are protected in the whole country (NCD 2023/1066, Appendix 3)",
           "Vascular plant species that are protected south of the regions of North Ostrobothnia and Kainuu (NCD 2023/1066, Appendix 4)",
           "Vascular Plant species that are protected in the regions of North Ostrobothnia, Kainuu and Lapland (NCD 2023/1066, Appendix 5)",
           "Large birds of prey (NCD 2023/9, 73 §)",
+          "Species requiring strict protection within the European Union (NVF 2023/1066, Appendix 7)",
           "EU Habitats Directive Annex II",
           "EU Habitats Directive Annex IV",
           "EU Habitats Directive Annex V",
@@ -589,6 +590,7 @@
           "Regionally Threatened 2020 - 4b Northern boreal, North Ostrobothnia",
           "Regionally Threatened 2020 - 4c Northern boreal, Forest Lapland",
           "Regionally Threatened 2020 - 4d Northern boreal, Fjeld Lapland",
+          "OUTDATED Fish species subject to the Nature Conservation Act (NCD 1997/160, Appendix 1)",
           "OUTDATED Threatened species (NCD 1997/160, Appendix 4 2013/471)",
           "OUTDATED Species under strict protection (NCD 1997/160, Appendix 4 2013/471)"
         ]

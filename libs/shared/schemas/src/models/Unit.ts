@@ -273,6 +273,7 @@ export type Preservations =
   | "MY.preservationEthanol80"
   | "MY.preservationEthanol80Pure"
   | "MY.preservationEthanol96"
+  | "MY.preservationEthanolMinus20C"
   | "MY.preservationEthanolDenatured"
   | "MY.preservationEthanolFormalin"
   | "MY.preservationEthanolExFormalin"
@@ -296,8 +297,7 @@ export type Preservations =
   | "MY.preservationStuffed"
   | "MY.preservationCast"
   | "MY.preservationPlastinated"
-  | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
-  | "MY.preservationEthanolMinus20C";
+  | "MY.preservationFrozenMinus80CAndEthanolMinus20C";
 export type ProvenanceEnum =
   | ""
   | "MY.provenanceUnknown"
