@@ -158,14 +158,14 @@ export type EpochOrSeries1 =
   | "MY.epochOrSeriesTriassic";
 export type LifeStages =
   | ""
-  | "MY.lifeStageEgg"
+  | "MY.lifeStageAdult"
+  | "MY.lifeStageNymph"
   | "MY.lifeStageLarva"
+  | "MY.lifeStageEgg"
   | "MY.lifeStagePupa"
   | "MY.lifeStageJuvenile"
-  | "MY.lifeStageNymph"
   | "MY.lifeStageSubimago"
   | "MY.lifeStageImmature"
-  | "MY.lifeStageAdult"
   | "MY.lifeStageFertile"
   | "MY.lifeStageSterile"
   | "MY.lifeStageTadpole"

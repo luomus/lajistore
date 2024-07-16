@@ -168,14 +168,14 @@ export enum EpochOrSeries1 {
 }
 export enum LifeStages {
   "empty" = "",
-  "lifeStageEgg" = "MY.lifeStageEgg",
+  "lifeStageAdult" = "MY.lifeStageAdult",
+  "lifeStageNymph" = "MY.lifeStageNymph",
   "lifeStageLarva" = "MY.lifeStageLarva",
+  "lifeStageEgg" = "MY.lifeStageEgg",
   "lifeStagePupa" = "MY.lifeStagePupa",
   "lifeStageJuvenile" = "MY.lifeStageJuvenile",
-  "lifeStageNymph" = "MY.lifeStageNymph",
   "lifeStageSubimago" = "MY.lifeStageSubimago",
   "lifeStageImmature" = "MY.lifeStageImmature",
-  "lifeStageAdult" = "MY.lifeStageAdult",
   "lifeStageFertile" = "MY.lifeStageFertile",
   "lifeStageSterile" = "MY.lifeStageSterile",
   "lifeStageTadpole" = "MY.lifeStageTadpole",
