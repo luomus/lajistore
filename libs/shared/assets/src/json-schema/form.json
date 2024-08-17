@@ -707,7 +707,7 @@
           "type": "boolean",
           "range": "xsd:boolean",
           "subject": "MHL.documentsViewableForAll",
-          "description": "The users can see all the documents with the form's collection ID instead of just their own",
+          "description": "Documents of the form's collectionID are viewable for all users with form permissions to the form's collectionID",
           "title": "Documents are viewable for all users"
         },
         "draftLabel": {
