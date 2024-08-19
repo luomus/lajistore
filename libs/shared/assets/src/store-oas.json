@@ -55518,6 +55518,11 @@
             "description": "On named place chooser view, map tab is hidden",
             "title": "Hide map tab"
           },
+          "includeDescendantCollections": {
+            "type": "boolean",
+            "description": "True by default. The named places of this form includes the places of descendant collections also.",
+            "title": "Include descendant collections"
+          },
           "includeUnits": {
             "type": "boolean",
             "description": "Named places will be fetched with units included (hard coded to work only for HR.2049)",

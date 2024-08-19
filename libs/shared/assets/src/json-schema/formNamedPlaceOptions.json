@@ -172,6 +172,13 @@
       "description": "On named place chooser view, map tab is hidden",
       "title": "Hide map tab"
     },
+    "includeDescendantCollections": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "MHL.includeDescendantCollections",
+      "description": "True by default. The named places of this form includes the places of descendant collections also.",
+      "title": "Include descendant collections"
+    },
     "includeUnits": {
       "type": "boolean",
       "range": "xsd:boolean",

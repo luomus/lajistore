@@ -85,6 +85,10 @@ export class FormNamedPlaceOptions {
    */
   hideMapTab?: boolean;
   /**
+   * True by default. The named places of this form includes the places of descendant collections also.
+   */
+  includeDescendantCollections?: boolean;
+  /**
    * Named places will be fetched with units included (hard coded to work only for HR.2049)
    */
   includeUnits?: boolean;

@@ -9235,6 +9235,11 @@ type FormNamedPlaceOptions {
   id: String
 
   """
+  True by default. The named places of this form includes the places of descendant collections also.
+  """
+  includeDescendantCollections: Boolean
+
+  """
   Named places will be fetched with units included (hard coded to work only for HR.2049)
   """
   includeUnits: Boolean
@@ -28119,6 +28124,11 @@ input FormNamedPlaceOptionsInput {
   """On named place chooser view, map tab is hidden"""
   hideMapTab: Boolean
   id: String
+
+  """
+  True by default. The named places of this form includes the places of descendant collections also.
+  """
+  includeDescendantCollections: Boolean
 
   """
   Named places will be fetched with units included (hard coded to work only for HR.2049)
