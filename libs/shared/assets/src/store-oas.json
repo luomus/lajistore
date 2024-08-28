@@ -52984,7 +52984,10 @@
             "format": "date-time",
             "title": "Deleted at"
           }
-        }
+        },
+        "required": [
+          "rootID"
+        ]
       },
       "annotationOccurrence": {
         "type": "object",

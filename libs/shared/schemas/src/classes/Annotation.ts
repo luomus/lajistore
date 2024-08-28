@@ -70,7 +70,7 @@ export class Annotation {
   occurrenceAtTimeOfAnnotation?: AnnotationOccurrence;
   opinion?: string;
   removedTags?: string[];
-  rootID?: string;
+  rootID: string;
   targetID?: string;
   type?: TypeEnum;
   createdBySystem?: string;

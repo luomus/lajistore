@@ -5594,7 +5594,7 @@ type Annotation2 {
   occurrenceAtTimeOfAnnotation: AnnotationOccurrence
   opinion: String
   removedTags: [String]
-  rootID: String
+  rootID: String!
   targetID: String
   type: Type
 }
@@ -26232,7 +26232,7 @@ input Annotation2Input {
   occurrenceAtTimeOfAnnotation: AnnotationOccurrenceInput
   opinion: String
   removedTags: [String]
-  rootID: String
+  rootID: String!
   targetID: String
   type: Type
 }
