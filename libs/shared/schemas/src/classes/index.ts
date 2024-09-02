@@ -89,4 +89,4 @@ export { UnitGathering } from './UnitGathering'
 export { UnitOfMeasurement } from './UnitOfMeasurement'
 export { Validator } from './Validator'
 export { Video } from './Video'
-export * from './Enums';
+export * from './Enums'

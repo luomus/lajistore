@@ -55,14 +55,14 @@ export enum AreaTypeEnum {
 }
 export enum LifeStages {
   "empty" = "",
-  "lifeStageEgg" = "MY.lifeStageEgg",
+  "lifeStageAdult" = "MY.lifeStageAdult",
+  "lifeStageNymph" = "MY.lifeStageNymph",
   "lifeStageLarva" = "MY.lifeStageLarva",
+  "lifeStageEgg" = "MY.lifeStageEgg",
   "lifeStagePupa" = "MY.lifeStagePupa",
   "lifeStageJuvenile" = "MY.lifeStageJuvenile",
-  "lifeStageNymph" = "MY.lifeStageNymph",
   "lifeStageSubimago" = "MY.lifeStageSubimago",
   "lifeStageImmature" = "MY.lifeStageImmature",
-  "lifeStageAdult" = "MY.lifeStageAdult",
   "lifeStageFertile" = "MY.lifeStageFertile",
   "lifeStageSterile" = "MY.lifeStageSterile",
   "lifeStageTadpole" = "MY.lifeStageTadpole",
@@ -223,6 +223,7 @@ export enum Preservations {
   "preservationEthanol80" = "MY.preservationEthanol80",
   "preservationEthanol80Pure" = "MY.preservationEthanol80Pure",
   "preservationEthanol96" = "MY.preservationEthanol96",
+  "preservationEthanolMinus20C" = "MY.preservationEthanolMinus20C",
   "preservationEthanolDenatured" = "MY.preservationEthanolDenatured",
   "preservationEthanolFormalin" = "MY.preservationEthanolFormalin",
   "preservationEthanolExFormalin" = "MY.preservationEthanolExFormalin",
@@ -246,8 +247,7 @@ export enum Preservations {
   "preservationStuffed" = "MY.preservationStuffed",
   "preservationCast" = "MY.preservationCast",
   "preservationPlastinated" = "MY.preservationPlastinated",
-  "preservationFrozenMinus80CAndEthanolMinus20C" = "MY.preservationFrozenMinus80CAndEthanolMinus20C",
-  "preservationEthanolMinus20C" = "MY.preservationEthanolMinus20C"
+  "preservationFrozenMinus80CAndEthanolMinus20C" = "MY.preservationFrozenMinus80CAndEthanolMinus20C"
 }
 export enum Statuses {
   "empty" = "",
@@ -1355,13 +1355,13 @@ export enum AdminStatusEnum {
   "empty" = "",
   "MX.finlex160_1997_appendix4_2021" = "MX.finlex160_1997_appendix4_2021",
   "MX.finlex160_1997_appendix4_specialInterest_2021" = "MX.finlex160_1997_appendix4_specialInterest_2021",
-  "MX.finlex160_1997_appendix1" = "MX.finlex160_1997_appendix1",
   "MX.finlex160_1997_appendix2a" = "MX.finlex160_1997_appendix2a",
   "MX.finlex160_1997_appendix2b" = "MX.finlex160_1997_appendix2b",
   "MX.finlex160_1997_appendix3a" = "MX.finlex160_1997_appendix3a",
   "MX.finlex160_1997_appendix3b" = "MX.finlex160_1997_appendix3b",
   "MX.finlex160_1997_appendix3c" = "MX.finlex160_1997_appendix3c",
   "MX.finlex160_1997_largeBirdsOfPrey" = "MX.finlex160_1997_largeBirdsOfPrey",
+  "MX.finlex1066_2023_appendix7" = "MX.finlex1066_2023_appendix7",
   "MX.habitatsDirectiveAnnexII" = "MX.habitatsDirectiveAnnexII",
   "MX.habitatsDirectiveAnnexIV" = "MX.habitatsDirectiveAnnexIV",
   "MX.habitatsDirectiveAnnexV" = "MX.habitatsDirectiveAnnexV",
@@ -1413,6 +1413,7 @@ export enum AdminStatusEnum {
   "MX.regionallyThreatened2020_4b" = "MX.regionallyThreatened2020_4b",
   "MX.regionallyThreatened2020_4c" = "MX.regionallyThreatened2020_4c",
   "MX.regionallyThreatened2020_4d" = "MX.regionallyThreatened2020_4d",
+  "MX.finlex160_1997_appendix1" = "MX.finlex160_1997_appendix1",
   "MX.finlex160_1997_appendix4" = "MX.finlex160_1997_appendix4",
   "MX.finlex160_1997_appendix4_specialInterest" = "MX.finlex160_1997_appendix4_specialInterest"
 }
