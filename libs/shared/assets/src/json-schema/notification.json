@@ -779,6 +779,9 @@
           "title": "Deleted at"
         }
       },
+      "required": [
+        "rootID"
+      ],
       "range": "MAN.annotation"
     },
     "created": {

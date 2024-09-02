@@ -55,7 +55,7 @@ export class FormOptions {
    */
   displayOwnSubmissions?: boolean;
   /**
-   * The users can see all the documents with the form's collection ID instead of just their own
+   * Documents of the form's collectionID are viewable for all users with form permissions to the form's collectionID
    */
   documentsViewableForAll?: boolean;
   /**

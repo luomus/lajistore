@@ -105,6 +105,9 @@
       "hideMapTab": {
         "type": "boolean"
       },
+      "includeDescendantCollections": {
+        "type": "boolean"
+      },
       "includeUnits": {
         "type": "boolean"
       },

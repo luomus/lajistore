@@ -282,6 +282,7 @@
           "MY.preservationEthanol80",
           "MY.preservationEthanol80Pure",
           "MY.preservationEthanol96",
+          "MY.preservationEthanolMinus20C",
           "MY.preservationEthanolDenatured",
           "MY.preservationEthanolFormalin",
           "MY.preservationEthanolExFormalin",
@@ -305,8 +306,7 @@
           "MY.preservationStuffed",
           "MY.preservationCast",
           "MY.preservationPlastinated",
-          "MY.preservationFrozenMinus80CAndEthanolMinus20C",
-          "MY.preservationEthanolMinus20C"
+          "MY.preservationFrozenMinus80CAndEthanolMinus20C"
         ],
         "enumNames": [
           "",
@@ -322,6 +322,7 @@
           "Ethanol 80 %",
           "Ethanol 80 % pure",
           "Ethanol 96 %",
+          "Ethanol -20 °C",
           "Ethanol denatured",
           "Ethanol and formalin",
           "Ethanol ex formalin",
@@ -345,8 +346,7 @@
           "Stuffed",
           "Cast",
           "Plastinated",
-          "Frozen -80 °C and ethanol -20 °C (duplicate)",
-          "Ethanol -20 °C"
+          "Frozen -80 °C and ethanol -20 °C (duplicate)"
         ]
       },
       "minItems": 0,

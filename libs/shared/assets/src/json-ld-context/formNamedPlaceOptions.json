@@ -107,6 +107,10 @@
       "@id": "default:MHL.hideMapTab",
       "@type": "xsd:boolean"
     },
+    "includeDescendantCollections": {
+      "@id": "default:MHL.includeDescendantCollections",
+      "@type": "xsd:boolean"
+    },
     "includeUnits": {
       "@id": "default:MHL.includeUnits",
       "@type": "xsd:boolean"

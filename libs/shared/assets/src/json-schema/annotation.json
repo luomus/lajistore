@@ -753,5 +753,8 @@
       "subject": "MZ.deletedDateTime",
       "title": "Deleted at"
     }
-  }
+  },
+  "required": [
+    "rootID"
+  ]
 }
