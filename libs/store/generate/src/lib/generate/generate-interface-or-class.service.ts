@@ -70,9 +70,7 @@ export class GenerateInterfaceOrClassService extends AbstractSchemaGenerateServi
 
     await super.generate(this.classes);
 
-    this.indexContent += `
-export * from './${this.enumFile}';
-`;
+    this.indexContent += `\nexport * from './${this.enumFile}'`;
 
     if (this.type === 'interface') {
       this.languages = await lastValueFrom(this.fileService
