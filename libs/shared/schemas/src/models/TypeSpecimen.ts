@@ -1,47 +1,13 @@
+import { TypeStatuses } from './';
+import { TypeVerifications } from './';
+import { PublicityRestrictionsEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type TypeStatuses =
-  | ""
-  | "MY.typeStatusType"
-  | "MY.typeStatusHolotype"
-  | "MY.typeStatusSyntype"
-  | "MY.typeStatusParatype"
-  | "MY.typeStatusLectotype"
-  | "MY.typeStatusParalectotype"
-  | "MY.typeStatusNeotype"
-  | "MY.typeStatusAllotype"
-  | "MY.typeStatusNeoallotype"
-  | "MY.typeStatusIsotype"
-  | "MY.typeStatusEpitype"
-  | "MY.typeStatusIsolectotype"
-  | "MY.typeStatusIsoepitype"
-  | "MY.typeStatusIsoneotype"
-  | "MY.typeStatusIsoparatype"
-  | "MY.typeStatusIsosyntype"
-  | "MY.typeStatusOriginalMaterial"
-  | "MY.typeStatusCotype"
-  | "MY.typeStatusTopotype"
-  | "MY.typeStatusHomotype"
-  | "MY.typeStatusNo"
-  | "MY.typeStatusPossible"
-  | "MY.typeStatusObscure"
-  | "MY.typeStatusTypeStrain"
-  | "MY.typeStatusPathovarReferenceStrain";
-export type TypeVerifications =
-  | ""
-  | "MY.typeVerificationVerified"
-  | "MY.typeVerificationUnverified"
-  | "MY.typeVerificationProbable"
-  | "MY.typeVerificationDoubtful";
-export type PublicityRestrictionsEnum =
-  | ""
-  | "MZ.publicityRestrictionsPublic"
-  | "MZ.publicityRestrictionsProtected"
-  | "MZ.publicityRestrictionsPrivate";
 export interface TypeSpecimen {
   "@context"?: string;
   id?: string;

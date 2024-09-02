@@ -1,110 +1,15 @@
+import { DetMethodEnum } from './';
+import { IdentificationBasisEnum } from './';
+import { InfraRanks } from './';
+import { TaxonRankEnum } from './';
+import { PublicityRestrictionsEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type DetMethodEnum =
-  | ""
-  | "MY.detMethodFreshSample"
-  | "MY.detMethodMicroscopy"
-  | "MY.detMethodPhoto";
-export type IdentificationBasisEnum =
-  | ""
-  | "MY.identificationBasisDNA"
-  | "MY.identificationBasisGenitals"
-  | "MY.identificationBasisGenitalPreparate"
-  | "MY.identificationBasisSpores"
-  | "MY.identificationBasisHandled"
-  | "MY.identificationBasisChemical"
-  | "MY.identificationBasisHeard"
-  | "MY.identificationBasisMicroscope"
-  | "MY.identificationBasisSeen"
-  | "MY.identificationBasisPreservedSpecimen"
-  | "MY.identificationBasisFreshSpecimen"
-  | "MY.identificationBasisMedia";
-export type InfraRanks =
-  | ""
-  | "MY.infraRankSsp"
-  | "MY.infraRankVar"
-  | "MY.infraRankBeta"
-  | "MY.infraRankB"
-  | "MY.infraRankForma"
-  | "MY.infraRankHybrid"
-  | "MY.infraRankAnamorph"
-  | "MY.infraRankAggregate"
-  | "MY.infraRankAberration"
-  | "MY.infraRankCultivar"
-  | "MY.infraRankMorpha"
-  | "MY.infraRankUnknown"
-  | "MY.infraRankNothosubspecies"
-  | "MY.infraRankCultivarGroup"
-  | "MY.infraRankFsp";
-export type TaxonRankEnum =
-  | ""
-  | "MX.superdomain"
-  | "MX.domain"
-  | "MX.kingdom"
-  | "MX.subkingdom"
-  | "MX.infrakingdom"
-  | "MX.superphylum"
-  | "MX.phylum"
-  | "MX.subphylum"
-  | "MX.infraphylum"
-  | "MX.superdivision"
-  | "MX.division"
-  | "MX.subdivision"
-  | "MX.infradivision"
-  | "MX.superclass"
-  | "MX.class"
-  | "MX.subclass"
-  | "MX.infraclass"
-  | "MX.parvclass"
-  | "MX.superorder"
-  | "MX.order"
-  | "MX.suborder"
-  | "MX.infraorder"
-  | "MX.parvorder"
-  | "MX.superfamily"
-  | "MX.family"
-  | "MX.subfamily"
-  | "MX.tribe"
-  | "MX.subtribe"
-  | "MX.supergenus"
-  | "MX.genus"
-  | "MX.nothogenus"
-  | "MX.subgenus"
-  | "MX.section"
-  | "MX.subsection"
-  | "MX.series"
-  | "MX.subseries"
-  | "MX.infragenericTaxon"
-  | "MX.aggregate"
-  | "MX.speciesAggregate"
-  | "MX.species"
-  | "MX.nothospecies"
-  | "MX.infraspecificTaxon"
-  | "MX.subspecificAggregate"
-  | "MX.subspecies"
-  | "MX.nothosubspecies"
-  | "MX.variety"
-  | "MX.subvariety"
-  | "MX.form"
-  | "MX.subform"
-  | "MX.hybrid"
-  | "MX.anamorph"
-  | "MX.ecotype"
-  | "MX.populationGroup"
-  | "MX.intergenericHybrid"
-  | "MX.infragenericHybrid"
-  | "MX.cultivar"
-  | "MX.group"
-  | "MX.grex";
-export type PublicityRestrictionsEnum =
-  | ""
-  | "MZ.publicityRestrictionsPublic"
-  | "MZ.publicityRestrictionsProtected"
-  | "MZ.publicityRestrictionsPrivate";
 export interface Identification {
   "@context"?: string;
   id?: string;

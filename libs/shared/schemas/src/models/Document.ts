@@ -1,98 +1,18 @@
+import { SecureLevels } from './';
+import { DataOriginEnum } from './';
 import { GatheringEvent } from './';
+import { Preservations } from './';
+import { Statuses } from './';
+import { VerificationStatuses } from './';
+import { PublicityRestrictionsEnum } from './';
 import { Gathering } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type SecureLevels =
-  | ""
-  | "MX.secureLevelNone"
-  | "MX.secureLevelKM1"
-  | "MX.secureLevelKM5"
-  | "MX.secureLevelKM10"
-  | "MX.secureLevelKM25"
-  | "MX.secureLevelKM50"
-  | "MX.secureLevelKM100"
-  | "MX.secureLevelHighest"
-  | "MX.secureLevelNoShow";
-export type DataOriginEnum =
-  | ""
-  | "MY.dataOriginPaperForm"
-  | "MY.dataOriginWebForm"
-  | "MY.dataOriginSpreadsheetFile";
-export type Preservations =
-  | ""
-  | "MY.preservationPressed"
-  | "MY.preservationDry"
-  | "MY.preservationCriticalPointDrying"
-  | "MY.preservationPinned"
-  | "MY.preservationGlued"
-  | "MY.preservationLiquid"
-  | "MY.preservationEthanol"
-  | "MY.preservationEthanolPure"
-  | "MY.preservationEthanol70"
-  | "MY.preservationEthanol80"
-  | "MY.preservationEthanol80Pure"
-  | "MY.preservationEthanol96"
-  | "MY.preservationEthanolDenatured"
-  | "MY.preservationEthanolFormalin"
-  | "MY.preservationEthanolExFormalin"
-  | "MY.preservationFormalin"
-  | "MY.preservationBouinSolution"
-  | "MY.preservationPampelsFluid"
-  | "MY.preservationGlycerol"
-  | "MY.preservationParaffin"
-  | "MY.preservationMercuricChloride"
-  | "MY.preservationCryopreserved"
-  | "MY.preservationFrozen"
-  | "MY.preservationFrozenMinus80C"
-  | "MY.preservationFreezeDried"
-  | "MY.preservationGoldPlated"
-  | "MY.preservationActiveCulture"
-  | "MY.preservationLiving"
-  | "MY.preservationSlide"
-  | "MY.preservationSlideCanadaBalsam"
-  | "MY.preservationSlideEuparal"
-  | "MY.preservationSlidePolyviol"
-  | "MY.preservationStuffed"
-  | "MY.preservationCast"
-  | "MY.preservationPlastinated"
-  | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
-  | "MY.preservationEthanolMinus20C";
-export type Statuses =
-  | ""
-  | "MY.statusOk"
-  | "MY.statusMissing"
-  | "MY.statusUnrecoverable"
-  | "MY.statusLost"
-  | "MY.statusDonated"
-  | "MY.statusDeposited"
-  | "MY.statusDeaccessioned"
-  | "MY.statusDiscarded"
-  | "MY.statusSpent"
-  | "MY.statusDestroyed"
-  | "MY.statusUndefined"
-  | "MY.statusAxenic"
-  | "MY.statusNonAxenic"
-  | "MY.statusNotAvailable"
-  | "MY.statusDead"
-  | "MY.statusNoVoucherRetained";
-export type VerificationStatuses =
-  | ""
-  | "MY.verificationStatusOk"
-  | "MY.verificationStatusVerify"
-  | "MY.verificationStatusComplete"
-  | "MY.verificationStatusGeoreference"
-  | "MY.verificationStatusDet"
-  | "MY.verificationStatusCheckID"
-  | "MY.verificationStatusVerifyCoordinates";
-export type PublicityRestrictionsEnum =
-  | ""
-  | "MZ.publicityRestrictionsPublic"
-  | "MZ.publicityRestrictionsProtected"
-  | "MZ.publicityRestrictionsPrivate";
 export interface Document {
   "@context"?: string;
   id?: string;

@@ -1,38 +1,16 @@
 import { Document } from './';
+import { AccessibilityEnum } from './';
 import { DateRange } from './';
+import { PriorityEnum } from './';
 import { Reserve } from './';
+import { TagEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum AccessibilityEnum {
-  "empty" = "",
-  "accessibilityEasy" = "MNP.accessibilityEasy",
-  "accessibilityModerate" = "MNP.accessibilityModerate",
-  "accessibilityDifficult" = "MNP.accessibilityDifficult"
-}
-export enum PriorityEnum {
-  "empty" = "",
-  "priority1" = "MNP.priority1",
-  "priority2" = "MNP.priority2",
-  "priority3" = "MNP.priority3",
-  "priority4" = "MNP.priority4",
-  "priority5" = "MNP.priority5"
-}
-export enum TagEnum {
-  "empty" = "",
-  "tagAccessibilityEasy" = "MNP.tagAccessibilityEasy",
-  "tagAccessibilityModerate" = "MNP.tagAccessibilityModerate",
-  "tagAccessibilityDifficult" = "MNP.tagAccessibilityDifficult",
-  "tagHabitatImportant" = "MNP.tagHabitatImportant",
-  "tagCensusRare" = "MNP.tagCensusRare",
-  "tagHabitatFarmland" = "MNP.tagHabitatFarmland",
-  "tagHabitatMire" = "MNP.tagHabitatMire",
-  "tagHabitatMountain" = "MNP.tagHabitatMountain",
-  "tagSuitable" = "MNP.tagSuitable"
-}
 export class NamedPlace {
   "@context"?: string;
   id?: string;

@@ -1,76 +1,18 @@
+import { SecureLevels } from './';
+import { CollectionQualityEnum } from './';
+import { CollectionTypes } from './';
+import { DataQualityEnum } from './';
+import { IntellectualRightsEnum } from './';
+import { MetadataStatuses } from './';
+import { PublicationTermsEnum } from './';
+import { PublicityRestrictionsEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum SecureLevels {
-  "empty" = "",
-  "MX.secureLevelNone" = "MX.secureLevelNone",
-  "MX.secureLevelKM1" = "MX.secureLevelKM1",
-  "MX.secureLevelKM5" = "MX.secureLevelKM5",
-  "MX.secureLevelKM10" = "MX.secureLevelKM10",
-  "MX.secureLevelKM25" = "MX.secureLevelKM25",
-  "MX.secureLevelKM50" = "MX.secureLevelKM50",
-  "MX.secureLevelKM100" = "MX.secureLevelKM100",
-  "MX.secureLevelHighest" = "MX.secureLevelHighest",
-  "MX.secureLevelNoShow" = "MX.secureLevelNoShow"
-}
-export enum CollectionQualityEnum {
-  "collectionQualityEnum3" = "MY.collectionQualityEnum3",
-  "collectionQualityEnum2" = "MY.collectionQualityEnum2",
-  "collectionQualityEnum1" = "MY.collectionQualityEnum1"
-}
-export enum CollectionTypes {
-  "collectionTypeSpecimens" = "MY.collectionTypeSpecimens",
-  "collectionTypeLiving" = "MY.collectionTypeLiving",
-  "collectionTypeMonitoring" = "MY.collectionTypeMonitoring",
-  "collectionTypeObservations" = "MY.collectionTypeObservations",
-  "collectionTypePublicationdata" = "MY.collectionTypePublicationdata",
-  "collectionTypePublication" = "MY.collectionTypePublication",
-  "collectionTypeMixed" = "MY.collectionTypeMixed",
-  "collectionTypeOther" = "MY.collectionTypeOther",
-  "collectionTypeGardenArea" = "MY.collectionTypeGardenArea",
-  "collectionTypeIndoorGardenArea" = "MY.collectionTypeIndoorGardenArea",
-  "collectionTypeOutdoorGardenArea" = "MY.collectionTypeOutdoorGardenArea",
-  "collectionTypeGardenSublocation" = "MY.collectionTypeGardenSublocation",
-  "collectionTypeTrait" = "MY.collectionTypeTrait"
-}
-export enum DataQualityEnum {
-  "empty" = "",
-  "dataQuality1" = "MY.dataQuality1",
-  "dataQuality2" = "MY.dataQuality2",
-  "dataQuality3" = "MY.dataQuality3",
-  "dataQuality4" = "MY.dataQuality4",
-  "dataQuality5" = "MY.dataQuality5",
-  "dataQualityNA" = "MY.dataQualityNA"
-}
-export enum IntellectualRightsEnum {
-  "intellectualRightsCC-BY" = "MY.intellectualRightsCC-BY",
-  "intellectualRightsCC0" = "MY.intellectualRightsCC0",
-  "intellectualRightsPD" = "MY.intellectualRightsPD",
-  "intellectualRightsARR" = "MY.intellectualRightsARR"
-}
-export enum MetadataStatuses {
-  "empty" = "",
-  "metadataStatusPreliminary" = "MY.metadataStatusPreliminary",
-  "metadataStatusSatisfactory" = "MY.metadataStatusSatisfactory",
-  "metadataStatusComprehensive" = "MY.metadataStatusComprehensive",
-  "metadataStatusHidden" = "MY.metadataStatusHidden"
-}
-export enum PublicationTermsEnum {
-  "empty" = "",
-  "publicationTermsFree" = "MY.publicationTermsFree",
-  "publicationTermsOfficial" = "MY.publicationTermsOfficial",
-  "publicationTermsInternal" = "MY.publicationTermsInternal",
-  "publicationTermsNone" = "MY.publicationTermsNone"
-}
-export enum PublicityRestrictionsEnum {
-  "empty" = "",
-  "publicityRestrictionsPublic" = "MZ.publicityRestrictionsPublic",
-  "publicityRestrictionsProtected" = "MZ.publicityRestrictionsProtected",
-  "publicityRestrictionsPrivate" = "MZ.publicityRestrictionsPrivate"
-}
 export class Collection {
   "@context"?: string;
   id?: string;

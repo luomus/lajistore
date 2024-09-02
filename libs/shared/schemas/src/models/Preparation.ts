@@ -1,42 +1,12 @@
+import { PreparationMaterialsEnum } from './';
+import { PreparationProcessEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type PreparationMaterialsEnum =
-  | ""
-  | "MF.preparationMaterialsAcetone"
-  | "MF.preparationMaterialsAmmonia"
-  | "MF.preparationMaterialsBasyntan"
-  | "MF.preparationMaterialsBorax"
-  | "MF.preparationMaterialsEulan"
-  | "MF.preparationMaterialsHydrogenPeroxide"
-  | "MF.preparationMaterialsMethyleneChloride"
-  | "MF.preparationMaterialsNovaltan"
-  | "MF.preparationMaterialsPapaine"
-  | "MF.preparationMaterialsPlaster"
-  | "MF.preparationMaterialsPolyurethane"
-  | "MF.preparationMaterialsPretanix"
-  | "MF.preparationMaterialsPurifiedGasoline"
-  | "MF.preparationMaterialsWoodWool"
-  | "MF.preparationMaterialsCTAB"
-  | "MF.preparationMaterialsEZNAForensicKit"
-  | "MF.preparationMaterialsDNEasyBloodAndTissueKit"
-  | "MF.preparationMaterialsDNEasyPlantKit"
-  | "MF.preparationMaterialsNucleospinTissueKit"
-  | "MF.preparationMaterialsNucleospinPlantTwo"
-  | "MF.preparationMaterialsSaltExtraction"
-  | "MF.preparationMaterialsDNeasyPlantMiniKit"
-  | "MF.preparationMaterialsMagAttractHMWDNAKit";
-export type PreparationProcessEnum =
-  | ""
-  | "MF.preparationProcessTanning"
-  | "MF.preparationProcessEnzymaticMaceration"
-  | "MF.preparationProcessDegreasing"
-  | "MF.preparationProcessBeetleCleaning"
-  | "MF.preparationProcessPEG"
-  | "MF.preparationProcessFreezeDrying";
 export interface Preparation {
   "@context"?: string;
   id?: string;

@@ -1,62 +1,16 @@
+import { ArtificialLightEnum } from './';
+import { CloudCoverOktaEnum } from './';
 import { CompleteList } from './';
 import { GatheringFact } from './';
+import { RainIntensityEnum } from './';
 import { TaxonCensus } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type ArtificialLightEnum =
-  | ""
-  | "MY.artificialLightEnum1"
-  | "MY.artificialLightEnum2"
-  | "MY.artificialLightEnum3"
-  | "MY.artificialLightEnum4"
-  | "MY.artificialLightEnum5";
-export type CloudCoverOktaEnum =
-  | ""
-  | "MY.cloudCoverOktaEnumUnknown"
-  | "MY.cloudCoverOktaEnum0"
-  | "MY.cloudCoverOktaEnum1"
-  | "MY.cloudCoverOktaEnum2"
-  | "MY.cloudCoverOktaEnum3"
-  | "MY.cloudCoverOktaEnum4"
-  | "MY.cloudCoverOktaEnum5"
-  | "MY.cloudCoverOktaEnum6"
-  | "MY.cloudCoverOktaEnum7"
-  | "MY.cloudCoverOktaEnum8";
-export type CloudCoverOktaEnum1 =
-  | ""
-  | "MY.cloudCoverOktaEnumUnknown"
-  | "MY.cloudCoverOktaEnum0"
-  | "MY.cloudCoverOktaEnum1"
-  | "MY.cloudCoverOktaEnum2"
-  | "MY.cloudCoverOktaEnum3"
-  | "MY.cloudCoverOktaEnum4"
-  | "MY.cloudCoverOktaEnum5"
-  | "MY.cloudCoverOktaEnum6"
-  | "MY.cloudCoverOktaEnum7"
-  | "MY.cloudCoverOktaEnum8";
-export type CloudCoverOktaEnum2 =
-  | ""
-  | "MY.cloudCoverOktaEnumUnknown"
-  | "MY.cloudCoverOktaEnum0"
-  | "MY.cloudCoverOktaEnum1"
-  | "MY.cloudCoverOktaEnum2"
-  | "MY.cloudCoverOktaEnum3"
-  | "MY.cloudCoverOktaEnum4"
-  | "MY.cloudCoverOktaEnum5"
-  | "MY.cloudCoverOktaEnum6"
-  | "MY.cloudCoverOktaEnum7"
-  | "MY.cloudCoverOktaEnum8";
-export type RainIntensityEnum =
-  | ""
-  | "MY.rainIntensityEnumNoRain"
-  | "MY.rainIntensityEnumLightRain"
-  | "MY.rainIntensityEnumModerateRain"
-  | "MY.rainIntensityEnumHeavyRain"
-  | "MY.rainIntensityEnumTorrentialRain";
 export interface GatheringEvent {
   "@context"?: string;
   id?: string;

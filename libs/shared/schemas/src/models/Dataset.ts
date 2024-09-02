@@ -1,12 +1,11 @@
+import { DatasetTypeEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type DatasetTypeEnum =
-  | "GX.datasetTypeBasic"
-  | "GX.datasetTypeProject";
 export interface Dataset {
   "@context"?: string;
   id?: string;

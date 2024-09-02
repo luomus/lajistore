@@ -1,14 +1,11 @@
+import { Explanations } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum Explanations {
-  "empty" = "",
-  "abbreviation-explanationIndexHerbariorum" = "MOS.abbreviation-explanationIndexHerbariorum",
-  "abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld" = "MOS.abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld"
-}
 export class Organization {
   "@context"?: string;
   id?: string;

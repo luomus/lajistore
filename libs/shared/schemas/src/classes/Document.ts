@@ -1,104 +1,18 @@
+import { SecureLevels } from './';
+import { DataOriginEnum } from './';
 import { GatheringEvent } from './';
+import { Preservations } from './';
+import { Statuses } from './';
+import { VerificationStatuses } from './';
+import { PublicityRestrictionsEnum } from './';
 import { Gathering } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum SecureLevels {
-  "empty" = "",
-  "MX.secureLevelNone" = "MX.secureLevelNone",
-  "MX.secureLevelKM1" = "MX.secureLevelKM1",
-  "MX.secureLevelKM5" = "MX.secureLevelKM5",
-  "MX.secureLevelKM10" = "MX.secureLevelKM10",
-  "MX.secureLevelKM25" = "MX.secureLevelKM25",
-  "MX.secureLevelKM50" = "MX.secureLevelKM50",
-  "MX.secureLevelKM100" = "MX.secureLevelKM100",
-  "MX.secureLevelHighest" = "MX.secureLevelHighest",
-  "MX.secureLevelNoShow" = "MX.secureLevelNoShow"
-}
-export enum DataOriginEnum {
-  "empty" = "",
-  "dataOriginPaperForm" = "MY.dataOriginPaperForm",
-  "dataOriginWebForm" = "MY.dataOriginWebForm",
-  "dataOriginSpreadsheetFile" = "MY.dataOriginSpreadsheetFile"
-}
-export enum Preservations {
-  "empty" = "",
-  "preservationPressed" = "MY.preservationPressed",
-  "preservationDry" = "MY.preservationDry",
-  "preservationCriticalPointDrying" = "MY.preservationCriticalPointDrying",
-  "preservationPinned" = "MY.preservationPinned",
-  "preservationGlued" = "MY.preservationGlued",
-  "preservationLiquid" = "MY.preservationLiquid",
-  "preservationEthanol" = "MY.preservationEthanol",
-  "preservationEthanolPure" = "MY.preservationEthanolPure",
-  "preservationEthanol70" = "MY.preservationEthanol70",
-  "preservationEthanol80" = "MY.preservationEthanol80",
-  "preservationEthanol80Pure" = "MY.preservationEthanol80Pure",
-  "preservationEthanol96" = "MY.preservationEthanol96",
-  "preservationEthanolDenatured" = "MY.preservationEthanolDenatured",
-  "preservationEthanolFormalin" = "MY.preservationEthanolFormalin",
-  "preservationEthanolExFormalin" = "MY.preservationEthanolExFormalin",
-  "preservationFormalin" = "MY.preservationFormalin",
-  "preservationBouinSolution" = "MY.preservationBouinSolution",
-  "preservationPampelsFluid" = "MY.preservationPampelsFluid",
-  "preservationGlycerol" = "MY.preservationGlycerol",
-  "preservationParaffin" = "MY.preservationParaffin",
-  "preservationMercuricChloride" = "MY.preservationMercuricChloride",
-  "preservationCryopreserved" = "MY.preservationCryopreserved",
-  "preservationFrozen" = "MY.preservationFrozen",
-  "preservationFrozenMinus80C" = "MY.preservationFrozenMinus80C",
-  "preservationFreezeDried" = "MY.preservationFreezeDried",
-  "preservationGoldPlated" = "MY.preservationGoldPlated",
-  "preservationActiveCulture" = "MY.preservationActiveCulture",
-  "preservationLiving" = "MY.preservationLiving",
-  "preservationSlide" = "MY.preservationSlide",
-  "preservationSlideCanadaBalsam" = "MY.preservationSlideCanadaBalsam",
-  "preservationSlideEuparal" = "MY.preservationSlideEuparal",
-  "preservationSlidePolyviol" = "MY.preservationSlidePolyviol",
-  "preservationStuffed" = "MY.preservationStuffed",
-  "preservationCast" = "MY.preservationCast",
-  "preservationPlastinated" = "MY.preservationPlastinated",
-  "preservationFrozenMinus80CAndEthanolMinus20C" = "MY.preservationFrozenMinus80CAndEthanolMinus20C",
-  "preservationEthanolMinus20C" = "MY.preservationEthanolMinus20C"
-}
-export enum Statuses {
-  "empty" = "",
-  "statusOk" = "MY.statusOk",
-  "statusMissing" = "MY.statusMissing",
-  "statusUnrecoverable" = "MY.statusUnrecoverable",
-  "statusLost" = "MY.statusLost",
-  "statusDonated" = "MY.statusDonated",
-  "statusDeposited" = "MY.statusDeposited",
-  "statusDeaccessioned" = "MY.statusDeaccessioned",
-  "statusDiscarded" = "MY.statusDiscarded",
-  "statusSpent" = "MY.statusSpent",
-  "statusDestroyed" = "MY.statusDestroyed",
-  "statusUndefined" = "MY.statusUndefined",
-  "statusAxenic" = "MY.statusAxenic",
-  "statusNonAxenic" = "MY.statusNonAxenic",
-  "statusNotAvailable" = "MY.statusNotAvailable",
-  "statusDead" = "MY.statusDead",
-  "statusNoVoucherRetained" = "MY.statusNoVoucherRetained"
-}
-export enum VerificationStatuses {
-  "empty" = "",
-  "verificationStatusOk" = "MY.verificationStatusOk",
-  "verificationStatusVerify" = "MY.verificationStatusVerify",
-  "verificationStatusComplete" = "MY.verificationStatusComplete",
-  "verificationStatusGeoreference" = "MY.verificationStatusGeoreference",
-  "verificationStatusDet" = "MY.verificationStatusDet",
-  "verificationStatusCheckID" = "MY.verificationStatusCheckID",
-  "verificationStatusVerifyCoordinates" = "MY.verificationStatusVerifyCoordinates"
-}
-export enum PublicityRestrictionsEnum {
-  "empty" = "",
-  "publicityRestrictionsPublic" = "MZ.publicityRestrictionsPublic",
-  "publicityRestrictionsProtected" = "MZ.publicityRestrictionsProtected",
-  "publicityRestrictionsPrivate" = "MZ.publicityRestrictionsPrivate"
-}
 export class Document {
   "@context"?: string;
   id?: string;

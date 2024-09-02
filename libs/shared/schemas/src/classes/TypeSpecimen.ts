@@ -1,50 +1,13 @@
+import { TypeStatuses } from './';
+import { TypeVerifications } from './';
+import { PublicityRestrictionsEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum TypeStatuses {
-  "empty" = "",
-  "typeStatusType" = "MY.typeStatusType",
-  "typeStatusHolotype" = "MY.typeStatusHolotype",
-  "typeStatusSyntype" = "MY.typeStatusSyntype",
-  "typeStatusParatype" = "MY.typeStatusParatype",
-  "typeStatusLectotype" = "MY.typeStatusLectotype",
-  "typeStatusParalectotype" = "MY.typeStatusParalectotype",
-  "typeStatusNeotype" = "MY.typeStatusNeotype",
-  "typeStatusAllotype" = "MY.typeStatusAllotype",
-  "typeStatusNeoallotype" = "MY.typeStatusNeoallotype",
-  "typeStatusIsotype" = "MY.typeStatusIsotype",
-  "typeStatusEpitype" = "MY.typeStatusEpitype",
-  "typeStatusIsolectotype" = "MY.typeStatusIsolectotype",
-  "typeStatusIsoepitype" = "MY.typeStatusIsoepitype",
-  "typeStatusIsoneotype" = "MY.typeStatusIsoneotype",
-  "typeStatusIsoparatype" = "MY.typeStatusIsoparatype",
-  "typeStatusIsosyntype" = "MY.typeStatusIsosyntype",
-  "typeStatusOriginalMaterial" = "MY.typeStatusOriginalMaterial",
-  "typeStatusCotype" = "MY.typeStatusCotype",
-  "typeStatusTopotype" = "MY.typeStatusTopotype",
-  "typeStatusHomotype" = "MY.typeStatusHomotype",
-  "typeStatusNo" = "MY.typeStatusNo",
-  "typeStatusPossible" = "MY.typeStatusPossible",
-  "typeStatusObscure" = "MY.typeStatusObscure",
-  "typeStatusTypeStrain" = "MY.typeStatusTypeStrain",
-  "typeStatusPathovarReferenceStrain" = "MY.typeStatusPathovarReferenceStrain"
-}
-export enum TypeVerifications {
-  "empty" = "",
-  "typeVerificationVerified" = "MY.typeVerificationVerified",
-  "typeVerificationUnverified" = "MY.typeVerificationUnverified",
-  "typeVerificationProbable" = "MY.typeVerificationProbable",
-  "typeVerificationDoubtful" = "MY.typeVerificationDoubtful"
-}
-export enum PublicityRestrictionsEnum {
-  "empty" = "",
-  "publicityRestrictionsPublic" = "MZ.publicityRestrictionsPublic",
-  "publicityRestrictionsProtected" = "MZ.publicityRestrictionsProtected",
-  "publicityRestrictionsPrivate" = "MZ.publicityRestrictionsPrivate"
-}
 export class TypeSpecimen {
   "@context"?: string;
   id?: string;

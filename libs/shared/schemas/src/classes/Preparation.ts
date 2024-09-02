@@ -1,44 +1,12 @@
+import { PreparationMaterialsEnum } from './';
+import { PreparationProcessEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum PreparationMaterialsEnum {
-  "empty" = "",
-  "preparationMaterialsAcetone" = "MF.preparationMaterialsAcetone",
-  "preparationMaterialsAmmonia" = "MF.preparationMaterialsAmmonia",
-  "preparationMaterialsBasyntan" = "MF.preparationMaterialsBasyntan",
-  "preparationMaterialsBorax" = "MF.preparationMaterialsBorax",
-  "preparationMaterialsEulan" = "MF.preparationMaterialsEulan",
-  "preparationMaterialsHydrogenPeroxide" = "MF.preparationMaterialsHydrogenPeroxide",
-  "preparationMaterialsMethyleneChloride" = "MF.preparationMaterialsMethyleneChloride",
-  "preparationMaterialsNovaltan" = "MF.preparationMaterialsNovaltan",
-  "preparationMaterialsPapaine" = "MF.preparationMaterialsPapaine",
-  "preparationMaterialsPlaster" = "MF.preparationMaterialsPlaster",
-  "preparationMaterialsPolyurethane" = "MF.preparationMaterialsPolyurethane",
-  "preparationMaterialsPretanix" = "MF.preparationMaterialsPretanix",
-  "preparationMaterialsPurifiedGasoline" = "MF.preparationMaterialsPurifiedGasoline",
-  "preparationMaterialsWoodWool" = "MF.preparationMaterialsWoodWool",
-  "preparationMaterialsCTAB" = "MF.preparationMaterialsCTAB",
-  "preparationMaterialsEZNAForensicKit" = "MF.preparationMaterialsEZNAForensicKit",
-  "preparationMaterialsDNEasyBloodAndTissueKit" = "MF.preparationMaterialsDNEasyBloodAndTissueKit",
-  "preparationMaterialsDNEasyPlantKit" = "MF.preparationMaterialsDNEasyPlantKit",
-  "preparationMaterialsNucleospinTissueKit" = "MF.preparationMaterialsNucleospinTissueKit",
-  "preparationMaterialsNucleospinPlantTwo" = "MF.preparationMaterialsNucleospinPlantTwo",
-  "preparationMaterialsSaltExtraction" = "MF.preparationMaterialsSaltExtraction",
-  "preparationMaterialsDNeasyPlantMiniKit" = "MF.preparationMaterialsDNeasyPlantMiniKit",
-  "preparationMaterialsMagAttractHMWDNAKit" = "MF.preparationMaterialsMagAttractHMWDNAKit"
-}
-export enum PreparationProcessEnum {
-  "empty" = "",
-  "preparationProcessTanning" = "MF.preparationProcessTanning",
-  "preparationProcessEnzymaticMaceration" = "MF.preparationProcessEnzymaticMaceration",
-  "preparationProcessDegreasing" = "MF.preparationProcessDegreasing",
-  "preparationProcessBeetleCleaning" = "MF.preparationProcessBeetleCleaning",
-  "preparationProcessPEG" = "MF.preparationProcessPEG",
-  "preparationProcessFreezeDrying" = "MF.preparationProcessFreezeDrying"
-}
 export class Preparation {
   "@context"?: string;
   id?: string;

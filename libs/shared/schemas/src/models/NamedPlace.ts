@@ -1,35 +1,16 @@
 import { Document } from './';
+import { AccessibilityEnum } from './';
 import { DateRange } from './';
+import { PriorityEnum } from './';
 import { Reserve } from './';
+import { TagEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type AccessibilityEnum =
-  | ""
-  | "MNP.accessibilityEasy"
-  | "MNP.accessibilityModerate"
-  | "MNP.accessibilityDifficult";
-export type PriorityEnum =
-  | ""
-  | "MNP.priority1"
-  | "MNP.priority2"
-  | "MNP.priority3"
-  | "MNP.priority4"
-  | "MNP.priority5";
-export type TagEnum =
-  | ""
-  | "MNP.tagAccessibilityEasy"
-  | "MNP.tagAccessibilityModerate"
-  | "MNP.tagAccessibilityDifficult"
-  | "MNP.tagHabitatImportant"
-  | "MNP.tagCensusRare"
-  | "MNP.tagHabitatFarmland"
-  | "MNP.tagHabitatMire"
-  | "MNP.tagHabitatMountain"
-  | "MNP.tagSuitable";
 export interface NamedPlace {
   "@context"?: string;
   id?: string;

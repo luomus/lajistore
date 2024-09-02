@@ -1,49 +1,18 @@
+import { AnnotationClassEnum } from './';
+import { RequiredRolesEnum } from './';
+import { CensusAnnotationEnum } from './';
 import { Identification } from './';
+import { InvasiveControlEffectivenessEnum } from './';
+import { LineTransectAnnotationEnum } from './';
 import { AnnotationOccurrence } from './';
+import { TypeEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type AnnotationClassEnum =
-  | ""
-  | "MAN.annotationClassReliable"
-  | "MAN.annotationClassLikely"
-  | "MAN.annotationClassNeutral"
-  | "MAN.annotationClassSuspicious"
-  | "MAN.annotationClassUnreliable"
-  | "MAN.annotationClassAcknowledged"
-  | "MAN.annotationClassSpam";
-export type RequiredRolesEnum =
-  | ""
-  | "MMAN.expert"
-  | "MMAN.basic"
-  | "MMAN.owner"
-  | "MMAN.formAdmin"
-  | "MMAN.ictAdmin";
-export type CensusAnnotationEnum =
-  | ""
-  | "MAN.countError"
-  | "MAN.innerCountError"
-  | "MAN.otherError";
-export type InvasiveControlEffectivenessEnum =
-  | ""
-  | "MY.invasiveControlEffectivenessFull"
-  | "MY.invasiveControlEffectivenessPartial"
-  | "MY.invasiveControlEffectivenessNone"
-  | "MY.invasiveControlEffectivenessNotFound";
-export type LineTransectAnnotationEnum =
-  | ""
-  | "MAN.birdCountError"
-  | "MAN.innerCountError"
-  | "MAN.otherError";
-export type TypeEnum =
-  | ""
-  | "MAN.typeOpinion"
-  | "MAN.typeInvasiveControlEffectiveness"
-  | "MAN.typeUnidentifiable"
-  | "MAN.typeAdmin";
 export interface Annotation {
   "@context"?: string;
   id?: string;

@@ -1,22 +1,13 @@
 import { BirdSongRecognitionSkillLevel } from './';
+import { BirdwatchingActivityLevelEnum } from './';
+import { FinnishBirdSongRecognitionSkillLevelEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type BirdwatchingActivityLevelEnum =
-  | ""
-  | "MA.birdwatchingActivityLevelEnum1"
-  | "MA.birdwatchingActivityLevelEnum2"
-  | "MA.birdwatchingActivityLevelEnum3"
-  | "MA.birdwatchingActivityLevelEnum4";
-export type FinnishBirdSongRecognitionSkillLevelEnum =
-  | ""
-  | "MA.finnishBirdSongRecognitionSkillLevelEnum1"
-  | "MA.finnishBirdSongRecognitionSkillLevelEnum2"
-  | "MA.finnishBirdSongRecognitionSkillLevelEnum3"
-  | "MA.finnishBirdSongRecognitionSkillLevelEnum4";
 export interface Profile {
   "@context"?: string;
   id?: string;

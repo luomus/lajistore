@@ -15,11 +15,14 @@ export class GenerateInterfaceOrClassService extends AbstractSchemaGenerateServi
   classFilePattern = this.configService.get('CLASSES_FILENAME_PATTERN');
   modelPath = this.configService.get('MODELS_PATH');
   modelFilePattern = this.configService.get('MODELS_FILENAME_PATTERN');
+  enumFile = 'Enums';
   languages: string[] = [];
   indexContent = '';
   isOfType = '';
   models: string[] = [];
   classes: string[] = [];
+  enums: string[] = [];
+  enumContent = '';
   blackList: string[] = [];
   type: 'class' | 'interface' = 'interface';
 
@@ -67,12 +70,15 @@ export class GenerateInterfaceOrClassService extends AbstractSchemaGenerateServi
 
     await super.generate(this.classes);
 
+    this.indexContent += `
+export * from './${this.enumFile}';
+`;
+
     if (this.type === 'interface') {
       this.languages = await lastValueFrom(this.fileService
       .readJsonFile<string[]>(this.configService.get('CONFIG_LANGUAGES_FILE')));
 
       this.indexContent += `
-
 export type StoreObject = ${this.models.join('\n   | ')};
 
 export type KeyOfUnion<K extends StoreObject> = K extends keyof K ? K : never;
@@ -93,12 +99,19 @@ export function isLangObject<T>(value: unknown): value is Record<Lang, T> {
       this.indexContent += this.isOfType;
     }
 
-    return this.writeToFile(
+    this.writeToFile(
       'index',
       this.indexContent,
       this.type === 'interface' ? this.modelPath : this.classPath,
       this.type === 'interface' ? this.modelFilePattern : this.classFilePattern
     );
+
+    return this.writeToFile(
+      this.enumFile,
+      this.enumContent,
+      this.type === 'interface' ? this.modelPath : this.classPath,
+      this.type === 'interface' ? this.modelFilePattern : this.classFilePattern
+    )
   }
 
   protected async generateFromJsonSchema(
@@ -181,16 +194,22 @@ export function is${normalized}(data: unknown): data is ${normalized} {
       ) {
         if (!imports.includes(normalizedRange)) imports.push(normalizedRange);
       } else if (props.isEnum) {
-        enumsAndAdditionalClasses += this.parseEnum(type.type, props.enum);
+        if (!this.enums.includes(normalizedRange)) {
+          this.enums.push(type.type);
+          this.enumContent += this.parseEnum(type.type, props.enum);
+        }
+
+        if (!imports.includes(normalizedRange)) {
+          imports.push(normalizedRange);
+        }
       } else {
         enumsAndAdditionalClasses += this.extractInterface(type.type, tsInterface);
       }
     })
 
     if (imports.length) {
-      outputTS = imports.map(interfaceName => `import { ${interfaceName } } from './';\n`).join('') + outputTS;
+      outputTS = imports.map(interfaceName => `import { ${interfaceName } } from './';\n`).join('') + '\n' + outputTS;
     }
-
 
     outputTS += enumsAndAdditionalClasses;
     outputTS += ownInterface;

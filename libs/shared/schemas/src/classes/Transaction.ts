@@ -1,75 +1,19 @@
+import { AvailableForGeneticResearchEnum } from './';
+import { GeneticResourceTypeEnum } from './';
+import { LocalDepartments } from './';
+import { ResourceImportedEnum } from './';
+import { SentTypes } from './';
+import { TransactionStatuses } from './';
+import { TransactionTypes } from './';
+import { PublicityRestrictionsEnum } from './';
 import { Permit } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum AvailableForGeneticResearchEnum {
-  "empty" = "",
-  "availableForGeneticResearchYes" = "HRA.availableForGeneticResearchYes",
-  "availableForGeneticResearchWithRestrictions" = "HRA.availableForGeneticResearchWithRestrictions",
-  "availableForGeneticResearchNo" = "HRA.availableForGeneticResearchNo"
-}
-export enum GeneticResourceTypeEnum {
-  "empty" = "",
-  "geneticResourceTypeAnimal" = "HRA.geneticResourceTypeAnimal",
-  "geneticResourceTypePlant" = "HRA.geneticResourceTypePlant",
-  "geneticResourceTypeFungus" = "HRA.geneticResourceTypeFungus",
-  "geneticResourceTypeMicrobe" = "HRA.geneticResourceTypeMicrobe",
-  "geneticResourceTypeSoil" = "HRA.geneticResourceTypeSoil",
-  "geneticResourceTypeAqua" = "HRA.geneticResourceTypeAqua"
-}
-export enum LocalDepartments {
-  "empty" = "",
-  "localDepartmentDipteraHymenoptera" = "HRA.localDepartmentDipteraHymenoptera",
-  "localDepartmentLepidopteraColeoptera" = "HRA.localDepartmentLepidopteraColeoptera",
-  "localDepartmentMetazoa" = "HRA.localDepartmentMetazoa",
-  "localDepartmentMonitoring" = "HRA.localDepartmentMonitoring",
-  "localDepartmentBryology" = "HRA.localDepartmentBryology",
-  "localDepartmentGarden" = "HRA.localDepartmentGarden",
-  "localDepartmentMycology" = "HRA.localDepartmentMycology",
-  "localDepartmentVascularPlants" = "HRA.localDepartmentVascularPlants"
-}
-export enum ResourceImportedEnum {
-  "empty" = "",
-  "resourceImportedGeneticResources" = "HRA.resourceImportedGeneticResources",
-  "resourceImportedTraditionalKnowledge" = "HRA.resourceImportedTraditionalKnowledge",
-  "resourceImportedBoth" = "HRA.resourceImportedBoth"
-}
-export enum SentTypes {
-  "empty" = "",
-  "sentTypePriority" = "HRA.sentTypePriority",
-  "sentTypeEconomy" = "HRA.sentTypeEconomy",
-  "sentTypeCourier" = "HRA.sentTypeCourier",
-  "sentTypeCarried" = "HRA.sentTypeCarried",
-  "sentTypeOther" = "HRA.sentTypeOther",
-  "sentTypeImage" = "HRA.sentTypeImage"
-}
-export enum TransactionStatuses {
-  "empty" = "",
-  "transactionStatusInProcess" = "HRA.transactionStatusInProcess",
-  "transactionStatusOutstanding" = "HRA.transactionStatusOutstanding",
-  "transactionStatusClosed" = "HRA.transactionStatusClosed"
-}
-export enum TransactionTypes {
-  "transactionTypeLoanIncoming" = "HRA.transactionTypeLoanIncoming",
-  "transactionTypeGiftIncoming" = "HRA.transactionTypeGiftIncoming",
-  "transactionTypeExchangeIncoming" = "HRA.transactionTypeExchangeIncoming",
-  "transactionTypeLoanOutgoing" = "HRA.transactionTypeLoanOutgoing",
-  "transactionTypeGiftOutgoing" = "HRA.transactionTypeGiftOutgoing",
-  "transactionTypeExchangeOutgoing" = "HRA.transactionTypeExchangeOutgoing",
-  "transactionTypeFieldCollection" = "HRA.transactionTypeFieldCollection",
-  "transactionTypeImportNotice" = "HRA.transactionTypeImportNotice",
-  "transactionTypeABSNegotiations" = "HRA.transactionTypeABSNegotiations",
-  "transactionTypeVirtualLoanOutgoing" = "HRA.transactionTypeVirtualLoanOutgoing"
-}
-export enum PublicityRestrictionsEnum {
-  "empty" = "",
-  "publicityRestrictionsPublic" = "MZ.publicityRestrictionsPublic",
-  "publicityRestrictionsProtected" = "MZ.publicityRestrictionsProtected",
-  "publicityRestrictionsPrivate" = "MZ.publicityRestrictionsPrivate"
-}
 export class Transaction {
   "@context"?: string;
   id?: string;

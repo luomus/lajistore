@@ -1,34 +1,18 @@
 import { FormFooter } from './';
 import { FormNamedPlaceOptions } from './';
 import { Document } from './';
+import { PrintTypeEnum } from './';
+import { RestrictAccessEnum } from './';
+import { ResultServiceTypeEnum } from './';
 import { FormSeason } from './';
+import { ViewerTypeEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type PrintTypeEnum =
-  | ""
-  | "MHL.printTypeLineTransect";
-export type RestrictAccessEnum =
-  | ""
-  | "MHL.restrictAccessStrict"
-  | "MHL.restrictAccessLoose";
-export type ResultServiceTypeEnum =
-  | ""
-  | "MHL.resultServiceTypeLineTransect"
-  | "MHL.resultServiceTypeNafi"
-  | "MHL.resultServiceTypeBirdPointCount"
-  | "MHL.resultServiceTypeWinterBirdCount"
-  | "MHL.resultServiceTypeSykeInsectProjects"
-  | "MHL.resultServiceTypeInvasiveControl"
-  | "MHL.resultServiceTypeCompleteLists"
-  | "MHL.resultServiceTypeWaterBirdCount";
-export type ViewerTypeEnum =
-  | ""
-  | "MHL.viewerTypeLineTransect"
-  | "MHL.viewerTypeBirdPointCount";
 export interface FormOptions {
   "@context"?: string;
   id?: string;

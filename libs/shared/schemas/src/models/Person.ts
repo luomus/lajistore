@@ -1,36 +1,13 @@
+import { Roles } from './';
+import { RequiredRolesEnum } from './';
+import { RoleKotkaEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type Roles =
-  | ""
-  | "MA.admin"
-  | "MA.securePortalUser"
-  | "MA.sensitiveInformationApprovalRequestHandler"
-  | "MA.taxonEditorUser"
-  | "MA.taxonEditorUserDescriptionWriterOnly"
-  | "MA.haukkaUser"
-  | "MA.satelliteDataManagementUser"
-  | "MA.invasivePortalAdmin"
-  | "MA.speciesChallengeAdmin"
-  | "MA.luomusSpaceCalendarUser"
-  | "MA.luomusSpaceOpeningTimesUser"
-  | "MA.taxonIdEditor";
-export type RequiredRolesEnum =
-  | ""
-  | "MMAN.expert"
-  | "MMAN.basic"
-  | "MMAN.owner"
-  | "MMAN.formAdmin"
-  | "MMAN.ictAdmin";
-export type RoleKotkaEnum =
-  | ""
-  | "MA.admin"
-  | "MA.advanced"
-  | "MA.member"
-  | "MA.guest";
 export interface Person {
   "@context"?: string;
   id?: string;

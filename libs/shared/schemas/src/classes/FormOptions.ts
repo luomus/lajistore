@@ -1,38 +1,18 @@
 import { FormFooter } from './';
 import { FormNamedPlaceOptions } from './';
 import { Document } from './';
+import { PrintTypeEnum } from './';
+import { RestrictAccessEnum } from './';
+import { ResultServiceTypeEnum } from './';
 import { FormSeason } from './';
+import { ViewerTypeEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum PrintTypeEnum {
-  "empty" = "",
-  "printTypeLineTransect" = "MHL.printTypeLineTransect"
-}
-export enum RestrictAccessEnum {
-  "empty" = "",
-  "restrictAccessStrict" = "MHL.restrictAccessStrict",
-  "restrictAccessLoose" = "MHL.restrictAccessLoose"
-}
-export enum ResultServiceTypeEnum {
-  "empty" = "",
-  "resultServiceTypeLineTransect" = "MHL.resultServiceTypeLineTransect",
-  "resultServiceTypeNafi" = "MHL.resultServiceTypeNafi",
-  "resultServiceTypeBirdPointCount" = "MHL.resultServiceTypeBirdPointCount",
-  "resultServiceTypeWinterBirdCount" = "MHL.resultServiceTypeWinterBirdCount",
-  "resultServiceTypeSykeInsectProjects" = "MHL.resultServiceTypeSykeInsectProjects",
-  "resultServiceTypeInvasiveControl" = "MHL.resultServiceTypeInvasiveControl",
-  "resultServiceTypeCompleteLists" = "MHL.resultServiceTypeCompleteLists",
-  "resultServiceTypeWaterBirdCount" = "MHL.resultServiceTypeWaterBirdCount"
-}
-export enum ViewerTypeEnum {
-  "empty" = "",
-  "viewerTypeLineTransect" = "MHL.viewerTypeLineTransect",
-  "viewerTypeBirdPointCount" = "MHL.viewerTypeBirdPointCount"
-}
 export class FormOptions {
   "@context"?: string;
   id?: string;

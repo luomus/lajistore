@@ -1,67 +1,19 @@
+import { AvailableForGeneticResearchEnum } from './';
+import { GeneticResourceTypeEnum } from './';
 import { Permit } from './';
+import { ResourceImportedEnum } from './';
+import { StatusEnum } from './';
 import { SpecimenTransactionEvent } from './';
+import { TransportMethodEnum } from './';
+import { TypeEnum } from './';
+import { PublicityRestrictionsEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum AvailableForGeneticResearchEnum {
-  "empty" = "",
-  "availableForGeneticResearchYes" = "HRX.availableForGeneticResearchYes",
-  "availableForGeneticResearchWithRestrictions" = "HRX.availableForGeneticResearchWithRestrictions",
-  "availableForGeneticResearchNo" = "HRX.availableForGeneticResearchNo"
-}
-export enum GeneticResourceTypeEnum {
-  "empty" = "",
-  "geneticResourceTypeAnimal" = "HRX.geneticResourceTypeAnimal",
-  "geneticResourceTypePlant" = "HRX.geneticResourceTypePlant",
-  "geneticResourceTypeFungus" = "HRX.geneticResourceTypeFungus",
-  "geneticResourceTypeMicrobe" = "HRX.geneticResourceTypeMicrobe",
-  "geneticResourceTypeSoil" = "HRX.geneticResourceTypeSoil",
-  "geneticResourceTypeAqua" = "HRX.geneticResourceTypeAqua"
-}
-export enum ResourceImportedEnum {
-  "empty" = "",
-  "resourceImportedGeneticResources" = "HRX.resourceImportedGeneticResources",
-  "resourceImportedTraditionalKnowledge" = "HRX.resourceImportedTraditionalKnowledge",
-  "resourceImportedBoth" = "HRX.resourceImportedBoth"
-}
-export enum StatusEnum {
-  "empty" = "",
-  "statusInProcess" = "HRX.statusInProcess",
-  "statusOutstanding" = "HRX.statusOutstanding",
-  "statusClosed" = "HRX.statusClosed",
-  "statusOnLoan" = "HRX.statusOnLoan"
-}
-export enum TransportMethodEnum {
-  "empty" = "",
-  "transportMethodPriority" = "HRX.transportMethodPriority",
-  "transportMethodEconomy" = "HRX.transportMethodEconomy",
-  "transportMethodCourier" = "HRX.transportMethodCourier",
-  "transportMethodCarried" = "HRX.transportMethodCarried",
-  "transportMethodOther" = "HRX.transportMethodOther",
-  "transportMethodImage" = "HRX.transportMethodImage"
-}
-export enum TypeEnum {
-  "typeLoanIncoming" = "HRX.typeLoanIncoming",
-  "typeLoanOutgoing" = "HRX.typeLoanOutgoing",
-  "typeGiftIncoming" = "HRX.typeGiftIncoming",
-  "typeGiftOutgoing" = "HRX.typeGiftOutgoing",
-  "typeExchangeIncoming" = "HRX.typeExchangeIncoming",
-  "typeExchangeOutgoing" = "HRX.typeExchangeOutgoing",
-  "typeFieldCollection" = "HRX.typeFieldCollection",
-  "typeImportNotice" = "HRX.typeImportNotice",
-  "typeABSNegotiations" = "HRX.typeABSNegotiations",
-  "typeVirtualLoanOutgoing" = "HRX.typeVirtualLoanOutgoing",
-  "typeDeaccession" = "HRX.typeDeaccession"
-}
-export enum PublicityRestrictionsEnum {
-  "empty" = "",
-  "publicityRestrictionsPublic" = "MZ.publicityRestrictionsPublic",
-  "publicityRestrictionsProtected" = "MZ.publicityRestrictionsProtected",
-  "publicityRestrictionsPrivate" = "MZ.publicityRestrictionsPrivate"
-}
 export class SpecimenTransaction {
   "@context"?: string;
   id?: string;

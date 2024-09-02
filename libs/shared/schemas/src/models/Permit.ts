@@ -1,22 +1,12 @@
+import { PermitStatusEnum } from './';
+import { PermitTypeEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type PermitStatusEnum =
-  | ""
-  | "HRA.permitStatusAvailable"
-  | "HRA.permitStatusNotRequired";
-export type PermitTypeEnum =
-  | ""
-  | "HRA.permitTypePIC"
-  | "HRA.permitTypeMAT"
-  | "HRA.permitTypeMTA"
-  | "HRA.permitCollectingPermit"
-  | "HRA.permitTypeExportPermit"
-  | "HRA.permitTypeOther"
-  | "HRA.permitTypeMemorandumOfUnderstanding";
 export interface Permit {
   "@context"?: string;
   id?: string;

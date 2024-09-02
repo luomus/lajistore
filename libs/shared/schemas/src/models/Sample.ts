@@ -1,136 +1,19 @@
+import { ElutionMediumEnum } from './';
+import { IndividualsInPreparationEnum } from './';
+import { MaterialEnum } from './';
+import { PreparationTypeEnum } from './';
+import { Preservations } from './';
+import { QualityEnum } from './';
+import { QualityCheckMethodEnum } from './';
+import { Statuses } from './';
 import { Measurement } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type ElutionMediumEnum =
-  | ""
-  | "MF.elutionMediumUltrapureWater"
-  | "MF.elutionMediumElutionBuffer";
-export type IndividualsInPreparationEnum =
-  | ""
-  | "MF.individualsInPreparationMultiple"
-  | "MF.individualsInPreparationSingle";
-export type MaterialEnum =
-  | ""
-  | "MF.materialBirdStudySkin"
-  | "MF.materialWing"
-  | "MF.materialTail"
-  | "MF.materialWingAndTail"
-  | "MF.materialSkull"
-  | "MF.materialEntireSkeleton"
-  | "MF.materialBones"
-  | "MF.materialSkullAndBones"
-  | "MF.materialAntlers"
-  | "MF.materialHead"
-  | "MF.materialMuscle"
-  | "MF.materialLiver"
-  | "MF.materialLeaf"
-  | "MF.materialBlood"
-  | "MF.materialLeg"
-  | "MF.materialSkin"
-  | "MF.materialFeather"
-  | "MF.materialEgg"
-  | "MF.materialEggContent"
-  | "MF.materialGenomicDNA"
-  | "MF.materialMitochondrialDNA"
-  | "MF.materialChloroplastDNA"
-  | "MF.materialEnvironmentalDNA"
-  | "MF.materialTeeth"
-  | "MF.materialBodyParts"
-  | "MF.materialEntireOrganism"
-  | "MF.materialAppendages"
-  | "MF.materialGenitalPreparation"
-  | "MF.materialSection"
-  | "MF.materialChromosomes"
-  | "MF.materialShell"
-  | "MF.materialHair"
-  | "MF.materialClutch"
-  | "MF.materialEggshell"
-  | "MF.materialEggshellFragments"
-  | "MF.materialNest"
-  | "MF.materialNestMaterial"
-  | "MF.materialOther";
-export type PreparationTypeEnum =
-  | "MF.preparationTypeSkin"
-  | "MF.preparationTypeSkeletal"
-  | "MF.preparationTypeMount"
-  | "MF.preparationTypeTissue"
-  | "MF.preparationTypeTissueEcotoxicology"
-  | "MF.preparationTypeLiquid"
-  | "MF.preparationTypeMicroscopeSlide"
-  | "MF.preparationTypeDNAExtract"
-  | "MF.preparationTypeEgg"
-  | "MF.preparationTypeNest"
-  | "MF.preparationTypeOther";
-export type Preservations =
-  | ""
-  | "MY.preservationPressed"
-  | "MY.preservationDry"
-  | "MY.preservationCriticalPointDrying"
-  | "MY.preservationPinned"
-  | "MY.preservationGlued"
-  | "MY.preservationLiquid"
-  | "MY.preservationEthanol"
-  | "MY.preservationEthanolPure"
-  | "MY.preservationEthanol70"
-  | "MY.preservationEthanol80"
-  | "MY.preservationEthanol80Pure"
-  | "MY.preservationEthanol96"
-  | "MY.preservationEthanolDenatured"
-  | "MY.preservationEthanolFormalin"
-  | "MY.preservationEthanolExFormalin"
-  | "MY.preservationFormalin"
-  | "MY.preservationBouinSolution"
-  | "MY.preservationPampelsFluid"
-  | "MY.preservationGlycerol"
-  | "MY.preservationParaffin"
-  | "MY.preservationMercuricChloride"
-  | "MY.preservationCryopreserved"
-  | "MY.preservationFrozen"
-  | "MY.preservationFrozenMinus80C"
-  | "MY.preservationFreezeDried"
-  | "MY.preservationGoldPlated"
-  | "MY.preservationActiveCulture"
-  | "MY.preservationLiving"
-  | "MY.preservationSlide"
-  | "MY.preservationSlideCanadaBalsam"
-  | "MY.preservationSlideEuparal"
-  | "MY.preservationSlidePolyviol"
-  | "MY.preservationStuffed"
-  | "MY.preservationCast"
-  | "MY.preservationPlastinated"
-  | "MY.preservationFrozenMinus80CAndEthanolMinus20C"
-  | "MY.preservationEthanolMinus20C";
-export type QualityEnum =
-  | ""
-  | "MF.qualityLow"
-  | "MF.qualityMedium"
-  | "MF.qualityHigh";
-export type QualityCheckMethodEnum =
-  | ""
-  | "MF.qualityCheckMethodNanoDrop"
-  | "MF.qualityCheckMethodCubit";
-export type Statuses =
-  | ""
-  | "MY.statusOk"
-  | "MY.statusMissing"
-  | "MY.statusUnrecoverable"
-  | "MY.statusLost"
-  | "MY.statusDonated"
-  | "MY.statusDeposited"
-  | "MY.statusDeaccessioned"
-  | "MY.statusDiscarded"
-  | "MY.statusSpent"
-  | "MY.statusDestroyed"
-  | "MY.statusUndefined"
-  | "MY.statusAxenic"
-  | "MY.statusNonAxenic"
-  | "MY.statusNotAvailable"
-  | "MY.statusDead"
-  | "MY.statusNoVoucherRetained";
 export interface Sample {
   "@context"?: string;
   id?: string;

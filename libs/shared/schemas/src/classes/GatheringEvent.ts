@@ -1,67 +1,16 @@
+import { ArtificialLightEnum } from './';
+import { CloudCoverOktaEnum } from './';
 import { CompleteList } from './';
 import { GatheringFact } from './';
+import { RainIntensityEnum } from './';
 import { TaxonCensus } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum ArtificialLightEnum {
-  "empty" = "",
-  "artificialLightEnum1" = "MY.artificialLightEnum1",
-  "artificialLightEnum2" = "MY.artificialLightEnum2",
-  "artificialLightEnum3" = "MY.artificialLightEnum3",
-  "artificialLightEnum4" = "MY.artificialLightEnum4",
-  "artificialLightEnum5" = "MY.artificialLightEnum5"
-}
-export enum CloudCoverOktaEnum {
-  "empty" = "",
-  "cloudCoverOktaEnumUnknown" = "MY.cloudCoverOktaEnumUnknown",
-  "cloudCoverOktaEnum0" = "MY.cloudCoverOktaEnum0",
-  "cloudCoverOktaEnum1" = "MY.cloudCoverOktaEnum1",
-  "cloudCoverOktaEnum2" = "MY.cloudCoverOktaEnum2",
-  "cloudCoverOktaEnum3" = "MY.cloudCoverOktaEnum3",
-  "cloudCoverOktaEnum4" = "MY.cloudCoverOktaEnum4",
-  "cloudCoverOktaEnum5" = "MY.cloudCoverOktaEnum5",
-  "cloudCoverOktaEnum6" = "MY.cloudCoverOktaEnum6",
-  "cloudCoverOktaEnum7" = "MY.cloudCoverOktaEnum7",
-  "cloudCoverOktaEnum8" = "MY.cloudCoverOktaEnum8"
-}
-export enum CloudCoverOktaEnum1 {
-  "empty" = "",
-  "cloudCoverOktaEnumUnknown" = "MY.cloudCoverOktaEnumUnknown",
-  "cloudCoverOktaEnum0" = "MY.cloudCoverOktaEnum0",
-  "cloudCoverOktaEnum1" = "MY.cloudCoverOktaEnum1",
-  "cloudCoverOktaEnum2" = "MY.cloudCoverOktaEnum2",
-  "cloudCoverOktaEnum3" = "MY.cloudCoverOktaEnum3",
-  "cloudCoverOktaEnum4" = "MY.cloudCoverOktaEnum4",
-  "cloudCoverOktaEnum5" = "MY.cloudCoverOktaEnum5",
-  "cloudCoverOktaEnum6" = "MY.cloudCoverOktaEnum6",
-  "cloudCoverOktaEnum7" = "MY.cloudCoverOktaEnum7",
-  "cloudCoverOktaEnum8" = "MY.cloudCoverOktaEnum8"
-}
-export enum CloudCoverOktaEnum2 {
-  "empty" = "",
-  "cloudCoverOktaEnumUnknown" = "MY.cloudCoverOktaEnumUnknown",
-  "cloudCoverOktaEnum0" = "MY.cloudCoverOktaEnum0",
-  "cloudCoverOktaEnum1" = "MY.cloudCoverOktaEnum1",
-  "cloudCoverOktaEnum2" = "MY.cloudCoverOktaEnum2",
-  "cloudCoverOktaEnum3" = "MY.cloudCoverOktaEnum3",
-  "cloudCoverOktaEnum4" = "MY.cloudCoverOktaEnum4",
-  "cloudCoverOktaEnum5" = "MY.cloudCoverOktaEnum5",
-  "cloudCoverOktaEnum6" = "MY.cloudCoverOktaEnum6",
-  "cloudCoverOktaEnum7" = "MY.cloudCoverOktaEnum7",
-  "cloudCoverOktaEnum8" = "MY.cloudCoverOktaEnum8"
-}
-export enum RainIntensityEnum {
-  "empty" = "",
-  "rainIntensityEnumNoRain" = "MY.rainIntensityEnumNoRain",
-  "rainIntensityEnumLightRain" = "MY.rainIntensityEnumLightRain",
-  "rainIntensityEnumModerateRain" = "MY.rainIntensityEnumModerateRain",
-  "rainIntensityEnumHeavyRain" = "MY.rainIntensityEnumHeavyRain",
-  "rainIntensityEnumTorrentialRain" = "MY.rainIntensityEnumTorrentialRain"
-}
 export class GatheringEvent {
   "@context"?: string;
   id?: string;

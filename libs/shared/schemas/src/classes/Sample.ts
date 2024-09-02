@@ -1,144 +1,19 @@
+import { ElutionMediumEnum } from './';
+import { IndividualsInPreparationEnum } from './';
+import { MaterialEnum } from './';
+import { PreparationTypeEnum } from './';
+import { Preservations } from './';
+import { QualityEnum } from './';
+import { QualityCheckMethodEnum } from './';
+import { Statuses } from './';
 import { Measurement } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum ElutionMediumEnum {
-  "empty" = "",
-  "elutionMediumUltrapureWater" = "MF.elutionMediumUltrapureWater",
-  "elutionMediumElutionBuffer" = "MF.elutionMediumElutionBuffer"
-}
-export enum IndividualsInPreparationEnum {
-  "empty" = "",
-  "individualsInPreparationMultiple" = "MF.individualsInPreparationMultiple",
-  "individualsInPreparationSingle" = "MF.individualsInPreparationSingle"
-}
-export enum MaterialEnum {
-  "empty" = "",
-  "materialBirdStudySkin" = "MF.materialBirdStudySkin",
-  "materialWing" = "MF.materialWing",
-  "materialTail" = "MF.materialTail",
-  "materialWingAndTail" = "MF.materialWingAndTail",
-  "materialSkull" = "MF.materialSkull",
-  "materialEntireSkeleton" = "MF.materialEntireSkeleton",
-  "materialBones" = "MF.materialBones",
-  "materialSkullAndBones" = "MF.materialSkullAndBones",
-  "materialAntlers" = "MF.materialAntlers",
-  "materialHead" = "MF.materialHead",
-  "materialMuscle" = "MF.materialMuscle",
-  "materialLiver" = "MF.materialLiver",
-  "materialLeaf" = "MF.materialLeaf",
-  "materialBlood" = "MF.materialBlood",
-  "materialLeg" = "MF.materialLeg",
-  "materialSkin" = "MF.materialSkin",
-  "materialFeather" = "MF.materialFeather",
-  "materialEgg" = "MF.materialEgg",
-  "materialEggContent" = "MF.materialEggContent",
-  "materialGenomicDNA" = "MF.materialGenomicDNA",
-  "materialMitochondrialDNA" = "MF.materialMitochondrialDNA",
-  "materialChloroplastDNA" = "MF.materialChloroplastDNA",
-  "materialEnvironmentalDNA" = "MF.materialEnvironmentalDNA",
-  "materialTeeth" = "MF.materialTeeth",
-  "materialBodyParts" = "MF.materialBodyParts",
-  "materialEntireOrganism" = "MF.materialEntireOrganism",
-  "materialAppendages" = "MF.materialAppendages",
-  "materialGenitalPreparation" = "MF.materialGenitalPreparation",
-  "materialSection" = "MF.materialSection",
-  "materialChromosomes" = "MF.materialChromosomes",
-  "materialShell" = "MF.materialShell",
-  "materialHair" = "MF.materialHair",
-  "materialClutch" = "MF.materialClutch",
-  "materialEggshell" = "MF.materialEggshell",
-  "materialEggshellFragments" = "MF.materialEggshellFragments",
-  "materialNest" = "MF.materialNest",
-  "materialNestMaterial" = "MF.materialNestMaterial",
-  "materialOther" = "MF.materialOther"
-}
-export enum PreparationTypeEnum {
-  "preparationTypeSkin" = "MF.preparationTypeSkin",
-  "preparationTypeSkeletal" = "MF.preparationTypeSkeletal",
-  "preparationTypeMount" = "MF.preparationTypeMount",
-  "preparationTypeTissue" = "MF.preparationTypeTissue",
-  "preparationTypeTissueEcotoxicology" = "MF.preparationTypeTissueEcotoxicology",
-  "preparationTypeLiquid" = "MF.preparationTypeLiquid",
-  "preparationTypeMicroscopeSlide" = "MF.preparationTypeMicroscopeSlide",
-  "preparationTypeDNAExtract" = "MF.preparationTypeDNAExtract",
-  "preparationTypeEgg" = "MF.preparationTypeEgg",
-  "preparationTypeNest" = "MF.preparationTypeNest",
-  "preparationTypeOther" = "MF.preparationTypeOther"
-}
-export enum Preservations {
-  "empty" = "",
-  "preservationPressed" = "MY.preservationPressed",
-  "preservationDry" = "MY.preservationDry",
-  "preservationCriticalPointDrying" = "MY.preservationCriticalPointDrying",
-  "preservationPinned" = "MY.preservationPinned",
-  "preservationGlued" = "MY.preservationGlued",
-  "preservationLiquid" = "MY.preservationLiquid",
-  "preservationEthanol" = "MY.preservationEthanol",
-  "preservationEthanolPure" = "MY.preservationEthanolPure",
-  "preservationEthanol70" = "MY.preservationEthanol70",
-  "preservationEthanol80" = "MY.preservationEthanol80",
-  "preservationEthanol80Pure" = "MY.preservationEthanol80Pure",
-  "preservationEthanol96" = "MY.preservationEthanol96",
-  "preservationEthanolDenatured" = "MY.preservationEthanolDenatured",
-  "preservationEthanolFormalin" = "MY.preservationEthanolFormalin",
-  "preservationEthanolExFormalin" = "MY.preservationEthanolExFormalin",
-  "preservationFormalin" = "MY.preservationFormalin",
-  "preservationBouinSolution" = "MY.preservationBouinSolution",
-  "preservationPampelsFluid" = "MY.preservationPampelsFluid",
-  "preservationGlycerol" = "MY.preservationGlycerol",
-  "preservationParaffin" = "MY.preservationParaffin",
-  "preservationMercuricChloride" = "MY.preservationMercuricChloride",
-  "preservationCryopreserved" = "MY.preservationCryopreserved",
-  "preservationFrozen" = "MY.preservationFrozen",
-  "preservationFrozenMinus80C" = "MY.preservationFrozenMinus80C",
-  "preservationFreezeDried" = "MY.preservationFreezeDried",
-  "preservationGoldPlated" = "MY.preservationGoldPlated",
-  "preservationActiveCulture" = "MY.preservationActiveCulture",
-  "preservationLiving" = "MY.preservationLiving",
-  "preservationSlide" = "MY.preservationSlide",
-  "preservationSlideCanadaBalsam" = "MY.preservationSlideCanadaBalsam",
-  "preservationSlideEuparal" = "MY.preservationSlideEuparal",
-  "preservationSlidePolyviol" = "MY.preservationSlidePolyviol",
-  "preservationStuffed" = "MY.preservationStuffed",
-  "preservationCast" = "MY.preservationCast",
-  "preservationPlastinated" = "MY.preservationPlastinated",
-  "preservationFrozenMinus80CAndEthanolMinus20C" = "MY.preservationFrozenMinus80CAndEthanolMinus20C",
-  "preservationEthanolMinus20C" = "MY.preservationEthanolMinus20C"
-}
-export enum QualityEnum {
-  "empty" = "",
-  "qualityLow" = "MF.qualityLow",
-  "qualityMedium" = "MF.qualityMedium",
-  "qualityHigh" = "MF.qualityHigh"
-}
-export enum QualityCheckMethodEnum {
-  "empty" = "",
-  "qualityCheckMethodNanoDrop" = "MF.qualityCheckMethodNanoDrop",
-  "qualityCheckMethodCubit" = "MF.qualityCheckMethodCubit"
-}
-export enum Statuses {
-  "empty" = "",
-  "statusOk" = "MY.statusOk",
-  "statusMissing" = "MY.statusMissing",
-  "statusUnrecoverable" = "MY.statusUnrecoverable",
-  "statusLost" = "MY.statusLost",
-  "statusDonated" = "MY.statusDonated",
-  "statusDeposited" = "MY.statusDeposited",
-  "statusDeaccessioned" = "MY.statusDeaccessioned",
-  "statusDiscarded" = "MY.statusDiscarded",
-  "statusSpent" = "MY.statusSpent",
-  "statusDestroyed" = "MY.statusDestroyed",
-  "statusUndefined" = "MY.statusUndefined",
-  "statusAxenic" = "MY.statusAxenic",
-  "statusNonAxenic" = "MY.statusNonAxenic",
-  "statusNotAvailable" = "MY.statusNotAvailable",
-  "statusDead" = "MY.statusDead",
-  "statusNoVoucherRetained" = "MY.statusNoVoucherRetained"
-}
 export class Sample {
   "@context"?: string;
   id?: string;

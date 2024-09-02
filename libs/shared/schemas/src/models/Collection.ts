@@ -1,68 +1,18 @@
+import { SecureLevels } from './';
+import { CollectionQualityEnum } from './';
+import { CollectionTypes } from './';
+import { DataQualityEnum } from './';
+import { IntellectualRightsEnum } from './';
+import { MetadataStatuses } from './';
+import { PublicationTermsEnum } from './';
+import { PublicityRestrictionsEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type SecureLevels =
-  | ""
-  | "MX.secureLevelNone"
-  | "MX.secureLevelKM1"
-  | "MX.secureLevelKM5"
-  | "MX.secureLevelKM10"
-  | "MX.secureLevelKM25"
-  | "MX.secureLevelKM50"
-  | "MX.secureLevelKM100"
-  | "MX.secureLevelHighest"
-  | "MX.secureLevelNoShow";
-export type CollectionQualityEnum =
-  | "MY.collectionQualityEnum3"
-  | "MY.collectionQualityEnum2"
-  | "MY.collectionQualityEnum1";
-export type CollectionTypes =
-  | "MY.collectionTypeSpecimens"
-  | "MY.collectionTypeLiving"
-  | "MY.collectionTypeMonitoring"
-  | "MY.collectionTypeObservations"
-  | "MY.collectionTypePublicationdata"
-  | "MY.collectionTypePublication"
-  | "MY.collectionTypeMixed"
-  | "MY.collectionTypeOther"
-  | "MY.collectionTypeGardenArea"
-  | "MY.collectionTypeIndoorGardenArea"
-  | "MY.collectionTypeOutdoorGardenArea"
-  | "MY.collectionTypeGardenSublocation"
-  | "MY.collectionTypeTrait";
-export type DataQualityEnum =
-  | ""
-  | "MY.dataQuality1"
-  | "MY.dataQuality2"
-  | "MY.dataQuality3"
-  | "MY.dataQuality4"
-  | "MY.dataQuality5"
-  | "MY.dataQualityNA";
-export type IntellectualRightsEnum =
-  | "MY.intellectualRightsCC-BY"
-  | "MY.intellectualRightsCC0"
-  | "MY.intellectualRightsPD"
-  | "MY.intellectualRightsARR";
-export type MetadataStatuses =
-  | ""
-  | "MY.metadataStatusPreliminary"
-  | "MY.metadataStatusSatisfactory"
-  | "MY.metadataStatusComprehensive"
-  | "MY.metadataStatusHidden";
-export type PublicationTermsEnum =
-  | ""
-  | "MY.publicationTermsFree"
-  | "MY.publicationTermsOfficial"
-  | "MY.publicationTermsInternal"
-  | "MY.publicationTermsNone";
-export type PublicityRestrictionsEnum =
-  | ""
-  | "MZ.publicityRestrictionsPublic"
-  | "MZ.publicityRestrictionsProtected"
-  | "MZ.publicityRestrictionsPrivate";
 export interface Collection {
   "@context"?: string;
   id?: string;

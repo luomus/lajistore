@@ -1,32 +1,14 @@
+import { CategoryEnum } from './';
 import { Field } from './';
+import { LanguageEnum } from './';
 import { FormOptions } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum CategoryEnum {
-  "empty" = "",
-  "categoryGeneric" = "MHL.categoryGeneric",
-  "categorySurvey" = "MHL.categorySurvey",
-  "categoryTaxonomicGroup" = "MHL.categoryTaxonomicGroup",
-  "categoryBirdMonitoringSchemes" = "MHL.categoryBirdMonitoringSchemes",
-  "categoryCitizenScience" = "MHL.categoryCitizenScience",
-  "categoryBiomonCompleteLists" = "MHL.categoryBiomonCompleteLists"
-}
-export enum LanguageEnum {
-  "empty" = "",
-  "en" = "en",
-  "fi" = "fi",
-  "sv" = "sv"
-}
-export enum LanguageEnum1 {
-  "empty" = "",
-  "en" = "en",
-  "fi" = "fi",
-  "sv" = "sv"
-}
 export class Form {
   "@context"?: string;
   id?: string;

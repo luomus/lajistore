@@ -1,60 +1,19 @@
+import { AvailableForGeneticResearchEnum } from './';
+import { GeneticResourceTypeEnum } from './';
 import { Permit } from './';
+import { ResourceImportedEnum } from './';
+import { StatusEnum } from './';
 import { SpecimenTransactionEvent } from './';
+import { TransportMethodEnum } from './';
+import { TypeEnum } from './';
+import { PublicityRestrictionsEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type AvailableForGeneticResearchEnum =
-  | ""
-  | "HRX.availableForGeneticResearchYes"
-  | "HRX.availableForGeneticResearchWithRestrictions"
-  | "HRX.availableForGeneticResearchNo";
-export type GeneticResourceTypeEnum =
-  | ""
-  | "HRX.geneticResourceTypeAnimal"
-  | "HRX.geneticResourceTypePlant"
-  | "HRX.geneticResourceTypeFungus"
-  | "HRX.geneticResourceTypeMicrobe"
-  | "HRX.geneticResourceTypeSoil"
-  | "HRX.geneticResourceTypeAqua";
-export type ResourceImportedEnum =
-  | ""
-  | "HRX.resourceImportedGeneticResources"
-  | "HRX.resourceImportedTraditionalKnowledge"
-  | "HRX.resourceImportedBoth";
-export type StatusEnum =
-  | ""
-  | "HRX.statusInProcess"
-  | "HRX.statusOutstanding"
-  | "HRX.statusClosed"
-  | "HRX.statusOnLoan";
-export type TransportMethodEnum =
-  | ""
-  | "HRX.transportMethodPriority"
-  | "HRX.transportMethodEconomy"
-  | "HRX.transportMethodCourier"
-  | "HRX.transportMethodCarried"
-  | "HRX.transportMethodOther"
-  | "HRX.transportMethodImage";
-export type TypeEnum =
-  | "HRX.typeLoanIncoming"
-  | "HRX.typeLoanOutgoing"
-  | "HRX.typeGiftIncoming"
-  | "HRX.typeGiftOutgoing"
-  | "HRX.typeExchangeIncoming"
-  | "HRX.typeExchangeOutgoing"
-  | "HRX.typeFieldCollection"
-  | "HRX.typeImportNotice"
-  | "HRX.typeABSNegotiations"
-  | "HRX.typeVirtualLoanOutgoing"
-  | "HRX.typeDeaccession";
-export type PublicityRestrictionsEnum =
-  | ""
-  | "MZ.publicityRestrictionsPublic"
-  | "MZ.publicityRestrictionsProtected"
-  | "MZ.publicityRestrictionsPrivate";
 export interface SpecimenTransaction {
   "@context"?: string;
   id?: string;

@@ -1,39 +1,13 @@
+import { Roles } from './';
+import { RequiredRolesEnum } from './';
+import { RoleKotkaEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum Roles {
-  "empty" = "",
-  "admin" = "MA.admin",
-  "securePortalUser" = "MA.securePortalUser",
-  "sensitiveInformationApprovalRequestHandler" = "MA.sensitiveInformationApprovalRequestHandler",
-  "taxonEditorUser" = "MA.taxonEditorUser",
-  "taxonEditorUserDescriptionWriterOnly" = "MA.taxonEditorUserDescriptionWriterOnly",
-  "haukkaUser" = "MA.haukkaUser",
-  "satelliteDataManagementUser" = "MA.satelliteDataManagementUser",
-  "invasivePortalAdmin" = "MA.invasivePortalAdmin",
-  "speciesChallengeAdmin" = "MA.speciesChallengeAdmin",
-  "luomusSpaceCalendarUser" = "MA.luomusSpaceCalendarUser",
-  "luomusSpaceOpeningTimesUser" = "MA.luomusSpaceOpeningTimesUser",
-  "taxonIdEditor" = "MA.taxonIdEditor"
-}
-export enum RequiredRolesEnum {
-  "empty" = "",
-  "expert" = "MMAN.expert",
-  "basic" = "MMAN.basic",
-  "owner" = "MMAN.owner",
-  "formAdmin" = "MMAN.formAdmin",
-  "ictAdmin" = "MMAN.ictAdmin"
-}
-export enum RoleKotkaEnum {
-  "empty" = "",
-  "admin" = "MA.admin",
-  "advanced" = "MA.advanced",
-  "member" = "MA.member",
-  "guest" = "MA.guest"
-}
 export class Person {
   "@context"?: string;
   id?: string;

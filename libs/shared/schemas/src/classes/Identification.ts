@@ -1,115 +1,15 @@
+import { DetMethodEnum } from './';
+import { IdentificationBasisEnum } from './';
+import { InfraRanks } from './';
+import { TaxonRankEnum } from './';
+import { PublicityRestrictionsEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum DetMethodEnum {
-  "empty" = "",
-  "detMethodFreshSample" = "MY.detMethodFreshSample",
-  "detMethodMicroscopy" = "MY.detMethodMicroscopy",
-  "detMethodPhoto" = "MY.detMethodPhoto"
-}
-export enum IdentificationBasisEnum {
-  "empty" = "",
-  "identificationBasisDNA" = "MY.identificationBasisDNA",
-  "identificationBasisGenitals" = "MY.identificationBasisGenitals",
-  "identificationBasisGenitalPreparate" = "MY.identificationBasisGenitalPreparate",
-  "identificationBasisSpores" = "MY.identificationBasisSpores",
-  "identificationBasisHandled" = "MY.identificationBasisHandled",
-  "identificationBasisChemical" = "MY.identificationBasisChemical",
-  "identificationBasisHeard" = "MY.identificationBasisHeard",
-  "identificationBasisMicroscope" = "MY.identificationBasisMicroscope",
-  "identificationBasisSeen" = "MY.identificationBasisSeen",
-  "identificationBasisPreservedSpecimen" = "MY.identificationBasisPreservedSpecimen",
-  "identificationBasisFreshSpecimen" = "MY.identificationBasisFreshSpecimen",
-  "identificationBasisMedia" = "MY.identificationBasisMedia"
-}
-export enum InfraRanks {
-  "empty" = "",
-  "infraRankSsp" = "MY.infraRankSsp",
-  "infraRankVar" = "MY.infraRankVar",
-  "infraRankBeta" = "MY.infraRankBeta",
-  "infraRankB" = "MY.infraRankB",
-  "infraRankForma" = "MY.infraRankForma",
-  "infraRankHybrid" = "MY.infraRankHybrid",
-  "infraRankAnamorph" = "MY.infraRankAnamorph",
-  "infraRankAggregate" = "MY.infraRankAggregate",
-  "infraRankAberration" = "MY.infraRankAberration",
-  "infraRankCultivar" = "MY.infraRankCultivar",
-  "infraRankMorpha" = "MY.infraRankMorpha",
-  "infraRankUnknown" = "MY.infraRankUnknown",
-  "infraRankNothosubspecies" = "MY.infraRankNothosubspecies",
-  "infraRankCultivarGroup" = "MY.infraRankCultivarGroup",
-  "infraRankFsp" = "MY.infraRankFsp"
-}
-export enum TaxonRankEnum {
-  "empty" = "",
-  "MX.superdomain" = "MX.superdomain",
-  "MX.domain" = "MX.domain",
-  "MX.kingdom" = "MX.kingdom",
-  "MX.subkingdom" = "MX.subkingdom",
-  "MX.infrakingdom" = "MX.infrakingdom",
-  "MX.superphylum" = "MX.superphylum",
-  "MX.phylum" = "MX.phylum",
-  "MX.subphylum" = "MX.subphylum",
-  "MX.infraphylum" = "MX.infraphylum",
-  "MX.superdivision" = "MX.superdivision",
-  "MX.division" = "MX.division",
-  "MX.subdivision" = "MX.subdivision",
-  "MX.infradivision" = "MX.infradivision",
-  "MX.superclass" = "MX.superclass",
-  "MX.class" = "MX.class",
-  "MX.subclass" = "MX.subclass",
-  "MX.infraclass" = "MX.infraclass",
-  "MX.parvclass" = "MX.parvclass",
-  "MX.superorder" = "MX.superorder",
-  "MX.order" = "MX.order",
-  "MX.suborder" = "MX.suborder",
-  "MX.infraorder" = "MX.infraorder",
-  "MX.parvorder" = "MX.parvorder",
-  "MX.superfamily" = "MX.superfamily",
-  "MX.family" = "MX.family",
-  "MX.subfamily" = "MX.subfamily",
-  "MX.tribe" = "MX.tribe",
-  "MX.subtribe" = "MX.subtribe",
-  "MX.supergenus" = "MX.supergenus",
-  "MX.genus" = "MX.genus",
-  "MX.nothogenus" = "MX.nothogenus",
-  "MX.subgenus" = "MX.subgenus",
-  "MX.section" = "MX.section",
-  "MX.subsection" = "MX.subsection",
-  "MX.series" = "MX.series",
-  "MX.subseries" = "MX.subseries",
-  "MX.infragenericTaxon" = "MX.infragenericTaxon",
-  "MX.aggregate" = "MX.aggregate",
-  "MX.speciesAggregate" = "MX.speciesAggregate",
-  "MX.species" = "MX.species",
-  "MX.nothospecies" = "MX.nothospecies",
-  "MX.infraspecificTaxon" = "MX.infraspecificTaxon",
-  "MX.subspecificAggregate" = "MX.subspecificAggregate",
-  "MX.subspecies" = "MX.subspecies",
-  "MX.nothosubspecies" = "MX.nothosubspecies",
-  "MX.variety" = "MX.variety",
-  "MX.subvariety" = "MX.subvariety",
-  "MX.form" = "MX.form",
-  "MX.subform" = "MX.subform",
-  "MX.hybrid" = "MX.hybrid",
-  "MX.anamorph" = "MX.anamorph",
-  "MX.ecotype" = "MX.ecotype",
-  "MX.populationGroup" = "MX.populationGroup",
-  "MX.intergenericHybrid" = "MX.intergenericHybrid",
-  "MX.infragenericHybrid" = "MX.infragenericHybrid",
-  "MX.cultivar" = "MX.cultivar",
-  "MX.group" = "MX.group",
-  "MX.grex" = "MX.grex"
-}
-export enum PublicityRestrictionsEnum {
-  "empty" = "",
-  "publicityRestrictionsPublic" = "MZ.publicityRestrictionsPublic",
-  "publicityRestrictionsProtected" = "MZ.publicityRestrictionsProtected",
-  "publicityRestrictionsPrivate" = "MZ.publicityRestrictionsPrivate"
-}
 export class Identification {
   "@context"?: string;
   id?: string;

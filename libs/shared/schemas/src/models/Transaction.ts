@@ -1,67 +1,19 @@
+import { AvailableForGeneticResearchEnum } from './';
+import { GeneticResourceTypeEnum } from './';
+import { LocalDepartments } from './';
+import { ResourceImportedEnum } from './';
+import { SentTypes } from './';
+import { TransactionStatuses } from './';
+import { TransactionTypes } from './';
+import { PublicityRestrictionsEnum } from './';
 import { Permit } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type AvailableForGeneticResearchEnum =
-  | ""
-  | "HRA.availableForGeneticResearchYes"
-  | "HRA.availableForGeneticResearchWithRestrictions"
-  | "HRA.availableForGeneticResearchNo";
-export type GeneticResourceTypeEnum =
-  | ""
-  | "HRA.geneticResourceTypeAnimal"
-  | "HRA.geneticResourceTypePlant"
-  | "HRA.geneticResourceTypeFungus"
-  | "HRA.geneticResourceTypeMicrobe"
-  | "HRA.geneticResourceTypeSoil"
-  | "HRA.geneticResourceTypeAqua";
-export type LocalDepartments =
-  | ""
-  | "HRA.localDepartmentDipteraHymenoptera"
-  | "HRA.localDepartmentLepidopteraColeoptera"
-  | "HRA.localDepartmentMetazoa"
-  | "HRA.localDepartmentMonitoring"
-  | "HRA.localDepartmentBryology"
-  | "HRA.localDepartmentGarden"
-  | "HRA.localDepartmentMycology"
-  | "HRA.localDepartmentVascularPlants";
-export type ResourceImportedEnum =
-  | ""
-  | "HRA.resourceImportedGeneticResources"
-  | "HRA.resourceImportedTraditionalKnowledge"
-  | "HRA.resourceImportedBoth";
-export type SentTypes =
-  | ""
-  | "HRA.sentTypePriority"
-  | "HRA.sentTypeEconomy"
-  | "HRA.sentTypeCourier"
-  | "HRA.sentTypeCarried"
-  | "HRA.sentTypeOther"
-  | "HRA.sentTypeImage";
-export type TransactionStatuses =
-  | ""
-  | "HRA.transactionStatusInProcess"
-  | "HRA.transactionStatusOutstanding"
-  | "HRA.transactionStatusClosed";
-export type TransactionTypes =
-  | "HRA.transactionTypeLoanIncoming"
-  | "HRA.transactionTypeGiftIncoming"
-  | "HRA.transactionTypeExchangeIncoming"
-  | "HRA.transactionTypeLoanOutgoing"
-  | "HRA.transactionTypeGiftOutgoing"
-  | "HRA.transactionTypeExchangeOutgoing"
-  | "HRA.transactionTypeFieldCollection"
-  | "HRA.transactionTypeImportNotice"
-  | "HRA.transactionTypeABSNegotiations"
-  | "HRA.transactionTypeVirtualLoanOutgoing";
-export type PublicityRestrictionsEnum =
-  | ""
-  | "MZ.publicityRestrictionsPublic"
-  | "MZ.publicityRestrictionsProtected"
-  | "MZ.publicityRestrictionsPrivate";
 export interface Transaction {
   "@context"?: string;
   id?: string;

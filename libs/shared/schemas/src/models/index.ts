@@ -179,6 +179,7 @@ import { Validator } from './Validator'
 export type { Validator }
 import { Video } from './Video'
 export type { Video }
+export * from './Enums';
 
 export type StoreObject = BibliographicResource
    | Concept

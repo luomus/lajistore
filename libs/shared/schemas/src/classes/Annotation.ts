@@ -1,55 +1,18 @@
+import { AnnotationClassEnum } from './';
+import { RequiredRolesEnum } from './';
+import { CensusAnnotationEnum } from './';
 import { Identification } from './';
+import { InvasiveControlEffectivenessEnum } from './';
+import { LineTransectAnnotationEnum } from './';
 import { AnnotationOccurrence } from './';
+import { TypeEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export enum AnnotationClassEnum {
-  "empty" = "",
-  "annotationClassReliable" = "MAN.annotationClassReliable",
-  "annotationClassLikely" = "MAN.annotationClassLikely",
-  "annotationClassNeutral" = "MAN.annotationClassNeutral",
-  "annotationClassSuspicious" = "MAN.annotationClassSuspicious",
-  "annotationClassUnreliable" = "MAN.annotationClassUnreliable",
-  "annotationClassAcknowledged" = "MAN.annotationClassAcknowledged",
-  "annotationClassSpam" = "MAN.annotationClassSpam"
-}
-export enum RequiredRolesEnum {
-  "empty" = "",
-  "expert" = "MMAN.expert",
-  "basic" = "MMAN.basic",
-  "owner" = "MMAN.owner",
-  "formAdmin" = "MMAN.formAdmin",
-  "ictAdmin" = "MMAN.ictAdmin"
-}
-export enum CensusAnnotationEnum {
-  "empty" = "",
-  "countError" = "MAN.countError",
-  "innerCountError" = "MAN.innerCountError",
-  "otherError" = "MAN.otherError"
-}
-export enum InvasiveControlEffectivenessEnum {
-  "empty" = "",
-  "invasiveControlEffectivenessFull" = "MY.invasiveControlEffectivenessFull",
-  "invasiveControlEffectivenessPartial" = "MY.invasiveControlEffectivenessPartial",
-  "invasiveControlEffectivenessNone" = "MY.invasiveControlEffectivenessNone",
-  "invasiveControlEffectivenessNotFound" = "MY.invasiveControlEffectivenessNotFound"
-}
-export enum LineTransectAnnotationEnum {
-  "empty" = "",
-  "birdCountError" = "MAN.birdCountError",
-  "innerCountError" = "MAN.innerCountError",
-  "otherError" = "MAN.otherError"
-}
-export enum TypeEnum {
-  "empty" = "",
-  "typeOpinion" = "MAN.typeOpinion",
-  "typeInvasiveControlEffectiveness" = "MAN.typeInvasiveControlEffectiveness",
-  "typeUnidentifiable" = "MAN.typeUnidentifiable",
-  "typeAdmin" = "MAN.typeAdmin"
-}
 export class Annotation {
   "@context"?: string;
   id?: string;

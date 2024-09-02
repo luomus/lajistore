@@ -1,29 +1,14 @@
+import { CategoryEnum } from './';
 import { Field } from './';
+import { LanguageEnum } from './';
 import { FormOptions } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
 * DO NOT MODIFY IT BY HAND. Instead, modify the source JSONSchema file,
 * and run the command to regenerate this file.
 */
-export type CategoryEnum =
-  | ""
-  | "MHL.categoryGeneric"
-  | "MHL.categorySurvey"
-  | "MHL.categoryTaxonomicGroup"
-  | "MHL.categoryBirdMonitoringSchemes"
-  | "MHL.categoryCitizenScience"
-  | "MHL.categoryBiomonCompleteLists";
-export type LanguageEnum =
-  | ""
-  | "en"
-  | "fi"
-  | "sv";
-export type LanguageEnum1 =
-  | ""
-  | "en"
-  | "fi"
-  | "sv";
 export interface Form {
   "@context"?: string;
   id?: string;
