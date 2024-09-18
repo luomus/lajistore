@@ -2530,6 +2530,7 @@
                   "MY.coordinateSourceKarttapaikka",
                   "MY.coordinateSourceRetkikartta",
                   "MY.coordinateSourceGoogle",
+                  "MY.coordinateSourceLajifi",
                   "MY.coordinateSourceOther",
                   "MY.coordinateSourceUnknown"
                 ],
@@ -2542,6 +2543,7 @@
                   "Karttapaikka",
                   "Retkikartta.fi",
                   "Google Earth/Maps",
+                  "Laji.fi map",
                   "Other",
                   "Unknown"
                 ],
@@ -10802,6 +10804,7 @@
                   "MY.coordinateSourceKarttapaikka",
                   "MY.coordinateSourceRetkikartta",
                   "MY.coordinateSourceGoogle",
+                  "MY.coordinateSourceLajifi",
                   "MY.coordinateSourceOther",
                   "MY.coordinateSourceUnknown"
                 ],
@@ -10814,6 +10817,7 @@
                   "Karttapaikka",
                   "Retkikartta.fi",
                   "Google Earth/Maps",
+                  "Laji.fi map",
                   "Other",
                   "Unknown"
                 ],
