@@ -64441,7 +64441,7 @@
               "MY.typeVerificationDoubtful"
             ],
             "description": "Verification whether this really is a type?",
-            "title": "Verification"
+            "title": "Type verification"
           },
           "typif": {
             "type": "string",
