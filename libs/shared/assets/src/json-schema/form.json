@@ -9415,7 +9415,7 @@
           "enumNames": [
             "",
             "MHL.restrictAccessStrict",
-            "MHL.restrictAccessLoose"
+            "Users without \"edit\" form permission can view all sub pages of the form on laji.fi, but they can't report observations"
           ],
           "range": "MHL.restrictAccessEnum",
           "subject": "MHL.restrictAccess",
