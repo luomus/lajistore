@@ -54532,6 +54532,10 @@
             "description": "Additional information to the data in each section.",
             "title": "Notes"
           },
+          "observationID": {
+            "type": "string",
+            "title": "Observation ID"
+          },
           "originalSpecimenID": {
             "type": "string",
             "description": "Original catalogue number or other  original identifier of the specimen. E.g. H9000000",
@@ -54611,6 +54615,10 @@
             "minItems": 0,
             "description": "Publication references or doi's that refer to this specimen",
             "title": "Publications"
+          },
+          "rawOCRData": {
+            "type": "string",
+            "title": "Raw OCR data"
           },
           "relationship": {
             "type": "array",
