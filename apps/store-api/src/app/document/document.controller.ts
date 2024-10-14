@@ -19,6 +19,7 @@ import {
   ContentInterceptor,
   CurrentSystemID,
   StoreApiService,
+  MethodInputGuard,
   PatchInterceptor,
   TimerInterceptor,
   TypeExistsPipe,
@@ -57,6 +58,7 @@ export class DocumentController {
   }
 
   @Post('/:type')
+  @UseGuards(MethodInputGuard)
   @UseInterceptors(ValidatorInterceptor)
   postDocument(
     @CurrentSystemID() source: string,
@@ -173,6 +175,7 @@ export class DocumentController {
   }
 
   @Put('/:type/*')
+  @UseGuards(MethodInputGuard)
   @UseInterceptors(ValidatorInterceptor)
   putDocument(
     @CurrentSystemID() source: string,

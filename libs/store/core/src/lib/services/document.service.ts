@@ -160,7 +160,7 @@ export class DocumentService {
     return type ? UtilityService.normalize(type) : undefined;
   }
 
-  private async findMetadataByData(
+  async findMetadataByData(
     source: string,
     data: { [type: string]: StoreObject[] }
   ): Promise<Record<string, Omit<Document, 'data'>>> {
