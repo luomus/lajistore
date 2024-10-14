@@ -711,6 +711,11 @@
             "ignore_above": 200,
             "normalizer": "useLowercase"
           },
+          "observationID": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
           "originalSpecimenID": {
             "type": "keyword",
             "ignore_above": 200,
@@ -737,6 +742,11 @@
             "normalizer": "useLowercase"
           },
           "publication": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "rawOCRData": {
             "type": "keyword",
             "ignore_above": 200,
             "normalizer": "useLowercase"
@@ -3291,6 +3301,11 @@
             "ignore_above": 200,
             "normalizer": "useLowercase"
           },
+          "observationID": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
           "originalSpecimenID": {
             "type": "keyword",
             "ignore_above": 200,
@@ -3317,6 +3332,11 @@
             "normalizer": "useLowercase"
           },
           "publication": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "rawOCRData": {
             "type": "keyword",
             "ignore_above": 200,
             "normalizer": "useLowercase"

@@ -405,6 +405,7 @@ export enum CoordinateSources {
   "coordinateSourceKarttapaikka" = "MY.coordinateSourceKarttapaikka",
   "coordinateSourceRetkikartta" = "MY.coordinateSourceRetkikartta",
   "coordinateSourceGoogle" = "MY.coordinateSourceGoogle",
+  "coordinateSourceLajifi" = "MY.coordinateSourceLajifi",
   "coordinateSourceOther" = "MY.coordinateSourceOther",
   "coordinateSourceUnknown" = "MY.coordinateSourceUnknown"
 }

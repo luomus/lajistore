@@ -1944,6 +1944,12 @@
           "description": "Additional information to the data in each section.",
           "title": "Notes"
         },
+        "observationID": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "MY.observationID",
+          "title": "Observation ID"
+        },
         "originalSpecimenID": {
           "type": "string",
           "range": "xsd:string",
@@ -2075,6 +2081,12 @@
           "subject": "MY.publication",
           "description": "Publication references or doi's that refer to this specimen",
           "title": "Publications"
+        },
+        "rawOCRData": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "MY.rawOCRData",
+          "title": "Raw OCR data"
         },
         "relationship": {
           "type": "array",
@@ -2530,6 +2542,7 @@
                   "MY.coordinateSourceKarttapaikka",
                   "MY.coordinateSourceRetkikartta",
                   "MY.coordinateSourceGoogle",
+                  "MY.coordinateSourceLajifi",
                   "MY.coordinateSourceOther",
                   "MY.coordinateSourceUnknown"
                 ],
@@ -2542,6 +2555,7 @@
                   "Karttapaikka",
                   "Retkikartta.fi",
                   "Google Earth/Maps",
+                  "Laji.fi map",
                   "Other",
                   "Unknown"
                 ],
@@ -8074,7 +8088,7 @@
                             "range": "MY.typeVerifications",
                             "subject": "MY.typeVerification",
                             "description": "Verification whether this really is a type?",
-                            "title": "Verification"
+                            "title": "Type verification"
                           },
                           "typif": {
                             "type": "string",
@@ -10216,6 +10230,12 @@
           "description": "Additional information to the data in each section.",
           "title": "Notes"
         },
+        "observationID": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "MY.observationID",
+          "title": "Observation ID"
+        },
         "originalSpecimenID": {
           "type": "string",
           "range": "xsd:string",
@@ -10347,6 +10367,12 @@
           "subject": "MY.publication",
           "description": "Publication references or doi's that refer to this specimen",
           "title": "Publications"
+        },
+        "rawOCRData": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "MY.rawOCRData",
+          "title": "Raw OCR data"
         },
         "relationship": {
           "type": "array",
@@ -10802,6 +10828,7 @@
                   "MY.coordinateSourceKarttapaikka",
                   "MY.coordinateSourceRetkikartta",
                   "MY.coordinateSourceGoogle",
+                  "MY.coordinateSourceLajifi",
                   "MY.coordinateSourceOther",
                   "MY.coordinateSourceUnknown"
                 ],
@@ -10814,6 +10841,7 @@
                   "Karttapaikka",
                   "Retkikartta.fi",
                   "Google Earth/Maps",
+                  "Laji.fi map",
                   "Other",
                   "Unknown"
                 ],
@@ -16346,7 +16374,7 @@
                             "range": "MY.typeVerifications",
                             "subject": "MY.typeVerification",
                             "description": "Verification whether this really is a type?",
-                            "title": "Verification"
+                            "title": "Type verification"
                           },
                           "typif": {
                             "type": "string",

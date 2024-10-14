@@ -147,6 +147,7 @@ export class Document {
    * Additional information to the data in each section.
    */
   notes?: string;
+  observationID?: string;
   /**
    * Original catalogue number or other  original identifier of the specimen. E.g. H9000000
    */
@@ -171,6 +172,7 @@ export class Document {
    * Publication references or doi's that refer to this specimen
    */
   publication?: string[];
+  rawOCRData?: string;
   /**
    * Relationship to another taxon OR specimen. Choose relationship type as prefix and give taxon name or specimen identifier thereafter, e.g. "parasite: Parasiticus specius" OR "host:http://tun.fi/JAA.123"
    */

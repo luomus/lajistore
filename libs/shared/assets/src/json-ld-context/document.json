@@ -195,6 +195,10 @@
       "@id": "default:MY.notes",
       "@type": "xsd:string"
     },
+    "observationID": {
+      "@id": "default:MY.observationID",
+      "@type": "xsd:string"
+    },
     "originalSpecimenID": {
       "@id": "default:MY.originalSpecimenID",
       "@type": "xsd:string"
@@ -217,6 +221,10 @@
     },
     "publication": {
       "@id": "default:MY.publication",
+      "@type": "xsd:string"
+    },
+    "rawOCRData": {
+      "@id": "default:MY.rawOCRData",
       "@type": "xsd:string"
     },
     "relationship": {

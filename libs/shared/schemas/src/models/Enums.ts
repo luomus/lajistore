@@ -371,6 +371,7 @@ export type CoordinateSources =
   | "MY.coordinateSourceKarttapaikka"
   | "MY.coordinateSourceRetkikartta"
   | "MY.coordinateSourceGoogle"
+  | "MY.coordinateSourceLajifi"
   | "MY.coordinateSourceOther"
   | "MY.coordinateSourceUnknown";
 export type CoordinateSystems =

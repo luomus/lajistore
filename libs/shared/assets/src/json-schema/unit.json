@@ -3284,7 +3284,7 @@
             "range": "MY.typeVerifications",
             "subject": "MY.typeVerification",
             "description": "Verification whether this really is a type?",
-            "title": "Verification"
+            "title": "Type verification"
           },
           "typif": {
             "type": "string",
