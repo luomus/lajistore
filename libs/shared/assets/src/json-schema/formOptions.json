@@ -56,6 +56,13 @@
       "description": "Allows usage in spreadsheet upload component",
       "title": "Allow excel"
     },
+    "allowExcelGeneration": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "MHL.allowExcelGeneration",
+      "description": "If false, Vihko will not show the spreadsheet generation tool for the form. Defaults to true\"",
+      "title": "Allow excel generation"
+    },
     "allowTemplate": {
       "type": "boolean",
       "range": "xsd:boolean",

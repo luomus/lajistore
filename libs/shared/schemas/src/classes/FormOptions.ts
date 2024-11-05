@@ -31,6 +31,10 @@ export class FormOptions {
    */
   allowExcel?: boolean;
   /**
+   * If false, Vihko will not show the spreadsheet generation tool for the form. Defaults to true"
+   */
+  allowExcelGeneration?: boolean;
+  /**
    * Allows creating templates from documents
    */
   allowTemplate?: boolean;

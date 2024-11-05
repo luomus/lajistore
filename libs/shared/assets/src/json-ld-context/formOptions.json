@@ -43,6 +43,10 @@
       "@id": "default:MHL.allowExcel",
       "@type": "xsd:boolean"
     },
+    "allowExcelGeneration": {
+      "@id": "default:MHL.allowExcelGeneration",
+      "@type": "xsd:boolean"
+    },
     "allowTemplate": {
       "@id": "default:MHL.allowTemplate",
       "@type": "xsd:boolean"

@@ -53,6 +53,9 @@
       "allowExcel": {
         "type": "boolean"
       },
+      "allowExcelGeneration": {
+        "type": "boolean"
+      },
       "allowTemplate": {
         "type": "boolean"
       },
