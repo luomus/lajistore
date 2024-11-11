@@ -234,6 +234,17 @@
       "subject": "MY.deviceID",
       "title": "Device ID"
     },
+    "documentIdentifications": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "MY.documentIdentification",
+      "subject": "MY.documentIdentifications",
+      "title": "Document identifications"
+    },
     "documentLocation": {
       "type": "string",
       "range": "xsd:string",

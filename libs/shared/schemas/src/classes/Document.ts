@@ -92,6 +92,7 @@ export class Document {
   datasetID?: string[];
   datatype?: string;
   deviceID?: string;
+  documentIdentifications?: string[];
   /**
    * Location of the specimen so that museum personnel can find it. E.g. taxon under which it is stored (if not clear from the identification), or shelf number
    */

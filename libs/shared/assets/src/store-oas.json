@@ -12734,6 +12734,576 @@
         }
       }
     },
+    "/documentIdentification": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "documentIdentification"
+        ],
+        "operationId": "listdocumentIdentification",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of Document identification objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Document identification.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/documentIdentification"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "documentIdentification"
+        ],
+        "operationId": "storedocumentIdentification",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/documentIdentification"
+              }
+            }
+          }
+        },
+        "description": "Store Document identification object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored Document identification object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/documentIdentification"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "documentIdentification"
+        ],
+        "operationId": "patchdocumentIdentification",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch document identification (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching document identification.",
+        "responses": {
+          "200": {
+            "description": "A list of  Document identification.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/documentIdentification"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/documentIdentification/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "documentIdentification"
+        ],
+        "operationId": "searchdocumentIdentification",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of Document identification objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Document identification.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/documentIdentification"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/documentIdentification/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "documentIdentification"
+        ],
+        "operationId": "getdocumentIdentification",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Document identification",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a Document identification.",
+        "responses": {
+          "200": {
+            "description": "a Document identification.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/documentIdentification"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "documentIdentification"
+        ],
+        "operationId": "updatedocumentIdentification",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Document identification",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/documentIdentification"
+              }
+            }
+          }
+        },
+        "description": "Store Document identification",
+        "responses": {
+          "200": {
+            "description": "Stored Document identification",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/documentIdentification"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "documentIdentification"
+        ],
+        "operationId": "deletedocumentIdentification",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Document identification",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete Document identification",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/documentIdentification/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOfdocumentIdentification",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Document identification",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "documentIdentification"
+        ],
+        "description": "Return a Document identification.",
+        "responses": {
+          "200": {
+            "description": "a Document identification.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/documentIdentification/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "documentIdentification"
+        ],
+        "operationId": "versiondocumentIdentification",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Document identification",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the Document identification",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a Document identification.",
+        "responses": {
+          "200": {
+            "description": "a Document identification.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/documentIdentification"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/downloadRequest": {
       "get": {
         "security": [
@@ -51645,6 +52215,12 @@
                       "$ref": "#/components/schemas/document"
                     }
                   },
+                  "documentIdentification": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/documentIdentification"
+                    }
+                  },
                   "downloadRequest": {
                     "type": "array",
                     "items": {
@@ -52199,6 +52775,12 @@
                       "type": "array",
                       "items": {
                         "$ref": "#/components/schemas/document"
+                      }
+                    },
+                    "documentIdentification": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/documentIdentification"
                       }
                     },
                     "downloadRequest": {
@@ -54425,6 +55007,15 @@
             "type": "string",
             "title": "Device ID"
           },
+          "documentIdentifications": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Document identifications"
+          },
           "documentLocation": {
             "type": "string",
             "description": "Location of the specimen so that museum personnel can find it. E.g. taxon under which it is stored (if not clear from the identification), or shelf number",
@@ -54796,6 +55387,33 @@
         "required": [
           "gatherings"
         ]
+      },
+      "documentIdentification": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the Document identification"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the Document identification"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the Document identification"
+          },
+          "det": {
+            "type": "string",
+            "description": "Name of the identifier (person) preferably in format \"lastname, firstname\"",
+            "title": "Det."
+          },
+          "detDate": {
+            "type": "string",
+            "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or \"Y\"",
+            "title": "Det. date"
+          }
+        }
       },
       "downloadRequest": {
         "type": "object",
@@ -66986,6 +67604,10 @@
     {
       "name": "document",
       "description": "Submissions"
+    },
+    {
+      "name": "documentIdentification",
+      "description": "Document identification"
     },
     {
       "name": "downloadRequest",

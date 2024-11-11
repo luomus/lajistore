@@ -119,6 +119,10 @@
       "@id": "default:MY.deviceID",
       "@type": "xsd:string"
     },
+    "documentIdentifications": {
+      "@id": "default:MY.documentIdentifications",
+      "@type": "@id"
+    },
     "documentLocation": {
       "@id": "default:MY.documentLocation",
       "@type": "xsd:string"

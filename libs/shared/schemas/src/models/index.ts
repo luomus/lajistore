@@ -43,6 +43,8 @@ import { DeviceIndividual } from './DeviceIndividual'
 export type { DeviceIndividual }
 import { Document } from './Document'
 export type { Document }
+import { DocumentIdentification } from './DocumentIdentification'
+export type { DocumentIdentification }
 import { DownloadRequest } from './DownloadRequest'
 export type { DownloadRequest }
 import { Endangerment } from './Endangerment'
@@ -202,6 +204,7 @@ export type StoreObject = BibliographicResource
    | Device
    | DeviceIndividual
    | Document
+   | DocumentIdentification
    | DownloadRequest
    | Endangerment
    | Event
@@ -394,6 +397,11 @@ export function isDeviceIndividual(data: unknown): data is DeviceIndividual {
 export function isDocument(data: unknown): data is Document {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MY.document'
+  );
+}
+export function isDocumentIdentification(data: unknown): data is DocumentIdentification {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MY.documentIdentification'
   );
 }
 export function isDownloadRequest(data: unknown): data is DownloadRequest {
