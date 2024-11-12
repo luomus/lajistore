@@ -121,7 +121,7 @@
     },
     "documentIdentifications": {
       "@id": "default:MY.documentIdentifications",
-      "@type": "@id"
+      "@container": "@set"
     },
     "documentLocation": {
       "@id": "default:MY.documentLocation",

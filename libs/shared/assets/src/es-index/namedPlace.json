@@ -149,9 +149,19 @@
             "normalizer": "useLowercase"
           },
           "documentIdentifications": {
-            "type": "keyword",
-            "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "type": "object",
+            "properties": {
+              "det": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "detDate": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              }
+            }
           },
           "documentLocation": {
             "type": "keyword",
@@ -2744,9 +2754,19 @@
             "normalizer": "useLowercase"
           },
           "documentIdentifications": {
-            "type": "keyword",
-            "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "type": "object",
+            "properties": {
+              "det": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "detDate": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              }
+            }
           },
           "documentLocation": {
             "type": "keyword",

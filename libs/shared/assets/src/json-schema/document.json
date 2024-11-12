@@ -238,7 +238,27 @@
       "type": "array",
       "uniqueItems": false,
       "items": {
-        "type": "string"
+        "type": "object",
+        "subject": "MY.documentIdentification",
+        "additionalProperties": false,
+        "title": "Document identification",
+        "description": "",
+        "properties": {
+          "det": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "MY.det",
+            "description": "Name of the identifier (person) preferably in format \"lastname, firstname\"",
+            "title": "Det."
+          },
+          "detDate": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "MY.detDate",
+            "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or \"Y\"",
+            "title": "Det. date"
+          }
+        }
       },
       "minItems": 0,
       "range": "MY.documentIdentification",

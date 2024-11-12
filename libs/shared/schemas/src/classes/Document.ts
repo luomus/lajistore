@@ -1,5 +1,6 @@
 import { SecureLevels } from './';
 import { DataOriginEnum } from './';
+import { DocumentIdentification } from './';
 import { GatheringEvent } from './';
 import { Preservations } from './';
 import { Statuses } from './';
@@ -92,7 +93,7 @@ export class Document {
   datasetID?: string[];
   datatype?: string;
   deviceID?: string;
-  documentIdentifications?: string[];
+  documentIdentifications?: DocumentIdentification[];
   /**
    * Location of the specimen so that museum personnel can find it. E.g. taxon under which it is stored (if not clear from the identification), or shelf number
    */

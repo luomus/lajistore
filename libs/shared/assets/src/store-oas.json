@@ -55009,12 +55009,9 @@
           },
           "documentIdentifications": {
             "type": "array",
-            "uniqueItems": false,
             "items": {
-              "type": "string"
-            },
-            "minItems": 0,
-            "title": "Document identifications"
+              "$ref": "#/components/schemas/documentIdentification"
+            }
           },
           "documentLocation": {
             "type": "string",

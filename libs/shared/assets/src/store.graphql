@@ -324,7 +324,7 @@ type ViewerBasicAuth {
   getdocumentIdentification(
     """Id for the Document identification"""
     id: String!
-  ): DocumentIdentification2
+  ): DocumentIdentification
 
   """
   Return a Download request.
@@ -1512,7 +1512,7 @@ type ViewerBasicAuth {
 
     """Sort by"""
     sort: String
-  ): DocumentIdentification
+  ): DocumentIdentification2
 
   """
   Return list of Download request objects.
@@ -3317,7 +3317,7 @@ type ViewerBasicAuth {
 
     """Version number for the Document identification"""
     number: Float!
-  ): DocumentIdentification2
+  ): DocumentIdentification
 
   """
   Return a Download request.
@@ -6587,7 +6587,7 @@ type Document2 {
   dateCreated: String
   dateEdited: String
   deviceID: String
-  documentIdentifications: [String]
+  documentIdentifications: [DocumentIdentification]
 
   """
   Location of the specimen so that museum personnel can find it. E.g. taxon under which it is stored (if not clear from the identification), or shelf number
@@ -6752,6 +6752,22 @@ enum DataOriginListItem {
   MY_DATAORIGINPAPERFORM
   MY_DATAORIGINWEBFORM
   MY_DATAORIGINSPREADSHEETFILE
+}
+
+type DocumentIdentification {
+  context: String
+
+  """
+  Name of the identifier (person) preferably in format "lastname, firstname"
+  """
+  det: String
+
+  """
+  Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
+  """
+  detDate: String
+  id: String
+  type: String
 }
 
 type GatheringEvent {
@@ -8835,22 +8851,6 @@ enum VerificationStatusListItem {
   MY_VERIFICATIONSTATUSDET
   MY_VERIFICATIONSTATUSCHECKID
   MY_VERIFICATIONSTATUSVERIFYCOORDINATES
-}
-
-type DocumentIdentification2 {
-  context: String
-
-  """
-  Name of the identifier (person) preferably in format "lastname, firstname"
-  """
-  det: String
-
-  """
-  Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
-  """
-  detDate: String
-  id: String
-  type: String
 }
 
 type DownloadRequest2 {
@@ -12845,11 +12845,11 @@ type Document {
   view: PagedView!
 }
 
-type DocumentIdentification {
+type DocumentIdentification2 {
   context: String!
   currentPage: Int
   lastPage: Int!
-  member: [DocumentIdentification2]!
+  member: [DocumentIdentification]!
   pageSize: Int!
   totalItems: Int!
   type: String!
@@ -14384,7 +14384,7 @@ type ViewerAnyAuth {
   getdocumentIdentification(
     """Id for the Document identification"""
     id: String!
-  ): DocumentIdentification2
+  ): DocumentIdentification
 
   """
   Return a Download request.
@@ -15572,7 +15572,7 @@ type ViewerAnyAuth {
 
     """Sort by"""
     sort: String
-  ): DocumentIdentification
+  ): DocumentIdentification2
 
   """
   Return list of Download request objects.
@@ -17377,7 +17377,7 @@ type ViewerAnyAuth {
 
     """Version number for the Document identification"""
     number: Float!
-  ): DocumentIdentification2
+  ): DocumentIdentification
 
   """
   Return a Download request.
@@ -24745,7 +24745,7 @@ type MutationViewerBasicAuth {
   
   Equivalent to POST /documentIdentification
   """
-  storedocumentIdentification(requestBody: DocumentIdentification2Input): DocumentIdentification2
+  storedocumentIdentification(requestBody: DocumentIdentificationInput): DocumentIdentification
 
   """
   Store Download request object(s)
@@ -25477,8 +25477,8 @@ type MutationViewerBasicAuth {
   updatedocumentIdentification(
     """Id for the Document identification"""
     id: String!
-    requestBody: DocumentIdentification2Input
-  ): DocumentIdentification2
+    requestBody: DocumentIdentificationInput
+  ): DocumentIdentification
 
   """
   Store Download request
@@ -26253,7 +26253,7 @@ type Bulk {
   device: [Device2]
   deviceIndividual: [DeviceIndividual2]
   document: [Document2]
-  documentIdentification: [DocumentIdentification2]
+  documentIdentification: [DocumentIdentification]
   downloadRequest: [DownloadRequest2]
   endangerment: [Endangerment2]
   event: [Event3]
@@ -26347,7 +26347,7 @@ input BulkInput {
   device: [Device2Input]
   deviceIndividual: [DeviceIndividual2Input]
   document: [Document2Input]
-  documentIdentification: [DocumentIdentification2Input]
+  documentIdentification: [DocumentIdentificationInput]
   downloadRequest: [DownloadRequest2Input]
   endangerment: [Endangerment2Input]
   event: [Event3Input]
@@ -27072,7 +27072,7 @@ input Document2Input {
   dateCreated: String
   dateEdited: String
   deviceID: String
-  documentIdentifications: [String]
+  documentIdentifications: [DocumentIdentificationInput]
 
   """
   Location of the specimen so that museum personnel can find it. E.g. taxon under which it is stored (if not clear from the identification), or shelf number
@@ -27230,6 +27230,22 @@ input Document2Input {
   Identifier of the herbarium voucher specimen or information about it if the identifier is unknown.
   """
   voucherSpecimenID: String
+}
+
+input DocumentIdentificationInput {
+  context: String
+
+  """
+  Name of the identifier (person) preferably in format "lastname, firstname"
+  """
+  det: String
+
+  """
+  Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
+  """
+  detDate: String
+  id: String
+  type: String
 }
 
 input GatheringEventInput {
@@ -27993,22 +28009,6 @@ input UnitGatheringInput {
 
   """Type of substrate or name of substrate species."""
   substrate: String
-  type: String
-}
-
-input DocumentIdentification2Input {
-  context: String
-
-  """
-  Name of the identifier (person) preferably in format "lastname, firstname"
-  """
-  det: String
-
-  """
-  Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
-  """
-  detDate: String
-  id: String
   type: String
 }
 
@@ -30900,7 +30900,7 @@ type DocumentIdentificationSearch2 {
   context: String!
   currentPage: Int
   lastPage: Int!
-  member: [DocumentIdentification2]!
+  member: [DocumentIdentification]!
   pageSize: Int!
   totalItems: Int!
   type: String!
@@ -36811,7 +36811,7 @@ type MutationViewerAnyAuth {
   
   Equivalent to POST /documentIdentification
   """
-  storedocumentIdentification(requestBody: DocumentIdentification2Input): DocumentIdentification2
+  storedocumentIdentification(requestBody: DocumentIdentificationInput): DocumentIdentification
 
   """
   Store Download request object(s)
@@ -37543,8 +37543,8 @@ type MutationViewerAnyAuth {
   updatedocumentIdentification(
     """Id for the Document identification"""
     id: String!
-    requestBody: DocumentIdentification2Input
-  ): DocumentIdentification2
+    requestBody: DocumentIdentificationInput
+  ): DocumentIdentification
 
   """
   Store Download request
