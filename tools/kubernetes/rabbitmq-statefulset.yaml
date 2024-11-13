@@ -99,7 +99,7 @@ spec:
           volumeMounts:
             - name: config-volume
               mountPath: /etc/rabbitmq
-            - name: mnesia
+            - name: mnesia-new
               mountPath: /var/lib/rabbitmq/mnesia
           terminationMessagePolicy: File
           image: >-
@@ -123,7 +123,7 @@ spec:
     - kind: PersistentVolumeClaim
       apiVersion: v1
       metadata:
-        name: mnesia
+        name: mnesia-new
         creationTimestamp: null
       spec:
         accessModes:

@@ -89,11 +89,11 @@ spec:
               port: transport
             timeoutSeconds: 3
           volumeMounts:
-            - name: storage
+            - name: storage-new
               mountPath: /usr/share/elasticsearch/data
   volumeClaimTemplates:
     - metadata:
-        name: storage
+        name: storage-new
         annotations:
           pv.beta.kubernetes.io/gid: "1000720000"
       spec:
