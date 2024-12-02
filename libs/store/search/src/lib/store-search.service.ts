@@ -222,6 +222,7 @@ export class StoreSearchService extends HealthIndicator {
       base.sort = [];
     }
     base.sort.push({ '_meta.created': 'desc' });
+    base.sort.push({ '_id': 'desc' });
     base.track_total_hits = true;
 
     if (query.fields) {

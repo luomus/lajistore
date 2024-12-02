@@ -99,7 +99,7 @@ spec:
           volumeMounts:
             - name: config-volume
               mountPath: /etc/rabbitmq
-            - name: mnesia-new
+            - name: mnesia
               mountPath: /var/lib/rabbitmq/mnesia
           terminationMessagePolicy: File
           image: >-
@@ -119,11 +119,14 @@ spec:
                       - patronitheq
               topologyKey: kubernetes.io/hostname
       schedulerName: default-scheduler
+  persistentVolumeClaimRetentionPolicy:
+    whenDeleted: Retain
+    whenScaled: Retain
   volumeClaimTemplates:
     - kind: PersistentVolumeClaim
       apiVersion: v1
       metadata:
-        name: mnesia-new
+        name: mnesia
         creationTimestamp: null
       spec:
         accessModes:
@@ -131,7 +134,7 @@ spec:
         resources:
           requests:
             storage: 1Gi
-        storageClassName: pomppa25
+        storageClassName: pomppa25-new
         volumeMode: Filesystem
       status:
         phase: Pending

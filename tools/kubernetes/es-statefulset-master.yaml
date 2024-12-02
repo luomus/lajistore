@@ -89,15 +89,18 @@ spec:
               port: transport
             timeoutSeconds: 3
           volumeMounts:
-            - name: storage-new
+            - name: storage
               mountPath: /usr/share/elasticsearch/data
+  persistentVolumeClaimRetentionPolicy:
+    whenDeleted: Retain
+    whenScaled: Retain
   volumeClaimTemplates:
     - metadata:
-        name: storage-new
+        name: storage
         annotations:
           pv.beta.kubernetes.io/gid: "1000720000"
       spec:
-        storageClassName: pomppa25
+        storageClassName: pomppa25-new
         accessModes: [ ReadWriteOnce ]
         resources:
           requests:
