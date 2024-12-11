@@ -49,7 +49,13 @@
           "HBE.MG11",
           "HBE.MG10",
           "HBE.MG13",
-          "HBE.MG14"
+          "HBE.MG14",
+          "HBE.MG15",
+          "HBE.MG16",
+          "HBE.MG17",
+          "HBE.MG18",
+          "HBE.MG19",
+          "HBE.MG20"
         ],
         "enumNames": [
           "",
@@ -65,7 +71,13 @@
           "EU regulated invasive species",
           "Other invasive species",
           "Plant Pests",
-          "Species shown on Vieraslajit.fi"
+          "Species shown on Vieraslajit.fi",
+          "Fish and Crayfish",
+          "Snails",
+          "Insects",
+          "Other Invertebrates",
+          "Diseases and Pathogens",
+          "Reptiles and amphibians"
         ]
       },
       "minItems": 0,

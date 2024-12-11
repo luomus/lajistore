@@ -11863,6 +11863,12 @@ enum InvasiveSpeciesMainGroupListItem {
   HBE_MG10
   HBE_MG13
   HBE_MG14
+  HBE_MG15
+  HBE_MG16
+  HBE_MG17
+  HBE_MG18
+  HBE_MG19
+  HBE_MG20
 }
 
 enum IsPartOfSetListItem {
