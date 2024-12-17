@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { StoreObject } from '@luomus/shared/models';
 import {
   BgWorkerService,
@@ -77,6 +77,8 @@ export class StoreService {
       member: results.member.reduce((result, id) => {
         if (lookup[id]) {
           result.push(lookup[id]);
+        } else {
+          throw new InternalServerErrorException('Search index mismatch')
         }
         return result;
       }, [] as T[]),

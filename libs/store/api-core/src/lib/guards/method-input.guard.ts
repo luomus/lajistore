@@ -55,8 +55,12 @@ export class MethodInputGuard implements CanActivate {
 
       const id = params[0];
 
+      if (!id) {
+        throw new BadRequestException('Parameter ID must be given for PUT-request.')
+      }
+
       if (id !== body[0][PROPERTY_ID]) {
-        throw new BadRequestException('Parameter ID must match ID in body for PUT request.');
+        throw new BadRequestException('Parameter ID must match ID in body for PUT-request.');
       }
     }
   

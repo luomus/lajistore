@@ -96,9 +96,6 @@ export class StoreSearchService extends HealthIndicator {
 
       return this.esResponseToResult(+size, page, query, body);
     } catch (e: any) {
-      if (e instanceof ResponseError && e.statusCode === 404) {
-        return this.pagedResponse(size, page, query, 0, 1, {})
-      }
       if (e?.meta?.body) {
         console.log(e.meta.body);
       }
