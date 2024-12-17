@@ -1350,7 +1350,13 @@ export enum InvasiveSpeciesMainGroups {
   "MG11" = "HBE.MG11",
   "MG10" = "HBE.MG10",
   "MG13" = "HBE.MG13",
-  "MG14" = "HBE.MG14"
+  "MG14" = "HBE.MG14",
+  "MG15" = "HBE.MG15",
+  "MG16" = "HBE.MG16",
+  "MG17" = "HBE.MG17",
+  "MG18" = "HBE.MG18",
+  "MG19" = "HBE.MG19",
+  "MG20" = "HBE.MG20"
 }
 export enum AdminStatusEnum {
   "empty" = "",

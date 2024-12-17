@@ -1244,7 +1244,13 @@ export type InvasiveSpeciesMainGroups =
   | "HBE.MG11"
   | "HBE.MG10"
   | "HBE.MG13"
-  | "HBE.MG14";
+  | "HBE.MG14"
+  | "HBE.MG15"
+  | "HBE.MG16"
+  | "HBE.MG17"
+  | "HBE.MG18"
+  | "HBE.MG19"
+  | "HBE.MG20";
 export type AdminStatusEnum =
   | ""
   | "MX.finlex160_1997_appendix4_2021"
