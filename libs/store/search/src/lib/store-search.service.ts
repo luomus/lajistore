@@ -151,6 +151,7 @@ export class StoreSearchService extends HealthIndicator {
       await this.es.delete({
         id,
         index: StoreSearchService.getIndexName(source, type),
+        refresh: 'wait_for'
       });
     } catch (e) {
       if (e instanceof ResponseError && e.statusCode !== 404) {
