@@ -1,9 +1,9 @@
 {
-  "id": { "type": "keyword", "normalizer": "useLowercase" },
+  "id": { "type": "keyword", "normalizer": "useLowercase", "fields": { "autocomplete": { "type": "text", "analyzer": "autocomplete", "search_analyzer": "standard" }}},
   "@context": { "type": "keyword" },
   "@type": { "type": "keyword" },
-  "string": { "type": "keyword", "ignore_above": 200, "normalizer": "useLowercase" },
-  "xsd:string": { "type": "keyword", "ignore_above": 200, "normalizer": "useLowercase" },
+  "string": { "type": "keyword", "ignore_above": 200, "normalizer": "useLowercase", "fields": { "autocomplete": { "type": "text", "analyzer": "autocomplete", "search_analyzer": "standard" }}},
+  "xsd:string": { "type": "keyword", "ignore_above": 200, "normalizer": "useLowercase", "fields": { "autocomplete": { "type": "text", "analyzer": "autocomplete", "search_analyzer": "standard" }}},
   "xsd:integer": { "type": "integer" },
   "xsd:decimal": { "type": "float" },
   "xsd:boolean": { "type": "boolean" },
