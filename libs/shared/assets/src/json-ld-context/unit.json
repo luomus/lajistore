@@ -163,6 +163,10 @@
       "@id": "default:MY.growthTemperature",
       "@type": "xsd:string"
     },
+    "habitat": {
+      "@id": "default:MY.habitat",
+      "@type": "@id"
+    },
     "hasIdentification": {
       "@id": "default:MY.hasIdentification",
       "@type": "@id"

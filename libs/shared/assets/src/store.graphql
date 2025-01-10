@@ -809,12 +809,12 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -2571,7 +2571,7 @@ type ViewerBasicAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -4941,12 +4941,12 @@ type ViewerBasicAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -5319,15 +5319,15 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -7890,6 +7890,7 @@ type Unit {
 
   """Microbial culture growth temperature"""
   growthTemperature: String
+  habitat: [HabitatListItem]
   hasIdentification: [String]
   hasSubUnit: [String]
   hostID: String
@@ -11808,13 +11809,13 @@ enum HasAdminStatusListItem {
   MX_NATIONALINVASIVESPECIESSTRATEGY
   MX_OTHERINVASIVESPECIESLIST
   MX_CONTROLLINGRISKSOFINVASIVEALIENSPECIES
+  MX_CONCERNINVASIVESPECIESNOTONOTHERLISTS
   MX_FINNISHENVIRONMENTINSTITUTE20072010FORESTSPECIES
   MX_FINNISHENVIRONMENTINSTITUTE2020CONSERVATIONPROJECTSPECIES
   MX_FINNISHENVIRONMENTINSTITUTE2020CONSERVATIONPROJECTAAPAMIRESPECIES
   MX_FINNISHENVIRONMENTINSTITUTE2020CONSERVATIONPROJECTVASCULARSPECIES
-  MX_CROPWILDRELATIVE
   MX_FINNISHENVIRONMENTINSTITUTE20192021FORESTSPECIES
-  MX_FORESTCENTRESPECIES
+  MX_CROPWILDRELATIVE
   MX_REGIONALLYTHREATENED2020_1A
   MX_REGIONALLYTHREATENED2020_1B
   MX_REGIONALLYTHREATENED2020_2A
@@ -11826,6 +11827,7 @@ enum HasAdminStatusListItem {
   MX_REGIONALLYTHREATENED2020_4B
   MX_REGIONALLYTHREATENED2020_4C
   MX_REGIONALLYTHREATENED2020_4D
+  MX_FORESTCENTRESPECIES
   MX_FINLEX160_1997_APPENDIX1
   MX_FINLEX160_1997_APPENDIX4
   MX_FINLEX160_1997_APPENDIX4_SPECIALINTEREST
@@ -14875,12 +14877,12 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -16637,7 +16639,7 @@ type ViewerAnyAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -19007,12 +19009,12 @@ type ViewerAnyAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -19385,15 +19387,15 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -20389,12 +20391,12 @@ type MutationViewerBasicAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -24093,7 +24095,7 @@ type MutationViewerBasicAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -25090,7 +25092,7 @@ type MutationViewerBasicAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -26017,12 +26019,12 @@ type MutationViewerBasicAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
@@ -27716,6 +27718,7 @@ input UnitInput {
 
   """Microbial culture growth temperature"""
   growthTemperature: String
+  habitat: [HabitatListItem]
   hasIdentification: [String]
   hasSubUnit: [String]
   hostID: String
@@ -32455,12 +32458,12 @@ type MutationViewerAnyAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -36159,7 +36162,7 @@ type MutationViewerAnyAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -37156,7 +37159,7 @@ type MutationViewerAnyAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -38083,12 +38086,12 @@ type MutationViewerAnyAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2

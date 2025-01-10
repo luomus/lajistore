@@ -6,6 +6,7 @@ import { BirdPlumageEnum } from './';
 import { DistanceEnum } from './';
 import { EpochOrSeries } from './';
 import { FruitTypeEnum } from './';
+import { HabitatEnum } from './';
 import { IndirectObservationTypeEnum } from './';
 import { LifeStages } from './';
 import { Measurement } from './';
@@ -124,6 +125,7 @@ export class Unit {
    * Microbial culture growth temperature
    */
   growthTemperature?: string;
+  habitat?: HabitatEnum[];
   hasIdentification?: string[];
   hasSubUnit?: string[];
   hostID?: string;

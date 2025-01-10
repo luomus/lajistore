@@ -3,26 +3,26 @@
   "type": "object",
   "subject": "MX.taxon",
   "additionalProperties": false,
-  "title": "Taxon",
+  "title": "taxon",
   "description": "",
   "properties": {
     "@context": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@context",
-      "title": "Context for the Taxon"
+      "title": "Context for the taxon"
     },
     "id": {
       "type": "string",
       "range": "xsd:string",
       "subject": "id",
-      "title": "Id for the Taxon"
+      "title": "Id for the taxon"
     },
     "@type": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@type",
-      "title": "Type for the Taxon"
+      "title": "Type for the taxon"
     },
     "herbo:sortOrder": {
       "type": "integer",
@@ -518,13 +518,13 @@
           "MX.nationalInvasiveSpeciesStrategy",
           "MX.otherInvasiveSpeciesList",
           "MX.controllingRisksOfInvasiveAlienSpecies",
+          "MX.concernInvasiveSpeciesNotOnOtherLists",
           "MX.finnishEnvironmentInstitute20072010forestSpecies",
           "MX.finnishEnvironmentInstitute2020conservationProjectSpecies",
           "MX.finnishEnvironmentInstitute2020conservationProjectAapamireSpecies",
           "MX.finnishEnvironmentInstitute2020conservationProjectVascularSpecies",
-          "MX.cropWildRelative",
           "MX.finnishEnvironmentInstitute20192021forestSpecies",
-          "MX.forestCentreSpecies",
+          "MX.cropWildRelative",
           "MX.regionallyThreatened2020_1a",
           "MX.regionallyThreatened2020_1b",
           "MX.regionallyThreatened2020_2a",
@@ -536,6 +536,7 @@
           "MX.regionallyThreatened2020_4b",
           "MX.regionallyThreatened2020_4c",
           "MX.regionallyThreatened2020_4d",
+          "MX.forestCentreSpecies",
           "MX.finlex160_1997_appendix1",
           "MX.finlex160_1997_appendix4",
           "MX.finlex160_1997_appendix4_specialInterest"
@@ -584,13 +585,13 @@
           "Finland’s National Strategy on Invasive Alien Species (GR 2012)",
           "Other invasive species",
           "Government Decree on Managing the Risk Caused by Alien Species (704/2019, VN 912/2023)",
+          "Other invasive alien species of concern (not included on the national or EU list)",
           "OUTDATED Safeguarding Endangered Species in Forestry – Project 2007-2010",
           "Connectivity of forest conservation areas – SUMI Project 2020",
           "Aapamire species – SUMI Project 2020",
           "Vascular plants – SUMI Project 2022",
-          "Crop wild relative (CWR Priority species)",
           "Safeguarding Endangered Species in Forestry – Lajiturva Project 2019–2021",
-          "Species used in the automatic procedure for forest use notifications (MKI-OHKE 2023)",
+          "Crop wild relative (CWR Priority species)",
           "Regionally Threatened 2020 - 1a Hemiboreal, Åland",
           "Regionally Threatened 2020 - 1b Hemiboreal, Oak zone",
           "Regionally Threatened 2020 - 2a Southern boreal, Southwestern Finland and Southern Ostrobothnia",
@@ -602,6 +603,7 @@
           "Regionally Threatened 2020 - 4b Northern boreal, North Ostrobothnia",
           "Regionally Threatened 2020 - 4c Northern boreal, Forest Lapland",
           "Regionally Threatened 2020 - 4d Northern boreal, Fjeld Lapland",
+          "Species used in the automatic procedure for forest use notifications (MKI-OHKE 2023)",
           "OUTDATED Fish species subject to the Nature Conservation Act (NCD 1997/160, Appendix 1)",
           "OUTDATED Threatened species (NCD 1997/160, Appendix 4 2013/471)",
           "OUTDATED Species under strict protection (NCD 1997/160, Appendix 4 2013/471)"
