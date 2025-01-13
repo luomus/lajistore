@@ -28,7 +28,7 @@ export abstract class AbstractSchemaGenerateService extends AbstractGenerateServ
             .readJsonFile<JSONSchema4>(this.fileService.getFilename(className)))
         );
       } catch (e) {
-        console.error(e);
+        console.error(new Date().toISOString(), e);
         result = false;
       }
     }

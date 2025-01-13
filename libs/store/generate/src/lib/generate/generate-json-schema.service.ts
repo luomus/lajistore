@@ -81,7 +81,7 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     }
 
     if (!classData) {
-      console.error(`Data for the class '${className}' was not found`);
+      console.error(new Date().toISOString(), `Data for the class '${className}' was not found`);
       return false;
     }
 
@@ -126,6 +126,7 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
       );
       if (!propertySchema) {
         console.error(
+          new Date().toISOString(),
           `Data for the property class '${property.range[0]}' was not found`
         );
         return false;

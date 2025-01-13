@@ -24,7 +24,7 @@ export class ValidatorService {
       const validate = await this.getValidator(type);
       return validate(data) ? null : validate.errors;
     } catch (e) {
-      console.error('failed to load validator', e);
+      console.error(new Date().toISOString(), 'failed to load validator', e);
       return [
         {
           keyword: 'errorMessage',

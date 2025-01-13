@@ -42,7 +42,7 @@ export abstract class AbstractGenerateService implements GeneratorInterface {
       .pipe(
         map(() => true),
         catchError((e) => {
-          console.error(e);
+          console.error(new Date().toISOString(), e);
           return of(false);
         })
       ));

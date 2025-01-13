@@ -123,7 +123,7 @@ export class CacheCommand {
 
       return true;
     } catch (e) {
-      console.error(e);
+      console.error(new Date().toISOString(), e);
       return false;
     }
   }

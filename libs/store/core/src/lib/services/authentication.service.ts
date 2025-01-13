@@ -26,7 +26,7 @@ export class AuthenticationService {
       createdUser.password = undefined;
       return createdUser;
     } catch (error) {
-      console.error(error);
+      console.error(new Date().toISOString(), error);
       throw new HttpException(
         'Failed to create System',
         HttpStatus.BAD_REQUEST
@@ -58,7 +58,7 @@ export class AuthenticationService {
         return user;
       }
     } catch (error) {
-      console.log(error);
+      console.error(new Date().toISOString(), error);
       if (error instanceof HttpException && systemID && plainTextPassword) {
         // This is to keep response times same as with the user that actually exists
         await this.verifyPassword(plainTextPassword, plainTextPassword);
