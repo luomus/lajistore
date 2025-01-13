@@ -1,9 +1,9 @@
 {
-  "id": { "type": "keyword", "normalizer": "useLowercase", "fields": { "autocomplete": { "type": "text", "analyzer": "autocomplete", "search_analyzer": "standard" }}},
+  "id": { "type": "keyword", "normalizer": "useLowercase", "fields": { "autocomplete": { "type": "text", "analyzer": "autocomplete", "search_analyzer": "autocomplete_search" }}},
   "@context": { "type": "keyword" },
   "@type": { "type": "keyword" },
-  "string": { "type": "keyword", "ignore_above": 200, "normalizer": "useLowercase", "fields": { "autocomplete": { "type": "text", "analyzer": "autocomplete", "search_analyzer": "standard" }}},
-  "xsd:string": { "type": "keyword", "ignore_above": 200, "normalizer": "useLowercase", "fields": { "autocomplete": { "type": "text", "analyzer": "autocomplete", "search_analyzer": "standard" }}},
+  "string": { "type": "keyword", "ignore_above": 200, "normalizer": "useLowercase", "fields": { "autocomplete": { "type": "text", "analyzer": "autocomplete", "search_analyzer": "autocomplete_search" }}},
+  "xsd:string": { "type": "keyword", "ignore_above": 200, "normalizer": "useLowercase", "fields": { "autocomplete": { "type": "text", "analyzer": "autocomplete", "search_analyzer": "autocomplete_search" }}},
   "xsd:integer": { "type": "integer" },
   "xsd:decimal": { "type": "float" },
   "xsd:boolean": { "type": "boolean" },
