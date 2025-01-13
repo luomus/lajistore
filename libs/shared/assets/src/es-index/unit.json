@@ -6,11 +6,28 @@
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000,
     "analysis": {
+      "filter": {
+        "autocomplete_filter": {
+          "type": "edge_ngram",
+          "min_gram": 1,
+          "max_gram": 20
+        }
+      },
       "normalizer": {
         "useLowercase": {
           "type": "custom",
           "filter": [
             "lowercase"
+          ]
+        }
+      },
+      "analyzer": {
+        "autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "autocomplete_filter"
           ]
         }
       }
@@ -23,7 +40,14 @@
       },
       "id": {
         "type": "keyword",
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "@type": {
         "type": "keyword"
@@ -31,17 +55,38 @@
       "DBH": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "DNASampleLocation": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "abundanceString": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "abundanceUnit": {
         "type": "keyword",
@@ -50,7 +95,14 @@
       "additionalIDs": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "adultIndividualCount": {
         "type": "integer"
@@ -58,12 +110,26 @@
       "age": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "ageNotes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "alive": {
         "type": "boolean"
@@ -71,7 +137,14 @@
       "ankleInMillimeters": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "areaInSquareMeters": {
         "type": "integer"
@@ -87,7 +160,14 @@
       "beakInMillimeters": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "birdAge": {
         "type": "keyword",
@@ -96,7 +176,14 @@
       "birdBehavior": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "birdPlumage": {
         "type": "keyword",
@@ -111,27 +198,62 @@
       "causeOfDeath": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "checklistID": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "chemistry": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "count": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "decayStage": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "distance": {
         "type": "keyword",
@@ -151,47 +273,122 @@
       "genotype": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "gonadInMillimeters": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "growthMediumName": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "growthOtherConditions": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "growthTemperature": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
+      },
+      "habitat": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasIdentification": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasSubUnit": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hostID": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hostInformalNameString": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "indirectObservationType": {
         "type": "keyword",
@@ -203,27 +400,62 @@
       "infestation": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "informalNameString": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "informalTaxonGroup": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "informalTaxonGroups": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "infrasubspecificSubdivision": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "isPartOf": {
         "type": "keyword",
@@ -235,7 +467,14 @@
       "keywords": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "larvaIndividualCount": {
         "type": "integer"
@@ -247,7 +486,14 @@
       "lengthInMillimeters": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "lifeStage": {
         "type": "keyword",
@@ -256,7 +502,14 @@
       "lifeStageDescription": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "likelyMigrant": {
         "type": "boolean"
@@ -264,7 +517,14 @@
       "macroscopy": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "maleIndividualCount": {
         "type": "integer"
@@ -353,7 +613,14 @@
       "microscopy": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "movingDirection": {
         "type": "keyword",
@@ -362,12 +629,26 @@
       "movingStatus": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "mutant": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "nativeStatus": {
         "type": "keyword",
@@ -379,7 +660,14 @@
       "nestNotes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "nestTreeDiameterInCentimeters": {
         "type": "integer"
@@ -391,7 +679,14 @@
       "notes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "pairCount": {
         "type": "integer"
@@ -410,17 +705,38 @@
       "populationAbundance": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "preparations": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "preservation": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "primarySpecimen": {
         "type": "boolean"
@@ -436,12 +752,26 @@
       "recordParts": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "ring": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "samplingMethod": {
         "type": "keyword",
@@ -450,7 +780,14 @@
       "samplingMethodNotes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "seedMaturity": {
         "type": "keyword",
@@ -467,12 +804,26 @@
       "sexNotes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "shortHandText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "smell": {
         "type": "keyword",
@@ -481,12 +832,26 @@
       "smellNotes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "stratigraphyVerbatim": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "substrateClassification": {
         "type": "keyword",
@@ -499,32 +864,74 @@
       "substrateNotes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "substrateSpecies": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "substrateSpeciesID": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "substrateSpeciesInformalNameString": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "substrateTreeClassification": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "tailInMillimeters": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "taste": {
         "type": "keyword",
@@ -533,7 +940,14 @@
       "tasteNotes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "taxonConfidence": {
         "type": "keyword",
@@ -550,7 +964,14 @@
           "autocompleteSelectedTaxonID": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "glowWormMicrohabitat": {
             "type": "keyword",
@@ -601,7 +1022,14 @@
           "pointCountFlock": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "runningWaterInVicinity": {
             "type": "boolean"
@@ -654,7 +1082,14 @@
         "properties": {
           "id": {
             "type": "keyword",
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "@type": {
             "type": "keyword"
@@ -676,29 +1111,64 @@
           "habitatDescription": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "habitatIUCN": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "substrate": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           }
         }
       },
       "unitType": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "weightInGrams": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "wild": {
         "type": "keyword",
@@ -707,17 +1177,38 @@
       "wingInMillimeters": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "audio": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "images": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "publicityRestrictions": {
         "type": "keyword",
@@ -728,7 +1219,14 @@
         "properties": {
           "id": {
             "type": "keyword",
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "@type": {
             "type": "keyword"
@@ -742,22 +1240,50 @@
           "associatedObservationTaxa": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "author": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "det": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "detDate": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "detMethod": {
             "type": "keyword",
@@ -766,32 +1292,74 @@
           "detVerbatim": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "genusQualifier": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "identificationBasis": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "identificationNotes": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "infraAuthor": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "infraEpithet": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "infraRank": {
             "type": "keyword",
@@ -800,7 +1368,14 @@
           "infrasubspecificSubdivision": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "isPartOf": {
             "type": "keyword",
@@ -812,27 +1387,62 @@
           "preferredIdentification": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "sec": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "speciesQualifier": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "taxon": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "taxonID": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "taxonRank": {
             "type": "keyword",
@@ -841,17 +1451,38 @@
           "taxonSpecifier": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "taxonURI": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "taxonVerbatim": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "publicityRestrictions": {
             "type": "keyword",
@@ -867,7 +1498,14 @@
         "properties": {
           "id": {
             "type": "keyword",
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "@type": {
             "type": "keyword"
@@ -882,32 +1520,74 @@
           "typeAuthor": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "typeBasionymePubl": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "typeNotes": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "typePubl": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "typeSeriesID": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "typeSpecies": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "typeStatus": {
             "type": "keyword",
@@ -916,12 +1596,26 @@
           "typeSubspecies": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "typeSubspeciesAuthor": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "typeVerification": {
             "type": "keyword",
@@ -930,12 +1624,26 @@
           "typif": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "typifDate": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "publicityRestrictions": {
             "type": "keyword",

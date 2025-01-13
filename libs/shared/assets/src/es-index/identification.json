@@ -6,11 +6,28 @@
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000,
     "analysis": {
+      "filter": {
+        "autocomplete_filter": {
+          "type": "edge_ngram",
+          "min_gram": 1,
+          "max_gram": 20
+        }
+      },
       "normalizer": {
         "useLowercase": {
           "type": "custom",
           "filter": [
             "lowercase"
+          ]
+        }
+      },
+      "analyzer": {
+        "autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "autocomplete_filter"
           ]
         }
       }
@@ -23,7 +40,14 @@
       },
       "id": {
         "type": "keyword",
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "@type": {
         "type": "keyword"
@@ -34,22 +58,50 @@
       "associatedObservationTaxa": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "author": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "det": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "detDate": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "detMethod": {
         "type": "keyword",
@@ -58,32 +110,74 @@
       "detVerbatim": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "genusQualifier": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "identificationBasis": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "identificationNotes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "infraAuthor": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "infraEpithet": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "infraRank": {
         "type": "keyword",
@@ -92,7 +186,14 @@
       "infrasubspecificSubdivision": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "isPartOf": {
         "type": "keyword",
@@ -104,27 +205,62 @@
       "preferredIdentification": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "sec": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "speciesQualifier": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "taxon": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "taxonID": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "taxonRank": {
         "type": "keyword",
@@ -133,17 +269,38 @@
       "taxonSpecifier": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "taxonURI": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "taxonVerbatim": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "publicityRestrictions": {
         "type": "keyword",

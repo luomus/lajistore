@@ -6,11 +6,28 @@
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000,
     "analysis": {
+      "filter": {
+        "autocomplete_filter": {
+          "type": "edge_ngram",
+          "min_gram": 1,
+          "max_gram": 20
+        }
+      },
       "normalizer": {
         "useLowercase": {
           "type": "custom",
           "filter": [
             "lowercase"
+          ]
+        }
+      },
+      "analyzer": {
+        "autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "autocomplete_filter"
           ]
         }
       }
@@ -23,7 +40,14 @@
       },
       "id": {
         "type": "keyword",
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "@type": {
         "type": "keyword"
@@ -70,7 +94,14 @@
           "completeListTaxonID": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "completeListType": {
             "type": "keyword",
@@ -118,7 +149,14 @@
           "lolifeSiteClassificationComments": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "observedAreaHectares": {
             "type": "integer"
@@ -159,7 +197,14 @@
           "ykjSquareNumber": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "ACAFLAonAlder": {
             "type": "integer"
@@ -252,7 +297,14 @@
           "descriptionBiotopeF": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "feedingStationCount": {
             "type": "integer"
@@ -394,7 +446,14 @@
           "wayOfTravelNotes": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "wind": {
             "type": "keyword",
@@ -413,7 +472,14 @@
       "leg": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "legPublic": {
         "type": "boolean"
@@ -421,12 +487,26 @@
       "legUserID": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "namedPlaceNotes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "nextMonitoringYear": {
         "type": "integer"
@@ -434,7 +514,14 @@
       "notes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "rainIntensity": {
         "type": "keyword",
@@ -449,7 +536,14 @@
       "startDistanceFromNECorner": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "startPointDeviation": {
         "type": "integer"
@@ -460,7 +554,14 @@
           "censusTaxonID": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "censusTaxonSetID": {
             "type": "keyword",
@@ -484,12 +585,26 @@
       "timeEnd": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "timeStart": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "_meta": {
         "properties": {

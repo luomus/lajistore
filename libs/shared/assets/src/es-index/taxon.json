@@ -6,11 +6,28 @@
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000,
     "analysis": {
+      "filter": {
+        "autocomplete_filter": {
+          "type": "edge_ngram",
+          "min_gram": 1,
+          "max_gram": 20
+        }
+      },
       "normalizer": {
         "useLowercase": {
           "type": "custom",
           "filter": [
             "lowercase"
+          ]
+        }
+      },
+      "analyzer": {
+        "autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "autocomplete_filter"
           ]
         }
       }
@@ -23,7 +40,14 @@
       },
       "id": {
         "type": "keyword",
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "@type": {
         "type": "keyword"
@@ -34,49 +58,112 @@
       "invasiveSpeciesMainGroup": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "primaryHabitat": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "secondaryHabitat": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "additionalID": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "algalPartnerOfLichen": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "alsoKnownAs": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "alternativeVernacularName": {
         "properties": {
           "en": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "fi": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "sv": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           }
         }
       },
@@ -86,12 +173,26 @@
       "behaviour": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "birdlifeCode": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "breedingSecureLevel": {
         "type": "keyword",
@@ -100,166 +201,390 @@
       "circumscription": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "colloquialVernacularName": {
         "properties": {
           "en": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "fi": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "sv": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           }
         }
       },
       "conservationStatusDescriptionFinland": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "conservationStatusDescriptionWorld": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "cultivationText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "customReportFormLink": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionCone": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionFlower": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionFruitAndSeed": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionFruitbody": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionHostParasite": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionLeaf": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionMicroscopicIdentification": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionOrganismSize": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionReferences": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionRoot": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionSporangiumAndAsexualReproduction": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionSpore": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionStem": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionThallus": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "descriptionToxicity": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "distributionFinland": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "distributionMapFinland": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "ecology": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "economicUseText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "etymologyText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "euringCode": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "euringNumber": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "externalLinkURL": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "finnish": {
         "type": "boolean"
@@ -270,77 +595,182 @@
       "growthFormAndGrowthHabit": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "habitat": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "habitatSubstrate": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasAdminStatus": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasAlternativeName": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasBasionym": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasHeterotypicSynonym": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasHomotypicSynonym": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasMisappliedName": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasMisspelledName": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasObjectiveSynonym": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasOrthographicVariant": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasSubjectiveSynonym": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasSynonym": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hasUncertainSynonym": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "hiddenTaxon": {
         "type": "boolean"
@@ -348,27 +778,62 @@
       "identificationText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "ingressText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "invasiveCitizenActionsText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "invasiveEffectText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "invasivePreventionMethodsText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "invasiveSpeciesCategory": {
         "type": "keyword",
@@ -377,7 +842,14 @@
       "invasiveSpeciesClassificationDescription": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "invasiveSpeciesEarlyWarning": {
         "type": "boolean"
@@ -389,42 +861,98 @@
       "isPartOf": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "isPartOfInformalTaxonGroup": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "isPartOfSet": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "lifeCycle": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "management": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "miscText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "nameAccordingTo": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "nameDecidedBy": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "nameDecidedDate": {
         "type": "date"
@@ -440,24 +968,52 @@
       "notes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "obsoleteVernacularName": {
         "properties": {
           "en": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "fi": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "sv": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           }
         }
       },
@@ -468,42 +1024,98 @@
       "occurrenceInFinlandPublication": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "occurrenceInFinlandSpecimenURI": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "originAndDistributionText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "originalDescription": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "originalPublication": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "overridingTargetName": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "privateNotes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "productionText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "redListStatus2000Finland": {
         "type": "keyword",
@@ -524,27 +1136,62 @@
       "reproduction": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "reproductionFloweringTime": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "reproductionPollination": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "scientificName": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "scientificNameAuthorship": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "secureLevel": {
         "type": "keyword",
@@ -553,7 +1200,14 @@
       "speciesCardAuthors": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "stopInformalTaxonGroupInheritance": {
         "type": "boolean"
@@ -567,17 +1221,38 @@
       "targetName": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "taxonEditor": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "taxonExpert": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "taxonRank": {
         "type": "keyword",
@@ -586,44 +1261,100 @@
       "taxonomyText": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "tradeName": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "typeOfOccurrenceInFinland": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "typeOfOccurrenceInFinlandNotes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "typeSpecimenURI": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "vernacularName": {
         "properties": {
           "en": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "fi": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "sv": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           }
         }
       },
@@ -634,7 +1365,14 @@
       "createdAtTimestamp": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "sortOrder": {
         "type": "integer"
@@ -642,7 +1380,14 @@
       "skos:exactMatch": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "_meta": {
         "properties": {

@@ -6,11 +6,28 @@
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000,
     "analysis": {
+      "filter": {
+        "autocomplete_filter": {
+          "type": "edge_ngram",
+          "min_gram": 1,
+          "max_gram": 20
+        }
+      },
       "normalizer": {
         "useLowercase": {
           "type": "custom",
           "filter": [
             "lowercase"
+          ]
+        }
+      },
+      "analyzer": {
+        "autocomplete": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "autocomplete_filter"
           ]
         }
       }
@@ -23,7 +40,14 @@
       },
       "id": {
         "type": "keyword",
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "@type": {
         "type": "keyword"
@@ -31,7 +55,14 @@
       "name": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "fields": {
         "type": "object",
@@ -39,7 +70,14 @@
           "name": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "fields": {
             "type": "object",
@@ -47,7 +85,14 @@
               "name": {
                 "type": "keyword",
                 "ignore_above": 200,
-                "normalizer": "useLowercase"
+                "normalizer": "useLowercase",
+                "fields": {
+                  "autocomplete": {
+                    "type": "text",
+                    "analyzer": "autocomplete",
+                    "search_analyzer": "standard"
+                  }
+                }
               },
               "fields": {
                 "type": "object",
@@ -55,7 +100,14 @@
                   "name": {
                     "type": "keyword",
                     "ignore_above": 200,
-                    "normalizer": "useLowercase"
+                    "normalizer": "useLowercase",
+                    "fields": {
+                      "autocomplete": {
+                        "type": "text",
+                        "analyzer": "autocomplete",
+                        "search_analyzer": "standard"
+                      }
+                    }
                   },
                   "fields": {
                     "type": "object",
@@ -63,7 +115,14 @@
                       "name": {
                         "type": "keyword",
                         "ignore_above": 200,
-                        "normalizer": "useLowercase"
+                        "normalizer": "useLowercase",
+                        "fields": {
+                          "autocomplete": {
+                            "type": "text",
+                            "analyzer": "autocomplete",
+                            "search_analyzer": "standard"
+                          }
+                        }
                       },
                       "fields": {
                         "type": "object",
@@ -71,7 +130,14 @@
                           "name": {
                             "type": "keyword",
                             "ignore_above": 200,
-                            "normalizer": "useLowercase"
+                            "normalizer": "useLowercase",
+                            "fields": {
+                              "autocomplete": {
+                                "type": "text",
+                                "analyzer": "autocomplete",
+                                "search_analyzer": "standard"
+                              }
+                            }
                           },
                           "fields": {
                             "type": "object",
@@ -79,7 +145,14 @@
                               "name": {
                                 "type": "keyword",
                                 "ignore_above": 200,
-                                "normalizer": "useLowercase"
+                                "normalizer": "useLowercase",
+                                "fields": {
+                                  "autocomplete": {
+                                    "type": "text",
+                                    "analyzer": "autocomplete",
+                                    "search_analyzer": "standard"
+                                  }
+                                }
                               },
                               "fields": {
                                 "type": "keyword",
@@ -92,7 +165,14 @@
                               "label": {
                                 "type": "keyword",
                                 "ignore_above": 200,
-                                "normalizer": "useLowercase"
+                                "normalizer": "useLowercase",
+                                "fields": {
+                                  "autocomplete": {
+                                    "type": "text",
+                                    "analyzer": "autocomplete",
+                                    "search_analyzer": "standard"
+                                  }
+                                }
                               },
                               "notices": {
                                 "type": "object",
@@ -108,7 +188,14 @@
                               "type": {
                                 "type": "keyword",
                                 "ignore_above": 200,
-                                "normalizer": "useLowercase"
+                                "normalizer": "useLowercase",
+                                "fields": {
+                                  "autocomplete": {
+                                    "type": "text",
+                                    "analyzer": "autocomplete",
+                                    "search_analyzer": "standard"
+                                  }
+                                }
                               },
                               "ui": {
                                 "type": "object",
@@ -121,7 +208,14 @@
                               "value": {
                                 "type": "keyword",
                                 "ignore_above": 200,
-                                "normalizer": "useLowercase"
+                                "normalizer": "useLowercase",
+                                "fields": {
+                                  "autocomplete": {
+                                    "type": "text",
+                                    "analyzer": "autocomplete",
+                                    "search_analyzer": "standard"
+                                  }
+                                }
                               },
                               "warnings": {
                                 "type": "object",
@@ -136,7 +230,14 @@
                           "label": {
                             "type": "keyword",
                             "ignore_above": 200,
-                            "normalizer": "useLowercase"
+                            "normalizer": "useLowercase",
+                            "fields": {
+                              "autocomplete": {
+                                "type": "text",
+                                "analyzer": "autocomplete",
+                                "search_analyzer": "standard"
+                              }
+                            }
                           },
                           "notices": {
                             "type": "object",
@@ -152,7 +253,14 @@
                           "type": {
                             "type": "keyword",
                             "ignore_above": 200,
-                            "normalizer": "useLowercase"
+                            "normalizer": "useLowercase",
+                            "fields": {
+                              "autocomplete": {
+                                "type": "text",
+                                "analyzer": "autocomplete",
+                                "search_analyzer": "standard"
+                              }
+                            }
                           },
                           "ui": {
                             "type": "object",
@@ -165,7 +273,14 @@
                           "value": {
                             "type": "keyword",
                             "ignore_above": 200,
-                            "normalizer": "useLowercase"
+                            "normalizer": "useLowercase",
+                            "fields": {
+                              "autocomplete": {
+                                "type": "text",
+                                "analyzer": "autocomplete",
+                                "search_analyzer": "standard"
+                              }
+                            }
                           },
                           "warnings": {
                             "type": "object",
@@ -180,7 +295,14 @@
                       "label": {
                         "type": "keyword",
                         "ignore_above": 200,
-                        "normalizer": "useLowercase"
+                        "normalizer": "useLowercase",
+                        "fields": {
+                          "autocomplete": {
+                            "type": "text",
+                            "analyzer": "autocomplete",
+                            "search_analyzer": "standard"
+                          }
+                        }
                       },
                       "notices": {
                         "type": "object",
@@ -196,7 +318,14 @@
                       "type": {
                         "type": "keyword",
                         "ignore_above": 200,
-                        "normalizer": "useLowercase"
+                        "normalizer": "useLowercase",
+                        "fields": {
+                          "autocomplete": {
+                            "type": "text",
+                            "analyzer": "autocomplete",
+                            "search_analyzer": "standard"
+                          }
+                        }
                       },
                       "ui": {
                         "type": "object",
@@ -209,7 +338,14 @@
                       "value": {
                         "type": "keyword",
                         "ignore_above": 200,
-                        "normalizer": "useLowercase"
+                        "normalizer": "useLowercase",
+                        "fields": {
+                          "autocomplete": {
+                            "type": "text",
+                            "analyzer": "autocomplete",
+                            "search_analyzer": "standard"
+                          }
+                        }
                       },
                       "warnings": {
                         "type": "object",
@@ -224,7 +360,14 @@
                   "label": {
                     "type": "keyword",
                     "ignore_above": 200,
-                    "normalizer": "useLowercase"
+                    "normalizer": "useLowercase",
+                    "fields": {
+                      "autocomplete": {
+                        "type": "text",
+                        "analyzer": "autocomplete",
+                        "search_analyzer": "standard"
+                      }
+                    }
                   },
                   "notices": {
                     "type": "object",
@@ -240,7 +383,14 @@
                   "type": {
                     "type": "keyword",
                     "ignore_above": 200,
-                    "normalizer": "useLowercase"
+                    "normalizer": "useLowercase",
+                    "fields": {
+                      "autocomplete": {
+                        "type": "text",
+                        "analyzer": "autocomplete",
+                        "search_analyzer": "standard"
+                      }
+                    }
                   },
                   "ui": {
                     "type": "object",
@@ -253,7 +403,14 @@
                   "value": {
                     "type": "keyword",
                     "ignore_above": 200,
-                    "normalizer": "useLowercase"
+                    "normalizer": "useLowercase",
+                    "fields": {
+                      "autocomplete": {
+                        "type": "text",
+                        "analyzer": "autocomplete",
+                        "search_analyzer": "standard"
+                      }
+                    }
                   },
                   "warnings": {
                     "type": "object",
@@ -268,7 +425,14 @@
               "label": {
                 "type": "keyword",
                 "ignore_above": 200,
-                "normalizer": "useLowercase"
+                "normalizer": "useLowercase",
+                "fields": {
+                  "autocomplete": {
+                    "type": "text",
+                    "analyzer": "autocomplete",
+                    "search_analyzer": "standard"
+                  }
+                }
               },
               "notices": {
                 "type": "object",
@@ -284,7 +448,14 @@
               "type": {
                 "type": "keyword",
                 "ignore_above": 200,
-                "normalizer": "useLowercase"
+                "normalizer": "useLowercase",
+                "fields": {
+                  "autocomplete": {
+                    "type": "text",
+                    "analyzer": "autocomplete",
+                    "search_analyzer": "standard"
+                  }
+                }
               },
               "ui": {
                 "type": "object",
@@ -297,7 +468,14 @@
               "value": {
                 "type": "keyword",
                 "ignore_above": 200,
-                "normalizer": "useLowercase"
+                "normalizer": "useLowercase",
+                "fields": {
+                  "autocomplete": {
+                    "type": "text",
+                    "analyzer": "autocomplete",
+                    "search_analyzer": "standard"
+                  }
+                }
               },
               "warnings": {
                 "type": "object",
@@ -312,7 +490,14 @@
           "label": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "notices": {
             "type": "object",
@@ -328,7 +513,14 @@
           "type": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "ui": {
             "type": "object",
@@ -341,7 +533,14 @@
           "value": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "normalizer": "useLowercase",
+            "fields": {
+              "autocomplete": {
+                "type": "text",
+                "analyzer": "autocomplete",
+                "search_analyzer": "standard"
+              }
+            }
           },
           "warnings": {
             "type": "object",
@@ -356,7 +555,14 @@
       "label": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "notices": {
         "type": "object",
@@ -372,7 +578,14 @@
       "type": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "ui": {
         "type": "object",
@@ -385,7 +598,14 @@
       "value": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase"
+        "normalizer": "useLowercase",
+        "fields": {
+          "autocomplete": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "standard"
+          }
+        }
       },
       "warnings": {
         "type": "object",
