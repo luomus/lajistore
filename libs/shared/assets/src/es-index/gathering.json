@@ -5,12 +5,13 @@
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000,
+    "index.max_ngram_diff": 4,
     "analysis": {
-      "filter": {
-        "autocomplete_filter": {
-          "type": "edge_ngram",
+      "tokenizer": {
+        "autocomplete": {
+          "type": "ngram",
           "min_gram": 1,
-          "max_gram": 20
+          "max_gram": 4
         }
       },
       "normalizer": {
@@ -24,11 +25,13 @@
       "analyzer": {
         "autocomplete": {
           "type": "custom",
-          "tokenizer": "standard",
+          "tokenizer": "autocomplete",
           "filter": [
-            "lowercase",
-            "autocomplete_filter"
+            "lowercase"
           ]
+        },
+        "autocomplete_search": {
+          "tokenizer": "lowercase"
         }
       }
     }
@@ -45,7 +48,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -60,7 +63,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -72,7 +75,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -87,7 +90,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -99,7 +102,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -111,7 +114,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -123,7 +126,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -135,7 +138,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -147,7 +150,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -162,7 +165,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -186,7 +189,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -198,7 +201,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -210,7 +213,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -222,7 +225,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -242,7 +245,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -254,7 +257,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -266,7 +269,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -278,7 +281,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -296,7 +299,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -308,7 +311,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -320,7 +323,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -332,7 +335,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -379,7 +382,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -427,7 +430,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -527,7 +530,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -676,7 +679,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -707,7 +710,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -719,7 +722,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -731,7 +734,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -743,7 +746,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -755,7 +758,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -767,7 +770,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -785,7 +788,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -801,7 +804,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -813,7 +816,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -825,7 +828,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -840,7 +843,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -855,7 +858,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -871,7 +874,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -883,7 +886,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -895,7 +898,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -907,7 +910,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -919,7 +922,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -931,7 +934,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -943,7 +946,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -955,7 +958,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -967,7 +970,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -979,7 +982,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -995,7 +998,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1007,7 +1010,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1019,7 +1022,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1031,7 +1034,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1056,7 +1059,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1068,7 +1071,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1090,7 +1093,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1111,7 +1114,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1126,7 +1129,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1151,7 +1154,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1163,7 +1166,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1178,7 +1181,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1190,7 +1193,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1202,7 +1205,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1214,7 +1217,7 @@
           "autocomplete": {
             "type": "text",
             "analyzer": "autocomplete",
-            "search_analyzer": "standard"
+            "search_analyzer": "autocomplete_search"
           }
         }
       },
@@ -1232,7 +1235,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1250,7 +1253,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1262,7 +1265,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1274,7 +1277,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1290,7 +1293,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1305,7 +1308,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1317,7 +1320,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1332,7 +1335,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1355,7 +1358,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1371,7 +1374,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1393,7 +1396,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1405,7 +1408,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1417,7 +1420,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1429,7 +1432,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1441,7 +1444,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1468,7 +1471,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1480,7 +1483,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1492,7 +1495,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1504,7 +1507,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1516,7 +1519,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1528,7 +1531,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1540,7 +1543,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1552,7 +1555,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1564,7 +1567,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1576,7 +1579,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1595,7 +1598,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1607,7 +1610,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1619,7 +1622,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1631,7 +1634,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1643,7 +1646,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1662,7 +1665,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1681,7 +1684,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1697,7 +1700,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1712,7 +1715,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1808,7 +1811,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1824,7 +1827,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1836,7 +1839,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1855,7 +1858,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1874,7 +1877,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1900,7 +1903,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1912,7 +1915,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1924,7 +1927,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1947,7 +1950,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1959,7 +1962,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1975,7 +1978,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -1999,7 +2002,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2011,7 +2014,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2027,7 +2030,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2039,7 +2042,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2059,7 +2062,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2071,7 +2074,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2083,7 +2086,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2095,7 +2098,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2107,7 +2110,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2119,7 +2122,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2135,7 +2138,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2159,7 +2162,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2217,7 +2220,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2277,7 +2280,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2306,7 +2309,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2318,7 +2321,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2330,7 +2333,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               }
@@ -2344,7 +2347,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2356,7 +2359,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2372,7 +2375,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2384,7 +2387,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2396,7 +2399,7 @@
               "autocomplete": {
                 "type": "text",
                 "analyzer": "autocomplete",
-                "search_analyzer": "standard"
+                "search_analyzer": "autocomplete_search"
               }
             }
           },
@@ -2414,7 +2417,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2435,7 +2438,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2447,7 +2450,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2459,7 +2462,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2471,7 +2474,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2487,7 +2490,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2499,7 +2502,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2511,7 +2514,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2523,7 +2526,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2535,7 +2538,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2547,7 +2550,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2563,7 +2566,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2582,7 +2585,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2594,7 +2597,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2606,7 +2609,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2618,7 +2621,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2630,7 +2633,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2646,7 +2649,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2658,7 +2661,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2670,7 +2673,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2693,7 +2696,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2715,7 +2718,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2727,7 +2730,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2739,7 +2742,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2751,7 +2754,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2763,7 +2766,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2775,7 +2778,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2791,7 +2794,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2803,7 +2806,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2819,7 +2822,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
@@ -2831,7 +2834,7 @@
                   "autocomplete": {
                     "type": "text",
                     "analyzer": "autocomplete",
-                    "search_analyzer": "standard"
+                    "search_analyzer": "autocomplete_search"
                   }
                 }
               },
