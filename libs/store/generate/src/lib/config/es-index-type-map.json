@@ -1,5 +1,5 @@
 {
-  "id": { "type": "keyword", "normalizer": "useLowercase", "fields": { "autocomplete": { "type": "text", "analyzer": "autocomplete", "search_analyzer": "autocomplete_search" }}},
+  "id": { "type": "keyword", "normalizer": "useLowercase"},
   "@context": { "type": "keyword" },
   "@type": { "type": "keyword" },
   "string": { "type": "keyword", "ignore_above": 200, "normalizer": "useLowercase", "fields": { "autocomplete": { "type": "text", "analyzer": "autocomplete", "search_analyzer": "autocomplete_search" }}},
