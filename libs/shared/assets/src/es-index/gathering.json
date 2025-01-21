@@ -9,9 +9,9 @@
     "analysis": {
       "tokenizer": {
         "autocomplete": {
-          "type": "ngram",
+          "type": "edge_ngram",
           "min_gram": 1,
-          "max_gram": 4
+          "max_gram": 10
         }
       },
       "normalizer": {
@@ -43,14 +43,7 @@
       },
       "id": {
         "type": "keyword",
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "@type": {
         "type": "keyword"
@@ -1230,14 +1223,7 @@
         "properties": {
           "id": {
             "type": "keyword",
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "@type": {
             "type": "keyword"
@@ -2275,14 +2261,7 @@
             "properties": {
               "id": {
                 "type": "keyword",
-                "normalizer": "useLowercase",
-                "fields": {
-                  "autocomplete": {
-                    "type": "text",
-                    "analyzer": "autocomplete",
-                    "search_analyzer": "autocomplete_search"
-                  }
-                }
+                "normalizer": "useLowercase"
               },
               "@type": {
                 "type": "keyword"
@@ -2412,14 +2391,7 @@
             "properties": {
               "id": {
                 "type": "keyword",
-                "normalizer": "useLowercase",
-                "fields": {
-                  "autocomplete": {
-                    "type": "text",
-                    "analyzer": "autocomplete",
-                    "search_analyzer": "autocomplete_search"
-                  }
-                }
+                "normalizer": "useLowercase"
               },
               "@type": {
                 "type": "keyword"
@@ -2691,14 +2663,7 @@
             "properties": {
               "id": {
                 "type": "keyword",
-                "normalizer": "useLowercase",
-                "fields": {
-                  "autocomplete": {
-                    "type": "text",
-                    "analyzer": "autocomplete",
-                    "search_analyzer": "autocomplete_search"
-                  }
-                }
+                "normalizer": "useLowercase"
               },
               "@type": {
                 "type": "keyword"
