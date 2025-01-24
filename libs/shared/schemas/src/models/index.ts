@@ -181,6 +181,8 @@ import { Validator } from './Validator'
 export type { Validator }
 import { Video } from './Video'
 export type { Video }
+import { ListResponse } from './list-response'
+export type { ListResponse }
 export * from './Enums'
 export type StoreObject = BibliographicResource
    | Concept
