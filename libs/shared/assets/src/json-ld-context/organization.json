@@ -83,6 +83,10 @@
       "@id": "default:MOS.fax",
       "@type": "xsd:string"
     },
+    "fullName": {
+      "@id": "default:MOS.fullName",
+      "@container": "@language"
+    },
     "hidden": {
       "@id": "default:MOS.hidden",
       "@type": "xsd:boolean"

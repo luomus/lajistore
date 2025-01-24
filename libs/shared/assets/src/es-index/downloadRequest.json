@@ -5,33 +5,13 @@
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000,
-    "index.max_ngram_diff": 4,
     "analysis": {
-      "tokenizer": {
-        "autocomplete": {
-          "type": "edge_ngram",
-          "min_gram": 1,
-          "max_gram": 10
-        }
-      },
       "normalizer": {
         "useLowercase": {
           "type": "custom",
           "filter": [
             "lowercase"
           ]
-        }
-      },
-      "analyzer": {
-        "autocomplete": {
-          "type": "custom",
-          "tokenizer": "autocomplete",
-          "filter": [
-            "lowercase"
-          ]
-        },
-        "autocomplete_search": {
-          "tokenizer": "lowercase"
         }
       }
     }
@@ -51,14 +31,7 @@
       "apiKeyExpires": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "approximateResultSize": {
         "type": "integer"
@@ -66,14 +39,7 @@
       "collectionId": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "completed": {
         "type": "boolean"
@@ -84,74 +50,32 @@
       "createdFile": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "createdFileSize": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "dataUsePurpose": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "downloadFormat": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "downloadInclude": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "downloadType": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "downloaded": {
         "type": "date"
@@ -159,14 +83,7 @@
       "email": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "failed": {
         "type": "boolean"
@@ -174,50 +91,22 @@
       "failureReason": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "filter": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "locale": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "person": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "requested": {
         "type": "date"
@@ -225,26 +114,12 @@
       "source": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "warehouse": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "_meta": {
         "properties": {

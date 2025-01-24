@@ -5,33 +5,13 @@
     "index.max_result_window": 1000000,
     "index.mapping.total_fields.limit": 10000,
     "index.mapping.nested_objects.limit": 100000,
-    "index.max_ngram_diff": 4,
     "analysis": {
-      "tokenizer": {
-        "autocomplete": {
-          "type": "edge_ngram",
-          "min_gram": 1,
-          "max_gram": 10
-        }
-      },
       "normalizer": {
         "useLowercase": {
           "type": "custom",
           "filter": [
             "lowercase"
           ]
-        }
-      },
-      "analyzer": {
-        "autocomplete": {
-          "type": "custom",
-          "tokenizer": "autocomplete",
-          "filter": [
-            "lowercase"
-          ]
-        },
-        "autocomplete_search": {
-          "tokenizer": "lowercase"
         }
       }
     }
@@ -51,38 +31,17 @@
       "addedTags": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "annotationByPerson": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "annotationBySystem": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "annotationClass": {
         "type": "keyword",
@@ -95,14 +54,7 @@
       "censusAnnotation": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "created": {
         "type": "date"
@@ -131,50 +83,22 @@
           "associatedObservationTaxa": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "author": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "det": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "detDate": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "detMethod": {
             "type": "keyword",
@@ -183,74 +107,32 @@
           "detVerbatim": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "genusQualifier": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "identificationBasis": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "identificationNotes": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "infraAuthor": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "infraEpithet": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "infraRank": {
             "type": "keyword",
@@ -259,14 +141,7 @@
           "infrasubspecificSubdivision": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "isPartOf": {
             "type": "keyword",
@@ -278,62 +153,27 @@
           "preferredIdentification": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "sec": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "speciesQualifier": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "taxon": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "taxonID": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "taxonRank": {
             "type": "keyword",
@@ -342,38 +182,17 @@
           "taxonSpecifier": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "taxonURI": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "taxonVerbatim": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "publicityRestrictions": {
             "type": "keyword",
@@ -391,112 +210,49 @@
       "lineTransectAnnotation": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "notes": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "occurrenceAtTimeOfAnnotation": {
         "properties": {
           "countryVerbatim": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "dateBegin": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "dateEnd": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "locality": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "municipalityVerbatim": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "taxonId": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "taxonVerbatim": {
             "type": "keyword",
             "ignore_above": 200,
-            "normalizer": "useLowercase",
-            "fields": {
-              "autocomplete": {
-                "type": "text",
-                "analyzer": "autocomplete",
-                "search_analyzer": "autocomplete_search"
-              }
-            }
+            "normalizer": "useLowercase"
           },
           "wgs84centerPointLat": {
             "type": "float"
@@ -509,50 +265,22 @@
       "opinion": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "removedTags": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "rootID": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "targetID": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "type": {
         "type": "keyword",
@@ -561,14 +289,7 @@
       "createdBySystem": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "deleted": {
         "type": "boolean"
@@ -576,14 +297,7 @@
       "deletedByPerson": {
         "type": "keyword",
         "ignore_above": 200,
-        "normalizer": "useLowercase",
-        "fields": {
-          "autocomplete": {
-            "type": "text",
-            "analyzer": "autocomplete",
-            "search_analyzer": "autocomplete_search"
-          }
-        }
+        "normalizer": "useLowercase"
       },
       "deletedDateTime": {
         "type": "date"
