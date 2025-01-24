@@ -70,6 +70,13 @@ export class GenerateInterfaceOrClassService extends AbstractSchemaGenerateServi
 
     await super.generate(this.classes);
 
+    if (this.type === 'interface') {
+      this.indexContent += `\nimport { ListResponse } from './list-response'`;
+      this.indexContent += `\nexport type { ListResponse }`;
+    } else {
+      this.indexContent += `\nexport { ListResponse } from './list-response'`;
+    }
+
     this.indexContent += `\nexport * from './${this.enumFile}'`;
 
     if (this.type === 'interface') {
