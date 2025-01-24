@@ -60,6 +60,14 @@ export interface Organization {
    */
   fax?: string;
   /**
+   * Combined name from oganization abbreviation and the organization levels
+   */
+  fullName?: {
+    en?: string;
+    fi?: string;
+    sv?: string;
+  };
+  /**
    * Used for organisations that are not to be used (duplicates etc.)
    */
   hidden?: boolean;

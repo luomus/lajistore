@@ -130,6 +130,25 @@
       "description": "Fax number, with country code",
       "title": "Fax"
     },
+    "fullName": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "en": {
+          "type": "string"
+        },
+        "fi": {
+          "type": "string"
+        },
+        "sv": {
+          "type": "string"
+        }
+      },
+      "range": "xsd:string",
+      "subject": "MOS.fullName",
+      "description": "Combined name from oganization abbreviation and the organization levels",
+      "title": "Organization full name"
+    },
     "hidden": {
       "type": "boolean",
       "range": "xsd:boolean",
