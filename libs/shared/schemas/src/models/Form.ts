@@ -1,6 +1,6 @@
-import { CategoryEnum } from './';
+import { MHLCategoryEnum } from './';
 import { Field } from './';
-import { LanguageEnum } from './';
+import { MZLanguageEnum } from './';
 import { FormOptions } from './';
 
 /* tslint:disable */
@@ -14,7 +14,7 @@ export interface Form {
   id?: string;
   "@type"?: string;
   baseFormID?: string;
-  category?: CategoryEnum;
+  category?: MHLCategoryEnum;
   /**
    * Id for the collection to where observation useing this form are connected
    */
@@ -29,7 +29,7 @@ export interface Form {
    * Use fields, uiSchema and translations from the form
    */
   fieldsFormID?: string;
-  language?: LanguageEnum;
+  language?: MZLanguageEnum;
   logo?: string;
   name?: string;
   options?: FormOptions;
@@ -41,7 +41,7 @@ export interface Form {
    * Shown at sidebar and & as browser title
    */
   shortTitle?: string;
-  supportedLanguage?: LanguageEnum[];
+  supportedLanguage?: MZLanguageEnum[];
   title?: string;
   translations?: {
     [k: string]: unknown | undefined;

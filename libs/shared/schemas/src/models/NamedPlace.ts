@@ -1,9 +1,9 @@
 import { Document } from './';
-import { AccessibilityEnum } from './';
+import { MNPAccessibilityEnum } from './';
 import { DateRange } from './';
-import { PriorityEnum } from './';
+import { MNPPriorityEnum } from './';
 import { Reserve } from './';
-import { TagEnum } from './';
+import { MNPTagEnum } from './';
 
 /* tslint:disable */
 /*
@@ -16,7 +16,7 @@ export interface NamedPlace {
   id?: string;
   "@type"?: string;
   acceptedDocument?: Document;
-  accessibility?: AccessibilityEnum;
+  accessibility?: MNPAccessibilityEnum;
   active?: DateRange;
   alternativeIDs?: string[];
   /**
@@ -49,13 +49,13 @@ export interface NamedPlace {
    */
   owners?: string[];
   prepopulatedDocument?: Document;
-  priority?: PriorityEnum;
+  priority?: MNPPriorityEnum;
   privateNotes?: string;
   /**
    * Is the named place publicaly available. (Defaults to false)
    */
   public?: boolean;
   reserve?: Reserve;
-  tags?: TagEnum[];
+  tags?: MNPTagEnum[];
   taxonIDs?: string[];
 }

@@ -1,4 +1,4 @@
-import { TypeOfOccurrenceEnum } from './';
+import { MXTypeOfOccurrenceEnum } from './';
 
 /* tslint:disable */
 /*
@@ -13,7 +13,7 @@ export class Occurrence {
   area: string;
   notes?: string;
   specimenURI?: string;
-  status: TypeOfOccurrenceEnum;
+  status: MXTypeOfOccurrenceEnum;
   taxon: string;
   threatened?: boolean;
   year?: string;

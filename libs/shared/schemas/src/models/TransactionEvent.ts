@@ -1,6 +1,6 @@
-import { EventTypeEnum } from './';
+import { HRAAEventTypeEnum } from './';
 import { TransactionItem } from './';
-import { SentByEnum } from './';
+import { HRAASentByEnum } from './';
 
 /* tslint:disable */
 /*
@@ -14,9 +14,9 @@ export interface TransactionEvent {
   "@type"?: string;
   eventDate: string;
   eventHandler: string;
-  eventType: EventTypeEnum;
+  eventType: HRAAEventTypeEnum;
   items: [TransactionItem, ...TransactionItem[]];
   notes?: string;
   numberOfPackages?: number;
-  sentBy?: SentByEnum;
+  sentBy?: HRAASentByEnum;
 }

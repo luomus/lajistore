@@ -1,4 +1,4 @@
-import { EventTypeEnum } from './';
+import { HRXEventTypeEnum } from './';
 
 /* tslint:disable */
 /*
@@ -25,5 +25,5 @@ export class SpecimenTransactionEvent {
   /**
    * Type of the transaction event. Return for e.g. partial returns and addition e.g. for when more specimens are added to the transaction later.
    */
-  eventType: EventTypeEnum;
+  eventType: HRXEventTypeEnum;
 }

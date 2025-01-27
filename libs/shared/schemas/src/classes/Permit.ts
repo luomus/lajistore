@@ -1,5 +1,5 @@
-import { PermitStatusEnum } from './';
-import { PermitTypeEnum } from './';
+import { HRAPermitStatusEnum } from './';
+import { HRAPermitTypeEnum } from './';
 
 /* tslint:disable */
 /*
@@ -15,8 +15,8 @@ export class Permit {
   permitFile?: string;
   permitNotes?: string;
   permitStartDate?: string;
-  permitStatus?: PermitStatusEnum;
-  permitType?: PermitTypeEnum;
+  permitStatus?: HRAPermitStatusEnum;
+  permitType?: HRAPermitTypeEnum;
   /**
    * Which parent or larger collection this is part of.
    */

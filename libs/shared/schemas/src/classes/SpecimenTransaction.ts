@@ -1,12 +1,12 @@
-import { AvailableForGeneticResearchEnum } from './';
-import { GeneticResourceTypeEnum } from './';
+import { HRXAvailableForGeneticResearchEnum } from './';
+import { HRXGeneticResourceTypeEnum } from './';
 import { Permit } from './';
-import { ResourceImportedEnum } from './';
-import { StatusEnum } from './';
+import { HRXResourceImportedEnum } from './';
+import { HRXStatusEnum } from './';
 import { SpecimenTransactionEvent } from './';
-import { TransportMethodEnum } from './';
-import { TypeEnum } from './';
-import { PublicityRestrictionsEnum } from './';
+import { HRXTransportMethodEnum } from './';
+import { HRXTypeEnum } from './';
+import { MZPublicityRestrictionsEnum } from './';
 
 /* tslint:disable */
 /*
@@ -26,7 +26,7 @@ export class SpecimenTransaction {
   /**
    * If you choose "Yes, with restrictions", explain the restrictions in the following field "Rights and obligations".
    */
-  availableForGeneticResearch?: AvailableForGeneticResearchEnum;
+  availableForGeneticResearch?: HRXAvailableForGeneticResearchEnum;
   awayCount?: number;
   awayIDs?: string[];
   /**
@@ -78,7 +78,7 @@ export class SpecimenTransaction {
   /**
    * Choose the type of the genetic resource for statistical and reporting purposes.
    */
-  geneticResourceType?: GeneticResourceTypeEnum;
+  geneticResourceType?: HRXGeneticResourceTypeEnum;
   /**
    * Harmonized System code for the customs
    */
@@ -157,22 +157,22 @@ export class SpecimenTransaction {
   /**
    * Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
    */
-  resourceImported?: ResourceImportedEnum;
+  resourceImported?: HRXResourceImportedEnum;
   returnedCount?: number;
   returnedIDs?: string[];
   /**
    * Whether the transaction is closed, outstanding, in process or still on loan..
    */
-  status?: StatusEnum;
+  status?: HRXStatusEnum;
   transactionEvents?: SpecimenTransactionEvent[];
   /**
    * Means of sending, mail, courier etc.
    */
-  transportMethod?: TransportMethodEnum;
+  transportMethod?: HRXTransportMethodEnum;
   /**
    * What kind of transaction this is.
    */
-  type: TypeEnum;
+  type: HRXTypeEnum;
   /**
    * Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?
    */
@@ -188,5 +188,5 @@ export class SpecimenTransaction {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?: PublicityRestrictionsEnum;
+  publicityRestrictions?: MZPublicityRestrictionsEnum;
 }

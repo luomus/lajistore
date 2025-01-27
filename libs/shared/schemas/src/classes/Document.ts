@@ -1,11 +1,11 @@
-import { SecureLevels } from './';
-import { DataOriginEnum } from './';
+import { MXSecureLevels } from './';
+import { MYDataOriginEnum } from './';
 import { DocumentIdentification } from './';
 import { GatheringEvent } from './';
-import { Preservations } from './';
-import { Statuses } from './';
-import { VerificationStatuses } from './';
-import { PublicityRestrictionsEnum } from './';
+import { MYPreservations } from './';
+import { MYStatuses } from './';
+import { MYVerificationStatuses } from './';
+import { MZPublicityRestrictionsEnum } from './';
 import { Gathering } from './';
 
 /* tslint:disable */
@@ -21,7 +21,7 @@ export class Document {
   /**
    * Secure level (salaus-/karkeistustaso) for the data
    */
-  secureLevel?: SecureLevels;
+  secureLevel?: MXSecureLevels;
   /**
    * Leave empty if no sample taken, or if the sample is recorded separately
    */
@@ -82,7 +82,7 @@ export class Document {
    * Annuality/perenniality or other specialities about cultivation in our conditions.
    */
   cultivationInformation?: string;
-  dataOrigin?: DataOriginEnum[];
+  dataOrigin?: MYDataOriginEnum[];
   /**
    * Where the data about this specimen or observation is from, in addition to labels. Eg. reference to a publication, field notes or an expedition.
    */
@@ -161,7 +161,7 @@ export class Document {
   /**
    * Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.
    */
-  preservation?: Preservations[];
+  preservation?: MYPreservations[];
   /**
    * Location of the primary data if not Kotka.
    */
@@ -196,7 +196,7 @@ export class Document {
   /**
    * Empty value means same as "ok" - that there is not anything special about the status of the specimen.
    */
-  status?: Statuses;
+  status?: MYStatuses;
   temp?: boolean;
   templateDescription?: string;
   templateName?: string;
@@ -215,7 +215,7 @@ export class Document {
   /**
    * Information about the quality of the specimen data. Possible to select several.
    */
-  verificationStatus?: VerificationStatuses[];
+  verificationStatus?: MYVerificationStatuses[];
   /**
    * Identifier of the herbarium voucher specimen or information about it if the identifier is unknown.
    */
@@ -232,7 +232,7 @@ export class Document {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?: PublicityRestrictionsEnum;
+  publicityRestrictions?: MZPublicityRestrictionsEnum;
   scheduledForDeletion?: boolean;
   gatherings: [Gathering, ...Gathering[]];
 }

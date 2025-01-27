@@ -1,5 +1,5 @@
-import { HabitatEnum } from './';
-import { HabitatSpecificTypeEnum } from './';
+import { MKVHabitatEnum } from './';
+import { MKVHabitatSpecificTypeEnum } from './';
 
 /* tslint:disable */
 /*
@@ -12,7 +12,7 @@ export interface Habitat {
   id?: string;
   "@type"?: string;
   "herbo:sortOrder"?: number;
-  habitat: HabitatEnum;
-  habitatSpecificType?: HabitatSpecificTypeEnum[];
+  habitat: MKVHabitatEnum;
+  habitatSpecificType?: MKVHabitatSpecificTypeEnum[];
   sortOrder?: number;
 }

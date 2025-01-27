@@ -1,8 +1,8 @@
-import { ArtificialLightEnum } from './';
-import { CloudCoverOktaEnum } from './';
+import { MYArtificialLightEnum } from './';
+import { MYCloudCoverOktaEnum } from './';
 import { CompleteList } from './';
 import { GatheringFact } from './';
-import { RainIntensityEnum } from './';
+import { MYRainIntensityEnum } from './';
 import { TaxonCensus } from './';
 
 /* tslint:disable */
@@ -16,16 +16,16 @@ export interface GatheringEvent {
   id?: string;
   "@type"?: string;
   acknowledgeNoUnitsInCensus?: boolean;
-  artificialLight?: ArtificialLightEnum;
+  artificialLight?: MYArtificialLightEnum;
   breaksDuringCensusInMinutes?: number;
   censusHinderedByEnviromentalFactors?: boolean;
   censusHinderedByFog?: boolean;
   censusHinderedByRain?: boolean;
   censusHinderedByWind?: boolean;
   censusPrematurelyAborted?: boolean;
-  cloudCover?: CloudCoverOktaEnum;
-  cloudCoverEnd?: CloudCoverOktaEnum;
-  cloudCoverStart?: CloudCoverOktaEnum;
+  cloudCover?: MYCloudCoverOktaEnum;
+  cloudCoverEnd?: MYCloudCoverOktaEnum;
+  cloudCoverStart?: MYCloudCoverOktaEnum;
   completeList?: CompleteList;
   dateBegin?: string;
   dateEnd?: string;
@@ -49,7 +49,7 @@ export interface GatheringEvent {
    * Additional information to the data in each section.
    */
   notes?: string;
-  rainIntensity?: RainIntensityEnum;
+  rainIntensity?: MYRainIntensityEnum;
   routeDirectionAdhered?: boolean;
   spottingScopeUsed?: boolean;
   startDistanceFromNECorner?: string;

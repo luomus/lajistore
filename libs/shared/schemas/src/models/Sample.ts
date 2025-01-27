@@ -1,11 +1,11 @@
-import { ElutionMediumEnum } from './';
-import { IndividualsInPreparationEnum } from './';
-import { MaterialEnum } from './';
-import { PreparationTypeEnum } from './';
-import { Preservations } from './';
-import { QualityEnum } from './';
-import { QualityCheckMethodEnum } from './';
-import { Statuses } from './';
+import { MFElutionMediumEnum } from './';
+import { MFIndividualsInPreparationEnum } from './';
+import { MFMaterialEnum } from './';
+import { MFPreparationTypeEnum } from './';
+import { MYPreservations } from './';
+import { MFQualityEnum } from './';
+import { MFQualityCheckMethodEnum } from './';
+import { MYStatuses } from './';
 import { Measurement } from './';
 
 /* tslint:disable */
@@ -45,7 +45,7 @@ export interface Sample {
   /**
    * DNA sample elution medium
    */
-  elutionMedium?: ElutionMediumEnum;
+  elutionMedium?: MFElutionMediumEnum;
   /**
    * Diary-style information about what has been done to the preparation/sample
    */
@@ -57,11 +57,11 @@ export interface Sample {
   /**
    * For example a jar that contains multiple fish individuals can be recorded as one specimen and one preparation. Can also be used for DNA samples (was DNA extracted from single or multiple individuals?).
    */
-  individualsInPreparation?: IndividualsInPreparationEnum;
+  individualsInPreparation?: MFIndividualsInPreparationEnum;
   /**
    * Preparation/sample material. Choose preparation/sample type first.
    */
-  material?: MaterialEnum;
+  material?: MFMaterialEnum;
   /**
    * Additional information about the preparation/sample
    */
@@ -69,11 +69,11 @@ export interface Sample {
   /**
    * Type of preparation/sample
    */
-  preparationType: PreparationTypeEnum;
+  preparationType: MFPreparationTypeEnum;
   /**
    * Preservation methods and materials of the preparation/sample. It is possible to choose several
    */
-  preservation?: Preservations[];
+  preservation?: MYPreservations[];
   /**
    * Publication references or doi's that refer to this preparations/sample. For publications referring to the specimen, use publications field in the Other section (document level).
    */
@@ -81,7 +81,7 @@ export interface Sample {
   /**
    * DNA sample quality on a three step scale. The quality is defined by quality check measurements
    */
-  quality?: QualityEnum;
+  quality?: MFQualityEnum;
   /**
    * Date of the latest quality check measurements
    */
@@ -89,7 +89,7 @@ export interface Sample {
   /**
    * Method or instrument used for quality measurements
    */
-  qualityCheckMethod?: QualityCheckMethodEnum[];
+  qualityCheckMethod?: MFQualityCheckMethodEnum[];
   /**
    * Additional information about the DNA sample quality
    */
@@ -102,7 +102,7 @@ export interface Sample {
   /**
    * Status of the preparation/sample. For specimen level status use the status field in the basic information section. Empty value means same as "ok" - that there is nothing special about the status of the sample.
    */
-  status?: Statuses;
+  status?: MYStatuses;
   /**
    * Which parent or larger collection this is part of.
    */

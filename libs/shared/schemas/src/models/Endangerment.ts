@@ -1,4 +1,4 @@
-import { EndangermentReasonEnum } from './';
+import { MKVEndangermentReasonEnum } from './';
 
 /* tslint:disable */
 /*
@@ -11,6 +11,6 @@ export interface Endangerment {
   id?: string;
   "@type"?: string;
   "herbo:sortOrder"?: number;
-  endangerment: EndangermentReasonEnum;
+  endangerment: MKVEndangermentReasonEnum;
   sortOrder?: number;
 }

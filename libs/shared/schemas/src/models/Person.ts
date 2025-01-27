@@ -1,6 +1,6 @@
-import { Roles } from './';
-import { RequiredRolesEnum } from './';
-import { RoleKotkaEnum } from './';
+import { MARoles } from './';
+import { MMANRequiredRolesEnum } from './';
+import { MARoleKotkaEnum } from './';
 
 /* tslint:disable */
 /*
@@ -45,9 +45,9 @@ export interface Person {
   organisationAdmin?: string[];
   preferredName?: string;
   previousEmailAddress?: string[];
-  role?: Roles[];
-  roleAnnotation?: RequiredRolesEnum;
-  roleKotka?: RoleKotkaEnum;
+  role?: MARoles[];
+  roleAnnotation?: MMANRequiredRolesEnum;
+  roleKotka?: MARoleKotkaEnum;
   securePortalUserRoleExpires?: string;
   virtuLoginName?: string;
   yearOfBirth?: string;

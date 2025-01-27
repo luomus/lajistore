@@ -1,8 +1,8 @@
-import { DetMethodEnum } from './';
-import { IdentificationBasisEnum } from './';
-import { InfraRanks } from './';
-import { TaxonRankEnum } from './';
-import { PublicityRestrictionsEnum } from './';
+import { MYDetMethodEnum } from './';
+import { MYIdentificationBasisEnum } from './';
+import { MYInfraRanks } from './';
+import { MXTaxonRankEnum } from './';
+import { MZPublicityRestrictionsEnum } from './';
 
 /* tslint:disable */
 /*
@@ -31,7 +31,7 @@ export interface Identification {
    * Date or year when the identification was done, preferably in format "d.m.Y" or "Y"
    */
   detDate?: string;
-  detMethod?: DetMethodEnum;
+  detMethod?: MYDetMethodEnum;
   /**
    * Name of the identifier and date of identification in original format (e.g. from the label), errors and all
    */
@@ -40,7 +40,7 @@ export interface Identification {
    * Additional qualifier or specifier at genus level (e.g. aff., cf.)
    */
   genusQualifier?: string;
-  identificationBasis?: IdentificationBasisEnum[];
+  identificationBasis?: MYIdentificationBasisEnum[];
   /**
    * Additional information on the identification, basis or such
    */
@@ -56,7 +56,7 @@ export interface Identification {
   /**
    * Taxonomic level of the epithet below species level
    */
-  infraRank?: InfraRanks;
+  infraRank?: MYInfraRanks;
   /**
    * Pathovars, serovars and other infrasubspecific subdivisions of microbes.
    */
@@ -89,7 +89,7 @@ export interface Identification {
   /**
    * Taxonomic level for the identification
    */
-  taxonRank?: TaxonRankEnum;
+  taxonRank?: MXTaxonRankEnum;
   taxonSpecifier?: string;
   taxonURI?: string;
   /**
@@ -99,6 +99,6 @@ export interface Identification {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?: PublicityRestrictionsEnum;
+  publicityRestrictions?: MZPublicityRestrictionsEnum;
   sortOrder?: number;
 }

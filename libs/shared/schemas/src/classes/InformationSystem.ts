@@ -1,6 +1,6 @@
-import { Publicities } from './';
-import { States } from './';
-import { Types } from './';
+import { KEPublicities } from './';
+import { KEStates } from './';
+import { KETypes } from './';
 
 /* tslint:disable */
 /*
@@ -34,8 +34,8 @@ export class InformationSystem {
     sv?: string;
   };
   personResponsible: string;
-  publicity: Publicities;
-  state: States;
+  publicity: KEPublicities;
+  state: KEStates;
   transactionApiURL: string;
-  type: Types;
+  type: KETypes;
 }

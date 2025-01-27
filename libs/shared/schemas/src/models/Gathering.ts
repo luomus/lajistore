@@ -1,19 +1,19 @@
-import { BatHabitatEnum } from './';
-import { CoordinateSources } from './';
-import { CoordinateSystems } from './';
-import { ForestVegetationZones } from './';
+import { MYBatHabitatEnum } from './';
+import { MYCoordinateSources } from './';
+import { MYCoordinateSystems } from './';
+import { MYForestVegetationZones } from './';
 import { GatheringFact } from './';
-import { GatheringTypeEnum } from './';
-import { GeoreferenceSources } from './';
-import { HabitatEnum } from './';
-import { HabitatAttributesEnum } from './';
-import { InvasiveControlEffectivenessEnum } from './';
-import { InvasiveControlMethodsEnum } from './';
-import { MothSamplingMethodEnum } from './';
-import { PredominantTreeEnum } from './';
-import { SamplingMethods } from './';
+import { MYGatheringTypeEnum } from './';
+import { MYGeoreferenceSources } from './';
+import { MYHabitatEnum } from './';
+import { MYHabitatAttributesEnum } from './';
+import { MYInvasiveControlEffectivenessEnum } from './';
+import { MYInvasiveControlMethodsEnum } from './';
+import { MYMothSamplingMethodEnum } from './';
+import { MYPredominantTreeEnum } from './';
+import { MYSamplingMethods } from './';
 import { TaxonCensus } from './';
-import { PublicityRestrictionsEnum } from './';
+import { MZPublicityRestrictionsEnum } from './';
 import { Unit } from './';
 
 /* tslint:disable */
@@ -55,7 +55,7 @@ export interface Gathering {
   /**
    * Bat habitat
    */
-  batHabitat?: BatHabitatEnum[];
+  batHabitat?: MYBatHabitatEnum[];
   binocularsUsed?: boolean;
   /**
    * Formal abbreviation. For Finnish eliömaakunnat, use Finnish abbreviation.
@@ -81,11 +81,11 @@ export interface Gathering {
   /**
    * Use for NEW SPECIMENS: Where the coordinates have been acquired
    */
-  coordinateSource?: CoordinateSources;
+  coordinateSource?: MYCoordinateSources;
   /**
    * More information about the coordinate systems: https://wiki.helsinki.fi/display/digit/Entering+specimen+data
    */
-  coordinateSystem?: CoordinateSystems;
+  coordinateSystem?: MYCoordinateSystems;
   coordinatesGridYKJ?: string;
   /**
    * Coordinates, possible coordinate system and error radius word-to-word as they appear on the label or other original source, errors and all.
@@ -114,18 +114,18 @@ export interface Gathering {
   /**
    * Finnish forest vegetation zone
    */
-  forestVegetationZone?: ForestVegetationZones;
+  forestVegetationZone?: MYForestVegetationZones;
   gatheringFact?: GatheringFact;
-  gatheringType?: GatheringTypeEnum;
+  gatheringType?: MYGatheringTypeEnum;
   geometry?: {
     [k: string]: unknown | undefined;
   };
   /**
    * Use for OLD SPECIMENS: What source was used to get coordinates based on locality names
    */
-  georeferenceSource?: GeoreferenceSources;
-  habitat?: HabitatEnum[];
-  habitatAttributes?: HabitatAttributesEnum[];
+  georeferenceSource?: MYGeoreferenceSources;
+  habitat?: MYHabitatEnum[];
+  habitatAttributes?: MYHabitatAttributesEnum[];
   /**
    * Formal habitat name or abbreviation. If several, separate with semicolons (E.g. 'OMT; OMaT').
    */
@@ -142,9 +142,9 @@ export interface Gathering {
   invasiveControlAreaKnown?: boolean;
   invasiveControlDangerous?: boolean;
   invasiveControlDangerousDescription?: string;
-  invasiveControlEffectiveness?: InvasiveControlEffectivenessEnum;
+  invasiveControlEffectiveness?: MYInvasiveControlEffectivenessEnum;
   invasiveControlEffectivenessNotes?: string;
-  invasiveControlMethods?: InvasiveControlMethodsEnum[];
+  invasiveControlMethods?: MYInvasiveControlMethodsEnum[];
   invasiveControlMethodsDescription?: string;
   invasiveControlOpen?: boolean;
   invasiveControlOpenDescription?: string;
@@ -191,7 +191,7 @@ export interface Gathering {
    * Longitude. For western longitudes, use negative value.
    */
   longitude?: string;
-  mothSamplingMethod?: MothSamplingMethodEnum;
+  mothSamplingMethod?: MYMothSamplingMethodEnum;
   /**
    * Municipality, commune, town, city or civil parish
    */
@@ -211,7 +211,7 @@ export interface Gathering {
    * For garden accessions/seed bank, what proportion of the population sampled was giving seeds
    */
   percentageGivingSeeds?: number;
-  predominantTree?: PredominantTreeEnum;
+  predominantTree?: MYPredominantTreeEnum;
   projectTitle?: string;
   province?: string;
   /**
@@ -225,7 +225,7 @@ export interface Gathering {
   /**
    * Main method for (usually intentional) sampling
    */
-  samplingMethod?: SamplingMethods;
+  samplingMethod?: MYSamplingMethods;
   samplingMethodNotes?: string;
   section?: number;
   skipped?: boolean;
@@ -246,6 +246,6 @@ export interface Gathering {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?: PublicityRestrictionsEnum;
+  publicityRestrictions?: MZPublicityRestrictionsEnum;
   units?: Unit[];
 }

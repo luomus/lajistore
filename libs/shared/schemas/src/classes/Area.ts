@@ -1,4 +1,4 @@
-import { AreaTypeEnum } from './';
+import { MLAreaTypeEnum } from './';
 
 /* tslint:disable */
 /*
@@ -13,7 +13,7 @@ export class Area {
   /**
    * Aluetyyppi
    */
-  areaType: AreaTypeEnum;
+  areaType: MLAreaTypeEnum;
   /**
    * Country code ISO alpha 2
    */

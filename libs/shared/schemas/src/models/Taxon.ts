@@ -1,13 +1,13 @@
-import { InvasiveSpeciesMainGroups } from './';
-import { SecureLevels } from './';
-import { AdminStatusEnum } from './';
-import { InvasiveSpeciesCategories } from './';
-import { InvasiveSpeciesEstablishmentStatuses } from './';
-import { TaxonSetEnum } from './';
-import { OccurrenceInFinlandEnum } from './';
-import { IucnStatuses } from './';
-import { TaxonRankEnum } from './';
-import { TypeOfOccurrenceEnum } from './';
+import { HBEInvasiveSpeciesMainGroups } from './';
+import { MXSecureLevels } from './';
+import { MXAdminStatusEnum } from './';
+import { MXInvasiveSpeciesCategories } from './';
+import { MXInvasiveSpeciesEstablishmentStatuses } from './';
+import { MXTaxonSetEnum } from './';
+import { MXOccurrenceInFinlandEnum } from './';
+import { MXIucnStatuses } from './';
+import { MXTaxonRankEnum } from './';
+import { MXTypeOfOccurrenceEnum } from './';
 
 /* tslint:disable */
 /*
@@ -20,7 +20,7 @@ export interface Taxon {
   id?: string;
   "@type"?: string;
   "herbo:sortOrder"?: number;
-  invasiveSpeciesMainGroup?: InvasiveSpeciesMainGroups[];
+  invasiveSpeciesMainGroup?: HBEInvasiveSpeciesMainGroups[];
   /**
    * <p>Lisämerkinnät:</p>
    * <ul>
@@ -64,7 +64,7 @@ export interface Taxon {
    */
   behaviour?: string;
   birdlifeCode?: string;
-  breedingSecureLevel?: SecureLevels;
+  breedingSecureLevel?: MXSecureLevels;
   circumscription?: string;
   /**
    * Informal but commonly used name. Name that is outdated, unofficial or non-recommended, but which is still commonly used for this taxon.
@@ -149,7 +149,7 @@ export interface Taxon {
    * Lajin kasvialusta
    */
   habitatSubstrate?: string;
-  hasAdminStatus?: AdminStatusEnum[];
+  hasAdminStatus?: MXAdminStatusEnum[];
   hasAlternativeName?: string[];
   hasBasionym?: string[];
   hasHeterotypicSynonym?: string[];
@@ -170,13 +170,13 @@ export interface Taxon {
   invasiveCitizenActionsText?: string;
   invasiveEffectText?: string;
   invasivePreventionMethodsText?: string;
-  invasiveSpeciesCategory?: InvasiveSpeciesCategories;
+  invasiveSpeciesCategory?: MXInvasiveSpeciesCategories;
   invasiveSpeciesClassificationDescription?: string;
   invasiveSpeciesEarlyWarning?: boolean;
-  invasiveSpeciesEstablishment?: InvasiveSpeciesEstablishmentStatuses;
+  invasiveSpeciesEstablishment?: MXInvasiveSpeciesEstablishmentStatuses;
   isPartOf?: string;
   isPartOfInformalTaxonGroup?: string[];
-  isPartOfSet?: TaxonSetEnum[];
+  isPartOfSet?: MXTaxonSetEnum[];
   /**
    * Eliön elinkierto
    */
@@ -186,8 +186,8 @@ export interface Taxon {
   nameAccordingTo?: string;
   nameDecidedBy?: string;
   nameDecidedDate?: string;
-  naturaAreaSecureLevel?: SecureLevels;
-  nestSiteSecureLevel?: SecureLevels;
+  naturaAreaSecureLevel?: MXSecureLevels;
+  nestSiteSecureLevel?: MXSecureLevels;
   notes?: string;
   /**
    * Names not recommended and no longer (for a long time) commonly used. (For example, names used in the literature in the 20th century, or names transferred to another taxon.
@@ -197,7 +197,7 @@ export interface Taxon {
     fi?: string[];
     sv?: string[];
   };
-  occurrenceInFinland?: OccurrenceInFinlandEnum;
+  occurrenceInFinland?: MXOccurrenceInFinlandEnum;
   occurrenceInFinlandPublication?: string[];
   occurrenceInFinlandSpecimenURI?: string;
   originAndDistributionText?: string;
@@ -206,10 +206,10 @@ export interface Taxon {
   overridingTargetName?: string[];
   privateNotes?: string;
   productionText?: string;
-  redListStatus2000Finland?: IucnStatuses;
-  redListStatus2010Finland?: IucnStatuses;
-  redListStatus2015Finland?: IucnStatuses;
-  redListStatus2019Finland?: IucnStatuses;
+  redListStatus2000Finland?: MXIucnStatuses;
+  redListStatus2010Finland?: MXIucnStatuses;
+  redListStatus2015Finland?: MXIucnStatuses;
+  redListStatus2019Finland?: MXIucnStatuses;
   reproduction?: string;
   /**
    * Kukinta-aika
@@ -224,7 +224,7 @@ export interface Taxon {
   /**
    * Secure level (salaus-/karkeistustaso) for the data
    */
-  secureLevel?: SecureLevels;
+  secureLevel?: MXSecureLevels;
   speciesCardAuthors?: string;
   stopInformalTaxonGroupInheritance?: boolean;
   stopOccurrenceInFinlandPublicationInheritance?: boolean;
@@ -232,10 +232,10 @@ export interface Taxon {
   targetName?: string[];
   taxonEditor?: string[];
   taxonExpert?: string[];
-  taxonRank?: TaxonRankEnum;
+  taxonRank?: MXTaxonRankEnum;
   taxonomyText?: string;
   tradeName?: string[];
-  typeOfOccurrenceInFinland?: TypeOfOccurrenceEnum[];
+  typeOfOccurrenceInFinland?: MXTypeOfOccurrenceEnum[];
   typeOfOccurrenceInFinlandNotes?: string;
   typeSpecimenURI?: string;
   /**
@@ -246,7 +246,7 @@ export interface Taxon {
     fi?: string;
     sv?: string;
   };
-  winteringSecureLevel?: SecureLevels;
+  winteringSecureLevel?: MXSecureLevels;
   createdAtTimestamp?: string;
   sortOrder?: number;
   "skos:exactMatch"?: string;

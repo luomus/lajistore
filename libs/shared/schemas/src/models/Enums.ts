@@ -1,4 +1,4 @@
-export type AnnotationClassEnum =
+export type MANAnnotationClassEnum =
   | ""
   | "MAN.annotationClassReliable"
   | "MAN.annotationClassLikely"
@@ -7,36 +7,36 @@ export type AnnotationClassEnum =
   | "MAN.annotationClassUnreliable"
   | "MAN.annotationClassAcknowledged"
   | "MAN.annotationClassSpam";
-export type RequiredRolesEnum =
+export type MMANRequiredRolesEnum =
   | ""
   | "MMAN.expert"
   | "MMAN.basic"
   | "MMAN.owner"
   | "MMAN.formAdmin"
   | "MMAN.ictAdmin";
-export type CensusAnnotationEnum =
+export type MANCensusAnnotationEnum =
   | ""
   | "MAN.countError"
   | "MAN.innerCountError"
   | "MAN.otherError";
-export type InvasiveControlEffectivenessEnum =
+export type MYInvasiveControlEffectivenessEnum =
   | ""
   | "MY.invasiveControlEffectivenessFull"
   | "MY.invasiveControlEffectivenessPartial"
   | "MY.invasiveControlEffectivenessNone"
   | "MY.invasiveControlEffectivenessNotFound";
-export type LineTransectAnnotationEnum =
+export type MANLineTransectAnnotationEnum =
   | ""
   | "MAN.birdCountError"
   | "MAN.innerCountError"
   | "MAN.otherError";
-export type TypeEnum =
+export type MANTypeEnum =
   | ""
   | "MAN.typeOpinion"
   | "MAN.typeInvasiveControlEffectiveness"
   | "MAN.typeUnidentifiable"
   | "MAN.typeAdmin";
-export type AreaTypeEnum =
+export type MLAreaTypeEnum =
   | "ML.country"
   | "ML.biogeographicalProvince"
   | "ML.municipality"
@@ -46,7 +46,17 @@ export type AreaTypeEnum =
   | "ML.continent"
   | "ML.iucnEvaluationArea"
   | "ML.birdAssociationArea";
-export type LifeStages =
+export type MMTypeEnum =
+  | ""
+  | "MM.typeEnumLive"
+  | "MM.typeEnumSpecimen"
+  | "MM.typeEnumGenitalia"
+  | "MM.typeEnumMicroscopy"
+  | "MM.typeEnumCarcass"
+  | "MM.typeEnumSkeletal"
+  | "MM.typeEnumHabitat"
+  | "MM.typeEnumLabel";
+export type MYLifeStages =
   | ""
   | "MY.lifeStageAdult"
   | "MY.lifeStageNymph"
@@ -68,7 +78,7 @@ export type LifeStages =
   | "MY.lifeStageGall"
   | "MY.lifeStageMarks"
   | "MY.lifeStageTriungulin";
-export type PlantLifeStageEnum =
+export type MYPlantLifeStageEnum =
   | ""
   | "MY.plantLifeStageSterile"
   | "MY.plantLifeStageFertile"
@@ -81,7 +91,7 @@ export type PlantLifeStageEnum =
   | "MY.plantLifeStageRipeFruit"
   | "MY.plantLifeStageDeadSprout"
   | "MY.plantLifeStageSubterranean";
-export type Sexes =
+export type MYSexes =
   | ""
   | "MY.sexM"
   | "MY.sexF"
@@ -91,7 +101,7 @@ export type Sexes =
   | "MY.sexX"
   | "MY.sexE"
   | "MY.sexC";
-export type IntellectualRightsEnum =
+export type MZIntellectualRightsEnum =
   | "MZ.intellectualRightsCC-BY-SA-4.0"
   | "MZ.intellectualRightsCC-BY-NC-4.0"
   | "MZ.intellectualRightsCC-BY-NC-SA-4.0"
@@ -115,17 +125,17 @@ export type IntellectualRightsEnum =
   | "MZ.intellectualRightsCC-BY-NC-ND-4.0"
   | "MY.intellectualRightsCC-BY"
   | "MY.intellectualRightsCC0";
-export type PublicityRestrictionsEnum =
+export type MZPublicityRestrictionsEnum =
   | ""
   | "MZ.publicityRestrictionsPublic"
   | "MZ.publicityRestrictionsProtected"
   | "MZ.publicityRestrictionsPrivate";
-export type BirdSongRecognitionSkillLevelEnum =
+export type MABirdSongRecognitionSkillLevelEnum =
   | "MA.birdSongRecognitionSkillLevelEnum1"
   | "MA.birdSongRecognitionSkillLevelEnum2"
   | "MA.birdSongRecognitionSkillLevelEnum3"
   | "MA.birdSongRecognitionSkillLevelEnum4";
-export type SecureLevels =
+export type MXSecureLevels =
   | ""
   | "MX.secureLevelNone"
   | "MX.secureLevelKM1"
@@ -136,11 +146,11 @@ export type SecureLevels =
   | "MX.secureLevelKM100"
   | "MX.secureLevelHighest"
   | "MX.secureLevelNoShow";
-export type CollectionQualityEnum =
+export type MYCollectionQualityEnum =
   | "MY.collectionQualityEnum3"
   | "MY.collectionQualityEnum2"
   | "MY.collectionQualityEnum1";
-export type CollectionTypes =
+export type MYCollectionTypes =
   | "MY.collectionTypeSpecimens"
   | "MY.collectionTypeLiving"
   | "MY.collectionTypeMonitoring"
@@ -154,7 +164,7 @@ export type CollectionTypes =
   | "MY.collectionTypeOutdoorGardenArea"
   | "MY.collectionTypeGardenSublocation"
   | "MY.collectionTypeTrait";
-export type DataQualityEnum =
+export type MYDataQualityEnum =
   | ""
   | "MY.dataQuality1"
   | "MY.dataQuality2"
@@ -162,32 +172,37 @@ export type DataQualityEnum =
   | "MY.dataQuality4"
   | "MY.dataQuality5"
   | "MY.dataQualityNA";
-export type MetadataStatuses =
+export type MYIntellectualRightsEnum =
+  | "MY.intellectualRightsCC-BY"
+  | "MY.intellectualRightsCC0"
+  | "MY.intellectualRightsPD"
+  | "MY.intellectualRightsARR";
+export type MYMetadataStatuses =
   | ""
   | "MY.metadataStatusPreliminary"
   | "MY.metadataStatusSatisfactory"
   | "MY.metadataStatusComprehensive"
   | "MY.metadataStatusHidden";
-export type PublicationTermsEnum =
+export type MYPublicationTermsEnum =
   | ""
   | "MY.publicationTermsFree"
   | "MY.publicationTermsOfficial"
   | "MY.publicationTermsInternal"
   | "MY.publicationTermsNone";
-export type CompleteListTypeEnum =
+export type MYCompleteListTypeEnum =
   | ""
   | "MY.completeListTypeCompleteWithBreedingStatus"
   | "MY.completeListTypeComplete"
   | "MY.completeListTypeIncomplete";
-export type DatasetTypeEnum =
+export type GXDatasetTypeEnum =
   | "GX.datasetTypeBasic"
   | "GX.datasetTypeProject";
-export type DataOriginEnum =
+export type MYDataOriginEnum =
   | ""
   | "MY.dataOriginPaperForm"
   | "MY.dataOriginWebForm"
   | "MY.dataOriginSpreadsheetFile";
-export type Preservations =
+export type MYPreservations =
   | ""
   | "MY.preservationPressed"
   | "MY.preservationDry"
@@ -226,7 +241,7 @@ export type Preservations =
   | "MY.preservationCast"
   | "MY.preservationPlastinated"
   | "MY.preservationFrozenMinus80CAndEthanolMinus20C";
-export type Statuses =
+export type MYStatuses =
   | ""
   | "MY.statusOk"
   | "MY.statusMissing"
@@ -244,7 +259,7 @@ export type Statuses =
   | "MY.statusNotAvailable"
   | "MY.statusDead"
   | "MY.statusNoVoucherRetained";
-export type VerificationStatuses =
+export type MYVerificationStatuses =
   | ""
   | "MY.verificationStatusOk"
   | "MY.verificationStatusVerify"
@@ -253,7 +268,7 @@ export type VerificationStatuses =
   | "MY.verificationStatusDet"
   | "MY.verificationStatusCheckID"
   | "MY.verificationStatusVerifyCoordinates";
-export type EndangermentReasonEnum =
+export type MKVEndangermentReasonEnum =
   | "MKV.endangermentReasonP"
   | "MKV.endangermentReasonKe"
   | "MKV.endangermentReasonH"
@@ -280,7 +295,7 @@ export type EndangermentReasonEnum =
   | "MKV.endangermentReasonVie"
   | "MKV.endangermentReasonMuu"
   | "MKV.endangermentReasonT";
-export type EventType =
+export type MYEventType =
   | "MY.eventTypeDiscarded"
   | "MY.eventTypeDonating"
   | "MY.eventTypeInventory"
@@ -310,7 +325,7 @@ export type EventType =
   | "MY.eventTypeTZTesting"
   | "MY.eventTypeSeedExchange"
   | "MY.eventTypeTPuska";
-export type CategoryEnum =
+export type MHLCategoryEnum =
   | ""
   | "MHL.categoryGeneric"
   | "MHL.categorySurvey"
@@ -318,19 +333,19 @@ export type CategoryEnum =
   | "MHL.categoryBirdMonitoringSchemes"
   | "MHL.categoryCitizenScience"
   | "MHL.categoryBiomonCompleteLists";
-export type LanguageEnum =
+export type MZLanguageEnum =
   | ""
   | "en"
   | "fi"
   | "sv";
-export type PrintTypeEnum =
+export type MHLPrintTypeEnum =
   | ""
   | "MHL.printTypeLineTransect";
-export type RestrictAccessEnum =
+export type MHLRestrictAccessEnum =
   | ""
   | "MHL.restrictAccessStrict"
   | "MHL.restrictAccessLoose";
-export type ResultServiceTypeEnum =
+export type MHLResultServiceTypeEnum =
   | ""
   | "MHL.resultServiceTypeLineTransect"
   | "MHL.resultServiceTypeNafi"
@@ -340,11 +355,16 @@ export type ResultServiceTypeEnum =
   | "MHL.resultServiceTypeInvasiveControl"
   | "MHL.resultServiceTypeCompleteLists"
   | "MHL.resultServiceTypeWaterBirdCount";
-export type ViewerTypeEnum =
+export type MHLViewerTypeEnum =
   | ""
   | "MHL.viewerTypeLineTransect"
   | "MHL.viewerTypeBirdPointCount";
-export type BatHabitatEnum =
+export type MFPTypeEnum =
+  | ""
+  | "MFP.typeAdmin"
+  | "MFP.typeEditor"
+  | "MFP.typeAccessRequest";
+export type MYBatHabitatEnum =
   | ""
   | "MY.batHabitatYardCityCentre"
   | "MY.batHabitatYardSuburbs"
@@ -362,7 +382,7 @@ export type BatHabitatEnum =
   | "MY.batHabitatStreamOrRiverBank"
   | "MY.batHabitatOldBuildingOrRuins"
   | "MY.batHabitatCountryside";
-export type CoordinateSources =
+export type MYCoordinateSources =
   | ""
   | "MY.coordinateSourceGps"
   | "MY.coordinateSourcePeruskartta"
@@ -374,7 +394,7 @@ export type CoordinateSources =
   | "MY.coordinateSourceLajifi"
   | "MY.coordinateSourceOther"
   | "MY.coordinateSourceUnknown";
-export type CoordinateSystems =
+export type MYCoordinateSystems =
   | ""
   | "MY.coordinateSystemYkj"
   | "MY.coordinateSystemWgs84"
@@ -383,7 +403,7 @@ export type CoordinateSystems =
   | "MY.coordinateSystemEtrs-tm35fin"
   | "MY.coordinateSystemDd"
   | "MY.coordinateSystemDms";
-export type ForestVegetationZones =
+export type MYForestVegetationZones =
   | ""
   | "MY.forestVegetationZone1a"
   | "MY.forestVegetationZone1b"
@@ -396,7 +416,7 @@ export type ForestVegetationZones =
   | "MY.forestVegetationZone4b"
   | "MY.forestVegetationZone4c"
   | "MY.forestVegetationZone4d";
-export type GatheringTypeEnum =
+export type MYGatheringTypeEnum =
   | ""
   | "MY.gatheringTypeForagingArea"
   | "MY.gatheringTypeBreedingAndRestingArea"
@@ -409,7 +429,7 @@ export type GatheringTypeEnum =
   | "MY.gatheringTypeLolifeApplicableZone"
   | "MY.gatheringTypeWaterbirdPoint"
   | "MY.gatheringTypeWaterbirdRound";
-export type GeoreferenceSources =
+export type MYGeoreferenceSources =
   | ""
   | "MY.georeferenceSourceKotka"
   | "MY.georeferenceSourceKarttapaikka"
@@ -426,7 +446,7 @@ export type GeoreferenceSources =
   | "MY.georeferenceSourceGeolocate"
   | "MY.georeferenceSourceOther"
   | "MY.georeferenceSourceUnknown";
-export type HabitatEnum =
+export type MYHabitatEnum =
   | ""
   | "MY.habitatEnumValue1"
   | "MY.habitatEnumValue2"
@@ -522,7 +542,7 @@ export type HabitatEnum =
   | "MY.habitatEnumValue92"
   | "MY.habitatEnumValue93"
   | "MY.habitatEnumValue94";
-export type HabitatAttributesEnum =
+export type MYHabitatAttributesEnum =
   | ""
   | "MY.habitatAttributesEnumValue1"
   | "MY.habitatAttributesEnumValue2"
@@ -546,13 +566,13 @@ export type HabitatAttributesEnum =
   | "MY.habitatAttributesEnumValue20"
   | "MY.habitatAttributesEnumValue21"
   | "MY.habitatAttributesEnumValue22";
-export type InvasiveControlMethodsEnum =
+export type MYInvasiveControlMethodsEnum =
   | ""
   | "MY.invasiveControlMethodsMechanical"
   | "MY.invasiveControlMethodsChemical"
   | "MY.invasiveControlMethodsBiological"
   | "MY.invasiveControlMethodsOther";
-export type MothSamplingMethodEnum =
+export type MYMothSamplingMethodEnum =
   | ""
   | "MY.mothSamplingMethodJA500"
   | "MY.mothSamplingMethodLHG"
@@ -560,7 +580,7 @@ export type MothSamplingMethodEnum =
   | "MY.mothSamplingMethodMAARY"
   | "MY.mothSamplingMethodPR125"
   | "MY.mothSamplingMethodPR250";
-export type PredominantTreeEnum =
+export type MYPredominantTreeEnum =
   | ""
   | "MX.37819"
   | "MX.37812"
@@ -580,7 +600,7 @@ export type PredominantTreeEnum =
   | "MX.37976"
   | "MX.39122"
   | "MX.37815";
-export type SamplingMethods =
+export type MYSamplingMethods =
   | ""
   | "MY.samplingMethodCarnet"
   | "MY.samplingMethodFeromonetrap"
@@ -630,14 +650,14 @@ export type SamplingMethods =
   | "MY.samplingMethodAquaticEmergenceTrap"
   | "MY.samplingMethodWaterSieve"
   | "MY.samplingMethodOther";
-export type ArtificialLightEnum =
+export type MYArtificialLightEnum =
   | ""
   | "MY.artificialLightEnum1"
   | "MY.artificialLightEnum2"
   | "MY.artificialLightEnum3"
   | "MY.artificialLightEnum4"
   | "MY.artificialLightEnum5";
-export type CloudCoverOktaEnum =
+export type MYCloudCoverOktaEnum =
   | ""
   | "MY.cloudCoverOktaEnumUnknown"
   | "MY.cloudCoverOktaEnum0"
@@ -649,26 +669,26 @@ export type CloudCoverOktaEnum =
   | "MY.cloudCoverOktaEnum6"
   | "MY.cloudCoverOktaEnum7"
   | "MY.cloudCoverOktaEnum8";
-export type RainIntensityEnum =
+export type MYRainIntensityEnum =
   | ""
   | "MY.rainIntensityEnumNoRain"
   | "MY.rainIntensityEnumLightRain"
   | "MY.rainIntensityEnumModerateRain"
   | "MY.rainIntensityEnumHeavyRain"
   | "MY.rainIntensityEnumTorrentialRain";
-export type BatCollectorEnum =
+export type MYBatCollectorEnum =
   | ""
   | "MY.batCollectorAlone"
   | "MY.batCollectorWithProjectGroupMember"
   | "MY.batCollectorSomeoneElse";
-export type LolifeSiteClassificationEnum =
+export type MYLolifeSiteClassificationEnum =
   | ""
   | "MY.lolifeSiteClassificationExcellent"
   | "MY.lolifeSiteClassificationSuboptimal"
   | "MY.lolifeSiteClassificationPossible"
   | "MY.lolifeSiteClassificationCurrentlyUnsuitable"
   | "MY.lolifeSiteClassificationPermanentlyUnsuitable";
-export type PointCountHabitatEnum =
+export type MYPointCountHabitatEnum =
   | ""
   | "MY.pointCountHabitat0"
   | "MY.pointCountHabitat1"
@@ -688,7 +708,7 @@ export type PointCountHabitatEnum =
   | "MY.pointCountHabitat15"
   | "MY.pointCountHabitat16"
   | "MY.pointCountHabitat17";
-export type SykeButterFlyCensusWindEnum =
+export type MYSykeButterFlyCensusWindEnum =
   | ""
   | "MY.sykeButterFlyCensusWindEnumUnknown"
   | "MY.sykeButterFlyCensusWindEnum0"
@@ -698,14 +718,14 @@ export type SykeButterFlyCensusWindEnum =
   | "MY.sykeButterFlyCensusWindEnum4"
   | "MY.sykeButterFlyCensusWindEnum5"
   | "MY.sykeButterFlyCensusWindEnum6";
-export type WaterbirdCensusPeriodEnum =
+export type MYWaterbirdCensusPeriodEnum =
   | ""
   | "MY.waterbirdCensusPeriodEnum1"
   | "MY.waterbirdCensusPeriodEnum2"
   | "MY.waterbirdCensusPeriodEnumJuvenile"
   | "MY.waterbirdCensusPeriodEnumAdditional"
   | "MY.waterbirdCensusPeriodEnumCombined";
-export type WaterbirdHabitatEnum =
+export type MYWaterbirdHabitatEnum =
   | ""
   | "MY.waterbirdHabitatEnum1"
   | "MY.waterbirdHabitatEnum2"
@@ -717,27 +737,27 @@ export type WaterbirdHabitatEnum =
   | "MY.waterbirdHabitatEnum8"
   | "MY.waterbirdHabitatEnum9"
   | "MY.waterbirdHabitatEnum10";
-export type SpeciesAbundanceEnum =
+export type WBCSpeciesAbundanceEnum =
   | ""
   | "WBC.speciesAbundanceEnum0"
   | "WBC.speciesAbundanceEnum1"
   | "WBC.speciesAbundanceEnum2"
   | "WBC.speciesAbundanceEnum3";
-export type CloudAndRainEnum =
+export type WBCCloudAndRainEnum =
   | ""
   | "WBC.cloudAndRainEnum0"
   | "WBC.cloudAndRainEnum1"
   | "WBC.cloudAndRainEnum2"
   | "WBC.cloudAndRainEnum3"
   | "WBC.cloudAndRainEnum4";
-export type IceCoverEnum =
+export type WBCIceCoverEnum =
   | ""
   | "WBC.iceCoverEnum0"
   | "WBC.iceCoverEnum1"
   | "WBC.iceCoverEnum2"
   | "WBC.iceCoverEnum3"
   | "WBC.iceCoverEnum4";
-export type BerriesAndConesEnum =
+export type WBCBerriesAndConesEnum =
   | ""
   | "WBC.berriesAndConesEnum0"
   | "WBC.berriesAndConesEnum1"
@@ -746,13 +766,13 @@ export type BerriesAndConesEnum =
   | "WBC.berriesAndConesEnum4"
   | "WBC.berriesAndConesEnum5"
   | "WBC.berriesAndConesEnum6";
-export type SnowAndIceOnTreesEnum =
+export type WBCSnowAndIceOnTreesEnum =
   | ""
   | "WBC.snowAndIceOnTreesEnum0"
   | "WBC.snowAndIceOnTreesEnum1"
   | "WBC.snowAndIceOnTreesEnum2"
   | "WBC.snowAndIceOnTreesEnum3";
-export type SnowCoverEnum =
+export type WBCSnowCoverEnum =
   | ""
   | "WBC.snowCoverEnum0"
   | "WBC.snowCoverEnum1"
@@ -763,19 +783,19 @@ export type SnowCoverEnum =
   | "WBC.snowCoverEnum6"
   | "WBC.snowCoverEnum7"
   | "WBC.snowCoverEnum8";
-export type TypeOfSnowCoverEnum =
+export type WBCTypeOfSnowCoverEnum =
   | ""
   | "WBC.typeOfSnowCoverEnum0"
   | "WBC.typeOfSnowCoverEnum1"
   | "WBC.typeOfSnowCoverEnum2";
-export type VisibilityEnum =
+export type WBCVisibilityEnum =
   | ""
   | "WBC.visibilityEnum0"
   | "WBC.visibilityEnum1"
   | "WBC.visibilityEnum2"
   | "WBC.visibilityEnum3"
   | "WBC.visibilityEnum4";
-export type WaterbodiesEnum =
+export type WBCWaterbodiesEnum =
   | ""
   | "WBC.waterbodiesEnum0"
   | "WBC.waterbodiesEnum1"
@@ -783,21 +803,116 @@ export type WaterbodiesEnum =
   | "WBC.waterbodiesEnum3"
   | "WBC.waterbodiesEnum4"
   | "WBC.waterbodiesEnum5";
-export type WayOfTravelEnum =
+export type WBCWayOfTravelEnum =
   | ""
   | "WBC.wayOfTravelEnum0"
   | "WBC.wayOfTravelEnum1"
   | "WBC.wayOfTravelEnum2"
   | "WBC.wayOfTravelEnum3"
   | "WBC.wayOfTravelEnum9";
-export type WindEnum =
+export type WBCWindEnum =
   | ""
   | "WBC.windEnum0"
   | "WBC.windEnum1"
   | "WBC.windEnum2"
   | "WBC.windEnum3"
   | "WBC.windEnum4";
-export type HabitatSpecificTypeEnum =
+export type MKVHabitatEnum =
+  | "MKV.habitatM"
+  | "MKV.habitatMk"
+  | "MKV.habitatMkk"
+  | "MKV.habitatMkt"
+  | "MKV.habitatMl"
+  | "MKV.habitatMlt"
+  | "MKV.habitatMlk"
+  | "MKV.habitatMt"
+  | "MKV.habitatMtl"
+  | "MKV.habitatS"
+  | "MKV.habitatSl"
+  | "MKV.habitatSla"
+  | "MKV.habitatSlr"
+  | "MKV.habitatSlk"
+  | "MKV.habitatSn"
+  | "MKV.habitatSnk"
+  | "MKV.habitatSnr"
+  | "MKV.habitatSr"
+  | "MKV.habitatSrk"
+  | "MKV.habitatSrr"
+  | "MKV.habitatSk"
+  | "MKV.habitatSkk"
+  | "MKV.habitatSkr"
+  | "MKV.habitatV"
+  | "MKV.habitatVi"
+  | "MKV.habitatVik"
+  | "MKV.habitatVim"
+  | "MKV.habitatVis"
+  | "MKV.habitatVih"
+  | "MKV.habitatVie"
+  | "MKV.habitatVip"
+  | "MKV.habitatVs"
+  | "MKV.habitatVsk"
+  | "MKV.habitatVsr"
+  | "MKV.habitatVa"
+  | "MKV.habitatVj"
+  | "MKV.habitatVp"
+  | "MKV.habitatVk"
+  | "MKV.habitatVl"
+  | "MKV.habitatR"
+  | "MKV.habitatRi"
+  | "MKV.habitatRim"
+  | "MKV.habitatRimt"
+  | "MKV.habitatRiml"
+  | "MKV.habitatRip"
+  | "MKV.habitatRin"
+  | "MKV.habitatRil"
+  | "MKV.habitatRir"
+  | "MKV.habitatRis"
+  | "MKV.habitatRih"
+  | "MKV.habitatRit"
+  | "MKV.habitatRj"
+  | "MKV.habitatRjm"
+  | "MKV.habitatRjmt"
+  | "MKV.habitatRjml"
+  | "MKV.habitatRjp"
+  | "MKV.habitatRjn"
+  | "MKV.habitatRjl"
+  | "MKV.habitatRjr"
+  | "MKV.habitatRjs"
+  | "MKV.habitatRjh"
+  | "MKV.habitatRjt"
+  | "MKV.habitatK"
+  | "MKV.habitatKk"
+  | "MKV.habitatKs"
+  | "MKV.habitatKr"
+  | "MKV.habitatKl"
+  | "MKV.habitatKm"
+  | "MKV.habitatT"
+  | "MKV.habitatTk"
+  | "MKV.habitatTn"
+  | "MKV.habitatTu"
+  | "MKV.habitatTp"
+  | "MKV.habitatTl"
+  | "MKV.habitatTll"
+  | "MKV.habitatTlk"
+  | "MKV.habitatTls"
+  | "MKV.habitatTlr"
+  | "MKV.habitatTlä"
+  | "MKV.habitatTs"
+  | "MKV.habitatTj"
+  | "MKV.habitatTv"
+  | "MKV.habitatTa"
+  | "MKV.habitatI"
+  | "MKV.habitatIn"
+  | "MKV.habitatIt"
+  | "MKV.habitatIh"
+  | "MKV.habitatIk"
+  | "MKV.habitatIo"
+  | "MKV.habitatIv"
+  | "MKV.habitatIp"
+  | "MKV.habitatIu"
+  | "MKV.habitatIr"
+  | "MKV.habitatU";
+export type MKVHabitatSpecificTypeEnum =
   | ""
   | "MKV.habitatSpecificTypeV"
   | "MKV.habitatSpecificTypeH"
@@ -809,12 +924,12 @@ export type HabitatSpecificTypeEnum =
   | "MKV.habitatSpecificTypeKA"
   | "MKV.habitatSpecificTypeKE"
   | "MKV.habitatSpecificTypeCA";
-export type DetMethodEnum =
+export type MYDetMethodEnum =
   | ""
   | "MY.detMethodFreshSample"
   | "MY.detMethodMicroscopy"
   | "MY.detMethodPhoto";
-export type IdentificationBasisEnum =
+export type MYIdentificationBasisEnum =
   | ""
   | "MY.identificationBasisDNA"
   | "MY.identificationBasisGenitals"
@@ -828,7 +943,7 @@ export type IdentificationBasisEnum =
   | "MY.identificationBasisPreservedSpecimen"
   | "MY.identificationBasisFreshSpecimen"
   | "MY.identificationBasisMedia";
-export type InfraRanks =
+export type MYInfraRanks =
   | ""
   | "MY.infraRankSsp"
   | "MY.infraRankVar"
@@ -845,7 +960,7 @@ export type InfraRanks =
   | "MY.infraRankNothosubspecies"
   | "MY.infraRankCultivarGroup"
   | "MY.infraRankFsp";
-export type TaxonRankEnum =
+export type MXTaxonRankEnum =
   | ""
   | "MX.superdomain"
   | "MX.domain"
@@ -905,20 +1020,20 @@ export type TaxonRankEnum =
   | "MX.cultivar"
   | "MX.group"
   | "MX.grex";
-export type SideEnum =
+export type MMSideEnum =
   | ""
   | "MM.sideUpside"
   | "MM.sideDownside";
-export type Publicities =
+export type KEPublicities =
   | "KE.inUseByLuomus"
   | "KE.inPublicUse"
   | "KE.adminOnly"
   | "KE.thirdParty";
-export type States =
+export type KEStates =
   | "KE.productionState"
   | "KE.developmentState"
   | "KE.abandonedState";
-export type Types =
+export type KETypes =
   | "KE.webApplication"
   | "KE.webService"
   | "KE.softwareComponent"
@@ -927,23 +1042,23 @@ export type Types =
   | "KE.hardware"
   | "KE.server"
   | "KE.mobileApp";
-export type DdReasonEnum =
+export type MKVDdReasonEnum =
   | ""
   | "MKV.ddReasonIncompleteSpatialData"
   | "MKV.ddReasonIncompleteTaxonomicData"
   | "MKV.ddReasonIncompleteOtherData";
-export type ExternalPopulationImpactOnRedListStatusEnum =
+export type MKVExternalPopulationImpactOnRedListStatusEnum =
   | ""
   | "MKV.externalPopulationImpactOnRedListStatusEnumMinus1"
   | "MKV.externalPopulationImpactOnRedListStatusEnumMinus2"
   | "MKV.externalPopulationImpactOnRedListStatusEnumPlus1"
   | "MKV.externalPopulationImpactOnRedListStatusEnumPlus2";
-export type PossiblyREEnum =
+export type MKVPossiblyREEnum =
   | ""
   | "MX.iucnRE"
   | "MX.iucnEW"
   | "MX.iucnEX";
-export type ReasonForStatusChangeEnum =
+export type MKVReasonForStatusChangeEnum =
   | ""
   | "MKV.reasonForStatusChangeGenuine"
   | "MKV.reasonForStatusChangeGenuineBeforePreviousEvaluation"
@@ -953,7 +1068,7 @@ export type ReasonForStatusChangeEnum =
   | "MKV.reasonForStatusChangeError"
   | "MKV.reasonForStatusChangeErroneousInformation"
   | "MKV.reasonForStatusChangeOther";
-export type IucnStatuses =
+export type MXIucnStatuses =
   | ""
   | "MX.iucnEX"
   | "MX.iucnEW"
@@ -966,11 +1081,11 @@ export type IucnStatuses =
   | "MX.iucnDD"
   | "MX.iucnNA"
   | "MX.iucnNE";
-export type StateEnum =
+export type MKVStateEnum =
   | "MKV.stateReady"
   | "MKV.stateReadyForComments"
   | "MKV.stateStarted";
-export type TypeOfOccurrenceEnum =
+export type MXTypeOfOccurrenceEnum =
   | ""
   | "MX.doesNotOccur"
   | "MX.typeOfOccurrenceOccurs"
@@ -1017,19 +1132,19 @@ export type TypeOfOccurrenceEnum =
   | "MX.typeOfOccurrenceBirdLifeCategoryD"
   | "MX.typeOfOccurrenceBirdLifeCategoryE"
   | "MX.typeOfOccurrenceOccursBasedOnOccurrences";
-export type AccessibilityEnum =
+export type MNPAccessibilityEnum =
   | ""
   | "MNP.accessibilityEasy"
   | "MNP.accessibilityModerate"
   | "MNP.accessibilityDifficult";
-export type PriorityEnum =
+export type MNPPriorityEnum =
   | ""
   | "MNP.priority1"
   | "MNP.priority2"
   | "MNP.priority3"
   | "MNP.priority4"
   | "MNP.priority5";
-export type TagEnum =
+export type MNPTagEnum =
   | ""
   | "MNP.tagAccessibilityEasy"
   | "MNP.tagAccessibilityModerate"
@@ -1040,19 +1155,19 @@ export type TagEnum =
   | "MNP.tagHabitatMire"
   | "MNP.tagHabitatMountain"
   | "MNP.tagSuitable";
-export type NotificationReasonEnum =
+export type MHNNotificationReasonEnum =
   | ""
   | "MHN.notificationReasonOwnDocumentAnnotated"
   | "MHN.notificationReasonAnnotatedDocumentAnnotated";
-export type Explanations =
+export type MOSABBREVIATIONExplanations =
   | ""
   | "MOS.abbreviation-explanationIndexHerbariorum"
   | "MOS.abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld";
-export type PermitStatusEnum =
+export type HRAPermitStatusEnum =
   | ""
   | "HRA.permitStatusAvailable"
   | "HRA.permitStatusNotRequired";
-export type PermitTypeEnum =
+export type HRAPermitTypeEnum =
   | ""
   | "HRA.permitTypePIC"
   | "HRA.permitTypeMAT"
@@ -1061,7 +1176,7 @@ export type PermitTypeEnum =
   | "HRA.permitTypeExportPermit"
   | "HRA.permitTypeOther"
   | "HRA.permitTypeMemorandumOfUnderstanding";
-export type Roles =
+export type MARoles =
   | ""
   | "MA.admin"
   | "MA.securePortalUser"
@@ -1075,13 +1190,13 @@ export type Roles =
   | "MA.luomusSpaceCalendarUser"
   | "MA.luomusSpaceOpeningTimesUser"
   | "MA.taxonIdEditor";
-export type RoleKotkaEnum =
+export type MARoleKotkaEnum =
   | ""
   | "MA.admin"
   | "MA.advanced"
   | "MA.member"
   | "MA.guest";
-export type PreparationMaterialsEnum =
+export type MFPreparationMaterialsEnum =
   | ""
   | "MF.preparationMaterialsAcetone"
   | "MF.preparationMaterialsAmmonia"
@@ -1106,7 +1221,7 @@ export type PreparationMaterialsEnum =
   | "MF.preparationMaterialsSaltExtraction"
   | "MF.preparationMaterialsDNeasyPlantMiniKit"
   | "MF.preparationMaterialsMagAttractHMWDNAKit";
-export type PreparationProcessEnum =
+export type MFPreparationProcessEnum =
   | ""
   | "MF.preparationProcessTanning"
   | "MF.preparationProcessEnzymaticMaceration"
@@ -1114,27 +1229,27 @@ export type PreparationProcessEnum =
   | "MF.preparationProcessBeetleCleaning"
   | "MF.preparationProcessPEG"
   | "MF.preparationProcessFreezeDrying";
-export type BirdwatchingActivityLevelEnum =
+export type MABirdwatchingActivityLevelEnum =
   | ""
   | "MA.birdwatchingActivityLevelEnum1"
   | "MA.birdwatchingActivityLevelEnum2"
   | "MA.birdwatchingActivityLevelEnum3"
   | "MA.birdwatchingActivityLevelEnum4";
-export type FinnishBirdSongRecognitionSkillLevelEnum =
+export type MAFinnishBirdSongRecognitionSkillLevelEnum =
   | ""
   | "MA.finnishBirdSongRecognitionSkillLevelEnum1"
   | "MA.finnishBirdSongRecognitionSkillLevelEnum2"
   | "MA.finnishBirdSongRecognitionSkillLevelEnum3"
   | "MA.finnishBirdSongRecognitionSkillLevelEnum4";
-export type ElutionMediumEnum =
+export type MFElutionMediumEnum =
   | ""
   | "MF.elutionMediumUltrapureWater"
   | "MF.elutionMediumElutionBuffer";
-export type IndividualsInPreparationEnum =
+export type MFIndividualsInPreparationEnum =
   | ""
   | "MF.individualsInPreparationMultiple"
   | "MF.individualsInPreparationSingle";
-export type MaterialEnum =
+export type MFMaterialEnum =
   | ""
   | "MF.materialBirdStudySkin"
   | "MF.materialWing"
@@ -1174,7 +1289,7 @@ export type MaterialEnum =
   | "MF.materialNest"
   | "MF.materialNestMaterial"
   | "MF.materialOther";
-export type PreparationTypeEnum =
+export type MFPreparationTypeEnum =
   | "MF.preparationTypeSkin"
   | "MF.preparationTypeSkeletal"
   | "MF.preparationTypeMount"
@@ -1186,21 +1301,21 @@ export type PreparationTypeEnum =
   | "MF.preparationTypeEgg"
   | "MF.preparationTypeNest"
   | "MF.preparationTypeOther";
-export type QualityEnum =
+export type MFQualityEnum =
   | ""
   | "MF.qualityLow"
   | "MF.qualityMedium"
   | "MF.qualityHigh";
-export type QualityCheckMethodEnum =
+export type MFQualityCheckMethodEnum =
   | ""
   | "MF.qualityCheckMethodNanoDrop"
   | "MF.qualityCheckMethodCubit";
-export type AvailableForGeneticResearchEnum =
+export type HRXAvailableForGeneticResearchEnum =
   | ""
   | "HRX.availableForGeneticResearchYes"
   | "HRX.availableForGeneticResearchWithRestrictions"
   | "HRX.availableForGeneticResearchNo";
-export type GeneticResourceTypeEnum =
+export type HRXGeneticResourceTypeEnum =
   | ""
   | "HRX.geneticResourceTypeAnimal"
   | "HRX.geneticResourceTypePlant"
@@ -1208,18 +1323,18 @@ export type GeneticResourceTypeEnum =
   | "HRX.geneticResourceTypeMicrobe"
   | "HRX.geneticResourceTypeSoil"
   | "HRX.geneticResourceTypeAqua";
-export type ResourceImportedEnum =
+export type HRXResourceImportedEnum =
   | ""
   | "HRX.resourceImportedGeneticResources"
   | "HRX.resourceImportedTraditionalKnowledge"
   | "HRX.resourceImportedBoth";
-export type StatusEnum =
+export type HRXStatusEnum =
   | ""
   | "HRX.statusInProcess"
   | "HRX.statusOutstanding"
   | "HRX.statusClosed"
   | "HRX.statusOnLoan";
-export type TransportMethodEnum =
+export type HRXTransportMethodEnum =
   | ""
   | "HRX.transportMethodPriority"
   | "HRX.transportMethodEconomy"
@@ -1227,10 +1342,31 @@ export type TransportMethodEnum =
   | "HRX.transportMethodCarried"
   | "HRX.transportMethodOther"
   | "HRX.transportMethodImage";
-export type EventTypeEnum =
+export type HRXTypeEnum =
+  | "HRX.typeLoanIncoming"
+  | "HRX.typeLoanOutgoing"
+  | "HRX.typeGiftIncoming"
+  | "HRX.typeGiftOutgoing"
+  | "HRX.typeExchangeIncoming"
+  | "HRX.typeExchangeOutgoing"
+  | "HRX.typeFieldCollection"
+  | "HRX.typeImportNotice"
+  | "HRX.typeABSNegotiations"
+  | "HRX.typeVirtualLoanOutgoing"
+  | "HRX.typeDeaccession";
+export type HRXEventTypeEnum =
   | "HRX.eventTypeReturn"
   | "HRX.eventTypeAddition";
-export type InvasiveSpeciesMainGroups =
+export type MMANTypeEnum =
+  | ""
+  | "MMAN.typeCheck"
+  | "MMAN.typeAdmin"
+  | "MMAN.typeInfo"
+  | "MMAN.typeInvasive"
+  | "MMAN.typeCensus"
+  | "MMAN.typeNegativeQuality"
+  | "MMAN.typePositiveQuality";
+export type HBEInvasiveSpeciesMainGroups =
   | ""
   | "HBE.MG2"
   | "HBE.MG3"
@@ -1251,7 +1387,7 @@ export type InvasiveSpeciesMainGroups =
   | "HBE.MG18"
   | "HBE.MG19"
   | "HBE.MG20";
-export type AdminStatusEnum =
+export type MXAdminStatusEnum =
   | ""
   | "MX.finlex160_1997_appendix4_2021"
   | "MX.finlex160_1997_appendix4_specialInterest_2021"
@@ -1317,12 +1453,12 @@ export type AdminStatusEnum =
   | "MX.finlex160_1997_appendix1"
   | "MX.finlex160_1997_appendix4"
   | "MX.finlex160_1997_appendix4_specialInterest";
-export type InvasiveSpeciesCategories =
+export type MXInvasiveSpeciesCategories =
   | ""
   | "MX.invasiveExtremelyDangerous"
   | "MX.invasiveDangerous"
   | "MX.invasiveWatchlist";
-export type InvasiveSpeciesEstablishmentStatuses =
+export type MXInvasiveSpeciesEstablishmentStatuses =
   | ""
   | "MX.invasiveEstablished"
   | "MX.invasiveSporadic"
@@ -1330,7 +1466,7 @@ export type InvasiveSpeciesEstablishmentStatuses =
   | "MX.invasiveEstablishmentUnknown"
   | "MX.invasiveEstablishmentAccidental"
   | "MX.invasiveNonWild";
-export type TaxonSetEnum =
+export type MXTaxonSetEnum =
   | ""
   | "MX.taxonSetSykeButterflyCensusPapilionoidea"
   | "MX.taxonSetSykeButterflyCensusOther"
@@ -1354,7 +1490,7 @@ export type TaxonSetEnum =
   | "MX.taxonSetBiomonCompleteListBracketFungi"
   | "MX.taxonSetBiomonCompleteListPracticalFungi"
   | "MX.taxonSetSykeMacrozoobenthos";
-export type OccurrenceInFinlandEnum =
+export type MXOccurrenceInFinlandEnum =
   | ""
   | "MX.doesNotOccur"
   | "MX.occurrenceInFinlandPublished"
@@ -1365,11 +1501,11 @@ export type OccurrenceInFinlandEnum =
   | "MX.occurrenceInFinlandObservedUncertain"
   | "MX.occurrenceInFinlandPublishedError"
   | "MX.occurrenceInFinlandPresumed";
-export type TaxonCensusEnum =
+export type MYTaxonCensusEnum =
   | "MY.taxonCensusTypeCounted"
   | "MY.taxonCensusTypeEstimated"
   | "MY.taxonCensusTypeNotCounted";
-export type TaxonInteractionEnum =
+export type MITaxonInteractionEnum =
   | "MI.taxonInteractionNeutralism"
   | "MI.taxonInteractionAntagonism"
   | "MI.taxonInteractionCommensalism"
@@ -1380,7 +1516,20 @@ export type TaxonInteractionEnum =
   | "MI.taxonInteractionParasitism"
   | "MI.taxonInteractionEctoparasitism"
   | "MI.taxonInteractionEndoparasitism";
-export type LocalDepartments =
+export type HRAAvailableForGeneticResearchEnum =
+  | ""
+  | "HRA.availableForGeneticResearchYes"
+  | "HRA.availableForGeneticResearchWithRestrictions"
+  | "HRA.availableForGeneticResearchNo";
+export type HRAGeneticResourceTypeEnum =
+  | ""
+  | "HRA.geneticResourceTypeAnimal"
+  | "HRA.geneticResourceTypePlant"
+  | "HRA.geneticResourceTypeFungus"
+  | "HRA.geneticResourceTypeMicrobe"
+  | "HRA.geneticResourceTypeSoil"
+  | "HRA.geneticResourceTypeAqua";
+export type HRALocalDepartments =
   | ""
   | "HRA.localDepartmentDipteraHymenoptera"
   | "HRA.localDepartmentLepidopteraColeoptera"
@@ -1390,7 +1539,12 @@ export type LocalDepartments =
   | "HRA.localDepartmentGarden"
   | "HRA.localDepartmentMycology"
   | "HRA.localDepartmentVascularPlants";
-export type SentTypes =
+export type HRAResourceImportedEnum =
+  | ""
+  | "HRA.resourceImportedGeneticResources"
+  | "HRA.resourceImportedTraditionalKnowledge"
+  | "HRA.resourceImportedBoth";
+export type HRASentTypes =
   | ""
   | "HRA.sentTypePriority"
   | "HRA.sentTypeEconomy"
@@ -1398,12 +1552,12 @@ export type SentTypes =
   | "HRA.sentTypeCarried"
   | "HRA.sentTypeOther"
   | "HRA.sentTypeImage";
-export type TransactionStatuses =
+export type HRATransactionStatuses =
   | ""
   | "HRA.transactionStatusInProcess"
   | "HRA.transactionStatusOutstanding"
   | "HRA.transactionStatusClosed";
-export type TransactionTypes =
+export type HRATransactionTypes =
   | "HRA.transactionTypeLoanIncoming"
   | "HRA.transactionTypeGiftIncoming"
   | "HRA.transactionTypeExchangeIncoming"
@@ -1414,19 +1568,27 @@ export type TransactionTypes =
   | "HRA.transactionTypeImportNotice"
   | "HRA.transactionTypeABSNegotiations"
   | "HRA.transactionTypeVirtualLoanOutgoing";
-export type SentByEnum =
+export type HRAAEventTypeEnum =
+  | "HRAA.eventTypeSend"
+  | "HRAA.eventTypeReceive"
+  | "HRAA.eventTypeOther";
+export type HRAASentByEnum =
   | ""
   | "HRAA.sentByPriority"
   | "HRAA.sentByEconomy"
   | "HRAA.sentByCourier"
   | "HRAA.sentByCarried"
   | "HRAA.sentByOther";
-export type ItemTypeEnum =
+export type HRABItemTypeEnum =
   | "HRAB.itemTypeSpecimen"
   | "HRAB.itemTypeSpecimenBatch"
   | "HRAB.itemTypeImage"
   | "HRAB.itemTypeOther";
-export type TypeStatuses =
+export type HRABStatusEnum =
+  | "HRAB.statusOk"
+  | "HRAB.statusMissing"
+  | "HRAB.statusDamaged";
+export type MYTypeStatuses =
   | ""
   | "MY.typeStatusType"
   | "MY.typeStatusHolotype"
@@ -1453,13 +1615,13 @@ export type TypeStatuses =
   | "MY.typeStatusObscure"
   | "MY.typeStatusTypeStrain"
   | "MY.typeStatusPathovarReferenceStrain";
-export type TypeVerifications =
+export type MYTypeVerifications =
   | ""
   | "MY.typeVerificationVerified"
   | "MY.typeVerificationUnverified"
   | "MY.typeVerificationProbable"
   | "MY.typeVerificationDoubtful";
-export type AbundanceUnitEnum =
+export type MYAbundanceUnitEnum =
   | ""
   | "MY.abundanceUnitIndividualCount"
   | "MY.abundanceUnitPairCount"
@@ -1483,7 +1645,7 @@ export type AbundanceUnitEnum =
   | "MY.abundanceUnitSquareM"
   | "MY.abundanceUnitRelativeDensity"
   | "MY.abundanceUnitOccursDoesNotOccur";
-export type AtlasCodeEnum =
+export type MYAtlasCodeEnum =
   | ""
   | "MY.atlasCodeEnum1"
   | "MY.atlasCodeEnum2"
@@ -1506,12 +1668,12 @@ export type AtlasCodeEnum =
   | "MY.atlasCodeEnum8"
   | "MY.atlasCodeEnum81"
   | "MY.atlasCodeEnum82";
-export type BatBehaviorEnum =
+export type MYBatBehaviorEnum =
   | ""
   | "MY.batBehaviorHibernating"
   | "MY.batBehaviorRoosting"
   | "MY.batBehaviorHunting";
-export type BirdAgeEnum =
+export type MYBirdAgeEnum =
   | ""
   | "MY.birdAgePp"
   | "MY.birdAgePm"
@@ -1532,7 +1694,7 @@ export type BirdAgeEnum =
   | "MY.birdAge7Kv"
   | "MY.birdAgePlus8Kv"
   | "MY.birdAge8Kv";
-export type BirdPlumageEnum =
+export type MYBirdPlumageEnum =
   | ""
   | "MY.birdPlumageAd"
   | "MY.birdPlumageEijp"
@@ -1546,14 +1708,14 @@ export type BirdPlumageEnum =
   | "MY.birdPlumageVp"
   | "MY.birdPlumagePep"
   | "MY.birdPlumageSs";
-export type DistanceEnum =
+export type MYDistanceEnum =
   | ""
   | "MY.distanceOverFlight"
   | "MY.distanceNear"
   | "MY.distanceQuiteFar"
   | "MY.distanceFar"
   | "MY.distanceVeryFar";
-export type EpochOrSeries =
+export type MYEpochOrSeries =
   | ""
   | "MY.epochOrSeriesCambrian"
   | "MY.epochOrSeriesCarboniferous"
@@ -1568,7 +1730,7 @@ export type EpochOrSeries =
   | "MY.epochOrSeriesSilurian"
   | "MY.epochOrSeriesTertiary"
   | "MY.epochOrSeriesTriassic";
-export type FruitTypeEnum =
+export type MYFruitTypeEnum =
   | ""
   | "MY.fruitTypeAchene"
   | "MY.fruitTypeBerry"
@@ -1583,7 +1745,7 @@ export type FruitTypeEnum =
   | "MY.fruitTypePome"
   | "MY.fruitTypeSchizocarp"
   | "MY.fruitTypeSiliqua";
-export type IndirectObservationTypeEnum =
+export type MYIndirectObservationTypeEnum =
   | ""
   | "MY.indirectObservationTypeFeces"
   | "MY.indirectObservationTypeSnowTracks"
@@ -1591,13 +1753,13 @@ export type IndirectObservationTypeEnum =
   | "MY.indirectObservationTypeFeasting"
   | "MY.indirectObservationTypeFoodStock"
   | "MY.indirectObservationTypeNone";
-export type MicrobiologicalRiskGroupEnum =
+export type MYMicrobiologicalRiskGroupEnum =
   | ""
   | "MY.microbiologicalRiskGroup1"
   | "MY.microbiologicalRiskGroup2"
   | "MY.microbiologicalRiskGroup3"
   | "MY.microbiologicalRiskGroup4";
-export type MovingDirectionEnum =
+export type MYMovingDirectionEnum =
   | ""
   | "MY.movingDirectionN"
   | "MY.movingDirectionNNE"
@@ -1615,11 +1777,11 @@ export type MovingDirectionEnum =
   | "MY.movingDirectionWNW"
   | "MY.movingDirectionNW"
   | "MY.movingDirectionNNW";
-export type NativeStatusEnum =
+export type MYNativeStatusEnum =
   | ""
   | "MY.native"
   | "MY.nonNative";
-export type NestTypeEnum =
+export type MYNestTypeEnum =
   | ""
   | "MY.nestTypeTreeCavity"
   | "MY.nestTypeTwig"
@@ -1627,7 +1789,7 @@ export type NestTypeEnum =
   | "MY.nestTypeBuilding"
   | "MY.nestTypeGroundCavity"
   | "MY.nestTypeOther";
-export type PlantStatusCodeEnum =
+export type MYPlantStatusCodeEnum =
   | ""
   | "MY.plantStatusCodeL"
   | "MY.plantStatusCodeA"
@@ -1659,7 +1821,7 @@ export type PlantStatusCodeEnum =
   | "MY.plantStatusCodeH"
   | "MY.plantStatusCodeG"
   | "MY.plantStatusCodeF";
-export type ProvenanceEnum =
+export type MYProvenanceEnum =
   | ""
   | "MY.provenanceUnknown"
   | "MY.provenanceCultivated"
@@ -1669,7 +1831,7 @@ export type ProvenanceEnum =
   | "MY.provenanceWildSourceUnsure"
   | "MY.provenanceEscapedCultivated"
   | "MY.provenancePropagule";
-export type RecordBases =
+export type MYRecordBases =
   | ""
   | "MY.recordBasisPreservedSpecimen"
   | "MY.recordBasisHumanObservation"
@@ -1696,7 +1858,7 @@ export type RecordBases =
   | "MY.recordBasisMicrobialSpecimen"
   | "MY.recordBasisLivingSpecimen"
   | "MY.recordBasisLiterature";
-export type RecordPartsEnum =
+export type MYRecordPartsEnum =
   | ""
   | "MY.recordPartsBones"
   | "MY.recordPartsAntler"
@@ -1730,12 +1892,12 @@ export type RecordPartsEnum =
   | "MY.recordPartsTissueCulture"
   | "MY.recordPartsMount"
   | "My.recordPartsSkullAndBones";
-export type SeedMaturityEnum =
+export type MYSeedMaturityEnum =
   | ""
   | "MY.seedMaturityImmature"
   | "MY.seedMaturityMature"
   | "MY.seedMaturityMixed";
-export type SeedMorphologyEnum =
+export type MYSeedMorphologyEnum =
   | ""
   | "MY.seedMorphologyBent"
   | "MY.seedMorphologyBroad"
@@ -1750,14 +1912,14 @@ export type SeedMorphologyEnum =
   | "MY.seedMorphologySpatulateUnderdeveloped"
   | "MY.seedMorphologyUndifferentiated"
   | "MY.seedMorphologyInvesting";
-export type SmellEnum =
+export type MYSmellEnum =
   | ""
   | "MY.smellNotSmelled"
   | "MY.smellNoSmelled"
   | "MY.smellWeak"
   | "MY.smellModerate"
   | "MY.smellStrong";
-export type SubstrateEnum =
+export type MYSubstrateEnum =
   | ""
   | "MY.substrateGround"
   | "MY.substrateGroundLowShrubs"
@@ -1815,14 +1977,14 @@ export type SubstrateEnum =
   | "MY.substrateRockSurface"
   | "MY.substrateDeadNeedle"
   | "MY.substrateDeadLeaf";
-export type SubstrateDecayStageEnum =
+export type MYSubstrateDecayStageEnum =
   | ""
   | "MY.substrateDecayStageEnum1"
   | "MY.substrateDecayStageEnum2"
   | "MY.substrateDecayStageEnum3"
   | "MY.substrateDecayStageEnum4"
   | "MY.substrateDecayStageEnum5";
-export type SubstrateTreeClassificationEnum =
+export type MYSubstrateTreeClassificationEnum =
   | ""
   | "MY.substrateTreeClassificationEnum1"
   | "MY.substrateTreeClassificationEnum2"
@@ -1830,24 +1992,24 @@ export type SubstrateTreeClassificationEnum =
   | "MY.substrateTreeClassificationEnum4"
   | "MY.substrateTreeClassificationEnum5"
   | "MY.substrateTreeClassificationEnum6";
-export type TasteEnum =
+export type MYTasteEnum =
   | ""
   | "MY.tasteNotTasted"
   | "MY.tasteNoTaste"
   | "MY.tasteWeak"
   | "MY.tasteModerate"
   | "MY.tasteStrong";
-export type TaxonConfidenceEnum =
+export type MYTaxonConfidenceEnum =
   | ""
   | "MY.taxonConfidenceSure"
   | "MY.taxonConfidenceUnsure"
   | "MY.taxonConfidenceSubspeciesUnsure";
-export type WildEnum =
+export type MYWildEnum =
   | ""
   | "MY.wildWild"
   | "MY.wildUnknown"
   | "MY.wildNonWild";
-export type GlowWormMicrohabitatEnum =
+export type MYGlowWormMicrohabitatEnum =
   | ""
   | "MY.glowWormMicrohabitatEnum1"
   | "MY.glowWormMicrohabitatEnum2"
@@ -1856,7 +2018,7 @@ export type GlowWormMicrohabitatEnum =
   | "MY.glowWormMicrohabitatEnum5"
   | "MY.glowWormMicrohabitatEnum6"
   | "MY.glowWormMicrohabitatEnumOther";
-export type LineTransectObsTypeEnum =
+export type MYLineTransectObsTypeEnum =
   | ""
   | "MY.lineTransectObsTypeSong"
   | "MY.lineTransectObsTypeOtherSound"
@@ -1870,11 +2032,11 @@ export type LineTransectObsTypeEnum =
   | "MY.lineTransectObsTypeSeenBrood"
   | "MY.lineTransectObsTypeSeenNest"
   | "MY.lineTransectObsTypeUnknown";
-export type LineTransectRouteFieldTypeEnum =
+export type MYLineTransectRouteFieldTypeEnum =
   | ""
   | "MY.lineTransectRouteFieldTypeInner"
   | "MY.lineTransectRouteFieldTypeOuter";
-export type LolifeDroppingsCountEnum =
+export type MYLolifeDroppingsCountEnum =
   | ""
   | "MY.lolifeDroppingsCount0"
   | "MY.lolifeDroppingsCount1"
@@ -1882,17 +2044,17 @@ export type LolifeDroppingsCountEnum =
   | "MY.lolifeDroppingsCount25"
   | "MY.lolifeDroppingsCount3"
   | "MY.lolifeDroppingsCount4";
-export type LolifeDroppingsQualityEnum =
+export type MYLolifeDroppingsQualityEnum =
   | ""
   | "MY.lolifeDroppingsQuality1"
   | "MY.lolifeDroppingsQuality2";
-export type LolifeDroppingsTypeEnum =
+export type MYLolifeDroppingsTypeEnum =
   | ""
   | "MY.lolifeDroppingsTypeRock"
   | "MY.lolifeDroppingsTypeTree"
   | "MY.lolifeDroppingsTypeTreeGroup"
   | "MY.lolifeDroppingsTypeOther";
-export type LolifeNestTreeEnum =
+export type MYLolifeNestTreeEnum =
   | ""
   | "MX.38590"
   | "MX.37812"
@@ -1901,12 +2063,12 @@ export type LolifeNestTreeEnum =
   | "MX.38010"
   | "MX.38008"
   | "MY.lolifeNestTreeOther";
-export type WaterbirdFemaleEnum =
+export type MYWaterbirdFemaleEnum =
   | ""
   | "MY.waterbirdFemaleEnumYes"
   | "MY.waterbirdFemaleEnumNo"
   | "MY.waterbirdFemaleEnumLonelyPanicking";
-export type WaterbirdJuvenileAgeClassEnum =
+export type MYWaterbirdJuvenileAgeClassEnum =
   | ""
   | "MY.waterbirdJuvenileAgeClassIa"
   | "MY.waterbirdJuvenileAgeClassIb"
@@ -1916,7 +2078,7 @@ export type WaterbirdJuvenileAgeClassEnum =
   | "MY.waterbirdJuvenileAgeClassIIc"
   | "MY.waterbirdJuvenileAgeClassIIIa"
   | "MY.waterbirdJuvenileAgeClassUnknown";
-export type WaterbirdPairCountOpinionReasoningEnum =
+export type MYWaterbirdPairCountOpinionReasoningEnum =
   | ""
   | "MY.waterbirdPairCountOpinionReasoningEnum1"
   | "MY.waterbirdPairCountOpinionReasoningEnum2"

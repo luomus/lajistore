@@ -1,11 +1,11 @@
-import { AvailableForGeneticResearchEnum } from './';
-import { GeneticResourceTypeEnum } from './';
-import { LocalDepartments } from './';
-import { ResourceImportedEnum } from './';
-import { SentTypes } from './';
-import { TransactionStatuses } from './';
-import { TransactionTypes } from './';
-import { PublicityRestrictionsEnum } from './';
+import { HRAAvailableForGeneticResearchEnum } from './';
+import { HRAGeneticResourceTypeEnum } from './';
+import { HRALocalDepartments } from './';
+import { HRAResourceImportedEnum } from './';
+import { HRASentTypes } from './';
+import { HRATransactionStatuses } from './';
+import { HRATransactionTypes } from './';
+import { MZPublicityRestrictionsEnum } from './';
 import { Permit } from './';
 
 /* tslint:disable */
@@ -25,7 +25,7 @@ export interface Transaction {
   /**
    * If you choose "Yes, with restrictions", explain the restrictions in the following field "Rights and obligations".
    */
-  availableForGeneticResearch?: AvailableForGeneticResearchEnum;
+  availableForGeneticResearch?: HRAAvailableForGeneticResearchEnum;
   availableForGeneticResearchNotes?: string;
   away?: string[];
   /**
@@ -76,7 +76,7 @@ export interface Transaction {
   /**
    * Choose the type of the genetic resource for statistical and reporting purposes.
    */
-  geneticResourceType?: GeneticResourceTypeEnum;
+  geneticResourceType?: HRAGeneticResourceTypeEnum;
   /**
    * Whether the resource has an IRCC number or not. If not, more information needs to be filled in.
    */
@@ -93,7 +93,7 @@ export interface Transaction {
   /**
    * Responsible team in our museum.
    */
-  localDepartment?: LocalDepartments;
+  localDepartment?: HRALocalDepartments;
   /**
    * Responsible person in our museum.
    */
@@ -134,7 +134,7 @@ export interface Transaction {
   /**
    * Are you importing genetic resources, traditional knowledge associated to genetic resources or both?
    */
-  resourceImported?: ResourceImportedEnum;
+  resourceImported?: HRAResourceImportedEnum;
   returned?: string[];
   /**
    * In how many parcels was the transaction sent
@@ -147,7 +147,7 @@ export interface Transaction {
   /**
    * Means of sending, mail, courier etc.
    */
-  sentType?: SentTypes;
+  sentType?: HRASentTypes;
   /**
    * When loan request, loan, gift or exchange was received here.
    */
@@ -163,11 +163,11 @@ export interface Transaction {
   /**
    * Whether the transaction is closed, outstanding or in process.
    */
-  transactionStatus?: TransactionStatuses;
+  transactionStatus?: HRATransactionStatuses;
   /**
    * What kind of transaction this is.
    */
-  transactionType: TransactionTypes;
+  transactionType: HRATransactionTypes;
   /**
    * Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?
    */
@@ -188,6 +188,6 @@ export interface Transaction {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?: PublicityRestrictionsEnum;
+  publicityRestrictions?: MZPublicityRestrictionsEnum;
   permits?: Permit[];
 }

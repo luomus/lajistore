@@ -1,10 +1,10 @@
-import { SideEnum } from './';
-import { TypeEnum } from './';
-import { LifeStages } from './';
-import { PlantLifeStageEnum } from './';
-import { Sexes } from './';
-import { IntellectualRightsEnum } from './';
-import { PublicityRestrictionsEnum } from './';
+import { MMSideEnum } from './';
+import { MMTypeEnum } from './';
+import { MYLifeStages } from './';
+import { MYPlantLifeStageEnum } from './';
+import { MYSexes } from './';
+import { MZIntellectualRightsEnum } from './';
+import { MZPublicityRestrictionsEnum } from './';
 
 /* tslint:disable */
 /*
@@ -28,7 +28,7 @@ export class Image {
   originalFilename?: string;
   originalURL?: string;
   primaryForTaxon?: string[];
-  side?: SideEnum;
+  side?: MMSideEnum;
   sourceSystem: string;
   squareThumbnailURL: string;
   taxonDescriptionCaption?: {
@@ -39,23 +39,23 @@ export class Image {
   taxonURI?: string[];
   taxonVerbatim?: string[];
   thumbnailURL: string;
-  type?: TypeEnum;
+  type?: MMTypeEnum;
   uploadDateTime?: string;
   uploadedBy?: string;
   /**
    * Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
    */
-  lifeStage?: LifeStages;
-  plantLifeStage?: PlantLifeStageEnum;
+  lifeStage?: MYLifeStages;
+  plantLifeStage?: MYPlantLifeStageEnum;
   /**
    * Sex of the individual(s)
    */
-  sex?: Sexes;
+  sex?: MYSexes;
   intellectualOwner: string;
-  intellectualRights: IntellectualRightsEnum;
+  intellectualRights: MZIntellectualRightsEnum;
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?: PublicityRestrictionsEnum;
+  publicityRestrictions?: MZPublicityRestrictionsEnum;
   sortOrder?: number;
 }

@@ -1,6 +1,6 @@
 import { BirdSongRecognitionSkillLevel } from './';
-import { BirdwatchingActivityLevelEnum } from './';
-import { FinnishBirdSongRecognitionSkillLevelEnum } from './';
+import { MABirdwatchingActivityLevelEnum } from './';
+import { MAFinnishBirdSongRecognitionSkillLevelEnum } from './';
 
 /* tslint:disable */
 /*
@@ -13,9 +13,9 @@ export interface Profile {
   id?: string;
   "@type"?: string;
   birdSongRecognitionSkillLevels?: BirdSongRecognitionSkillLevel[];
-  birdwatchingActivityLevel?: BirdwatchingActivityLevelEnum;
+  birdwatchingActivityLevel?: MABirdwatchingActivityLevelEnum;
   blocked?: string[];
-  finnishBirdSongRecognitionSkillLevel?: FinnishBirdSongRecognitionSkillLevelEnum;
+  finnishBirdSongRecognitionSkillLevel?: MAFinnishBirdSongRecognitionSkillLevelEnum;
   friendRequests?: string[];
   friends?: string[];
   image?: string;

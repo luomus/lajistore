@@ -1,4 +1,4 @@
-import { Explanations } from './';
+import { MOSABBREVIATIONExplanations } from './';
 
 /* tslint:disable */
 /*
@@ -25,7 +25,7 @@ export interface Organization {
   /**
    * If organisation code is given, the source for it must be chosen.
    */
-  abbreviationExplanation?: Explanations;
+  abbreviationExplanation?: MOSABBREVIATIONExplanations;
   /**
    * Filled in by ICT team
    */

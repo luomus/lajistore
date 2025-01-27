@@ -1,4 +1,4 @@
-import { DatasetTypeEnum } from './';
+import { GXDatasetTypeEnum } from './';
 
 /* tslint:disable */
 /*
@@ -25,7 +25,7 @@ export interface Dataset {
   /**
    * Type of the tag. Usually basic, project type is generally used only to give information on project Nagoya compliance.
    */
-  datasetType: DatasetTypeEnum;
+  datasetType: GXDatasetTypeEnum;
   /**
    * Description of the tag, so that other people understand what it is about.
    */

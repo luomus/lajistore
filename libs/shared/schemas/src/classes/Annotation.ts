@@ -1,11 +1,11 @@
-import { AnnotationClassEnum } from './';
-import { RequiredRolesEnum } from './';
-import { CensusAnnotationEnum } from './';
+import { MANAnnotationClassEnum } from './';
+import { MMANRequiredRolesEnum } from './';
+import { MANCensusAnnotationEnum } from './';
 import { Identification } from './';
-import { InvasiveControlEffectivenessEnum } from './';
-import { LineTransectAnnotationEnum } from './';
+import { MYInvasiveControlEffectivenessEnum } from './';
+import { MANLineTransectAnnotationEnum } from './';
 import { AnnotationOccurrence } from './';
-import { TypeEnum } from './';
+import { MANTypeEnum } from './';
 
 /* tslint:disable */
 /*
@@ -20,22 +20,22 @@ export class Annotation {
   addedTags?: string[];
   annotationByPerson?: string;
   annotationBySystem?: string;
-  annotationClass?: AnnotationClassEnum;
-  byRole?: RequiredRolesEnum;
-  censusAnnotation?: CensusAnnotationEnum[];
+  annotationClass?: MANAnnotationClassEnum;
+  byRole?: MMANRequiredRolesEnum;
+  censusAnnotation?: MANCensusAnnotationEnum[];
   created?: string;
   createdTimestamp?: number;
   deletedTimestamp?: number;
   identification?: Identification;
-  invasiveControlEffectiveness?: InvasiveControlEffectivenessEnum;
-  lineTransectAnnotation?: LineTransectAnnotationEnum[];
+  invasiveControlEffectiveness?: MYInvasiveControlEffectivenessEnum;
+  lineTransectAnnotation?: MANLineTransectAnnotationEnum[];
   notes?: string;
   occurrenceAtTimeOfAnnotation?: AnnotationOccurrence;
   opinion?: string;
   removedTags?: string[];
   rootID: string;
   targetID?: string;
-  type?: TypeEnum;
+  type?: MANTypeEnum;
   createdBySystem?: string;
   deleted?: boolean;
   deletedByPerson?: string;

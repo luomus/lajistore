@@ -1,11 +1,11 @@
 import { FormFooter } from './';
 import { FormNamedPlaceOptions } from './';
 import { Document } from './';
-import { PrintTypeEnum } from './';
-import { RestrictAccessEnum } from './';
-import { ResultServiceTypeEnum } from './';
+import { MHLPrintTypeEnum } from './';
+import { MHLRestrictAccessEnum } from './';
+import { MHLResultServiceTypeEnum } from './';
 import { FormSeason } from './';
-import { ViewerTypeEnum } from './';
+import { MHLViewerTypeEnum } from './';
 
 /* tslint:disable */
 /*
@@ -149,12 +149,12 @@ export class FormOptions {
    * Initial document data
    */
   prepopulatedDocument?: Document;
-  printType?: PrintTypeEnum;
+  printType?: MHLPrintTypeEnum;
   /**
    * Users need to have permission to access the form
    */
-  restrictAccess?: RestrictAccessEnum;
-  resultServiceType?: ResultServiceTypeEnum;
+  restrictAccess?: MHLRestrictAccessEnum;
+  resultServiceType?: MHLResultServiceTypeEnum;
   /**
    * Message shown when document save failed
    */
@@ -207,7 +207,7 @@ export class FormOptions {
    * Uses schema comments as form help texts
    */
   useSchemaCommentsAsHelpTexts?: boolean;
-  viewerType?: ViewerTypeEnum;
+  viewerType?: MHLViewerTypeEnum;
   warnEditingOldDocument?: boolean;
   /**
    * Duration in ISO 8601 duration format. Defaults to P1W (one week)

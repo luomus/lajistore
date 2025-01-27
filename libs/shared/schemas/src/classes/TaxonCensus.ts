@@ -1,5 +1,5 @@
-import { TaxonSetEnum } from './';
-import { TaxonCensusEnum } from './';
+import { MXTaxonSetEnum } from './';
+import { MYTaxonCensusEnum } from './';
 
 /* tslint:disable */
 /*
@@ -12,6 +12,6 @@ export class TaxonCensus {
   id?: string;
   "@type"?: string;
   censusTaxonID?: string;
-  censusTaxonSetID?: TaxonSetEnum;
-  taxonCensusType: TaxonCensusEnum;
+  censusTaxonSetID?: MXTaxonSetEnum;
+  taxonCensusType: MYTaxonCensusEnum;
 }

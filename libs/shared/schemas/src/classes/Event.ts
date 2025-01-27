@@ -1,5 +1,5 @@
-import { EventType } from './';
-import { PlantLifeStageEnum } from './';
+import { MYEventType } from './';
+import { MYPlantLifeStageEnum } from './';
 
 /* tslint:disable */
 /*
@@ -24,11 +24,11 @@ export class Event {
   date?: string;
   eRH?: string;
   estimatedSeedQuantity?: number;
-  eventType: EventType;
+  eventType: MYEventType;
   germinationConditions?: string;
   germinationPercentage?: number;
   germinationRate?: number;
-  lifeStage?: PlantLifeStageEnum;
+  lifeStage?: MYPlantLifeStageEnum;
   notes?: string;
   numberOfSeedsEmpty?: number;
   numberOfSeedsFull?: number;

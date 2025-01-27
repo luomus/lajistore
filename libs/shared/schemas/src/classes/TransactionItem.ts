@@ -1,5 +1,5 @@
-import { ItemTypeEnum } from './';
-import { StatusEnum } from './';
+import { HRABItemTypeEnum } from './';
+import { HRABStatusEnum } from './';
 
 /* tslint:disable */
 /*
@@ -15,7 +15,7 @@ export class TransactionItem {
   itemCount: number;
   itemID?: string;
   itemLabel?: string;
-  itemType: ItemTypeEnum;
+  itemType: HRABItemTypeEnum;
   notes?: string;
-  status: StatusEnum;
+  status: HRABStatusEnum;
 }

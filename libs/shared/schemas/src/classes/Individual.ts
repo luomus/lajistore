@@ -1,4 +1,4 @@
-import { IntellectualRightsEnum } from './';
+import { MZIntellectualRightsEnum } from './';
 
 /* tslint:disable */
 /*
@@ -31,6 +31,6 @@ export class Individual {
   taxon?: string;
   deleted?: boolean;
   images?: string[];
-  intellectualRights: IntellectualRightsEnum;
+  intellectualRights: MZIntellectualRightsEnum;
   ownerPerson?: string[];
 }

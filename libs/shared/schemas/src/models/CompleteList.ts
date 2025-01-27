@@ -1,4 +1,4 @@
-import { CompleteListTypeEnum } from './';
+import { MYCompleteListTypeEnum } from './';
 
 /* tslint:disable */
 /*
@@ -11,5 +11,5 @@ export interface CompleteList {
   id?: string;
   "@type"?: string;
   completeListTaxonID?: string;
-  completeListType?: CompleteListTypeEnum;
+  completeListType?: MYCompleteListTypeEnum;
 }

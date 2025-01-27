@@ -1,4 +1,4 @@
-import { Sexes } from './';
+import { MYSexes } from './';
 
 /* tslint:disable */
 /*
@@ -18,5 +18,5 @@ export interface SubUnit {
   /**
    * Sex of the individual(s)
    */
-  sex?: Sexes;
+  sex?: MYSexes;
 }

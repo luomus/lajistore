@@ -1,5 +1,5 @@
-import { PreparationMaterialsEnum } from './';
-import { PreparationProcessEnum } from './';
+import { MFPreparationMaterialsEnum } from './';
+import { MFPreparationProcessEnum } from './';
 
 /* tslint:disable */
 /*
@@ -18,11 +18,11 @@ export interface Preparation {
   /**
    * Materials (chemicals, kits etc.) used in the preparation process. It is possible to choose several.
    */
-  preparationMaterials?: PreparationMaterialsEnum[];
+  preparationMaterials?: MFPreparationMaterialsEnum[];
   /**
    * Processes used in the preparation. It is possible to choose several.
    */
-  preparationProcess?: PreparationProcessEnum[];
+  preparationProcess?: MFPreparationProcessEnum[];
   /**
    * Additional information about the preparation process.
    */

@@ -1,4 +1,4 @@
-export enum AnnotationClassEnum {
+export enum MANAnnotationClassEnum {
   "empty" = "",
   "annotationClassReliable" = "MAN.annotationClassReliable",
   "annotationClassLikely" = "MAN.annotationClassLikely",
@@ -8,7 +8,7 @@ export enum AnnotationClassEnum {
   "annotationClassAcknowledged" = "MAN.annotationClassAcknowledged",
   "annotationClassSpam" = "MAN.annotationClassSpam"
 }
-export enum RequiredRolesEnum {
+export enum MMANRequiredRolesEnum {
   "empty" = "",
   "expert" = "MMAN.expert",
   "basic" = "MMAN.basic",
@@ -16,33 +16,33 @@ export enum RequiredRolesEnum {
   "formAdmin" = "MMAN.formAdmin",
   "ictAdmin" = "MMAN.ictAdmin"
 }
-export enum CensusAnnotationEnum {
+export enum MANCensusAnnotationEnum {
   "empty" = "",
   "countError" = "MAN.countError",
   "innerCountError" = "MAN.innerCountError",
   "otherError" = "MAN.otherError"
 }
-export enum InvasiveControlEffectivenessEnum {
+export enum MYInvasiveControlEffectivenessEnum {
   "empty" = "",
   "invasiveControlEffectivenessFull" = "MY.invasiveControlEffectivenessFull",
   "invasiveControlEffectivenessPartial" = "MY.invasiveControlEffectivenessPartial",
   "invasiveControlEffectivenessNone" = "MY.invasiveControlEffectivenessNone",
   "invasiveControlEffectivenessNotFound" = "MY.invasiveControlEffectivenessNotFound"
 }
-export enum LineTransectAnnotationEnum {
+export enum MANLineTransectAnnotationEnum {
   "empty" = "",
   "birdCountError" = "MAN.birdCountError",
   "innerCountError" = "MAN.innerCountError",
   "otherError" = "MAN.otherError"
 }
-export enum TypeEnum {
+export enum MANTypeEnum {
   "empty" = "",
   "typeOpinion" = "MAN.typeOpinion",
   "typeInvasiveControlEffectiveness" = "MAN.typeInvasiveControlEffectiveness",
   "typeUnidentifiable" = "MAN.typeUnidentifiable",
   "typeAdmin" = "MAN.typeAdmin"
 }
-export enum AreaTypeEnum {
+export enum MLAreaTypeEnum {
   "country" = "ML.country",
   "biogeographicalProvince" = "ML.biogeographicalProvince",
   "municipality" = "ML.municipality",
@@ -53,7 +53,18 @@ export enum AreaTypeEnum {
   "iucnEvaluationArea" = "ML.iucnEvaluationArea",
   "birdAssociationArea" = "ML.birdAssociationArea"
 }
-export enum LifeStages {
+export enum MMTypeEnum {
+  "empty" = "",
+  "typeEnumLive" = "MM.typeEnumLive",
+  "typeEnumSpecimen" = "MM.typeEnumSpecimen",
+  "typeEnumGenitalia" = "MM.typeEnumGenitalia",
+  "typeEnumMicroscopy" = "MM.typeEnumMicroscopy",
+  "typeEnumCarcass" = "MM.typeEnumCarcass",
+  "typeEnumSkeletal" = "MM.typeEnumSkeletal",
+  "typeEnumHabitat" = "MM.typeEnumHabitat",
+  "typeEnumLabel" = "MM.typeEnumLabel"
+}
+export enum MYLifeStages {
   "empty" = "",
   "lifeStageAdult" = "MY.lifeStageAdult",
   "lifeStageNymph" = "MY.lifeStageNymph",
@@ -76,7 +87,7 @@ export enum LifeStages {
   "lifeStageMarks" = "MY.lifeStageMarks",
   "lifeStageTriungulin" = "MY.lifeStageTriungulin"
 }
-export enum PlantLifeStageEnum {
+export enum MYPlantLifeStageEnum {
   "empty" = "",
   "plantLifeStageSterile" = "MY.plantLifeStageSterile",
   "plantLifeStageFertile" = "MY.plantLifeStageFertile",
@@ -90,7 +101,7 @@ export enum PlantLifeStageEnum {
   "plantLifeStageDeadSprout" = "MY.plantLifeStageDeadSprout",
   "plantLifeStageSubterranean" = "MY.plantLifeStageSubterranean"
 }
-export enum Sexes {
+export enum MYSexes {
   "empty" = "",
   "sexM" = "MY.sexM",
   "sexF" = "MY.sexF",
@@ -101,7 +112,7 @@ export enum Sexes {
   "sexE" = "MY.sexE",
   "sexC" = "MY.sexC"
 }
-export enum IntellectualRightsEnum {
+export enum MZIntellectualRightsEnum {
   "intellectualRightsCC-BY-SA-4.0" = "MZ.intellectualRightsCC-BY-SA-4.0",
   "intellectualRightsCC-BY-NC-4.0" = "MZ.intellectualRightsCC-BY-NC-4.0",
   "intellectualRightsCC-BY-NC-SA-4.0" = "MZ.intellectualRightsCC-BY-NC-SA-4.0",
@@ -126,19 +137,19 @@ export enum IntellectualRightsEnum {
   "intellectualRightsCC-BY" = "MY.intellectualRightsCC-BY",
   "intellectualRightsCC0" = "MY.intellectualRightsCC0"
 }
-export enum PublicityRestrictionsEnum {
+export enum MZPublicityRestrictionsEnum {
   "empty" = "",
   "publicityRestrictionsPublic" = "MZ.publicityRestrictionsPublic",
   "publicityRestrictionsProtected" = "MZ.publicityRestrictionsProtected",
   "publicityRestrictionsPrivate" = "MZ.publicityRestrictionsPrivate"
 }
-export enum BirdSongRecognitionSkillLevelEnum {
+export enum MABirdSongRecognitionSkillLevelEnum {
   "birdSongRecognitionSkillLevelEnum1" = "MA.birdSongRecognitionSkillLevelEnum1",
   "birdSongRecognitionSkillLevelEnum2" = "MA.birdSongRecognitionSkillLevelEnum2",
   "birdSongRecognitionSkillLevelEnum3" = "MA.birdSongRecognitionSkillLevelEnum3",
   "birdSongRecognitionSkillLevelEnum4" = "MA.birdSongRecognitionSkillLevelEnum4"
 }
-export enum SecureLevels {
+export enum MXSecureLevels {
   "empty" = "",
   "MX.secureLevelNone" = "MX.secureLevelNone",
   "MX.secureLevelKM1" = "MX.secureLevelKM1",
@@ -150,12 +161,12 @@ export enum SecureLevels {
   "MX.secureLevelHighest" = "MX.secureLevelHighest",
   "MX.secureLevelNoShow" = "MX.secureLevelNoShow"
 }
-export enum CollectionQualityEnum {
+export enum MYCollectionQualityEnum {
   "collectionQualityEnum3" = "MY.collectionQualityEnum3",
   "collectionQualityEnum2" = "MY.collectionQualityEnum2",
   "collectionQualityEnum1" = "MY.collectionQualityEnum1"
 }
-export enum CollectionTypes {
+export enum MYCollectionTypes {
   "collectionTypeSpecimens" = "MY.collectionTypeSpecimens",
   "collectionTypeLiving" = "MY.collectionTypeLiving",
   "collectionTypeMonitoring" = "MY.collectionTypeMonitoring",
@@ -170,7 +181,7 @@ export enum CollectionTypes {
   "collectionTypeGardenSublocation" = "MY.collectionTypeGardenSublocation",
   "collectionTypeTrait" = "MY.collectionTypeTrait"
 }
-export enum DataQualityEnum {
+export enum MYDataQualityEnum {
   "empty" = "",
   "dataQuality1" = "MY.dataQuality1",
   "dataQuality2" = "MY.dataQuality2",
@@ -179,37 +190,43 @@ export enum DataQualityEnum {
   "dataQuality5" = "MY.dataQuality5",
   "dataQualityNA" = "MY.dataQualityNA"
 }
-export enum MetadataStatuses {
+export enum MYIntellectualRightsEnum {
+  "intellectualRightsCC-BY" = "MY.intellectualRightsCC-BY",
+  "intellectualRightsCC0" = "MY.intellectualRightsCC0",
+  "intellectualRightsPD" = "MY.intellectualRightsPD",
+  "intellectualRightsARR" = "MY.intellectualRightsARR"
+}
+export enum MYMetadataStatuses {
   "empty" = "",
   "metadataStatusPreliminary" = "MY.metadataStatusPreliminary",
   "metadataStatusSatisfactory" = "MY.metadataStatusSatisfactory",
   "metadataStatusComprehensive" = "MY.metadataStatusComprehensive",
   "metadataStatusHidden" = "MY.metadataStatusHidden"
 }
-export enum PublicationTermsEnum {
+export enum MYPublicationTermsEnum {
   "empty" = "",
   "publicationTermsFree" = "MY.publicationTermsFree",
   "publicationTermsOfficial" = "MY.publicationTermsOfficial",
   "publicationTermsInternal" = "MY.publicationTermsInternal",
   "publicationTermsNone" = "MY.publicationTermsNone"
 }
-export enum CompleteListTypeEnum {
+export enum MYCompleteListTypeEnum {
   "empty" = "",
   "completeListTypeCompleteWithBreedingStatus" = "MY.completeListTypeCompleteWithBreedingStatus",
   "completeListTypeComplete" = "MY.completeListTypeComplete",
   "completeListTypeIncomplete" = "MY.completeListTypeIncomplete"
 }
-export enum DatasetTypeEnum {
+export enum GXDatasetTypeEnum {
   "datasetTypeBasic" = "GX.datasetTypeBasic",
   "datasetTypeProject" = "GX.datasetTypeProject"
 }
-export enum DataOriginEnum {
+export enum MYDataOriginEnum {
   "empty" = "",
   "dataOriginPaperForm" = "MY.dataOriginPaperForm",
   "dataOriginWebForm" = "MY.dataOriginWebForm",
   "dataOriginSpreadsheetFile" = "MY.dataOriginSpreadsheetFile"
 }
-export enum Preservations {
+export enum MYPreservations {
   "empty" = "",
   "preservationPressed" = "MY.preservationPressed",
   "preservationDry" = "MY.preservationDry",
@@ -249,7 +266,7 @@ export enum Preservations {
   "preservationPlastinated" = "MY.preservationPlastinated",
   "preservationFrozenMinus80CAndEthanolMinus20C" = "MY.preservationFrozenMinus80CAndEthanolMinus20C"
 }
-export enum Statuses {
+export enum MYStatuses {
   "empty" = "",
   "statusOk" = "MY.statusOk",
   "statusMissing" = "MY.statusMissing",
@@ -268,7 +285,7 @@ export enum Statuses {
   "statusDead" = "MY.statusDead",
   "statusNoVoucherRetained" = "MY.statusNoVoucherRetained"
 }
-export enum VerificationStatuses {
+export enum MYVerificationStatuses {
   "empty" = "",
   "verificationStatusOk" = "MY.verificationStatusOk",
   "verificationStatusVerify" = "MY.verificationStatusVerify",
@@ -278,7 +295,7 @@ export enum VerificationStatuses {
   "verificationStatusCheckID" = "MY.verificationStatusCheckID",
   "verificationStatusVerifyCoordinates" = "MY.verificationStatusVerifyCoordinates"
 }
-export enum EndangermentReasonEnum {
+export enum MKVEndangermentReasonEnum {
   "endangermentReasonP" = "MKV.endangermentReasonP",
   "endangermentReasonKe" = "MKV.endangermentReasonKe",
   "endangermentReasonH" = "MKV.endangermentReasonH",
@@ -306,7 +323,7 @@ export enum EndangermentReasonEnum {
   "endangermentReasonMuu" = "MKV.endangermentReasonMuu",
   "endangermentReasonT" = "MKV.endangermentReasonT"
 }
-export enum EventType {
+export enum MYEventType {
   "eventTypeDiscarded" = "MY.eventTypeDiscarded",
   "eventTypeDonating" = "MY.eventTypeDonating",
   "eventTypeInventory" = "MY.eventTypeInventory",
@@ -337,7 +354,7 @@ export enum EventType {
   "eventTypeSeedExchange" = "MY.eventTypeSeedExchange",
   "eventTypeTPuska" = "MY.eventTypeTPuska"
 }
-export enum CategoryEnum {
+export enum MHLCategoryEnum {
   "empty" = "",
   "categoryGeneric" = "MHL.categoryGeneric",
   "categorySurvey" = "MHL.categorySurvey",
@@ -346,22 +363,22 @@ export enum CategoryEnum {
   "categoryCitizenScience" = "MHL.categoryCitizenScience",
   "categoryBiomonCompleteLists" = "MHL.categoryBiomonCompleteLists"
 }
-export enum LanguageEnum {
+export enum MZLanguageEnum {
   "empty" = "",
   "en" = "en",
   "fi" = "fi",
   "sv" = "sv"
 }
-export enum PrintTypeEnum {
+export enum MHLPrintTypeEnum {
   "empty" = "",
   "printTypeLineTransect" = "MHL.printTypeLineTransect"
 }
-export enum RestrictAccessEnum {
+export enum MHLRestrictAccessEnum {
   "empty" = "",
   "restrictAccessStrict" = "MHL.restrictAccessStrict",
   "restrictAccessLoose" = "MHL.restrictAccessLoose"
 }
-export enum ResultServiceTypeEnum {
+export enum MHLResultServiceTypeEnum {
   "empty" = "",
   "resultServiceTypeLineTransect" = "MHL.resultServiceTypeLineTransect",
   "resultServiceTypeNafi" = "MHL.resultServiceTypeNafi",
@@ -372,12 +389,18 @@ export enum ResultServiceTypeEnum {
   "resultServiceTypeCompleteLists" = "MHL.resultServiceTypeCompleteLists",
   "resultServiceTypeWaterBirdCount" = "MHL.resultServiceTypeWaterBirdCount"
 }
-export enum ViewerTypeEnum {
+export enum MHLViewerTypeEnum {
   "empty" = "",
   "viewerTypeLineTransect" = "MHL.viewerTypeLineTransect",
   "viewerTypeBirdPointCount" = "MHL.viewerTypeBirdPointCount"
 }
-export enum BatHabitatEnum {
+export enum MFPTypeEnum {
+  "empty" = "",
+  "typeAdmin" = "MFP.typeAdmin",
+  "typeEditor" = "MFP.typeEditor",
+  "typeAccessRequest" = "MFP.typeAccessRequest"
+}
+export enum MYBatHabitatEnum {
   "empty" = "",
   "batHabitatYardCityCentre" = "MY.batHabitatYardCityCentre",
   "batHabitatYardSuburbs" = "MY.batHabitatYardSuburbs",
@@ -396,7 +419,7 @@ export enum BatHabitatEnum {
   "batHabitatOldBuildingOrRuins" = "MY.batHabitatOldBuildingOrRuins",
   "batHabitatCountryside" = "MY.batHabitatCountryside"
 }
-export enum CoordinateSources {
+export enum MYCoordinateSources {
   "empty" = "",
   "coordinateSourceGps" = "MY.coordinateSourceGps",
   "coordinateSourcePeruskartta" = "MY.coordinateSourcePeruskartta",
@@ -409,7 +432,7 @@ export enum CoordinateSources {
   "coordinateSourceOther" = "MY.coordinateSourceOther",
   "coordinateSourceUnknown" = "MY.coordinateSourceUnknown"
 }
-export enum CoordinateSystems {
+export enum MYCoordinateSystems {
   "empty" = "",
   "coordinateSystemYkj" = "MY.coordinateSystemYkj",
   "coordinateSystemWgs84" = "MY.coordinateSystemWgs84",
@@ -419,7 +442,7 @@ export enum CoordinateSystems {
   "coordinateSystemDd" = "MY.coordinateSystemDd",
   "coordinateSystemDms" = "MY.coordinateSystemDms"
 }
-export enum ForestVegetationZones {
+export enum MYForestVegetationZones {
   "empty" = "",
   "forestVegetationZone1a" = "MY.forestVegetationZone1a",
   "forestVegetationZone1b" = "MY.forestVegetationZone1b",
@@ -433,7 +456,7 @@ export enum ForestVegetationZones {
   "forestVegetationZone4c" = "MY.forestVegetationZone4c",
   "forestVegetationZone4d" = "MY.forestVegetationZone4d"
 }
-export enum GatheringTypeEnum {
+export enum MYGatheringTypeEnum {
   "empty" = "",
   "gatheringTypeForagingArea" = "MY.gatheringTypeForagingArea",
   "gatheringTypeBreedingAndRestingArea" = "MY.gatheringTypeBreedingAndRestingArea",
@@ -447,7 +470,7 @@ export enum GatheringTypeEnum {
   "gatheringTypeWaterbirdPoint" = "MY.gatheringTypeWaterbirdPoint",
   "gatheringTypeWaterbirdRound" = "MY.gatheringTypeWaterbirdRound"
 }
-export enum GeoreferenceSources {
+export enum MYGeoreferenceSources {
   "empty" = "",
   "georeferenceSourceKotka" = "MY.georeferenceSourceKotka",
   "georeferenceSourceKarttapaikka" = "MY.georeferenceSourceKarttapaikka",
@@ -465,7 +488,7 @@ export enum GeoreferenceSources {
   "georeferenceSourceOther" = "MY.georeferenceSourceOther",
   "georeferenceSourceUnknown" = "MY.georeferenceSourceUnknown"
 }
-export enum HabitatEnum {
+export enum MYHabitatEnum {
   "empty" = "",
   "habitatEnumValue1" = "MY.habitatEnumValue1",
   "habitatEnumValue2" = "MY.habitatEnumValue2",
@@ -562,7 +585,7 @@ export enum HabitatEnum {
   "habitatEnumValue93" = "MY.habitatEnumValue93",
   "habitatEnumValue94" = "MY.habitatEnumValue94"
 }
-export enum HabitatAttributesEnum {
+export enum MYHabitatAttributesEnum {
   "empty" = "",
   "habitatAttributesEnumValue1" = "MY.habitatAttributesEnumValue1",
   "habitatAttributesEnumValue2" = "MY.habitatAttributesEnumValue2",
@@ -587,14 +610,14 @@ export enum HabitatAttributesEnum {
   "habitatAttributesEnumValue21" = "MY.habitatAttributesEnumValue21",
   "habitatAttributesEnumValue22" = "MY.habitatAttributesEnumValue22"
 }
-export enum InvasiveControlMethodsEnum {
+export enum MYInvasiveControlMethodsEnum {
   "empty" = "",
   "invasiveControlMethodsMechanical" = "MY.invasiveControlMethodsMechanical",
   "invasiveControlMethodsChemical" = "MY.invasiveControlMethodsChemical",
   "invasiveControlMethodsBiological" = "MY.invasiveControlMethodsBiological",
   "invasiveControlMethodsOther" = "MY.invasiveControlMethodsOther"
 }
-export enum MothSamplingMethodEnum {
+export enum MYMothSamplingMethodEnum {
   "empty" = "",
   "mothSamplingMethodJA500" = "MY.mothSamplingMethodJA500",
   "mothSamplingMethodLHG" = "MY.mothSamplingMethodLHG",
@@ -603,7 +626,7 @@ export enum MothSamplingMethodEnum {
   "mothSamplingMethodPR125" = "MY.mothSamplingMethodPR125",
   "mothSamplingMethodPR250" = "MY.mothSamplingMethodPR250"
 }
-export enum PredominantTreeEnum {
+export enum MYPredominantTreeEnum {
   "empty" = "",
   "MX.37819" = "MX.37819",
   "MX.37812" = "MX.37812",
@@ -624,7 +647,7 @@ export enum PredominantTreeEnum {
   "MX.39122" = "MX.39122",
   "MX.37815" = "MX.37815"
 }
-export enum SamplingMethods {
+export enum MYSamplingMethods {
   "empty" = "",
   "samplingMethodCarnet" = "MY.samplingMethodCarnet",
   "samplingMethodFeromonetrap" = "MY.samplingMethodFeromonetrap",
@@ -675,7 +698,7 @@ export enum SamplingMethods {
   "samplingMethodWaterSieve" = "MY.samplingMethodWaterSieve",
   "samplingMethodOther" = "MY.samplingMethodOther"
 }
-export enum ArtificialLightEnum {
+export enum MYArtificialLightEnum {
   "empty" = "",
   "artificialLightEnum1" = "MY.artificialLightEnum1",
   "artificialLightEnum2" = "MY.artificialLightEnum2",
@@ -683,7 +706,7 @@ export enum ArtificialLightEnum {
   "artificialLightEnum4" = "MY.artificialLightEnum4",
   "artificialLightEnum5" = "MY.artificialLightEnum5"
 }
-export enum CloudCoverOktaEnum {
+export enum MYCloudCoverOktaEnum {
   "empty" = "",
   "cloudCoverOktaEnumUnknown" = "MY.cloudCoverOktaEnumUnknown",
   "cloudCoverOktaEnum0" = "MY.cloudCoverOktaEnum0",
@@ -696,7 +719,7 @@ export enum CloudCoverOktaEnum {
   "cloudCoverOktaEnum7" = "MY.cloudCoverOktaEnum7",
   "cloudCoverOktaEnum8" = "MY.cloudCoverOktaEnum8"
 }
-export enum RainIntensityEnum {
+export enum MYRainIntensityEnum {
   "empty" = "",
   "rainIntensityEnumNoRain" = "MY.rainIntensityEnumNoRain",
   "rainIntensityEnumLightRain" = "MY.rainIntensityEnumLightRain",
@@ -704,13 +727,13 @@ export enum RainIntensityEnum {
   "rainIntensityEnumHeavyRain" = "MY.rainIntensityEnumHeavyRain",
   "rainIntensityEnumTorrentialRain" = "MY.rainIntensityEnumTorrentialRain"
 }
-export enum BatCollectorEnum {
+export enum MYBatCollectorEnum {
   "empty" = "",
   "batCollectorAlone" = "MY.batCollectorAlone",
   "batCollectorWithProjectGroupMember" = "MY.batCollectorWithProjectGroupMember",
   "batCollectorSomeoneElse" = "MY.batCollectorSomeoneElse"
 }
-export enum LolifeSiteClassificationEnum {
+export enum MYLolifeSiteClassificationEnum {
   "empty" = "",
   "lolifeSiteClassificationExcellent" = "MY.lolifeSiteClassificationExcellent",
   "lolifeSiteClassificationSuboptimal" = "MY.lolifeSiteClassificationSuboptimal",
@@ -718,7 +741,7 @@ export enum LolifeSiteClassificationEnum {
   "lolifeSiteClassificationCurrentlyUnsuitable" = "MY.lolifeSiteClassificationCurrentlyUnsuitable",
   "lolifeSiteClassificationPermanentlyUnsuitable" = "MY.lolifeSiteClassificationPermanentlyUnsuitable"
 }
-export enum PointCountHabitatEnum {
+export enum MYPointCountHabitatEnum {
   "empty" = "",
   "pointCountHabitat0" = "MY.pointCountHabitat0",
   "pointCountHabitat1" = "MY.pointCountHabitat1",
@@ -739,7 +762,7 @@ export enum PointCountHabitatEnum {
   "pointCountHabitat16" = "MY.pointCountHabitat16",
   "pointCountHabitat17" = "MY.pointCountHabitat17"
 }
-export enum SykeButterFlyCensusWindEnum {
+export enum MYSykeButterFlyCensusWindEnum {
   "empty" = "",
   "sykeButterFlyCensusWindEnumUnknown" = "MY.sykeButterFlyCensusWindEnumUnknown",
   "sykeButterFlyCensusWindEnum0" = "MY.sykeButterFlyCensusWindEnum0",
@@ -750,7 +773,7 @@ export enum SykeButterFlyCensusWindEnum {
   "sykeButterFlyCensusWindEnum5" = "MY.sykeButterFlyCensusWindEnum5",
   "sykeButterFlyCensusWindEnum6" = "MY.sykeButterFlyCensusWindEnum6"
 }
-export enum WaterbirdCensusPeriodEnum {
+export enum MYWaterbirdCensusPeriodEnum {
   "empty" = "",
   "waterbirdCensusPeriodEnum1" = "MY.waterbirdCensusPeriodEnum1",
   "waterbirdCensusPeriodEnum2" = "MY.waterbirdCensusPeriodEnum2",
@@ -758,7 +781,7 @@ export enum WaterbirdCensusPeriodEnum {
   "waterbirdCensusPeriodEnumAdditional" = "MY.waterbirdCensusPeriodEnumAdditional",
   "waterbirdCensusPeriodEnumCombined" = "MY.waterbirdCensusPeriodEnumCombined"
 }
-export enum WaterbirdHabitatEnum {
+export enum MYWaterbirdHabitatEnum {
   "empty" = "",
   "waterbirdHabitatEnum1" = "MY.waterbirdHabitatEnum1",
   "waterbirdHabitatEnum2" = "MY.waterbirdHabitatEnum2",
@@ -771,14 +794,14 @@ export enum WaterbirdHabitatEnum {
   "waterbirdHabitatEnum9" = "MY.waterbirdHabitatEnum9",
   "waterbirdHabitatEnum10" = "MY.waterbirdHabitatEnum10"
 }
-export enum SpeciesAbundanceEnum {
+export enum WBCSpeciesAbundanceEnum {
   "empty" = "",
   "speciesAbundanceEnum0" = "WBC.speciesAbundanceEnum0",
   "speciesAbundanceEnum1" = "WBC.speciesAbundanceEnum1",
   "speciesAbundanceEnum2" = "WBC.speciesAbundanceEnum2",
   "speciesAbundanceEnum3" = "WBC.speciesAbundanceEnum3"
 }
-export enum CloudAndRainEnum {
+export enum WBCCloudAndRainEnum {
   "empty" = "",
   "cloudAndRainEnum0" = "WBC.cloudAndRainEnum0",
   "cloudAndRainEnum1" = "WBC.cloudAndRainEnum1",
@@ -786,7 +809,7 @@ export enum CloudAndRainEnum {
   "cloudAndRainEnum3" = "WBC.cloudAndRainEnum3",
   "cloudAndRainEnum4" = "WBC.cloudAndRainEnum4"
 }
-export enum IceCoverEnum {
+export enum WBCIceCoverEnum {
   "empty" = "",
   "iceCoverEnum0" = "WBC.iceCoverEnum0",
   "iceCoverEnum1" = "WBC.iceCoverEnum1",
@@ -794,7 +817,7 @@ export enum IceCoverEnum {
   "iceCoverEnum3" = "WBC.iceCoverEnum3",
   "iceCoverEnum4" = "WBC.iceCoverEnum4"
 }
-export enum BerriesAndConesEnum {
+export enum WBCBerriesAndConesEnum {
   "empty" = "",
   "berriesAndConesEnum0" = "WBC.berriesAndConesEnum0",
   "berriesAndConesEnum1" = "WBC.berriesAndConesEnum1",
@@ -804,14 +827,14 @@ export enum BerriesAndConesEnum {
   "berriesAndConesEnum5" = "WBC.berriesAndConesEnum5",
   "berriesAndConesEnum6" = "WBC.berriesAndConesEnum6"
 }
-export enum SnowAndIceOnTreesEnum {
+export enum WBCSnowAndIceOnTreesEnum {
   "empty" = "",
   "snowAndIceOnTreesEnum0" = "WBC.snowAndIceOnTreesEnum0",
   "snowAndIceOnTreesEnum1" = "WBC.snowAndIceOnTreesEnum1",
   "snowAndIceOnTreesEnum2" = "WBC.snowAndIceOnTreesEnum2",
   "snowAndIceOnTreesEnum3" = "WBC.snowAndIceOnTreesEnum3"
 }
-export enum SnowCoverEnum {
+export enum WBCSnowCoverEnum {
   "empty" = "",
   "snowCoverEnum0" = "WBC.snowCoverEnum0",
   "snowCoverEnum1" = "WBC.snowCoverEnum1",
@@ -823,13 +846,13 @@ export enum SnowCoverEnum {
   "snowCoverEnum7" = "WBC.snowCoverEnum7",
   "snowCoverEnum8" = "WBC.snowCoverEnum8"
 }
-export enum TypeOfSnowCoverEnum {
+export enum WBCTypeOfSnowCoverEnum {
   "empty" = "",
   "typeOfSnowCoverEnum0" = "WBC.typeOfSnowCoverEnum0",
   "typeOfSnowCoverEnum1" = "WBC.typeOfSnowCoverEnum1",
   "typeOfSnowCoverEnum2" = "WBC.typeOfSnowCoverEnum2"
 }
-export enum VisibilityEnum {
+export enum WBCVisibilityEnum {
   "empty" = "",
   "visibilityEnum0" = "WBC.visibilityEnum0",
   "visibilityEnum1" = "WBC.visibilityEnum1",
@@ -837,7 +860,7 @@ export enum VisibilityEnum {
   "visibilityEnum3" = "WBC.visibilityEnum3",
   "visibilityEnum4" = "WBC.visibilityEnum4"
 }
-export enum WaterbodiesEnum {
+export enum WBCWaterbodiesEnum {
   "empty" = "",
   "waterbodiesEnum0" = "WBC.waterbodiesEnum0",
   "waterbodiesEnum1" = "WBC.waterbodiesEnum1",
@@ -846,7 +869,7 @@ export enum WaterbodiesEnum {
   "waterbodiesEnum4" = "WBC.waterbodiesEnum4",
   "waterbodiesEnum5" = "WBC.waterbodiesEnum5"
 }
-export enum WayOfTravelEnum {
+export enum WBCWayOfTravelEnum {
   "empty" = "",
   "wayOfTravelEnum0" = "WBC.wayOfTravelEnum0",
   "wayOfTravelEnum1" = "WBC.wayOfTravelEnum1",
@@ -854,7 +877,7 @@ export enum WayOfTravelEnum {
   "wayOfTravelEnum3" = "WBC.wayOfTravelEnum3",
   "wayOfTravelEnum9" = "WBC.wayOfTravelEnum9"
 }
-export enum WindEnum {
+export enum WBCWindEnum {
   "empty" = "",
   "windEnum0" = "WBC.windEnum0",
   "windEnum1" = "WBC.windEnum1",
@@ -862,7 +885,103 @@ export enum WindEnum {
   "windEnum3" = "WBC.windEnum3",
   "windEnum4" = "WBC.windEnum4"
 }
-export enum HabitatSpecificTypeEnum {
+export enum MKVHabitatEnum {
+  "habitatM" = "MKV.habitatM",
+  "habitatMk" = "MKV.habitatMk",
+  "habitatMkk" = "MKV.habitatMkk",
+  "habitatMkt" = "MKV.habitatMkt",
+  "habitatMl" = "MKV.habitatMl",
+  "habitatMlt" = "MKV.habitatMlt",
+  "habitatMlk" = "MKV.habitatMlk",
+  "habitatMt" = "MKV.habitatMt",
+  "habitatMtl" = "MKV.habitatMtl",
+  "habitatS" = "MKV.habitatS",
+  "habitatSl" = "MKV.habitatSl",
+  "habitatSla" = "MKV.habitatSla",
+  "habitatSlr" = "MKV.habitatSlr",
+  "habitatSlk" = "MKV.habitatSlk",
+  "habitatSn" = "MKV.habitatSn",
+  "habitatSnk" = "MKV.habitatSnk",
+  "habitatSnr" = "MKV.habitatSnr",
+  "habitatSr" = "MKV.habitatSr",
+  "habitatSrk" = "MKV.habitatSrk",
+  "habitatSrr" = "MKV.habitatSrr",
+  "habitatSk" = "MKV.habitatSk",
+  "habitatSkk" = "MKV.habitatSkk",
+  "habitatSkr" = "MKV.habitatSkr",
+  "habitatV" = "MKV.habitatV",
+  "habitatVi" = "MKV.habitatVi",
+  "habitatVik" = "MKV.habitatVik",
+  "habitatVim" = "MKV.habitatVim",
+  "habitatVis" = "MKV.habitatVis",
+  "habitatVih" = "MKV.habitatVih",
+  "habitatVie" = "MKV.habitatVie",
+  "habitatVip" = "MKV.habitatVip",
+  "habitatVs" = "MKV.habitatVs",
+  "habitatVsk" = "MKV.habitatVsk",
+  "habitatVsr" = "MKV.habitatVsr",
+  "habitatVa" = "MKV.habitatVa",
+  "habitatVj" = "MKV.habitatVj",
+  "habitatVp" = "MKV.habitatVp",
+  "habitatVk" = "MKV.habitatVk",
+  "habitatVl" = "MKV.habitatVl",
+  "habitatR" = "MKV.habitatR",
+  "habitatRi" = "MKV.habitatRi",
+  "habitatRim" = "MKV.habitatRim",
+  "habitatRimt" = "MKV.habitatRimt",
+  "habitatRiml" = "MKV.habitatRiml",
+  "habitatRip" = "MKV.habitatRip",
+  "habitatRin" = "MKV.habitatRin",
+  "habitatRil" = "MKV.habitatRil",
+  "habitatRir" = "MKV.habitatRir",
+  "habitatRis" = "MKV.habitatRis",
+  "habitatRih" = "MKV.habitatRih",
+  "habitatRit" = "MKV.habitatRit",
+  "habitatRj" = "MKV.habitatRj",
+  "habitatRjm" = "MKV.habitatRjm",
+  "habitatRjmt" = "MKV.habitatRjmt",
+  "habitatRjml" = "MKV.habitatRjml",
+  "habitatRjp" = "MKV.habitatRjp",
+  "habitatRjn" = "MKV.habitatRjn",
+  "habitatRjl" = "MKV.habitatRjl",
+  "habitatRjr" = "MKV.habitatRjr",
+  "habitatRjs" = "MKV.habitatRjs",
+  "habitatRjh" = "MKV.habitatRjh",
+  "habitatRjt" = "MKV.habitatRjt",
+  "habitatK" = "MKV.habitatK",
+  "habitatKk" = "MKV.habitatKk",
+  "habitatKs" = "MKV.habitatKs",
+  "habitatKr" = "MKV.habitatKr",
+  "habitatKl" = "MKV.habitatKl",
+  "habitatKm" = "MKV.habitatKm",
+  "habitatT" = "MKV.habitatT",
+  "habitatTk" = "MKV.habitatTk",
+  "habitatTn" = "MKV.habitatTn",
+  "habitatTu" = "MKV.habitatTu",
+  "habitatTp" = "MKV.habitatTp",
+  "habitatTl" = "MKV.habitatTl",
+  "habitatTll" = "MKV.habitatTll",
+  "habitatTlk" = "MKV.habitatTlk",
+  "habitatTls" = "MKV.habitatTls",
+  "habitatTlr" = "MKV.habitatTlr",
+  "habitatTlä" = "MKV.habitatTlä",
+  "habitatTs" = "MKV.habitatTs",
+  "habitatTj" = "MKV.habitatTj",
+  "habitatTv" = "MKV.habitatTv",
+  "habitatTa" = "MKV.habitatTa",
+  "habitatI" = "MKV.habitatI",
+  "habitatIn" = "MKV.habitatIn",
+  "habitatIt" = "MKV.habitatIt",
+  "habitatIh" = "MKV.habitatIh",
+  "habitatIk" = "MKV.habitatIk",
+  "habitatIo" = "MKV.habitatIo",
+  "habitatIv" = "MKV.habitatIv",
+  "habitatIp" = "MKV.habitatIp",
+  "habitatIu" = "MKV.habitatIu",
+  "habitatIr" = "MKV.habitatIr",
+  "habitatU" = "MKV.habitatU"
+}
+export enum MKVHabitatSpecificTypeEnum {
   "empty" = "",
   "habitatSpecificTypeV" = "MKV.habitatSpecificTypeV",
   "habitatSpecificTypeH" = "MKV.habitatSpecificTypeH",
@@ -875,13 +994,13 @@ export enum HabitatSpecificTypeEnum {
   "habitatSpecificTypeKE" = "MKV.habitatSpecificTypeKE",
   "habitatSpecificTypeCA" = "MKV.habitatSpecificTypeCA"
 }
-export enum DetMethodEnum {
+export enum MYDetMethodEnum {
   "empty" = "",
   "detMethodFreshSample" = "MY.detMethodFreshSample",
   "detMethodMicroscopy" = "MY.detMethodMicroscopy",
   "detMethodPhoto" = "MY.detMethodPhoto"
 }
-export enum IdentificationBasisEnum {
+export enum MYIdentificationBasisEnum {
   "empty" = "",
   "identificationBasisDNA" = "MY.identificationBasisDNA",
   "identificationBasisGenitals" = "MY.identificationBasisGenitals",
@@ -896,7 +1015,7 @@ export enum IdentificationBasisEnum {
   "identificationBasisFreshSpecimen" = "MY.identificationBasisFreshSpecimen",
   "identificationBasisMedia" = "MY.identificationBasisMedia"
 }
-export enum InfraRanks {
+export enum MYInfraRanks {
   "empty" = "",
   "infraRankSsp" = "MY.infraRankSsp",
   "infraRankVar" = "MY.infraRankVar",
@@ -914,7 +1033,7 @@ export enum InfraRanks {
   "infraRankCultivarGroup" = "MY.infraRankCultivarGroup",
   "infraRankFsp" = "MY.infraRankFsp"
 }
-export enum TaxonRankEnum {
+export enum MXTaxonRankEnum {
   "empty" = "",
   "MX.superdomain" = "MX.superdomain",
   "MX.domain" = "MX.domain",
@@ -975,23 +1094,23 @@ export enum TaxonRankEnum {
   "MX.group" = "MX.group",
   "MX.grex" = "MX.grex"
 }
-export enum SideEnum {
+export enum MMSideEnum {
   "empty" = "",
   "sideUpside" = "MM.sideUpside",
   "sideDownside" = "MM.sideDownside"
 }
-export enum Publicities {
+export enum KEPublicities {
   "inUseByLuomus" = "KE.inUseByLuomus",
   "inPublicUse" = "KE.inPublicUse",
   "adminOnly" = "KE.adminOnly",
   "thirdParty" = "KE.thirdParty"
 }
-export enum States {
+export enum KEStates {
   "productionState" = "KE.productionState",
   "developmentState" = "KE.developmentState",
   "abandonedState" = "KE.abandonedState"
 }
-export enum Types {
+export enum KETypes {
   "webApplication" = "KE.webApplication",
   "webService" = "KE.webService",
   "softwareComponent" = "KE.softwareComponent",
@@ -1001,26 +1120,26 @@ export enum Types {
   "server" = "KE.server",
   "mobileApp" = "KE.mobileApp"
 }
-export enum DdReasonEnum {
+export enum MKVDdReasonEnum {
   "empty" = "",
   "ddReasonIncompleteSpatialData" = "MKV.ddReasonIncompleteSpatialData",
   "ddReasonIncompleteTaxonomicData" = "MKV.ddReasonIncompleteTaxonomicData",
   "ddReasonIncompleteOtherData" = "MKV.ddReasonIncompleteOtherData"
 }
-export enum ExternalPopulationImpactOnRedListStatusEnum {
+export enum MKVExternalPopulationImpactOnRedListStatusEnum {
   "empty" = "",
   "externalPopulationImpactOnRedListStatusEnumMinus1" = "MKV.externalPopulationImpactOnRedListStatusEnumMinus1",
   "externalPopulationImpactOnRedListStatusEnumMinus2" = "MKV.externalPopulationImpactOnRedListStatusEnumMinus2",
   "externalPopulationImpactOnRedListStatusEnumPlus1" = "MKV.externalPopulationImpactOnRedListStatusEnumPlus1",
   "externalPopulationImpactOnRedListStatusEnumPlus2" = "MKV.externalPopulationImpactOnRedListStatusEnumPlus2"
 }
-export enum PossiblyREEnum {
+export enum MKVPossiblyREEnum {
   "empty" = "",
   "MX.iucnRE" = "MX.iucnRE",
   "MX.iucnEW" = "MX.iucnEW",
   "MX.iucnEX" = "MX.iucnEX"
 }
-export enum ReasonForStatusChangeEnum {
+export enum MKVReasonForStatusChangeEnum {
   "empty" = "",
   "reasonForStatusChangeGenuine" = "MKV.reasonForStatusChangeGenuine",
   "reasonForStatusChangeGenuineBeforePreviousEvaluation" = "MKV.reasonForStatusChangeGenuineBeforePreviousEvaluation",
@@ -1031,7 +1150,7 @@ export enum ReasonForStatusChangeEnum {
   "reasonForStatusChangeErroneousInformation" = "MKV.reasonForStatusChangeErroneousInformation",
   "reasonForStatusChangeOther" = "MKV.reasonForStatusChangeOther"
 }
-export enum IucnStatuses {
+export enum MXIucnStatuses {
   "empty" = "",
   "MX.iucnEX" = "MX.iucnEX",
   "MX.iucnEW" = "MX.iucnEW",
@@ -1045,12 +1164,12 @@ export enum IucnStatuses {
   "MX.iucnNA" = "MX.iucnNA",
   "MX.iucnNE" = "MX.iucnNE"
 }
-export enum StateEnum {
+export enum MKVStateEnum {
   "stateReady" = "MKV.stateReady",
   "stateReadyForComments" = "MKV.stateReadyForComments",
   "stateStarted" = "MKV.stateStarted"
 }
-export enum TypeOfOccurrenceEnum {
+export enum MXTypeOfOccurrenceEnum {
   "empty" = "",
   "MX.doesNotOccur" = "MX.doesNotOccur",
   "MX.typeOfOccurrenceOccurs" = "MX.typeOfOccurrenceOccurs",
@@ -1098,13 +1217,13 @@ export enum TypeOfOccurrenceEnum {
   "MX.typeOfOccurrenceBirdLifeCategoryE" = "MX.typeOfOccurrenceBirdLifeCategoryE",
   "MX.typeOfOccurrenceOccursBasedOnOccurrences" = "MX.typeOfOccurrenceOccursBasedOnOccurrences"
 }
-export enum AccessibilityEnum {
+export enum MNPAccessibilityEnum {
   "empty" = "",
   "accessibilityEasy" = "MNP.accessibilityEasy",
   "accessibilityModerate" = "MNP.accessibilityModerate",
   "accessibilityDifficult" = "MNP.accessibilityDifficult"
 }
-export enum PriorityEnum {
+export enum MNPPriorityEnum {
   "empty" = "",
   "priority1" = "MNP.priority1",
   "priority2" = "MNP.priority2",
@@ -1112,7 +1231,7 @@ export enum PriorityEnum {
   "priority4" = "MNP.priority4",
   "priority5" = "MNP.priority5"
 }
-export enum TagEnum {
+export enum MNPTagEnum {
   "empty" = "",
   "tagAccessibilityEasy" = "MNP.tagAccessibilityEasy",
   "tagAccessibilityModerate" = "MNP.tagAccessibilityModerate",
@@ -1124,22 +1243,22 @@ export enum TagEnum {
   "tagHabitatMountain" = "MNP.tagHabitatMountain",
   "tagSuitable" = "MNP.tagSuitable"
 }
-export enum NotificationReasonEnum {
+export enum MHNNotificationReasonEnum {
   "empty" = "",
   "notificationReasonOwnDocumentAnnotated" = "MHN.notificationReasonOwnDocumentAnnotated",
   "notificationReasonAnnotatedDocumentAnnotated" = "MHN.notificationReasonAnnotatedDocumentAnnotated"
 }
-export enum Explanations {
+export enum MOSABBREVIATIONExplanations {
   "empty" = "",
   "abbreviation-explanationIndexHerbariorum" = "MOS.abbreviation-explanationIndexHerbariorum",
   "abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld" = "MOS.abbreviation-explanationInsectAndSpiderCollectionsOfTheWorld"
 }
-export enum PermitStatusEnum {
+export enum HRAPermitStatusEnum {
   "empty" = "",
   "permitStatusAvailable" = "HRA.permitStatusAvailable",
   "permitStatusNotRequired" = "HRA.permitStatusNotRequired"
 }
-export enum PermitTypeEnum {
+export enum HRAPermitTypeEnum {
   "empty" = "",
   "permitTypePIC" = "HRA.permitTypePIC",
   "permitTypeMAT" = "HRA.permitTypeMAT",
@@ -1149,7 +1268,7 @@ export enum PermitTypeEnum {
   "permitTypeOther" = "HRA.permitTypeOther",
   "permitTypeMemorandumOfUnderstanding" = "HRA.permitTypeMemorandumOfUnderstanding"
 }
-export enum Roles {
+export enum MARoles {
   "empty" = "",
   "admin" = "MA.admin",
   "securePortalUser" = "MA.securePortalUser",
@@ -1164,14 +1283,14 @@ export enum Roles {
   "luomusSpaceOpeningTimesUser" = "MA.luomusSpaceOpeningTimesUser",
   "taxonIdEditor" = "MA.taxonIdEditor"
 }
-export enum RoleKotkaEnum {
+export enum MARoleKotkaEnum {
   "empty" = "",
   "admin" = "MA.admin",
   "advanced" = "MA.advanced",
   "member" = "MA.member",
   "guest" = "MA.guest"
 }
-export enum PreparationMaterialsEnum {
+export enum MFPreparationMaterialsEnum {
   "empty" = "",
   "preparationMaterialsAcetone" = "MF.preparationMaterialsAcetone",
   "preparationMaterialsAmmonia" = "MF.preparationMaterialsAmmonia",
@@ -1197,7 +1316,7 @@ export enum PreparationMaterialsEnum {
   "preparationMaterialsDNeasyPlantMiniKit" = "MF.preparationMaterialsDNeasyPlantMiniKit",
   "preparationMaterialsMagAttractHMWDNAKit" = "MF.preparationMaterialsMagAttractHMWDNAKit"
 }
-export enum PreparationProcessEnum {
+export enum MFPreparationProcessEnum {
   "empty" = "",
   "preparationProcessTanning" = "MF.preparationProcessTanning",
   "preparationProcessEnzymaticMaceration" = "MF.preparationProcessEnzymaticMaceration",
@@ -1206,31 +1325,31 @@ export enum PreparationProcessEnum {
   "preparationProcessPEG" = "MF.preparationProcessPEG",
   "preparationProcessFreezeDrying" = "MF.preparationProcessFreezeDrying"
 }
-export enum BirdwatchingActivityLevelEnum {
+export enum MABirdwatchingActivityLevelEnum {
   "empty" = "",
   "birdwatchingActivityLevelEnum1" = "MA.birdwatchingActivityLevelEnum1",
   "birdwatchingActivityLevelEnum2" = "MA.birdwatchingActivityLevelEnum2",
   "birdwatchingActivityLevelEnum3" = "MA.birdwatchingActivityLevelEnum3",
   "birdwatchingActivityLevelEnum4" = "MA.birdwatchingActivityLevelEnum4"
 }
-export enum FinnishBirdSongRecognitionSkillLevelEnum {
+export enum MAFinnishBirdSongRecognitionSkillLevelEnum {
   "empty" = "",
   "finnishBirdSongRecognitionSkillLevelEnum1" = "MA.finnishBirdSongRecognitionSkillLevelEnum1",
   "finnishBirdSongRecognitionSkillLevelEnum2" = "MA.finnishBirdSongRecognitionSkillLevelEnum2",
   "finnishBirdSongRecognitionSkillLevelEnum3" = "MA.finnishBirdSongRecognitionSkillLevelEnum3",
   "finnishBirdSongRecognitionSkillLevelEnum4" = "MA.finnishBirdSongRecognitionSkillLevelEnum4"
 }
-export enum ElutionMediumEnum {
+export enum MFElutionMediumEnum {
   "empty" = "",
   "elutionMediumUltrapureWater" = "MF.elutionMediumUltrapureWater",
   "elutionMediumElutionBuffer" = "MF.elutionMediumElutionBuffer"
 }
-export enum IndividualsInPreparationEnum {
+export enum MFIndividualsInPreparationEnum {
   "empty" = "",
   "individualsInPreparationMultiple" = "MF.individualsInPreparationMultiple",
   "individualsInPreparationSingle" = "MF.individualsInPreparationSingle"
 }
-export enum MaterialEnum {
+export enum MFMaterialEnum {
   "empty" = "",
   "materialBirdStudySkin" = "MF.materialBirdStudySkin",
   "materialWing" = "MF.materialWing",
@@ -1271,7 +1390,7 @@ export enum MaterialEnum {
   "materialNestMaterial" = "MF.materialNestMaterial",
   "materialOther" = "MF.materialOther"
 }
-export enum PreparationTypeEnum {
+export enum MFPreparationTypeEnum {
   "preparationTypeSkin" = "MF.preparationTypeSkin",
   "preparationTypeSkeletal" = "MF.preparationTypeSkeletal",
   "preparationTypeMount" = "MF.preparationTypeMount",
@@ -1284,24 +1403,24 @@ export enum PreparationTypeEnum {
   "preparationTypeNest" = "MF.preparationTypeNest",
   "preparationTypeOther" = "MF.preparationTypeOther"
 }
-export enum QualityEnum {
+export enum MFQualityEnum {
   "empty" = "",
   "qualityLow" = "MF.qualityLow",
   "qualityMedium" = "MF.qualityMedium",
   "qualityHigh" = "MF.qualityHigh"
 }
-export enum QualityCheckMethodEnum {
+export enum MFQualityCheckMethodEnum {
   "empty" = "",
   "qualityCheckMethodNanoDrop" = "MF.qualityCheckMethodNanoDrop",
   "qualityCheckMethodCubit" = "MF.qualityCheckMethodCubit"
 }
-export enum AvailableForGeneticResearchEnum {
+export enum HRXAvailableForGeneticResearchEnum {
   "empty" = "",
   "availableForGeneticResearchYes" = "HRX.availableForGeneticResearchYes",
   "availableForGeneticResearchWithRestrictions" = "HRX.availableForGeneticResearchWithRestrictions",
   "availableForGeneticResearchNo" = "HRX.availableForGeneticResearchNo"
 }
-export enum GeneticResourceTypeEnum {
+export enum HRXGeneticResourceTypeEnum {
   "empty" = "",
   "geneticResourceTypeAnimal" = "HRX.geneticResourceTypeAnimal",
   "geneticResourceTypePlant" = "HRX.geneticResourceTypePlant",
@@ -1310,20 +1429,20 @@ export enum GeneticResourceTypeEnum {
   "geneticResourceTypeSoil" = "HRX.geneticResourceTypeSoil",
   "geneticResourceTypeAqua" = "HRX.geneticResourceTypeAqua"
 }
-export enum ResourceImportedEnum {
+export enum HRXResourceImportedEnum {
   "empty" = "",
   "resourceImportedGeneticResources" = "HRX.resourceImportedGeneticResources",
   "resourceImportedTraditionalKnowledge" = "HRX.resourceImportedTraditionalKnowledge",
   "resourceImportedBoth" = "HRX.resourceImportedBoth"
 }
-export enum StatusEnum {
+export enum HRXStatusEnum {
   "empty" = "",
   "statusInProcess" = "HRX.statusInProcess",
   "statusOutstanding" = "HRX.statusOutstanding",
   "statusClosed" = "HRX.statusClosed",
   "statusOnLoan" = "HRX.statusOnLoan"
 }
-export enum TransportMethodEnum {
+export enum HRXTransportMethodEnum {
   "empty" = "",
   "transportMethodPriority" = "HRX.transportMethodPriority",
   "transportMethodEconomy" = "HRX.transportMethodEconomy",
@@ -1332,11 +1451,34 @@ export enum TransportMethodEnum {
   "transportMethodOther" = "HRX.transportMethodOther",
   "transportMethodImage" = "HRX.transportMethodImage"
 }
-export enum EventTypeEnum {
+export enum HRXTypeEnum {
+  "typeLoanIncoming" = "HRX.typeLoanIncoming",
+  "typeLoanOutgoing" = "HRX.typeLoanOutgoing",
+  "typeGiftIncoming" = "HRX.typeGiftIncoming",
+  "typeGiftOutgoing" = "HRX.typeGiftOutgoing",
+  "typeExchangeIncoming" = "HRX.typeExchangeIncoming",
+  "typeExchangeOutgoing" = "HRX.typeExchangeOutgoing",
+  "typeFieldCollection" = "HRX.typeFieldCollection",
+  "typeImportNotice" = "HRX.typeImportNotice",
+  "typeABSNegotiations" = "HRX.typeABSNegotiations",
+  "typeVirtualLoanOutgoing" = "HRX.typeVirtualLoanOutgoing",
+  "typeDeaccession" = "HRX.typeDeaccession"
+}
+export enum HRXEventTypeEnum {
   "eventTypeReturn" = "HRX.eventTypeReturn",
   "eventTypeAddition" = "HRX.eventTypeAddition"
 }
-export enum InvasiveSpeciesMainGroups {
+export enum MMANTypeEnum {
+  "empty" = "",
+  "typeCheck" = "MMAN.typeCheck",
+  "typeAdmin" = "MMAN.typeAdmin",
+  "typeInfo" = "MMAN.typeInfo",
+  "typeInvasive" = "MMAN.typeInvasive",
+  "typeCensus" = "MMAN.typeCensus",
+  "typeNegativeQuality" = "MMAN.typeNegativeQuality",
+  "typePositiveQuality" = "MMAN.typePositiveQuality"
+}
+export enum HBEInvasiveSpeciesMainGroups {
   "empty" = "",
   "MG2" = "HBE.MG2",
   "MG3" = "HBE.MG3",
@@ -1358,7 +1500,7 @@ export enum InvasiveSpeciesMainGroups {
   "MG19" = "HBE.MG19",
   "MG20" = "HBE.MG20"
 }
-export enum AdminStatusEnum {
+export enum MXAdminStatusEnum {
   "empty" = "",
   "MX.finlex160_1997_appendix4_2021" = "MX.finlex160_1997_appendix4_2021",
   "MX.finlex160_1997_appendix4_specialInterest_2021" = "MX.finlex160_1997_appendix4_specialInterest_2021",
@@ -1425,13 +1567,13 @@ export enum AdminStatusEnum {
   "MX.finlex160_1997_appendix4" = "MX.finlex160_1997_appendix4",
   "MX.finlex160_1997_appendix4_specialInterest" = "MX.finlex160_1997_appendix4_specialInterest"
 }
-export enum InvasiveSpeciesCategories {
+export enum MXInvasiveSpeciesCategories {
   "empty" = "",
   "MX.invasiveExtremelyDangerous" = "MX.invasiveExtremelyDangerous",
   "MX.invasiveDangerous" = "MX.invasiveDangerous",
   "MX.invasiveWatchlist" = "MX.invasiveWatchlist"
 }
-export enum InvasiveSpeciesEstablishmentStatuses {
+export enum MXInvasiveSpeciesEstablishmentStatuses {
   "empty" = "",
   "MX.invasiveEstablished" = "MX.invasiveEstablished",
   "MX.invasiveSporadic" = "MX.invasiveSporadic",
@@ -1440,7 +1582,7 @@ export enum InvasiveSpeciesEstablishmentStatuses {
   "MX.invasiveEstablishmentAccidental" = "MX.invasiveEstablishmentAccidental",
   "MX.invasiveNonWild" = "MX.invasiveNonWild"
 }
-export enum TaxonSetEnum {
+export enum MXTaxonSetEnum {
   "empty" = "",
   "MX.taxonSetSykeButterflyCensusPapilionoidea" = "MX.taxonSetSykeButterflyCensusPapilionoidea",
   "MX.taxonSetSykeButterflyCensusOther" = "MX.taxonSetSykeButterflyCensusOther",
@@ -1465,7 +1607,7 @@ export enum TaxonSetEnum {
   "MX.taxonSetBiomonCompleteListPracticalFungi" = "MX.taxonSetBiomonCompleteListPracticalFungi",
   "MX.taxonSetSykeMacrozoobenthos" = "MX.taxonSetSykeMacrozoobenthos"
 }
-export enum OccurrenceInFinlandEnum {
+export enum MXOccurrenceInFinlandEnum {
   "empty" = "",
   "MX.doesNotOccur" = "MX.doesNotOccur",
   "MX.occurrenceInFinlandPublished" = "MX.occurrenceInFinlandPublished",
@@ -1477,12 +1619,12 @@ export enum OccurrenceInFinlandEnum {
   "MX.occurrenceInFinlandPublishedError" = "MX.occurrenceInFinlandPublishedError",
   "MX.occurrenceInFinlandPresumed" = "MX.occurrenceInFinlandPresumed"
 }
-export enum TaxonCensusEnum {
+export enum MYTaxonCensusEnum {
   "taxonCensusTypeCounted" = "MY.taxonCensusTypeCounted",
   "taxonCensusTypeEstimated" = "MY.taxonCensusTypeEstimated",
   "taxonCensusTypeNotCounted" = "MY.taxonCensusTypeNotCounted"
 }
-export enum TaxonInteractionEnum {
+export enum MITaxonInteractionEnum {
   "taxonInteractionNeutralism" = "MI.taxonInteractionNeutralism",
   "taxonInteractionAntagonism" = "MI.taxonInteractionAntagonism",
   "taxonInteractionCommensalism" = "MI.taxonInteractionCommensalism",
@@ -1494,7 +1636,22 @@ export enum TaxonInteractionEnum {
   "taxonInteractionEctoparasitism" = "MI.taxonInteractionEctoparasitism",
   "taxonInteractionEndoparasitism" = "MI.taxonInteractionEndoparasitism"
 }
-export enum LocalDepartments {
+export enum HRAAvailableForGeneticResearchEnum {
+  "empty" = "",
+  "availableForGeneticResearchYes" = "HRA.availableForGeneticResearchYes",
+  "availableForGeneticResearchWithRestrictions" = "HRA.availableForGeneticResearchWithRestrictions",
+  "availableForGeneticResearchNo" = "HRA.availableForGeneticResearchNo"
+}
+export enum HRAGeneticResourceTypeEnum {
+  "empty" = "",
+  "geneticResourceTypeAnimal" = "HRA.geneticResourceTypeAnimal",
+  "geneticResourceTypePlant" = "HRA.geneticResourceTypePlant",
+  "geneticResourceTypeFungus" = "HRA.geneticResourceTypeFungus",
+  "geneticResourceTypeMicrobe" = "HRA.geneticResourceTypeMicrobe",
+  "geneticResourceTypeSoil" = "HRA.geneticResourceTypeSoil",
+  "geneticResourceTypeAqua" = "HRA.geneticResourceTypeAqua"
+}
+export enum HRALocalDepartments {
   "empty" = "",
   "localDepartmentDipteraHymenoptera" = "HRA.localDepartmentDipteraHymenoptera",
   "localDepartmentLepidopteraColeoptera" = "HRA.localDepartmentLepidopteraColeoptera",
@@ -1505,7 +1662,13 @@ export enum LocalDepartments {
   "localDepartmentMycology" = "HRA.localDepartmentMycology",
   "localDepartmentVascularPlants" = "HRA.localDepartmentVascularPlants"
 }
-export enum SentTypes {
+export enum HRAResourceImportedEnum {
+  "empty" = "",
+  "resourceImportedGeneticResources" = "HRA.resourceImportedGeneticResources",
+  "resourceImportedTraditionalKnowledge" = "HRA.resourceImportedTraditionalKnowledge",
+  "resourceImportedBoth" = "HRA.resourceImportedBoth"
+}
+export enum HRASentTypes {
   "empty" = "",
   "sentTypePriority" = "HRA.sentTypePriority",
   "sentTypeEconomy" = "HRA.sentTypeEconomy",
@@ -1514,13 +1677,13 @@ export enum SentTypes {
   "sentTypeOther" = "HRA.sentTypeOther",
   "sentTypeImage" = "HRA.sentTypeImage"
 }
-export enum TransactionStatuses {
+export enum HRATransactionStatuses {
   "empty" = "",
   "transactionStatusInProcess" = "HRA.transactionStatusInProcess",
   "transactionStatusOutstanding" = "HRA.transactionStatusOutstanding",
   "transactionStatusClosed" = "HRA.transactionStatusClosed"
 }
-export enum TransactionTypes {
+export enum HRATransactionTypes {
   "transactionTypeLoanIncoming" = "HRA.transactionTypeLoanIncoming",
   "transactionTypeGiftIncoming" = "HRA.transactionTypeGiftIncoming",
   "transactionTypeExchangeIncoming" = "HRA.transactionTypeExchangeIncoming",
@@ -1532,7 +1695,12 @@ export enum TransactionTypes {
   "transactionTypeABSNegotiations" = "HRA.transactionTypeABSNegotiations",
   "transactionTypeVirtualLoanOutgoing" = "HRA.transactionTypeVirtualLoanOutgoing"
 }
-export enum SentByEnum {
+export enum HRAAEventTypeEnum {
+  "eventTypeSend" = "HRAA.eventTypeSend",
+  "eventTypeReceive" = "HRAA.eventTypeReceive",
+  "eventTypeOther" = "HRAA.eventTypeOther"
+}
+export enum HRAASentByEnum {
   "empty" = "",
   "sentByPriority" = "HRAA.sentByPriority",
   "sentByEconomy" = "HRAA.sentByEconomy",
@@ -1540,13 +1708,18 @@ export enum SentByEnum {
   "sentByCarried" = "HRAA.sentByCarried",
   "sentByOther" = "HRAA.sentByOther"
 }
-export enum ItemTypeEnum {
+export enum HRABItemTypeEnum {
   "itemTypeSpecimen" = "HRAB.itemTypeSpecimen",
   "itemTypeSpecimenBatch" = "HRAB.itemTypeSpecimenBatch",
   "itemTypeImage" = "HRAB.itemTypeImage",
   "itemTypeOther" = "HRAB.itemTypeOther"
 }
-export enum TypeStatuses {
+export enum HRABStatusEnum {
+  "statusOk" = "HRAB.statusOk",
+  "statusMissing" = "HRAB.statusMissing",
+  "statusDamaged" = "HRAB.statusDamaged"
+}
+export enum MYTypeStatuses {
   "empty" = "",
   "typeStatusType" = "MY.typeStatusType",
   "typeStatusHolotype" = "MY.typeStatusHolotype",
@@ -1574,14 +1747,14 @@ export enum TypeStatuses {
   "typeStatusTypeStrain" = "MY.typeStatusTypeStrain",
   "typeStatusPathovarReferenceStrain" = "MY.typeStatusPathovarReferenceStrain"
 }
-export enum TypeVerifications {
+export enum MYTypeVerifications {
   "empty" = "",
   "typeVerificationVerified" = "MY.typeVerificationVerified",
   "typeVerificationUnverified" = "MY.typeVerificationUnverified",
   "typeVerificationProbable" = "MY.typeVerificationProbable",
   "typeVerificationDoubtful" = "MY.typeVerificationDoubtful"
 }
-export enum AbundanceUnitEnum {
+export enum MYAbundanceUnitEnum {
   "empty" = "",
   "abundanceUnitIndividualCount" = "MY.abundanceUnitIndividualCount",
   "abundanceUnitPairCount" = "MY.abundanceUnitPairCount",
@@ -1606,7 +1779,7 @@ export enum AbundanceUnitEnum {
   "abundanceUnitRelativeDensity" = "MY.abundanceUnitRelativeDensity",
   "abundanceUnitOccursDoesNotOccur" = "MY.abundanceUnitOccursDoesNotOccur"
 }
-export enum AtlasCodeEnum {
+export enum MYAtlasCodeEnum {
   "empty" = "",
   "atlasCodeEnum1" = "MY.atlasCodeEnum1",
   "atlasCodeEnum2" = "MY.atlasCodeEnum2",
@@ -1630,13 +1803,13 @@ export enum AtlasCodeEnum {
   "atlasCodeEnum81" = "MY.atlasCodeEnum81",
   "atlasCodeEnum82" = "MY.atlasCodeEnum82"
 }
-export enum BatBehaviorEnum {
+export enum MYBatBehaviorEnum {
   "empty" = "",
   "batBehaviorHibernating" = "MY.batBehaviorHibernating",
   "batBehaviorRoosting" = "MY.batBehaviorRoosting",
   "batBehaviorHunting" = "MY.batBehaviorHunting"
 }
-export enum BirdAgeEnum {
+export enum MYBirdAgeEnum {
   "empty" = "",
   "birdAgePp" = "MY.birdAgePp",
   "birdAgePm" = "MY.birdAgePm",
@@ -1658,7 +1831,7 @@ export enum BirdAgeEnum {
   "birdAgePlus8Kv" = "MY.birdAgePlus8Kv",
   "birdAge8Kv" = "MY.birdAge8Kv"
 }
-export enum BirdPlumageEnum {
+export enum MYBirdPlumageEnum {
   "empty" = "",
   "birdPlumageAd" = "MY.birdPlumageAd",
   "birdPlumageEijp" = "MY.birdPlumageEijp",
@@ -1673,7 +1846,7 @@ export enum BirdPlumageEnum {
   "birdPlumagePep" = "MY.birdPlumagePep",
   "birdPlumageSs" = "MY.birdPlumageSs"
 }
-export enum DistanceEnum {
+export enum MYDistanceEnum {
   "empty" = "",
   "distanceOverFlight" = "MY.distanceOverFlight",
   "distanceNear" = "MY.distanceNear",
@@ -1681,7 +1854,7 @@ export enum DistanceEnum {
   "distanceFar" = "MY.distanceFar",
   "distanceVeryFar" = "MY.distanceVeryFar"
 }
-export enum EpochOrSeries {
+export enum MYEpochOrSeries {
   "empty" = "",
   "epochOrSeriesCambrian" = "MY.epochOrSeriesCambrian",
   "epochOrSeriesCarboniferous" = "MY.epochOrSeriesCarboniferous",
@@ -1697,7 +1870,7 @@ export enum EpochOrSeries {
   "epochOrSeriesTertiary" = "MY.epochOrSeriesTertiary",
   "epochOrSeriesTriassic" = "MY.epochOrSeriesTriassic"
 }
-export enum FruitTypeEnum {
+export enum MYFruitTypeEnum {
   "empty" = "",
   "fruitTypeAchene" = "MY.fruitTypeAchene",
   "fruitTypeBerry" = "MY.fruitTypeBerry",
@@ -1713,7 +1886,7 @@ export enum FruitTypeEnum {
   "fruitTypeSchizocarp" = "MY.fruitTypeSchizocarp",
   "fruitTypeSiliqua" = "MY.fruitTypeSiliqua"
 }
-export enum IndirectObservationTypeEnum {
+export enum MYIndirectObservationTypeEnum {
   "empty" = "",
   "indirectObservationTypeFeces" = "MY.indirectObservationTypeFeces",
   "indirectObservationTypeSnowTracks" = "MY.indirectObservationTypeSnowTracks",
@@ -1722,14 +1895,14 @@ export enum IndirectObservationTypeEnum {
   "indirectObservationTypeFoodStock" = "MY.indirectObservationTypeFoodStock",
   "indirectObservationTypeNone" = "MY.indirectObservationTypeNone"
 }
-export enum MicrobiologicalRiskGroupEnum {
+export enum MYMicrobiologicalRiskGroupEnum {
   "empty" = "",
   "microbiologicalRiskGroup1" = "MY.microbiologicalRiskGroup1",
   "microbiologicalRiskGroup2" = "MY.microbiologicalRiskGroup2",
   "microbiologicalRiskGroup3" = "MY.microbiologicalRiskGroup3",
   "microbiologicalRiskGroup4" = "MY.microbiologicalRiskGroup4"
 }
-export enum MovingDirectionEnum {
+export enum MYMovingDirectionEnum {
   "empty" = "",
   "movingDirectionN" = "MY.movingDirectionN",
   "movingDirectionNNE" = "MY.movingDirectionNNE",
@@ -1748,12 +1921,12 @@ export enum MovingDirectionEnum {
   "movingDirectionNW" = "MY.movingDirectionNW",
   "movingDirectionNNW" = "MY.movingDirectionNNW"
 }
-export enum NativeStatusEnum {
+export enum MYNativeStatusEnum {
   "empty" = "",
   "native" = "MY.native",
   "nonNative" = "MY.nonNative"
 }
-export enum NestTypeEnum {
+export enum MYNestTypeEnum {
   "empty" = "",
   "nestTypeTreeCavity" = "MY.nestTypeTreeCavity",
   "nestTypeTwig" = "MY.nestTypeTwig",
@@ -1762,7 +1935,7 @@ export enum NestTypeEnum {
   "nestTypeGroundCavity" = "MY.nestTypeGroundCavity",
   "nestTypeOther" = "MY.nestTypeOther"
 }
-export enum PlantStatusCodeEnum {
+export enum MYPlantStatusCodeEnum {
   "empty" = "",
   "plantStatusCodeL" = "MY.plantStatusCodeL",
   "plantStatusCodeA" = "MY.plantStatusCodeA",
@@ -1795,7 +1968,7 @@ export enum PlantStatusCodeEnum {
   "plantStatusCodeG" = "MY.plantStatusCodeG",
   "plantStatusCodeF" = "MY.plantStatusCodeF"
 }
-export enum ProvenanceEnum {
+export enum MYProvenanceEnum {
   "empty" = "",
   "provenanceUnknown" = "MY.provenanceUnknown",
   "provenanceCultivated" = "MY.provenanceCultivated",
@@ -1806,7 +1979,7 @@ export enum ProvenanceEnum {
   "provenanceEscapedCultivated" = "MY.provenanceEscapedCultivated",
   "provenancePropagule" = "MY.provenancePropagule"
 }
-export enum RecordBases {
+export enum MYRecordBases {
   "empty" = "",
   "recordBasisPreservedSpecimen" = "MY.recordBasisPreservedSpecimen",
   "recordBasisHumanObservation" = "MY.recordBasisHumanObservation",
@@ -1834,7 +2007,7 @@ export enum RecordBases {
   "recordBasisLivingSpecimen" = "MY.recordBasisLivingSpecimen",
   "recordBasisLiterature" = "MY.recordBasisLiterature"
 }
-export enum RecordPartsEnum {
+export enum MYRecordPartsEnum {
   "empty" = "",
   "recordPartsBones" = "MY.recordPartsBones",
   "recordPartsAntler" = "MY.recordPartsAntler",
@@ -1869,13 +2042,13 @@ export enum RecordPartsEnum {
   "recordPartsMount" = "MY.recordPartsMount",
   "recordPartsSkullAndBones" = "My.recordPartsSkullAndBones"
 }
-export enum SeedMaturityEnum {
+export enum MYSeedMaturityEnum {
   "empty" = "",
   "seedMaturityImmature" = "MY.seedMaturityImmature",
   "seedMaturityMature" = "MY.seedMaturityMature",
   "seedMaturityMixed" = "MY.seedMaturityMixed"
 }
-export enum SeedMorphologyEnum {
+export enum MYSeedMorphologyEnum {
   "empty" = "",
   "seedMorphologyBent" = "MY.seedMorphologyBent",
   "seedMorphologyBroad" = "MY.seedMorphologyBroad",
@@ -1891,7 +2064,7 @@ export enum SeedMorphologyEnum {
   "seedMorphologyUndifferentiated" = "MY.seedMorphologyUndifferentiated",
   "seedMorphologyInvesting" = "MY.seedMorphologyInvesting"
 }
-export enum SmellEnum {
+export enum MYSmellEnum {
   "empty" = "",
   "smellNotSmelled" = "MY.smellNotSmelled",
   "smellNoSmelled" = "MY.smellNoSmelled",
@@ -1899,7 +2072,7 @@ export enum SmellEnum {
   "smellModerate" = "MY.smellModerate",
   "smellStrong" = "MY.smellStrong"
 }
-export enum SubstrateEnum {
+export enum MYSubstrateEnum {
   "empty" = "",
   "substrateGround" = "MY.substrateGround",
   "substrateGroundLowShrubs" = "MY.substrateGroundLowShrubs",
@@ -1958,7 +2131,7 @@ export enum SubstrateEnum {
   "substrateDeadNeedle" = "MY.substrateDeadNeedle",
   "substrateDeadLeaf" = "MY.substrateDeadLeaf"
 }
-export enum SubstrateDecayStageEnum {
+export enum MYSubstrateDecayStageEnum {
   "empty" = "",
   "substrateDecayStageEnum1" = "MY.substrateDecayStageEnum1",
   "substrateDecayStageEnum2" = "MY.substrateDecayStageEnum2",
@@ -1966,7 +2139,7 @@ export enum SubstrateDecayStageEnum {
   "substrateDecayStageEnum4" = "MY.substrateDecayStageEnum4",
   "substrateDecayStageEnum5" = "MY.substrateDecayStageEnum5"
 }
-export enum SubstrateTreeClassificationEnum {
+export enum MYSubstrateTreeClassificationEnum {
   "empty" = "",
   "substrateTreeClassificationEnum1" = "MY.substrateTreeClassificationEnum1",
   "substrateTreeClassificationEnum2" = "MY.substrateTreeClassificationEnum2",
@@ -1975,7 +2148,7 @@ export enum SubstrateTreeClassificationEnum {
   "substrateTreeClassificationEnum5" = "MY.substrateTreeClassificationEnum5",
   "substrateTreeClassificationEnum6" = "MY.substrateTreeClassificationEnum6"
 }
-export enum TasteEnum {
+export enum MYTasteEnum {
   "empty" = "",
   "tasteNotTasted" = "MY.tasteNotTasted",
   "tasteNoTaste" = "MY.tasteNoTaste",
@@ -1983,19 +2156,19 @@ export enum TasteEnum {
   "tasteModerate" = "MY.tasteModerate",
   "tasteStrong" = "MY.tasteStrong"
 }
-export enum TaxonConfidenceEnum {
+export enum MYTaxonConfidenceEnum {
   "empty" = "",
   "taxonConfidenceSure" = "MY.taxonConfidenceSure",
   "taxonConfidenceUnsure" = "MY.taxonConfidenceUnsure",
   "taxonConfidenceSubspeciesUnsure" = "MY.taxonConfidenceSubspeciesUnsure"
 }
-export enum WildEnum {
+export enum MYWildEnum {
   "empty" = "",
   "wildWild" = "MY.wildWild",
   "wildUnknown" = "MY.wildUnknown",
   "wildNonWild" = "MY.wildNonWild"
 }
-export enum GlowWormMicrohabitatEnum {
+export enum MYGlowWormMicrohabitatEnum {
   "empty" = "",
   "glowWormMicrohabitatEnum1" = "MY.glowWormMicrohabitatEnum1",
   "glowWormMicrohabitatEnum2" = "MY.glowWormMicrohabitatEnum2",
@@ -2005,7 +2178,7 @@ export enum GlowWormMicrohabitatEnum {
   "glowWormMicrohabitatEnum6" = "MY.glowWormMicrohabitatEnum6",
   "glowWormMicrohabitatEnumOther" = "MY.glowWormMicrohabitatEnumOther"
 }
-export enum LineTransectObsTypeEnum {
+export enum MYLineTransectObsTypeEnum {
   "empty" = "",
   "lineTransectObsTypeSong" = "MY.lineTransectObsTypeSong",
   "lineTransectObsTypeOtherSound" = "MY.lineTransectObsTypeOtherSound",
@@ -2020,12 +2193,12 @@ export enum LineTransectObsTypeEnum {
   "lineTransectObsTypeSeenNest" = "MY.lineTransectObsTypeSeenNest",
   "lineTransectObsTypeUnknown" = "MY.lineTransectObsTypeUnknown"
 }
-export enum LineTransectRouteFieldTypeEnum {
+export enum MYLineTransectRouteFieldTypeEnum {
   "empty" = "",
   "lineTransectRouteFieldTypeInner" = "MY.lineTransectRouteFieldTypeInner",
   "lineTransectRouteFieldTypeOuter" = "MY.lineTransectRouteFieldTypeOuter"
 }
-export enum LolifeDroppingsCountEnum {
+export enum MYLolifeDroppingsCountEnum {
   "empty" = "",
   "lolifeDroppingsCount0" = "MY.lolifeDroppingsCount0",
   "lolifeDroppingsCount1" = "MY.lolifeDroppingsCount1",
@@ -2034,19 +2207,19 @@ export enum LolifeDroppingsCountEnum {
   "lolifeDroppingsCount3" = "MY.lolifeDroppingsCount3",
   "lolifeDroppingsCount4" = "MY.lolifeDroppingsCount4"
 }
-export enum LolifeDroppingsQualityEnum {
+export enum MYLolifeDroppingsQualityEnum {
   "empty" = "",
   "lolifeDroppingsQuality1" = "MY.lolifeDroppingsQuality1",
   "lolifeDroppingsQuality2" = "MY.lolifeDroppingsQuality2"
 }
-export enum LolifeDroppingsTypeEnum {
+export enum MYLolifeDroppingsTypeEnum {
   "empty" = "",
   "lolifeDroppingsTypeRock" = "MY.lolifeDroppingsTypeRock",
   "lolifeDroppingsTypeTree" = "MY.lolifeDroppingsTypeTree",
   "lolifeDroppingsTypeTreeGroup" = "MY.lolifeDroppingsTypeTreeGroup",
   "lolifeDroppingsTypeOther" = "MY.lolifeDroppingsTypeOther"
 }
-export enum LolifeNestTreeEnum {
+export enum MYLolifeNestTreeEnum {
   "empty" = "",
   "MX.38590" = "MX.38590",
   "MX.37812" = "MX.37812",
@@ -2056,13 +2229,13 @@ export enum LolifeNestTreeEnum {
   "MX.38008" = "MX.38008",
   "lolifeNestTreeOther" = "MY.lolifeNestTreeOther"
 }
-export enum WaterbirdFemaleEnum {
+export enum MYWaterbirdFemaleEnum {
   "empty" = "",
   "waterbirdFemaleEnumYes" = "MY.waterbirdFemaleEnumYes",
   "waterbirdFemaleEnumNo" = "MY.waterbirdFemaleEnumNo",
   "waterbirdFemaleEnumLonelyPanicking" = "MY.waterbirdFemaleEnumLonelyPanicking"
 }
-export enum WaterbirdJuvenileAgeClassEnum {
+export enum MYWaterbirdJuvenileAgeClassEnum {
   "empty" = "",
   "waterbirdJuvenileAgeClassIa" = "MY.waterbirdJuvenileAgeClassIa",
   "waterbirdJuvenileAgeClassIb" = "MY.waterbirdJuvenileAgeClassIb",
@@ -2073,7 +2246,7 @@ export enum WaterbirdJuvenileAgeClassEnum {
   "waterbirdJuvenileAgeClassIIIa" = "MY.waterbirdJuvenileAgeClassIIIa",
   "waterbirdJuvenileAgeClassUnknown" = "MY.waterbirdJuvenileAgeClassUnknown"
 }
-export enum WaterbirdPairCountOpinionReasoningEnum {
+export enum MYWaterbirdPairCountOpinionReasoningEnum {
   "empty" = "",
   "waterbirdPairCountOpinionReasoningEnum1" = "MY.waterbirdPairCountOpinionReasoningEnum1",
   "waterbirdPairCountOpinionReasoningEnum2" = "MY.waterbirdPairCountOpinionReasoningEnum2",

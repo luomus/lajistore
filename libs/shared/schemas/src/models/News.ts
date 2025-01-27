@@ -1,4 +1,4 @@
-import { LanguageEnum } from './';
+import { MZLanguageEnum } from './';
 
 /* tslint:disable */
 /*
@@ -12,7 +12,7 @@ export interface News {
   "@type"?: string;
   content: string;
   eventDate: string;
-  language: LanguageEnum;
+  language: MZLanguageEnum;
   publishDate?: string;
   targetIndividualIds?: string[];
   targets?: string[];

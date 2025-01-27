@@ -1,4 +1,4 @@
-import { TypeOfOccurrenceEnum } from './';
+import { MXTypeOfOccurrenceEnum } from './';
 
 /* tslint:disable */
 /*
@@ -11,5 +11,5 @@ export interface RegionalStatus {
   id?: string;
   "@type"?: string;
   regionalStatusArea: string;
-  regionalStatusStatus: TypeOfOccurrenceEnum;
+  regionalStatusStatus: MXTypeOfOccurrenceEnum;
 }

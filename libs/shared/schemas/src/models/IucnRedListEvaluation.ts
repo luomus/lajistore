@@ -1,10 +1,10 @@
-import { DdReasonEnum } from './';
-import { ExternalPopulationImpactOnRedListStatusEnum } from './';
-import { PossiblyREEnum } from './';
-import { ReasonForStatusChangeEnum } from './';
-import { IucnStatuses } from './';
-import { StateEnum } from './';
-import { TypeOfOccurrenceEnum } from './';
+import { MKVDdReasonEnum } from './';
+import { MKVExternalPopulationImpactOnRedListStatusEnum } from './';
+import { MKVPossiblyREEnum } from './';
+import { MKVReasonForStatusChangeEnum } from './';
+import { MXIucnStatuses } from './';
+import { MKVStateEnum } from './';
+import { MXTypeOfOccurrenceEnum } from './';
 
 /* tslint:disable */
 /*
@@ -188,7 +188,7 @@ export interface IucnRedListEvaluation {
   /**
    * <ul> <li><b>1. Tuntematon alkuperä.</b> Taksoni tunnetaan vain yhdestä tai muutamasta yksilöstä/ näyteestä, joiden löytöpaikkaa ei tunneta tai paikkatiedot ovat hyvin epätarkat, joten taksonin tilaa ei voida päätellä. </li><li><b>2. Taksonominen epävarmuus.</b> Tietojen vähäisyys voi olla seurausta taksonomisesta epävarmuudesta eli levinneisyydestä, ekologiasta, tilasta, ja uhkista on vähän tietoa, koska vähäinen näytteiden ja/ tai havaintojenmäärä johtuu siitä että taksonia edustaa poikkeava yksilö, hybridi, harvinainen värimuoto tai muun lajin alalajia. Se voi selittää tiedon puutetta yhtä todennäköisesti tai todennäköisemmin kuin se, että taksoni on aidosti harvinainen, uhanalainen tai riittämättömästi etsitty. Tästä on kuitenkin erotettava ne taksonit, joiden taksonomiassa/ taksonomisessa asemassa on jotain epäselvää: ne on joko arvioitava normaalisti tai jätettävä arvioinnin ulkopuolelle (NE) ja tästä arviointilistalle mukaan ottamisesta on päätettävä arvioinnin vaiheessa 1 (luku 2). </li><li><b>3. Puutteelliset tiedot.</b> Tiedot ovat riittämättömät arviointikriteerien soveltamiseksi eli kaikki muut syyt tietojen vähäisyyteen. </li></ul>
    */
-  ddReason?: DdReasonEnum;
+  ddReason?: MKVDdReasonEnum;
   ddReasonNotes?: string;
   decreaseDuringPeriod?: string;
   decreaseDuringPeriodNotes?: string;
@@ -214,7 +214,7 @@ export interface IucnRedListEvaluation {
 
 <p>Luokka-kenttään asetetaan alennuksen tai korotuksen aiheuttama lopputulos. Tähän kenttään asetetaan tieto tehdystä alennuksesta tai korotuksesta.</p>
    */
-  externalPopulationImpactOnRedListStatus?: ExternalPopulationImpactOnRedListStatusEnum;
+  externalPopulationImpactOnRedListStatus?: MKVExternalPopulationImpactOnRedListStatusEnum;
   externalPopulationImpactOnRedListStatusNotes?: string;
   /**
    * <p>Onko populaatio voimakkaasti pirstoutunut? = enemmän kuin puolet yksilöistä (tai enemmän kuin puolet asutusta elinympäristöstä) on pienissä eristyneissä laikuissa, jotka ovat </p> <li>liian pieniä ylläpitämään elinvoimaista populaatiota ja</li> <li>kaukana muista elinympäristölaikuista suhteessa lajin leviämiskykyyn.</li>
@@ -286,7 +286,7 @@ export interface IucnRedListEvaluation {
    */
   populationVaries?: boolean;
   populationVariesNotes?: string;
-  possiblyRE?: PossiblyREEnum;
+  possiblyRE?: MKVPossiblyREEnum;
   possiblyRENotes?: string;
   /**
    * <p>Lisämerkinnät:</p>
@@ -320,35 +320,35 @@ export interface IucnRedListEvaluation {
 <p><b>Virheellinen tieto:</b> aiempi luokka on valittu virheellisen tiedon vuoksi väärin (esim. määritysvirhe).</p>
 <p><b>Muu syy:</b> muutos johtuu muusta syystä kuin aiemmista ja/tai vaatii lisäselvitystä (esimerkiksi arvioijien suhtautuminen epävarmuuteen muuttuu tai arvioinnin tulkintaohjeet ovat muuttuneet.</p>
    */
-  reasonForStatusChange?: ReasonForStatusChangeEnum[];
+  reasonForStatusChange?: MKVReasonForStatusChangeEnum[];
   reasonForStatusChangeNotes?: string;
   /**
    * Tätä ei täytetä kuluvalle vuodelle. Muuttujaa käytetään ainoastaan tarvittaessa jälkikäteen uhanalaisuusindeksin laskemisessa. Jos tätä arviointia jälkikäteen halutaan korjata, arvioinnissa annettua luokkaa ei muuteta, vaan annetaan tässä korjattu luokka.
    */
-  redListIndexCorrection?: IucnStatuses;
+  redListIndexCorrection?: MXIucnStatuses;
   redListIndexCorrectionNotes?: string;
-  redListStatus: IucnStatuses;
+  redListStatus: MXIucnStatuses;
   redListStatusAccuracyNotes?: string;
-  redListStatusMax?: IucnStatuses;
-  redListStatusMin?: IucnStatuses;
+  redListStatusMax?: MXIucnStatuses;
+  redListStatusMin?: MXIucnStatuses;
   redListStatusNotes?: string;
   regionallyThreatenedNotes?: string;
   regionallyThreatenedPrivateNotes?: string;
   remarks?: string[];
   secondaryHabitat?: string[];
-  state: StateEnum;
-  statusA?: IucnStatuses;
+  state: MKVStateEnum;
+  statusA?: MXIucnStatuses;
   statusANotes?: string;
-  statusB?: IucnStatuses;
+  statusB?: MXIucnStatuses;
   statusBNotes?: string;
-  statusC?: IucnStatuses;
+  statusC?: MXIucnStatuses;
   statusCNotes?: string;
-  statusD?: IucnStatuses;
+  statusD?: MXIucnStatuses;
   statusDNotes?: string;
-  statusE?: IucnStatuses;
+  statusE?: MXIucnStatuses;
   statusENotes?: string;
   taxonomicNotes?: string;
   threatNotes?: string;
-  typeOfOccurrenceInFinland?: TypeOfOccurrenceEnum;
+  typeOfOccurrenceInFinland?: MXTypeOfOccurrenceEnum;
   typeOfOccurrenceInFinlandNotes?: string;
 }

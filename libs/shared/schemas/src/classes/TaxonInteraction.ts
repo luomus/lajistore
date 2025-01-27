@@ -1,5 +1,5 @@
-import { TaxonInteractionEnum } from './';
-import { LifeStages } from './';
+import { MITaxonInteractionEnum } from './';
+import { MYLifeStages } from './';
 
 /* tslint:disable */
 /*
@@ -11,10 +11,10 @@ export class TaxonInteraction {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  interactionType: TaxonInteractionEnum;
-  objectLifeStage?: LifeStages;
+  interactionType: MITaxonInteractionEnum;
+  objectLifeStage?: MYLifeStages;
   objectTaxon: string;
   originalPublication?: string[];
-  subjectLifeStage?: LifeStages;
+  subjectLifeStage?: MYLifeStages;
   subjectTaxon: string;
 }

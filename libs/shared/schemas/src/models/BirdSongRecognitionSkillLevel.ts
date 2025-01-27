@@ -1,4 +1,4 @@
-import { BirdSongRecognitionSkillLevelEnum } from './';
+import { MABirdSongRecognitionSkillLevelEnum } from './';
 
 /* tslint:disable */
 /*
@@ -11,5 +11,5 @@ export interface BirdSongRecognitionSkillLevel {
   id?: string;
   "@type"?: string;
   birdSongRecognitionArea: string;
-  birdSongRecognitionSkillLevel: BirdSongRecognitionSkillLevelEnum;
+  birdSongRecognitionSkillLevel: MABirdSongRecognitionSkillLevelEnum;
 }

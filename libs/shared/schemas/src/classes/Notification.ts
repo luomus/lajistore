@@ -1,5 +1,5 @@
 import { Annotation } from './';
-import { NotificationReasonEnum } from './';
+import { MHNNotificationReasonEnum } from './';
 
 /* tslint:disable */
 /*
@@ -15,7 +15,7 @@ export class Notification {
   created: string;
   friendRequest?: string;
   friendRequestAccepted?: string;
-  notificationReason?: NotificationReasonEnum;
+  notificationReason?: MHNNotificationReasonEnum;
   seen?: boolean;
   toPerson: string;
 }

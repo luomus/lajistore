@@ -1,4 +1,4 @@
-import { TypeEnum } from './';
+import { MFPTypeEnum } from './';
 
 /* tslint:disable */
 /*
@@ -11,6 +11,6 @@ export interface FormPermissionSingle {
   id?: string;
   "@type"?: string;
   collectionID: string;
-  type?: TypeEnum;
+  type?: MFPTypeEnum;
   userID?: string;
 }

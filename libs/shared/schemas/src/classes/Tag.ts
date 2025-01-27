@@ -1,5 +1,5 @@
-import { RequiredRolesEnum } from './';
-import { TypeEnum } from './';
+import { MMANRequiredRolesEnum } from './';
+import { MMANTypeEnum } from './';
 
 /* tslint:disable */
 /*
@@ -21,7 +21,7 @@ export class Tag {
     fi?: string;
     sv?: string;
   };
-  requiredRolesAdd?: RequiredRolesEnum[];
-  requiredRolesRemove?: RequiredRolesEnum[];
-  type?: TypeEnum;
+  requiredRolesAdd?: MMANRequiredRolesEnum[];
+  requiredRolesRemove?: MMANRequiredRolesEnum[];
+  type?: MMANTypeEnum;
 }

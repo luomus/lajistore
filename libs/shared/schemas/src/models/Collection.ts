@@ -1,11 +1,11 @@
-import { SecureLevels } from './';
-import { CollectionQualityEnum } from './';
-import { CollectionTypes } from './';
-import { DataQualityEnum } from './';
-import { IntellectualRightsEnum } from './';
-import { MetadataStatuses } from './';
-import { PublicationTermsEnum } from './';
-import { PublicityRestrictionsEnum } from './';
+import { MXSecureLevels } from './';
+import { MYCollectionQualityEnum } from './';
+import { MYCollectionTypes } from './';
+import { MYDataQualityEnum } from './';
+import { MYIntellectualRightsEnum } from './';
+import { MYMetadataStatuses } from './';
+import { MYPublicationTermsEnum } from './';
+import { MZPublicityRestrictionsEnum } from './';
 
 /* tslint:disable */
 /*
@@ -20,7 +20,7 @@ export interface Collection {
   /**
    * Secure level (salaus-/karkeistustaso) for the data
    */
-  secureLevel?: SecureLevels;
+  secureLevel?: MXSecureLevels;
   /**
    * Unofficial abbreviation (or acronym) for this collection
    */
@@ -61,7 +61,7 @@ export interface Collection {
   /**
    * Quality classification for the collection.
    */
-  collectionQuality: CollectionQualityEnum;
+  collectionQuality: MYCollectionQualityEnum;
   /**
    * How many specimens, records or such does the collection contain? Fill in approximate number, describe more in notes if necessary.
    */
@@ -69,7 +69,7 @@ export interface Collection {
   /**
    * Type of the collection (specimen, monitoring etc).
    */
-  collectionType: CollectionTypes;
+  collectionType: MYCollectionTypes;
   /**
    * Legal basis for concealment or embargo
    */
@@ -105,7 +105,7 @@ export interface Collection {
   /**
    * Quality estimation for the data in this collection
    */
-  dataQuality?: DataQualityEnum;
+  dataQuality?: MYDataQualityEnum;
   /**
    * Description and reasons for the data quality in different languages.
    */
@@ -178,7 +178,7 @@ export interface Collection {
   /**
    * License which is used when publishing data that belongs to this collection.
    */
-  intellectualRights: IntellectualRightsEnum;
+  intellectualRights: MYIntellectualRightsEnum;
   /**
    * Is the data to be used only within Kotka?
    */
@@ -200,7 +200,7 @@ export interface Collection {
   /**
    * Indication of how comprehensive the information on this form is.
    */
-  metadataStatus?: MetadataStatuses;
+  metadataStatus?: MYMetadataStatuses;
   /**
    * Methods used when creating this collection, if they are standardized. Includes information on items such as census methods, tools, instrument calibration and software.
    */
@@ -240,7 +240,7 @@ export interface Collection {
   /**
    * How can Luomus publish the data, if it is owned by third party?
    */
-  publicationTerms?: PublicationTermsEnum;
+  publicationTerms?: MYPublicationTermsEnum;
   /**
    * Admin field. Name that is easy for users to remember and understand. E.g. "Luomus", "University of Turku".
    */
@@ -285,5 +285,5 @@ export interface Collection {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?: PublicityRestrictionsEnum;
+  publicityRestrictions?: MZPublicityRestrictionsEnum;
 }

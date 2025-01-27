@@ -1,6 +1,6 @@
-import { TypeStatuses } from './';
-import { TypeVerifications } from './';
-import { PublicityRestrictionsEnum } from './';
+import { MYTypeStatuses } from './';
+import { MYTypeVerifications } from './';
+import { MZPublicityRestrictionsEnum } from './';
 
 /* tslint:disable */
 /*
@@ -43,7 +43,7 @@ export class TypeSpecimen {
   /**
    * Is this holotype, paratype, syntype etc...
    */
-  typeStatus?: TypeStatuses;
+  typeStatus?: MYTypeStatuses;
   /**
    * Name of the type subspecies
    */
@@ -55,7 +55,7 @@ export class TypeSpecimen {
   /**
    * Verification whether this really is a type?
    */
-  typeVerification?: TypeVerifications;
+  typeVerification?: MYTypeVerifications;
   /**
    * Name of the person who chose the type, preferably in the format "Lastname, firstname"
    */
@@ -67,5 +67,5 @@ export class TypeSpecimen {
   /**
    * PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
    */
-  publicityRestrictions?: PublicityRestrictionsEnum;
+  publicityRestrictions?: MZPublicityRestrictionsEnum;
 }
