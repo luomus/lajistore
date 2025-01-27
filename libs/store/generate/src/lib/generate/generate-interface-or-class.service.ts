@@ -179,18 +179,9 @@ export function is${normalized}(data: unknown): data is ${normalized} {
 
     ownTypings.forEach(type => {
       const props = enumsAndObjects[type.property];
-      const newTyping = this.getInerfaceOrEnumRef(type.property, enumsAndObjects);
-      
+      let newTyping = this.getInerfaceOrEnumRef(type.property, enumsAndObjects);
+
       if (!newTyping) return;
-
-      const description = props.description;
-      const replacer = ( description ?
-        '/**\n' +
-        '   * ' + description + '\n' +
-        '   */\n  ' : '' ) +
-        type.original.replace(type.type, newTyping);
-
-      ownInterface = ownInterface.replace(type.original, replacer);
 
       const normalizedRange = UtilityService.normalize(props.range, true)
       if (
@@ -199,17 +190,29 @@ export function is${normalized}(data: unknown): data is ${normalized} {
       ) {
         if (!imports.includes(normalizedRange)) imports.push(normalizedRange);
       } else if (props.isEnum) {
-        if (!this.enums.includes(normalizedRange)) {
-          this.enums.push(type.type);
-          this.enumContent += this.parseEnum(type.type, props.enum);
+        const prefixedNormalizedRange = UtilityService.prefixedNormalizedRange(props.range, true);
+
+        if (!this.enums.includes(prefixedNormalizedRange)) {
+          this.enums.push(prefixedNormalizedRange);
+          this.enumContent += this.parseEnum(prefixedNormalizedRange, props.enum);
         }
 
-        if (!imports.includes(normalizedRange)) {
-          imports.push(normalizedRange);
+        if (!imports.includes(prefixedNormalizedRange)) {
+          imports.push(prefixedNormalizedRange);
         }
+
+        newTyping = newTyping.replace(normalizedRange, prefixedNormalizedRange);
       } else {
         enumsAndAdditionalClasses += this.extractInterface(type.type, tsInterface);
       }
+
+      const description = props.description;
+      const replacer = ( description ?
+        '/**\n' +
+        '   * ' + description + '\n' +
+        '   */\n  ' : '' ) +
+        type.original.replace(type.type, newTyping);
+      ownInterface = ownInterface.replace(type.original, replacer);
     })
 
     if (imports.length) {
