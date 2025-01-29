@@ -1,4 +1,5 @@
 import { MANAnnotationClassEnum } from './';
+import { MYAtlasCodeEnum } from './';
 import { MMANRequiredRolesEnum } from './';
 import { MANCensusAnnotationEnum } from './';
 import { Identification } from './';
@@ -21,6 +22,7 @@ export interface Annotation {
   annotationByPerson?: string;
   annotationBySystem?: string;
   annotationClass?: MANAnnotationClassEnum;
+  atlasCode?: MYAtlasCodeEnum;
   byRole?: MMANRequiredRolesEnum;
   censusAnnotation?: MANCensusAnnotationEnum[];
   created?: string;

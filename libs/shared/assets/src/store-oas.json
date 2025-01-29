@@ -53439,6 +53439,34 @@
             ],
             "title": "My evaluation of the observation"
           },
+          "atlasCode": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.atlasCodeEnum1",
+              "MY.atlasCodeEnum2",
+              "MY.atlasCodeEnum3",
+              "MY.atlasCodeEnum4",
+              "MY.atlasCodeEnum5",
+              "MY.atlasCodeEnum6",
+              "MY.atlasCodeEnum61",
+              "MY.atlasCodeEnum62",
+              "MY.atlasCodeEnum63",
+              "MY.atlasCodeEnum64",
+              "MY.atlasCodeEnum65",
+              "MY.atlasCodeEnum66",
+              "MY.atlasCodeEnum7",
+              "MY.atlasCodeEnum71",
+              "MY.atlasCodeEnum72",
+              "MY.atlasCodeEnum73",
+              "MY.atlasCodeEnum74",
+              "MY.atlasCodeEnum75",
+              "MY.atlasCodeEnum8",
+              "MY.atlasCodeEnum81",
+              "MY.atlasCodeEnum82"
+            ],
+            "title": "Overriding Breeding Index"
+          },
           "byRole": {
             "type": "string",
             "enum": [

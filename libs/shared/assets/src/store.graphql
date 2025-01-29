@@ -5636,6 +5636,7 @@ type Annotation2 {
   annotationByPerson: String
   annotationBySystem: String
   annotationClass: AnnotationClass
+  atlasCode: AtlasCode
   byRole: ByRole
   censusAnnotation: [CensusAnnotationListItem]
   context: String
@@ -5668,6 +5669,31 @@ enum AnnotationClass {
   MAN_ANNOTATIONCLASSUNRELIABLE
   MAN_ANNOTATIONCLASSACKNOWLEDGED
   MAN_ANNOTATIONCLASSSPAM
+}
+
+enum AtlasCode {
+  _
+  MY_ATLASCODEENUM1
+  MY_ATLASCODEENUM2
+  MY_ATLASCODEENUM3
+  MY_ATLASCODEENUM4
+  MY_ATLASCODEENUM5
+  MY_ATLASCODEENUM6
+  MY_ATLASCODEENUM61
+  MY_ATLASCODEENUM62
+  MY_ATLASCODEENUM63
+  MY_ATLASCODEENUM64
+  MY_ATLASCODEENUM65
+  MY_ATLASCODEENUM66
+  MY_ATLASCODEENUM7
+  MY_ATLASCODEENUM71
+  MY_ATLASCODEENUM72
+  MY_ATLASCODEENUM73
+  MY_ATLASCODEENUM74
+  MY_ATLASCODEENUM75
+  MY_ATLASCODEENUM8
+  MY_ATLASCODEENUM81
+  MY_ATLASCODEENUM82
 }
 
 enum ByRole {
@@ -7830,7 +7856,7 @@ type Unit {
   alive: Boolean
   ankleInMillimeters: [String]
   areaInSquareMeters: Int
-  atlasCode: AtlasCode
+  atlasCode: BreedingIndex
   audio: [String]
   batBehavior: BatBehavior
   beakInMillimeters: [String]
@@ -8083,7 +8109,7 @@ enum AbundanceUnit {
   MY_ABUNDANCEUNITOCCURSDOESNOTOCCUR
 }
 
-enum AtlasCode {
+enum BreedingIndex {
   _
   MY_ATLASCODEENUM1
   MY_ATLASCODEENUM2
@@ -26459,6 +26485,7 @@ input Annotation2Input {
   annotationByPerson: String
   annotationBySystem: String
   annotationClass: AnnotationClass
+  atlasCode: AtlasCode
   byRole: ByRole
   censusAnnotation: [CensusAnnotationListItem]
   context: String
@@ -27659,7 +27686,7 @@ input UnitInput {
   alive: Boolean
   ankleInMillimeters: [String]
   areaInSquareMeters: Int
-  atlasCode: AtlasCode
+  atlasCode: BreedingIndex
   audio: [String]
   batBehavior: BatBehavior
   beakInMillimeters: [String]

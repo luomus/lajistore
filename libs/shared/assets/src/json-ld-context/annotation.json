@@ -47,6 +47,10 @@
       "@id": "default:MAN.annotationClass",
       "@type": "@id"
     },
+    "atlasCode": {
+      "@id": "default:MAN.atlasCode",
+      "@type": "@id"
+    },
     "byRole": {
       "@id": "default:MAN.byRole",
       "@type": "@id"
