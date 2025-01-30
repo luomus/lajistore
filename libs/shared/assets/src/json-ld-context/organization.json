@@ -51,6 +51,10 @@
       "@id": "default:MOS.ad",
       "@type": "xsd:string"
     },
+    "additionalIDs": {
+      "@id": "default:MOS.additionalIDs",
+      "@type": "xsd:string"
+    },
     "contentContact": {
       "@id": "default:MOS.contentContact",
       "@type": "xsd:string"

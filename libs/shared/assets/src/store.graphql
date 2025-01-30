@@ -10602,6 +10602,7 @@ type Organization2 {
 
   """Filled in by ICT team"""
   ad: String
+  additionalIDs: String
 
   """Name of content/collection contact person for the organization."""
   contentContact: String
@@ -29182,6 +29183,7 @@ input Organization2Input {
 
   """Filled in by ICT team"""
   ad: String
+  additionalIDs: String
 
   """Name of content/collection contact person for the organization."""
   contentContact: String

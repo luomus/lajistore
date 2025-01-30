@@ -30,6 +30,7 @@ export class Organization {
    * Filled in by ICT team
    */
   ad?: string;
+  additionalIDs?: string;
   /**
    * Name of content/collection contact person for the organization.
    */

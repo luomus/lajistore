@@ -61147,6 +61147,10 @@
             "description": "Filled in by ICT team",
             "title": "AD group name"
           },
+          "additionalIDs": {
+            "type": "string",
+            "title": "additionalIDs"
+          },
           "contentContact": {
             "type": "string",
             "description": "Name of content/collection contact person for the organization.",
