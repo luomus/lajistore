@@ -53808,6 +53808,15 @@
             "minItems": 0,
             "title": "Keywords"
           },
+          "modifiedBy": {
+            "type": "string",
+            "title": "Modified by"
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when media metadata was last modified"
+          },
           "mp3URL": {
             "type": "string",
             "title": "URL of mp3 audio file (stripped original or compressed from original)"
@@ -58977,6 +58986,15 @@
             "type": "string",
             "title": "URL of a large version of the image (reduced to max 1280px height or width)"
           },
+          "modifiedBy": {
+            "type": "string",
+            "title": "Modified by"
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when media metadata was last modified"
+          },
           "originalFilename": {
             "type": "string",
             "title": "Original filename"
@@ -60493,6 +60511,15 @@
             "type": "string",
             "title": "URL of low detail model"
           },
+          "modifiedBy": {
+            "type": "string",
+            "title": "Modified by"
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when media metadata was last modified"
+          },
           "originalFilename": {
             "type": "string",
             "title": "Original filename"
@@ -61148,8 +61175,14 @@
             "title": "AD group name"
           },
           "additionalIDs": {
-            "type": "string",
-            "title": "additionalIDs"
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "description": "Other identifiers this organization has",
+            "title": "Additional IDs"
           },
           "contentContact": {
             "type": "string",
@@ -61335,6 +61368,15 @@
           "largeURL": {
             "type": "string",
             "title": "URL of a large version of the image (reduced to max 1280px height or width)"
+          },
+          "modifiedBy": {
+            "type": "string",
+            "title": "Modified by"
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when media metadata was last modified"
           },
           "originalFilename": {
             "type": "string",
@@ -66852,6 +66894,15 @@
             },
             "minItems": 0,
             "title": "Keywords"
+          },
+          "modifiedBy": {
+            "type": "string",
+            "title": "Modified by"
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when media metadata was last modified"
           },
           "originalFilename": {
             "type": "string",

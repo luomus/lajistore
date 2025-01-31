@@ -93,6 +93,19 @@
       "subject": "MM.lowDetailModelURL",
       "title": "URL of low detail model"
     },
+    "modifiedBy": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MM.modifiedBy",
+      "title": "Modified by"
+    },
+    "modifiedDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "range": "xsd:dateTime",
+      "subject": "MM.modifiedDateTime",
+      "title": "Date/time when media metadata was last modified"
+    },
     "originalFilename": {
       "type": "string",
       "range": "xsd:string",

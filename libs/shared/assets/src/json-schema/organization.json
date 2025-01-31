@@ -70,10 +70,16 @@
       "title": "AD group name"
     },
     "additionalIDs": {
-      "type": "string",
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
       "range": "xsd:string",
       "subject": "MOS.additionalIDs",
-      "title": "additionalIDs"
+      "description": "Other identifiers this organization has",
+      "title": "Additional IDs"
     },
     "contentContact": {
       "type": "string",

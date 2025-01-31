@@ -69,6 +69,14 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "modifiedBy": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "modifiedDateTime": {
+        "type": "date"
+      },
       "originalFilename": {
         "type": "keyword",
         "ignore_above": 200,

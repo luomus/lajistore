@@ -22,6 +22,8 @@ export interface Video {
   documentURI?: string[];
   fullResolutionMediaAvailable?: boolean;
   keyword?: string[];
+  modifiedBy?: string;
+  modifiedDateTime?: string;
   originalFilename?: string;
   primaryForTaxon?: string[];
   sourceSystem: string;

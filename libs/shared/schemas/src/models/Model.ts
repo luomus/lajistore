@@ -24,6 +24,8 @@ export interface Model {
   highDetailModelURL?: string;
   keyword?: string[];
   lowDetailModelURL?: string;
+  modifiedBy?: string;
+  modifiedDateTime?: string;
   originalFilename?: string;
   primaryForTaxon?: string[];
   sourceSystem: string;

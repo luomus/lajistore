@@ -67,6 +67,14 @@
       "@id": "default:MM.keyword",
       "@type": "xsd:string"
     },
+    "modifiedBy": {
+      "@id": "default:MM.modifiedBy",
+      "@type": "xsd:string"
+    },
+    "modifiedDateTime": {
+      "@id": "default:MM.modifiedDateTime",
+      "@type": "xsd:dateTime"
+    },
     "mp3URL": {
       "@id": "default:MM.mp3URL",
       "@type": "xsd:string"

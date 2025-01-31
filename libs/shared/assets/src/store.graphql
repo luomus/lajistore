@@ -6010,6 +6010,8 @@ type Audio2 {
   Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
   """
   lifeStage: LifeStage
+  modifiedBy: String
+  modifiedDateTime: String
   mp3URL: String!
   originalFilename: String
   plantLifeStage: PlantLifeStage
@@ -9654,6 +9656,8 @@ type Image2 {
   Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
   """
   lifeStage: LifeStage
+  modifiedBy: String
+  modifiedDateTime: String
   originalFilename: String
   originalURL: String
   plantLifeStage: PlantLifeStage
@@ -10383,6 +10387,8 @@ type Model2 {
   """
   lifeStage: LifeStage
   lowDetailModelURL: String
+  modifiedBy: String
+  modifiedDateTime: String
   originalFilename: String
   plantLifeStage: PlantLifeStage
   primaryForTaxon: [String]
@@ -10602,7 +10608,9 @@ type Organization2 {
 
   """Filled in by ICT team"""
   ad: String
-  additionalIDs: String
+
+  """Other identifiers this organization has"""
+  additionalIDs: [String]
 
   """Name of content/collection contact person for the organization."""
   contentContact: String
@@ -10696,6 +10704,8 @@ type Pdf2 {
   intellectualRights: IntellectualRights!
   keyword: [String]
   largeURL: String!
+  modifiedBy: String
+  modifiedDateTime: String
   originalFilename: String
   originalURL: String
   pdfURL: String!
@@ -12606,6 +12616,8 @@ type Video2 {
   Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
   """
   lifeStage: LifeStage
+  modifiedBy: String
+  modifiedDateTime: String
   originalFilename: String
   plantLifeStage: PlantLifeStage
   primaryForTaxon: [String]
@@ -26662,6 +26674,8 @@ input Audio2Input {
   Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
   """
   lifeStage: LifeStage
+  modifiedBy: String
+  modifiedDateTime: String
   mp3URL: String!
   originalFilename: String
   plantLifeStage: PlantLifeStage
@@ -28577,6 +28591,8 @@ input Image2Input {
   Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
   """
   lifeStage: LifeStage
+  modifiedBy: String
+  modifiedDateTime: String
   originalFilename: String
   originalURL: String
   plantLifeStage: PlantLifeStage
@@ -29053,6 +29069,8 @@ input Model2Input {
   """
   lifeStage: LifeStage
   lowDetailModelURL: String
+  modifiedBy: String
+  modifiedDateTime: String
   originalFilename: String
   plantLifeStage: PlantLifeStage
   primaryForTaxon: [String]
@@ -29183,7 +29201,9 @@ input Organization2Input {
 
   """Filled in by ICT team"""
   ad: String
-  additionalIDs: String
+
+  """Other identifiers this organization has"""
+  additionalIDs: [String]
 
   """Name of content/collection contact person for the organization."""
   contentContact: String
@@ -29271,6 +29291,8 @@ input Pdf2Input {
   intellectualRights: IntellectualRights!
   keyword: [String]
   largeURL: String!
+  modifiedBy: String
+  modifiedDateTime: String
   originalFilename: String
   originalURL: String
   pdfURL: String!
@@ -30279,6 +30301,8 @@ input Video2Input {
   Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
   """
   lifeStage: LifeStage
+  modifiedBy: String
+  modifiedDateTime: String
   originalFilename: String
   plantLifeStage: PlantLifeStage
   primaryForTaxon: [String]

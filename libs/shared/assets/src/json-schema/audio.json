@@ -93,6 +93,19 @@
       "subject": "MM.keyword",
       "title": "Keywords"
     },
+    "modifiedBy": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MM.modifiedBy",
+      "title": "Modified by"
+    },
+    "modifiedDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "range": "xsd:dateTime",
+      "subject": "MM.modifiedDateTime",
+      "title": "Date/time when media metadata was last modified"
+    },
     "mp3URL": {
       "type": "string",
       "range": "xsd:string",
