@@ -313,7 +313,7 @@ export enum MYVerificationStatuses {
   "empty" = "",
   "verificationStatusOk" = "MY.verificationStatusOk",
   "verificationStatusVerify" = "MY.verificationStatusVerify",
-  "verificationStatusComplete" = "MY.verificationStatusComplete",
+  "verificationStatusNeedsCompletion" = "MY.verificationStatusNeedsCompletion",
   "verificationStatusGeoreference" = "MY.verificationStatusGeoreference",
   "verificationStatusDet" = "MY.verificationStatusDet",
   "verificationStatusCheckID" = "MY.verificationStatusCheckID",

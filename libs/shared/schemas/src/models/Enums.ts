@@ -286,7 +286,7 @@ export type MYVerificationStatuses =
   | ""
   | "MY.verificationStatusOk"
   | "MY.verificationStatusVerify"
-  | "MY.verificationStatusComplete"
+  | "MY.verificationStatusNeedsCompletion"
   | "MY.verificationStatusGeoreference"
   | "MY.verificationStatusDet"
   | "MY.verificationStatusCheckID"
