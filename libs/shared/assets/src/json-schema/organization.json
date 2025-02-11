@@ -69,6 +69,18 @@
       "description": "Filled in by ICT team",
       "title": "AD group name"
     },
+    "additionalIDs": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "MOS.additionalIDs",
+      "description": "Other identifiers this organization has",
+      "title": "Additional IDs"
+    },
     "contentContact": {
       "type": "string",
       "range": "xsd:string",

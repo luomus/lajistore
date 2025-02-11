@@ -25,6 +25,8 @@ export class Image {
   fullURL: string;
   keyword?: string[];
   largeURL: string;
+  modifiedBy?: string;
+  modifiedDateTime?: string;
   originalFilename?: string;
   originalURL?: string;
   primaryForTaxon?: string[];

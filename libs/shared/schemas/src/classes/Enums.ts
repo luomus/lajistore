@@ -8,6 +8,30 @@ export enum MANAnnotationClassEnum {
   "annotationClassAcknowledged" = "MAN.annotationClassAcknowledged",
   "annotationClassSpam" = "MAN.annotationClassSpam"
 }
+export enum MYAtlasCodeEnum {
+  "empty" = "",
+  "atlasCodeEnum1" = "MY.atlasCodeEnum1",
+  "atlasCodeEnum2" = "MY.atlasCodeEnum2",
+  "atlasCodeEnum3" = "MY.atlasCodeEnum3",
+  "atlasCodeEnum4" = "MY.atlasCodeEnum4",
+  "atlasCodeEnum5" = "MY.atlasCodeEnum5",
+  "atlasCodeEnum6" = "MY.atlasCodeEnum6",
+  "atlasCodeEnum61" = "MY.atlasCodeEnum61",
+  "atlasCodeEnum62" = "MY.atlasCodeEnum62",
+  "atlasCodeEnum63" = "MY.atlasCodeEnum63",
+  "atlasCodeEnum64" = "MY.atlasCodeEnum64",
+  "atlasCodeEnum65" = "MY.atlasCodeEnum65",
+  "atlasCodeEnum66" = "MY.atlasCodeEnum66",
+  "atlasCodeEnum7" = "MY.atlasCodeEnum7",
+  "atlasCodeEnum71" = "MY.atlasCodeEnum71",
+  "atlasCodeEnum72" = "MY.atlasCodeEnum72",
+  "atlasCodeEnum73" = "MY.atlasCodeEnum73",
+  "atlasCodeEnum74" = "MY.atlasCodeEnum74",
+  "atlasCodeEnum75" = "MY.atlasCodeEnum75",
+  "atlasCodeEnum8" = "MY.atlasCodeEnum8",
+  "atlasCodeEnum81" = "MY.atlasCodeEnum81",
+  "atlasCodeEnum82" = "MY.atlasCodeEnum82"
+}
 export enum MMANRequiredRolesEnum {
   "empty" = "",
   "expert" = "MMAN.expert",
@@ -289,7 +313,7 @@ export enum MYVerificationStatuses {
   "empty" = "",
   "verificationStatusOk" = "MY.verificationStatusOk",
   "verificationStatusVerify" = "MY.verificationStatusVerify",
-  "verificationStatusComplete" = "MY.verificationStatusComplete",
+  "verificationStatusNeedsCompletion" = "MY.verificationStatusNeedsCompletion",
   "verificationStatusGeoreference" = "MY.verificationStatusGeoreference",
   "verificationStatusDet" = "MY.verificationStatusDet",
   "verificationStatusCheckID" = "MY.verificationStatusCheckID",
@@ -1778,30 +1802,6 @@ export enum MYAbundanceUnitEnum {
   "abundanceUnitSquareM" = "MY.abundanceUnitSquareM",
   "abundanceUnitRelativeDensity" = "MY.abundanceUnitRelativeDensity",
   "abundanceUnitOccursDoesNotOccur" = "MY.abundanceUnitOccursDoesNotOccur"
-}
-export enum MYAtlasCodeEnum {
-  "empty" = "",
-  "atlasCodeEnum1" = "MY.atlasCodeEnum1",
-  "atlasCodeEnum2" = "MY.atlasCodeEnum2",
-  "atlasCodeEnum3" = "MY.atlasCodeEnum3",
-  "atlasCodeEnum4" = "MY.atlasCodeEnum4",
-  "atlasCodeEnum5" = "MY.atlasCodeEnum5",
-  "atlasCodeEnum6" = "MY.atlasCodeEnum6",
-  "atlasCodeEnum61" = "MY.atlasCodeEnum61",
-  "atlasCodeEnum62" = "MY.atlasCodeEnum62",
-  "atlasCodeEnum63" = "MY.atlasCodeEnum63",
-  "atlasCodeEnum64" = "MY.atlasCodeEnum64",
-  "atlasCodeEnum65" = "MY.atlasCodeEnum65",
-  "atlasCodeEnum66" = "MY.atlasCodeEnum66",
-  "atlasCodeEnum7" = "MY.atlasCodeEnum7",
-  "atlasCodeEnum71" = "MY.atlasCodeEnum71",
-  "atlasCodeEnum72" = "MY.atlasCodeEnum72",
-  "atlasCodeEnum73" = "MY.atlasCodeEnum73",
-  "atlasCodeEnum74" = "MY.atlasCodeEnum74",
-  "atlasCodeEnum75" = "MY.atlasCodeEnum75",
-  "atlasCodeEnum8" = "MY.atlasCodeEnum8",
-  "atlasCodeEnum81" = "MY.atlasCodeEnum81",
-  "atlasCodeEnum82" = "MY.atlasCodeEnum82"
 }
 export enum MYBatBehaviorEnum {
   "empty" = "",

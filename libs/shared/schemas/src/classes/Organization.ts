@@ -31,6 +31,10 @@ export class Organization {
    */
   ad?: string;
   /**
+   * Other identifiers this organization has
+   */
+  additionalIDs?: string[];
+  /**
    * Name of content/collection contact person for the organization.
    */
   contentContact?: string;

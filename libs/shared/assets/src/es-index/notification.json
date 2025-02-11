@@ -59,6 +59,10 @@
             "type": "keyword",
             "ignore_above": 200
           },
+          "atlasCode": {
+            "type": "keyword",
+            "ignore_above": 200
+          },
           "byRole": {
             "type": "keyword",
             "ignore_above": 200

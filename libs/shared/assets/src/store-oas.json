@@ -53439,6 +53439,34 @@
             ],
             "title": "My evaluation of the observation"
           },
+          "atlasCode": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.atlasCodeEnum1",
+              "MY.atlasCodeEnum2",
+              "MY.atlasCodeEnum3",
+              "MY.atlasCodeEnum4",
+              "MY.atlasCodeEnum5",
+              "MY.atlasCodeEnum6",
+              "MY.atlasCodeEnum61",
+              "MY.atlasCodeEnum62",
+              "MY.atlasCodeEnum63",
+              "MY.atlasCodeEnum64",
+              "MY.atlasCodeEnum65",
+              "MY.atlasCodeEnum66",
+              "MY.atlasCodeEnum7",
+              "MY.atlasCodeEnum71",
+              "MY.atlasCodeEnum72",
+              "MY.atlasCodeEnum73",
+              "MY.atlasCodeEnum74",
+              "MY.atlasCodeEnum75",
+              "MY.atlasCodeEnum8",
+              "MY.atlasCodeEnum81",
+              "MY.atlasCodeEnum82"
+            ],
+            "title": "Overriding Breeding Index"
+          },
           "byRole": {
             "type": "string",
             "enum": [
@@ -53779,6 +53807,15 @@
             },
             "minItems": 0,
             "title": "Keywords"
+          },
+          "modifiedBy": {
+            "type": "string",
+            "title": "Modified by"
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when media metadata was last modified"
           },
           "mp3URL": {
             "type": "string",
@@ -55306,7 +55343,7 @@
                 "",
                 "MY.verificationStatusOk",
                 "MY.verificationStatusVerify",
-                "MY.verificationStatusComplete",
+                "MY.verificationStatusNeedsCompletion",
                 "MY.verificationStatusGeoreference",
                 "MY.verificationStatusDet",
                 "MY.verificationStatusCheckID",
@@ -58949,6 +58986,15 @@
             "type": "string",
             "title": "URL of a large version of the image (reduced to max 1280px height or width)"
           },
+          "modifiedBy": {
+            "type": "string",
+            "title": "Modified by"
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when media metadata was last modified"
+          },
           "originalFilename": {
             "type": "string",
             "title": "Original filename"
@@ -60465,6 +60511,15 @@
             "type": "string",
             "title": "URL of low detail model"
           },
+          "modifiedBy": {
+            "type": "string",
+            "title": "Modified by"
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when media metadata was last modified"
+          },
           "originalFilename": {
             "type": "string",
             "title": "Original filename"
@@ -61119,6 +61174,16 @@
             "description": "Filled in by ICT team",
             "title": "AD group name"
           },
+          "additionalIDs": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "description": "Other identifiers this organization has",
+            "title": "Additional IDs"
+          },
           "contentContact": {
             "type": "string",
             "description": "Name of content/collection contact person for the organization.",
@@ -61303,6 +61368,15 @@
           "largeURL": {
             "type": "string",
             "title": "URL of a large version of the image (reduced to max 1280px height or width)"
+          },
+          "modifiedBy": {
+            "type": "string",
+            "title": "Modified by"
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when media metadata was last modified"
           },
           "originalFilename": {
             "type": "string",
@@ -66820,6 +66894,15 @@
             },
             "minItems": 0,
             "title": "Keywords"
+          },
+          "modifiedBy": {
+            "type": "string",
+            "title": "Modified by"
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Date/time when media metadata was last modified"
           },
           "originalFilename": {
             "type": "string",

@@ -67,6 +67,14 @@
       "@id": "default:MM.largeURL",
       "@type": "xsd:string"
     },
+    "modifiedBy": {
+      "@id": "default:MM.modifiedBy",
+      "@type": "xsd:string"
+    },
+    "modifiedDateTime": {
+      "@id": "default:MM.modifiedDateTime",
+      "@type": "xsd:dateTime"
+    },
     "originalFilename": {
       "@id": "default:MM.originalFilename",
       "@type": "xsd:string"

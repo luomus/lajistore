@@ -52,6 +52,11 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "additionalIDs": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "contentContact": {
         "type": "keyword",
         "ignore_above": 200,

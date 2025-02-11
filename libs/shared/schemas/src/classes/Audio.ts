@@ -24,6 +24,8 @@ export class Audio {
   fullResolutionMediaAvailable?: boolean;
   fullURL: string;
   keyword?: string[];
+  modifiedBy?: string;
+  modifiedDateTime?: string;
   mp3URL: string;
   originalFilename?: string;
   primaryForTaxon?: string[];
