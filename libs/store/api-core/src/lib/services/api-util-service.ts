@@ -29,14 +29,14 @@ export class ApiUtilService {
   getJsonLDContext(type: string) {
     type = UtilityService.removeSuffix(type, '.json');
 
-    return from(this.schemaCacheService.getCachedJsonLd(type)).pipe(
+    return from(this.schemaCacheService.getCachedJsonLd(UtilityService.normalize(type))).pipe(
       switchMap(data => {
         if (data) {
           return of(data);
         } else {
           return this.getFile(
             this.fileService.getFilename(
-              UtilityService.removeSuffix(type, '.json'),
+              type,
               this.configService.get('JSON_LD_CONTEXT_PATH')
             ),
             'JsonLD Context not found'
@@ -49,13 +49,13 @@ export class ApiUtilService {
   getJsonSchema(type: string): Observable<OpenAPIV3.Document> {
     type = UtilityService.removeSuffix(type, '.json');
 
-    return from(this.schemaCacheService.getCachedJsonSchema(type)).pipe(
+    return from(this.schemaCacheService.getCachedJsonSchema(UtilityService.normalize(type))).pipe(
       switchMap(data => {
         if (data) {
           return of(data);
         } else {
           return this.getFile(
-            this.fileService.getFilename(UtilityService.removeSuffix(type, '.json')),
+            this.fileService.getFilename(type),
             'Schema not found'
           );
         }
@@ -65,7 +65,8 @@ export class ApiUtilService {
 
   getEsMapping(type: string) {
     type = UtilityService.removeSuffix(type, '.json');
-    return from(this.schemaCacheService.getCachedEsIndex(type)).pipe(
+
+    return from(this.schemaCacheService.getCachedEsIndex(UtilityService.normalize(type))).pipe(
       switchMap(data => {
         if (data) {
           return of(data);
