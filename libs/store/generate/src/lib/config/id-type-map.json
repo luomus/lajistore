@@ -27,6 +27,10 @@
     "sequence": "TRANSACTION_SEQ",
     "value": "HRA.%value%"
   },
+  "organization": {
+    "sequence": "ORGANIZATION_SEQ",
+    "value": "MOS.%value%"
+  },
   "_DEFAULT_": {
     "sequence": "LAJISTORE_SEQ",
     "value": "JX.%value%"
