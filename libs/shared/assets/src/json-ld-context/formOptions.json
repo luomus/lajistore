@@ -147,6 +147,10 @@
       "@id": "default:MHL.navigationTitle",
       "@type": "xsd:string"
     },
+    "openForm": {
+      "@id": "default:MHL.openForm",
+      "@type": "xsd:boolean"
+    },
     "ownSubmissionsActions": {
       "@id": "default:MHL.ownSubmissionsActions",
       "@type": "xsd:string"

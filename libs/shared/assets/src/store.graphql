@@ -9189,6 +9189,9 @@ type FormOptions {
   """The title label for theme form sidebar"""
   navigationTitle: String
 
+  """Utilizes open form login system, hides navbar."""
+  openForm: Boolean
+
   """
   Available actions for own submissions (only on the own submissions page). Defaults to ['edit', 'view', 'download', 'stats', 'delete']
   """
@@ -28277,6 +28280,9 @@ input FormOptionsInput {
 
   """The title label for theme form sidebar"""
   navigationTitle: String
+
+  """Utilizes open form login system, hides navbar."""
+  openForm: Boolean
 
   """
   Available actions for own submissions (only on the own submissions page). Defaults to ['edit', 'view', 'download', 'stats', 'delete']

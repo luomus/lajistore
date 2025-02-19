@@ -356,6 +356,9 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "openForm": {
+        "type": "boolean"
+      },
       "ownSubmissionsActions": {
         "type": "keyword",
         "ignore_above": 200,

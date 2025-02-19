@@ -124,6 +124,10 @@ export interface FormOptions {
    */
   navigationTitle?: string;
   /**
+   * Utilizes open form login system, hides navbar.
+   */
+  openForm?: boolean;
+  /**
    * Available actions for own submissions (only on the own submissions page). Defaults to ['edit', 'view', 'download', 'stats', 'delete']
    */
   ownSubmissionsActions?: string[];

@@ -1217,6 +1217,13 @@
           "description": "The title label for theme form sidebar",
           "title": "Navigation title"
         },
+        "openForm": {
+          "type": "boolean",
+          "range": "xsd:boolean",
+          "subject": "MHL.openForm",
+          "description": "Utilizes open form login system, hides navbar.",
+          "title": "Open form"
+        },
         "ownSubmissionsActions": {
           "type": "array",
           "uniqueItems": false,
