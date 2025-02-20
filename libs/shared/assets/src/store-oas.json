@@ -55634,13 +55634,9 @@
           },
           "contacts": {
             "type": "array",
-            "uniqueItems": false,
             "items": {
-              "type": "string"
-            },
-            "minItems": 0,
-            "description": "Contacts for people involved in the document",
-            "title": "Contacts"
+              "$ref": "#/components/schemas/contact"
+            }
           },
           "cultivationInformation": {
             "type": "string",

@@ -1469,7 +1469,61 @@
               "type": "array",
               "uniqueItems": false,
               "items": {
-                "type": "string"
+                "type": "object",
+                "subject": "MZ.contact",
+                "additionalProperties": false,
+                "title": "Contact",
+                "description": "",
+                "properties": {
+                  "emailAddress": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MA.emailAddress",
+                    "title": "Sähköposti"
+                  },
+                  "inheritedName": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MA.inheritedName",
+                    "title": "Sukunimi"
+                  },
+                  "preferredName": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MA.preferredName",
+                    "title": "Kutsumanimi"
+                  },
+                  "city": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MZ.city",
+                    "title": "City"
+                  },
+                  "country": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MZ.country",
+                    "title": "Country"
+                  },
+                  "phoneNumber": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MZ.phoneNumber",
+                    "title": "Phone number"
+                  },
+                  "postalCode": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MZ.postalCode",
+                    "title": "Postal code"
+                  },
+                  "streetAddress": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MZ.streetAddress",
+                    "title": "Street address"
+                  }
+                }
               },
               "minItems": 0,
               "range": "MZ.contact",

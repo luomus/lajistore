@@ -97,7 +97,7 @@
     },
     "contacts": {
       "@id": "default:MY.contacts",
-      "@type": "@id"
+      "@container": "@set"
     },
     "cultivationInformation": {
       "@id": "default:MY.cultivationInformation",

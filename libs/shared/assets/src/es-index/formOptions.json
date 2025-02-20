@@ -485,9 +485,49 @@
             "normalizer": "useLowercase"
           },
           "contacts": {
-            "type": "keyword",
-            "ignore_above": 200,
-            "normalizer": "useLowercase"
+            "type": "object",
+            "properties": {
+              "emailAddress": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "inheritedName": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "preferredName": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "city": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "country": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "phoneNumber": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "postalCode": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "streetAddress": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              }
+            }
           },
           "cultivationInformation": {
             "type": "keyword",

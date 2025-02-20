@@ -1,4 +1,5 @@
 import { MXSecureLevels } from './';
+import { Contact } from './';
 import { MYDataOriginEnum } from './';
 import { DocumentIdentification } from './';
 import { GatheringEvent } from './';
@@ -81,7 +82,7 @@ export interface Document {
   /**
    * Contacts for people involved in the document
    */
-  contacts?: string[];
+  contacts?: Contact[];
   /**
    * Annuality/perenniality or other specialities about cultivation in our conditions.
    */
