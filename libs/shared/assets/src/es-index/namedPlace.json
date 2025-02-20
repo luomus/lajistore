@@ -118,6 +118,11 @@
             "ignore_above": 200,
             "normalizer": "useLowercase"
           },
+          "contacts": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
           "cultivationInformation": {
             "type": "keyword",
             "ignore_above": 200,
@@ -2724,6 +2729,11 @@
             "normalizer": "useLowercase"
           },
           "condition": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "contacts": {
             "type": "keyword",
             "ignore_above": 200,
             "normalizer": "useLowercase"

@@ -198,6 +198,18 @@
           "description": "Notes on the defects of the specimen (missing parts or such). Empty value means same as \"good\" or \"hyvä\" - that there is nothing special to mention about the condition.",
           "title": "Condition (defects)"
         },
+        "contacts": {
+          "type": "array",
+          "uniqueItems": false,
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0,
+          "range": "MZ.contact",
+          "subject": "MY.contacts",
+          "description": "Contacts for people involved in the document",
+          "title": "Contacts"
+        },
         "cultivationInformation": {
           "type": "string",
           "range": "xsd:string",
@@ -8719,6 +8731,18 @@
           "subject": "MY.condition",
           "description": "Notes on the defects of the specimen (missing parts or such). Empty value means same as \"good\" or \"hyvä\" - that there is nothing special to mention about the condition.",
           "title": "Condition (defects)"
+        },
+        "contacts": {
+          "type": "array",
+          "uniqueItems": false,
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0,
+          "range": "MZ.contact",
+          "subject": "MY.contacts",
+          "description": "Contacts for people involved in the document",
+          "title": "Contacts"
         },
         "cultivationInformation": {
           "type": "string",

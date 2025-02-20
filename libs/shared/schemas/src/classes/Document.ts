@@ -79,6 +79,10 @@ export class Document {
    */
   condition?: string;
   /**
+   * Contacts for people involved in the document
+   */
+  contacts?: string[];
+  /**
    * Annuality/perenniality or other specialities about cultivation in our conditions.
    */
   cultivationInformation?: string;

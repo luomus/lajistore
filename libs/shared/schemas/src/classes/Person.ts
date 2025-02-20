@@ -18,7 +18,7 @@ export class Person {
   defaultLanguage?: string;
   defaultQNamePrefix?: string;
   description?: string;
-  emailAddress: string;
+  emailAddress?: string;
   facebookLoginName?: string;
   fieldjournalLoginName?: string[];
   firstJoined?: string;
