@@ -9264,7 +9264,9 @@ type FormOptions {
   """The title label for theme form sidebar"""
   navigationTitle: String
 
-  """Utilizes open form login system, hides navbar."""
+  """
+  Allows creating documents without a person token. Utilizes open form login system, hides navbar.
+  """
   openForm: Boolean
 
   """
@@ -28522,7 +28524,9 @@ input FormOptionsInput {
   """The title label for theme form sidebar"""
   navigationTitle: String
 
-  """Utilizes open form login system, hides navbar."""
+  """
+  Allows creating documents without a person token. Utilizes open form login system, hides navbar.
+  """
   openForm: Boolean
 
   """

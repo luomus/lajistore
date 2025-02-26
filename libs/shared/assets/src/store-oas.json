@@ -57119,7 +57119,7 @@
           },
           "openForm": {
             "type": "boolean",
-            "description": "Utilizes open form login system, hides navbar.",
+            "description": "Allows creating documents without a person token. Utilizes open form login system, hides navbar.",
             "title": "Open form"
           },
           "ownSubmissionsActions": {
