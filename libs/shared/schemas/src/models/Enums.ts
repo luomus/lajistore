@@ -100,7 +100,8 @@ export type MYLifeStages =
   | "MY.lifeStageHatchedPupa"
   | "MY.lifeStageGall"
   | "MY.lifeStageMarks"
-  | "MY.lifeStageTriungulin";
+  | "MY.lifeStageTriungulin"
+  | "MY.lifeStageExuvia";
 export type MYPlantLifeStageEnum =
   | ""
   | "MY.plantLifeStageSterile"

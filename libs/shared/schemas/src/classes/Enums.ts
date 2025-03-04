@@ -109,7 +109,8 @@ export enum MYLifeStages {
   "lifeStageHatchedPupa" = "MY.lifeStageHatchedPupa",
   "lifeStageGall" = "MY.lifeStageGall",
   "lifeStageMarks" = "MY.lifeStageMarks",
-  "lifeStageTriungulin" = "MY.lifeStageTriungulin"
+  "lifeStageTriungulin" = "MY.lifeStageTriungulin",
+  "lifeStageExuvia" = "MY.lifeStageExuvia"
 }
 export enum MYPlantLifeStageEnum {
   "empty" = "",

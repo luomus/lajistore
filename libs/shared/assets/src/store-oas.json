@@ -54496,7 +54496,8 @@
               "MY.lifeStageHatchedPupa",
               "MY.lifeStageGall",
               "MY.lifeStageMarks",
-              "MY.lifeStageTriungulin"
+              "MY.lifeStageTriungulin",
+              "MY.lifeStageExuvia"
             ],
             "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
             "title": "Life stage"
@@ -59743,7 +59744,8 @@
               "MY.lifeStageHatchedPupa",
               "MY.lifeStageGall",
               "MY.lifeStageMarks",
-              "MY.lifeStageTriungulin"
+              "MY.lifeStageTriungulin",
+              "MY.lifeStageExuvia"
             ],
             "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
             "title": "Life stage"
@@ -61255,7 +61257,8 @@
               "MY.lifeStageHatchedPupa",
               "MY.lifeStageGall",
               "MY.lifeStageMarks",
-              "MY.lifeStageTriungulin"
+              "MY.lifeStageTriungulin",
+              "MY.lifeStageExuvia"
             ],
             "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
             "title": "Life stage"
@@ -64941,7 +64944,8 @@
               "MY.lifeStageHatchedPupa",
               "MY.lifeStageGall",
               "MY.lifeStageMarks",
-              "MY.lifeStageTriungulin"
+              "MY.lifeStageTriungulin",
+              "MY.lifeStageExuvia"
             ],
             "title": "Object taxon life stage"
           },
@@ -64981,7 +64985,8 @@
               "MY.lifeStageHatchedPupa",
               "MY.lifeStageGall",
               "MY.lifeStageMarks",
-              "MY.lifeStageTriungulin"
+              "MY.lifeStageTriungulin",
+              "MY.lifeStageExuvia"
             ],
             "title": "Subject taxon life stage"
           },
@@ -66396,7 +66401,8 @@
               "MY.lifeStageHatchedPupa",
               "MY.lifeStageGall",
               "MY.lifeStageMarks",
-              "MY.lifeStageTriungulin"
+              "MY.lifeStageTriungulin",
+              "MY.lifeStageExuvia"
             ],
             "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
             "title": "Life stage"
@@ -67638,7 +67644,8 @@
               "MY.lifeStageHatchedPupa",
               "MY.lifeStageGall",
               "MY.lifeStageMarks",
-              "MY.lifeStageTriungulin"
+              "MY.lifeStageTriungulin",
+              "MY.lifeStageExuvia"
             ],
             "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
             "title": "Life stage"

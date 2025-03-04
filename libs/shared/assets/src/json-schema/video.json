@@ -233,7 +233,8 @@
         "MY.lifeStageHatchedPupa",
         "MY.lifeStageGall",
         "MY.lifeStageMarks",
-        "MY.lifeStageTriungulin"
+        "MY.lifeStageTriungulin",
+        "MY.lifeStageExuvia"
       ],
       "enumNames": [
         "",
@@ -256,7 +257,8 @@
         "hatched pupa",
         "gall",
         "marks (feeding marks etc.)",
-        "triungulin"
+        "triungulin",
+        "exuvia"
       ],
       "range": "MY.lifeStages",
       "subject": "MY.lifeStage",
