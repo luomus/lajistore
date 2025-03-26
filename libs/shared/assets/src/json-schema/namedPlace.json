@@ -198,6 +198,72 @@
           "description": "Notes on the defects of the specimen (missing parts or such). Empty value means same as \"good\" or \"hyvä\" - that there is nothing special to mention about the condition.",
           "title": "Condition (defects)"
         },
+        "contacts": {
+          "type": "array",
+          "uniqueItems": false,
+          "items": {
+            "type": "object",
+            "subject": "MZ.contact",
+            "additionalProperties": false,
+            "title": "Contact",
+            "description": "",
+            "properties": {
+              "emailAddress": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MA.emailAddress",
+                "title": "Sähköposti"
+              },
+              "inheritedName": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MA.inheritedName",
+                "title": "Sukunimi"
+              },
+              "preferredName": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MA.preferredName",
+                "title": "Kutsumanimi"
+              },
+              "city": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MZ.city",
+                "title": "City"
+              },
+              "country": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MZ.country",
+                "title": "Country"
+              },
+              "phoneNumber": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MZ.phoneNumber",
+                "title": "Phone number"
+              },
+              "postalCode": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MZ.postalCode",
+                "title": "Postal code"
+              },
+              "streetAddress": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MZ.streetAddress",
+                "title": "Street address"
+              }
+            }
+          },
+          "minItems": 0,
+          "range": "MZ.contact",
+          "subject": "MY.contacts",
+          "description": "Contacts for people involved in the document",
+          "title": "Contacts"
+        },
         "cultivationInformation": {
           "type": "string",
           "range": "xsd:string",
@@ -5776,7 +5842,8 @@
                         "MY.lifeStageHatchedPupa",
                         "MY.lifeStageGall",
                         "MY.lifeStageMarks",
-                        "MY.lifeStageTriungulin"
+                        "MY.lifeStageTriungulin",
+                        "MY.lifeStageExuvia"
                       ],
                       "enumNames": [
                         "",
@@ -5799,7 +5866,8 @@
                         "hatched pupa",
                         "gall",
                         "marks (feeding marks etc.)",
-                        "triungulin"
+                        "triungulin",
+                        "exuvia"
                       ],
                       "range": "MY.lifeStages",
                       "subject": "MY.lifeStage",
@@ -8720,6 +8788,72 @@
           "description": "Notes on the defects of the specimen (missing parts or such). Empty value means same as \"good\" or \"hyvä\" - that there is nothing special to mention about the condition.",
           "title": "Condition (defects)"
         },
+        "contacts": {
+          "type": "array",
+          "uniqueItems": false,
+          "items": {
+            "type": "object",
+            "subject": "MZ.contact",
+            "additionalProperties": false,
+            "title": "Contact",
+            "description": "",
+            "properties": {
+              "emailAddress": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MA.emailAddress",
+                "title": "Sähköposti"
+              },
+              "inheritedName": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MA.inheritedName",
+                "title": "Sukunimi"
+              },
+              "preferredName": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MA.preferredName",
+                "title": "Kutsumanimi"
+              },
+              "city": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MZ.city",
+                "title": "City"
+              },
+              "country": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MZ.country",
+                "title": "Country"
+              },
+              "phoneNumber": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MZ.phoneNumber",
+                "title": "Phone number"
+              },
+              "postalCode": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MZ.postalCode",
+                "title": "Postal code"
+              },
+              "streetAddress": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MZ.streetAddress",
+                "title": "Street address"
+              }
+            }
+          },
+          "minItems": 0,
+          "range": "MZ.contact",
+          "subject": "MY.contacts",
+          "description": "Contacts for people involved in the document",
+          "title": "Contacts"
+        },
         "cultivationInformation": {
           "type": "string",
           "range": "xsd:string",
@@ -14298,7 +14432,8 @@
                         "MY.lifeStageHatchedPupa",
                         "MY.lifeStageGall",
                         "MY.lifeStageMarks",
-                        "MY.lifeStageTriungulin"
+                        "MY.lifeStageTriungulin",
+                        "MY.lifeStageExuvia"
                       ],
                       "enumNames": [
                         "",
@@ -14321,7 +14456,8 @@
                         "hatched pupa",
                         "gall",
                         "marks (feeding marks etc.)",
-                        "triungulin"
+                        "triungulin",
+                        "exuvia"
                       ],
                       "range": "MY.lifeStages",
                       "subject": "MY.lifeStage",

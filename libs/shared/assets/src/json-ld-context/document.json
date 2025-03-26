@@ -95,6 +95,10 @@
       "@id": "default:MY.condition",
       "@type": "xsd:string"
     },
+    "contacts": {
+      "@id": "default:MY.contacts",
+      "@container": "@set"
+    },
     "cultivationInformation": {
       "@id": "default:MY.cultivationInformation",
       "@type": "xsd:string"

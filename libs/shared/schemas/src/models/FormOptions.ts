@@ -124,7 +124,7 @@ export interface FormOptions {
    */
   navigationTitle?: string;
   /**
-   * Utilizes open form login system, hides navbar.
+   * Allows creating documents without a person token. Utilizes open form login system, hides navbar.
    */
   openForm?: boolean;
   /**

@@ -1,4 +1,5 @@
 import { MXSecureLevels } from './';
+import { Contact } from './';
 import { MYDataOriginEnum } from './';
 import { DocumentIdentification } from './';
 import { GatheringEvent } from './';
@@ -78,6 +79,10 @@ export interface Document {
    * Notes on the defects of the specimen (missing parts or such). Empty value means same as "good" or "hyvä" - that there is nothing special to mention about the condition.
    */
   condition?: string;
+  /**
+   * Contacts for people involved in the document
+   */
+  contacts?: Contact[];
   /**
    * Annuality/perenniality or other specialities about cultivation in our conditions.
    */

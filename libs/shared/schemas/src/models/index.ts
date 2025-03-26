@@ -29,6 +29,8 @@ import { Collection } from './Collection'
 export type { Collection }
 import { CompleteList } from './CompleteList'
 export type { CompleteList }
+import { Contact } from './Contact'
+export type { Contact }
 import { ContentContextDescription } from './ContentContextDescription'
 export type { ContentContextDescription }
 import { DataField } from './DataField'
@@ -199,6 +201,7 @@ export type StoreObject = BibliographicResource
    | ChecklistVersion
    | Collection
    | CompleteList
+   | Contact
    | ContentContextDescription
    | DataField
    | Dataset
@@ -364,6 +367,11 @@ export function isCollection(data: unknown): data is Collection {
 export function isCompleteList(data: unknown): data is CompleteList {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MY.completeListClass'
+  );
+}
+export function isContact(data: unknown): data is Contact {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MZ.contact'
   );
 }
 export function isContentContextDescription(data: unknown): data is ContentContextDescription {
