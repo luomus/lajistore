@@ -66,7 +66,7 @@ export class MethodInputGuard implements CanActivate {
   
     const base = await this.documentService.findMetadataByData(systemID, {[type]: body});
     const foundIDs = Object.keys(base);
-    if (systemID !== 'KE.3' && method === 'POST' && countIDs) {
+    if (method === 'POST' && systemID !== 'KE.3' && type !== 'form' && countIDs) {
       throw new BadRequestException(`POST input body must not contain documents with IDs.`);
     } else if (method === 'POST' && foundIDs.length !== 0) {
       throw new BadRequestException(`POST input body must not contain IDs for existing documents, found: ${foundIDs}.`);
