@@ -70,7 +70,7 @@ export class MethodInputGuard implements CanActivate {
       throw new BadRequestException(`POST input body must not contain documents with IDs.`);
     } else if (method === 'POST' && foundIDs.length !== 0) {
       throw new BadRequestException(`POST input body must not contain IDs for existing documents, found: ${foundIDs}.`);
-    } else if (method === 'PUT' && count !== foundIDs.length) {
+    } else if (method === 'PUT' && count !== foundIDs.length && type !== 'form') {
       throw new BadRequestException(`No document found for given ID.`);
     }
 
