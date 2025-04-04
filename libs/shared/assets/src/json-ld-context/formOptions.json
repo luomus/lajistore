@@ -187,6 +187,10 @@
       "@id": "default:MHL.printType",
       "@type": "@id"
     },
+    "privacyPolicy": {
+      "@id": "default:MHL.privacyPolicy",
+      "@type": "xsd:boolean"
+    },
     "restrictAccess": {
       "@id": "default:MHL.restrictAccess",
       "@type": "@id"

@@ -9130,6 +9130,13 @@
       "subject": "MHL.printType",
       "title": "Print type"
     },
+    "privacyPolicy": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "MHL.privacyPolicy",
+      "description": "Display privacy policy link on form header.",
+      "title": "Privacy policy"
+    },
     "restrictAccess": {
       "type": "string",
       "enum": [

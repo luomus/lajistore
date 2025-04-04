@@ -155,6 +155,10 @@ export class FormOptions {
   prepopulatedDocument?: Document;
   printType?: MHLPrintTypeEnum;
   /**
+   * Display privacy policy link on form header.
+   */
+  privacyPolicy?: boolean;
+  /**
    * Users need to have permission to access the form
    */
   restrictAccess?: MHLRestrictAccessEnum;
