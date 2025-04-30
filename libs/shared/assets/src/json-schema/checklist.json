@@ -24,7 +24,13 @@
       "subject": "@type",
       "title": "Type for the Checklist"
     },
-    "dc:bibliographicCitation": {
+    "isPublic": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "MR.isPublic",
+      "title": "isPublic"
+    },
+    "name": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -39,14 +45,8 @@
         }
       },
       "range": "xsd:string",
-      "subject": "dc:bibliographicCitation",
-      "title": "Bibliographic Citation"
-    },
-    "isPublic": {
-      "type": "boolean",
-      "range": "xsd:boolean",
-      "subject": "MR.isPublic",
-      "title": "isPublic"
+      "subject": "MR.name",
+      "title": "Name"
     },
     "owner": {
       "type": "string",

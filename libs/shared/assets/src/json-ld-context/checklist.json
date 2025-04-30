@@ -31,13 +31,13 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
-    "dc:bibliographicCitation": {
-      "@id": "default:dc:bibliographicCitation",
-      "@container": "@language"
-    },
     "isPublic": {
       "@id": "default:MR.isPublic",
       "@type": "xsd:boolean"
+    },
+    "name": {
+      "@id": "default:MR.name",
+      "@container": "@language"
     },
     "owner": {
       "@id": "default:MR.owner",

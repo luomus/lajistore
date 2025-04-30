@@ -28,7 +28,10 @@
       "@type": {
         "type": "keyword"
       },
-      "dc:bibliographicCitation": {
+      "isPublic": {
+        "type": "boolean"
+      },
+      "name": {
         "properties": {
           "en": {
             "type": "keyword",
@@ -46,9 +49,6 @@
             "normalizer": "useLowercase"
           }
         }
-      },
-      "isPublic": {
-        "type": "boolean"
       },
       "owner": {
         "type": "keyword",

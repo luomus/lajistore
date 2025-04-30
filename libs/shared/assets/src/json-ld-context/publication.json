@@ -31,13 +31,13 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
-    "dc:URI": {
-      "@id": "default:dc:URI",
+    "URI": {
+      "@id": "default:MP.URI",
       "@type": "xsd:string"
     },
-    "dc:bibliographicCitation": {
-      "@id": "default:dc:bibliographicCitation",
-      "@container": "@language"
+    "name": {
+      "@id": "default:MP.name",
+      "@type": "xsd:string"
     }
   }
 }

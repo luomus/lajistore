@@ -24,29 +24,17 @@
       "subject": "@type",
       "title": "Type for the Publication"
     },
-    "dc:URI": {
+    "URI": {
       "type": "string",
       "range": "xsd:string",
-      "subject": "dc:URI",
+      "subject": "MP.URI",
       "title": "URI"
     },
-    "dc:bibliographicCitation": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "en": {
-          "type": "string"
-        },
-        "fi": {
-          "type": "string"
-        },
-        "sv": {
-          "type": "string"
-        }
-      },
+    "name": {
+      "type": "string",
       "range": "xsd:string",
-      "subject": "dc:bibliographicCitation",
-      "title": "Bibliographic Citation"
+      "subject": "MP.name",
+      "title": "Name"
     }
   }
 }
