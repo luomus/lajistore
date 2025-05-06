@@ -52,8 +52,6 @@ export class SubIdValidator implements NestInterceptor {
       } else {
         await this.checkObject(type, data);
       }
-
-      throw new UnprocessableEntityException('LOL')
   }
 
   private async checkBulk(data: Record<string, StoreObject[]>) {
@@ -98,7 +96,7 @@ private async checkObject(
           await this.checkObject(embedded[property], obj, subIds);
         }
       } else {
-        await this.checkObject(embedded[property], data[property], subIds); 
+        await this.checkObject(embedded[property], data[property], subIds);
       }
     }
   }
