@@ -8,12 +8,12 @@ export interface Checklist {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  "dc:bibliographicCitation"?: {
+  isPublic: boolean;
+  name?: {
     en?: string;
     fi?: string;
     sv?: string;
   };
-  isPublic: boolean;
   owner: string;
   rootTaxon: string;
   "rdfs:comment"?: string;

@@ -8,10 +8,6 @@ export class Publication {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  "dc:URI"?: string;
-  "dc:bibliographicCitation"?: {
-    en?: string;
-    fi?: string;
-    sv?: string;
-  };
+  URI?: string;
+  name?: string;
 }

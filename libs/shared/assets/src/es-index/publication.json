@@ -28,29 +28,15 @@
       "@type": {
         "type": "keyword"
       },
-      "dc:URI": {
+      "URI": {
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
-      "dc:bibliographicCitation": {
-        "properties": {
-          "en": {
-            "type": "keyword",
-            "ignore_above": 200,
-            "normalizer": "useLowercase"
-          },
-          "fi": {
-            "type": "keyword",
-            "ignore_above": 200,
-            "normalizer": "useLowercase"
-          },
-          "sv": {
-            "type": "keyword",
-            "ignore_above": 200,
-            "normalizer": "useLowercase"
-          }
-        }
+      "name": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "_meta": {
         "properties": {

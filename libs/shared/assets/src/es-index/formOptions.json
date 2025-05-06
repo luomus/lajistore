@@ -2974,6 +2974,9 @@
         "type": "keyword",
         "ignore_above": 200
       },
+      "privacyPolicy": {
+        "type": "boolean"
+      },
       "restrictAccess": {
         "type": "keyword",
         "ignore_above": 200
