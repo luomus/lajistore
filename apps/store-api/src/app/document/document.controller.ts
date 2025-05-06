@@ -24,6 +24,7 @@ import {
   TimerInterceptor,
   TypeExistsPipe,
   ValidatorInterceptor,
+  SubIdValidator,
 } from '@luomus/store/api-core';
 import { RuntimeException } from '@nestjs/core/errors/exceptions/runtime.exception';
 import { StoreObject } from '@luomus/shared/models';
@@ -47,7 +48,7 @@ export class DocumentController {
   constructor(private storeService: StoreApiService) {}
 
   @Post('/_bulk')
-  @UseInterceptors(ValidatorInterceptor)
+  @UseInterceptors(ValidatorInterceptor, SubIdValidator)
   bulkPostDocument(
     @CurrentSystemID() source: string,
     @Body() body: Record<string, StoreObject[]>
@@ -59,7 +60,7 @@ export class DocumentController {
 
   @Post('/:type')
   @UseGuards(MethodInputGuard)
-  @UseInterceptors(ValidatorInterceptor)
+  @UseInterceptors(ValidatorInterceptor, SubIdValidator)
   postDocument(
     @CurrentSystemID() source: string,
     @Param(PARAM_TYPE, TypeExistsPipe) type: string,
@@ -71,7 +72,7 @@ export class DocumentController {
   }
 
   @Patch('/:type')
-  @UseInterceptors(PatchInterceptor, ValidatorInterceptor)
+  @UseInterceptors(PatchInterceptor, ValidatorInterceptor, SubIdValidator)
   patchDocument(
     @CurrentSystemID() source: string,
     @Param(PARAM_TYPE, TypeExistsPipe) type: string,
@@ -176,7 +177,7 @@ export class DocumentController {
 
   @Put('/:type/*')
   @UseGuards(MethodInputGuard)
-  @UseInterceptors(ValidatorInterceptor)
+  @UseInterceptors(ValidatorInterceptor, SubIdValidator)
   putDocument(
     @CurrentSystemID() source: string,
     @Param(PARAM_TYPE, TypeExistsPipe) type: string,

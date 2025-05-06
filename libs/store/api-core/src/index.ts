@@ -3,6 +3,7 @@ export * from './lib/interceptor/content.interceptor';
 export * from './lib/interceptor/patch.interceptor';
 export * from './lib/interceptor/timer.interceptor';
 export * from './lib/interceptor/validator.interceptor';
+export * from './lib/interceptor/sub-id-validator.interceptor';
 export * from './lib/guards/auth.guard';
 export * from './lib/guards/method-input.guard';
 export * from './lib/pipes/type-exists.pipe';
