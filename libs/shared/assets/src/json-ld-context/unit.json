@@ -482,6 +482,10 @@
     "typeSpecimens": {
       "@id": "default:MY.typeSpecimens",
       "@container": "@set"
+    },
+    "samples": {
+      "@id": "default:MY.samples",
+      "@container": "@set"
     }
   }
 }

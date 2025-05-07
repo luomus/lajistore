@@ -766,7 +766,7 @@ type ViewerBasicAuth {
   getsample(
     """Id for the Specimen sample"""
     id: String!
-  ): Sample2
+  ): Sample
 
   """
   Return a Satellite Tracking Project.
@@ -819,12 +819,12 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
   ): Taxon2
 
@@ -2490,7 +2490,7 @@ type ViewerBasicAuth {
 
     """Sort by"""
     sort: String
-  ): Sample
+  ): Sample2
 
   """
   Return list of Satellite Tracking Project objects.
@@ -2603,7 +2603,7 @@ type ViewerBasicAuth {
   ): Tag
 
   """
-  Return list of taxon objects.
+  Return list of Taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -5001,12 +5001,12 @@ type ViewerBasicAuth {
   ): [TagVerListItem]
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
 
     """
@@ -5311,7 +5311,7 @@ type ViewerBasicAuth {
 
     """Version number for the Specimen sample"""
     number: Float!
-  ): Sample2
+  ): Sample
 
   """
   Return a Satellite Tracking Project.
@@ -5379,15 +5379,15 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
 
-    """Version number for the taxon"""
+    """Version number for the Taxon"""
     number: Float!
   ): Taxon2
 
@@ -7786,6 +7786,82 @@ enum HabitatListItem {
   MY_HABITATENUMVALUE92
   MY_HABITATENUMVALUE93
   MY_HABITATENUMVALUE94
+  MY_HABITATENUMVALUE95
+  MY_HABITATENUMVALUE96
+  MY_HABITATENUMVALUE97
+  MY_HABITATENUMVALUE98
+  MY_HABITATENUMVALUE99
+  MY_HABITATENUMVALUE100
+  MY_HABITATENUMVALUE101
+  MY_HABITATENUMVALUE102
+  MY_HABITATENUMVALUE103
+  MY_HABITATENUMVALUE104
+  MY_HABITATENUMVALUE105
+  MY_HABITATENUMVALUE106
+  MY_HABITATENUMVALUE107
+  MY_HABITATENUMVALUE108
+  MY_HABITATENUMVALUE109
+  MY_HABITATENUMVALUE110
+  MY_HABITATENUMVALUE111
+  MY_HABITATENUMVALUE112
+  MY_HABITATENUMVALUE113
+  MY_HABITATENUMVALUE114
+  MY_HABITATENUMVALUE115
+  MY_HABITATENUMVALUE116
+  MY_HABITATENUMVALUE117
+  MY_HABITATENUMVALUE118
+  MY_HABITATENUMVALUE119
+  MY_HABITATENUMVALUE120
+  MY_HABITATENUMVALUE121
+  MY_HABITATENUMVALUE122
+  MY_HABITATENUMVALUE123
+  MY_HABITATENUMVALUE124
+  MY_HABITATENUMVALUE125
+  MY_HABITATENUMVALUE126
+  MY_HABITATENUMVALUE127
+  MY_HABITATENUMVALUE128
+  MY_HABITATENUMVALUE129
+  MY_HABITATENUMVALUE130
+  MY_HABITATENUMVALUE131
+  MY_HABITATENUMVALUE132
+  MY_HABITATENUMVALUE133
+  MY_HABITATENUMVALUE134
+  MY_HABITATENUMVALUE135
+  MY_HABITATENUMVALUE136
+  MY_HABITATENUMVALUE137
+  MY_HABITATENUMVALUE138
+  MY_HABITATENUMVALUE139
+  MY_HABITATENUMVALUE140
+  MY_HABITATENUMVALUE141
+  MY_HABITATENUMVALUE142
+  MY_HABITATENUMVALUE143
+  MY_HABITATENUMVALUE144
+  MY_HABITATENUMVALUE145
+  MY_HABITATENUMVALUE146
+  MY_HABITATENUMVALUE147
+  MY_HABITATENUMVALUE148
+  MY_HABITATENUMVALUE149
+  MY_HABITATENUMVALUE150
+  MY_HABITATENUMVALUE151
+  MY_HABITATENUMVALUE152
+  MY_HABITATENUMVALUE153
+  MY_HABITATENUMVALUE154
+  MY_HABITATENUMVALUE155
+  MY_HABITATENUMVALUE156
+  MY_HABITATENUMVALUE157
+  MY_HABITATENUMVALUE158
+  MY_HABITATENUMVALUE159
+  MY_HABITATENUMVALUE160
+  MY_HABITATENUMVALUE161
+  MY_HABITATENUMVALUE162
+  MY_HABITATENUMVALUE163
+  MY_HABITATENUMVALUE164
+  MY_HABITATENUMVALUE165
+  MY_HABITATENUMVALUE166
+  MY_HABITATENUMVALUE167
+  MY_HABITATENUMVALUE168
+  MY_HABITATENUMVALUE169
+  MY_HABITATENUMVALUE170
 }
 
 enum HabitatAttributesListItem {
@@ -8115,6 +8191,7 @@ type Unit {
 
   """Bird or bat ring number, code, colour code or such"""
   ring: String
+  samples: [Sample]
 
   """Main method for (usually intentional) sampling"""
   samplingMethod: SamplingMethod
@@ -8554,6 +8631,254 @@ enum RecordPartsListItem {
   MY_RECORDPARTSTISSUECULTURE
   MY_RECORDPARTSMOUNT
   MY_RECORDPARTSSKULLANDBONES
+}
+
+type Sample {
+  """
+  Other identifiers this preparation/sample has, in format 'type:identifier'. For example: 'MZHtissue:123'. You can enter the type and colon and then click 'generate' to fetch the next free number for that prefix type.
+  """
+  additionalIDs: [String]
+
+  """
+  BOLD ID (usually BOLD "Sample ID") for the preparation/sample. If no other preparation/sample information is entered, use the BOLD field on the document level
+  """
+  bold: String
+
+  """
+  The collection which this preparation/sample belongs to, if different from the collection of the specimen.
+  """
+  collectionID: String
+
+  """
+  Notes on the defects of the preparation/sample (missing parts or such). For specimen level status use the condition field in the basic information section (document level). Empty value means same as "good" or "hyvä" - that the sample is in fine condition.
+  """
+  condition: String
+  context: String
+  creator: String
+
+  """Name of the instrument or device used for DNA extraction"""
+  dNAExtractionInstrument: String
+
+  """
+  Tag for the preparation/sample. For specimen level tags, use the tag field in the basic information section (document level).
+  """
+  datasetID: [String]
+  dateCreated: String
+  dateEdited: String
+  editor: String
+
+  """DNA sample elution medium"""
+  elutionMedium: ElutionMedium
+
+  """
+  Diary-style information about what has been done to the preparation/sample
+  """
+  event: [String]
+
+  """
+  Genbank ID for the preparation/sample. If no other preparation/sample information is entered, use the Genbank field on the document level
+  """
+  genbank: [String]
+  id: String
+
+  """
+  For example a jar that contains multiple fish individuals can be recorded as one specimen and one preparation. Can also be used for DNA samples (was DNA extracted from single or multiple individuals?).
+  """
+  individualsInPreparation: IndividualsInPreparation
+
+  """Which parent or larger collection this is part of."""
+  isPartOf: String
+
+  """Preparation/sample material. Choose preparation/sample type first."""
+  material: Material
+  measurement: Measurement
+
+  """Additional information about the preparation/sample"""
+  notes: String
+
+  """Team or organisation that owns the record and can edit it."""
+  owner: String
+
+  """Type of preparation/sample"""
+  preparationType: PreparationType!
+
+  """
+  Preservation methods and materials of the preparation/sample. It is possible to choose several
+  """
+  preservation: [PreparationSamplePreservationListItem]
+
+  """
+  Publication references or doi's that refer to this preparations/sample. For publications referring to the specimen, use publications field in the Other section (document level).
+  """
+  publication: [String]
+
+  """
+  DNA sample quality on a three step scale. The quality is defined by quality check measurements
+  """
+  quality: Quality
+
+  """Date of the latest quality check measurements"""
+  qualityCheckDate: String
+
+  """Method or instrument used for quality measurements"""
+  qualityCheckMethod: [QualityCheckMethodListItem]
+
+  """Additional information about the DNA sample quality"""
+  qualityNotes: String
+
+  """
+  Location of the preparation/sample so that museum personnel can find it. E.g. room, freezer, shelf number etc.
+  """
+  sampleLocation: String
+  specimenID: String!
+
+  """
+  Status of the preparation/sample. For specimen level status use the status field in the basic information section. Empty value means same as "ok" - that there is nothing special about the status of the sample.
+  """
+  status: PreparationSampleStatus
+  type: String
+}
+
+enum ElutionMedium {
+  _
+  MF_ELUTIONMEDIUMULTRAPUREWATER
+  MF_ELUTIONMEDIUMELUTIONBUFFER
+}
+
+enum IndividualsInPreparation {
+  _
+  MF_INDIVIDUALSINPREPARATIONMULTIPLE
+  MF_INDIVIDUALSINPREPARATIONSINGLE
+}
+
+enum Material {
+  _
+  MF_MATERIALBIRDSTUDYSKIN
+  MF_MATERIALWING
+  MF_MATERIALTAIL
+  MF_MATERIALWINGANDTAIL
+  MF_MATERIALSKULL
+  MF_MATERIALENTIRESKELETON
+  MF_MATERIALBONES
+  MF_MATERIALSKULLANDBONES
+  MF_MATERIALANTLERS
+  MF_MATERIALHEAD
+  MF_MATERIALMUSCLE
+  MF_MATERIALLIVER
+  MF_MATERIALLEAF
+  MF_MATERIALBLOOD
+  MF_MATERIALLEG
+  MF_MATERIALSKIN
+  MF_MATERIALFEATHER
+  MF_MATERIALEGG
+  MF_MATERIALEGGCONTENT
+  MF_MATERIALGENOMICDNA
+  MF_MATERIALMITOCHONDRIALDNA
+  MF_MATERIALCHLOROPLASTDNA
+  MF_MATERIALENVIRONMENTALDNA
+  MF_MATERIALTEETH
+  MF_MATERIALBODYPARTS
+  MF_MATERIALENTIREORGANISM
+  MF_MATERIALAPPENDAGES
+  MF_MATERIALGENITALPREPARATION
+  MF_MATERIALSECTION
+  MF_MATERIALCHROMOSOMES
+  MF_MATERIALSHELL
+  MF_MATERIALHAIR
+  MF_MATERIALCLUTCH
+  MF_MATERIALEGGSHELL
+  MF_MATERIALEGGSHELLFRAGMENTS
+  MF_MATERIALNEST
+  MF_MATERIALNESTMATERIAL
+  MF_MATERIALOTHER
+}
+
+enum PreparationType {
+  MF_PREPARATIONTYPESKIN
+  MF_PREPARATIONTYPESKELETAL
+  MF_PREPARATIONTYPEMOUNT
+  MF_PREPARATIONTYPETISSUE
+  MF_PREPARATIONTYPETISSUEECOTOXICOLOGY
+  MF_PREPARATIONTYPELIQUID
+  MF_PREPARATIONTYPEMICROSCOPESLIDE
+  MF_PREPARATIONTYPEDNAEXTRACT
+  MF_PREPARATIONTYPEEGG
+  MF_PREPARATIONTYPENEST
+  MF_PREPARATIONTYPEOTHER
+}
+
+enum PreparationSamplePreservationListItem {
+  _
+  MY_PRESERVATIONPRESSED
+  MY_PRESERVATIONDRY
+  MY_PRESERVATIONCRITICALPOINTDRYING
+  MY_PRESERVATIONPINNED
+  MY_PRESERVATIONGLUED
+  MY_PRESERVATIONLIQUID
+  MY_PRESERVATIONETHANOL
+  MY_PRESERVATIONETHANOLPURE
+  MY_PRESERVATIONETHANOL70
+  MY_PRESERVATIONETHANOL80
+  MY_PRESERVATIONETHANOL80PURE
+  MY_PRESERVATIONETHANOL96
+  MY_PRESERVATIONETHANOLMINUS20C
+  MY_PRESERVATIONETHANOLDENATURED
+  MY_PRESERVATIONETHANOLFORMALIN
+  MY_PRESERVATIONETHANOLEXFORMALIN
+  MY_PRESERVATIONFORMALIN
+  MY_PRESERVATIONBOUINSOLUTION
+  MY_PRESERVATIONPAMPELSFLUID
+  MY_PRESERVATIONGLYCEROL
+  MY_PRESERVATIONPARAFFIN
+  MY_PRESERVATIONMERCURICCHLORIDE
+  MY_PRESERVATIONCRYOPRESERVED
+  MY_PRESERVATIONFROZEN
+  MY_PRESERVATIONFROZENMINUS80C
+  MY_PRESERVATIONFREEZEDRIED
+  MY_PRESERVATIONGOLDPLATED
+  MY_PRESERVATIONACTIVECULTURE
+  MY_PRESERVATIONLIVING
+  MY_PRESERVATIONSLIDE
+  MY_PRESERVATIONSLIDECANADABALSAM
+  MY_PRESERVATIONSLIDEEUPARAL
+  MY_PRESERVATIONSLIDEPOLYVIOL
+  MY_PRESERVATIONSTUFFED
+  MY_PRESERVATIONCAST
+  MY_PRESERVATIONPLASTINATED
+  MY_PRESERVATIONFROZENMINUS80CANDETHANOLMINUS20C
+}
+
+enum Quality {
+  _
+  MF_QUALITYLOW
+  MF_QUALITYMEDIUM
+  MF_QUALITYHIGH
+}
+
+enum QualityCheckMethodListItem {
+  _
+  MF_QUALITYCHECKMETHODNANODROP
+  MF_QUALITYCHECKMETHODCUBIT
+}
+
+enum PreparationSampleStatus {
+  _
+  MY_STATUSOK
+  MY_STATUSMISSING
+  MY_STATUSUNRECOVERABLE
+  MY_STATUSLOST
+  MY_STATUSDONATED
+  MY_STATUSDEPOSITED
+  MY_STATUSDEACCESSIONED
+  MY_STATUSDISCARDED
+  MY_STATUSSPENT
+  MY_STATUSDESTROYED
+  MY_STATUSUNDEFINED
+  MY_STATUSAXENIC
+  MY_STATUSNONAXENIC
+  MY_STATUSNOTAVAILABLE
+  MY_STATUSDEAD
+  MY_STATUSNOVOUCHERRETAINED
 }
 
 enum SeedMaturity {
@@ -11084,254 +11409,6 @@ enum RegionalStatusStatus {
   MX_TYPEOFOCCURRENCEOCCURSBASEDONOCCURRENCES
 }
 
-type Sample2 {
-  """
-  Other identifiers this preparation/sample has, in format 'type:identifier'. For example: 'MZHtissue:123'. You can enter the type and colon and then click 'generate' to fetch the next free number for that prefix type.
-  """
-  additionalIDs: [String]
-
-  """
-  BOLD ID (usually BOLD "Sample ID") for the preparation/sample. If no other preparation/sample information is entered, use the BOLD field on the document level
-  """
-  bold: String
-
-  """
-  The collection which this preparation/sample belongs to, if different from the collection of the specimen.
-  """
-  collectionID: String
-
-  """
-  Notes on the defects of the preparation/sample (missing parts or such). For specimen level status use the condition field in the basic information section (document level). Empty value means same as "good" or "hyvä" - that the sample is in fine condition.
-  """
-  condition: String
-  context: String
-  creator: String
-
-  """Name of the instrument or device used for DNA extraction"""
-  dNAExtractionInstrument: String
-
-  """
-  Tag for the preparation/sample. For specimen level tags, use the tag field in the basic information section (document level).
-  """
-  datasetID: [String]
-  dateCreated: String
-  dateEdited: String
-  editor: String
-
-  """DNA sample elution medium"""
-  elutionMedium: ElutionMedium
-
-  """
-  Diary-style information about what has been done to the preparation/sample
-  """
-  event: [String]
-
-  """
-  Genbank ID for the preparation/sample. If no other preparation/sample information is entered, use the Genbank field on the document level
-  """
-  genbank: [String]
-  id: String
-
-  """
-  For example a jar that contains multiple fish individuals can be recorded as one specimen and one preparation. Can also be used for DNA samples (was DNA extracted from single or multiple individuals?).
-  """
-  individualsInPreparation: IndividualsInPreparation
-
-  """Which parent or larger collection this is part of."""
-  isPartOf: String
-
-  """Preparation/sample material. Choose preparation/sample type first."""
-  material: Material
-  measurement: Measurement
-
-  """Additional information about the preparation/sample"""
-  notes: String
-
-  """Team or organisation that owns the record and can edit it."""
-  owner: String
-
-  """Type of preparation/sample"""
-  preparationType: PreparationType!
-
-  """
-  Preservation methods and materials of the preparation/sample. It is possible to choose several
-  """
-  preservation: [PreparationSamplePreservationListItem]
-
-  """
-  Publication references or doi's that refer to this preparations/sample. For publications referring to the specimen, use publications field in the Other section (document level).
-  """
-  publication: [String]
-
-  """
-  DNA sample quality on a three step scale. The quality is defined by quality check measurements
-  """
-  quality: Quality
-
-  """Date of the latest quality check measurements"""
-  qualityCheckDate: String
-
-  """Method or instrument used for quality measurements"""
-  qualityCheckMethod: [QualityCheckMethodListItem]
-
-  """Additional information about the DNA sample quality"""
-  qualityNotes: String
-
-  """
-  Location of the preparation/sample so that museum personnel can find it. E.g. room, freezer, shelf number etc.
-  """
-  sampleLocation: String
-  specimenID: String!
-
-  """
-  Status of the preparation/sample. For specimen level status use the status field in the basic information section. Empty value means same as "ok" - that there is nothing special about the status of the sample.
-  """
-  status: PreparationSampleStatus
-  type: String
-}
-
-enum ElutionMedium {
-  _
-  MF_ELUTIONMEDIUMULTRAPUREWATER
-  MF_ELUTIONMEDIUMELUTIONBUFFER
-}
-
-enum IndividualsInPreparation {
-  _
-  MF_INDIVIDUALSINPREPARATIONMULTIPLE
-  MF_INDIVIDUALSINPREPARATIONSINGLE
-}
-
-enum Material {
-  _
-  MF_MATERIALBIRDSTUDYSKIN
-  MF_MATERIALWING
-  MF_MATERIALTAIL
-  MF_MATERIALWINGANDTAIL
-  MF_MATERIALSKULL
-  MF_MATERIALENTIRESKELETON
-  MF_MATERIALBONES
-  MF_MATERIALSKULLANDBONES
-  MF_MATERIALANTLERS
-  MF_MATERIALHEAD
-  MF_MATERIALMUSCLE
-  MF_MATERIALLIVER
-  MF_MATERIALLEAF
-  MF_MATERIALBLOOD
-  MF_MATERIALLEG
-  MF_MATERIALSKIN
-  MF_MATERIALFEATHER
-  MF_MATERIALEGG
-  MF_MATERIALEGGCONTENT
-  MF_MATERIALGENOMICDNA
-  MF_MATERIALMITOCHONDRIALDNA
-  MF_MATERIALCHLOROPLASTDNA
-  MF_MATERIALENVIRONMENTALDNA
-  MF_MATERIALTEETH
-  MF_MATERIALBODYPARTS
-  MF_MATERIALENTIREORGANISM
-  MF_MATERIALAPPENDAGES
-  MF_MATERIALGENITALPREPARATION
-  MF_MATERIALSECTION
-  MF_MATERIALCHROMOSOMES
-  MF_MATERIALSHELL
-  MF_MATERIALHAIR
-  MF_MATERIALCLUTCH
-  MF_MATERIALEGGSHELL
-  MF_MATERIALEGGSHELLFRAGMENTS
-  MF_MATERIALNEST
-  MF_MATERIALNESTMATERIAL
-  MF_MATERIALOTHER
-}
-
-enum PreparationType {
-  MF_PREPARATIONTYPESKIN
-  MF_PREPARATIONTYPESKELETAL
-  MF_PREPARATIONTYPEMOUNT
-  MF_PREPARATIONTYPETISSUE
-  MF_PREPARATIONTYPETISSUEECOTOXICOLOGY
-  MF_PREPARATIONTYPELIQUID
-  MF_PREPARATIONTYPEMICROSCOPESLIDE
-  MF_PREPARATIONTYPEDNAEXTRACT
-  MF_PREPARATIONTYPEEGG
-  MF_PREPARATIONTYPENEST
-  MF_PREPARATIONTYPEOTHER
-}
-
-enum PreparationSamplePreservationListItem {
-  _
-  MY_PRESERVATIONPRESSED
-  MY_PRESERVATIONDRY
-  MY_PRESERVATIONCRITICALPOINTDRYING
-  MY_PRESERVATIONPINNED
-  MY_PRESERVATIONGLUED
-  MY_PRESERVATIONLIQUID
-  MY_PRESERVATIONETHANOL
-  MY_PRESERVATIONETHANOLPURE
-  MY_PRESERVATIONETHANOL70
-  MY_PRESERVATIONETHANOL80
-  MY_PRESERVATIONETHANOL80PURE
-  MY_PRESERVATIONETHANOL96
-  MY_PRESERVATIONETHANOLMINUS20C
-  MY_PRESERVATIONETHANOLDENATURED
-  MY_PRESERVATIONETHANOLFORMALIN
-  MY_PRESERVATIONETHANOLEXFORMALIN
-  MY_PRESERVATIONFORMALIN
-  MY_PRESERVATIONBOUINSOLUTION
-  MY_PRESERVATIONPAMPELSFLUID
-  MY_PRESERVATIONGLYCEROL
-  MY_PRESERVATIONPARAFFIN
-  MY_PRESERVATIONMERCURICCHLORIDE
-  MY_PRESERVATIONCRYOPRESERVED
-  MY_PRESERVATIONFROZEN
-  MY_PRESERVATIONFROZENMINUS80C
-  MY_PRESERVATIONFREEZEDRIED
-  MY_PRESERVATIONGOLDPLATED
-  MY_PRESERVATIONACTIVECULTURE
-  MY_PRESERVATIONLIVING
-  MY_PRESERVATIONSLIDE
-  MY_PRESERVATIONSLIDECANADABALSAM
-  MY_PRESERVATIONSLIDEEUPARAL
-  MY_PRESERVATIONSLIDEPOLYVIOL
-  MY_PRESERVATIONSTUFFED
-  MY_PRESERVATIONCAST
-  MY_PRESERVATIONPLASTINATED
-  MY_PRESERVATIONFROZENMINUS80CANDETHANOLMINUS20C
-}
-
-enum Quality {
-  _
-  MF_QUALITYLOW
-  MF_QUALITYMEDIUM
-  MF_QUALITYHIGH
-}
-
-enum QualityCheckMethodListItem {
-  _
-  MF_QUALITYCHECKMETHODNANODROP
-  MF_QUALITYCHECKMETHODCUBIT
-}
-
-enum PreparationSampleStatus {
-  _
-  MY_STATUSOK
-  MY_STATUSMISSING
-  MY_STATUSUNRECOVERABLE
-  MY_STATUSLOST
-  MY_STATUSDONATED
-  MY_STATUSDEPOSITED
-  MY_STATUSDEACCESSIONED
-  MY_STATUSDISCARDED
-  MY_STATUSSPENT
-  MY_STATUSDESTROYED
-  MY_STATUSUNDEFINED
-  MY_STATUSAXENIC
-  MY_STATUSNONAXENIC
-  MY_STATUSNOTAVAILABLE
-  MY_STATUSDEAD
-  MY_STATUSNOVOUCHERRETAINED
-}
-
 type SatelliteTrackingProject2 {
   context: String
   description: MultiLang
@@ -13463,11 +13540,11 @@ type Reserve2 {
   view: PagedView!
 }
 
-type Sample {
+type Sample2 {
   context: String!
   currentPage: Int
   lastPage: Int!
-  member: [Sample2]!
+  member: [Sample]!
   pageSize: Int!
   totalItems: Int!
   type: String!
@@ -14977,7 +15054,7 @@ type ViewerAnyAuth {
   getsample(
     """Id for the Specimen sample"""
     id: String!
-  ): Sample2
+  ): Sample
 
   """
   Return a Satellite Tracking Project.
@@ -15030,12 +15107,12 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
   ): Taxon2
 
@@ -16701,7 +16778,7 @@ type ViewerAnyAuth {
 
     """Sort by"""
     sort: String
-  ): Sample
+  ): Sample2
 
   """
   Return list of Satellite Tracking Project objects.
@@ -16814,7 +16891,7 @@ type ViewerAnyAuth {
   ): Tag
 
   """
-  Return list of taxon objects.
+  Return list of Taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -19212,12 +19289,12 @@ type ViewerAnyAuth {
   ): [TagVerListItem]
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
 
     """
@@ -19522,7 +19599,7 @@ type ViewerAnyAuth {
 
     """Version number for the Specimen sample"""
     number: Float!
-  ): Sample2
+  ): Sample
 
   """
   Return a Satellite Tracking Project.
@@ -19590,15 +19667,15 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
 
-    """Version number for the taxon"""
+    """Version number for the Taxon"""
     number: Float!
   ): Taxon2
 
@@ -20604,12 +20681,12 @@ type MutationViewerBasicAuth {
   ): Tag3
 
   """
-  Delete taxon
+  Delete Taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
   ): Taxon3
 
@@ -24352,7 +24429,7 @@ type MutationViewerBasicAuth {
   ): TagSearch2
 
   """
-  Return list of taxon objects.
+  Return list of Taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -25318,7 +25395,7 @@ type MutationViewerBasicAuth {
   
   Equivalent to POST /sample
   """
-  storesample(requestBody: Sample2Input): Sample2
+  storesample(requestBody: SampleInput): Sample
 
   """
   Store Satellite Tracking Project object(s)
@@ -25356,7 +25433,7 @@ type MutationViewerBasicAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store taxon object(s)
+  Store Taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -26235,8 +26312,8 @@ type MutationViewerBasicAuth {
   updatesample(
     """Id for the Specimen sample"""
     id: String!
-    requestBody: Sample2Input
-  ): Sample2
+    requestBody: SampleInput
+  ): Sample
 
   """
   Store Satellite Tracking Project
@@ -26294,12 +26371,12 @@ type MutationViewerBasicAuth {
   ): Tag2
 
   """
-  Store taxon
+  Store Taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
@@ -26581,7 +26658,7 @@ type Bulk {
   publication: [Publication3]
   regionalStatus: [RegionalStatus2]
   reserve: [Reserve]
-  sample: [Sample2]
+  sample: [Sample]
   satelliteTrackingProject: [SatelliteTrackingProject2]
   specimenTransaction: [SpecimenTransaction2]
   specimenTransactionEvent: [SpecimenTransactionEvent]
@@ -26676,7 +26753,7 @@ input BulkInput {
   publication: [Publication3Input]
   regionalStatus: [RegionalStatus2Input]
   reserve: [ReserveInput]
-  sample: [Sample2Input]
+  sample: [SampleInput]
   satelliteTrackingProject: [SatelliteTrackingProject2Input]
   specimenTransaction: [SpecimenTransaction2Input]
   specimenTransactionEvent: [SpecimenTransactionEventInput]
@@ -28134,6 +28211,7 @@ input UnitInput {
 
   """Bird or bat ring number, code, colour code or such"""
   ring: String
+  samples: [SampleInput]
 
   """Main method for (usually intentional) sampling"""
   samplingMethod: SamplingMethod
@@ -28210,6 +28288,112 @@ input MeasurementInput {
   wingMaxMillimeters: [Float]
   wingMillimeters: [Float]
   wingMinMillimeters: [Float]
+}
+
+input SampleInput {
+  """
+  Other identifiers this preparation/sample has, in format 'type:identifier'. For example: 'MZHtissue:123'. You can enter the type and colon and then click 'generate' to fetch the next free number for that prefix type.
+  """
+  additionalIDs: [String]
+
+  """
+  BOLD ID (usually BOLD "Sample ID") for the preparation/sample. If no other preparation/sample information is entered, use the BOLD field on the document level
+  """
+  bold: String
+
+  """
+  The collection which this preparation/sample belongs to, if different from the collection of the specimen.
+  """
+  collectionID: String
+
+  """
+  Notes on the defects of the preparation/sample (missing parts or such). For specimen level status use the condition field in the basic information section (document level). Empty value means same as "good" or "hyvä" - that the sample is in fine condition.
+  """
+  condition: String
+  context: String
+  creator: String
+
+  """Name of the instrument or device used for DNA extraction"""
+  dNAExtractionInstrument: String
+
+  """
+  Tag for the preparation/sample. For specimen level tags, use the tag field in the basic information section (document level).
+  """
+  datasetID: [String]
+  dateCreated: String
+  dateEdited: String
+  editor: String
+
+  """DNA sample elution medium"""
+  elutionMedium: ElutionMedium
+
+  """
+  Diary-style information about what has been done to the preparation/sample
+  """
+  event: [String]
+
+  """
+  Genbank ID for the preparation/sample. If no other preparation/sample information is entered, use the Genbank field on the document level
+  """
+  genbank: [String]
+  id: String
+
+  """
+  For example a jar that contains multiple fish individuals can be recorded as one specimen and one preparation. Can also be used for DNA samples (was DNA extracted from single or multiple individuals?).
+  """
+  individualsInPreparation: IndividualsInPreparation
+
+  """Which parent or larger collection this is part of."""
+  isPartOf: String
+
+  """Preparation/sample material. Choose preparation/sample type first."""
+  material: Material
+  measurement: MeasurementInput
+
+  """Additional information about the preparation/sample"""
+  notes: String
+
+  """Team or organisation that owns the record and can edit it."""
+  owner: String
+
+  """Type of preparation/sample"""
+  preparationType: PreparationType!
+
+  """
+  Preservation methods and materials of the preparation/sample. It is possible to choose several
+  """
+  preservation: [PreparationSamplePreservationListItem]
+
+  """
+  Publication references or doi's that refer to this preparations/sample. For publications referring to the specimen, use publications field in the Other section (document level).
+  """
+  publication: [String]
+
+  """
+  DNA sample quality on a three step scale. The quality is defined by quality check measurements
+  """
+  quality: Quality
+
+  """Date of the latest quality check measurements"""
+  qualityCheckDate: String
+
+  """Method or instrument used for quality measurements"""
+  qualityCheckMethod: [QualityCheckMethodListItem]
+
+  """Additional information about the DNA sample quality"""
+  qualityNotes: String
+
+  """
+  Location of the preparation/sample so that museum personnel can find it. E.g. room, freezer, shelf number etc.
+  """
+  sampleLocation: String
+  specimenID: String!
+
+  """
+  Status of the preparation/sample. For specimen level status use the status field in the basic information section. Empty value means same as "ok" - that there is nothing special about the status of the sample.
+  """
+  status: PreparationSampleStatus
+  type: String
 }
 
 input TypeSpecimenInput {
@@ -29699,112 +29883,6 @@ input RegionalStatus2Input {
   id: String
   regionalStatusArea: String!
   regionalStatusStatus: RegionalStatusStatus!
-  type: String
-}
-
-input Sample2Input {
-  """
-  Other identifiers this preparation/sample has, in format 'type:identifier'. For example: 'MZHtissue:123'. You can enter the type and colon and then click 'generate' to fetch the next free number for that prefix type.
-  """
-  additionalIDs: [String]
-
-  """
-  BOLD ID (usually BOLD "Sample ID") for the preparation/sample. If no other preparation/sample information is entered, use the BOLD field on the document level
-  """
-  bold: String
-
-  """
-  The collection which this preparation/sample belongs to, if different from the collection of the specimen.
-  """
-  collectionID: String
-
-  """
-  Notes on the defects of the preparation/sample (missing parts or such). For specimen level status use the condition field in the basic information section (document level). Empty value means same as "good" or "hyvä" - that the sample is in fine condition.
-  """
-  condition: String
-  context: String
-  creator: String
-
-  """Name of the instrument or device used for DNA extraction"""
-  dNAExtractionInstrument: String
-
-  """
-  Tag for the preparation/sample. For specimen level tags, use the tag field in the basic information section (document level).
-  """
-  datasetID: [String]
-  dateCreated: String
-  dateEdited: String
-  editor: String
-
-  """DNA sample elution medium"""
-  elutionMedium: ElutionMedium
-
-  """
-  Diary-style information about what has been done to the preparation/sample
-  """
-  event: [String]
-
-  """
-  Genbank ID for the preparation/sample. If no other preparation/sample information is entered, use the Genbank field on the document level
-  """
-  genbank: [String]
-  id: String
-
-  """
-  For example a jar that contains multiple fish individuals can be recorded as one specimen and one preparation. Can also be used for DNA samples (was DNA extracted from single or multiple individuals?).
-  """
-  individualsInPreparation: IndividualsInPreparation
-
-  """Which parent or larger collection this is part of."""
-  isPartOf: String
-
-  """Preparation/sample material. Choose preparation/sample type first."""
-  material: Material
-  measurement: MeasurementInput
-
-  """Additional information about the preparation/sample"""
-  notes: String
-
-  """Team or organisation that owns the record and can edit it."""
-  owner: String
-
-  """Type of preparation/sample"""
-  preparationType: PreparationType!
-
-  """
-  Preservation methods and materials of the preparation/sample. It is possible to choose several
-  """
-  preservation: [PreparationSamplePreservationListItem]
-
-  """
-  Publication references or doi's that refer to this preparations/sample. For publications referring to the specimen, use publications field in the Other section (document level).
-  """
-  publication: [String]
-
-  """
-  DNA sample quality on a three step scale. The quality is defined by quality check measurements
-  """
-  quality: Quality
-
-  """Date of the latest quality check measurements"""
-  qualityCheckDate: String
-
-  """Method or instrument used for quality measurements"""
-  qualityCheckMethod: [QualityCheckMethodListItem]
-
-  """Additional information about the DNA sample quality"""
-  qualityNotes: String
-
-  """
-  Location of the preparation/sample so that museum personnel can find it. E.g. room, freezer, shelf number etc.
-  """
-  sampleLocation: String
-  specimenID: String!
-
-  """
-  Status of the preparation/sample. For specimen level status use the status field in the basic information section. Empty value means same as "ok" - that there is nothing special about the status of the sample.
-  """
-  status: PreparationSampleStatus
   type: String
 }
 
@@ -31756,7 +31834,7 @@ type SampleSearch2 {
   context: String!
   currentPage: Int
   lastPage: Int!
-  member: [Sample2]!
+  member: [Sample]!
   pageSize: Int!
   totalItems: Int!
   type: String!
@@ -32799,12 +32877,12 @@ type MutationViewerAnyAuth {
   ): Tag3
 
   """
-  Delete taxon
+  Delete Taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
   ): Taxon3
 
@@ -36547,7 +36625,7 @@ type MutationViewerAnyAuth {
   ): TagSearch2
 
   """
-  Return list of taxon objects.
+  Return list of Taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -37513,7 +37591,7 @@ type MutationViewerAnyAuth {
   
   Equivalent to POST /sample
   """
-  storesample(requestBody: Sample2Input): Sample2
+  storesample(requestBody: SampleInput): Sample
 
   """
   Store Satellite Tracking Project object(s)
@@ -37551,7 +37629,7 @@ type MutationViewerAnyAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store taxon object(s)
+  Store Taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -38430,8 +38508,8 @@ type MutationViewerAnyAuth {
   updatesample(
     """Id for the Specimen sample"""
     id: String!
-    requestBody: Sample2Input
-  ): Sample2
+    requestBody: SampleInput
+  ): Sample
 
   """
   Store Satellite Tracking Project
@@ -38489,12 +38567,12 @@ type MutationViewerAnyAuth {
   ): Tag2
 
   """
-  Store taxon
+  Store Taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2

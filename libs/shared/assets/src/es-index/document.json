@@ -2585,6 +2585,217 @@
                     "ignore_above": 200
                   }
                 }
+              },
+              "samples": {
+                "type": "object",
+                "properties": {
+                  "DNAExtractionInstrument": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "additionalIDs": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "bold": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "collectionID": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "condition": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "datasetID": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "elutionMedium": {
+                    "type": "keyword",
+                    "ignore_above": 200
+                  },
+                  "event": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "genbank": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "individualsInPreparation": {
+                    "type": "keyword",
+                    "ignore_above": 200
+                  },
+                  "material": {
+                    "type": "keyword",
+                    "ignore_above": 200
+                  },
+                  "notes": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "preparationType": {
+                    "type": "keyword",
+                    "ignore_above": 200
+                  },
+                  "preservation": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "publication": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "quality": {
+                    "type": "keyword",
+                    "ignore_above": 200
+                  },
+                  "qualityCheckDate": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "qualityCheckMethod": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "qualityNotes": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "sampleLocation": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "specimenID": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "status": {
+                    "type": "keyword",
+                    "ignore_above": 200
+                  },
+                  "isPartOf": {
+                    "type": "keyword",
+                    "ignore_above": 200
+                  },
+                  "measurement": {
+                    "properties": {
+                      "DNAConcentrationNgPerMicroliter": {
+                        "type": "float"
+                      },
+                      "DNARatioOfAbsorbance260And280": {
+                        "type": "float"
+                      },
+                      "DNAVolumeMicroliters": {
+                        "type": "float"
+                      },
+                      "beakMillimeters": {
+                        "type": "float"
+                      },
+                      "bodyCentimeters": {
+                        "type": "float"
+                      },
+                      "bodyMillimeters": {
+                        "type": "float"
+                      },
+                      "earLengthMillimeters": {
+                        "type": "float"
+                      },
+                      "embryoCount": {
+                        "type": "float"
+                      },
+                      "follicleDiameterMillimeters": {
+                        "type": "float"
+                      },
+                      "footLengthMillimeters": {
+                        "type": "float"
+                      },
+                      "forearmMillimeters": {
+                        "type": "float"
+                      },
+                      "gonadMillimeters": {
+                        "type": "float"
+                      },
+                      "isPartOf": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "tailCentimeters": {
+                        "type": "float"
+                      },
+                      "tailMillimeters": {
+                        "type": "float"
+                      },
+                      "tarsusLengthMillimeters": {
+                        "type": "float"
+                      },
+                      "totalLengthCentimeters": {
+                        "type": "float"
+                      },
+                      "totalLengthMillimeters": {
+                        "type": "float"
+                      },
+                      "uterineScarCount": {
+                        "type": "float"
+                      },
+                      "weightGrams": {
+                        "type": "float"
+                      },
+                      "weightKilograms": {
+                        "type": "float"
+                      },
+                      "wingMaxMillimeters": {
+                        "type": "float"
+                      },
+                      "wingMillimeters": {
+                        "type": "float"
+                      },
+                      "wingMinMillimeters": {
+                        "type": "float"
+                      }
+                    }
+                  },
+                  "creator": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "dateCreated": {
+                    "type": "date"
+                  },
+                  "dateEdited": {
+                    "type": "date"
+                  },
+                  "editor": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "owner": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  }
+                }
               }
             }
           }

@@ -36,6 +36,7 @@ import { MYWildEnum } from './';
 import { MZPublicityRestrictionsEnum } from './';
 import { Identification } from './';
 import { TypeSpecimen } from './';
+import { Sample } from './';
 
 /* tslint:disable */
 /*
@@ -289,4 +290,5 @@ export class Unit {
   publicityRestrictions?: MZPublicityRestrictionsEnum;
   identifications?: Identification[];
   typeSpecimens?: TypeSpecimen[];
+  samples?: Sample[];
 }
