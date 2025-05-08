@@ -83,6 +83,10 @@
       "@id": "default:MF.preparationType",
       "@type": "@id"
     },
+    "preparations": {
+      "@id": "default:MF.preparations",
+      "@container": "@set"
+    },
     "preservation": {
       "@id": "default:MF.preservation",
       "@type": "@id"

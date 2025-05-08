@@ -62990,6 +62990,12 @@
             "description": "Type of preparation/sample",
             "title": "Preparation/sample type"
           },
+          "preparations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/preparation"
+            }
+          },
           "preservation": {
             "type": "array",
             "uniqueItems": false,

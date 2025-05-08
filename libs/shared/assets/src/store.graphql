@@ -714,7 +714,7 @@ type ViewerBasicAuth {
   getpreparation(
     """Id for the preparation"""
     id: String!
-  ): Preparation2
+  ): Preparation
 
   """
   Return a profile.
@@ -2380,7 +2380,7 @@ type ViewerBasicAuth {
 
     """Sort by"""
     sort: String
-  ): Preparation
+  ): Preparation2
 
   """
   Return list of profile objects.
@@ -3856,7 +3856,7 @@ type ViewerBasicAuth {
 
     """Version number for the preparation"""
     number: Float!
-  ): Preparation2
+  ): Preparation
 
   """
   Return a profile.
@@ -8701,6 +8701,7 @@ type Sample {
 
   """Type of preparation/sample"""
   preparationType: PreparationType!
+  preparations: [Preparation]
 
   """
   Preservation methods and materials of the preparation/sample. It is possible to choose several
@@ -8805,6 +8806,71 @@ enum PreparationType {
   MF_PREPARATIONTYPEEGG
   MF_PREPARATIONTYPENEST
   MF_PREPARATIONTYPEOTHER
+}
+
+type Preparation {
+  context: String
+  id: String
+
+  """Which parent or larger collection this is part of."""
+  isPartOf: String
+
+  """Date when the preparation/sample was prepared."""
+  preparationDate: String
+
+  """
+  Materials (chemicals, kits etc.) used in the preparation process. It is possible to choose several.
+  """
+  preparationMaterials: [PreparationMaterialsListItem]
+
+  """Processes used in the preparation. It is possible to choose several."""
+  preparationProcess: [PreparationProcessListItem]
+
+  """Additional information about the preparation process."""
+  preparationProcessNotes: String
+
+  """
+  Name of the person who prepared the preparation/sample, preferably in the format 'lastname, firstname'
+  """
+  preparedBy: String
+  type: String
+}
+
+enum PreparationMaterialsListItem {
+  _
+  MF_PREPARATIONMATERIALSACETONE
+  MF_PREPARATIONMATERIALSAMMONIA
+  MF_PREPARATIONMATERIALSBASYNTAN
+  MF_PREPARATIONMATERIALSBORAX
+  MF_PREPARATIONMATERIALSEULAN
+  MF_PREPARATIONMATERIALSHYDROGENPEROXIDE
+  MF_PREPARATIONMATERIALSMETHYLENECHLORIDE
+  MF_PREPARATIONMATERIALSNOVALTAN
+  MF_PREPARATIONMATERIALSPAPAINE
+  MF_PREPARATIONMATERIALSPLASTER
+  MF_PREPARATIONMATERIALSPOLYURETHANE
+  MF_PREPARATIONMATERIALSPRETANIX
+  MF_PREPARATIONMATERIALSPURIFIEDGASOLINE
+  MF_PREPARATIONMATERIALSWOODWOOL
+  MF_PREPARATIONMATERIALSCTAB
+  MF_PREPARATIONMATERIALSEZNAFORENSICKIT
+  MF_PREPARATIONMATERIALSDNEASYBLOODANDTISSUEKIT
+  MF_PREPARATIONMATERIALSDNEASYPLANTKIT
+  MF_PREPARATIONMATERIALSNUCLEOSPINTISSUEKIT
+  MF_PREPARATIONMATERIALSNUCLEOSPINPLANTTWO
+  MF_PREPARATIONMATERIALSSALTEXTRACTION
+  MF_PREPARATIONMATERIALSDNEASYPLANTMINIKIT
+  MF_PREPARATIONMATERIALSMAGATTRACTHMWDNAKIT
+}
+
+enum PreparationProcessListItem {
+  _
+  MF_PREPARATIONPROCESSTANNING
+  MF_PREPARATIONPROCESSENZYMATICMACERATION
+  MF_PREPARATIONPROCESSDEGREASING
+  MF_PREPARATIONPROCESSBEETLECLEANING
+  MF_PREPARATIONPROCESSPEG
+  MF_PREPARATIONPROCESSFREEZEDRYING
 }
 
 enum PreparationSamplePreservationListItem {
@@ -11243,71 +11309,6 @@ enum RoleKotka {
   MA_GUEST
 }
 
-type Preparation2 {
-  context: String
-  id: String
-
-  """Which parent or larger collection this is part of."""
-  isPartOf: String
-
-  """Date when the preparation/sample was prepared."""
-  preparationDate: String
-
-  """
-  Materials (chemicals, kits etc.) used in the preparation process. It is possible to choose several.
-  """
-  preparationMaterials: [PreparationMaterialsListItem]
-
-  """Processes used in the preparation. It is possible to choose several."""
-  preparationProcess: [PreparationProcessListItem]
-
-  """Additional information about the preparation process."""
-  preparationProcessNotes: String
-
-  """
-  Name of the person who prepared the preparation/sample, preferably in the format 'lastname, firstname'
-  """
-  preparedBy: String
-  type: String
-}
-
-enum PreparationMaterialsListItem {
-  _
-  MF_PREPARATIONMATERIALSACETONE
-  MF_PREPARATIONMATERIALSAMMONIA
-  MF_PREPARATIONMATERIALSBASYNTAN
-  MF_PREPARATIONMATERIALSBORAX
-  MF_PREPARATIONMATERIALSEULAN
-  MF_PREPARATIONMATERIALSHYDROGENPEROXIDE
-  MF_PREPARATIONMATERIALSMETHYLENECHLORIDE
-  MF_PREPARATIONMATERIALSNOVALTAN
-  MF_PREPARATIONMATERIALSPAPAINE
-  MF_PREPARATIONMATERIALSPLASTER
-  MF_PREPARATIONMATERIALSPOLYURETHANE
-  MF_PREPARATIONMATERIALSPRETANIX
-  MF_PREPARATIONMATERIALSPURIFIEDGASOLINE
-  MF_PREPARATIONMATERIALSWOODWOOL
-  MF_PREPARATIONMATERIALSCTAB
-  MF_PREPARATIONMATERIALSEZNAFORENSICKIT
-  MF_PREPARATIONMATERIALSDNEASYBLOODANDTISSUEKIT
-  MF_PREPARATIONMATERIALSDNEASYPLANTKIT
-  MF_PREPARATIONMATERIALSNUCLEOSPINTISSUEKIT
-  MF_PREPARATIONMATERIALSNUCLEOSPINPLANTTWO
-  MF_PREPARATIONMATERIALSSALTEXTRACTION
-  MF_PREPARATIONMATERIALSDNEASYPLANTMINIKIT
-  MF_PREPARATIONMATERIALSMAGATTRACTHMWDNAKIT
-}
-
-enum PreparationProcessListItem {
-  _
-  MF_PREPARATIONPROCESSTANNING
-  MF_PREPARATIONPROCESSENZYMATICMACERATION
-  MF_PREPARATIONPROCESSDEGREASING
-  MF_PREPARATIONPROCESSBEETLECLEANING
-  MF_PREPARATIONPROCESSPEG
-  MF_PREPARATIONPROCESSFREEZEDRYING
-}
-
 type Profile2 {
   birdSongRecognitionSkillLevels: [BirdSongRecognitionSkillLevel2]
   birdwatchingActivityLevel: BirdwatchingActivityLevel
@@ -13485,11 +13486,11 @@ type Person {
   view: PagedView!
 }
 
-type Preparation {
+type Preparation2 {
   context: String!
   currentPage: Int
   lastPage: Int!
-  member: [Preparation2]!
+  member: [Preparation]!
   pageSize: Int!
   totalItems: Int!
   type: String!
@@ -15002,7 +15003,7 @@ type ViewerAnyAuth {
   getpreparation(
     """Id for the preparation"""
     id: String!
-  ): Preparation2
+  ): Preparation
 
   """
   Return a profile.
@@ -16668,7 +16669,7 @@ type ViewerAnyAuth {
 
     """Sort by"""
     sort: String
-  ): Preparation
+  ): Preparation2
 
   """
   Return list of profile objects.
@@ -18144,7 +18145,7 @@ type ViewerAnyAuth {
 
     """Version number for the preparation"""
     number: Float!
-  ): Preparation2
+  ): Preparation
 
   """
   Return a profile.
@@ -25360,7 +25361,7 @@ type MutationViewerBasicAuth {
   
   Equivalent to POST /preparation
   """
-  storepreparation(requestBody: Preparation2Input): Preparation2
+  storepreparation(requestBody: PreparationInput): Preparation
 
   """
   Store profile object(s)
@@ -26255,8 +26256,8 @@ type MutationViewerBasicAuth {
   updatepreparation(
     """Id for the preparation"""
     id: String!
-    requestBody: Preparation2Input
-  ): Preparation2
+    requestBody: PreparationInput
+  ): Preparation
 
   """
   Store profile
@@ -26653,7 +26654,7 @@ type Bulk {
   permit: [Permit2]
   person: [Person2]
   pinkka: [Pinkka2]
-  preparation: [Preparation2]
+  preparation: [Preparation]
   profile: [Profile2]
   publication: [Publication3]
   regionalStatus: [RegionalStatus2]
@@ -26748,7 +26749,7 @@ input BulkInput {
   permit: [Permit2Input]
   person: [Person2Input]
   pinkka: [Pinkka2Input]
-  preparation: [Preparation2Input]
+  preparation: [PreparationInput]
   profile: [Profile2Input]
   publication: [Publication3Input]
   regionalStatus: [RegionalStatus2Input]
@@ -28358,6 +28359,7 @@ input SampleInput {
 
   """Type of preparation/sample"""
   preparationType: PreparationType!
+  preparations: [PreparationInput]
 
   """
   Preservation methods and materials of the preparation/sample. It is possible to choose several
@@ -28393,6 +28395,34 @@ input SampleInput {
   Status of the preparation/sample. For specimen level status use the status field in the basic information section. Empty value means same as "ok" - that there is nothing special about the status of the sample.
   """
   status: PreparationSampleStatus
+  type: String
+}
+
+input PreparationInput {
+  context: String
+  id: String
+
+  """Which parent or larger collection this is part of."""
+  isPartOf: String
+
+  """Date when the preparation/sample was prepared."""
+  preparationDate: String
+
+  """
+  Materials (chemicals, kits etc.) used in the preparation process. It is possible to choose several.
+  """
+  preparationMaterials: [PreparationMaterialsListItem]
+
+  """Processes used in the preparation. It is possible to choose several."""
+  preparationProcess: [PreparationProcessListItem]
+
+  """Additional information about the preparation process."""
+  preparationProcessNotes: String
+
+  """
+  Name of the person who prepared the preparation/sample, preferably in the format 'lastname, firstname'
+  """
+  preparedBy: String
   type: String
 }
 
@@ -29818,34 +29848,6 @@ input Person2Input {
 input Pinkka2Input {
   context: String
   id: String
-  type: String
-}
-
-input Preparation2Input {
-  context: String
-  id: String
-
-  """Which parent or larger collection this is part of."""
-  isPartOf: String
-
-  """Date when the preparation/sample was prepared."""
-  preparationDate: String
-
-  """
-  Materials (chemicals, kits etc.) used in the preparation process. It is possible to choose several.
-  """
-  preparationMaterials: [PreparationMaterialsListItem]
-
-  """Processes used in the preparation. It is possible to choose several."""
-  preparationProcess: [PreparationProcessListItem]
-
-  """Additional information about the preparation process."""
-  preparationProcessNotes: String
-
-  """
-  Name of the person who prepared the preparation/sample, preferably in the format 'lastname, firstname'
-  """
-  preparedBy: String
   type: String
 }
 
@@ -31774,7 +31776,7 @@ type PreparationSearch2 {
   context: String!
   currentPage: Int
   lastPage: Int!
-  member: [Preparation2]!
+  member: [Preparation]!
   pageSize: Int!
   totalItems: Int!
   type: String!
@@ -37556,7 +37558,7 @@ type MutationViewerAnyAuth {
   
   Equivalent to POST /preparation
   """
-  storepreparation(requestBody: Preparation2Input): Preparation2
+  storepreparation(requestBody: PreparationInput): Preparation
 
   """
   Store profile object(s)
@@ -38451,8 +38453,8 @@ type MutationViewerAnyAuth {
   updatepreparation(
     """Id for the preparation"""
     id: String!
-    requestBody: Preparation2Input
-  ): Preparation2
+    requestBody: PreparationInput
+  ): Preparation
 
   """
   Store profile

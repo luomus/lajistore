@@ -2,6 +2,7 @@ import { MFElutionMediumEnum } from './';
 import { MFIndividualsInPreparationEnum } from './';
 import { MFMaterialEnum } from './';
 import { MFPreparationTypeEnum } from './';
+import { Preparation } from './';
 import { MYPreservations } from './';
 import { MFQualityEnum } from './';
 import { MFQualityCheckMethodEnum } from './';
@@ -70,6 +71,7 @@ export class Sample {
    * Type of preparation/sample
    */
   preparationType: MFPreparationTypeEnum;
+  preparations?: Preparation[];
   /**
    * Preservation methods and materials of the preparation/sample. It is possible to choose several
    */

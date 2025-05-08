@@ -3028,6 +3028,40 @@
                         "type": "keyword",
                         "ignore_above": 200
                       },
+                      "preparations": {
+                        "type": "object",
+                        "properties": {
+                          "preparationDate": {
+                            "type": "keyword",
+                            "ignore_above": 200,
+                            "normalizer": "useLowercase"
+                          },
+                          "preparationMaterials": {
+                            "type": "keyword",
+                            "ignore_above": 200,
+                            "normalizer": "useLowercase"
+                          },
+                          "preparationProcess": {
+                            "type": "keyword",
+                            "ignore_above": 200,
+                            "normalizer": "useLowercase"
+                          },
+                          "preparationProcessNotes": {
+                            "type": "keyword",
+                            "ignore_above": 200,
+                            "normalizer": "useLowercase"
+                          },
+                          "preparedBy": {
+                            "type": "keyword",
+                            "ignore_above": 200,
+                            "normalizer": "useLowercase"
+                          },
+                          "isPartOf": {
+                            "type": "keyword",
+                            "ignore_above": 200
+                          }
+                        }
+                      },
                       "preservation": {
                         "type": "keyword",
                         "ignore_above": 200,
