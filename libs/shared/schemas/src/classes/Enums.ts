@@ -820,6 +820,13 @@ export enum MYCloudCoverOktaEnum {
   "cloudCoverOktaEnum7" = "MY.cloudCoverOktaEnum7",
   "cloudCoverOktaEnum8" = "MY.cloudCoverOktaEnum8"
 }
+export enum MYMachineAssistanceEnum {
+  "empty" = "",
+  "machineAssistanceUnknown" = "MY.machineAssistanceUnknown",
+  "machineAssistanceNotUsed" = "MY.machineAssistanceNotUsed",
+  "machineAssistanceUsed" = "MY.machineAssistanceUsed",
+  "machineAssistanceMachineOnly" = "MY.machineAssistanceMachineOnly"
+}
 export enum MYRainIntensityEnum {
   "empty" = "",
   "rainIntensityEnumNoRain" = "MY.rainIntensityEnumNoRain",
