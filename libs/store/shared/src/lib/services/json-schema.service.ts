@@ -66,7 +66,7 @@ export class JsonSchemaService {
   ): Array<Partial<T>>;
   static removeExtraProperties<T>(
     obj: T | T[],
-    remove: Array<keyof T> = ['range', 'subject', 'enumNames'] as Array<
+    remove: Array<keyof T> = ['range', 'subject', 'enumNames', 'sortOrder'] as Array<
       keyof T
     >,
     parentProp?: keyof T

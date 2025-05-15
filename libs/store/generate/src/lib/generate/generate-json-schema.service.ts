@@ -75,7 +75,6 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     const classData = await this.lajiGraphQlService.getClassData(className);
     const normalizedClassName = UtilityService.normalize(className);
 
-
     if (depth >= MAX_NESTED_DEPTH) {
       return schema;
     }
@@ -273,7 +272,7 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     if (property.label) {
       propSchema.title = property.label;
     }
-
+    propSchema.sortOrder = property.sortOrder;
     return { ...propSchema };
   }
 }

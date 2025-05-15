@@ -30,6 +30,7 @@ const GET_CLASS_DATA = gql`
         maxOccurs
         comment
         range
+        sortOrder
         alts {
           options {
             id
@@ -65,6 +66,7 @@ export interface PropertyData {
   comment?: string;
   range?: string[];
   alts?: AltData[];
+  sortOrder?: number;
 }
 
 export interface AltData {
