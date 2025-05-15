@@ -1021,6 +1021,10 @@
                 "ignore_above": 200,
                 "normalizer": "useLowercase"
               },
+              "machineAssistance": {
+                "type": "keyword",
+                "ignore_above": 200
+              },
               "namedPlaceNotes": {
                 "type": "keyword",
                 "ignore_above": 200,

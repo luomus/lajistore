@@ -769,6 +769,12 @@ export type MYCloudCoverOktaEnum =
   | "MY.cloudCoverOktaEnum6"
   | "MY.cloudCoverOktaEnum7"
   | "MY.cloudCoverOktaEnum8";
+export type MYMachineAssistanceEnum =
+  | ""
+  | "MY.machineAssistanceUnknown"
+  | "MY.machineAssistanceNotUsed"
+  | "MY.machineAssistanceUsed"
+  | "MY.machineAssistanceMachineOnly";
 export type MYRainIntensityEnum =
   | ""
   | "MY.rainIntensityEnumNoRain"

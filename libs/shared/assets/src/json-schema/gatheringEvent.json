@@ -1348,6 +1348,26 @@
       "description": "Alkuperäislähteen käyttäjätunnus",
       "title": "Käyttäjätunnus"
     },
+    "machineAssistance": {
+      "type": "string",
+      "enum": [
+        "",
+        "MY.machineAssistanceUnknown",
+        "MY.machineAssistanceNotUsed",
+        "MY.machineAssistanceUsed",
+        "MY.machineAssistanceMachineOnly"
+      ],
+      "enumNames": [
+        "",
+        "Unknown",
+        "No AI/machine was used to identify",
+        "AI/machine was used to help with identifying",
+        "All identifications by AI/machine"
+      ],
+      "range": "MY.machineAssistanceEnum",
+      "subject": "MY.machineAssistance",
+      "title": "AI used"
+    },
     "namedPlaceNotes": {
       "type": "string",
       "range": "xsd:string",

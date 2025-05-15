@@ -2,6 +2,7 @@ import { MYArtificialLightEnum } from './';
 import { MYCloudCoverOktaEnum } from './';
 import { CompleteList } from './';
 import { GatheringFact } from './';
+import { MYMachineAssistanceEnum } from './';
 import { MYRainIntensityEnum } from './';
 import { TaxonCensus } from './';
 
@@ -43,6 +44,7 @@ export interface GatheringEvent {
    * Alkuperäislähteen käyttäjätunnus
    */
   legUserID?: string[];
+  machineAssistance?: MYMachineAssistanceEnum;
   namedPlaceNotes?: string;
   nextMonitoringYear?: number;
   /**
