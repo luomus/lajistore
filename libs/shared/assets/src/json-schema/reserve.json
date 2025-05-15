@@ -28,14 +28,16 @@
       "type": "string",
       "range": "MA.person",
       "subject": "MNP.reserver",
-      "title": "Reserver"
+      "title": "Reserver",
+      "sortOrder": 2
     },
     "until": {
       "type": "string",
       "format": "date",
       "range": "xsd:date",
       "subject": "MNP.until",
-      "title": "Until"
+      "title": "Until",
+      "sortOrder": 3
     }
   },
   "required": [

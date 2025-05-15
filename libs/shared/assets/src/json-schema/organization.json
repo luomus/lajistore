@@ -29,21 +29,24 @@
       "range": "xsd:string",
       "subject": "MOS.EORINumber",
       "description": "Economic Operators Registration and Identification number for customs clearance, if needed.",
-      "title": "EORI number"
+      "title": "EORI number",
+      "sortOrder": 10
     },
     "URL": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.URL",
       "description": "Organisation website. Include http://",
-      "title": "Web address"
+      "title": "Web address",
+      "sortOrder": 21
     },
     "abbreviation": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.abbreviation",
       "description": "Official code for this organization, if one exists",
-      "title": "Institution code"
+      "title": "Institution code",
+      "sortOrder": 7
     },
     "abbreviationExplanation": {
       "type": "string",
@@ -60,14 +63,16 @@
       "range": "MOS.abbreviation-explanations",
       "subject": "MOS.abbreviationExplanation",
       "description": "If organisation code is given, the source for it must be chosen.",
-      "title": "Code source"
+      "title": "Code source",
+      "sortOrder": 8
     },
     "ad": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.ad",
       "description": "Filled in by ICT team",
-      "title": "AD group name"
+      "title": "AD group name",
+      "sortOrder": 23
     },
     "additionalIDs": {
       "type": "array",
@@ -79,28 +84,32 @@
       "range": "xsd:string",
       "subject": "MOS.additionalIDs",
       "description": "Other identifiers this organization has",
-      "title": "Additional IDs"
+      "title": "Additional IDs",
+      "sortOrder": -1
     },
     "contentContact": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.contentContact",
       "description": "Name of content/collection contact person for the organization.",
-      "title": "Content contact person"
+      "title": "Content contact person",
+      "sortOrder": 22
     },
     "country": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.country",
       "description": "Name of the country as on a postal address.",
-      "title": "Country"
+      "title": "Country",
+      "sortOrder": 16
     },
     "courierAddress": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.courierAddress",
       "description": "Address and other contact details to be given for courier services, if different from normal postal address. Appears on transaction PDFs like formulated here.",
-      "title": "Address for courier services"
+      "title": "Address for courier services",
+      "sortOrder": 17
     },
     "datasetID": {
       "type": "array",
@@ -112,7 +121,8 @@
       "range": "GX.dataset",
       "subject": "MOS.datasetID",
       "description": "Tags this organisation has",
-      "title": "Tags"
+      "title": "Tags",
+      "sortOrder": 2
     },
     "dateOrdersDue": {
       "type": "string",
@@ -120,27 +130,31 @@
       "range": "xsd:date",
       "subject": "MOS.dateOrdersDue",
       "description": "Last date for sending seed orders to this organization.",
-      "title": "Due date for orders"
+      "title": "Due date for orders",
+      "sortOrder": 26
     },
     "editNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.editNotes",
-      "title": "editNotes"
+      "title": "editNotes",
+      "sortOrder": -1
     },
     "email": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.email",
       "description": "Contact email address for the organization, or address of a contact person.",
-      "title": "Email"
+      "title": "Email",
+      "sortOrder": 18
     },
     "fax": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.fax",
       "description": "Fax number, with country code",
-      "title": "Fax"
+      "title": "Fax",
+      "sortOrder": 20
     },
     "fullName": {
       "type": "object",
@@ -159,35 +173,40 @@
       "range": "xsd:string",
       "subject": "MOS.fullName",
       "description": "Combined name from oganization abbreviation and the organization levels",
-      "title": "Organization full name"
+      "title": "Organization full name",
+      "sortOrder": -1
     },
     "hidden": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MOS.hidden",
       "description": "Used for organisations that are not to be used (duplicates etc.)",
-      "title": "Hide organization"
+      "title": "Hide organization",
+      "sortOrder": 24
     },
     "locality": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.locality",
       "description": "Usually city name",
-      "title": "Locality/City"
+      "title": "Locality/City",
+      "sortOrder": 14
     },
     "logo": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.logo",
       "description": "Web address where the logo of the organization is located. Used on Kotka transaction PDFs for now.",
-      "title": "Logo URL"
+      "title": "Logo URL",
+      "sortOrder": 9
     },
     "notes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.notes",
       "description": "Free-text notes",
-      "title": "Notes"
+      "title": "Notes",
+      "sortOrder": 25
     },
     "organizationLevel1": {
       "type": "object",
@@ -207,7 +226,8 @@
       "range": "xsd:string",
       "subject": "MOS.organizationLevel1",
       "description": "Please see if the first level of the organization is pickable from a list. If not, only then write its name here. This is to avoid different spellings of the same organization. E.g. 'University of Sipoo'",
-      "title": "Level 1 (organization)"
+      "title": "Level 1 (organization)",
+      "sortOrder": 3
     },
     "organizationLevel2": {
       "type": "object",
@@ -226,7 +246,8 @@
       "range": "xsd:string",
       "subject": "MOS.organizationLevel2",
       "description": "e.g. 'Sipoo Natural History Museum' (belonging to the aforementioned university)",
-      "title": "Level 2 (suborganization)"
+      "title": "Level 2 (suborganization)",
+      "sortOrder": 4
     },
     "organizationLevel3": {
       "type": "object",
@@ -245,7 +266,8 @@
       "range": "xsd:string",
       "subject": "MOS.organizationLevel3",
       "description": "e.g. 'Zoological Museum'",
-      "title": "Level 3 (department)"
+      "title": "Level 3 (department)",
+      "sortOrder": 5
     },
     "organizationLevel4": {
       "type": "object",
@@ -264,40 +286,46 @@
       "range": "xsd:string",
       "subject": "MOS.organizationLevel4",
       "description": "e.g. 'Herpetology team'",
-      "title": "Level 4 (section, team)"
+      "title": "Level 4 (section, team)",
+      "sortOrder": 6
     },
     "phone": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.phone",
       "description": "Phone number for organization or contact person, with country code.",
-      "title": "Telephone"
+      "title": "Telephone",
+      "sortOrder": 19
     },
     "postOfficeBox": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.postOfficeBox",
       "description": "Insert only numbers, leave 'P.O. Box', 'PL' or such out.",
-      "title": "Post office box"
+      "title": "Post office box",
+      "sortOrder": 12
     },
     "postalCode": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.postalCode",
-      "title": "Postal code"
+      "title": "Postal code",
+      "sortOrder": 13
     },
     "region": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.region",
       "description": "E.g. state or province; use only if needed in the postal address",
-      "title": "Region"
+      "title": "Region",
+      "sortOrder": 15
     },
     "streetAddress": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MOS.streetAddress",
-      "title": "Street address"
+      "title": "Street address",
+      "sortOrder": 11
     },
     "contentContactID": {
       "type": "array",
@@ -308,40 +336,46 @@
       "minItems": 0,
       "range": "MA.person",
       "subject": "MZ.contentContactID",
-      "title": "Content contact ID"
+      "title": "Content contact ID",
+      "sortOrder": -1
     },
     "creator": {
       "type": "string",
       "range": "MA.person",
       "subject": "MZ.creator",
-      "title": "Creator"
+      "title": "Creator",
+      "sortOrder": -1
     },
     "dateCreated": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MZ.dateCreated",
-      "title": "Created"
+      "title": "Created",
+      "sortOrder": -1
     },
     "dateEdited": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MZ.dateEdited",
-      "title": "Edited"
+      "title": "Edited",
+      "sortOrder": -1
     },
     "editor": {
       "type": "string",
       "range": "MA.person",
       "subject": "MZ.editor",
-      "title": "Editor"
+      "title": "Editor",
+      "sortOrder": -1
     },
     "owner": {
       "type": "string",
       "range": "MOS.organization",
       "subject": "MZ.owner",
       "description": "Team or organisation that owns the record and can edit it.",
-      "title": "Owner of record"
+      "title": "Owner of record",
+      "sortOrder": 1
     }
   },
   "required": [

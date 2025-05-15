@@ -28,49 +28,57 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.LTKMLoginName",
-      "title": "LTKM-käyttäjätunnus"
+      "title": "LTKM-käyttäjätunnus",
+      "sortOrder": 1
     },
     "address": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.address",
-      "title": "Address"
+      "title": "Address",
+      "sortOrder": -1
     },
     "appleLoginName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.appleLoginName",
-      "title": "Apple login name"
+      "title": "Apple login name",
+      "sortOrder": -1
     },
     "defaultLanguage": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.defaultLanguage",
-      "title": "Default language"
+      "title": "Default language",
+      "sortOrder": -1
     },
     "defaultQNamePrefix": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.defaultQNamePrefix",
-      "title": "Default QName prefix"
+      "title": "Default QName prefix",
+      "sortOrder": 11
     },
     "description": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.description",
-      "title": "Kuvaus"
+      "title": "Kuvaus",
+      "sortOrder": 10
     },
     "emailAddress": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.emailAddress",
-      "title": "Sähköposti"
+      "title": "Sähköposti",
+      "sortOrder": 3
     },
     "facebookLoginName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.facebookLoginName",
-      "title": "Facebook-tunnus"
+      "title": "Facebook-tunnus",
+      "sortOrder": -1
     },
     "fieldjournalLoginName": {
       "type": "array",
@@ -81,45 +89,52 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MA.fieldjournalLoginName",
-      "title": "Hatikka userid (new)"
+      "title": "Hatikka userid (new)",
+      "sortOrder": -1
     },
     "firstJoined": {
       "type": "string",
       "format": "date",
       "range": "xsd:date",
       "subject": "MA.firstJoined",
-      "title": "Ensimmäinen sisäänkirjautuminen"
+      "title": "Ensimmäinen sisäänkirjautuminen",
+      "sortOrder": 9
     },
     "fullName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.fullName",
-      "title": "Koko nimi"
+      "title": "Koko nimi",
+      "sortOrder": 2
     },
     "givenNames": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.givenNames",
-      "title": "Etunimet"
+      "title": "Etunimet",
+      "sortOrder": 4
     },
     "googleLoginName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.googleLoginName",
-      "title": "Google login name"
+      "title": "Google login name",
+      "sortOrder": -1
     },
     "group": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.group",
       "description": "Group, membership or any other way that allows the user to distinguish themselves from people with the same name",
-      "title": "Group"
+      "title": "Group",
+      "sortOrder": -1
     },
     "hakaLoginName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.hakaLoginName",
-      "title": "Haka-tunnus"
+      "title": "Haka-tunnus",
+      "sortOrder": -1
     },
     "hatikkaLoginName": {
       "type": "array",
@@ -130,19 +145,22 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MA.hatikkaLoginName",
-      "title": "OLD Hatikka login name"
+      "title": "OLD Hatikka login name",
+      "sortOrder": -1
     },
     "inaturalistLoginName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.inaturalistLoginName",
-      "title": "Inaturalist-tunnus"
+      "title": "Inaturalist-tunnus",
+      "sortOrder": -1
     },
     "inheritedName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.inheritedName",
-      "title": "Sukunimi"
+      "title": "Sukunimi",
+      "sortOrder": 1
     },
     "insectDatabaseLoginName": {
       "type": "array",
@@ -153,7 +171,8 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MA.insectDatabaseLoginName",
-      "title": "insectDatabaseLoginName"
+      "title": "insectDatabaseLoginName",
+      "sortOrder": -1
     },
     "kastikkaUserName": {
       "type": "array",
@@ -164,13 +183,15 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MA.kastikkaUserName",
-      "title": "Kastikka username"
+      "title": "Kastikka username",
+      "sortOrder": -1
     },
     "lajiAuthLoginName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.lajiAuthLoginName",
-      "title": "Laji.fi -tunnus"
+      "title": "Laji.fi -tunnus",
+      "sortOrder": -1
     },
     "lintuvaaraLoginName": {
       "type": "array",
@@ -181,13 +202,15 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MA.lintuvaaraLoginName",
-      "title": "lintuvaaraLoginName"
+      "title": "lintuvaaraLoginName",
+      "sortOrder": -1
     },
     "omariistaLoginName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.omariistaLoginName",
-      "title": "Omariista-tunnus"
+      "title": "Omariista-tunnus",
+      "sortOrder": -1
     },
     "organisation": {
       "type": "array",
@@ -198,7 +221,8 @@
       "minItems": 0,
       "range": "MOS.organization",
       "subject": "MA.organisation",
-      "title": "Organisaatio"
+      "title": "Organisaatio",
+      "sortOrder": 7
     },
     "organisationAdmin": {
       "type": "array",
@@ -210,13 +234,15 @@
       "range": "MOS.organization",
       "subject": "MA.organisationAdmin",
       "description": "Lists all organisations that this user administrates (can grant access to PAP and add users to this organisation)",
-      "title": "Admin of organisation"
+      "title": "Admin of organisation",
+      "sortOrder": -1
     },
     "preferredName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.preferredName",
-      "title": "Kutsumanimi"
+      "title": "Kutsumanimi",
+      "sortOrder": 2
     },
     "previousEmailAddress": {
       "type": "array",
@@ -227,7 +253,8 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MA.previousEmailAddress",
-      "title": "Previously used e-mail address"
+      "title": "Previously used e-mail address",
+      "sortOrder": -1
     },
     "role": {
       "type": "array",
@@ -268,7 +295,8 @@
       "minItems": 0,
       "range": "MA.roles",
       "subject": "MA.role",
-      "title": "Rooli"
+      "title": "Rooli",
+      "sortOrder": 12
     },
     "roleAnnotation": {
       "type": "string",
@@ -290,7 +318,8 @@
       ],
       "range": "MMAN.requiredRolesEnum",
       "subject": "MA.roleAnnotation",
-      "title": "Available annotation roles"
+      "title": "Available annotation roles",
+      "sortOrder": -1
     },
     "roleKotka": {
       "type": "string",
@@ -310,26 +339,30 @@
       ],
       "range": "MA.roleKotkaEnum",
       "subject": "MA.roleKotka",
-      "title": "User role in Kotka"
+      "title": "User role in Kotka",
+      "sortOrder": -1
     },
     "securePortalUserRoleExpires": {
       "type": "string",
       "format": "date",
       "range": "xsd:date",
       "subject": "MA.securePortalUserRoleExpires",
-      "title": "Public Authorities Portal access expiry date"
+      "title": "Public Authorities Portal access expiry date",
+      "sortOrder": -1
     },
     "virtuLoginName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.virtuLoginName",
-      "title": "Virtu-tunnus"
+      "title": "Virtu-tunnus",
+      "sortOrder": -1
     },
     "yearOfBirth": {
       "type": "string",
       "range": "xsd:gYear",
       "subject": "MA.yearOfBirth",
-      "title": "Year of birth"
+      "title": "Year of birth",
+      "sortOrder": 3
     }
   },
   "required": [

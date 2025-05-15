@@ -30,21 +30,24 @@
       "range": "xsd:dateTime",
       "subject": "MXC.attached",
       "description": "Date time when attached to the individual",
-      "title": "Attached"
+      "title": "Attached",
+      "sortOrder": 3
     },
     "deviceID": {
       "type": "string",
       "range": "MXC.device",
       "subject": "MXC.deviceID",
       "description": "Id for the device",
-      "title": "Devices ID"
+      "title": "Devices ID",
+      "sortOrder": 1
     },
     "individualID": {
       "type": "string",
       "range": "MXA.individual",
       "subject": "MXC.individualID",
       "description": "Id for the individual",
-      "title": "Individuals ID"
+      "title": "Individuals ID",
+      "sortOrder": 2
     },
     "removed": {
       "type": "string",
@@ -52,7 +55,8 @@
       "range": "xsd:dateTime",
       "subject": "MXC.removed",
       "description": "Date time when removed from to the individua",
-      "title": "Removed"
+      "title": "Removed",
+      "sortOrder": 4
     }
   },
   "required": [

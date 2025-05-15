@@ -29,7 +29,8 @@
       "range": "xsd:string",
       "subject": "GX.benefitsDerivedAndShared",
       "description": "What monetary or non-monetary benefits arised from the project and how they were shared. (Related to the monitoring of the utilisation of genetic resources and Nagoya compliance).",
-      "title": "Benefits derived and shared"
+      "title": "Benefits derived and shared",
+      "sortOrder": 10
     },
     "datasetName": {
       "type": "object",
@@ -49,7 +50,8 @@
       "range": "xsd:string",
       "subject": "GX.datasetName",
       "description": "Name of the tag. This must be unique.",
-      "title": "Name"
+      "title": "Name",
+      "sortOrder": 3
     },
     "datasetType": {
       "type": "string",
@@ -64,7 +66,8 @@
       "range": "GX.datasetTypeEnum",
       "subject": "GX.datasetType",
       "description": "Type of the tag. Usually basic, project type is generally used only to give information on project Nagoya compliance.",
-      "title": "Tag type"
+      "title": "Tag type",
+      "sortOrder": 2
     },
     "description": {
       "type": "object",
@@ -84,75 +87,86 @@
       "range": "xsd:string",
       "subject": "GX.description",
       "description": "Description of the tag, so that other people understand what it is about.",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": 5
     },
     "personsResponsible": {
       "type": "string",
       "range": "xsd:string",
       "subject": "GX.personsResponsible",
       "description": "Person(s) responsible for the tag.",
-      "title": "Person(s) responsible"
+      "title": "Person(s) responsible",
+      "sortOrder": 4
     },
     "researchCollaborator": {
       "type": "string",
       "range": "xsd:string",
       "subject": "GX.researchCollaborator",
       "description": "Institutions or persons collaborating in the project.",
-      "title": "Research collaborator(s)"
+      "title": "Research collaborator(s)",
+      "sortOrder": 9
     },
     "researchFundingDuration": {
       "type": "string",
       "range": "xsd:string",
       "subject": "GX.researchFundingDuration",
       "description": "Duration of the project funding (dates from and to). (related to the monitoring of the utilisation of genetic resources and Nagoya compliance).",
-      "title": "Research funding duration"
+      "title": "Research funding duration",
+      "sortOrder": 8
     },
     "researchFundingRecipient": {
       "type": "string",
       "range": "xsd:string",
       "subject": "GX.researchFundingRecipient",
       "description": "Which person or institution received the project funding (related to the monitoring of the utilisation of genetic resources and Nagoya compliance).",
-      "title": "Research funding recipient"
+      "title": "Research funding recipient",
+      "sortOrder": 7
     },
     "researchFundingSource": {
       "type": "string",
       "range": "xsd:string",
       "subject": "GX.researchFundingSource",
       "description": "Who funded the project (related to the monitoring of the utilisation of genetic resources and Nagoya compliance).",
-      "title": "Research funding source"
+      "title": "Research funding source",
+      "sortOrder": 6
     },
     "creator": {
       "type": "string",
       "range": "MA.person",
       "subject": "MZ.creator",
-      "title": "Creator"
+      "title": "Creator",
+      "sortOrder": -1
     },
     "dateCreated": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MZ.dateCreated",
-      "title": "Created"
+      "title": "Created",
+      "sortOrder": -1
     },
     "dateEdited": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MZ.dateEdited",
-      "title": "Edited"
+      "title": "Edited",
+      "sortOrder": -1
     },
     "editor": {
       "type": "string",
       "range": "MA.person",
       "subject": "MZ.editor",
-      "title": "Editor"
+      "title": "Editor",
+      "sortOrder": -1
     },
     "owner": {
       "type": "string",
       "range": "MOS.organization",
       "subject": "MZ.owner",
       "description": "Team or organisation that owns the record and can edit it.",
-      "title": "Owner of record"
+      "title": "Owner of record",
+      "sortOrder": 1
     }
   },
   "required": [

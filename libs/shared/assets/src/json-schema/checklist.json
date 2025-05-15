@@ -28,7 +28,8 @@
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MR.isPublic",
-      "title": "isPublic"
+      "title": "isPublic",
+      "sortOrder": 2
     },
     "name": {
       "type": "object",
@@ -46,25 +47,29 @@
       },
       "range": "xsd:string",
       "subject": "MR.name",
-      "title": "Name"
+      "title": "Name",
+      "sortOrder": -1
     },
     "owner": {
       "type": "string",
       "range": "MA.person",
       "subject": "MR.owner",
-      "title": "owner"
+      "title": "owner",
+      "sortOrder": 1
     },
     "rootTaxon": {
       "type": "string",
       "range": "MX.taxon",
       "subject": "MR.rootTaxon",
-      "title": "rootTaxon"
+      "title": "rootTaxon",
+      "sortOrder": 3
     },
     "rdfs:comment": {
       "type": "string",
       "range": "xsd:string",
       "subject": "rdfs:comment",
-      "title": "Notes"
+      "title": "Notes",
+      "sortOrder": -1
     }
   },
   "required": [

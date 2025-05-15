@@ -33,13 +33,15 @@
       "minItems": 0,
       "range": "MA.person",
       "subject": "MFP.admins",
-      "title": "List persons who are admins"
+      "title": "List persons who are admins",
+      "sortOrder": 2
     },
     "collectionID": {
       "type": "string",
       "range": "MY.collection",
       "subject": "MFP.collectionID",
-      "title": "Collection id for which permission handled"
+      "title": "Collection id for which permission handled",
+      "sortOrder": 1
     },
     "editors": {
       "type": "array",
@@ -50,7 +52,8 @@
       "minItems": 0,
       "range": "MA.person",
       "subject": "MFP.editors",
-      "title": "List persons who have access to this form"
+      "title": "List persons who have access to this form",
+      "sortOrder": 3
     },
     "permissionRequests": {
       "type": "array",
@@ -61,7 +64,8 @@
       "minItems": 0,
       "range": "MA.person",
       "subject": "MFP.permissionRequests",
-      "title": "List of persons who requested permission"
+      "title": "List of persons who requested permission",
+      "sortOrder": 4
     }
   },
   "required": [

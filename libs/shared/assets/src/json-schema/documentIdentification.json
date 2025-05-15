@@ -29,14 +29,16 @@
       "range": "xsd:string",
       "subject": "MY.det",
       "description": "Name of the identifier (person) preferably in format \"lastname, firstname\"",
-      "title": "Det."
+      "title": "Det.",
+      "sortOrder": 3
     },
     "detDate": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.detDate",
       "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or \"Y\"",
-      "title": "Det. date"
+      "title": "Det. date",
+      "sortOrder": 2
     }
   }
 }

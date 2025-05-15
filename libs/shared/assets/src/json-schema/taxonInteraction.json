@@ -52,7 +52,8 @@
       ],
       "range": "MI.taxonInteractionEnum",
       "subject": "MI.interactionType",
-      "title": "Type of taxon interaction"
+      "title": "Type of taxon interaction",
+      "sortOrder": -1
     },
     "objectLifeStage": {
       "type": "string",
@@ -106,13 +107,15 @@
       ],
       "range": "MY.lifeStages",
       "subject": "MI.objectLifeStage",
-      "title": "Object taxon life stage"
+      "title": "Object taxon life stage",
+      "sortOrder": -1
     },
     "objectTaxon": {
       "type": "string",
       "range": "MX.taxon",
       "subject": "MI.objectTaxon",
-      "title": "Object taxon"
+      "title": "Object taxon",
+      "sortOrder": -1
     },
     "originalPublication": {
       "type": "array",
@@ -123,7 +126,8 @@
       "minItems": 0,
       "range": "MP.publication",
       "subject": "MI.originalPublication",
-      "title": "Original publication"
+      "title": "Original publication",
+      "sortOrder": -1
     },
     "subjectLifeStage": {
       "type": "string",
@@ -177,13 +181,15 @@
       ],
       "range": "MY.lifeStages",
       "subject": "MI.subjectLifeStage",
-      "title": "Subject taxon life stage"
+      "title": "Subject taxon life stage",
+      "sortOrder": -1
     },
     "subjectTaxon": {
       "type": "string",
       "range": "MX.taxon",
       "subject": "MI.subjectTaxon",
-      "title": "Subject taxon"
+      "title": "Subject taxon",
+      "sortOrder": -1
     }
   },
   "required": [

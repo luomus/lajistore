@@ -53,14 +53,16 @@
       "range": "MX.secureLevels",
       "subject": "MX.secureLevel",
       "description": "Secure level (salaus-/karkeistustaso) for the data",
-      "title": "Secure level"
+      "title": "Secure level",
+      "sortOrder": 34
     },
     "abbreviation": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.abbreviation",
       "description": "Unofficial abbreviation (or acronym) for this collection",
-      "title": "Unofficial abbreviation"
+      "title": "Unofficial abbreviation",
+      "sortOrder": 3
     },
     "additionalIdentifier": {
       "type": "array",
@@ -71,52 +73,60 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MY.additionalIdentifier",
-      "title": "Identifier of this dataset/collection in other databases"
+      "title": "Identifier of this dataset/collection in other databases",
+      "sortOrder": -1
     },
     "allowedForDwStatistics": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.allowedForDwStatistics",
       "description": "Admin field. Is it allowed to use collection with data warehouse /statistic endpoints.",
-      "title": "Allowed for DW statistics"
+      "title": "Allowed for DW statistics",
+      "sortOrder": 38
     },
     "boundingBoxLatMax": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.boundingBoxLatMax",
-      "title": "Bounding box latitude max (WGS84)"
+      "title": "Bounding box latitude max (WGS84)",
+      "sortOrder": 47
     },
     "boundingBoxLatMin": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.boundingBoxLatMin",
-      "title": "Bounding box latitude min (WGS84)"
+      "title": "Bounding box latitude min (WGS84)",
+      "sortOrder": 46
     },
     "boundingBoxLonMax": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.boundingBoxLonMax",
-      "title": "Bounding box longitude max (WGS84)"
+      "title": "Bounding box longitude max (WGS84)",
+      "sortOrder": 49
     },
     "boundingBoxLonMin": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.boundingBoxLonMin",
-      "title": "Bounding box longitude min (WGS84)"
+      "title": "Bounding box longitude min (WGS84)",
+      "sortOrder": 48
     },
     "citation": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.citation",
       "description": "Example how to cite this collection in a scientific article, if using organization, name and abbreviation is not enough.",
-      "title": "Citation recommendation"
+      "title": "Citation recommendation",
+      "sortOrder": 24
     },
     "collectionCode": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.collectionCode",
       "description": "Collection code for natural history specimen collection, such as H-BR",
-      "title": "Specimen collection code"
+      "title": "Specimen collection code",
+      "sortOrder": 44
     },
     "collectionLocation": {
       "type": "object",
@@ -135,7 +145,8 @@
       "range": "xsd:string",
       "subject": "MY.collectionLocation",
       "description": "Where is the collection physically located? E.g. building name and room number. [not shown in public]",
-      "title": "Location of collection"
+      "title": "Location of collection",
+      "sortOrder": 21
     },
     "collectionName": {
       "type": "object",
@@ -155,7 +166,8 @@
       "range": "xsd:string",
       "subject": "MY.collectionName",
       "description": "Name of the collection in different languages. (Not name of collection database.)",
-      "title": "Name"
+      "title": "Name",
+      "sortOrder": 2
     },
     "collectionQuality": {
       "type": "string",
@@ -172,14 +184,16 @@
       "range": "MY.collectionQualityEnum",
       "subject": "MY.collectionQuality",
       "description": "Quality classification for the collection.",
-      "title": "Collection quality"
+      "title": "Collection quality",
+      "sortOrder": 37
     },
     "collectionSize": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.collectionSize",
       "description": "How many specimens, records or such does the collection contain? Fill in approximate number, describe more in notes if necessary.",
-      "title": "Size (approx.)"
+      "title": "Size (approx.)",
+      "sortOrder": 19
     },
     "collectionType": {
       "type": "string",
@@ -216,7 +230,8 @@
       "range": "MY.collectionTypes",
       "subject": "MY.collectionType",
       "description": "Type of the collection (specimen, monitoring etc).",
-      "title": "Type"
+      "title": "Type",
+      "sortOrder": 5
     },
     "concealmentBasis": {
       "type": "object",
@@ -235,14 +250,16 @@
       "range": "xsd:string",
       "subject": "MY.concealmentBasis",
       "description": "Legal basis for concealment or embargo",
-      "title": "Basis for concealment or embargo"
+      "title": "Basis for concealment or embargo",
+      "sortOrder": 15
     },
     "contactEmail": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.contactEmail",
       "description": "Personal or general (e.g. group of people in the organisation) email address to reach the person(s) responsible.",
-      "title": "Contact email"
+      "title": "Contact email",
+      "sortOrder": 31
     },
     "coverageBasis": {
       "type": "object",
@@ -261,7 +278,8 @@
       "range": "xsd:string",
       "subject": "MY.coverageBasis",
       "description": "Concise definition of the coverage, if not clear from name or description. For example, 'Winter birds of Finland'.",
-      "title": "Coverage basis"
+      "title": "Coverage basis",
+      "sortOrder": 10
     },
     "dataLocation": {
       "type": "object",
@@ -280,14 +298,16 @@
       "range": "xsd:string",
       "subject": "MY.dataLocation",
       "description": "Where is the digitized data stored and backed up? Be exact, so that others can find the data. [not shown in public]",
-      "title": "Location of data and backups"
+      "title": "Location of data and backups",
+      "sortOrder": 23
     },
     "dataNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dataNotes",
       "description": "Diary-like notes about the data, with date/time. For example \"2020-08-19: Changed country names Fönland to Finland\", or \"Specimens collected during 2019 are missing coordinates due to malfunctioning GPS\"",
-      "title": "Notes about the data"
+      "title": "Notes about the data",
+      "sortOrder": 43
     },
     "dataQuality": {
       "type": "string",
@@ -312,7 +332,8 @@
       "range": "MY.dataQualityEnum",
       "subject": "MY.dataQuality",
       "description": "Quality estimation for the data in this collection",
-      "title": "Data quality"
+      "title": "Data quality",
+      "sortOrder": 28
     },
     "dataQualityDescription": {
       "type": "object",
@@ -331,14 +352,16 @@
       "range": "xsd:string",
       "subject": "MY.dataQualityDescription",
       "description": "Description and reasons for the data quality in different languages.",
-      "title": "Data quality description"
+      "title": "Data quality description",
+      "sortOrder": 34
     },
     "dataQuarantinePeriod": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "MY.dataQuarantinePeriod",
       "description": "Embargo period in years after which data is opened",
-      "title": "Embargo in years"
+      "title": "Embargo in years",
+      "sortOrder": 16
     },
     "dataUseTerms": {
       "type": "object",
@@ -357,7 +380,8 @@
       "range": "xsd:string",
       "subject": "MY.dataUseTerms",
       "description": "Description of possible special terms for data use (for example not for commercial purposes etc.)",
-      "title": "Special terms for data use"
+      "title": "Special terms for data use",
+      "sortOrder": 33
     },
     "description": {
       "type": "object",
@@ -377,20 +401,23 @@
       "range": "xsd:string",
       "subject": "MY.description",
       "description": "Free-form description of the collection in different languages.",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": 6
     },
     "digitizedSize": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.digitizedSize",
       "description": "How many percent of the collection is in digital form, e.g. in a database or Excel file? Fill in approximate number, describe more in notes if necessary.",
-      "title": "% digitized (approx.)"
+      "title": "% digitized (approx.)",
+      "sortOrder": 20
     },
     "doi": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.doi",
-      "title": "DOI provided by FinBIF"
+      "title": "DOI provided by FinBIF",
+      "sortOrder": -1
     },
     "downloadRequestHandler": {
       "type": "array",
@@ -402,21 +429,24 @@
       "range": "MA.person",
       "subject": "MY.downloadRequestHandler",
       "description": "Admin field. The identifier of the person responsible for handling requests for restricted data for this set (typically same person who's responsible for the collection)",
-      "title": "Download request handler"
+      "title": "Download request handler",
+      "sortOrder": 17
     },
     "editNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.editNotes",
       "description": "Reason for this edit or notes about it.",
-      "title": "Notes about this edit"
+      "title": "Notes about this edit",
+      "sortOrder": 31
     },
     "gbifDoi": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.gbifDoi",
       "description": "Admin field. DOI received from GBIF after the collection has been published.",
-      "title": "Collection DOI from GBIF"
+      "title": "Collection DOI from GBIF",
+      "sortOrder": 41
     },
     "geographicCoverage": {
       "type": "object",
@@ -435,14 +465,16 @@
       "range": "xsd:string",
       "subject": "MY.geographicCoverage",
       "description": "Smallest common geographical area for the specimens/data in the collection (for example, country or continent name).",
-      "title": "Geographic coverage"
+      "title": "Geographic coverage",
+      "sortOrder": 11
     },
     "institutionCode": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.institutionCode",
       "description": "Institution code for natural history specimen collection holding institution, such as H, MHZ or TUR",
-      "title": "Institution code"
+      "title": "Institution code",
+      "sortOrder": 45
     },
     "intellectualDescription": {
       "type": "object",
@@ -461,14 +493,16 @@
       "range": "xsd:string",
       "subject": "MY.intellectualDescription",
       "description": "Description of the rights governing the data (for example, what contracts have been made about this). If left blank, Luomus data policy is followed.",
-      "title": "Copyright description"
+      "title": "Copyright description",
+      "sortOrder": -1
     },
     "intellectualOwner": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.intellectualOwner",
       "description": "Name of the institution or organisation publishing the data.",
-      "title": "Publisher name (en)"
+      "title": "Publisher name (en)",
+      "sortOrder": 14
     },
     "intellectualRights": {
       "type": "string",
@@ -487,28 +521,32 @@
       "range": "MY.intellectualRightsEnum",
       "subject": "MY.intellectualRights",
       "description": "License which is used when publishing data that belongs to this collection.",
-      "title": "License for use"
+      "title": "License for use",
+      "sortOrder": 13
     },
     "internalUseOnly": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.internalUseOnly",
       "description": "Is the data to be used only within Kotka?",
-      "title": "Internal use only"
+      "title": "Internal use only",
+      "sortOrder": 36
     },
     "isPartOf": {
       "type": "string",
       "range": "rdfs:Resource",
       "subject": "MY.isPartOf",
       "description": "Which parent or larger collection this is part of.",
-      "title": "Is part of"
+      "title": "Is part of",
+      "sortOrder": 34
     },
     "language": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.language",
       "description": "Language the data is (mainly) written in, if applicable.",
-      "title": "Language"
+      "title": "Language",
+      "sortOrder": 28
     },
     "longName": {
       "type": "object",
@@ -526,13 +564,15 @@
       },
       "range": "xsd:string",
       "subject": "MY.longName",
-      "title": "Collection's long name"
+      "title": "Collection's long name",
+      "sortOrder": -1
     },
     "metadataCreator": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.metadataCreator",
-      "title": "Person responsible for this metadata"
+      "title": "Person responsible for this metadata",
+      "sortOrder": -1
     },
     "metadataStatus": {
       "type": "string",
@@ -553,7 +593,8 @@
       "range": "MY.metadataStatuses",
       "subject": "MY.metadataStatus",
       "description": "Indication of how comprehensive the information on this form is.",
-      "title": "Status of this metadata"
+      "title": "Status of this metadata",
+      "sortOrder": 30
     },
     "methods": {
       "type": "object",
@@ -572,14 +613,16 @@
       "range": "xsd:string",
       "subject": "MY.methods",
       "description": "Methods used when creating this collection, if they are standardized. Includes information on items such as census methods, tools, instrument calibration and software.",
-      "title": "Methods"
+      "title": "Methods",
+      "sortOrder": 12
     },
     "notes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.notes",
       "description": "Additional information to the data in each section.",
-      "title": "Notes"
+      "title": "Notes",
+      "sortOrder": 7
     },
     "onlineUrl": {
       "type": "object",
@@ -598,21 +641,24 @@
       "range": "xsd:string",
       "subject": "MY.onlineUrl",
       "description": "Web address (URL) with more info about the collection.",
-      "title": "URL"
+      "title": "URL",
+      "sortOrder": 26
     },
     "personResponsible": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.personResponsible",
       "description": "Person(s) responsible for the collection (Lastname, Firstname; Lastname, Firstname).",
-      "title": "Person responsible"
+      "title": "Person responsible",
+      "sortOrder": 22
     },
     "publicAccess": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.publicAccess",
       "description": "Used for botanic garden collections. Is the collection/garden area accessible to public or not.",
-      "title": "Accessibility to public"
+      "title": "Accessibility to public",
+      "sortOrder": 42
     },
     "publicationDescription": {
       "type": "object",
@@ -631,7 +677,8 @@
       "range": "xsd:string",
       "subject": "MY.publicationDescription",
       "description": "Description of possible restrictions on publication of the data (for example, is there data about endangered species which should be concealed?)",
-      "title": "Publication terms description"
+      "title": "Publication terms description",
+      "sortOrder": -1
     },
     "publicationTerms": {
       "type": "string",
@@ -652,7 +699,8 @@
       "range": "MY.publicationTermsEnum",
       "subject": "MY.publicationTerms",
       "description": "How can Luomus publish the data, if it is owned by third party?",
-      "title": "Publication terms"
+      "title": "Publication terms",
+      "sortOrder": -1
     },
     "publisherShortname": {
       "type": "object",
@@ -671,20 +719,23 @@
       "range": "xsd:string",
       "subject": "MY.publisherShortname",
       "description": "Admin field. Name that is easy for users to remember and understand. E.g. \"Luomus\", \"University of Turku\".",
-      "title": "Publisher short name"
+      "title": "Publisher short name",
+      "sortOrder": 4
     },
     "shareToFEO": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.shareToFEO",
-      "title": "Share to FEO"
+      "title": "Share to FEO",
+      "sortOrder": 40
     },
     "shareToGbif": {
       "type": "string",
       "range": "MY.collection",
       "subject": "MY.shareToGbif",
       "description": "Admin field. Can the data be shared to GBIF or not: Given collection ID means data is shared under that collection.",
-      "title": "Share to GBIF"
+      "title": "Share to GBIF",
+      "sortOrder": 39
     },
     "taxonomicCoverage": {
       "type": "object",
@@ -703,7 +754,8 @@
       "range": "xsd:string",
       "subject": "MY.taxonomicCoverage",
       "description": "Lowest common taxon in the collection (for example, scientific name of an order).",
-      "title": "Taxonomic coverage"
+      "title": "Taxonomic coverage",
+      "sortOrder": 7
     },
     "temporalCoverage": {
       "type": "object",
@@ -722,47 +774,54 @@
       "range": "xsd:string",
       "subject": "MY.temporalCoverage",
       "description": "When were the specimens/data collected?",
-      "title": "Temporal coverage"
+      "title": "Temporal coverage",
+      "sortOrder": 8
     },
     "typesSize": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.typesSize",
       "description": "How many TYPE specimens does the collection contain?  Fill in approximate number, describe more in notes if necessary.",
-      "title": "Amount of type specimens (approx.)"
+      "title": "Amount of type specimens (approx.)",
+      "sortOrder": 25
     },
     "creator": {
       "type": "string",
       "range": "MA.person",
       "subject": "MZ.creator",
-      "title": "Creator"
+      "title": "Creator",
+      "sortOrder": -1
     },
     "dateCreated": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MZ.dateCreated",
-      "title": "Created"
+      "title": "Created",
+      "sortOrder": -1
     },
     "dateEdited": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MZ.dateEdited",
-      "title": "Edited"
+      "title": "Edited",
+      "sortOrder": -1
     },
     "editor": {
       "type": "string",
       "range": "MA.person",
       "subject": "MZ.editor",
-      "title": "Editor"
+      "title": "Editor",
+      "sortOrder": -1
     },
     "owner": {
       "type": "string",
       "range": "MOS.organization",
       "subject": "MZ.owner",
       "description": "Team or organisation that owns the record and can edit it.",
-      "title": "Owner of record"
+      "title": "Owner of record",
+      "sortOrder": 1
     },
     "publicityRestrictions": {
       "type": "string",
@@ -781,7 +840,8 @@
       "range": "MZ.publicityRestrictionsEnum",
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
-      "title": "Publicity restrictions"
+      "title": "Publicity restrictions",
+      "sortOrder": 33
     }
   },
   "required": [

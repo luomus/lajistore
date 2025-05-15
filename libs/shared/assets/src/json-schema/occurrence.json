@@ -28,19 +28,22 @@
       "type": "string",
       "range": "ML.area",
       "subject": "MO.area",
-      "title": "Area"
+      "title": "Area",
+      "sortOrder": -1
     },
     "notes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MO.notes",
-      "title": "Notes"
+      "title": "Notes",
+      "sortOrder": -1
     },
     "specimenURI": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MO.specimenURI",
-      "title": "Specimen URI Identifier"
+      "title": "Specimen URI Identifier",
+      "sortOrder": -1
     },
     "status": {
       "type": "string",
@@ -140,25 +143,29 @@
       ],
       "range": "MX.typeOfOccurrenceEnum",
       "subject": "MO.status",
-      "title": "Status"
+      "title": "Status",
+      "sortOrder": -1
     },
     "taxon": {
       "type": "string",
       "range": "MX.taxon",
       "subject": "MO.taxon",
-      "title": "taxon"
+      "title": "taxon",
+      "sortOrder": -1
     },
     "threatened": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MO.threatened",
-      "title": "Threatened in region"
+      "title": "Threatened in region",
+      "sortOrder": -1
     },
     "year": {
       "type": "string",
       "range": "xsd:gYear",
       "subject": "MO.year",
-      "title": "Year"
+      "title": "Year",
+      "sortOrder": -1
     }
   },
   "required": [

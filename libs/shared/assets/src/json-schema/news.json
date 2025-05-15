@@ -28,14 +28,16 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MPO.content",
-      "title": "content"
+      "title": "content",
+      "sortOrder": 4
     },
     "eventDate": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MPO.eventDate",
-      "title": "Date and time to for the news event"
+      "title": "Date and time to for the news event",
+      "sortOrder": 7
     },
     "language": {
       "type": "string",
@@ -51,14 +53,16 @@
       ],
       "range": "MZ.languageEnum",
       "subject": "MPO.language",
-      "title": "language"
+      "title": "language",
+      "sortOrder": 2
     },
     "publishDate": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MPO.publishDate",
-      "title": "publish date"
+      "title": "publish date",
+      "sortOrder": 1
     },
     "targetIndividualIds": {
       "type": "array",
@@ -69,7 +73,8 @@
       "minItems": 0,
       "range": "MXA.individual",
       "subject": "MPO.targetIndividualIds",
-      "title": "Target individuals"
+      "title": "Target individuals",
+      "sortOrder": 3
     },
     "targets": {
       "type": "array",
@@ -80,13 +85,15 @@
       "minItems": 0,
       "range": "xsd:anyURI",
       "subject": "MPO.targets",
-      "title": "Targets for the news"
+      "title": "Targets for the news",
+      "sortOrder": 5
     },
     "title": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MPO.title",
-      "title": "title"
+      "title": "title",
+      "sortOrder": 3
     }
   },
   "required": [

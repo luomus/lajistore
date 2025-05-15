@@ -28,19 +28,22 @@
       "type": "integer",
       "range": "xsd:integer",
       "subject": "herbo:sortOrder",
-      "title": "herbo:sortOrder"
+      "title": "herbo:sortOrder",
+      "sortOrder": -1
     },
     "caption": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MM.caption",
-      "title": "Caption"
+      "title": "Caption",
+      "sortOrder": -1
     },
     "captureDateTime": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MM.captureDateTime",
-      "title": "Date taken"
+      "title": "Date taken",
+      "sortOrder": -1
     },
     "capturerVerbatim": {
       "type": "array",
@@ -51,7 +54,8 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MM.capturerVerbatim",
-      "title": "Photographer/recorder (Forename Surname)"
+      "title": "Photographer/recorder (Forename Surname)",
+      "sortOrder": -1
     },
     "documentURI": {
       "type": "array",
@@ -62,25 +66,29 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MM.documentURI",
-      "title": "Assosiated with document"
+      "title": "Assosiated with document",
+      "sortOrder": -1
     },
     "flacURL": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MM.flacURL",
-      "title": "URL of flac audio file (stripped original)"
+      "title": "URL of flac audio file (stripped original)",
+      "sortOrder": -1
     },
     "fullResolutionMediaAvailable": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MM.fullResolutionMediaAvailable",
-      "title": "Full resolution media available"
+      "title": "Full resolution media available",
+      "sortOrder": -1
     },
     "fullURL": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MM.fullURL",
-      "title": "URL of full size version of the image (converted to JPG)"
+      "title": "URL of full size version of the image (converted to JPG)",
+      "sortOrder": -1
     },
     "keyword": {
       "type": "array",
@@ -91,32 +99,37 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MM.keyword",
-      "title": "Keywords"
+      "title": "Keywords",
+      "sortOrder": -1
     },
     "modifiedBy": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MM.modifiedBy",
-      "title": "Modified by"
+      "title": "Modified by",
+      "sortOrder": -1
     },
     "modifiedDateTime": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MM.modifiedDateTime",
-      "title": "Date/time when media metadata was last modified"
+      "title": "Date/time when media metadata was last modified",
+      "sortOrder": -1
     },
     "mp3URL": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MM.mp3URL",
-      "title": "URL of mp3 audio file (stripped original or compressed from original)"
+      "title": "URL of mp3 audio file (stripped original or compressed from original)",
+      "sortOrder": -1
     },
     "originalFilename": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MM.originalFilename",
-      "title": "Original filename"
+      "title": "Original filename",
+      "sortOrder": -1
     },
     "primaryForTaxon": {
       "type": "array",
@@ -127,13 +140,15 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MM.primaryForTaxon",
-      "title": "Taxon ids for which this media item is primary item"
+      "title": "Taxon ids for which this media item is primary item",
+      "sortOrder": -1
     },
     "sourceSystem": {
       "type": "string",
       "range": "KE.informationSystem",
       "subject": "MM.sourceSystem",
-      "title": "Source information system of the multimedia object"
+      "title": "Source information system of the multimedia object",
+      "sortOrder": -1
     },
     "taxonDescriptionCaption": {
       "type": "object",
@@ -151,7 +166,8 @@
       },
       "range": "xsd:string",
       "subject": "MM.taxonDescriptionCaption",
-      "title": "Species image caption"
+      "title": "Species image caption",
+      "sortOrder": -1
     },
     "taxonURI": {
       "type": "array",
@@ -162,7 +178,8 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MM.taxonURI",
-      "title": "Taxon ID"
+      "title": "Taxon ID",
+      "sortOrder": -1
     },
     "taxonVerbatim": {
       "type": "array",
@@ -173,13 +190,15 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MM.taxonVerbatim",
-      "title": "Verbatim taxon name"
+      "title": "Verbatim taxon name",
+      "sortOrder": -1
     },
     "thumbnailURL": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MM.thumbnailURL",
-      "title": "URL of a thumbnail version of the image (maintains aspect ratio, max. 200px height or width)"
+      "title": "URL of a thumbnail version of the image (maintains aspect ratio, max. 200px height or width)",
+      "sortOrder": -1
     },
     "type": {
       "type": "string",
@@ -207,26 +226,30 @@
       ],
       "range": "MM.typeEnum",
       "subject": "MM.type",
-      "title": "Type of taxon media"
+      "title": "Type of taxon media",
+      "sortOrder": -1
     },
     "uploadDateTime": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MM.uploadDateTime",
-      "title": "Date/time when the image was uploaded to Media API"
+      "title": "Date/time when the image was uploaded to Media API",
+      "sortOrder": -1
     },
     "uploadedBy": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MM.uploadedBy",
-      "title": "Uploaded by"
+      "title": "Uploaded by",
+      "sortOrder": -1
     },
     "wavURL": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MM.wavURL",
-      "title": "URL of wav audio file (stripped original)"
+      "title": "URL of wav audio file (stripped original)",
+      "sortOrder": -1
     },
     "lifeStage": {
       "type": "string",
@@ -281,7 +304,8 @@
       "range": "MY.lifeStages",
       "subject": "MY.lifeStage",
       "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
-      "title": "Life stage"
+      "title": "Life stage",
+      "sortOrder": 2
     },
     "plantLifeStage": {
       "type": "string",
@@ -315,7 +339,8 @@
       ],
       "range": "MY.plantLifeStageEnum",
       "subject": "MY.plantLifeStage",
-      "title": "Plant life stage"
+      "title": "Plant life stage",
+      "sortOrder": -1
     },
     "sex": {
       "type": "string",
@@ -344,13 +369,15 @@
       "range": "MY.sexes",
       "subject": "MY.sex",
       "description": "Sex of the individual(s)",
-      "title": "Sex"
+      "title": "Sex",
+      "sortOrder": 3
     },
     "intellectualOwner": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MZ.intellectualOwner",
-      "title": "Creative rights owner"
+      "title": "Creative rights owner",
+      "sortOrder": -1
     },
     "intellectualRights": {
       "type": "string",
@@ -406,7 +433,8 @@
       ],
       "range": "MZ.intellectualRightsEnum",
       "subject": "MZ.intellectualRights",
-      "title": "License"
+      "title": "License",
+      "sortOrder": -1
     },
     "publicityRestrictions": {
       "type": "string",
@@ -425,13 +453,15 @@
       "range": "MZ.publicityRestrictionsEnum",
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
-      "title": "Publicity restrictions"
+      "title": "Publicity restrictions",
+      "sortOrder": 33
     },
     "sortOrder": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "sortOrder",
-      "title": "sortOrder"
+      "title": "sortOrder",
+      "sortOrder": -1
     }
   },
   "required": [

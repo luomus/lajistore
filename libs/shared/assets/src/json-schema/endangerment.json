@@ -28,7 +28,8 @@
       "type": "integer",
       "range": "xsd:integer",
       "subject": "herbo:sortOrder",
-      "title": "herbo:sortOrder"
+      "title": "herbo:sortOrder",
+      "sortOrder": -1
     },
     "endangerment": {
       "type": "string",
@@ -90,13 +91,15 @@
       ],
       "range": "MKV.endangermentReasonEnum",
       "subject": "MKV.endangerment",
-      "title": "Endangerment"
+      "title": "Endangerment",
+      "sortOrder": -1
     },
     "sortOrder": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "sortOrder",
-      "title": "sortOrder"
+      "title": "sortOrder",
+      "sortOrder": -1
     }
   },
   "required": [

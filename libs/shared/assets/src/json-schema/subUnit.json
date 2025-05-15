@@ -29,14 +29,16 @@
       "range": "xsd:string",
       "subject": "MY.age",
       "description": "Estimated or known age in calendar years, years, days or other relevant unit.",
-      "title": "Age"
+      "title": "Age",
+      "sortOrder": 7
     },
     "individualCount": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "MY.individualCount",
-      "title": "Individual count"
+      "title": "Individual count",
+      "sortOrder": -1
     },
     "sex": {
       "type": "string",
@@ -65,7 +67,8 @@
       "range": "MY.sexes",
       "subject": "MY.sex",
       "description": "Sex of the individual(s)",
-      "title": "Sex"
+      "title": "Sex",
+      "sortOrder": 3
     }
   }
 }

@@ -28,7 +28,8 @@
       "type": "integer",
       "range": "xsd:integer",
       "subject": "herbo:sortOrder",
-      "title": "herbo:sortOrder"
+      "title": "herbo:sortOrder",
+      "sortOrder": -1
     },
     "habitat": {
       "type": "string",
@@ -226,7 +227,8 @@
       ],
       "range": "MKV.habitatEnum",
       "subject": "MKV.habitat",
-      "title": "Elinympäristö"
+      "title": "Elinympäristö",
+      "sortOrder": -1
     },
     "habitatSpecificType": {
       "type": "array",
@@ -263,13 +265,15 @@
       "minItems": 0,
       "range": "MKV.habitatSpecificTypeEnum",
       "subject": "MKV.habitatSpecificType",
-      "title": "Tarkenne"
+      "title": "Tarkenne",
+      "sortOrder": -1
     },
     "sortOrder": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "sortOrder",
-      "title": "sortOrder"
+      "title": "sortOrder",
+      "sortOrder": -1
     }
   },
   "required": [

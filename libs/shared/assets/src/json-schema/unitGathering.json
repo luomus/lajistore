@@ -28,39 +28,45 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateBegin",
-      "title": "Start date"
+      "title": "Start date",
+      "sortOrder": 2
     },
     "dateEnd": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateEnd",
-      "title": "End date"
+      "title": "End date",
+      "sortOrder": 4
     },
     "geometry": {
       "type": "object",
       "range": "MZ.geometry",
       "subject": "MY.geometry",
-      "title": "Coordinates"
+      "title": "Coordinates",
+      "sortOrder": -1
     },
     "habitatDescription": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.habitatDescription",
       "description": "Informal description of the habitat.",
-      "title": "Habitat description"
+      "title": "Habitat description",
+      "sortOrder": 5
     },
     "habitatIUCN": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.habitatIUCN",
-      "title": "Habitat"
+      "title": "Habitat",
+      "sortOrder": 4
     },
     "substrate": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.substrate",
       "description": "Type of substrate or name of substrate species.",
-      "title": "Substrate"
+      "title": "Substrate",
+      "sortOrder": 3
     }
   }
 }

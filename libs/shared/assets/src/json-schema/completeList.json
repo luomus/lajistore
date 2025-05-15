@@ -28,7 +28,8 @@
       "type": "string",
       "range": "MX.taxon",
       "subject": "MY.completeListTaxonID",
-      "title": "Species"
+      "title": "Species",
+      "sortOrder": -1
     },
     "completeListType": {
       "type": "string",
@@ -46,7 +47,8 @@
       ],
       "range": "MY.completeListTypeEnum",
       "subject": "MY.completeListType",
-      "title": "Species list completeness"
+      "title": "Species list completeness",
+      "sortOrder": -1
     }
   }
 }

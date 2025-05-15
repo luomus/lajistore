@@ -28,7 +28,8 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "KE.URI",
-      "title": "Address (URL)"
+      "title": "Address (URL)",
+      "sortOrder": 3
     },
     "allowedDatawarehouseOverridingSourceId": {
       "type": "array",
@@ -39,14 +40,16 @@
       "minItems": 0,
       "range": "KE.informationSystem",
       "subject": "KE.allowedDatawarehouseOverridingSourceId",
-      "title": "allowedDatawarehouseOverridingSourceId"
+      "title": "allowedDatawarehouseOverridingSourceId",
+      "sortOrder": -1
     },
     "allowedToUseDatawarehouseEditorOrObserverIdIsNot": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "KE.allowedToUseDatawarehouseEditorOrObserverIdIsNot",
       "description": "System is allowed to use data warehouse 'useEditorOrObserverIdIsNot' query param",
-      "title": "Allowed to use warehouse editorOrObserverIsNot"
+      "title": "Allowed to use warehouse editorOrObserverIsNot",
+      "sortOrder": -1
     },
     "description": {
       "type": "object",
@@ -65,37 +68,43 @@
       "minProperties": 1,
       "range": "xsd:string",
       "subject": "KE.description",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": 2
     },
     "documentation": {
       "type": "string",
       "range": "xsd:string",
       "subject": "KE.documentation",
-      "title": "Documentation"
+      "title": "Documentation",
+      "sortOrder": 7
     },
     "isAllowedToQueryPrivateWarehouse": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "KE.isAllowedToQueryPrivateWarehouse",
-      "title": "Is this system allowed to query PRIVATE FinBiF warehouse?"
+      "title": "Is this system allowed to query PRIVATE FinBiF warehouse?",
+      "sortOrder": -1
     },
     "isWarehouseSource": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "KE.isWarehouseSource",
-      "title": "Is a warehouse source"
+      "title": "Is a warehouse source",
+      "sortOrder": -1
     },
     "lajiAuthLoginRedirectURI": {
       "type": "string",
       "range": "xsd:string",
       "subject": "KE.lajiAuthLoginRedirectURI",
-      "title": "Laji-Auth login URI"
+      "title": "Laji-Auth login URI",
+      "sortOrder": -1
     },
     "maintainingOrganization": {
       "type": "string",
       "range": "MOS.organization",
       "subject": "KE.maintainingOrganization",
-      "title": "Organization that maintains the software"
+      "title": "Organization that maintains the software",
+      "sortOrder": -1
     },
     "name": {
       "type": "object",
@@ -114,13 +123,15 @@
       "minProperties": 1,
       "range": "xsd:string",
       "subject": "KE.name",
-      "title": "Name"
+      "title": "Name",
+      "sortOrder": 1
     },
     "personResponsible": {
       "type": "string",
       "range": "MA.person",
       "subject": "KE.personResponsible",
-      "title": "Person responsible"
+      "title": "Person responsible",
+      "sortOrder": 8
     },
     "publicity": {
       "type": "string",
@@ -138,7 +149,8 @@
       ],
       "range": "KE.publicities",
       "subject": "KE.publicity",
-      "title": "Publicity"
+      "title": "Publicity",
+      "sortOrder": 5
     },
     "state": {
       "type": "string",
@@ -154,13 +166,15 @@
       ],
       "range": "KE.states",
       "subject": "KE.state",
-      "title": "State"
+      "title": "State",
+      "sortOrder": 4
     },
     "transactionApiURL": {
       "type": "string",
       "range": "xsd:string",
       "subject": "KE.transactionApiURL",
-      "title": "Laji-ETL PULL/Balticdiversity transaction API Base URL"
+      "title": "Laji-ETL PULL/Balticdiversity transaction API Base URL",
+      "sortOrder": -1
     },
     "type": {
       "type": "string",
@@ -186,7 +200,8 @@
       ],
       "range": "KE.types",
       "subject": "KE.type",
-      "title": "Type"
+      "title": "Type",
+      "sortOrder": 6
     }
   },
   "required": [

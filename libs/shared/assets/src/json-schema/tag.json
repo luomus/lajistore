@@ -40,7 +40,8 @@
       },
       "range": "xsd:string",
       "subject": "MMAN.description",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": 2
     },
     "name": {
       "type": "object",
@@ -58,7 +59,8 @@
       },
       "range": "xsd:string",
       "subject": "MMAN.name",
-      "title": "Tag"
+      "title": "Tag",
+      "sortOrder": 1
     },
     "requiredRolesAdd": {
       "type": "array",
@@ -85,7 +87,8 @@
       "minItems": 0,
       "range": "MMAN.requiredRolesEnum",
       "subject": "MMAN.requiredRolesAdd",
-      "title": "Required role to add"
+      "title": "Required role to add",
+      "sortOrder": 3
     },
     "requiredRolesRemove": {
       "type": "array",
@@ -112,7 +115,8 @@
       "minItems": 0,
       "range": "MMAN.requiredRolesEnum",
       "subject": "MMAN.requiredRolesRemove",
-      "title": "Required role to remove"
+      "title": "Required role to remove",
+      "sortOrder": 4
     },
     "type": {
       "type": "string",
@@ -138,7 +142,8 @@
       ],
       "range": "MMAN.typeEnum",
       "subject": "MMAN.type",
-      "title": "Type"
+      "title": "Type",
+      "sortOrder": 5
     }
   }
 }

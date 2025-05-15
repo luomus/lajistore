@@ -33,7 +33,8 @@
       "minItems": 0,
       "range": "MXA.individual",
       "subject": "MPO.targetIndividualIds",
-      "title": "Target individuals"
+      "title": "Target individuals",
+      "sortOrder": 3
     },
     "description": {
       "type": "object",
@@ -51,7 +52,8 @@
       },
       "range": "xsd:string",
       "subject": "MXA.description",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": 2
     },
     "name": {
       "type": "object",
@@ -70,7 +72,8 @@
       "minProperties": 1,
       "range": "xsd:string",
       "subject": "MXA.name",
-      "title": "Name"
+      "title": "Name",
+      "sortOrder": 1
     }
   },
   "required": [

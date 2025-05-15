@@ -28,7 +28,8 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MHL.name",
-      "title": "Name"
+      "title": "Name",
+      "sortOrder": 1
     },
     "fields": {
       "type": "array",
@@ -44,7 +45,8 @@
             "type": "string",
             "range": "xsd:string",
             "subject": "MHL.name",
-            "title": "Name"
+            "title": "Name",
+            "sortOrder": 1
           },
           "fields": {
             "type": "array",
@@ -60,7 +62,8 @@
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MHL.name",
-                  "title": "Name"
+                  "title": "Name",
+                  "sortOrder": 1
                 },
                 "fields": {
                   "type": "array",
@@ -76,7 +79,8 @@
                         "type": "string",
                         "range": "xsd:string",
                         "subject": "MHL.name",
-                        "title": "Name"
+                        "title": "Name",
+                        "sortOrder": 1
                       },
                       "fields": {
                         "type": "array",
@@ -92,7 +96,8 @@
                               "type": "string",
                               "range": "xsd:string",
                               "subject": "MHL.name",
-                              "title": "Name"
+                              "title": "Name",
+                              "sortOrder": 1
                             },
                             "fields": {
                               "type": "array",
@@ -108,7 +113,8 @@
                                     "type": "string",
                                     "range": "xsd:string",
                                     "subject": "MHL.name",
-                                    "title": "Name"
+                                    "title": "Name",
+                                    "sortOrder": 1
                                   },
                                   "fields": {
                                     "type": "array",
@@ -124,7 +130,8 @@
                                           "type": "string",
                                           "range": "xsd:string",
                                           "subject": "MHL.name",
-                                          "title": "Name"
+                                          "title": "Name",
+                                          "sortOrder": 1
                                         },
                                         "fields": {
                                           "type": "array",
@@ -137,469 +144,546 @@
                                           "minItems": 0,
                                           "range": "MHLA.field",
                                           "subject": "MHLA.fields",
-                                          "title": "Fields"
+                                          "title": "Fields",
+                                          "sortOrder": 5
                                         },
                                         "filters": {
                                           "type": "object",
                                           "range": "MZ.keyAny",
                                           "subject": "MHLA.filters",
-                                          "title": "filters"
+                                          "title": "filters",
+                                          "sortOrder": 12
                                         },
                                         "label": {
                                           "type": "string",
                                           "range": "xsd:string",
                                           "subject": "MHLA.label",
-                                          "title": "label"
+                                          "title": "label",
+                                          "sortOrder": 2
                                         },
                                         "notices": {
                                           "type": "object",
                                           "range": "MZ.keyAny",
                                           "subject": "MHLA.notices",
-                                          "title": "Notice validators"
+                                          "title": "Notice validators",
+                                          "sortOrder": 6
                                         },
                                         "options": {
                                           "type": "object",
                                           "range": "MZ.keyAny",
                                           "subject": "MHLA.options",
-                                          "title": "Options"
+                                          "title": "Options",
+                                          "sortOrder": 11
                                         },
                                         "required": {
                                           "type": "boolean",
                                           "range": "xsd:boolean",
                                           "subject": "MHLA.required",
-                                          "title": "Required field"
+                                          "title": "Required field",
+                                          "sortOrder": 4
                                         },
                                         "type": {
                                           "type": "string",
                                           "range": "xsd:string",
                                           "subject": "MHLA.type",
-                                          "title": "field type"
+                                          "title": "field type",
+                                          "sortOrder": 3
                                         },
                                         "ui": {
                                           "type": "object",
                                           "range": "MZ.keyAny",
                                           "subject": "MHLA.ui",
-                                          "title": "UI instructions to field"
+                                          "title": "UI instructions to field",
+                                          "sortOrder": 9
                                         },
                                         "validators": {
                                           "type": "object",
                                           "range": "MZ.keyAny",
                                           "subject": "MHLA.validators",
-                                          "title": "validators"
+                                          "title": "validators",
+                                          "sortOrder": 8
                                         },
                                         "value": {
                                           "type": "string",
                                           "range": "xsd:string",
                                           "subject": "MHLA.value",
-                                          "title": "value"
+                                          "title": "value",
+                                          "sortOrder": 10
                                         },
                                         "warnings": {
                                           "type": "object",
                                           "range": "MZ.keyAny",
                                           "subject": "MHLA.warnings",
-                                          "title": "warning validators"
+                                          "title": "warning validators",
+                                          "sortOrder": 7
                                         }
                                       }
                                     },
                                     "minItems": 0,
                                     "range": "MHLA.field",
                                     "subject": "MHLA.fields",
-                                    "title": "Fields"
+                                    "title": "Fields",
+                                    "sortOrder": 5
                                   },
                                   "filters": {
                                     "type": "object",
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.filters",
-                                    "title": "filters"
+                                    "title": "filters",
+                                    "sortOrder": 12
                                   },
                                   "label": {
                                     "type": "string",
                                     "range": "xsd:string",
                                     "subject": "MHLA.label",
-                                    "title": "label"
+                                    "title": "label",
+                                    "sortOrder": 2
                                   },
                                   "notices": {
                                     "type": "object",
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.notices",
-                                    "title": "Notice validators"
+                                    "title": "Notice validators",
+                                    "sortOrder": 6
                                   },
                                   "options": {
                                     "type": "object",
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.options",
-                                    "title": "Options"
+                                    "title": "Options",
+                                    "sortOrder": 11
                                   },
                                   "required": {
                                     "type": "boolean",
                                     "range": "xsd:boolean",
                                     "subject": "MHLA.required",
-                                    "title": "Required field"
+                                    "title": "Required field",
+                                    "sortOrder": 4
                                   },
                                   "type": {
                                     "type": "string",
                                     "range": "xsd:string",
                                     "subject": "MHLA.type",
-                                    "title": "field type"
+                                    "title": "field type",
+                                    "sortOrder": 3
                                   },
                                   "ui": {
                                     "type": "object",
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.ui",
-                                    "title": "UI instructions to field"
+                                    "title": "UI instructions to field",
+                                    "sortOrder": 9
                                   },
                                   "validators": {
                                     "type": "object",
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.validators",
-                                    "title": "validators"
+                                    "title": "validators",
+                                    "sortOrder": 8
                                   },
                                   "value": {
                                     "type": "string",
                                     "range": "xsd:string",
                                     "subject": "MHLA.value",
-                                    "title": "value"
+                                    "title": "value",
+                                    "sortOrder": 10
                                   },
                                   "warnings": {
                                     "type": "object",
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.warnings",
-                                    "title": "warning validators"
+                                    "title": "warning validators",
+                                    "sortOrder": 7
                                   }
                                 }
                               },
                               "minItems": 0,
                               "range": "MHLA.field",
                               "subject": "MHLA.fields",
-                              "title": "Fields"
+                              "title": "Fields",
+                              "sortOrder": 5
                             },
                             "filters": {
                               "type": "object",
                               "range": "MZ.keyAny",
                               "subject": "MHLA.filters",
-                              "title": "filters"
+                              "title": "filters",
+                              "sortOrder": 12
                             },
                             "label": {
                               "type": "string",
                               "range": "xsd:string",
                               "subject": "MHLA.label",
-                              "title": "label"
+                              "title": "label",
+                              "sortOrder": 2
                             },
                             "notices": {
                               "type": "object",
                               "range": "MZ.keyAny",
                               "subject": "MHLA.notices",
-                              "title": "Notice validators"
+                              "title": "Notice validators",
+                              "sortOrder": 6
                             },
                             "options": {
                               "type": "object",
                               "range": "MZ.keyAny",
                               "subject": "MHLA.options",
-                              "title": "Options"
+                              "title": "Options",
+                              "sortOrder": 11
                             },
                             "required": {
                               "type": "boolean",
                               "range": "xsd:boolean",
                               "subject": "MHLA.required",
-                              "title": "Required field"
+                              "title": "Required field",
+                              "sortOrder": 4
                             },
                             "type": {
                               "type": "string",
                               "range": "xsd:string",
                               "subject": "MHLA.type",
-                              "title": "field type"
+                              "title": "field type",
+                              "sortOrder": 3
                             },
                             "ui": {
                               "type": "object",
                               "range": "MZ.keyAny",
                               "subject": "MHLA.ui",
-                              "title": "UI instructions to field"
+                              "title": "UI instructions to field",
+                              "sortOrder": 9
                             },
                             "validators": {
                               "type": "object",
                               "range": "MZ.keyAny",
                               "subject": "MHLA.validators",
-                              "title": "validators"
+                              "title": "validators",
+                              "sortOrder": 8
                             },
                             "value": {
                               "type": "string",
                               "range": "xsd:string",
                               "subject": "MHLA.value",
-                              "title": "value"
+                              "title": "value",
+                              "sortOrder": 10
                             },
                             "warnings": {
                               "type": "object",
                               "range": "MZ.keyAny",
                               "subject": "MHLA.warnings",
-                              "title": "warning validators"
+                              "title": "warning validators",
+                              "sortOrder": 7
                             }
                           }
                         },
                         "minItems": 0,
                         "range": "MHLA.field",
                         "subject": "MHLA.fields",
-                        "title": "Fields"
+                        "title": "Fields",
+                        "sortOrder": 5
                       },
                       "filters": {
                         "type": "object",
                         "range": "MZ.keyAny",
                         "subject": "MHLA.filters",
-                        "title": "filters"
+                        "title": "filters",
+                        "sortOrder": 12
                       },
                       "label": {
                         "type": "string",
                         "range": "xsd:string",
                         "subject": "MHLA.label",
-                        "title": "label"
+                        "title": "label",
+                        "sortOrder": 2
                       },
                       "notices": {
                         "type": "object",
                         "range": "MZ.keyAny",
                         "subject": "MHLA.notices",
-                        "title": "Notice validators"
+                        "title": "Notice validators",
+                        "sortOrder": 6
                       },
                       "options": {
                         "type": "object",
                         "range": "MZ.keyAny",
                         "subject": "MHLA.options",
-                        "title": "Options"
+                        "title": "Options",
+                        "sortOrder": 11
                       },
                       "required": {
                         "type": "boolean",
                         "range": "xsd:boolean",
                         "subject": "MHLA.required",
-                        "title": "Required field"
+                        "title": "Required field",
+                        "sortOrder": 4
                       },
                       "type": {
                         "type": "string",
                         "range": "xsd:string",
                         "subject": "MHLA.type",
-                        "title": "field type"
+                        "title": "field type",
+                        "sortOrder": 3
                       },
                       "ui": {
                         "type": "object",
                         "range": "MZ.keyAny",
                         "subject": "MHLA.ui",
-                        "title": "UI instructions to field"
+                        "title": "UI instructions to field",
+                        "sortOrder": 9
                       },
                       "validators": {
                         "type": "object",
                         "range": "MZ.keyAny",
                         "subject": "MHLA.validators",
-                        "title": "validators"
+                        "title": "validators",
+                        "sortOrder": 8
                       },
                       "value": {
                         "type": "string",
                         "range": "xsd:string",
                         "subject": "MHLA.value",
-                        "title": "value"
+                        "title": "value",
+                        "sortOrder": 10
                       },
                       "warnings": {
                         "type": "object",
                         "range": "MZ.keyAny",
                         "subject": "MHLA.warnings",
-                        "title": "warning validators"
+                        "title": "warning validators",
+                        "sortOrder": 7
                       }
                     }
                   },
                   "minItems": 0,
                   "range": "MHLA.field",
                   "subject": "MHLA.fields",
-                  "title": "Fields"
+                  "title": "Fields",
+                  "sortOrder": 5
                 },
                 "filters": {
                   "type": "object",
                   "range": "MZ.keyAny",
                   "subject": "MHLA.filters",
-                  "title": "filters"
+                  "title": "filters",
+                  "sortOrder": 12
                 },
                 "label": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MHLA.label",
-                  "title": "label"
+                  "title": "label",
+                  "sortOrder": 2
                 },
                 "notices": {
                   "type": "object",
                   "range": "MZ.keyAny",
                   "subject": "MHLA.notices",
-                  "title": "Notice validators"
+                  "title": "Notice validators",
+                  "sortOrder": 6
                 },
                 "options": {
                   "type": "object",
                   "range": "MZ.keyAny",
                   "subject": "MHLA.options",
-                  "title": "Options"
+                  "title": "Options",
+                  "sortOrder": 11
                 },
                 "required": {
                   "type": "boolean",
                   "range": "xsd:boolean",
                   "subject": "MHLA.required",
-                  "title": "Required field"
+                  "title": "Required field",
+                  "sortOrder": 4
                 },
                 "type": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MHLA.type",
-                  "title": "field type"
+                  "title": "field type",
+                  "sortOrder": 3
                 },
                 "ui": {
                   "type": "object",
                   "range": "MZ.keyAny",
                   "subject": "MHLA.ui",
-                  "title": "UI instructions to field"
+                  "title": "UI instructions to field",
+                  "sortOrder": 9
                 },
                 "validators": {
                   "type": "object",
                   "range": "MZ.keyAny",
                   "subject": "MHLA.validators",
-                  "title": "validators"
+                  "title": "validators",
+                  "sortOrder": 8
                 },
                 "value": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MHLA.value",
-                  "title": "value"
+                  "title": "value",
+                  "sortOrder": 10
                 },
                 "warnings": {
                   "type": "object",
                   "range": "MZ.keyAny",
                   "subject": "MHLA.warnings",
-                  "title": "warning validators"
+                  "title": "warning validators",
+                  "sortOrder": 7
                 }
               }
             },
             "minItems": 0,
             "range": "MHLA.field",
             "subject": "MHLA.fields",
-            "title": "Fields"
+            "title": "Fields",
+            "sortOrder": 5
           },
           "filters": {
             "type": "object",
             "range": "MZ.keyAny",
             "subject": "MHLA.filters",
-            "title": "filters"
+            "title": "filters",
+            "sortOrder": 12
           },
           "label": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MHLA.label",
-            "title": "label"
+            "title": "label",
+            "sortOrder": 2
           },
           "notices": {
             "type": "object",
             "range": "MZ.keyAny",
             "subject": "MHLA.notices",
-            "title": "Notice validators"
+            "title": "Notice validators",
+            "sortOrder": 6
           },
           "options": {
             "type": "object",
             "range": "MZ.keyAny",
             "subject": "MHLA.options",
-            "title": "Options"
+            "title": "Options",
+            "sortOrder": 11
           },
           "required": {
             "type": "boolean",
             "range": "xsd:boolean",
             "subject": "MHLA.required",
-            "title": "Required field"
+            "title": "Required field",
+            "sortOrder": 4
           },
           "type": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MHLA.type",
-            "title": "field type"
+            "title": "field type",
+            "sortOrder": 3
           },
           "ui": {
             "type": "object",
             "range": "MZ.keyAny",
             "subject": "MHLA.ui",
-            "title": "UI instructions to field"
+            "title": "UI instructions to field",
+            "sortOrder": 9
           },
           "validators": {
             "type": "object",
             "range": "MZ.keyAny",
             "subject": "MHLA.validators",
-            "title": "validators"
+            "title": "validators",
+            "sortOrder": 8
           },
           "value": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MHLA.value",
-            "title": "value"
+            "title": "value",
+            "sortOrder": 10
           },
           "warnings": {
             "type": "object",
             "range": "MZ.keyAny",
             "subject": "MHLA.warnings",
-            "title": "warning validators"
+            "title": "warning validators",
+            "sortOrder": 7
           }
         }
       },
       "minItems": 0,
       "range": "MHLA.field",
       "subject": "MHLA.fields",
-      "title": "Fields"
+      "title": "Fields",
+      "sortOrder": 5
     },
     "filters": {
       "type": "object",
       "range": "MZ.keyAny",
       "subject": "MHLA.filters",
-      "title": "filters"
+      "title": "filters",
+      "sortOrder": 12
     },
     "label": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MHLA.label",
-      "title": "label"
+      "title": "label",
+      "sortOrder": 2
     },
     "notices": {
       "type": "object",
       "range": "MZ.keyAny",
       "subject": "MHLA.notices",
-      "title": "Notice validators"
+      "title": "Notice validators",
+      "sortOrder": 6
     },
     "options": {
       "type": "object",
       "range": "MZ.keyAny",
       "subject": "MHLA.options",
-      "title": "Options"
+      "title": "Options",
+      "sortOrder": 11
     },
     "required": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MHLA.required",
-      "title": "Required field"
+      "title": "Required field",
+      "sortOrder": 4
     },
     "type": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MHLA.type",
-      "title": "field type"
+      "title": "field type",
+      "sortOrder": 3
     },
     "ui": {
       "type": "object",
       "range": "MZ.keyAny",
       "subject": "MHLA.ui",
-      "title": "UI instructions to field"
+      "title": "UI instructions to field",
+      "sortOrder": 9
     },
     "validators": {
       "type": "object",
       "range": "MZ.keyAny",
       "subject": "MHLA.validators",
-      "title": "validators"
+      "title": "validators",
+      "sortOrder": 8
     },
     "value": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MHLA.value",
-      "title": "value"
+      "title": "value",
+      "sortOrder": 10
     },
     "warnings": {
       "type": "object",
       "range": "MZ.keyAny",
       "subject": "MHLA.warnings",
-      "title": "warning validators"
+      "title": "warning validators",
+      "sortOrder": 7
     }
   }
 }

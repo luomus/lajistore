@@ -28,25 +28,29 @@
       "type": "string",
       "range": "TDF.unitOfMeasurement",
       "subject": "TDF.baseUnit",
-      "title": "Base unit of measurement"
+      "title": "Base unit of measurement",
+      "sortOrder": -1
     },
     "dataEntryName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "TDF.dataEntryName",
-      "title": "Data entry short name/code"
+      "title": "Data entry short name/code",
+      "sortOrder": -1
     },
     "description": {
       "type": "string",
       "range": "xsd:string",
       "subject": "TDF.description",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": -1
     },
     "exampleValues": {
       "type": "string",
       "range": "xsd:string",
       "subject": "TDF.exampleValues",
-      "title": "Example values"
+      "title": "Example values",
+      "sortOrder": -1
     },
     "externalIdentifier": {
       "type": "array",
@@ -57,7 +61,8 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "TDF.externalIdentifier",
-      "title": "Identifier of this trait in some other vocabulary"
+      "title": "Identifier of this trait in some other vocabulary",
+      "sortOrder": -1
     },
     "hasEnumeration": {
       "type": "array",
@@ -68,19 +73,22 @@
       "minItems": 0,
       "range": "TDF.traitEnumValue",
       "subject": "TDF.hasEnumeration",
-      "title": "Has enumeration"
+      "title": "Has enumeration",
+      "sortOrder": -1
     },
     "name": {
       "type": "string",
       "range": "xsd:string",
       "subject": "TDF.name",
-      "title": "Name"
+      "title": "Name",
+      "sortOrder": -1
     },
     "partOfGroup": {
       "type": "string",
       "range": "TDF.traitGroup",
       "subject": "TDF.partOfGroup",
-      "title": "Part of trait group"
+      "title": "Part of trait group",
+      "sortOrder": -1
     },
     "reference": {
       "type": "array",
@@ -91,7 +99,8 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "TDF.reference",
-      "title": "Reference/publication for this trait"
+      "title": "Reference/publication for this trait",
+      "sortOrder": -1
     }
   },
   "required": [

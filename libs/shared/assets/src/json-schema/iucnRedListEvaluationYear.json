@@ -28,13 +28,15 @@
       "type": "string",
       "range": "xsd:gYear",
       "subject": "MKV.evaluationYear",
-      "title": "Assessment year"
+      "title": "Assessment year",
+      "sortOrder": -1
     },
     "locked": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MKV.locked",
-      "title": "Is locked?"
+      "title": "Is locked?",
+      "sortOrder": -1
     }
   },
   "required": [

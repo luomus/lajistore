@@ -55,7 +55,8 @@
       },
       "range": "xsd:string",
       "subject": "MX.administrativeStatusDescription",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": -1
     },
     "administrativeStatusLink": {
       "type": "object",
@@ -88,7 +89,8 @@
       },
       "range": "xsd:string",
       "subject": "MX.administrativeStatusLink",
-      "title": "Link"
+      "title": "Link",
+      "sortOrder": -1
     }
   }
 }

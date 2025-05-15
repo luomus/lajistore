@@ -28,7 +28,8 @@
       "type": "string",
       "range": "MY.collection",
       "subject": "MFP.collectionID",
-      "title": "Collection id for which permission handled"
+      "title": "Collection id for which permission handled",
+      "sortOrder": 1
     },
     "type": {
       "type": "string",
@@ -46,13 +47,15 @@
       ],
       "range": "MFP.typeEnum",
       "subject": "MFP.type",
-      "title": "Type of the permission"
+      "title": "Type of the permission",
+      "sortOrder": 3
     },
     "userID": {
       "type": "string",
       "range": "MA.person",
       "subject": "MFP.userID",
-      "title": "For who this permission is for"
+      "title": "For who this permission is for",
+      "sortOrder": 2
     }
   },
   "required": [

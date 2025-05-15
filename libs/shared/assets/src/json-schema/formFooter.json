@@ -29,14 +29,16 @@
       "range": "xsd:string",
       "subject": "MHL.footerDescription",
       "description": "Text to show for footer",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": -1
     },
     "footerLogos": {
       "type": "object",
       "range": "MZ.keyAny",
       "subject": "MHL.footerLogos",
       "description": "Key is an image URI, value is the URI of the page clicking the image opens",
-      "title": "Logos"
+      "title": "Logos",
+      "sortOrder": -1
     }
   }
 }

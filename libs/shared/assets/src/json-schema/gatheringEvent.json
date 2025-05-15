@@ -28,7 +28,8 @@
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.acknowledgeNoUnitsInCensus",
-      "title": "No units in census"
+      "title": "No units in census",
+      "sortOrder": -1
     },
     "artificialLight": {
       "type": "string",
@@ -50,44 +51,51 @@
       ],
       "range": "MY.artificialLightEnum",
       "subject": "MY.artificialLight",
-      "title": "Artificial light"
+      "title": "Artificial light",
+      "sortOrder": -1
     },
     "breaksDuringCensusInMinutes": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "MY.breaksDuringCensusInMinutes",
-      "title": "Breaks kept in minutes"
+      "title": "Breaks kept in minutes",
+      "sortOrder": -1
     },
     "censusHinderedByEnviromentalFactors": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.censusHinderedByEnviromentalFactors",
-      "title": "Weather (etc) hindered the census"
+      "title": "Weather (etc) hindered the census",
+      "sortOrder": -1
     },
     "censusHinderedByFog": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.censusHinderedByFog",
-      "title": "Fog hindered the census"
+      "title": "Fog hindered the census",
+      "sortOrder": -1
     },
     "censusHinderedByRain": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.censusHinderedByRain",
-      "title": "Rain hindered the census"
+      "title": "Rain hindered the census",
+      "sortOrder": -1
     },
     "censusHinderedByWind": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.censusHinderedByWind",
-      "title": "Wind hindered the census"
+      "title": "Wind hindered the census",
+      "sortOrder": -1
     },
     "censusPrematurelyAborted": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.censusPrematurelyAborted",
-      "title": "Was the census prematurely aborted?"
+      "title": "Was the census prematurely aborted?",
+      "sortOrder": -1
     },
     "cloudCover": {
       "type": "string",
@@ -119,7 +127,8 @@
       ],
       "range": "MY.cloudCoverOktaEnum",
       "subject": "MY.cloudCover",
-      "title": "Cloudiness"
+      "title": "Cloudiness",
+      "sortOrder": -1
     },
     "cloudCoverEnd": {
       "type": "string",
@@ -151,7 +160,8 @@
       ],
       "range": "MY.cloudCoverOktaEnum",
       "subject": "MY.cloudCoverEnd",
-      "title": "End cloud cover"
+      "title": "End cloud cover",
+      "sortOrder": -1
     },
     "cloudCoverStart": {
       "type": "string",
@@ -183,7 +193,8 @@
       ],
       "range": "MY.cloudCoverOktaEnum",
       "subject": "MY.cloudCoverStart",
-      "title": "Start cloud cover"
+      "title": "Start cloud cover",
+      "sortOrder": -1
     },
     "completeList": {
       "type": "object",
@@ -196,7 +207,8 @@
           "type": "string",
           "range": "MX.taxon",
           "subject": "MY.completeListTaxonID",
-          "title": "Species"
+          "title": "Species",
+          "sortOrder": -1
         },
         "completeListType": {
           "type": "string",
@@ -214,22 +226,26 @@
           ],
           "range": "MY.completeListTypeEnum",
           "subject": "MY.completeListType",
-          "title": "Species list completeness"
+          "title": "Species list completeness",
+          "sortOrder": -1
         }
       },
-      "range": "MY.completeListClass"
+      "range": "MY.completeListClass",
+      "sortOrder": -1
     },
     "dateBegin": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateBegin",
-      "title": "Start date"
+      "title": "Start date",
+      "sortOrder": 2
     },
     "dateEnd": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateEnd",
-      "title": "End date"
+      "title": "End date",
+      "sortOrder": 4
     },
     "gatheringFact": {
       "type": "object",
@@ -254,54 +270,62 @@
           ],
           "range": "MY.batCollectorEnum",
           "subject": "MY.batCollector",
-          "title": "I placed the sound recorder to the terrain"
+          "title": "I placed the sound recorder to the terrain",
+          "sortOrder": -1
         },
         "binocularsUsed": {
           "type": "boolean",
           "range": "xsd:boolean",
           "subject": "MY.binocularsUsed",
-          "title": "Binoculars"
+          "title": "Binoculars",
+          "sortOrder": -1
         },
         "censusAreaHectares": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.censusAreaHectares",
-          "title": "Census area/ha"
+          "title": "Census area/ha",
+          "sortOrder": -1
         },
         "invasiveControlOtherExpensesInEuros": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.invasiveControlOtherExpensesInEuros",
-          "title": "Estimated of other expenses in euros"
+          "title": "Estimated of other expenses in euros",
+          "sortOrder": -1
         },
         "invasiveControlWorkHours": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.invasiveControlWorkHours",
-          "title": "Work hours spent during the control"
+          "title": "Work hours spent during the control",
+          "sortOrder": -1
         },
         "lineTransectSegmentCounted": {
           "type": "boolean",
           "range": "xsd:boolean",
           "subject": "MY.lineTransectSegmentCounted",
-          "title": "Biotope counted"
+          "title": "Biotope counted",
+          "sortOrder": -1
         },
         "lineTransectSegmentMetersEnd": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.lineTransectSegmentMetersEnd",
-          "title": "Biotope's end meter amount from the start of the line"
+          "title": "Biotope's end meter amount from the start of the line",
+          "sortOrder": -1
         },
         "lineTransectSegmentMetersStart": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.lineTransectSegmentMetersStart",
-          "title": "Biotope's start meter amount from the start of the line"
+          "title": "Biotope's start meter amount from the start of the line",
+          "sortOrder": -1
         },
         "lolifeSiteClassification": {
           "type": "string",
@@ -323,20 +347,23 @@
           ],
           "range": "MY.lolifeSiteClassificationEnum",
           "subject": "MY.lolifeSiteClassification",
-          "title": "Site classification"
+          "title": "Site classification",
+          "sortOrder": -1
         },
         "lolifeSiteClassificationComments": {
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.lolifeSiteClassificationComments",
-          "title": "Classification comments"
+          "title": "Classification comments",
+          "sortOrder": -1
         },
         "observedAreaHectares": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.observedAreaHectares",
-          "title": "Observed area/ha"
+          "title": "Observed area/ha",
+          "sortOrder": -1
         },
         "pointCountHabitat": {
           "type": "string",
@@ -384,27 +411,31 @@
           ],
           "range": "MY.pointCountHabitatEnum",
           "subject": "MY.pointCountHabitat",
-          "title": "Biotooppi"
+          "title": "Biotooppi",
+          "sortOrder": -1
         },
         "shorelineLengthMeters": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.shorelineLengthMeters",
-          "title": "Shoreline length/m"
+          "title": "Shoreline length/m",
+          "sortOrder": -1
         },
         "spottingScopeUsed": {
           "type": "boolean",
           "range": "xsd:boolean",
           "subject": "MY.spottingScopeUsed",
-          "title": "Spotting scope"
+          "title": "Spotting scope",
+          "sortOrder": -1
         },
         "sunniness": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.sunniness",
-          "title": "Sunniness %"
+          "title": "Sunniness %",
+          "sortOrder": -1
         },
         "sykeButterFlyCensusWind": {
           "type": "string",
@@ -432,7 +463,8 @@
           ],
           "range": "MY.sykeButterFlyCensusWindEnum",
           "subject": "MY.sykeButterFlyCensusWind",
-          "title": "Windiness"
+          "title": "Windiness",
+          "sortOrder": -1
         },
         "sykeButterFlyCensusWindEnd": {
           "type": "string",
@@ -460,7 +492,8 @@
           ],
           "range": "MY.sykeButterFlyCensusWindEnum",
           "subject": "MY.sykeButterFlyCensusWindEnd",
-          "title": "End windiness"
+          "title": "End windiness",
+          "sortOrder": -1
         },
         "sykeButterFlyCensusWindStart": {
           "type": "string",
@@ -488,7 +521,8 @@
           ],
           "range": "MY.sykeButterFlyCensusWindEnum",
           "subject": "MY.sykeButterFlyCensusWindStart",
-          "title": "Start windiness"
+          "title": "Start windiness",
+          "sortOrder": -1
         },
         "waterbirdCensusPeriod": {
           "type": "string",
@@ -510,7 +544,8 @@
           ],
           "range": "MY.waterbirdCensusPeriodEnum",
           "subject": "MY.waterbirdCensusPeriod",
-          "title": "Census period"
+          "title": "Census period",
+          "sortOrder": -1
         },
         "waterbirdHabitat": {
           "type": "string",
@@ -542,118 +577,135 @@
           ],
           "range": "MY.waterbirdHabitatEnum",
           "subject": "MY.waterbirdHabitat",
-          "title": "Habitat"
+          "title": "Habitat",
+          "sortOrder": -1
         },
         "ykjSquareNumber": {
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.ykjSquareNumber",
-          "title": "Atlas grid"
+          "title": "Atlas grid",
+          "sortOrder": -1
         },
         "ACAFLAonAlder": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.ACAFLAonAlder",
-          "title": "Urpiaisten ruokailut lepällä"
+          "title": "Urpiaisten ruokailut lepällä",
+          "sortOrder": -1
         },
         "ACAFLAonBirch": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.ACAFLAonBirch",
-          "title": "Urpiaisten ruokailut koivulla"
+          "title": "Urpiaisten ruokailut koivulla",
+          "sortOrder": -1
         },
         "ACAFLAonGround": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.ACAFLAonGround",
-          "title": "Urpiaisten ruokailut maassa"
+          "title": "Urpiaisten ruokailut maassa",
+          "sortOrder": -1
         },
         "ACAFLAonPine": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.ACAFLAonPine",
-          "title": "Urpiaisten ruokailut männyllä"
+          "title": "Urpiaisten ruokailut männyllä",
+          "sortOrder": -1
         },
         "ACAFLAonSpruce": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.ACAFLAonSpruce",
-          "title": "Urpiaisten ruokailut kuusella"
+          "title": "Urpiaisten ruokailut kuusella",
+          "sortOrder": -1
         },
         "CARSPIonAlder": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.CARSPIonAlder",
-          "title": "Vihervarpusten ruokailut lepällä"
+          "title": "Vihervarpusten ruokailut lepällä",
+          "sortOrder": -1
         },
         "CARSPIonBirch": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.CARSPIonBirch",
-          "title": "Vihervarpusten ruokailut koivulla"
+          "title": "Vihervarpusten ruokailut koivulla",
+          "sortOrder": -1
         },
         "CARSPIonGround": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.CARSPIonGround",
-          "title": "Vihervarpusten ruokailut maassa"
+          "title": "Vihervarpusten ruokailut maassa",
+          "sortOrder": -1
         },
         "CARSPIonPine": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.CARSPIonPine",
-          "title": "CARSPIonPine"
+          "title": "CARSPIonPine",
+          "sortOrder": -1
         },
         "CARSPIonSpruce": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.CARSPIonSpruce",
-          "title": "Vihervarpusten ruokailut kuusella"
+          "title": "Vihervarpusten ruokailut kuusella",
+          "sortOrder": -1
         },
         "LOXIAonAlder": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.LOXIAonAlder",
-          "title": "Käpylintujen ruokailut lepällä"
+          "title": "Käpylintujen ruokailut lepällä",
+          "sortOrder": -1
         },
         "LOXIAonBirch": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.LOXIAonBirch",
-          "title": "Käpylintujen ruokailut koivulla"
+          "title": "Käpylintujen ruokailut koivulla",
+          "sortOrder": -1
         },
         "LOXIAonGround": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.LOXIAonGround",
-          "title": "Käpylintujen ruokailut maassa"
+          "title": "Käpylintujen ruokailut maassa",
+          "sortOrder": -1
         },
         "LOXIAonPine": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.LOXIAonPine",
-          "title": "Käpylintujen ruokailut männyllä"
+          "title": "Käpylintujen ruokailut männyllä",
+          "sortOrder": -1
         },
         "LOXIAonSpruce": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.LOXIAonSpruce",
-          "title": "Käpylintujen ruokailut kuusella"
+          "title": "Käpylintujen ruokailut kuusella",
+          "sortOrder": -1
         },
         "abundanceBOMGAR": {
           "type": "string",
@@ -673,7 +725,8 @@
           ],
           "range": "WBC.speciesAbundanceEnum",
           "subject": "WBC.abundanceBOMGAR",
-          "title": "Tilhi"
+          "title": "Tilhi",
+          "sortOrder": -1
         },
         "abundancePINENU": {
           "type": "string",
@@ -693,7 +746,8 @@
           ],
           "range": "WBC.speciesAbundanceEnum",
           "subject": "WBC.abundancePINENU",
-          "title": "Taviokuurna"
+          "title": "Taviokuurna",
+          "sortOrder": -1
         },
         "abundanceTURPIL": {
           "type": "string",
@@ -713,70 +767,80 @@
           ],
           "range": "WBC.speciesAbundanceEnum",
           "subject": "WBC.abundanceTURPIL",
-          "title": "Räkättirastas"
+          "title": "Räkättirastas",
+          "sortOrder": -1
         },
         "birdFeederCount": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCount",
-          "title": "Lintulautoja (kpl)"
+          "title": "Lintulautoja (kpl)",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeA": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeA",
-          "title": "Kaatopaikan lintulaudat"
+          "title": "Kaatopaikan lintulaudat",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeB": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeB",
-          "title": "Kaupunkiasutuksen lintulaudat"
+          "title": "Kaupunkiasutuksen lintulaudat",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeC": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeC",
-          "title": "Maaseutuasutuksen lintulaudat"
+          "title": "Maaseutuasutuksen lintulaudat",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeD": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeD",
-          "title": "Pellon lintulaudat"
+          "title": "Pellon lintulaudat",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeE": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeE",
-          "title": "Metsän lintulaudat"
+          "title": "Metsän lintulaudat",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeF": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeF",
-          "title": "Lintulaudat muu biotooppi"
+          "title": "Lintulaudat muu biotooppi",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeG": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeG",
-          "title": "Hakkuuaukean lintulaudat"
+          "title": "Hakkuuaukean lintulaudat",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeH": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeH",
-          "title": "Ruovikon lintulaudat"
+          "title": "Ruovikon lintulaudat",
+          "sortOrder": -1
         },
         "cloudAndRain": {
           "type": "string",
@@ -798,76 +862,87 @@
           ],
           "range": "WBC.cloudAndRainEnum",
           "subject": "WBC.cloudAndRain",
-          "title": "Pilvisyys ja sade"
+          "title": "Pilvisyys ja sade",
+          "sortOrder": -1
         },
         "descriptionBiotopeF": {
           "type": "string",
           "range": "xsd:string",
           "subject": "WBC.descriptionBiotopeF",
-          "title": "Mitä biotooppiin Muu (F) kuuluu"
+          "title": "Mitä biotooppiin Muu (F) kuuluu",
+          "sortOrder": -1
         },
         "feedingStationCount": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCount",
-          "title": "Ruokintapaikkoja (kpl)"
+          "title": "Ruokintapaikkoja (kpl)",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeA": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeA",
-          "title": "feedingStationCountBiotopeA"
+          "title": "feedingStationCountBiotopeA",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeB": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeB",
-          "title": "Kaupunkiasutuksen ruokintapaikat"
+          "title": "Kaupunkiasutuksen ruokintapaikat",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeC": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeC",
-          "title": "Maaseutuasutuksen ruokintapaikat"
+          "title": "Maaseutuasutuksen ruokintapaikat",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeD": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeD",
-          "title": "Pellon ruokintapaikat"
+          "title": "Pellon ruokintapaikat",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeE": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeE",
-          "title": "Metsän ruokintapaikat"
+          "title": "Metsän ruokintapaikat",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeF": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeF",
-          "title": "Ruokintapaikat muu biotooppi"
+          "title": "Ruokintapaikat muu biotooppi",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeG": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeG",
-          "title": "Ruovikon ruokintapaikat"
+          "title": "Ruovikon ruokintapaikat",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeH": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeH",
-          "title": "Ruovikon ruokintapaikat"
+          "title": "Ruovikon ruokintapaikat",
+          "sortOrder": -1
         },
         "iceCover": {
           "type": "string",
@@ -889,27 +964,31 @@
           ],
           "range": "WBC.iceCoverEnum",
           "subject": "WBC.iceCover",
-          "title": "Jääpeite"
+          "title": "Jääpeite",
+          "sortOrder": -1
         },
         "meanTemperature": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.meanTemperature",
-          "title": "Keskilämpötila (asteen tarkkuus)"
+          "title": "Keskilämpötila (asteen tarkkuus)",
+          "sortOrder": -1
         },
         "observerCount": {
           "type": "integer",
           "exclusiveMinimum": 0,
           "range": "xsd:positiveInteger",
           "subject": "WBC.observerCount",
-          "title": "Laskijoiden lukumäärä"
+          "title": "Laskijoiden lukumäärä",
+          "sortOrder": -1
         },
         "observerID": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.observerID",
-          "title": "Havainnoijanumero"
+          "title": "Havainnoijanumero",
+          "sortOrder": -1
         },
         "pineConesAtCensus": {
           "type": "string",
@@ -935,131 +1014,151 @@
           ],
           "range": "WBC.berriesAndConesEnum",
           "subject": "WBC.pineConesAtCensus",
-          "title": "Männynkäpyjä laskenta-aikaan"
+          "title": "Männynkäpyjä laskenta-aikaan",
+          "sortOrder": -1
         },
         "routeID": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeID",
-          "title": "Reitin numero"
+          "title": "Reitin numero",
+          "sortOrder": -1
         },
         "routeLength": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLength",
-          "title": "Reitin pituus (m)"
+          "title": "Reitin pituus (m)",
+          "sortOrder": -1
         },
         "routeLengthBiotopeA": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeA",
-          "title": "Route length dump"
+          "title": "Route length dump",
+          "sortOrder": -1
         },
         "routeLengthBiotopeB": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeB",
-          "title": "Route length urban"
+          "title": "Route length urban",
+          "sortOrder": -1
         },
         "routeLengthBiotopeC": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeC",
-          "title": "Route length countryside"
+          "title": "Route length countryside",
+          "sortOrder": -1
         },
         "routeLengthBiotopeD": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeD",
-          "title": "Route length field"
+          "title": "Route length field",
+          "sortOrder": -1
         },
         "routeLengthBiotopeE": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeE",
-          "title": "Route length forest"
+          "title": "Route length forest",
+          "sortOrder": -1
         },
         "routeLengthBiotopeF": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeF",
-          "title": "Route length other biotope"
+          "title": "Route length other biotope",
+          "sortOrder": -1
         },
         "routeLengthBiotopeG": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeG",
-          "title": "Route length cutting open"
+          "title": "Route length cutting open",
+          "sortOrder": -1
         },
         "routeLengthBiotopeH": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeH",
-          "title": "Route length reed"
+          "title": "Route length reed",
+          "sortOrder": -1
         },
         "routeLengthChange": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChange",
-          "title": "Reitin muutokset (m)"
+          "title": "Reitin muutokset (m)",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeA": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeA",
-          "title": "Reitin muutokset kaatopaikka"
+          "title": "Reitin muutokset kaatopaikka",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeB": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeB",
-          "title": "Reitin muutokset kaupunkiasutus"
+          "title": "Reitin muutokset kaupunkiasutus",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeC": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeC",
-          "title": "Reitin muutokset maaseutuasutus"
+          "title": "Reitin muutokset maaseutuasutus",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeD": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeD",
-          "title": "Reitin muutokset pelto"
+          "title": "Reitin muutokset pelto",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeE": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeE",
-          "title": "Reitin muutokset metsä"
+          "title": "Reitin muutokset metsä",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeF": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeF",
-          "title": "Reitin muutokset muu biotooppi"
+          "title": "Reitin muutokset muu biotooppi",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeG": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeG",
-          "title": "Reitin muutokset hakkuuaukea"
+          "title": "Reitin muutokset hakkuuaukea",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeH": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeH",
-          "title": "Reitin muutokset ruovikko"
+          "title": "Reitin muutokset ruovikko",
+          "sortOrder": -1
         },
         "snowAndIceOnTrees": {
           "type": "string",
@@ -1079,7 +1178,8 @@
           ],
           "range": "WBC.snowAndIceOnTreesEnum",
           "subject": "WBC.snowAndIceOnTrees",
-          "title": "Puissa oleva lumi ja jääkarsta"
+          "title": "Puissa oleva lumi ja jääkarsta",
+          "sortOrder": -1
         },
         "snowCover": {
           "type": "string",
@@ -1109,7 +1209,8 @@
           ],
           "range": "WBC.snowCoverEnum",
           "subject": "WBC.snowCover",
-          "title": "Lumipeite"
+          "title": "Lumipeite",
+          "sortOrder": -1
         },
         "sorbusBerriesAtCensus": {
           "type": "string",
@@ -1135,7 +1236,8 @@
           ],
           "range": "WBC.berriesAndConesEnum",
           "subject": "WBC.sorbusBerriesAtCensus",
-          "title": "Pihlajanmarjoja laskenta-aikaan"
+          "title": "Pihlajanmarjoja laskenta-aikaan",
+          "sortOrder": -1
         },
         "sorbusBerriesEarlyFall": {
           "type": "string",
@@ -1161,7 +1263,8 @@
           ],
           "range": "WBC.berriesAndConesEnum",
           "subject": "WBC.sorbusBerriesEarlyFall",
-          "title": "Pihlajanmarjoja alkusyksyllä"
+          "title": "Pihlajanmarjoja alkusyksyllä",
+          "sortOrder": -1
         },
         "spruceConesAtCensus": {
           "type": "string",
@@ -1187,7 +1290,8 @@
           ],
           "range": "WBC.berriesAndConesEnum",
           "subject": "WBC.spruceConesAtCensus",
-          "title": "Kuusenkäpyjä laskenta-aikaan"
+          "title": "Kuusenkäpyjä laskenta-aikaan",
+          "sortOrder": -1
         },
         "typeOfSnowCover": {
           "type": "string",
@@ -1205,7 +1309,8 @@
           ],
           "range": "WBC.typeOfSnowCoverEnum",
           "subject": "WBC.typeOfSnowCover",
-          "title": "Maassa olevan lumen laatu"
+          "title": "Maassa olevan lumen laatu",
+          "sortOrder": -1
         },
         "visibility": {
           "type": "string",
@@ -1227,7 +1332,8 @@
           ],
           "range": "WBC.visibilityEnum",
           "subject": "WBC.visibility",
-          "title": "Näkyvyys"
+          "title": "Näkyvyys",
+          "sortOrder": -1
         },
         "waterbodies": {
           "type": "string",
@@ -1251,7 +1357,8 @@
           ],
           "range": "WBC.waterbodiesEnum",
           "subject": "WBC.waterbodies",
-          "title": "Vesistöt"
+          "title": "Vesistöt",
+          "sortOrder": -1
         },
         "wayOfTravel": {
           "type": "string",
@@ -1273,13 +1380,15 @@
           ],
           "range": "WBC.wayOfTravelEnum",
           "subject": "WBC.wayOfTravel",
-          "title": "Kulkutapa"
+          "title": "Kulkutapa",
+          "sortOrder": -1
         },
         "wayOfTravelNotes": {
           "type": "string",
           "range": "xsd:string",
           "subject": "WBC.wayOfTravelNotes",
-          "title": "Kulkutavan kuvaus"
+          "title": "Kulkutavan kuvaus",
+          "sortOrder": -1
         },
         "wind": {
           "type": "string",
@@ -1301,22 +1410,26 @@
           ],
           "range": "WBC.windEnum",
           "subject": "WBC.wind",
-          "title": "Tuuli"
+          "title": "Tuuli",
+          "sortOrder": -1
         }
       },
-      "range": "MY.gatheringFactClass"
+      "range": "MY.gatheringFactClass",
+      "sortOrder": -1
     },
     "geometry": {
       "type": "object",
       "range": "MZ.geometry",
       "subject": "MY.geometry",
-      "title": "Coordinates"
+      "title": "Coordinates",
+      "sortOrder": -1
     },
     "gpsUsed": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.gpsUsed",
-      "title": "GPS used"
+      "title": "GPS used",
+      "sortOrder": -1
     },
     "leg": {
       "type": "array",
@@ -1328,13 +1441,15 @@
       "range": "xsd:string",
       "subject": "MY.leg",
       "description": "Name of the collector(s), in format 'Lastname, Firstname; Lastname Firstname'",
-      "title": "Leg"
+      "title": "Leg",
+      "sortOrder": 1
     },
     "legPublic": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.legPublic",
-      "title": "Display names publically?"
+      "title": "Display names publically?",
+      "sortOrder": 4
     },
     "legUserID": {
       "type": "array",
@@ -1346,7 +1461,8 @@
       "range": "xsd:string",
       "subject": "MY.legUserID",
       "description": "Alkuperäislähteen käyttäjätunnus",
-      "title": "Käyttäjätunnus"
+      "title": "Käyttäjätunnus",
+      "sortOrder": -1
     },
     "machineAssistance": {
       "type": "string",
@@ -1366,26 +1482,30 @@
       ],
       "range": "MY.machineAssistanceEnum",
       "subject": "MY.machineAssistance",
-      "title": "AI used"
+      "title": "AI used",
+      "sortOrder": -1
     },
     "namedPlaceNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.namedPlaceNotes",
-      "title": "Info about this route"
+      "title": "Info about this route",
+      "sortOrder": 8
     },
     "nextMonitoringYear": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "MY.nextMonitoringYear",
-      "title": "Next monitoring year"
+      "title": "Next monitoring year",
+      "sortOrder": -1
     },
     "notes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.notes",
       "description": "Additional information to the data in each section.",
-      "title": "Notes"
+      "title": "Notes",
+      "sortOrder": 7
     },
     "rainIntensity": {
       "type": "string",
@@ -1407,31 +1527,36 @@
       ],
       "range": "MY.rainIntensityEnum",
       "subject": "MY.rainIntensity",
-      "title": "Rain intensity"
+      "title": "Rain intensity",
+      "sortOrder": -1
     },
     "routeDirectionAdhered": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.routeDirectionAdhered",
-      "title": "Adhered route direction"
+      "title": "Adhered route direction",
+      "sortOrder": 6
     },
     "spottingScopeUsed": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.spottingScopeUsed",
-      "title": "Spotting scope"
+      "title": "Spotting scope",
+      "sortOrder": -1
     },
     "startDistanceFromNECorner": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.startDistanceFromNECorner",
-      "title": "Start distance from NE corner (m)"
+      "title": "Start distance from NE corner (m)",
+      "sortOrder": 9
     },
     "startPointDeviation": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "MY.startPointDeviation",
-      "title": "Start point deviation (m)"
+      "title": "Start point deviation (m)",
+      "sortOrder": 5
     },
     "taxonCensus": {
       "type": "array",
@@ -1447,7 +1572,8 @@
             "type": "string",
             "range": "MX.taxon",
             "subject": "MY.censusTaxonID",
-            "title": "Censused taxon"
+            "title": "Censused taxon",
+            "sortOrder": -1
           },
           "censusTaxonSetID": {
             "type": "string",
@@ -1503,7 +1629,8 @@
             ],
             "range": "MX.taxonSetEnum",
             "subject": "MY.censusTaxonSetID",
-            "title": "Censused taxon set"
+            "title": "Censused taxon set",
+            "sortOrder": -1
           },
           "taxonCensusType": {
             "type": "string",
@@ -1519,7 +1646,8 @@
             ],
             "range": "MY.taxonCensusEnum",
             "subject": "MY.taxonCensusType",
-            "title": "Completeness of census"
+            "title": "Completeness of census",
+            "sortOrder": -1
           }
         },
         "required": [
@@ -1529,37 +1657,43 @@
       "minItems": 0,
       "range": "MY.taxonCensusClass",
       "subject": "MY.taxonCensus",
-      "title": "Completely recorded taxon"
+      "title": "Completely recorded taxon",
+      "sortOrder": -1
     },
     "temperature": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "MY.temperature",
-      "title": "Temperature in celsius"
+      "title": "Temperature in celsius",
+      "sortOrder": -1
     },
     "temperatureEnd": {
       "type": "number",
       "range": "xsd:decimal",
       "subject": "MY.temperatureEnd",
-      "title": "End temperature / °C"
+      "title": "End temperature / °C",
+      "sortOrder": -1
     },
     "temperatureStart": {
       "type": "number",
       "range": "xsd:decimal",
       "subject": "MY.temperatureStart",
-      "title": "Start temperature / °C"
+      "title": "Start temperature / °C",
+      "sortOrder": -1
     },
     "timeEnd": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.timeEnd",
-      "title": "End time"
+      "title": "End time",
+      "sortOrder": -1
     },
     "timeStart": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.timeStart",
-      "title": "Start time"
+      "title": "Start time",
+      "sortOrder": -1
     }
   }
 }

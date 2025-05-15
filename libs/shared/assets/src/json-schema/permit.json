@@ -29,26 +29,30 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "HRA.permitEndDate",
-      "title": "End date"
+      "title": "End date",
+      "sortOrder": 4
     },
     "permitFile": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRA.permitFile",
-      "title": "File"
+      "title": "File",
+      "sortOrder": 6
     },
     "permitNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRA.permitNotes",
-      "title": "Notes"
+      "title": "Notes",
+      "sortOrder": 5
     },
     "permitStartDate": {
       "type": "string",
       "format": "date",
       "range": "xsd:date",
       "subject": "HRA.permitStartDate",
-      "title": "Start date"
+      "title": "Start date",
+      "sortOrder": 3
     },
     "permitStatus": {
       "type": "string",
@@ -64,7 +68,8 @@
       ],
       "range": "HRA.permitStatusEnum",
       "subject": "HRA.permitStatus",
-      "title": "Permit status"
+      "title": "Permit status",
+      "sortOrder": 2
     },
     "permitType": {
       "type": "string",
@@ -90,14 +95,16 @@
       ],
       "range": "HRA.permitTypeEnum",
       "subject": "HRA.permitType",
-      "title": "Permit type"
+      "title": "Permit type",
+      "sortOrder": 1
     },
     "isPartOf": {
       "type": "string",
       "range": "rdfs:Resource",
       "subject": "MY.isPartOf",
       "description": "Which parent or larger collection this is part of.",
-      "title": "Is part of"
+      "title": "Is part of",
+      "sortOrder": 34
     }
   }
 }

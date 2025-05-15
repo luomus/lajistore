@@ -33,13 +33,15 @@
       "minItems": 0,
       "range": "MA.person",
       "subject": "MKV.iucnEditor",
-      "title": "iucnEditor"
+      "title": "iucnEditor",
+      "sortOrder": -1
     },
     "taxonGroup": {
       "type": "string",
       "range": "MVL.informalTaxonGroup",
       "subject": "MKV.taxonGroup",
-      "title": "taxonGroup"
+      "title": "taxonGroup",
+      "sortOrder": -1
     }
   },
   "required": [

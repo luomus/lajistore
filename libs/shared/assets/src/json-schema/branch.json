@@ -28,52 +28,60 @@
       "type": "string",
       "range": "MY.document",
       "subject": "PUU.accessionID",
-      "title": "Accession ID"
+      "title": "Accession ID",
+      "sortOrder": 5
     },
     "collectionID": {
       "type": "string",
       "range": "MY.collection",
       "subject": "PUU.collectionID",
       "description": "Garden area",
-      "title": "Location"
+      "title": "Location",
+      "sortOrder": 1
     },
     "exists": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "PUU.exists",
       "description": "Is the branch alive or not?",
-      "title": "Exists"
+      "title": "Exists",
+      "sortOrder": 4
     },
     "gardenLocationNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "PUU.gardenLocationNotes",
-      "title": "Garden location notes"
+      "title": "Garden location notes",
+      "sortOrder": 8
     },
     "location": {
       "type": "string",
       "range": "xsd:string",
       "subject": "PUU.location",
       "description": "Sublocation within the garden area, free-text",
-      "title": "Sublocation"
+      "title": "Sublocation",
+      "sortOrder": 2
     },
     "notes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "PUU.notes",
-      "title": "Notes"
+      "title": "Notes",
+      "sortOrder": 3
     },
     "wgs84Latitude": {
       "type": "string",
       "range": "xsd:string",
       "subject": "PUU.wgs84Latitude",
-      "title": "Latitude (WGS 84)"
+      "title": "Latitude (WGS 84)",
+      "sortOrder": 7
     },
     "wgs84Longitude": {
       "type": "string",
       "range": "xsd:string",
       "subject": "PUU.wgs84Longitude",
-      "title": "Longitude (WGS 84)"
+      "title": "Longitude (WGS 84)",
+      "sortOrder": 6
     }
   },
   "required": [

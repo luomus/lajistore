@@ -29,14 +29,16 @@
       "range": "xsd:string",
       "subject": "MHL.end",
       "description": "End of season",
-      "title": "end"
+      "title": "end",
+      "sortOrder": -1
     },
     "start": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MHL.start",
       "description": "Start of season",
-      "title": "Start"
+      "title": "Start",
+      "sortOrder": -1
     }
   }
 }

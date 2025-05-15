@@ -28,45 +28,52 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MXC.deviceManufacturer",
-      "title": "Device manufacturer"
+      "title": "Device manufacturer",
+      "sortOrder": 3
     },
     "deviceManufacturerID": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MXC.deviceManufacturerID",
-      "title": "Manufacturers device ID"
+      "title": "Manufacturers device ID",
+      "sortOrder": 2
     },
     "deviceType": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MXC.deviceType",
-      "title": "Type of the device"
+      "title": "Type of the device",
+      "sortOrder": 1
     },
     "creator": {
       "type": "string",
       "range": "MA.person",
       "subject": "MZ.creator",
-      "title": "Creator"
+      "title": "Creator",
+      "sortOrder": -1
     },
     "dateCreated": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MZ.dateCreated",
-      "title": "Created"
+      "title": "Created",
+      "sortOrder": -1
     },
     "dateEdited": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MZ.dateEdited",
-      "title": "Edited"
+      "title": "Edited",
+      "sortOrder": -1
     },
     "editor": {
       "type": "string",
       "range": "MA.person",
       "subject": "MZ.editor",
-      "title": "Editor"
+      "title": "Editor",
+      "sortOrder": -1
     },
     "ownerPerson": {
       "type": "array",
@@ -77,7 +84,8 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MZ.ownerPerson",
-      "title": "Has permissions to modify"
+      "title": "Has permissions to modify",
+      "sortOrder": -1
     }
   },
   "required": [

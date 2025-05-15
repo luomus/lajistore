@@ -38,7 +38,8 @@
             "type": "string",
             "range": "ML.area",
             "subject": "MA.birdSongRecognitionArea",
-            "title": "Area"
+            "title": "Area",
+            "sortOrder": -1
           },
           "birdSongRecognitionSkillLevel": {
             "type": "string",
@@ -56,7 +57,8 @@
             ],
             "range": "MA.birdSongRecognitionSkillLevelEnum",
             "subject": "MA.birdSongRecognitionSkillLevel",
-            "title": "Skill level"
+            "title": "Skill level",
+            "sortOrder": -1
           }
         },
         "required": [
@@ -67,7 +69,8 @@
       "minItems": 0,
       "range": "MA.birdSongRecognitionSkillLevelClass",
       "subject": "MA.birdSongRecognitionSkillLevels",
-      "title": "Bird sing recognition skill level"
+      "title": "Bird sing recognition skill level",
+      "sortOrder": -1
     },
     "birdwatchingActivityLevel": {
       "type": "string",
@@ -87,7 +90,8 @@
       ],
       "range": "MA.birdwatchingActivityLevelEnum",
       "subject": "MA.birdwatchingActivityLevel",
-      "title": "User's activity level in birdwatching"
+      "title": "User's activity level in birdwatching",
+      "sortOrder": 13
     },
     "blocked": {
       "type": "array",
@@ -98,7 +102,8 @@
       "minItems": 0,
       "range": "MA.person",
       "subject": "MA.blocked",
-      "title": "Blocked ppl"
+      "title": "Blocked ppl",
+      "sortOrder": 6
     },
     "finnishBirdSongRecognitionSkillLevel": {
       "type": "string",
@@ -118,7 +123,8 @@
       ],
       "range": "MA.finnishBirdSongRecognitionSkillLevelEnum",
       "subject": "MA.finnishBirdSongRecognitionSkillLevel",
-      "title": "User's skill level in Finnish bird song recognition"
+      "title": "User's skill level in Finnish bird song recognition",
+      "sortOrder": 12
     },
     "friendRequests": {
       "type": "array",
@@ -129,7 +135,8 @@
       "minItems": 0,
       "range": "MA.person",
       "subject": "MA.friendRequests",
-      "title": "Friend requests received"
+      "title": "Friend requests received",
+      "sortOrder": 7
     },
     "friends": {
       "type": "array",
@@ -140,37 +147,43 @@
       "minItems": 0,
       "range": "MA.person",
       "subject": "MA.friends",
-      "title": "List of friends of the user"
+      "title": "List of friends of the user",
+      "sortOrder": 5
     },
     "image": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.image",
-      "title": "Image for the profile"
+      "title": "Image for the profile",
+      "sortOrder": 4
     },
     "nameVisibleInKerttu": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MA.nameVisibleInKerttu",
-      "title": "Name is visible to others in Kerttu"
+      "title": "Name is visible to others in Kerttu",
+      "sortOrder": 15
     },
     "personalCollectionIdentifier": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.personalCollectionIdentifier",
-      "title": "Own collection identifier"
+      "title": "Own collection identifier",
+      "sortOrder": 11
     },
     "profileDescription": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.profileDescription",
-      "title": "Profile description"
+      "title": "Profile description",
+      "sortOrder": 3
     },
     "settings": {
       "type": "object",
       "range": "MZ.keyAny",
       "subject": "MA.settings",
-      "title": "Settings for the user"
+      "title": "Settings for the user",
+      "sortOrder": 8
     },
     "taxonExpertise": {
       "type": "array",
@@ -181,25 +194,29 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MA.taxonExpertise",
-      "title": "Expertise"
+      "title": "Expertise",
+      "sortOrder": 9
     },
     "taxonExpertiseNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.taxonExpertiseNotes",
-      "title": "Expertise notes"
+      "title": "Expertise notes",
+      "sortOrder": 10
     },
     "userID": {
       "type": "string",
       "range": "MA.person",
       "subject": "MA.userID",
-      "title": "This users profile"
+      "title": "This users profile",
+      "sortOrder": 2
     },
     "profileKey": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.profileKey",
-      "title": "profileKey"
+      "title": "profileKey",
+      "sortOrder": 1
     }
   },
   "required": [

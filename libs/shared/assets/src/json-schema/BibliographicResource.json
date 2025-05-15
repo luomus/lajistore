@@ -28,13 +28,15 @@
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MR.isPublic",
-      "title": "isPublic"
+      "title": "isPublic",
+      "sortOrder": 2
     },
     "owner": {
       "type": "string",
       "range": "MA.person",
       "subject": "MR.owner",
-      "title": "owner"
+      "title": "owner",
+      "sortOrder": 1
     }
   },
   "required": [
