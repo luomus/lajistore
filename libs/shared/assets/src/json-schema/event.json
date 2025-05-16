@@ -28,46 +28,53 @@
       "type": "string",
       "range": "MA.person",
       "subject": "PUU.agent",
-      "title": "Doer"
+      "title": "Doer",
+      "sortOrder": 7
     },
     "amount": {
       "type": "string",
       "range": "xsd:string",
       "subject": "PUU.amount",
       "description": "Enter the amount in the branch as n, addition to the previously given amount as +n or reduction as -n",
-      "title": "Amount"
+      "title": "Amount",
+      "sortOrder": 2
     },
     "amountEstimationUnit": {
       "type": "string",
       "range": "xsd:string",
       "subject": "PUU.amountEstimationUnit",
-      "title": "Unit"
+      "title": "Unit",
+      "sortOrder": 8
     },
     "branchID": {
       "type": "string",
       "range": "PUU.branch",
       "subject": "PUU.branchID",
       "description": "ID for the accossiated branch",
-      "title": "Branch ID"
+      "title": "Branch ID",
+      "sortOrder": 1
     },
     "date": {
       "type": "string",
       "format": "date",
       "range": "xsd:date",
       "subject": "PUU.date",
-      "title": "Date"
+      "title": "Date",
+      "sortOrder": 5
     },
     "eRH": {
       "type": "string",
       "range": "xsd:string",
       "subject": "PUU.eRH",
-      "title": "eRH"
+      "title": "eRH",
+      "sortOrder": 14
     },
     "estimatedSeedQuantity": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "PUU.estimatedSeedQuantity",
-      "title": "Quantity"
+      "title": "Quantity",
+      "sortOrder": 9
     },
     "eventType": {
       "type": "string",
@@ -135,25 +142,29 @@
       ],
       "range": "MY.eventType",
       "subject": "PUU.eventType",
-      "title": "Event type"
+      "title": "Event type",
+      "sortOrder": 4
     },
     "germinationConditions": {
       "type": "string",
       "range": "xsd:string",
       "subject": "PUU.germinationConditions",
-      "title": "Germination conditions"
+      "title": "Germination conditions",
+      "sortOrder": 19
     },
     "germinationPercentage": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "PUU.germinationPercentage",
-      "title": "Germination percentage"
+      "title": "Germination percentage",
+      "sortOrder": 15
     },
     "germinationRate": {
       "type": "number",
       "range": "xsd:decimal",
       "subject": "PUU.germinationRate",
-      "title": "Germination rate"
+      "title": "Germination rate",
+      "sortOrder": 17
     },
     "lifeStage": {
       "type": "string",
@@ -187,73 +198,85 @@
       ],
       "range": "MY.plantLifeStageEnum",
       "subject": "PUU.lifeStage",
-      "title": "Life stage"
+      "title": "Life stage",
+      "sortOrder": 6
     },
     "notes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "PUU.notes",
-      "title": "Notes"
+      "title": "Notes",
+      "sortOrder": 3
     },
     "numberOfSeedsEmpty": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "PUU.numberOfSeedsEmpty",
-      "title": "Number seeds empty"
+      "title": "Number seeds empty",
+      "sortOrder": 13
     },
     "numberOfSeedsFull": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "PUU.numberOfSeedsFull",
-      "title": "Number seed full"
+      "title": "Number seed full",
+      "sortOrder": 11
     },
     "numberOfSeedsInfested": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "PUU.numberOfSeedsInfested",
-      "title": "Number seed infested"
+      "title": "Number seed infested",
+      "sortOrder": 20
     },
     "numberOfSeedsMouldy": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "PUU.numberOfSeedsMouldy",
-      "title": "Number seed mouldy"
+      "title": "Number seed mouldy",
+      "sortOrder": 21
     },
     "numberOfSeedsPartFull": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "PUU.numberOfSeedsPartFull",
-      "title": "Number seed part-full"
+      "title": "Number seed part-full",
+      "sortOrder": 12
     },
     "numberOfSeedsTested": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "PUU.numberOfSeedsTested",
-      "title": "Number seed tested"
+      "title": "Number seed tested",
+      "sortOrder": 10
     },
     "percentageSeedsFull": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "PUU.percentageSeedsFull",
-      "title": "Test result (%)"
+      "title": "Test result (%)",
+      "sortOrder": 22
     },
     "seedsExchangedInstitution": {
       "type": "string",
       "range": "MOS.organization",
       "subject": "PUU.seedsExchangedInstitution",
-      "title": "Institution"
+      "title": "Institution",
+      "sortOrder": 18
     },
     "testPassed": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "PUU.testPassed",
-      "title": "Test passed"
+      "title": "Test passed",
+      "sortOrder": 23
     },
     "viabilityPercentage": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "PUU.viabilityPercentage",
-      "title": "Viability percentage"
+      "title": "Viability percentage",
+      "sortOrder": 16
     }
   },
   "required": [

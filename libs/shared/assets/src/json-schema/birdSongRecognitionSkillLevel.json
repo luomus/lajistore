@@ -28,7 +28,8 @@
       "type": "string",
       "range": "ML.area",
       "subject": "MA.birdSongRecognitionArea",
-      "title": "Area"
+      "title": "Area",
+      "sortOrder": -1
     },
     "birdSongRecognitionSkillLevel": {
       "type": "string",
@@ -46,7 +47,8 @@
       ],
       "range": "MA.birdSongRecognitionSkillLevelEnum",
       "subject": "MA.birdSongRecognitionSkillLevel",
-      "title": "Skill level"
+      "title": "Skill level",
+      "sortOrder": -1
     }
   },
   "required": [

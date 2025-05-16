@@ -28,55 +28,64 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MAN.countryVerbatim",
-      "title": "Country verbatim"
+      "title": "Country verbatim",
+      "sortOrder": 7
     },
     "dateBegin": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MAN.dateBegin",
-      "title": "Date begin"
+      "title": "Date begin",
+      "sortOrder": 5
     },
     "dateEnd": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MAN.dateEnd",
-      "title": "Date end"
+      "title": "Date end",
+      "sortOrder": 6
     },
     "locality": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MAN.locality",
-      "title": "Locality"
+      "title": "Locality",
+      "sortOrder": 9
     },
     "municipalityVerbatim": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MAN.municipalityVerbatim",
-      "title": "Municipality verbatim"
+      "title": "Municipality verbatim",
+      "sortOrder": 8
     },
     "taxonId": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MAN.taxonId",
-      "title": "Taxon ID"
+      "title": "Taxon ID",
+      "sortOrder": 1
     },
     "taxonVerbatim": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MAN.taxonVerbatim",
-      "title": "Taxon verbatim"
+      "title": "Taxon verbatim",
+      "sortOrder": 2
     },
     "wgs84centerPointLat": {
       "type": "number",
       "range": "xsd:decimal",
       "subject": "MAN.wgs84centerPointLat",
-      "title": "Latitude (center point)"
+      "title": "Latitude (center point)",
+      "sortOrder": 3
     },
     "wgs84centerPointLon": {
       "type": "number",
       "range": "xsd:decimal",
       "subject": "MAN.wgs84centerPointLon",
-      "title": "Longitude (center point)"
+      "title": "Longitude (center point)",
+      "sortOrder": 4
     }
   }
 }

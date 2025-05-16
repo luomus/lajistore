@@ -28,13 +28,15 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "TDF.description",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": -1
     },
     "name": {
       "type": "string",
       "range": "xsd:string",
       "subject": "TDF.name",
-      "title": "Name"
+      "title": "Name",
+      "sortOrder": -1
     }
   },
   "required": [

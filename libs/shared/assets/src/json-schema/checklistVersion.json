@@ -28,14 +28,16 @@
       "type": "string",
       "range": "MR.checklist",
       "subject": "MR.versionChecklist",
-      "title": "Checklist id"
+      "title": "Checklist id",
+      "sortOrder": 3
     },
     "versionDate": {
       "type": "string",
       "format": "date",
       "range": "xsd:date",
       "subject": "MR.versionDate",
-      "title": "Frozen at"
+      "title": "Frozen at",
+      "sortOrder": 4
     },
     "versionDescription": {
       "type": "object",
@@ -53,7 +55,8 @@
       },
       "range": "xsd:string",
       "subject": "MR.versionDescription",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": 2
     },
     "versionName": {
       "type": "object",
@@ -71,7 +74,8 @@
       },
       "range": "xsd:string",
       "subject": "MR.versionName",
-      "title": "Name"
+      "title": "Name",
+      "sortOrder": 1
     }
   }
 }

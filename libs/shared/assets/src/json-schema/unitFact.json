@@ -28,13 +28,15 @@
       "type": "integer",
       "range": "xsd:integer",
       "subject": "MY.adultIndividualCount",
-      "title": "Adult individual count"
+      "title": "Adult individual count",
+      "sortOrder": -1
     },
     "autocompleteSelectedTaxonID": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.autocompleteSelectedTaxonID",
-      "title": "Taxon ID selected from autocomplete"
+      "title": "Taxon ID selected from autocomplete",
+      "sortOrder": -1
     },
     "glowWormMicrohabitat": {
       "type": "string",
@@ -60,34 +62,39 @@
       ],
       "range": "MY.glowWormMicrohabitatEnum",
       "subject": "MY.glowWormMicrohabitat",
-      "title": "Micro habitat"
+      "title": "Micro habitat",
+      "sortOrder": -1
     },
     "individualCountFlock": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "MY.individualCountFlock",
-      "title": "Parven koko"
+      "title": "Parven koko",
+      "sortOrder": -1
     },
     "individualCountInner": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "MY.individualCountInner",
-      "title": "Yksilömäärä sisällä"
+      "title": "Yksilömäärä sisällä",
+      "sortOrder": -1
     },
     "individualCountOuter": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "MY.individualCountOuter",
-      "title": "Yksilömäärä alueen ulkopuolella"
+      "title": "Yksilömäärä alueen ulkopuolella",
+      "sortOrder": -1
     },
     "juvenileIndividualCount": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "MY.juvenileIndividualCount",
-      "title": "Juvenile individual count"
+      "title": "Juvenile individual count",
+      "sortOrder": -1
     },
     "lineTransectObsType": {
       "type": "string",
@@ -123,7 +130,8 @@
       ],
       "range": "MY.lineTransectObsTypeEnum",
       "subject": "MY.lineTransectObsType",
-      "title": "Observations quality"
+      "title": "Observations quality",
+      "sortOrder": -1
     },
     "lineTransectRouteFieldType": {
       "type": "string",
@@ -139,7 +147,8 @@
       ],
       "range": "MY.lineTransectRouteFieldTypeEnum",
       "subject": "MY.lineTransectRouteFieldType",
-      "title": "Field Area"
+      "title": "Field Area",
+      "sortOrder": -1
     },
     "lolifeDroppingsCount": {
       "type": "string",
@@ -163,7 +172,8 @@
       ],
       "range": "MY.lolifeDroppingsCountEnum",
       "subject": "MY.lolifeDroppingsCount",
-      "title": "Droppings count"
+      "title": "Droppings count",
+      "sortOrder": -1
     },
     "lolifeDroppingsQuality": {
       "type": "string",
@@ -179,7 +189,8 @@
       ],
       "range": "MY.lolifeDroppingsQualityEnum",
       "subject": "MY.lolifeDroppingsQuality",
-      "title": "Papanoiden laatu"
+      "title": "Papanoiden laatu",
+      "sortOrder": -1
     },
     "lolifeDroppingsType": {
       "type": "string",
@@ -199,7 +210,8 @@
       ],
       "range": "MY.lolifeDroppingsTypeEnum",
       "subject": "MY.lolifeDroppingsType",
-      "title": "Droppings type"
+      "title": "Droppings type",
+      "sortOrder": -1
     },
     "lolifeNestTree": {
       "type": "string",
@@ -225,33 +237,38 @@
       ],
       "range": "MY.lolifeNestTreeEnum",
       "subject": "MY.lolifeNestTree",
-      "title": "Tree species"
+      "title": "Tree species",
+      "sortOrder": -1
     },
     "pairCountInner": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "MY.pairCountInner",
-      "title": "Parimäärä sisällä"
+      "title": "Parimäärä sisällä",
+      "sortOrder": -1
     },
     "pairCountOuter": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "MY.pairCountOuter",
-      "title": "Parimäärä alueen ulkopuolella"
+      "title": "Parimäärä alueen ulkopuolella",
+      "sortOrder": -1
     },
     "pointCountFlock": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.pointCountFlock",
-      "title": "Parvien koot"
+      "title": "Parvien koot",
+      "sortOrder": -1
     },
     "runningWaterInVicinity": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.runningWaterInVicinity",
-      "title": "Is the plant growing next to running water?"
+      "title": "Is the plant growing next to running water?",
+      "sortOrder": -1
     },
     "waterbirdFemale": {
       "type": "string",
@@ -269,7 +286,8 @@
       ],
       "range": "MY.waterbirdFemaleEnum",
       "subject": "MY.waterbirdFemale",
-      "title": "Female observed"
+      "title": "Female observed",
+      "sortOrder": -1
     },
     "waterbirdJuvenileAgeClass": {
       "type": "string",
@@ -297,19 +315,22 @@
       ],
       "range": "MY.waterbirdJuvenileAgeClassEnum",
       "subject": "MY.waterbirdJuvenileAgeClass",
-      "title": "Juvenile age class"
+      "title": "Juvenile age class",
+      "sortOrder": -1
     },
     "waterbirdJuvenileCountAccurate": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.waterbirdJuvenileCountAccurate",
-      "title": "Count accurate?"
+      "title": "Count accurate?",
+      "sortOrder": -1
     },
     "waterbirdObserverOpinionSelectedCensus": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.waterbirdObserverOpinionSelectedCensus",
-      "title": "Make an interpretation based on this census"
+      "title": "Make an interpretation based on this census",
+      "sortOrder": -1
     },
     "waterbirdPairCountOpinionReasoning": {
       "type": "string",
@@ -329,63 +350,72 @@
       ],
       "range": "MY.waterbirdPairCountOpinionReasoningEnum",
       "subject": "MY.waterbirdPairCountOpinionReasoning",
-      "title": "Reasoning for own interpretation"
+      "title": "Reasoning for own interpretation",
+      "sortOrder": -1
     },
     "individualCountBiotopeA": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "WBC.individualCountBiotopeA",
-      "title": "Individual count dump"
+      "title": "Individual count dump",
+      "sortOrder": -1
     },
     "individualCountBiotopeB": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "WBC.individualCountBiotopeB",
-      "title": "Individual count urban"
+      "title": "Individual count urban",
+      "sortOrder": -1
     },
     "individualCountBiotopeC": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "WBC.individualCountBiotopeC",
-      "title": "Individual count countryside"
+      "title": "Individual count countryside",
+      "sortOrder": -1
     },
     "individualCountBiotopeD": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "WBC.individualCountBiotopeD",
-      "title": "Individual count field"
+      "title": "Individual count field",
+      "sortOrder": -1
     },
     "individualCountBiotopeE": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "WBC.individualCountBiotopeE",
-      "title": "Individual count forest"
+      "title": "Individual count forest",
+      "sortOrder": -1
     },
     "individualCountBiotopeF": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "WBC.individualCountBiotopeF",
-      "title": "Individual count other biotope"
+      "title": "Individual count other biotope",
+      "sortOrder": -1
     },
     "individualCountBiotopeG": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "WBC.individualCountBiotopeG",
-      "title": "Individual count cutting open"
+      "title": "Individual count cutting open",
+      "sortOrder": -1
     },
     "individualCountBiotopeH": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "WBC.individualCountBiotopeH",
-      "title": "Individual count reed"
+      "title": "Individual count reed",
+      "sortOrder": -1
     }
   }
 }

@@ -28,83 +28,96 @@
       "type": "integer",
       "range": "xsd:integer",
       "subject": "herbo:sortOrder",
-      "title": "herbo:sortOrder"
+      "title": "herbo:sortOrder",
+      "sortOrder": -1
     },
     "apiName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "DDF.apiName",
-      "title": "Name in API /warehouse/unit endpoint"
+      "title": "Name in API /warehouse/unit endpoint",
+      "sortOrder": 6
     },
     "description": {
       "type": "string",
       "range": "xsd:string",
       "subject": "DDF.description",
       "description": "Information for data users about the contents/source/etc of the field",
-      "title": "Description of the field"
+      "title": "Description of the field",
+      "sortOrder": 4
     },
     "example": {
       "type": "string",
       "range": "xsd:string",
       "subject": "DDF.example",
-      "title": "Example values"
+      "title": "Example values",
+      "sortOrder": 5
     },
     "includeFull": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "DDF.includeFull",
-      "title": "Include field to full downloads"
+      "title": "Include field to full downloads",
+      "sortOrder": 9
     },
     "includeSecurePortalUI": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "DDF.includeSecurePortalUI",
-      "title": "Include field to PAP UI"
+      "title": "Include field to PAP UI",
+      "sortOrder": 11
     },
     "includeUI": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "DDF.includeUI",
-      "title": "Include field to Laji.fi UI"
+      "title": "Include field to Laji.fi UI",
+      "sortOrder": 10
     },
     "name": {
       "type": "string",
       "range": "xsd:string",
       "subject": "DDF.name",
-      "title": "Human readable name"
+      "title": "Human readable name",
+      "sortOrder": 2
     },
     "rPackageName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "DDF.rPackageName",
-      "title": "Name in R-package"
+      "title": "Name in R-package",
+      "sortOrder": 7
     },
     "shortName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "DDF.shortName",
       "description": "Short name for shapefiles",
-      "title": "Short name"
+      "title": "Short name",
+      "sortOrder": 3
     },
     "techicalNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "DDF.techicalNotes",
       "description": "Internal notes for us developers",
-      "title": "Technical notes"
+      "title": "Technical notes",
+      "sortOrder": 8
     },
     "technicalName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "DDF.technicalName",
       "description": "Short dwc or other term for the field (for example \"collectionID\"); usually the same as subjectname (without the \"DDF.\")",
-      "title": "Technical name"
+      "title": "Technical name",
+      "sortOrder": 1
     },
     "sortOrder": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "sortOrder",
-      "title": "sortOrder"
+      "title": "sortOrder",
+      "sortOrder": -1
     }
   },
   "required": [

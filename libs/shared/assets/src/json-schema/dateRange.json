@@ -29,14 +29,16 @@
       "format": "date",
       "range": "xsd:date",
       "subject": "MNP.end",
-      "title": "End"
+      "title": "End",
+      "sortOrder": 2
     },
     "start": {
       "type": "string",
       "format": "date",
       "range": "xsd:date",
       "subject": "MNP.start",
-      "title": "Start"
+      "title": "Start",
+      "sortOrder": 1
     }
   }
 }

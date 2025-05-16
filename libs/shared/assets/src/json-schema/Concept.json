@@ -28,37 +28,43 @@
       "type": "string",
       "range": "skos:Concept",
       "subject": "skos:broader",
-      "title": "skos:broader"
+      "title": "skos:broader",
+      "sortOrder": -1
     },
     "skos:definition": {
       "type": "string",
       "range": "xsd:string",
       "subject": "skos:definition",
-      "title": "skos:definition"
+      "title": "skos:definition",
+      "sortOrder": -1
     },
     "skos:example": {
       "type": "string",
       "range": "xsd:string",
       "subject": "skos:example",
-      "title": "skos:example"
+      "title": "skos:example",
+      "sortOrder": -1
     },
     "skos:inScheme": {
       "type": "string",
       "range": "skos:ConceptScheme",
       "subject": "skos:inScheme",
-      "title": "skos:inScheme"
+      "title": "skos:inScheme",
+      "sortOrder": -1
     },
     "skos:narrower": {
       "type": "string",
       "range": "skos:Concept",
       "subject": "skos:narrower",
-      "title": "skos:narrower"
+      "title": "skos:narrower",
+      "sortOrder": -1
     },
     "skos:note": {
       "type": "string",
       "range": "xsd:string",
       "subject": "skos:note",
-      "title": "skos:note"
+      "title": "skos:note",
+      "sortOrder": -1
     }
   },
   "required": [

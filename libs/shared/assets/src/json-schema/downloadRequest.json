@@ -28,13 +28,15 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "HBF.apiKeyExpires",
-      "title": "API-key expires"
+      "title": "API-key expires",
+      "sortOrder": -1
     },
     "approximateResultSize": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "HBF.approximateResultSize",
-      "title": "Approximate result size"
+      "title": "Approximate result size",
+      "sortOrder": -1
     },
     "collectionId": {
       "type": "array",
@@ -45,44 +47,51 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "HBF.collectionId",
-      "title": "collectionId"
+      "title": "collectionId",
+      "sortOrder": -1
     },
     "completed": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "HBF.completed",
-      "title": "completed"
+      "title": "completed",
+      "sortOrder": -1
     },
     "created": {
       "type": "string",
       "format": "date",
       "range": "xsd:date",
       "subject": "HBF.created",
-      "title": "Created date"
+      "title": "Created date",
+      "sortOrder": -1
     },
     "createdFile": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HBF.createdFile",
-      "title": "Created file name"
+      "title": "Created file name",
+      "sortOrder": -1
     },
     "createdFileSize": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HBF.createdFileSize",
-      "title": "Size in MB"
+      "title": "Size in MB",
+      "sortOrder": -1
     },
     "dataUsePurpose": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HBF.dataUsePurpose",
-      "title": "Purpose of data use"
+      "title": "Purpose of data use",
+      "sortOrder": -1
     },
     "downloadFormat": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HBF.downloadFormat",
-      "title": "Download format"
+      "title": "Download format",
+      "sortOrder": -1
     },
     "downloadInclude": {
       "type": "array",
@@ -93,13 +102,15 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "HBF.downloadInclude",
-      "title": "Include to download"
+      "title": "Include to download",
+      "sortOrder": -1
     },
     "downloadType": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HBF.downloadType",
-      "title": "Download type"
+      "title": "Download type",
+      "sortOrder": -1
     },
     "downloaded": {
       "type": "array",
@@ -111,25 +122,29 @@
       "minItems": 0,
       "range": "xsd:date",
       "subject": "HBF.downloaded",
-      "title": "Download date"
+      "title": "Download date",
+      "sortOrder": -1
     },
     "email": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HBF.email",
-      "title": "Email"
+      "title": "Email",
+      "sortOrder": -1
     },
     "failed": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "HBF.failed",
-      "title": "Has failed"
+      "title": "Has failed",
+      "sortOrder": -1
     },
     "failureReason": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HBF.failureReason",
-      "title": "Failure reason"
+      "title": "Failure reason",
+      "sortOrder": -1
     },
     "filter": {
       "type": "array",
@@ -140,38 +155,44 @@
       "minItems": 1,
       "range": "xsd:string",
       "subject": "HBF.filter",
-      "title": "Filter"
+      "title": "Filter",
+      "sortOrder": -1
     },
     "locale": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HBF.locale",
-      "title": "Locale"
+      "title": "Locale",
+      "sortOrder": -1
     },
     "person": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HBF.person",
-      "title": "Person id"
+      "title": "Person id",
+      "sortOrder": -1
     },
     "requested": {
       "type": "string",
       "format": "date",
       "range": "xsd:date",
       "subject": "HBF.requested",
-      "title": "Request date"
+      "title": "Request date",
+      "sortOrder": -1
     },
     "source": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HBF.source",
-      "title": "source"
+      "title": "source",
+      "sortOrder": -1
     },
     "warehouse": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HBF.warehouse",
-      "title": "Warehouse type"
+      "title": "Warehouse type",
+      "sortOrder": -1
     }
   },
   "required": [

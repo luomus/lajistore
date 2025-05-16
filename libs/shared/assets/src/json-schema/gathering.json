@@ -29,54 +29,62 @@
       "range": "xsd:string",
       "subject": "MY.AFEQuadrat",
       "description": "AFE grid name",
-      "title": "AFE grid"
+      "title": "AFE grid",
+      "sortOrder": 18
     },
     "UTMQuadrat": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.UTMQuadrat",
       "description": "UTM grid name",
-      "title": "UTM grid"
+      "title": "UTM grid",
+      "sortOrder": 24
     },
     "acknowledgeNoUnitsInCensus": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.acknowledgeNoUnitsInCensus",
-      "title": "No units in census"
+      "title": "No units in census",
+      "sortOrder": -1
     },
     "administrativeProvince": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.administrativeProvince",
       "description": "Regions, rayons, provinces and other administrative areas. Separate multiple names with commas, from generic to specific. (E.g. Etelä-Suomen lääni, Uusimaa)",
-      "title": "Administrative province"
+      "title": "Administrative province",
+      "sortOrder": 25
     },
     "alt": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.alt",
       "description": "Altitude form sea level in meters, single value or range (E.g. 90, or 80-100). No GPS altitude here.",
-      "title": "Alt in meters"
+      "title": "Alt in meters",
+      "sortOrder": 16
     },
     "areaDetail": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.areaDetail",
-      "title": "Area details"
+      "title": "Area details",
+      "sortOrder": -1
     },
     "associatedObservationTaxa": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.associatedObservationTaxa",
       "description": "Write associated observation taxa names here, separated by a semicolon (;). E.g.: \"Betula pendula; Betula pubescens; Poaceae\". These will form their own units of the type observation.",
-      "title": "Associated observation taxa"
+      "title": "Associated observation taxa",
+      "sortOrder": 35
     },
     "associatedSpecimenTaxa": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.associatedSpecimenTaxa",
       "description": "Write associated specimen taxa names here, separated by a semicolon (;). E.g.: \"Betula pendula; Betula pubescens; Poaceae\". These will form their own units of the type Preserved specimen.",
-      "title": "Associated specimen taxa"
+      "title": "Associated specimen taxa",
+      "sortOrder": 40
     },
     "batHabitat": {
       "type": "array",
@@ -126,71 +134,82 @@
       "range": "MY.batHabitatEnum",
       "subject": "MY.batHabitat",
       "description": "Bat habitat",
-      "title": "Habitat"
+      "title": "Habitat",
+      "sortOrder": -1
     },
     "binocularsUsed": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.binocularsUsed",
-      "title": "Binoculars"
+      "title": "Binoculars",
+      "sortOrder": -1
     },
     "biologicalProvince": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.biologicalProvince",
       "description": "Formal abbreviation. For Finnish eliömaakunnat, use Finnish abbreviation.",
-      "title": "Biogeographical province"
+      "title": "Biogeographical province",
+      "sortOrder": 23
     },
     "censusHinderedByEnviromentalFactors": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.censusHinderedByEnviromentalFactors",
-      "title": "Weather (etc) hindered the census"
+      "title": "Weather (etc) hindered the census",
+      "sortOrder": -1
     },
     "censusHinderedByFog": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.censusHinderedByFog",
-      "title": "Fog hindered the census"
+      "title": "Fog hindered the census",
+      "sortOrder": -1
     },
     "censusHinderedByRain": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.censusHinderedByRain",
-      "title": "Rain hindered the census"
+      "title": "Rain hindered the census",
+      "sortOrder": -1
     },
     "censusHinderedByWind": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.censusHinderedByWind",
-      "title": "Wind hindered the census"
+      "title": "Wind hindered the census",
+      "sortOrder": -1
     },
     "collectingEventName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.collectingEventName",
       "description": "Name of an expedition or such.",
-      "title": "Collecting event name"
+      "title": "Collecting event name",
+      "sortOrder": 37
     },
     "controlActivitiesNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.controlActivitiesNotes",
-      "title": "Prevention measures"
+      "title": "Prevention measures",
+      "sortOrder": -1
     },
     "coordinateNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.coordinateNotes",
       "description": "Free-text notes about the coordinates.",
-      "title": "Coordinate notes"
+      "title": "Coordinate notes",
+      "sortOrder": 19
     },
     "coordinateRadius": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.coordinateRadius",
       "description": "Maximum error of coordinates in meters",
-      "title": "Error radius in meters"
+      "title": "Error radius in meters",
+      "sortOrder": 14
     },
     "coordinateSource": {
       "type": "string",
@@ -223,7 +242,8 @@
       "range": "MY.coordinateSources",
       "subject": "MY.coordinateSource",
       "description": "Use for NEW SPECIMENS: Where the coordinates have been acquired",
-      "title": "Coord source"
+      "title": "Coord source",
+      "sortOrder": 13
     },
     "coordinateSystem": {
       "type": "string",
@@ -250,72 +270,83 @@
       "range": "MY.coordinateSystems",
       "subject": "MY.coordinateSystem",
       "description": "More information about the coordinate systems: https://wiki.helsinki.fi/display/digit/Entering+specimen+data",
-      "title": "Coordinate system"
+      "title": "Coordinate system",
+      "sortOrder": 12
     },
     "coordinatesGridYKJ": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.coordinatesGridYKJ",
-      "title": "Finnish uniform grid coordinates"
+      "title": "Finnish uniform grid coordinates",
+      "sortOrder": 6
     },
     "coordinatesVerbatim": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.coordinatesVerbatim",
       "description": "Coordinates, possible coordinate system and error radius word-to-word as they appear on the label or other original source, errors and all.",
-      "title": "Verbatim coordinates from label or other original source"
+      "title": "Verbatim coordinates from label or other original source",
+      "sortOrder": 9
     },
     "country": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.country",
       "description": "Country name in English, or 2-letter country code, or name from label",
-      "title": "Country"
+      "title": "Country",
+      "sortOrder": 21
     },
     "county": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.county",
       "description": "County (piirikunta, kreivikunta etc.)",
-      "title": "County"
+      "title": "County",
+      "sortOrder": 41
     },
     "dateBegin": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateBegin",
-      "title": "Start date"
+      "title": "Start date",
+      "sortOrder": 2
     },
     "dateEnd": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateEnd",
-      "title": "End date"
+      "title": "End date",
+      "sortOrder": 4
     },
     "dateVerbatim": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateVerbatim",
       "description": "Date just as it appears on the label or other original source, no interpretation, errors and all",
-      "title": "Verbatim date from original source"
+      "title": "Verbatim date from original source",
+      "sortOrder": 26
     },
     "depth": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.depth",
       "description": "Depth in meters, single value or range (E.g. 0.9, or 0.8-1.0)",
-      "title": "Depth in meters"
+      "title": "Depth in meters",
+      "sortOrder": 17
     },
     "dynamicProperties": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dynamicProperties",
-      "title": "dynamicProperties"
+      "title": "dynamicProperties",
+      "sortOrder": -1
     },
     "eventDate": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.eventDate",
-      "title": "Event Date"
+      "title": "Event Date",
+      "sortOrder": -1
     },
     "forestVegetationZone": {
       "type": "string",
@@ -350,7 +381,8 @@
       "range": "MY.forestVegetationZones",
       "subject": "MY.forestVegetationZone",
       "description": "Finnish forest vegetation zone",
-      "title": "Forest vegetation zone"
+      "title": "Forest vegetation zone",
+      "sortOrder": 36
     },
     "gatheringFact": {
       "type": "object",
@@ -375,54 +407,62 @@
           ],
           "range": "MY.batCollectorEnum",
           "subject": "MY.batCollector",
-          "title": "I placed the sound recorder to the terrain"
+          "title": "I placed the sound recorder to the terrain",
+          "sortOrder": -1
         },
         "binocularsUsed": {
           "type": "boolean",
           "range": "xsd:boolean",
           "subject": "MY.binocularsUsed",
-          "title": "Binoculars"
+          "title": "Binoculars",
+          "sortOrder": -1
         },
         "censusAreaHectares": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.censusAreaHectares",
-          "title": "Census area/ha"
+          "title": "Census area/ha",
+          "sortOrder": -1
         },
         "invasiveControlOtherExpensesInEuros": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.invasiveControlOtherExpensesInEuros",
-          "title": "Estimated of other expenses in euros"
+          "title": "Estimated of other expenses in euros",
+          "sortOrder": -1
         },
         "invasiveControlWorkHours": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.invasiveControlWorkHours",
-          "title": "Work hours spent during the control"
+          "title": "Work hours spent during the control",
+          "sortOrder": -1
         },
         "lineTransectSegmentCounted": {
           "type": "boolean",
           "range": "xsd:boolean",
           "subject": "MY.lineTransectSegmentCounted",
-          "title": "Biotope counted"
+          "title": "Biotope counted",
+          "sortOrder": -1
         },
         "lineTransectSegmentMetersEnd": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.lineTransectSegmentMetersEnd",
-          "title": "Biotope's end meter amount from the start of the line"
+          "title": "Biotope's end meter amount from the start of the line",
+          "sortOrder": -1
         },
         "lineTransectSegmentMetersStart": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.lineTransectSegmentMetersStart",
-          "title": "Biotope's start meter amount from the start of the line"
+          "title": "Biotope's start meter amount from the start of the line",
+          "sortOrder": -1
         },
         "lolifeSiteClassification": {
           "type": "string",
@@ -444,20 +484,23 @@
           ],
           "range": "MY.lolifeSiteClassificationEnum",
           "subject": "MY.lolifeSiteClassification",
-          "title": "Site classification"
+          "title": "Site classification",
+          "sortOrder": -1
         },
         "lolifeSiteClassificationComments": {
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.lolifeSiteClassificationComments",
-          "title": "Classification comments"
+          "title": "Classification comments",
+          "sortOrder": -1
         },
         "observedAreaHectares": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.observedAreaHectares",
-          "title": "Observed area/ha"
+          "title": "Observed area/ha",
+          "sortOrder": -1
         },
         "pointCountHabitat": {
           "type": "string",
@@ -505,27 +548,31 @@
           ],
           "range": "MY.pointCountHabitatEnum",
           "subject": "MY.pointCountHabitat",
-          "title": "Biotooppi"
+          "title": "Biotooppi",
+          "sortOrder": -1
         },
         "shorelineLengthMeters": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.shorelineLengthMeters",
-          "title": "Shoreline length/m"
+          "title": "Shoreline length/m",
+          "sortOrder": -1
         },
         "spottingScopeUsed": {
           "type": "boolean",
           "range": "xsd:boolean",
           "subject": "MY.spottingScopeUsed",
-          "title": "Spotting scope"
+          "title": "Spotting scope",
+          "sortOrder": -1
         },
         "sunniness": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "MY.sunniness",
-          "title": "Sunniness %"
+          "title": "Sunniness %",
+          "sortOrder": -1
         },
         "sykeButterFlyCensusWind": {
           "type": "string",
@@ -553,7 +600,8 @@
           ],
           "range": "MY.sykeButterFlyCensusWindEnum",
           "subject": "MY.sykeButterFlyCensusWind",
-          "title": "Windiness"
+          "title": "Windiness",
+          "sortOrder": -1
         },
         "sykeButterFlyCensusWindEnd": {
           "type": "string",
@@ -581,7 +629,8 @@
           ],
           "range": "MY.sykeButterFlyCensusWindEnum",
           "subject": "MY.sykeButterFlyCensusWindEnd",
-          "title": "End windiness"
+          "title": "End windiness",
+          "sortOrder": -1
         },
         "sykeButterFlyCensusWindStart": {
           "type": "string",
@@ -609,7 +658,8 @@
           ],
           "range": "MY.sykeButterFlyCensusWindEnum",
           "subject": "MY.sykeButterFlyCensusWindStart",
-          "title": "Start windiness"
+          "title": "Start windiness",
+          "sortOrder": -1
         },
         "waterbirdCensusPeriod": {
           "type": "string",
@@ -631,7 +681,8 @@
           ],
           "range": "MY.waterbirdCensusPeriodEnum",
           "subject": "MY.waterbirdCensusPeriod",
-          "title": "Census period"
+          "title": "Census period",
+          "sortOrder": -1
         },
         "waterbirdHabitat": {
           "type": "string",
@@ -663,118 +714,135 @@
           ],
           "range": "MY.waterbirdHabitatEnum",
           "subject": "MY.waterbirdHabitat",
-          "title": "Habitat"
+          "title": "Habitat",
+          "sortOrder": -1
         },
         "ykjSquareNumber": {
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.ykjSquareNumber",
-          "title": "Atlas grid"
+          "title": "Atlas grid",
+          "sortOrder": -1
         },
         "ACAFLAonAlder": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.ACAFLAonAlder",
-          "title": "Urpiaisten ruokailut lepällä"
+          "title": "Urpiaisten ruokailut lepällä",
+          "sortOrder": -1
         },
         "ACAFLAonBirch": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.ACAFLAonBirch",
-          "title": "Urpiaisten ruokailut koivulla"
+          "title": "Urpiaisten ruokailut koivulla",
+          "sortOrder": -1
         },
         "ACAFLAonGround": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.ACAFLAonGround",
-          "title": "Urpiaisten ruokailut maassa"
+          "title": "Urpiaisten ruokailut maassa",
+          "sortOrder": -1
         },
         "ACAFLAonPine": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.ACAFLAonPine",
-          "title": "Urpiaisten ruokailut männyllä"
+          "title": "Urpiaisten ruokailut männyllä",
+          "sortOrder": -1
         },
         "ACAFLAonSpruce": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.ACAFLAonSpruce",
-          "title": "Urpiaisten ruokailut kuusella"
+          "title": "Urpiaisten ruokailut kuusella",
+          "sortOrder": -1
         },
         "CARSPIonAlder": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.CARSPIonAlder",
-          "title": "Vihervarpusten ruokailut lepällä"
+          "title": "Vihervarpusten ruokailut lepällä",
+          "sortOrder": -1
         },
         "CARSPIonBirch": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.CARSPIonBirch",
-          "title": "Vihervarpusten ruokailut koivulla"
+          "title": "Vihervarpusten ruokailut koivulla",
+          "sortOrder": -1
         },
         "CARSPIonGround": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.CARSPIonGround",
-          "title": "Vihervarpusten ruokailut maassa"
+          "title": "Vihervarpusten ruokailut maassa",
+          "sortOrder": -1
         },
         "CARSPIonPine": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.CARSPIonPine",
-          "title": "CARSPIonPine"
+          "title": "CARSPIonPine",
+          "sortOrder": -1
         },
         "CARSPIonSpruce": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.CARSPIonSpruce",
-          "title": "Vihervarpusten ruokailut kuusella"
+          "title": "Vihervarpusten ruokailut kuusella",
+          "sortOrder": -1
         },
         "LOXIAonAlder": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.LOXIAonAlder",
-          "title": "Käpylintujen ruokailut lepällä"
+          "title": "Käpylintujen ruokailut lepällä",
+          "sortOrder": -1
         },
         "LOXIAonBirch": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.LOXIAonBirch",
-          "title": "Käpylintujen ruokailut koivulla"
+          "title": "Käpylintujen ruokailut koivulla",
+          "sortOrder": -1
         },
         "LOXIAonGround": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.LOXIAonGround",
-          "title": "Käpylintujen ruokailut maassa"
+          "title": "Käpylintujen ruokailut maassa",
+          "sortOrder": -1
         },
         "LOXIAonPine": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.LOXIAonPine",
-          "title": "Käpylintujen ruokailut männyllä"
+          "title": "Käpylintujen ruokailut männyllä",
+          "sortOrder": -1
         },
         "LOXIAonSpruce": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.LOXIAonSpruce",
-          "title": "Käpylintujen ruokailut kuusella"
+          "title": "Käpylintujen ruokailut kuusella",
+          "sortOrder": -1
         },
         "abundanceBOMGAR": {
           "type": "string",
@@ -794,7 +862,8 @@
           ],
           "range": "WBC.speciesAbundanceEnum",
           "subject": "WBC.abundanceBOMGAR",
-          "title": "Tilhi"
+          "title": "Tilhi",
+          "sortOrder": -1
         },
         "abundancePINENU": {
           "type": "string",
@@ -814,7 +883,8 @@
           ],
           "range": "WBC.speciesAbundanceEnum",
           "subject": "WBC.abundancePINENU",
-          "title": "Taviokuurna"
+          "title": "Taviokuurna",
+          "sortOrder": -1
         },
         "abundanceTURPIL": {
           "type": "string",
@@ -834,70 +904,80 @@
           ],
           "range": "WBC.speciesAbundanceEnum",
           "subject": "WBC.abundanceTURPIL",
-          "title": "Räkättirastas"
+          "title": "Räkättirastas",
+          "sortOrder": -1
         },
         "birdFeederCount": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCount",
-          "title": "Lintulautoja (kpl)"
+          "title": "Lintulautoja (kpl)",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeA": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeA",
-          "title": "Kaatopaikan lintulaudat"
+          "title": "Kaatopaikan lintulaudat",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeB": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeB",
-          "title": "Kaupunkiasutuksen lintulaudat"
+          "title": "Kaupunkiasutuksen lintulaudat",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeC": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeC",
-          "title": "Maaseutuasutuksen lintulaudat"
+          "title": "Maaseutuasutuksen lintulaudat",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeD": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeD",
-          "title": "Pellon lintulaudat"
+          "title": "Pellon lintulaudat",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeE": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeE",
-          "title": "Metsän lintulaudat"
+          "title": "Metsän lintulaudat",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeF": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeF",
-          "title": "Lintulaudat muu biotooppi"
+          "title": "Lintulaudat muu biotooppi",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeG": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeG",
-          "title": "Hakkuuaukean lintulaudat"
+          "title": "Hakkuuaukean lintulaudat",
+          "sortOrder": -1
         },
         "birdFeederCountBiotopeH": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.birdFeederCountBiotopeH",
-          "title": "Ruovikon lintulaudat"
+          "title": "Ruovikon lintulaudat",
+          "sortOrder": -1
         },
         "cloudAndRain": {
           "type": "string",
@@ -919,76 +999,87 @@
           ],
           "range": "WBC.cloudAndRainEnum",
           "subject": "WBC.cloudAndRain",
-          "title": "Pilvisyys ja sade"
+          "title": "Pilvisyys ja sade",
+          "sortOrder": -1
         },
         "descriptionBiotopeF": {
           "type": "string",
           "range": "xsd:string",
           "subject": "WBC.descriptionBiotopeF",
-          "title": "Mitä biotooppiin Muu (F) kuuluu"
+          "title": "Mitä biotooppiin Muu (F) kuuluu",
+          "sortOrder": -1
         },
         "feedingStationCount": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCount",
-          "title": "Ruokintapaikkoja (kpl)"
+          "title": "Ruokintapaikkoja (kpl)",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeA": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeA",
-          "title": "feedingStationCountBiotopeA"
+          "title": "feedingStationCountBiotopeA",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeB": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeB",
-          "title": "Kaupunkiasutuksen ruokintapaikat"
+          "title": "Kaupunkiasutuksen ruokintapaikat",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeC": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeC",
-          "title": "Maaseutuasutuksen ruokintapaikat"
+          "title": "Maaseutuasutuksen ruokintapaikat",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeD": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeD",
-          "title": "Pellon ruokintapaikat"
+          "title": "Pellon ruokintapaikat",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeE": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeE",
-          "title": "Metsän ruokintapaikat"
+          "title": "Metsän ruokintapaikat",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeF": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeF",
-          "title": "Ruokintapaikat muu biotooppi"
+          "title": "Ruokintapaikat muu biotooppi",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeG": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeG",
-          "title": "Ruovikon ruokintapaikat"
+          "title": "Ruovikon ruokintapaikat",
+          "sortOrder": -1
         },
         "feedingStationCountBiotopeH": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.feedingStationCountBiotopeH",
-          "title": "Ruovikon ruokintapaikat"
+          "title": "Ruovikon ruokintapaikat",
+          "sortOrder": -1
         },
         "iceCover": {
           "type": "string",
@@ -1010,27 +1101,31 @@
           ],
           "range": "WBC.iceCoverEnum",
           "subject": "WBC.iceCover",
-          "title": "Jääpeite"
+          "title": "Jääpeite",
+          "sortOrder": -1
         },
         "meanTemperature": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.meanTemperature",
-          "title": "Keskilämpötila (asteen tarkkuus)"
+          "title": "Keskilämpötila (asteen tarkkuus)",
+          "sortOrder": -1
         },
         "observerCount": {
           "type": "integer",
           "exclusiveMinimum": 0,
           "range": "xsd:positiveInteger",
           "subject": "WBC.observerCount",
-          "title": "Laskijoiden lukumäärä"
+          "title": "Laskijoiden lukumäärä",
+          "sortOrder": -1
         },
         "observerID": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.observerID",
-          "title": "Havainnoijanumero"
+          "title": "Havainnoijanumero",
+          "sortOrder": -1
         },
         "pineConesAtCensus": {
           "type": "string",
@@ -1056,131 +1151,151 @@
           ],
           "range": "WBC.berriesAndConesEnum",
           "subject": "WBC.pineConesAtCensus",
-          "title": "Männynkäpyjä laskenta-aikaan"
+          "title": "Männynkäpyjä laskenta-aikaan",
+          "sortOrder": -1
         },
         "routeID": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeID",
-          "title": "Reitin numero"
+          "title": "Reitin numero",
+          "sortOrder": -1
         },
         "routeLength": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLength",
-          "title": "Reitin pituus (m)"
+          "title": "Reitin pituus (m)",
+          "sortOrder": -1
         },
         "routeLengthBiotopeA": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeA",
-          "title": "Route length dump"
+          "title": "Route length dump",
+          "sortOrder": -1
         },
         "routeLengthBiotopeB": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeB",
-          "title": "Route length urban"
+          "title": "Route length urban",
+          "sortOrder": -1
         },
         "routeLengthBiotopeC": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeC",
-          "title": "Route length countryside"
+          "title": "Route length countryside",
+          "sortOrder": -1
         },
         "routeLengthBiotopeD": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeD",
-          "title": "Route length field"
+          "title": "Route length field",
+          "sortOrder": -1
         },
         "routeLengthBiotopeE": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeE",
-          "title": "Route length forest"
+          "title": "Route length forest",
+          "sortOrder": -1
         },
         "routeLengthBiotopeF": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeF",
-          "title": "Route length other biotope"
+          "title": "Route length other biotope",
+          "sortOrder": -1
         },
         "routeLengthBiotopeG": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeG",
-          "title": "Route length cutting open"
+          "title": "Route length cutting open",
+          "sortOrder": -1
         },
         "routeLengthBiotopeH": {
           "type": "integer",
           "minimum": 0,
           "range": "xsd:nonNegativeInteger",
           "subject": "WBC.routeLengthBiotopeH",
-          "title": "Route length reed"
+          "title": "Route length reed",
+          "sortOrder": -1
         },
         "routeLengthChange": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChange",
-          "title": "Reitin muutokset (m)"
+          "title": "Reitin muutokset (m)",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeA": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeA",
-          "title": "Reitin muutokset kaatopaikka"
+          "title": "Reitin muutokset kaatopaikka",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeB": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeB",
-          "title": "Reitin muutokset kaupunkiasutus"
+          "title": "Reitin muutokset kaupunkiasutus",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeC": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeC",
-          "title": "Reitin muutokset maaseutuasutus"
+          "title": "Reitin muutokset maaseutuasutus",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeD": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeD",
-          "title": "Reitin muutokset pelto"
+          "title": "Reitin muutokset pelto",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeE": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeE",
-          "title": "Reitin muutokset metsä"
+          "title": "Reitin muutokset metsä",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeF": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeF",
-          "title": "Reitin muutokset muu biotooppi"
+          "title": "Reitin muutokset muu biotooppi",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeG": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeG",
-          "title": "Reitin muutokset hakkuuaukea"
+          "title": "Reitin muutokset hakkuuaukea",
+          "sortOrder": -1
         },
         "routeLengthChangeBiotopeH": {
           "type": "integer",
           "range": "xsd:integer",
           "subject": "WBC.routeLengthChangeBiotopeH",
-          "title": "Reitin muutokset ruovikko"
+          "title": "Reitin muutokset ruovikko",
+          "sortOrder": -1
         },
         "snowAndIceOnTrees": {
           "type": "string",
@@ -1200,7 +1315,8 @@
           ],
           "range": "WBC.snowAndIceOnTreesEnum",
           "subject": "WBC.snowAndIceOnTrees",
-          "title": "Puissa oleva lumi ja jääkarsta"
+          "title": "Puissa oleva lumi ja jääkarsta",
+          "sortOrder": -1
         },
         "snowCover": {
           "type": "string",
@@ -1230,7 +1346,8 @@
           ],
           "range": "WBC.snowCoverEnum",
           "subject": "WBC.snowCover",
-          "title": "Lumipeite"
+          "title": "Lumipeite",
+          "sortOrder": -1
         },
         "sorbusBerriesAtCensus": {
           "type": "string",
@@ -1256,7 +1373,8 @@
           ],
           "range": "WBC.berriesAndConesEnum",
           "subject": "WBC.sorbusBerriesAtCensus",
-          "title": "Pihlajanmarjoja laskenta-aikaan"
+          "title": "Pihlajanmarjoja laskenta-aikaan",
+          "sortOrder": -1
         },
         "sorbusBerriesEarlyFall": {
           "type": "string",
@@ -1282,7 +1400,8 @@
           ],
           "range": "WBC.berriesAndConesEnum",
           "subject": "WBC.sorbusBerriesEarlyFall",
-          "title": "Pihlajanmarjoja alkusyksyllä"
+          "title": "Pihlajanmarjoja alkusyksyllä",
+          "sortOrder": -1
         },
         "spruceConesAtCensus": {
           "type": "string",
@@ -1308,7 +1427,8 @@
           ],
           "range": "WBC.berriesAndConesEnum",
           "subject": "WBC.spruceConesAtCensus",
-          "title": "Kuusenkäpyjä laskenta-aikaan"
+          "title": "Kuusenkäpyjä laskenta-aikaan",
+          "sortOrder": -1
         },
         "typeOfSnowCover": {
           "type": "string",
@@ -1326,7 +1446,8 @@
           ],
           "range": "WBC.typeOfSnowCoverEnum",
           "subject": "WBC.typeOfSnowCover",
-          "title": "Maassa olevan lumen laatu"
+          "title": "Maassa olevan lumen laatu",
+          "sortOrder": -1
         },
         "visibility": {
           "type": "string",
@@ -1348,7 +1469,8 @@
           ],
           "range": "WBC.visibilityEnum",
           "subject": "WBC.visibility",
-          "title": "Näkyvyys"
+          "title": "Näkyvyys",
+          "sortOrder": -1
         },
         "waterbodies": {
           "type": "string",
@@ -1372,7 +1494,8 @@
           ],
           "range": "WBC.waterbodiesEnum",
           "subject": "WBC.waterbodies",
-          "title": "Vesistöt"
+          "title": "Vesistöt",
+          "sortOrder": -1
         },
         "wayOfTravel": {
           "type": "string",
@@ -1394,13 +1517,15 @@
           ],
           "range": "WBC.wayOfTravelEnum",
           "subject": "WBC.wayOfTravel",
-          "title": "Kulkutapa"
+          "title": "Kulkutapa",
+          "sortOrder": -1
         },
         "wayOfTravelNotes": {
           "type": "string",
           "range": "xsd:string",
           "subject": "WBC.wayOfTravelNotes",
-          "title": "Kulkutavan kuvaus"
+          "title": "Kulkutavan kuvaus",
+          "sortOrder": -1
         },
         "wind": {
           "type": "string",
@@ -1422,10 +1547,12 @@
           ],
           "range": "WBC.windEnum",
           "subject": "WBC.wind",
-          "title": "Tuuli"
+          "title": "Tuuli",
+          "sortOrder": -1
         }
       },
-      "range": "MY.gatheringFactClass"
+      "range": "MY.gatheringFactClass",
+      "sortOrder": -1
     },
     "gatheringType": {
       "type": "string",
@@ -1459,13 +1586,15 @@
       ],
       "range": "MY.gatheringTypeEnum",
       "subject": "MY.gatheringType",
-      "title": "Gathering event type"
+      "title": "Gathering event type",
+      "sortOrder": -1
     },
     "geometry": {
       "type": "object",
       "range": "MZ.geometry",
       "subject": "MY.geometry",
-      "title": "Coordinates"
+      "title": "Coordinates",
+      "sortOrder": -1
     },
     "georeferenceSource": {
       "type": "string",
@@ -1508,7 +1637,8 @@
       "range": "MY.georeferenceSources",
       "subject": "MY.georeferenceSource",
       "description": "Use for OLD SPECIMENS: What source was used to get coordinates based on locality names",
-      "title": "Georeferencing source"
+      "title": "Georeferencing source",
+      "sortOrder": 15
     },
     "habitat": {
       "type": "array",
@@ -1865,7 +1995,8 @@
       "minItems": 0,
       "range": "MY.habitatEnum",
       "subject": "MY.habitat",
-      "title": "Habitat"
+      "title": "Habitat",
+      "sortOrder": -1
     },
     "habitatAttributes": {
       "type": "array",
@@ -1926,21 +2057,24 @@
       "minItems": 0,
       "range": "MY.habitatAttributesEnum",
       "subject": "MY.habitatAttributes",
-      "title": "Additional information of habitat"
+      "title": "Additional information of habitat",
+      "sortOrder": -1
     },
     "habitatClassification": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.habitatClassification",
       "description": "Formal habitat name or abbreviation. If several, separate with semicolons (E.g. 'OMT; OMaT').",
-      "title": "Habitat classification"
+      "title": "Habitat classification",
+      "sortOrder": 32
     },
     "habitatDescription": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.habitatDescription",
       "description": "Informal description of the habitat.",
-      "title": "Habitat description"
+      "title": "Habitat description",
+      "sortOrder": 5
     },
     "hasUnit": {
       "type": "array",
@@ -1951,32 +2085,37 @@
       "minItems": 0,
       "range": "MY.unit",
       "subject": "MY.hasUnit",
-      "title": "hasUnit"
+      "title": "hasUnit",
+      "sortOrder": -1
     },
     "higherGeography": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.higherGeography",
       "description": "If country is not known or not applicable, for example continent, ocean or large island",
-      "title": "Higher geography"
+      "title": "Higher geography",
+      "sortOrder": 22
     },
     "invasiveControlAreaKnown": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.invasiveControlAreaKnown",
-      "title": "Esiintymän koko / laajuus tiedossa"
+      "title": "Esiintymän koko / laajuus tiedossa",
+      "sortOrder": -1
     },
     "invasiveControlDangerous": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.invasiveControlDangerous",
-      "title": "Is the occurrence a direct threat to e.g. endangered species, biotopes or humans?"
+      "title": "Is the occurrence a direct threat to e.g. endangered species, biotopes or humans?",
+      "sortOrder": -1
     },
     "invasiveControlDangerousDescription": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.invasiveControlDangerousDescription",
-      "title": "Description of threats"
+      "title": "Description of threats",
+      "sortOrder": -1
     },
     "invasiveControlEffectiveness": {
       "type": "string",
@@ -1996,13 +2135,15 @@
       ],
       "range": "MY.invasiveControlEffectivenessEnum",
       "subject": "MY.invasiveControlEffectiveness",
-      "title": "Control level"
+      "title": "Control level",
+      "sortOrder": -1
     },
     "invasiveControlEffectivenessNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.invasiveControlEffectivenessNotes",
-      "title": "Notes of control level"
+      "title": "Notes of control level",
+      "sortOrder": -1
     },
     "invasiveControlMethods": {
       "type": "array",
@@ -2027,32 +2168,37 @@
       "minItems": 0,
       "range": "MY.invasiveControlMethodsEnum",
       "subject": "MY.invasiveControlMethods",
-      "title": "Control methods"
+      "title": "Control methods",
+      "sortOrder": -1
     },
     "invasiveControlMethodsDescription": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.invasiveControlMethodsDescription",
-      "title": "Description of control methods"
+      "title": "Description of control methods",
+      "sortOrder": -1
     },
     "invasiveControlOpen": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.invasiveControlOpen",
-      "title": "Are follow-up controls needed?"
+      "title": "Are follow-up controls needed?",
+      "sortOrder": -1
     },
     "invasiveControlOpenDescription": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.invasiveControlOpenDescription",
-      "title": "Description of follow-up controls?"
+      "title": "Description of follow-up controls?",
+      "sortOrder": -1
     },
     "invasiveControlOtherExpensesInEuros": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "MY.invasiveControlOtherExpensesInEuros",
-      "title": "Estimated of other expenses in euros"
+      "title": "Estimated of other expenses in euros",
+      "sortOrder": -1
     },
     "invasiveControlTaxon": {
       "type": "array",
@@ -2063,14 +2209,16 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MY.invasiveControlTaxon",
-      "title": "Control target taxon"
+      "title": "Control target taxon",
+      "sortOrder": -1
     },
     "isPartOf": {
       "type": "string",
       "range": "rdfs:Resource",
       "subject": "MY.isPartOf",
       "description": "Which parent or larger collection this is part of.",
-      "title": "Is part of"
+      "title": "Is part of",
+      "sortOrder": 34
     },
     "keywords": {
       "type": "array",
@@ -2081,14 +2229,16 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MY.keywords",
-      "title": "Keywords"
+      "title": "Keywords",
+      "sortOrder": -1
     },
     "latitude": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.latitude",
       "description": "Latitude. For southern latitudes, use negative value.",
-      "title": "Lat (N)"
+      "title": "Lat (N)",
+      "sortOrder": 10
     },
     "leg": {
       "type": "array",
@@ -2100,7 +2250,8 @@
       "range": "xsd:string",
       "subject": "MY.leg",
       "description": "Name of the collector(s), in format 'Lastname, Firstname; Lastname Firstname'",
-      "title": "Leg"
+      "title": "Leg",
+      "sortOrder": 1
     },
     "legUserID": {
       "type": "array",
@@ -2112,49 +2263,56 @@
       "range": "xsd:string",
       "subject": "MY.legUserID",
       "description": "Alkuperäislähteen käyttäjätunnus",
-      "title": "Käyttäjätunnus"
+      "title": "Käyttäjätunnus",
+      "sortOrder": -1
     },
     "legVerbatim": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.legVerbatim",
       "description": "Leg just as it appears in the label or other original source, no interpretation, errors and all.",
-      "title": "Verbatim leg from orginal source"
+      "title": "Verbatim leg from orginal source",
+      "sortOrder": 8
     },
     "locality": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.locality",
       "description": "Official name of the locality in basic form. Separate multiple names with commas, from generic to specific. No informal description here.",
-      "title": "Locality names"
+      "title": "Locality names",
+      "sortOrder": 28
     },
     "localityDescription": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.localityDescription",
       "description": "Informal description of the exact locality, e.g. '5 km NE of city X, under stone bridge'",
-      "title": "Locality description"
+      "title": "Locality description",
+      "sortOrder": 30
     },
     "localityID": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.localityID",
       "description": "An unique identifier or code for the locality, if the locality has one (e.g. from SAPO-ontology).",
-      "title": "Locality ID"
+      "title": "Locality ID",
+      "sortOrder": 29
     },
     "localityVerbatim": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.localityVerbatim",
       "description": "Locality word-to-word as it appears on the label or other original source, errors and all",
-      "title": "Verbatim locality from label or other original source"
+      "title": "Verbatim locality from label or other original source",
+      "sortOrder": 20
     },
     "longitude": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.longitude",
       "description": "Longitude. For western longitudes, use negative value.",
-      "title": "Lon (E)"
+      "title": "Lon (E)",
+      "sortOrder": 11
     },
     "mothSamplingMethod": {
       "type": "string",
@@ -2178,54 +2336,62 @@
       ],
       "range": "MY.mothSamplingMethodEnum",
       "subject": "MY.mothSamplingMethod",
-      "title": "Moth sampling method"
+      "title": "Moth sampling method",
+      "sortOrder": 45
     },
     "municipality": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.municipality",
       "description": "Municipality, commune, town, city or civil parish",
-      "title": "Municipality"
+      "title": "Municipality",
+      "sortOrder": 27
     },
     "namedPlaceID": {
       "type": "string",
       "range": "MNP.namedPlace",
       "subject": "MY.namedPlaceID",
-      "title": "Named place"
+      "title": "Named place",
+      "sortOrder": -1
     },
     "notes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.notes",
       "description": "Additional information to the data in each section.",
-      "title": "Notes"
+      "title": "Notes",
+      "sortOrder": 7
     },
     "numberOfSampledIndividuals": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.numberOfSampledIndividuals",
       "description": "For garden accessions/seed bank, number of individuals from which seeds were collected",
-      "title": "Number of sampled individuals"
+      "title": "Number of sampled individuals",
+      "sortOrder": 42
     },
     "observationDays": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "MY.observationDays",
-      "title": "Observation days"
+      "title": "Observation days",
+      "sortOrder": -1
     },
     "observationMinutes": {
       "type": "integer",
       "exclusiveMinimum": 0,
       "range": "xsd:positiveInteger",
       "subject": "MY.observationMinutes",
-      "title": "Observation minutes"
+      "title": "Observation minutes",
+      "sortOrder": -1
     },
     "percentageGivingSeeds": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "MY.percentageGivingSeeds",
       "description": "For garden accessions/seed bank, what proportion of the population sampled was giving seeds",
-      "title": "% of plant population giving seeds"
+      "title": "% of plant population giving seeds",
+      "sortOrder": 43
     },
     "predominantTree": {
       "type": "string",
@@ -2273,19 +2439,22 @@
       ],
       "range": "MY.predominantTreeEnum",
       "subject": "MY.predominantTree",
-      "title": "Predominant tree"
+      "title": "Predominant tree",
+      "sortOrder": -1
     },
     "projectTitle": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.projectTitle",
-      "title": "projectTitle"
+      "title": "projectTitle",
+      "sortOrder": -1
     },
     "province": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.province",
-      "title": "province"
+      "title": "province",
+      "sortOrder": -1
     },
     "relativeHumidity": {
       "type": "integer",
@@ -2293,14 +2462,16 @@
       "range": "xsd:nonNegativeInteger",
       "subject": "MY.relativeHumidity",
       "description": "Relative humidity %",
-      "title": "Relative humidity"
+      "title": "Relative humidity",
+      "sortOrder": -1
     },
     "samplingAreaSizeInSquareMeters": {
       "type": "number",
       "range": "xsd:decimal",
       "subject": "MY.samplingAreaSizeInSquareMeters",
       "description": "For garden accessions/seed bank, estimated size of the area sampled, in square meters",
-      "title": "Size of sampling area (m2)"
+      "title": "Size of sampling area (m2)",
+      "sortOrder": 44
     },
     "samplingMethod": {
       "type": "string",
@@ -2409,39 +2580,45 @@
       "range": "MY.samplingMethods",
       "subject": "MY.samplingMethod",
       "description": "Main method for (usually intentional) sampling",
-      "title": "Sampling method"
+      "title": "Sampling method",
+      "sortOrder": 31
     },
     "samplingMethodNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.samplingMethodNotes",
-      "title": "Sampling method notes"
+      "title": "Sampling method notes",
+      "sortOrder": -1
     },
     "section": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "MY.section",
-      "title": "Section"
+      "title": "Section",
+      "sortOrder": -1
     },
     "skipped": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.skipped",
-      "title": "Skipped"
+      "title": "Skipped",
+      "sortOrder": -1
     },
     "spottingScopeUsed": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MY.spottingScopeUsed",
-      "title": "Spotting scope"
+      "title": "Spotting scope",
+      "sortOrder": -1
     },
     "substrate": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.substrate",
       "description": "Type of substrate or name of substrate species.",
-      "title": "Substrate"
+      "title": "Substrate",
+      "sortOrder": 3
     },
     "taxonCensus": {
       "type": "array",
@@ -2457,7 +2634,8 @@
             "type": "string",
             "range": "MX.taxon",
             "subject": "MY.censusTaxonID",
-            "title": "Censused taxon"
+            "title": "Censused taxon",
+            "sortOrder": -1
           },
           "censusTaxonSetID": {
             "type": "string",
@@ -2513,7 +2691,8 @@
             ],
             "range": "MX.taxonSetEnum",
             "subject": "MY.censusTaxonSetID",
-            "title": "Censused taxon set"
+            "title": "Censused taxon set",
+            "sortOrder": -1
           },
           "taxonCensusType": {
             "type": "string",
@@ -2529,7 +2708,8 @@
             ],
             "range": "MY.taxonCensusEnum",
             "subject": "MY.taxonCensusType",
-            "title": "Completeness of census"
+            "title": "Completeness of census",
+            "sortOrder": -1
           }
         },
         "required": [
@@ -2539,49 +2719,57 @@
       "minItems": 0,
       "range": "MY.taxonCensusClass",
       "subject": "MY.taxonCensus",
-      "title": "Completely recorded taxon"
+      "title": "Completely recorded taxon",
+      "sortOrder": -1
     },
     "temperature": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "MY.temperature",
-      "title": "Temperature in celsius"
+      "title": "Temperature in celsius",
+      "sortOrder": -1
     },
     "timeEnd": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.timeEnd",
-      "title": "End time"
+      "title": "End time",
+      "sortOrder": -1
     },
     "timeStart": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.timeStart",
-      "title": "Start time"
+      "title": "Start time",
+      "sortOrder": -1
     },
     "trapCount": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "MY.trapCount",
-      "title": "Trap count"
+      "title": "Trap count",
+      "sortOrder": -1
     },
     "weather": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.weather",
-      "title": "Weather"
+      "title": "Weather",
+      "sortOrder": -1
     },
     "wgs84Latitude": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.wgs84Latitude",
-      "title": "WGS84 Latitude"
+      "title": "WGS84 Latitude",
+      "sortOrder": 38
     },
     "wgs84Longitude": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.wgs84Longitude",
-      "title": "WGS84 Longitude"
+      "title": "WGS84 Longitude",
+      "sortOrder": 39
     },
     "images": {
       "type": "array",
@@ -2592,7 +2780,8 @@
       "minItems": 0,
       "range": "MM.image",
       "subject": "MZ.images",
-      "title": "Images"
+      "title": "Images",
+      "sortOrder": -1
     },
     "publicityRestrictions": {
       "type": "string",
@@ -2611,7 +2800,8 @@
       "range": "MZ.publicityRestrictionsEnum",
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
-      "title": "Publicity restrictions"
+      "title": "Publicity restrictions",
+      "sortOrder": 33
     },
     "units": {
       "type": "array",
@@ -2646,20 +2836,23 @@
             "range": "xsd:string",
             "subject": "MY.DBH",
             "description": "Diameter at breast height, in centimeters",
-            "title": "DBH in centimeters"
+            "title": "DBH in centimeters",
+            "sortOrder": 11
           },
           "DNASampleLocation": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.DNASampleLocation",
             "description": "Leave empty if no sample taken, or if the sample is recorded separately",
-            "title": "DNA sample location"
+            "title": "DNA sample location",
+            "sortOrder": 30
           },
           "abundanceString": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.abundanceString",
-            "title": "Amount"
+            "title": "Amount",
+            "sortOrder": -1
           },
           "abundanceUnit": {
             "type": "string",
@@ -2715,7 +2908,8 @@
             ],
             "range": "MY.abundanceUnitEnum",
             "subject": "MY.abundanceUnit",
-            "title": "Abundance unit"
+            "title": "Abundance unit",
+            "sortOrder": -1
           },
           "additionalIDs": {
             "type": "array",
@@ -2727,33 +2921,38 @@
             "range": "xsd:string",
             "subject": "MY.additionalIDs",
             "description": "Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)",
-            "title": "Additional ID's"
+            "title": "Additional ID's",
+            "sortOrder": 22
           },
           "adultIndividualCount": {
             "type": "integer",
             "range": "xsd:integer",
             "subject": "MY.adultIndividualCount",
-            "title": "Adult individual count"
+            "title": "Adult individual count",
+            "sortOrder": -1
           },
           "age": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.age",
             "description": "Estimated or known age in calendar years, years, days or other relevant unit.",
-            "title": "Age"
+            "title": "Age",
+            "sortOrder": 7
           },
           "ageNotes": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.ageNotes",
             "description": "E.g. how age was determined, by whom and when.",
-            "title": "Age notes"
+            "title": "Age notes",
+            "sortOrder": 21
           },
           "alive": {
             "type": "boolean",
             "range": "xsd:boolean",
             "subject": "MY.alive",
-            "title": "Alive"
+            "title": "Alive",
+            "sortOrder": -1
           },
           "ankleInMillimeters": {
             "type": "array",
@@ -2764,14 +2963,16 @@
             "minItems": 0,
             "range": "xsd:string",
             "subject": "MY.ankleInMillimeters",
-            "title": "Ankle"
+            "title": "Ankle",
+            "sortOrder": -1
           },
           "areaInSquareMeters": {
             "type": "integer",
             "minimum": 0,
             "range": "xsd:nonNegativeInteger",
             "subject": "MY.areaInSquareMeters",
-            "title": "Occurrence area (m²)"
+            "title": "Occurrence area (m²)",
+            "sortOrder": -1
           },
           "atlasCode": {
             "type": "string",
@@ -2825,7 +3026,8 @@
             ],
             "range": "MY.atlasCodeEnum",
             "subject": "MY.atlasCode",
-            "title": "Breeding index"
+            "title": "Breeding index",
+            "sortOrder": -1
           },
           "batBehavior": {
             "type": "string",
@@ -2843,7 +3045,8 @@
             ],
             "range": "MY.batBehaviorEnum",
             "subject": "MY.batBehavior",
-            "title": "Bat behavior"
+            "title": "Bat behavior",
+            "sortOrder": -1
           },
           "beakInMillimeters": {
             "type": "array",
@@ -2854,7 +3057,8 @@
             "minItems": 0,
             "range": "xsd:string",
             "subject": "MY.beakInMillimeters",
-            "title": "Beak"
+            "title": "Beak",
+            "sortOrder": -1
           },
           "birdAge": {
             "type": "string",
@@ -2904,7 +3108,8 @@
             ],
             "range": "MY.birdAgeEnum",
             "subject": "MY.birdAge",
-            "title": "Bird age"
+            "title": "Bird age",
+            "sortOrder": -1
           },
           "birdBehavior": {
             "type": "array",
@@ -2915,7 +3120,8 @@
             "minItems": 0,
             "range": "xsd:string",
             "subject": "MY.birdBehavior",
-            "title": "Bird behavior"
+            "title": "Bird behavior",
+            "sortOrder": -1
           },
           "birdPlumage": {
             "type": "string",
@@ -2951,54 +3157,62 @@
             ],
             "range": "MY.birdPlumageEnum",
             "subject": "MY.birdPlumage",
-            "title": "Bird plumage"
+            "title": "Bird plumage",
+            "sortOrder": -1
           },
           "breeding": {
             "type": "boolean",
             "range": "xsd:boolean",
             "subject": "MY.breeding",
-            "title": "Breeding"
+            "title": "Breeding",
+            "sortOrder": -1
           },
           "broodSize": {
             "type": "integer",
             "exclusiveMinimum": 0,
             "range": "xsd:positiveInteger",
             "subject": "MY.broodSize",
-            "title": "Brood size"
+            "title": "Brood size",
+            "sortOrder": -1
           },
           "causeOfDeath": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.causeOfDeath",
             "description": "Cause of death, if not intentionally trapped on sampled",
-            "title": "Cause of Death"
+            "title": "Cause of Death",
+            "sortOrder": 5
           },
           "checklistID": {
             "type": "string",
             "range": "MR.checklist",
             "subject": "MY.checklistID",
-            "title": "Checklist"
+            "title": "Checklist",
+            "sortOrder": -1
           },
           "chemistry": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.chemistry",
             "description": "Results of chemical reaction tests etc.",
-            "title": "Chemical properties"
+            "title": "Chemical properties",
+            "sortOrder": 14
           },
           "count": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.count",
             "description": "Numeric or other description on the amount of individuals (or sprouts, fruiting bodies or such) in the specimen. Sexes and juveniles can be specified like so: 1m2f3j (=1 male, 2 females, 3 juveniles)",
-            "title": "Count"
+            "title": "Count",
+            "sortOrder": 10
           },
           "decayStage": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.decayStage",
             "description": "Estimation of decay stage (lahoaste in Finnish) on the scale of 1 to 5 and/or description",
-            "title": "Decay stage"
+            "title": "Decay stage",
+            "sortOrder": 12
           },
           "distance": {
             "type": "string",
@@ -3020,7 +3234,8 @@
             ],
             "range": "MY.distanceEnum",
             "subject": "MY.distance",
-            "title": "Distance"
+            "title": "Distance",
+            "sortOrder": -1
           },
           "earliestEpochOrLowestSeries": {
             "type": "string",
@@ -3059,14 +3274,16 @@
             "range": "MY.epochOrSeries",
             "subject": "MY.earliestEpochOrLowestSeries",
             "description": "For palaeontological specimens, earliest possible geochronologic epoch or lowest chronostratigraphic series attributable to the stratigraphic horizon from which the specimen was collected",
-            "title": "Earliest epoch or lowest series"
+            "title": "Earliest epoch or lowest series",
+            "sortOrder": 33
           },
           "femaleIndividualCount": {
             "type": "integer",
             "minimum": 0,
             "range": "xsd:nonNegativeInteger",
             "subject": "MY.femaleIndividualCount",
-            "title": "Female individual count"
+            "title": "Female individual count",
+            "sortOrder": -1
           },
           "fruitType": {
             "type": "string",
@@ -3105,14 +3322,16 @@
             "range": "MY.fruitTypeEnum",
             "subject": "MY.fruitType",
             "description": "Fruit type of the collected fruits, used for botanical garden accessions/seed bank.",
-            "title": "Fruit type"
+            "title": "Fruit type",
+            "sortOrder": 39
           },
           "genotype": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.genotype",
             "description": "Genotype of the microbial strain",
-            "title": "Genotype"
+            "title": "Genotype",
+            "sortOrder": 25
           },
           "gonadInMillimeters": {
             "type": "array",
@@ -3123,28 +3342,32 @@
             "minItems": 0,
             "range": "xsd:string",
             "subject": "MY.gonadInMillimeters",
-            "title": "Gonad"
+            "title": "Gonad",
+            "sortOrder": -1
           },
           "growthMediumName": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.growthMediumName",
             "description": "Microbial culture growth medium name, usually from a standard",
-            "title": "Growth medium name"
+            "title": "Growth medium name",
+            "sortOrder": 28
           },
           "growthOtherConditions": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.growthOtherConditions",
             "description": "Other growth conditions for the microbial culture, light etc.",
-            "title": "Other conditions for growth"
+            "title": "Other conditions for growth",
+            "sortOrder": 31
           },
           "growthTemperature": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.growthTemperature",
             "description": "Microbial culture growth temperature",
-            "title": "Growth temperature"
+            "title": "Growth temperature",
+            "sortOrder": 27
           },
           "habitat": {
             "type": "array",
@@ -3501,7 +3724,8 @@
             "minItems": 0,
             "range": "MY.habitatEnum",
             "subject": "MY.habitat",
-            "title": "Habitat"
+            "title": "Habitat",
+            "sortOrder": -1
           },
           "hasIdentification": {
             "type": "array",
@@ -3512,7 +3736,8 @@
             "minItems": 0,
             "range": "MY.identification",
             "subject": "MY.hasIdentification",
-            "title": "hasIdentification"
+            "title": "hasIdentification",
+            "sortOrder": -1
           },
           "hasSubUnit": {
             "type": "array",
@@ -3523,19 +3748,22 @@
             "minItems": 0,
             "range": "MY.subUnit",
             "subject": "MY.hasSubUnit",
-            "title": "hasSubUnit"
+            "title": "hasSubUnit",
+            "sortOrder": -1
           },
           "hostID": {
             "type": "string",
             "range": "MX.taxon",
             "subject": "MY.hostID",
-            "title": "Host species"
+            "title": "Host species",
+            "sortOrder": -1
           },
           "hostInformalNameString": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.hostInformalNameString",
-            "title": "Host species"
+            "title": "Host species",
+            "sortOrder": -1
           },
           "indirectObservationType": {
             "type": "string",
@@ -3559,33 +3787,38 @@
             ],
             "range": "MY.indirectObservationTypeEnum",
             "subject": "MY.indirectObservationType",
-            "title": "Tracks"
+            "title": "Tracks",
+            "sortOrder": -1
           },
           "individualCount": {
             "type": "integer",
             "minimum": 0,
             "range": "xsd:nonNegativeInteger",
             "subject": "MY.individualCount",
-            "title": "Individual count"
+            "title": "Individual count",
+            "sortOrder": -1
           },
           "infestation": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.infestation",
             "description": "Description of the infestation status of the collected seeds, used for botanical garden accessions/seed bank.",
-            "title": "Infestation"
+            "title": "Infestation",
+            "sortOrder": 41
           },
           "informalNameString": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.informalNameString",
-            "title": "Species"
+            "title": "Species",
+            "sortOrder": -1
           },
           "informalTaxonGroup": {
             "type": "string",
             "range": "MVL.informalTaxonGroup",
             "subject": "MY.informalTaxonGroup",
-            "title": "Informal taxon group"
+            "title": "Informal taxon group",
+            "sortOrder": -1
           },
           "informalTaxonGroups": {
             "type": "array",
@@ -3597,27 +3830,31 @@
             "range": "MVL.informalTaxonGroup",
             "subject": "MY.informalTaxonGroups",
             "description": "Valitut eliöryhmät",
-            "title": "Informal taxon groups"
+            "title": "Informal taxon groups",
+            "sortOrder": -1
           },
           "infrasubspecificSubdivision": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.infrasubspecificSubdivision",
             "description": "Pathovars, serovars and other infrasubspecific subdivisions of microbes.",
-            "title": "Infrasubspecific subdivision"
+            "title": "Infrasubspecific subdivision",
+            "sortOrder": 26
           },
           "isPartOf": {
             "type": "string",
             "range": "rdfs:Resource",
             "subject": "MY.isPartOf",
             "description": "Which parent or larger collection this is part of.",
-            "title": "Is part of"
+            "title": "Is part of",
+            "sortOrder": 34
           },
           "juvenileIndividualCount": {
             "type": "integer",
             "range": "xsd:integer",
             "subject": "MY.juvenileIndividualCount",
-            "title": "Juvenile individual count"
+            "title": "Juvenile individual count",
+            "sortOrder": -1
           },
           "keywords": {
             "type": "array",
@@ -3628,14 +3865,16 @@
             "minItems": 0,
             "range": "xsd:string",
             "subject": "MY.keywords",
-            "title": "Keywords"
+            "title": "Keywords",
+            "sortOrder": -1
           },
           "larvaIndividualCount": {
             "type": "integer",
             "minimum": 0,
             "range": "xsd:nonNegativeInteger",
             "subject": "MY.larvaIndividualCount",
-            "title": "Larva count"
+            "title": "Larva count",
+            "sortOrder": -1
           },
           "latestEpochOrHighestSeries": {
             "type": "string",
@@ -3674,7 +3913,8 @@
             "range": "MY.epochOrSeries",
             "subject": "MY.latestEpochOrHighestSeries",
             "description": "For palaeontological specimens, latest possible geochronologic epoch or highest chronostratigraphic series attributable to the stratigraphic horizon from which the specimen was collected.",
-            "title": "Latest epoch or highest series"
+            "title": "Latest epoch or highest series",
+            "sortOrder": 35
           },
           "lengthInMillimeters": {
             "type": "array",
@@ -3685,7 +3925,8 @@
             "minItems": 0,
             "range": "xsd:string",
             "subject": "MY.lengthInMillimeters",
-            "title": "Length"
+            "title": "Length",
+            "sortOrder": -1
           },
           "lifeStage": {
             "type": "string",
@@ -3740,34 +3981,39 @@
             "range": "MY.lifeStages",
             "subject": "MY.lifeStage",
             "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
-            "title": "Life stage"
+            "title": "Life stage",
+            "sortOrder": 2
           },
           "lifeStageDescription": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.lifeStageDescription",
             "description": "Free-text notes or addtional information about the life stage. If multiple values present, describe them here.",
-            "title": "Life stage description"
+            "title": "Life stage description",
+            "sortOrder": 4
           },
           "likelyMigrant": {
             "type": "boolean",
             "range": "xsd:boolean",
             "subject": "MY.likelyMigrant",
-            "title": "Likely migrant (doesn't breed)"
+            "title": "Likely migrant (doesn't breed)",
+            "sortOrder": -1
           },
           "macroscopy": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.macroscopy",
             "description": "Macroscopic features and measurements, if not recorded separately into measurement fields.",
-            "title": "Macroscopic characters"
+            "title": "Macroscopic characters",
+            "sortOrder": 15
           },
           "maleIndividualCount": {
             "type": "integer",
             "minimum": 0,
             "range": "xsd:nonNegativeInteger",
             "subject": "MY.maleIndividualCount",
-            "title": "Male individual count"
+            "title": "Male individual count",
+            "sortOrder": -1
           },
           "measurement": {
             "type": "object",
@@ -3785,7 +4031,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.DNAConcentrationNgPerMicroliter",
-                "title": "DNA concentration (ng/microliter)"
+                "title": "DNA concentration (ng/microliter)",
+                "sortOrder": 23
               },
               "DNARatioOfAbsorbance260And280": {
                 "type": "array",
@@ -3796,7 +4043,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.DNARatioOfAbsorbance260And280",
-                "title": "DNA purity (ratio of absorbance 260/280 nm)"
+                "title": "DNA purity (ratio of absorbance 260/280 nm)",
+                "sortOrder": 21
               },
               "DNAVolumeMicroliters": {
                 "type": "array",
@@ -3807,7 +4055,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.DNAVolumeMicroliters",
-                "title": "DNA volume (microliters)"
+                "title": "DNA volume (microliters)",
+                "sortOrder": 20
               },
               "beakMillimeters": {
                 "type": "array",
@@ -3818,7 +4067,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.beakMillimeters",
-                "title": "Beak (mm)"
+                "title": "Beak (mm)",
+                "sortOrder": 2
               },
               "bodyCentimeters": {
                 "type": "array",
@@ -3829,7 +4079,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.bodyCentimeters",
-                "title": "Body (cm)"
+                "title": "Body (cm)",
+                "sortOrder": 7
               },
               "bodyMillimeters": {
                 "type": "array",
@@ -3840,7 +4091,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.bodyMillimeters",
-                "title": "Body (mm)"
+                "title": "Body (mm)",
+                "sortOrder": 6
               },
               "earLengthMillimeters": {
                 "type": "array",
@@ -3851,7 +4103,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.earLengthMillimeters",
-                "title": "Ear length (mm)"
+                "title": "Ear length (mm)",
+                "sortOrder": 13
               },
               "embryoCount": {
                 "type": "array",
@@ -3862,7 +4115,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.embryoCount",
-                "title": "Embryo count"
+                "title": "Embryo count",
+                "sortOrder": 15
               },
               "follicleDiameterMillimeters": {
                 "type": "array",
@@ -3873,7 +4127,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.follicleDiameterMillimeters",
-                "title": "Follicle diameter (mm)"
+                "title": "Follicle diameter (mm)",
+                "sortOrder": 17
               },
               "footLengthMillimeters": {
                 "type": "array",
@@ -3884,7 +4139,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.footLengthMillimeters",
-                "title": "Foot length (mm)"
+                "title": "Foot length (mm)",
+                "sortOrder": 14
               },
               "forearmMillimeters": {
                 "type": "array",
@@ -3895,7 +4151,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.forearmMillimeters",
-                "title": "Forearm (mm)"
+                "title": "Forearm (mm)",
+                "sortOrder": 24
               },
               "gonadMillimeters": {
                 "type": "array",
@@ -3906,14 +4163,16 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.gonadMillimeters",
-                "title": "Gonad (mm)"
+                "title": "Gonad (mm)",
+                "sortOrder": 3
               },
               "isPartOf": {
                 "type": "string",
                 "range": "rdfs:Resource",
                 "subject": "MY.isPartOf",
                 "description": "Which parent or larger collection this is part of.",
-                "title": "Is part of"
+                "title": "Is part of",
+                "sortOrder": 34
               },
               "tailCentimeters": {
                 "type": "array",
@@ -3924,7 +4183,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.tailCentimeters",
-                "title": "Tail (cm)"
+                "title": "Tail (cm)",
+                "sortOrder": 9
               },
               "tailMillimeters": {
                 "type": "array",
@@ -3935,7 +4195,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.tailMillimeters",
-                "title": "Tail (mm)"
+                "title": "Tail (mm)",
+                "sortOrder": 8
               },
               "tarsusLengthMillimeters": {
                 "type": "array",
@@ -3946,7 +4207,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.tarsusLengthMillimeters",
-                "title": "Tarsus length (mm)"
+                "title": "Tarsus length (mm)",
+                "sortOrder": 1
               },
               "totalLengthCentimeters": {
                 "type": "array",
@@ -3957,7 +4219,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.totalLengthCentimeters",
-                "title": "Length (cm)"
+                "title": "Length (cm)",
+                "sortOrder": 5
               },
               "totalLengthMillimeters": {
                 "type": "array",
@@ -3968,7 +4231,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.totalLengthMillimeters",
-                "title": "Length (mm)"
+                "title": "Length (mm)",
+                "sortOrder": 4
               },
               "uterineScarCount": {
                 "type": "array",
@@ -3979,7 +4243,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.uterineScarCount",
-                "title": "Uterine scar count"
+                "title": "Uterine scar count",
+                "sortOrder": 16
               },
               "weightGrams": {
                 "type": "array",
@@ -3990,7 +4255,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.weightGrams",
-                "title": "Weight (g)"
+                "title": "Weight (g)",
+                "sortOrder": 10
               },
               "weightKilograms": {
                 "type": "array",
@@ -4001,7 +4267,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.weightKilograms",
-                "title": "Weight (kg)"
+                "title": "Weight (kg)",
+                "sortOrder": 11
               },
               "wingMaxMillimeters": {
                 "type": "array",
@@ -4012,7 +4279,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.wingMaxMillimeters",
-                "title": "Wing max (mm)"
+                "title": "Wing max (mm)",
+                "sortOrder": 18
               },
               "wingMillimeters": {
                 "type": "array",
@@ -4023,7 +4291,8 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.wingMillimeters",
-                "title": "Wing (mm)"
+                "title": "Wing (mm)",
+                "sortOrder": 12
               },
               "wingMinMillimeters": {
                 "type": "array",
@@ -4034,10 +4303,12 @@
                 "minItems": 0,
                 "range": "xsd:decimal",
                 "subject": "MY.wingMinMillimeters",
-                "title": "Wing min (mm)"
+                "title": "Wing min (mm)",
+                "sortOrder": 19
               }
             },
-            "range": "MY.measurementClass"
+            "range": "MY.measurementClass",
+            "sortOrder": 24
           },
           "microbiologicalRiskGroup": {
             "type": "string",
@@ -4058,14 +4329,16 @@
             "range": "MY.microbiologicalRiskGroupEnum",
             "subject": "MY.microbiologicalRiskGroup",
             "description": "According to German TRBA August 2015, which is more comprehensive than the EU or Finnish list for bacterial risk groups",
-            "title": "Risk group"
+            "title": "Risk group",
+            "sortOrder": 36
           },
           "microscopy": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.microscopy",
             "description": "Microscopic features and measurements, if not recorded separately into measurement fields.",
-            "title": "Microscopic characters"
+            "title": "Microscopic characters",
+            "sortOrder": 16
           },
           "movingDirection": {
             "type": "string",
@@ -4109,7 +4382,8 @@
             ],
             "range": "MY.movingDirectionEnum",
             "subject": "MY.movingDirection",
-            "title": "Moving direction"
+            "title": "Moving direction",
+            "sortOrder": -1
           },
           "movingStatus": {
             "type": "array",
@@ -4120,14 +4394,16 @@
             "minItems": 0,
             "range": "xsd:string",
             "subject": "MY.movingStatus",
-            "title": "Moving status"
+            "title": "Moving status",
+            "sortOrder": -1
           },
           "mutant": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.mutant",
             "description": "Information on mutant microbial strain.",
-            "title": "Mutant"
+            "title": "Mutant",
+            "sortOrder": 22
           },
           "nativeStatus": {
             "type": "string",
@@ -4143,27 +4419,31 @@
             ],
             "range": "MY.nativeStatusEnum",
             "subject": "MY.nativeStatus",
-            "title": "Native status"
+            "title": "Native status",
+            "sortOrder": -1
           },
           "nestCount": {
             "type": "integer",
             "minimum": 0,
             "range": "xsd:nonNegativeInteger",
             "subject": "MY.nestCount",
-            "title": "Nest/cavity count"
+            "title": "Nest/cavity count",
+            "sortOrder": -1
           },
           "nestNotes": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.nestNotes",
-            "title": "Nest notes"
+            "title": "Nest notes",
+            "sortOrder": -1
           },
           "nestTreeDiameterInCentimeters": {
             "type": "integer",
             "exclusiveMinimum": 0,
             "range": "xsd:positiveInteger",
             "subject": "MY.nestTreeDiameterInCentimeters",
-            "title": "Diameter of the tree (cm)"
+            "title": "Diameter of the tree (cm)",
+            "sortOrder": -1
           },
           "nestType": {
             "type": "string",
@@ -4187,28 +4467,32 @@
             ],
             "range": "MY.nestTypeEnum",
             "subject": "MY.nestType",
-            "title": "Nest type"
+            "title": "Nest type",
+            "sortOrder": -1
           },
           "notes": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.notes",
             "description": "Additional information to the data in each section.",
-            "title": "Notes"
+            "title": "Notes",
+            "sortOrder": 7
           },
           "pairCount": {
             "type": "integer",
             "minimum": 0,
             "range": "xsd:nonNegativeInteger",
             "subject": "MY.pairCount",
-            "title": "Pair count"
+            "title": "Pair count",
+            "sortOrder": -1
           },
           "pairCountOpinion": {
             "type": "integer",
             "minimum": 0,
             "range": "xsd:nonNegativeInteger",
             "subject": "MY.pairCountOpinion",
-            "title": "Own interpretation/pairs"
+            "title": "Own interpretation/pairs",
+            "sortOrder": -1
           },
           "plantLifeStage": {
             "type": "string",
@@ -4242,7 +4526,8 @@
             ],
             "range": "MY.plantLifeStageEnum",
             "subject": "MY.plantLifeStage",
-            "title": "Plant life stage"
+            "title": "Plant life stage",
+            "sortOrder": -1
           },
           "plantStatusCode": {
             "type": "string",
@@ -4315,21 +4600,24 @@
             "range": "MY.plantStatusCodeEnum",
             "subject": "MY.plantStatusCode",
             "description": "Status code for the plant (wild, alien etc.)",
-            "title": "Plant status code"
+            "title": "Plant status code",
+            "sortOrder": 34
           },
           "populationAbundance": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.populationAbundance",
             "description": "Abundance of the taxon in the field",
-            "title": "Abundance in the field"
+            "title": "Abundance in the field",
+            "sortOrder": 13
           },
           "preparations": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.preparations",
             "description": "Preparations/preparates made from the specimen, if not recorded as separate Preparations/samples in the designated section",
-            "title": "Preparations"
+            "title": "Preparations",
+            "sortOrder": 17
           },
           "preservation": {
             "type": "array",
@@ -4421,14 +4709,16 @@
             "range": "MY.preservations",
             "subject": "MY.preservation",
             "description": "Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.",
-            "title": "Preservation"
+            "title": "Preservation",
+            "sortOrder": 23
           },
           "primarySpecimen": {
             "type": "boolean",
             "range": "xsd:boolean",
             "subject": "MY.primarySpecimen",
             "description": "Can be used to highlight one unit as primary specimen/observation if there are many in one document. Only one unit per document can be marked as primary.",
-            "title": "Primary specimen"
+            "title": "Primary specimen",
+            "sortOrder": 43
           },
           "provenance": {
             "type": "string",
@@ -4457,7 +4747,8 @@
             "range": "MY.provenanceEnum",
             "subject": "MY.provenance",
             "description": "Origin or source of the garden accession",
-            "title": "Provenance"
+            "title": "Provenance",
+            "sortOrder": 32
           },
           "recordBasis": {
             "type": "string",
@@ -4520,7 +4811,8 @@
             "range": "MY.recordBases",
             "subject": "MY.recordBasis",
             "description": "Type of record, most commonly preserved specimen for museum specimens and observation for associated observations (\"seuralaislajihavainto\").",
-            "title": "Record type"
+            "title": "Record type",
+            "sortOrder": 1
           },
           "recordParts": {
             "type": "array",
@@ -4602,14 +4894,16 @@
             "range": "MY.recordPartsEnum",
             "subject": "MY.recordParts",
             "description": "What parts of the record are / have been in storage.",
-            "title": "Record parts"
+            "title": "Record parts",
+            "sortOrder": 6
           },
           "ring": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.ring",
             "description": "Bird or bat ring number, code, colour code or such",
-            "title": "Ring"
+            "title": "Ring",
+            "sortOrder": 19
           },
           "samplingMethod": {
             "type": "string",
@@ -4718,13 +5012,15 @@
             "range": "MY.samplingMethods",
             "subject": "MY.samplingMethod",
             "description": "Main method for (usually intentional) sampling",
-            "title": "Sampling method"
+            "title": "Sampling method",
+            "sortOrder": 31
           },
           "samplingMethodNotes": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.samplingMethodNotes",
-            "title": "Sampling method notes"
+            "title": "Sampling method notes",
+            "sortOrder": -1
           },
           "seedMaturity": {
             "type": "string",
@@ -4743,7 +5039,8 @@
             "range": "MY.seedMaturityEnum",
             "subject": "MY.seedMaturity",
             "description": "Maturity of the collected seeds, used for botanical garden accessions/seed bank.",
-            "title": "Seed maturity"
+            "title": "Seed maturity",
+            "sortOrder": 38
           },
           "seedMorphology": {
             "type": "string",
@@ -4782,7 +5079,8 @@
             "range": "MY.seedMorphologyEnum",
             "subject": "MY.seedMorphology",
             "description": "Seed morphology of the collected seeds, used for botanical garden accessions/seed bank.",
-            "title": "Seed morphology"
+            "title": "Seed morphology",
+            "sortOrder": 40
           },
           "sex": {
             "type": "string",
@@ -4811,20 +5109,23 @@
             "range": "MY.sexes",
             "subject": "MY.sex",
             "description": "Sex of the individual(s)",
-            "title": "Sex"
+            "title": "Sex",
+            "sortOrder": 3
           },
           "sexNotes": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.sexNotes",
             "description": "E.g. how sex was determined, by whom and when.",
-            "title": "Sex notes"
+            "title": "Sex notes",
+            "sortOrder": 20
           },
           "shortHandText": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.shortHandText",
-            "title": "Shorthand"
+            "title": "Shorthand",
+            "sortOrder": -1
           },
           "smell": {
             "type": "string",
@@ -4846,19 +5147,22 @@
             ],
             "range": "MY.smellEnum",
             "subject": "MY.smell",
-            "title": "Smell"
+            "title": "Smell",
+            "sortOrder": -1
           },
           "smellNotes": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.smellNotes",
-            "title": "Smell notes"
+            "title": "Smell notes",
+            "sortOrder": -1
           },
           "stratigraphyVerbatim": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.stratigraphyVerbatim",
-            "title": "Verbatim stratigraphy from original source"
+            "title": "Verbatim stratigraphy from original source",
+            "sortOrder": 42
           },
           "substrateClassification": {
             "type": "string",
@@ -4982,7 +5286,8 @@
             ],
             "range": "MY.substrateEnum",
             "subject": "MY.substrateClassification",
-            "title": "Type of substrate"
+            "title": "Type of substrate",
+            "sortOrder": -1
           },
           "substrateDecayStage": {
             "type": "string",
@@ -5004,31 +5309,36 @@
             ],
             "range": "MY.substrateDecayStageEnum",
             "subject": "MY.substrateDecayStage",
-            "title": "Woody substrate, decay stage"
+            "title": "Woody substrate, decay stage",
+            "sortOrder": -1
           },
           "substrateNotes": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.substrateNotes",
-            "title": "Substrate notes"
+            "title": "Substrate notes",
+            "sortOrder": -1
           },
           "substrateSpecies": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.substrateSpecies",
-            "title": "Substrate species"
+            "title": "Substrate species",
+            "sortOrder": -1
           },
           "substrateSpeciesID": {
             "type": "string",
             "range": "MX.taxon",
             "subject": "MY.substrateSpeciesID",
-            "title": "Substrate species"
+            "title": "Substrate species",
+            "sortOrder": -1
           },
           "substrateSpeciesInformalNameString": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.substrateSpeciesInformalNameString",
-            "title": "Substrate species"
+            "title": "Substrate species",
+            "sortOrder": -1
           },
           "substrateTreeClassification": {
             "type": "array",
@@ -5057,7 +5367,8 @@
             "minItems": 0,
             "range": "MY.substrateTreeClassificationEnum",
             "subject": "MY.substrateTreeClassification",
-            "title": "Woody substrate, additional information"
+            "title": "Woody substrate, additional information",
+            "sortOrder": -1
           },
           "tailInMillimeters": {
             "type": "array",
@@ -5068,7 +5379,8 @@
             "minItems": 0,
             "range": "xsd:string",
             "subject": "MY.tailInMillimeters",
-            "title": "Tail"
+            "title": "Tail",
+            "sortOrder": -1
           },
           "taste": {
             "type": "string",
@@ -5090,13 +5402,15 @@
             ],
             "range": "MY.tasteEnum",
             "subject": "MY.taste",
-            "title": "Taste"
+            "title": "Taste",
+            "sortOrder": -1
           },
           "tasteNotes": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.tasteNotes",
-            "title": "Taste notes"
+            "title": "Taste notes",
+            "sortOrder": -1
           },
           "taxonConfidence": {
             "type": "string",
@@ -5114,13 +5428,15 @@
             ],
             "range": "MY.taxonConfidenceEnum",
             "subject": "MY.taxonConfidence",
-            "title": "Confidence of determination"
+            "title": "Confidence of determination",
+            "sortOrder": -1
           },
           "twitched": {
             "type": "boolean",
             "range": "xsd:boolean",
             "subject": "MY.twitched",
-            "title": "Twitched"
+            "title": "Twitched",
+            "sortOrder": -1
           },
           "unitFact": {
             "type": "object",
@@ -5133,13 +5449,15 @@
                 "type": "integer",
                 "range": "xsd:integer",
                 "subject": "MY.adultIndividualCount",
-                "title": "Adult individual count"
+                "title": "Adult individual count",
+                "sortOrder": -1
               },
               "autocompleteSelectedTaxonID": {
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MY.autocompleteSelectedTaxonID",
-                "title": "Taxon ID selected from autocomplete"
+                "title": "Taxon ID selected from autocomplete",
+                "sortOrder": -1
               },
               "glowWormMicrohabitat": {
                 "type": "string",
@@ -5165,34 +5483,39 @@
                 ],
                 "range": "MY.glowWormMicrohabitatEnum",
                 "subject": "MY.glowWormMicrohabitat",
-                "title": "Micro habitat"
+                "title": "Micro habitat",
+                "sortOrder": -1
               },
               "individualCountFlock": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "MY.individualCountFlock",
-                "title": "Parven koko"
+                "title": "Parven koko",
+                "sortOrder": -1
               },
               "individualCountInner": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "MY.individualCountInner",
-                "title": "Yksilömäärä sisällä"
+                "title": "Yksilömäärä sisällä",
+                "sortOrder": -1
               },
               "individualCountOuter": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "MY.individualCountOuter",
-                "title": "Yksilömäärä alueen ulkopuolella"
+                "title": "Yksilömäärä alueen ulkopuolella",
+                "sortOrder": -1
               },
               "juvenileIndividualCount": {
                 "type": "integer",
                 "range": "xsd:integer",
                 "subject": "MY.juvenileIndividualCount",
-                "title": "Juvenile individual count"
+                "title": "Juvenile individual count",
+                "sortOrder": -1
               },
               "lineTransectObsType": {
                 "type": "string",
@@ -5228,7 +5551,8 @@
                 ],
                 "range": "MY.lineTransectObsTypeEnum",
                 "subject": "MY.lineTransectObsType",
-                "title": "Observations quality"
+                "title": "Observations quality",
+                "sortOrder": -1
               },
               "lineTransectRouteFieldType": {
                 "type": "string",
@@ -5244,7 +5568,8 @@
                 ],
                 "range": "MY.lineTransectRouteFieldTypeEnum",
                 "subject": "MY.lineTransectRouteFieldType",
-                "title": "Field Area"
+                "title": "Field Area",
+                "sortOrder": -1
               },
               "lolifeDroppingsCount": {
                 "type": "string",
@@ -5268,7 +5593,8 @@
                 ],
                 "range": "MY.lolifeDroppingsCountEnum",
                 "subject": "MY.lolifeDroppingsCount",
-                "title": "Droppings count"
+                "title": "Droppings count",
+                "sortOrder": -1
               },
               "lolifeDroppingsQuality": {
                 "type": "string",
@@ -5284,7 +5610,8 @@
                 ],
                 "range": "MY.lolifeDroppingsQualityEnum",
                 "subject": "MY.lolifeDroppingsQuality",
-                "title": "Papanoiden laatu"
+                "title": "Papanoiden laatu",
+                "sortOrder": -1
               },
               "lolifeDroppingsType": {
                 "type": "string",
@@ -5304,7 +5631,8 @@
                 ],
                 "range": "MY.lolifeDroppingsTypeEnum",
                 "subject": "MY.lolifeDroppingsType",
-                "title": "Droppings type"
+                "title": "Droppings type",
+                "sortOrder": -1
               },
               "lolifeNestTree": {
                 "type": "string",
@@ -5330,33 +5658,38 @@
                 ],
                 "range": "MY.lolifeNestTreeEnum",
                 "subject": "MY.lolifeNestTree",
-                "title": "Tree species"
+                "title": "Tree species",
+                "sortOrder": -1
               },
               "pairCountInner": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "MY.pairCountInner",
-                "title": "Parimäärä sisällä"
+                "title": "Parimäärä sisällä",
+                "sortOrder": -1
               },
               "pairCountOuter": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "MY.pairCountOuter",
-                "title": "Parimäärä alueen ulkopuolella"
+                "title": "Parimäärä alueen ulkopuolella",
+                "sortOrder": -1
               },
               "pointCountFlock": {
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MY.pointCountFlock",
-                "title": "Parvien koot"
+                "title": "Parvien koot",
+                "sortOrder": -1
               },
               "runningWaterInVicinity": {
                 "type": "boolean",
                 "range": "xsd:boolean",
                 "subject": "MY.runningWaterInVicinity",
-                "title": "Is the plant growing next to running water?"
+                "title": "Is the plant growing next to running water?",
+                "sortOrder": -1
               },
               "waterbirdFemale": {
                 "type": "string",
@@ -5374,7 +5707,8 @@
                 ],
                 "range": "MY.waterbirdFemaleEnum",
                 "subject": "MY.waterbirdFemale",
-                "title": "Female observed"
+                "title": "Female observed",
+                "sortOrder": -1
               },
               "waterbirdJuvenileAgeClass": {
                 "type": "string",
@@ -5402,19 +5736,22 @@
                 ],
                 "range": "MY.waterbirdJuvenileAgeClassEnum",
                 "subject": "MY.waterbirdJuvenileAgeClass",
-                "title": "Juvenile age class"
+                "title": "Juvenile age class",
+                "sortOrder": -1
               },
               "waterbirdJuvenileCountAccurate": {
                 "type": "boolean",
                 "range": "xsd:boolean",
                 "subject": "MY.waterbirdJuvenileCountAccurate",
-                "title": "Count accurate?"
+                "title": "Count accurate?",
+                "sortOrder": -1
               },
               "waterbirdObserverOpinionSelectedCensus": {
                 "type": "boolean",
                 "range": "xsd:boolean",
                 "subject": "MY.waterbirdObserverOpinionSelectedCensus",
-                "title": "Make an interpretation based on this census"
+                "title": "Make an interpretation based on this census",
+                "sortOrder": -1
               },
               "waterbirdPairCountOpinionReasoning": {
                 "type": "string",
@@ -5434,66 +5771,76 @@
                 ],
                 "range": "MY.waterbirdPairCountOpinionReasoningEnum",
                 "subject": "MY.waterbirdPairCountOpinionReasoning",
-                "title": "Reasoning for own interpretation"
+                "title": "Reasoning for own interpretation",
+                "sortOrder": -1
               },
               "individualCountBiotopeA": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "WBC.individualCountBiotopeA",
-                "title": "Individual count dump"
+                "title": "Individual count dump",
+                "sortOrder": -1
               },
               "individualCountBiotopeB": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "WBC.individualCountBiotopeB",
-                "title": "Individual count urban"
+                "title": "Individual count urban",
+                "sortOrder": -1
               },
               "individualCountBiotopeC": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "WBC.individualCountBiotopeC",
-                "title": "Individual count countryside"
+                "title": "Individual count countryside",
+                "sortOrder": -1
               },
               "individualCountBiotopeD": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "WBC.individualCountBiotopeD",
-                "title": "Individual count field"
+                "title": "Individual count field",
+                "sortOrder": -1
               },
               "individualCountBiotopeE": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "WBC.individualCountBiotopeE",
-                "title": "Individual count forest"
+                "title": "Individual count forest",
+                "sortOrder": -1
               },
               "individualCountBiotopeF": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "WBC.individualCountBiotopeF",
-                "title": "Individual count other biotope"
+                "title": "Individual count other biotope",
+                "sortOrder": -1
               },
               "individualCountBiotopeG": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "WBC.individualCountBiotopeG",
-                "title": "Individual count cutting open"
+                "title": "Individual count cutting open",
+                "sortOrder": -1
               },
               "individualCountBiotopeH": {
                 "type": "integer",
                 "minimum": 0,
                 "range": "xsd:nonNegativeInteger",
                 "subject": "WBC.individualCountBiotopeH",
-                "title": "Individual count reed"
+                "title": "Individual count reed",
+                "sortOrder": -1
               }
             },
-            "range": "MY.unitFactClass"
+            "range": "MY.unitFactClass",
+            "sortOrder": -1
           },
           "unitGathering": {
             "type": "object",
@@ -5524,42 +5871,49 @@
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MY.dateBegin",
-                "title": "Start date"
+                "title": "Start date",
+                "sortOrder": 2
               },
               "dateEnd": {
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MY.dateEnd",
-                "title": "End date"
+                "title": "End date",
+                "sortOrder": 4
               },
               "geometry": {
                 "type": "object",
                 "range": "MZ.geometry",
                 "subject": "MY.geometry",
-                "title": "Coordinates"
+                "title": "Coordinates",
+                "sortOrder": -1
               },
               "habitatDescription": {
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MY.habitatDescription",
                 "description": "Informal description of the habitat.",
-                "title": "Habitat description"
+                "title": "Habitat description",
+                "sortOrder": 5
               },
               "habitatIUCN": {
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MY.habitatIUCN",
-                "title": "Habitat"
+                "title": "Habitat",
+                "sortOrder": 4
               },
               "substrate": {
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MY.substrate",
                 "description": "Type of substrate or name of substrate species.",
-                "title": "Substrate"
+                "title": "Substrate",
+                "sortOrder": 3
               }
             },
-            "range": "MZ.unitGathering"
+            "range": "MZ.unitGathering",
+            "sortOrder": -1
           },
           "unitType": {
             "type": "array",
@@ -5570,7 +5924,8 @@
             "minItems": 0,
             "range": "xsd:string",
             "subject": "MY.unitType",
-            "title": "Specimen type"
+            "title": "Specimen type",
+            "sortOrder": -1
           },
           "weightInGrams": {
             "type": "array",
@@ -5581,7 +5936,8 @@
             "minItems": 0,
             "range": "xsd:string",
             "subject": "MY.weightInGrams",
-            "title": "Weight"
+            "title": "Weight",
+            "sortOrder": -1
           },
           "wild": {
             "type": "string",
@@ -5599,7 +5955,8 @@
             ],
             "range": "MY.wildEnum",
             "subject": "MY.wild",
-            "title": "Native status"
+            "title": "Native status",
+            "sortOrder": -1
           },
           "wingInMillimeters": {
             "type": "array",
@@ -5610,7 +5967,8 @@
             "minItems": 0,
             "range": "xsd:string",
             "subject": "MY.wingInMillimeters",
-            "title": "Wing length (mm)"
+            "title": "Wing length (mm)",
+            "sortOrder": -1
           },
           "audio": {
             "type": "array",
@@ -5621,7 +5979,8 @@
             "minItems": 0,
             "range": "MM.audio",
             "subject": "MZ.audio",
-            "title": "Recordings"
+            "title": "Recordings",
+            "sortOrder": -1
           },
           "images": {
             "type": "array",
@@ -5632,7 +5991,8 @@
             "minItems": 0,
             "range": "MM.image",
             "subject": "MZ.images",
-            "title": "Images"
+            "title": "Images",
+            "sortOrder": -1
           },
           "publicityRestrictions": {
             "type": "string",
@@ -5651,7 +6011,8 @@
             "range": "MZ.publicityRestrictionsEnum",
             "subject": "MZ.publicityRestrictions",
             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
-            "title": "Publicity restrictions"
+            "title": "Publicity restrictions",
+            "sortOrder": 33
           },
           "identifications": {
             "type": "array",
@@ -5685,35 +6046,40 @@
                   "type": "integer",
                   "range": "xsd:integer",
                   "subject": "herbo:sortOrder",
-                  "title": "herbo:sortOrder"
+                  "title": "herbo:sortOrder",
+                  "sortOrder": -1
                 },
                 "associatedObservationTaxa": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.associatedObservationTaxa",
                   "description": "Write associated observation taxa names here, separated by a semicolon (;). E.g.: \"Betula pendula; Betula pubescens; Poaceae\". These will form their own units of the type observation.",
-                  "title": "Associated observation taxa"
+                  "title": "Associated observation taxa",
+                  "sortOrder": 35
                 },
                 "author": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.author",
                   "description": "Author for the taxon",
-                  "title": "Taxon author"
+                  "title": "Taxon author",
+                  "sortOrder": 3
                 },
                 "det": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.det",
                   "description": "Name of the identifier (person) preferably in format \"lastname, firstname\"",
-                  "title": "Det."
+                  "title": "Det.",
+                  "sortOrder": 3
                 },
                 "detDate": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.detDate",
                   "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or \"Y\"",
-                  "title": "Det. date"
+                  "title": "Det. date",
+                  "sortOrder": 2
                 },
                 "detMethod": {
                   "type": "string",
@@ -5731,21 +6097,24 @@
                   ],
                   "range": "MY.detMethodEnum",
                   "subject": "MY.detMethod",
-                  "title": "Det method"
+                  "title": "Det method",
+                  "sortOrder": -1
                 },
                 "detVerbatim": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.detVerbatim",
                   "description": "Name of the identifier and date of identification in original format (e.g. from the label), errors and all",
-                  "title": "Det verbatim from the label or other original source"
+                  "title": "Det verbatim from the label or other original source",
+                  "sortOrder": 17
                 },
                 "genusQualifier": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.genusQualifier",
                   "description": "Additional qualifier or specifier at genus level (e.g. aff., cf.)",
-                  "title": "Genus qualifier"
+                  "title": "Genus qualifier",
+                  "sortOrder": 8
                 },
                 "identificationBasis": {
                   "type": "array",
@@ -5786,28 +6155,32 @@
                   "minItems": 0,
                   "range": "MY.identificationBasisEnum",
                   "subject": "MY.identificationBasis",
-                  "title": "Identification basis"
+                  "title": "Identification basis",
+                  "sortOrder": -1
                 },
                 "identificationNotes": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.identificationNotes",
                   "description": "Additional information on the identification, basis or such",
-                  "title": "Identification notes"
+                  "title": "Identification notes",
+                  "sortOrder": 15
                 },
                 "infraAuthor": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.infraAuthor",
                   "description": "Author for the taxon below species level/infra epithet",
-                  "title": "Infra author"
+                  "title": "Infra author",
+                  "sortOrder": 6
                 },
                 "infraEpithet": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.infraEpithet",
                   "description": "Taxon name for the epithet below species level",
-                  "title": "Infra name"
+                  "title": "Infra name",
+                  "sortOrder": 5
                 },
                 "infraRank": {
                   "type": "string",
@@ -5850,62 +6223,71 @@
                   "range": "MY.infraRanks",
                   "subject": "MY.infraRank",
                   "description": "Taxonomic level of the epithet below species level",
-                  "title": "Infra rank"
+                  "title": "Infra rank",
+                  "sortOrder": 4
                 },
                 "infrasubspecificSubdivision": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.infrasubspecificSubdivision",
                   "description": "Pathovars, serovars and other infrasubspecific subdivisions of microbes.",
-                  "title": "Infrasubspecific subdivision"
+                  "title": "Infrasubspecific subdivision",
+                  "sortOrder": 26
                 },
                 "isPartOf": {
                   "type": "string",
                   "range": "rdfs:Resource",
                   "subject": "MY.isPartOf",
                   "description": "Which parent or larger collection this is part of.",
-                  "title": "Is part of"
+                  "title": "Is part of",
+                  "sortOrder": 34
                 },
                 "isTaxonGroup": {
                   "type": "boolean",
                   "range": "xsd:boolean",
                   "subject": "MY.isTaxonGroup",
-                  "title": "Is taxon group"
+                  "title": "Is taxon group",
+                  "sortOrder": -1
                 },
                 "preferredIdentification": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.preferredIdentification",
                   "description": "This can be used to select one of the identifications as 'recommended', which is the used as default when displaying information about the specimen.",
-                  "title": "Preferred identification"
+                  "title": "Preferred identification",
+                  "sortOrder": 16
                 },
                 "sec": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.sec",
                   "description": "Publication reference for the taxon concept, that was used in identification",
-                  "title": "Taxon concept (sec)"
+                  "title": "Taxon concept (sec)",
+                  "sortOrder": 14
                 },
                 "speciesQualifier": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.speciesQualifier",
                   "description": "Additional qualifier at species level (e.g. aff., cf., sp. n., coll.)",
-                  "title": "Species qualifier"
+                  "title": "Species qualifier",
+                  "sortOrder": 9
                 },
                 "taxon": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.taxon",
                   "description": "Taxon name",
-                  "title": "Species"
+                  "title": "Species",
+                  "sortOrder": 2
                 },
                 "taxonID": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.taxonID",
                   "description": "ID for the taxon if has some other than an MX code",
-                  "title": "Taxon alternative ID"
+                  "title": "Taxon alternative ID",
+                  "sortOrder": 12
                 },
                 "taxonRank": {
                   "type": "string",
@@ -6034,26 +6416,30 @@
                   "range": "MX.taxonRankEnum",
                   "subject": "MY.taxonRank",
                   "description": "Taxonomic level for the identification",
-                  "title": "Taxon rank"
+                  "title": "Taxon rank",
+                  "sortOrder": 1
                 },
                 "taxonSpecifier": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.taxonSpecifier",
-                  "title": "Taxon specifier"
+                  "title": "Taxon specifier",
+                  "sortOrder": -1
                 },
                 "taxonURI": {
                   "type": "string",
                   "range": "MX.taxon",
                   "subject": "MY.taxonURI",
-                  "title": "Taxon URI"
+                  "title": "Taxon URI",
+                  "sortOrder": -1
                 },
                 "taxonVerbatim": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.taxonVerbatim",
                   "description": "Taxon name in original format (e.g. from the label), errors and all",
-                  "title": "Taxon verbatim"
+                  "title": "Taxon verbatim",
+                  "sortOrder": 7
                 },
                 "publicityRestrictions": {
                   "type": "string",
@@ -6072,20 +6458,23 @@
                   "range": "MZ.publicityRestrictionsEnum",
                   "subject": "MZ.publicityRestrictions",
                   "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
-                  "title": "Publicity restrictions"
+                  "title": "Publicity restrictions",
+                  "sortOrder": 33
                 },
                 "sortOrder": {
                   "type": "integer",
                   "range": "xsd:integer",
                   "subject": "sortOrder",
-                  "title": "sortOrder"
+                  "title": "sortOrder",
+                  "sortOrder": -1
                 }
               }
             },
             "minItems": 0,
             "range": "MY.identification",
             "subject": "MY.identifications",
-            "title": "Identification"
+            "title": "Identification",
+            "sortOrder": -1
           },
           "typeSpecimens": {
             "type": "array",
@@ -6120,49 +6509,56 @@
                   "range": "rdfs:Resource",
                   "subject": "MY.isPartOf",
                   "description": "Which parent or larger collection this is part of.",
-                  "title": "Is part of"
+                  "title": "Is part of",
+                  "sortOrder": 34
                 },
                 "typeAuthor": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.typeAuthor",
                   "description": "Author of the type species",
-                  "title": "Type author"
+                  "title": "Type author",
+                  "sortOrder": 3
                 },
                 "typeBasionymePubl": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.typeBasionymePubl",
                   "description": "Publication reference for original description or basionyme",
-                  "title": "Original description publication"
+                  "title": "Original description publication",
+                  "sortOrder": 9
                 },
                 "typeNotes": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.typeNotes",
                   "description": "Additional information on the type",
-                  "title": "Type notes"
+                  "title": "Type notes",
+                  "sortOrder": 11
                 },
                 "typePubl": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.typePubl",
                   "description": "Publication reference for type publication",
-                  "title": "Type publication"
+                  "title": "Type publication",
+                  "sortOrder": 10
                 },
                 "typeSeriesID": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.typeSeriesID",
                   "description": "ID for the type series, if part of one",
-                  "title": "Type series ID"
+                  "title": "Type series ID",
+                  "sortOrder": 12
                 },
                 "typeSpecies": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.typeSpecies",
                   "description": "Name of the type species",
-                  "title": "Type name"
+                  "title": "Type name",
+                  "sortOrder": 2
                 },
                 "typeStatus": {
                   "type": "string",
@@ -6225,21 +6621,24 @@
                   "range": "MY.typeStatuses",
                   "subject": "MY.typeStatus",
                   "description": "Is this holotype, paratype, syntype etc...",
-                  "title": "Type of type"
+                  "title": "Type of type",
+                  "sortOrder": 1
                 },
                 "typeSubspecies": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.typeSubspecies",
                   "description": "Name of the type subspecies",
-                  "title": "Type ssp name"
+                  "title": "Type ssp name",
+                  "sortOrder": 4
                 },
                 "typeSubspeciesAuthor": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.typeSubspeciesAuthor",
                   "description": "Author of the type subspecies",
-                  "title": "Type ssp author"
+                  "title": "Type ssp author",
+                  "sortOrder": 13
                 },
                 "typeVerification": {
                   "type": "string",
@@ -6260,21 +6659,24 @@
                   "range": "MY.typeVerifications",
                   "subject": "MY.typeVerification",
                   "description": "Verification whether this really is a type?",
-                  "title": "Type verification"
+                  "title": "Type verification",
+                  "sortOrder": 8
                 },
                 "typif": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.typif",
                   "description": "Name of the person who chose the type, preferably in the format \"Lastname, firstname\"",
-                  "title": "Typefier"
+                  "title": "Typefier",
+                  "sortOrder": 6
                 },
                 "typifDate": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MY.typifDate",
                   "description": "Date when the specimen was chosen as a type",
-                  "title": "Typifier date"
+                  "title": "Typifier date",
+                  "sortOrder": 7
                 },
                 "publicityRestrictions": {
                   "type": "string",
@@ -6293,14 +6695,16 @@
                   "range": "MZ.publicityRestrictionsEnum",
                   "subject": "MZ.publicityRestrictions",
                   "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
-                  "title": "Publicity restrictions"
+                  "title": "Publicity restrictions",
+                  "sortOrder": 33
                 }
               }
             },
             "minItems": 0,
             "range": "MY.typeSpecimen",
             "subject": "MY.typeSpecimens",
-            "title": "Type identification"
+            "title": "Type identification",
+            "sortOrder": -1
           },
           "samples": {
             "type": "array",
@@ -6317,7 +6721,8 @@
                   "range": "xsd:string",
                   "subject": "MF.DNAExtractionInstrument",
                   "description": "Name of the instrument or device used for DNA extraction",
-                  "title": "DNA extraction instrument"
+                  "title": "DNA extraction instrument",
+                  "sortOrder": 11
                 },
                 "additionalIDs": {
                   "type": "array",
@@ -6329,28 +6734,32 @@
                   "range": "xsd:string",
                   "subject": "MF.additionalIDs",
                   "description": "Other identifiers this preparation/sample has, in format 'type:identifier'. For example: 'MZHtissue:123'. You can enter the type and colon and then click 'generate' to fetch the next free number for that prefix type.",
-                  "title": "Preparation/sample additional sample IDs"
+                  "title": "Preparation/sample additional sample IDs",
+                  "sortOrder": 21
                 },
                 "bold": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MF.bold",
                   "description": "BOLD ID (usually BOLD \"Sample ID\") for the preparation/sample. If no other preparation/sample information is entered, use the BOLD field on the document level",
-                  "title": "Sample BOLD ID"
+                  "title": "Sample BOLD ID",
+                  "sortOrder": 15
                 },
                 "collectionID": {
                   "type": "string",
                   "range": "MY.collection",
                   "subject": "MF.collectionID",
                   "description": "The collection which this preparation/sample belongs to, if different from the collection of the specimen.",
-                  "title": "Preparation/sample collection"
+                  "title": "Preparation/sample collection",
+                  "sortOrder": 22
                 },
                 "condition": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MF.condition",
                   "description": "Notes on the defects of the preparation/sample (missing parts or such). For specimen level status use the condition field in the basic information section (document level). Empty value means same as \"good\" or \"hyvä\" - that the sample is in fine condition.",
-                  "title": "Preparation/sample condition (defects)"
+                  "title": "Preparation/sample condition (defects)",
+                  "sortOrder": 17
                 },
                 "datasetID": {
                   "type": "array",
@@ -6362,7 +6771,8 @@
                   "range": "GX.dataset",
                   "subject": "MF.datasetID",
                   "description": "Tag for the preparation/sample. For specimen level tags, use the tag field in the basic information section (document level).",
-                  "title": "Preparation/sample tag(s)"
+                  "title": "Preparation/sample tag(s)",
+                  "sortOrder": 19
                 },
                 "elutionMedium": {
                   "type": "string",
@@ -6379,7 +6789,8 @@
                   "range": "MF.elutionMediumEnum",
                   "subject": "MF.elutionMedium",
                   "description": "DNA sample elution medium",
-                  "title": "DNA elution medium"
+                  "title": "DNA elution medium",
+                  "sortOrder": 10
                 },
                 "event": {
                   "type": "array",
@@ -6391,7 +6802,8 @@
                   "range": "xsd:string",
                   "subject": "MF.event",
                   "description": "Diary-style information about what has been done to the preparation/sample",
-                  "title": "Events (maintenance etc.)"
+                  "title": "Events (maintenance etc.)",
+                  "sortOrder": 12
                 },
                 "genbank": {
                   "type": "array",
@@ -6403,7 +6815,8 @@
                   "range": "xsd:string",
                   "subject": "MF.genbank",
                   "description": "Genbank ID for the preparation/sample. If no other preparation/sample information is entered, use the Genbank field on the document level",
-                  "title": "Sample Genbank ID"
+                  "title": "Sample Genbank ID",
+                  "sortOrder": 14
                 },
                 "individualsInPreparation": {
                   "type": "string",
@@ -6420,7 +6833,8 @@
                   "range": "MF.individualsInPreparationEnum",
                   "subject": "MF.individualsInPreparation",
                   "description": "For example a jar that contains multiple fish individuals can be recorded as one specimen and one preparation. Can also be used for DNA samples (was DNA extracted from single or multiple individuals?).",
-                  "title": "Single/multiple individual(s)?"
+                  "title": "Single/multiple individual(s)?",
+                  "sortOrder": 4
                 },
                 "material": {
                   "type": "string",
@@ -6509,14 +6923,16 @@
                   "range": "MF.materialEnum",
                   "subject": "MF.material",
                   "description": "Preparation/sample material. Choose preparation/sample type first.",
-                  "title": "Material"
+                  "title": "Material",
+                  "sortOrder": 3
                 },
                 "notes": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MF.notes",
                   "description": "Additional information about the preparation/sample",
-                  "title": "Notes"
+                  "title": "Notes",
+                  "sortOrder": 23
                 },
                 "preparationType": {
                   "type": "string",
@@ -6549,7 +6965,8 @@
                   "range": "MF.preparationTypeEnum",
                   "subject": "MF.preparationType",
                   "description": "Type of preparation/sample",
-                  "title": "Preparation/sample type"
+                  "title": "Preparation/sample type",
+                  "sortOrder": 2
                 },
                 "preparations": {
                   "type": "array",
@@ -6566,7 +6983,8 @@
                         "range": "xsd:string",
                         "subject": "MF.preparationDate",
                         "description": "Date when the preparation/sample was prepared.",
-                        "title": "Preparation date"
+                        "title": "Preparation date",
+                        "sortOrder": 2
                       },
                       "preparationMaterials": {
                         "type": "array",
@@ -6630,7 +7048,8 @@
                         "range": "MF.preparationMaterialsEnum",
                         "subject": "MF.preparationMaterials",
                         "description": "Materials (chemicals, kits etc.) used in the preparation process. It is possible to choose several.",
-                        "title": "Preparation process materials"
+                        "title": "Preparation process materials",
+                        "sortOrder": 4
                       },
                       "preparationProcess": {
                         "type": "array",
@@ -6660,35 +7079,40 @@
                         "range": "MF.preparationProcessEnum",
                         "subject": "MF.preparationProcess",
                         "description": "Processes used in the preparation. It is possible to choose several.",
-                        "title": "Preparation process"
+                        "title": "Preparation process",
+                        "sortOrder": 3
                       },
                       "preparationProcessNotes": {
                         "type": "string",
                         "range": "xsd:string",
                         "subject": "MF.preparationProcessNotes",
                         "description": "Additional information about the preparation process.",
-                        "title": "Preparation process notes"
+                        "title": "Preparation process notes",
+                        "sortOrder": 5
                       },
                       "preparedBy": {
                         "type": "string",
                         "range": "xsd:string",
                         "subject": "MF.preparedBy",
                         "description": "Name of the person who prepared the preparation/sample, preferably in the format 'lastname, firstname'",
-                        "title": "Prepared by"
+                        "title": "Prepared by",
+                        "sortOrder": 1
                       },
                       "isPartOf": {
                         "type": "string",
                         "range": "rdfs:Resource",
                         "subject": "MY.isPartOf",
                         "description": "Which parent or larger collection this is part of.",
-                        "title": "Is part of"
+                        "title": "Is part of",
+                        "sortOrder": 34
                       }
                     }
                   },
                   "minItems": 0,
                   "range": "MF.preparationClass",
                   "subject": "MF.preparations",
-                  "title": "Preparations"
+                  "title": "Preparations",
+                  "sortOrder": -1
                 },
                 "preservation": {
                   "type": "array",
@@ -6780,7 +7204,8 @@
                   "range": "MY.preservations",
                   "subject": "MF.preservation",
                   "description": "Preservation methods and materials of the preparation/sample. It is possible to choose several",
-                  "title": "Preparation/sample preservation"
+                  "title": "Preparation/sample preservation",
+                  "sortOrder": 5
                 },
                 "publication": {
                   "type": "array",
@@ -6792,7 +7217,8 @@
                   "range": "xsd:string",
                   "subject": "MF.publication",
                   "description": "Publication references or doi's that refer to this preparations/sample. For publications referring to the specimen, use publications field in the Other section (document level).",
-                  "title": "Preparation/sample publication(s)"
+                  "title": "Preparation/sample publication(s)",
+                  "sortOrder": 20
                 },
                 "quality": {
                   "type": "string",
@@ -6811,14 +7237,16 @@
                   "range": "MF.qualityEnum",
                   "subject": "MF.quality",
                   "description": "DNA sample quality on a three step scale. The quality is defined by quality check measurements",
-                  "title": "DNA sample quality"
+                  "title": "DNA sample quality",
+                  "sortOrder": 8
                 },
                 "qualityCheckDate": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MF.qualityCheckDate",
                   "description": "Date of the latest quality check measurements",
-                  "title": "DNA quality check date"
+                  "title": "DNA quality check date",
+                  "sortOrder": 7
                 },
                 "qualityCheckMethod": {
                   "type": "array",
@@ -6840,27 +7268,31 @@
                   "range": "MF.qualityCheckMethodEnum",
                   "subject": "MF.qualityCheckMethod",
                   "description": "Method or instrument used for quality measurements",
-                  "title": "DNA quality check method"
+                  "title": "DNA quality check method",
+                  "sortOrder": 6
                 },
                 "qualityNotes": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MF.qualityNotes",
                   "description": "Additional information about the DNA sample quality",
-                  "title": "DNA quality notes"
+                  "title": "DNA quality notes",
+                  "sortOrder": 9
                 },
                 "sampleLocation": {
                   "type": "string",
                   "range": "xsd:string",
                   "subject": "MF.sampleLocation",
                   "description": "Location of the preparation/sample so that museum personnel can find it. E.g. room, freezer, shelf number etc.",
-                  "title": "Preparation/sample location"
+                  "title": "Preparation/sample location",
+                  "sortOrder": 13
                 },
                 "specimenID": {
                   "type": "string",
                   "range": "MY.document",
                   "subject": "MF.specimenID",
-                  "title": "Specimen ID"
+                  "title": "Specimen ID",
+                  "sortOrder": -1
                 },
                 "status": {
                   "type": "string",
@@ -6905,14 +7337,16 @@
                   "range": "MY.statuses",
                   "subject": "MF.status",
                   "description": "Status of the preparation/sample. For specimen level status use the status field in the basic information section. Empty value means same as \"ok\" - that there is nothing special about the status of the sample.",
-                  "title": "Preparation/sample status"
+                  "title": "Preparation/sample status",
+                  "sortOrder": 16
                 },
                 "isPartOf": {
                   "type": "string",
                   "range": "rdfs:Resource",
                   "subject": "MY.isPartOf",
                   "description": "Which parent or larger collection this is part of.",
-                  "title": "Is part of"
+                  "title": "Is part of",
+                  "sortOrder": 34
                 },
                 "measurement": {
                   "type": "object",
@@ -6930,7 +7364,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.DNAConcentrationNgPerMicroliter",
-                      "title": "DNA concentration (ng/microliter)"
+                      "title": "DNA concentration (ng/microliter)",
+                      "sortOrder": 23
                     },
                     "DNARatioOfAbsorbance260And280": {
                       "type": "array",
@@ -6941,7 +7376,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.DNARatioOfAbsorbance260And280",
-                      "title": "DNA purity (ratio of absorbance 260/280 nm)"
+                      "title": "DNA purity (ratio of absorbance 260/280 nm)",
+                      "sortOrder": 21
                     },
                     "DNAVolumeMicroliters": {
                       "type": "array",
@@ -6952,7 +7388,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.DNAVolumeMicroliters",
-                      "title": "DNA volume (microliters)"
+                      "title": "DNA volume (microliters)",
+                      "sortOrder": 20
                     },
                     "beakMillimeters": {
                       "type": "array",
@@ -6963,7 +7400,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.beakMillimeters",
-                      "title": "Beak (mm)"
+                      "title": "Beak (mm)",
+                      "sortOrder": 2
                     },
                     "bodyCentimeters": {
                       "type": "array",
@@ -6974,7 +7412,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.bodyCentimeters",
-                      "title": "Body (cm)"
+                      "title": "Body (cm)",
+                      "sortOrder": 7
                     },
                     "bodyMillimeters": {
                       "type": "array",
@@ -6985,7 +7424,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.bodyMillimeters",
-                      "title": "Body (mm)"
+                      "title": "Body (mm)",
+                      "sortOrder": 6
                     },
                     "earLengthMillimeters": {
                       "type": "array",
@@ -6996,7 +7436,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.earLengthMillimeters",
-                      "title": "Ear length (mm)"
+                      "title": "Ear length (mm)",
+                      "sortOrder": 13
                     },
                     "embryoCount": {
                       "type": "array",
@@ -7007,7 +7448,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.embryoCount",
-                      "title": "Embryo count"
+                      "title": "Embryo count",
+                      "sortOrder": 15
                     },
                     "follicleDiameterMillimeters": {
                       "type": "array",
@@ -7018,7 +7460,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.follicleDiameterMillimeters",
-                      "title": "Follicle diameter (mm)"
+                      "title": "Follicle diameter (mm)",
+                      "sortOrder": 17
                     },
                     "footLengthMillimeters": {
                       "type": "array",
@@ -7029,7 +7472,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.footLengthMillimeters",
-                      "title": "Foot length (mm)"
+                      "title": "Foot length (mm)",
+                      "sortOrder": 14
                     },
                     "forearmMillimeters": {
                       "type": "array",
@@ -7040,7 +7484,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.forearmMillimeters",
-                      "title": "Forearm (mm)"
+                      "title": "Forearm (mm)",
+                      "sortOrder": 24
                     },
                     "gonadMillimeters": {
                       "type": "array",
@@ -7051,14 +7496,16 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.gonadMillimeters",
-                      "title": "Gonad (mm)"
+                      "title": "Gonad (mm)",
+                      "sortOrder": 3
                     },
                     "isPartOf": {
                       "type": "string",
                       "range": "rdfs:Resource",
                       "subject": "MY.isPartOf",
                       "description": "Which parent or larger collection this is part of.",
-                      "title": "Is part of"
+                      "title": "Is part of",
+                      "sortOrder": 34
                     },
                     "tailCentimeters": {
                       "type": "array",
@@ -7069,7 +7516,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.tailCentimeters",
-                      "title": "Tail (cm)"
+                      "title": "Tail (cm)",
+                      "sortOrder": 9
                     },
                     "tailMillimeters": {
                       "type": "array",
@@ -7080,7 +7528,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.tailMillimeters",
-                      "title": "Tail (mm)"
+                      "title": "Tail (mm)",
+                      "sortOrder": 8
                     },
                     "tarsusLengthMillimeters": {
                       "type": "array",
@@ -7091,7 +7540,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.tarsusLengthMillimeters",
-                      "title": "Tarsus length (mm)"
+                      "title": "Tarsus length (mm)",
+                      "sortOrder": 1
                     },
                     "totalLengthCentimeters": {
                       "type": "array",
@@ -7102,7 +7552,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.totalLengthCentimeters",
-                      "title": "Length (cm)"
+                      "title": "Length (cm)",
+                      "sortOrder": 5
                     },
                     "totalLengthMillimeters": {
                       "type": "array",
@@ -7113,7 +7564,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.totalLengthMillimeters",
-                      "title": "Length (mm)"
+                      "title": "Length (mm)",
+                      "sortOrder": 4
                     },
                     "uterineScarCount": {
                       "type": "array",
@@ -7124,7 +7576,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.uterineScarCount",
-                      "title": "Uterine scar count"
+                      "title": "Uterine scar count",
+                      "sortOrder": 16
                     },
                     "weightGrams": {
                       "type": "array",
@@ -7135,7 +7588,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.weightGrams",
-                      "title": "Weight (g)"
+                      "title": "Weight (g)",
+                      "sortOrder": 10
                     },
                     "weightKilograms": {
                       "type": "array",
@@ -7146,7 +7600,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.weightKilograms",
-                      "title": "Weight (kg)"
+                      "title": "Weight (kg)",
+                      "sortOrder": 11
                     },
                     "wingMaxMillimeters": {
                       "type": "array",
@@ -7157,7 +7612,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.wingMaxMillimeters",
-                      "title": "Wing max (mm)"
+                      "title": "Wing max (mm)",
+                      "sortOrder": 18
                     },
                     "wingMillimeters": {
                       "type": "array",
@@ -7168,7 +7624,8 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.wingMillimeters",
-                      "title": "Wing (mm)"
+                      "title": "Wing (mm)",
+                      "sortOrder": 12
                     },
                     "wingMinMillimeters": {
                       "type": "array",
@@ -7179,43 +7636,50 @@
                       "minItems": 0,
                       "range": "xsd:decimal",
                       "subject": "MY.wingMinMillimeters",
-                      "title": "Wing min (mm)"
+                      "title": "Wing min (mm)",
+                      "sortOrder": 19
                     }
                   },
-                  "range": "MY.measurementClass"
+                  "range": "MY.measurementClass",
+                  "sortOrder": 24
                 },
                 "creator": {
                   "type": "string",
                   "range": "MA.person",
                   "subject": "MZ.creator",
-                  "title": "Creator"
+                  "title": "Creator",
+                  "sortOrder": -1
                 },
                 "dateCreated": {
                   "type": "string",
                   "format": "date-time",
                   "range": "xsd:dateTime",
                   "subject": "MZ.dateCreated",
-                  "title": "Created"
+                  "title": "Created",
+                  "sortOrder": -1
                 },
                 "dateEdited": {
                   "type": "string",
                   "format": "date-time",
                   "range": "xsd:dateTime",
                   "subject": "MZ.dateEdited",
-                  "title": "Edited"
+                  "title": "Edited",
+                  "sortOrder": -1
                 },
                 "editor": {
                   "type": "string",
                   "range": "MA.person",
                   "subject": "MZ.editor",
-                  "title": "Editor"
+                  "title": "Editor",
+                  "sortOrder": -1
                 },
                 "owner": {
                   "type": "string",
                   "range": "MOS.organization",
                   "subject": "MZ.owner",
                   "description": "Team or organisation that owns the record and can edit it.",
-                  "title": "Owner of record"
+                  "title": "Owner of record",
+                  "sortOrder": 1
                 }
               },
               "required": [
@@ -7226,14 +7690,16 @@
             "minItems": 0,
             "range": "MF.sample",
             "subject": "MY.samples",
-            "title": "Samples"
+            "title": "Samples",
+            "sortOrder": -1
           }
         }
       },
       "minItems": 0,
       "range": "MY.unit",
       "subject": "MY.units",
-      "title": "Specimen"
+      "title": "Specimen",
+      "sortOrder": -1
     }
   }
 }

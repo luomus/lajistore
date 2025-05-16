@@ -28,49 +28,57 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.emailAddress",
-      "title": "Sähköposti"
+      "title": "Sähköposti",
+      "sortOrder": 3
     },
     "inheritedName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.inheritedName",
-      "title": "Sukunimi"
+      "title": "Sukunimi",
+      "sortOrder": 1
     },
     "preferredName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MA.preferredName",
-      "title": "Kutsumanimi"
+      "title": "Kutsumanimi",
+      "sortOrder": 2
     },
     "city": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MZ.city",
-      "title": "City"
+      "title": "City",
+      "sortOrder": -1
     },
     "country": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MZ.country",
-      "title": "Country"
+      "title": "Country",
+      "sortOrder": -1
     },
     "phoneNumber": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MZ.phoneNumber",
-      "title": "Phone number"
+      "title": "Phone number",
+      "sortOrder": -1
     },
     "postalCode": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MZ.postalCode",
-      "title": "Postal code"
+      "title": "Postal code",
+      "sortOrder": -1
     },
     "streetAddress": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MZ.streetAddress",
-      "title": "Street address"
+      "title": "Street address",
+      "sortOrder": -1
     }
   }
 }

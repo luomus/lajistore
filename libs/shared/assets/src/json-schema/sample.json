@@ -29,7 +29,8 @@
       "range": "xsd:string",
       "subject": "MF.DNAExtractionInstrument",
       "description": "Name of the instrument or device used for DNA extraction",
-      "title": "DNA extraction instrument"
+      "title": "DNA extraction instrument",
+      "sortOrder": 11
     },
     "additionalIDs": {
       "type": "array",
@@ -41,28 +42,32 @@
       "range": "xsd:string",
       "subject": "MF.additionalIDs",
       "description": "Other identifiers this preparation/sample has, in format 'type:identifier'. For example: 'MZHtissue:123'. You can enter the type and colon and then click 'generate' to fetch the next free number for that prefix type.",
-      "title": "Preparation/sample additional sample IDs"
+      "title": "Preparation/sample additional sample IDs",
+      "sortOrder": 21
     },
     "bold": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MF.bold",
       "description": "BOLD ID (usually BOLD \"Sample ID\") for the preparation/sample. If no other preparation/sample information is entered, use the BOLD field on the document level",
-      "title": "Sample BOLD ID"
+      "title": "Sample BOLD ID",
+      "sortOrder": 15
     },
     "collectionID": {
       "type": "string",
       "range": "MY.collection",
       "subject": "MF.collectionID",
       "description": "The collection which this preparation/sample belongs to, if different from the collection of the specimen.",
-      "title": "Preparation/sample collection"
+      "title": "Preparation/sample collection",
+      "sortOrder": 22
     },
     "condition": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MF.condition",
       "description": "Notes on the defects of the preparation/sample (missing parts or such). For specimen level status use the condition field in the basic information section (document level). Empty value means same as \"good\" or \"hyvä\" - that the sample is in fine condition.",
-      "title": "Preparation/sample condition (defects)"
+      "title": "Preparation/sample condition (defects)",
+      "sortOrder": 17
     },
     "datasetID": {
       "type": "array",
@@ -74,7 +79,8 @@
       "range": "GX.dataset",
       "subject": "MF.datasetID",
       "description": "Tag for the preparation/sample. For specimen level tags, use the tag field in the basic information section (document level).",
-      "title": "Preparation/sample tag(s)"
+      "title": "Preparation/sample tag(s)",
+      "sortOrder": 19
     },
     "elutionMedium": {
       "type": "string",
@@ -91,7 +97,8 @@
       "range": "MF.elutionMediumEnum",
       "subject": "MF.elutionMedium",
       "description": "DNA sample elution medium",
-      "title": "DNA elution medium"
+      "title": "DNA elution medium",
+      "sortOrder": 10
     },
     "event": {
       "type": "array",
@@ -103,7 +110,8 @@
       "range": "xsd:string",
       "subject": "MF.event",
       "description": "Diary-style information about what has been done to the preparation/sample",
-      "title": "Events (maintenance etc.)"
+      "title": "Events (maintenance etc.)",
+      "sortOrder": 12
     },
     "genbank": {
       "type": "array",
@@ -115,7 +123,8 @@
       "range": "xsd:string",
       "subject": "MF.genbank",
       "description": "Genbank ID for the preparation/sample. If no other preparation/sample information is entered, use the Genbank field on the document level",
-      "title": "Sample Genbank ID"
+      "title": "Sample Genbank ID",
+      "sortOrder": 14
     },
     "individualsInPreparation": {
       "type": "string",
@@ -132,7 +141,8 @@
       "range": "MF.individualsInPreparationEnum",
       "subject": "MF.individualsInPreparation",
       "description": "For example a jar that contains multiple fish individuals can be recorded as one specimen and one preparation. Can also be used for DNA samples (was DNA extracted from single or multiple individuals?).",
-      "title": "Single/multiple individual(s)?"
+      "title": "Single/multiple individual(s)?",
+      "sortOrder": 4
     },
     "material": {
       "type": "string",
@@ -221,14 +231,16 @@
       "range": "MF.materialEnum",
       "subject": "MF.material",
       "description": "Preparation/sample material. Choose preparation/sample type first.",
-      "title": "Material"
+      "title": "Material",
+      "sortOrder": 3
     },
     "notes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MF.notes",
       "description": "Additional information about the preparation/sample",
-      "title": "Notes"
+      "title": "Notes",
+      "sortOrder": 23
     },
     "preparationType": {
       "type": "string",
@@ -261,7 +273,8 @@
       "range": "MF.preparationTypeEnum",
       "subject": "MF.preparationType",
       "description": "Type of preparation/sample",
-      "title": "Preparation/sample type"
+      "title": "Preparation/sample type",
+      "sortOrder": 2
     },
     "preparations": {
       "type": "array",
@@ -278,7 +291,8 @@
             "range": "xsd:string",
             "subject": "MF.preparationDate",
             "description": "Date when the preparation/sample was prepared.",
-            "title": "Preparation date"
+            "title": "Preparation date",
+            "sortOrder": 2
           },
           "preparationMaterials": {
             "type": "array",
@@ -342,7 +356,8 @@
             "range": "MF.preparationMaterialsEnum",
             "subject": "MF.preparationMaterials",
             "description": "Materials (chemicals, kits etc.) used in the preparation process. It is possible to choose several.",
-            "title": "Preparation process materials"
+            "title": "Preparation process materials",
+            "sortOrder": 4
           },
           "preparationProcess": {
             "type": "array",
@@ -372,35 +387,40 @@
             "range": "MF.preparationProcessEnum",
             "subject": "MF.preparationProcess",
             "description": "Processes used in the preparation. It is possible to choose several.",
-            "title": "Preparation process"
+            "title": "Preparation process",
+            "sortOrder": 3
           },
           "preparationProcessNotes": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MF.preparationProcessNotes",
             "description": "Additional information about the preparation process.",
-            "title": "Preparation process notes"
+            "title": "Preparation process notes",
+            "sortOrder": 5
           },
           "preparedBy": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MF.preparedBy",
             "description": "Name of the person who prepared the preparation/sample, preferably in the format 'lastname, firstname'",
-            "title": "Prepared by"
+            "title": "Prepared by",
+            "sortOrder": 1
           },
           "isPartOf": {
             "type": "string",
             "range": "rdfs:Resource",
             "subject": "MY.isPartOf",
             "description": "Which parent or larger collection this is part of.",
-            "title": "Is part of"
+            "title": "Is part of",
+            "sortOrder": 34
           }
         }
       },
       "minItems": 0,
       "range": "MF.preparationClass",
       "subject": "MF.preparations",
-      "title": "Preparations"
+      "title": "Preparations",
+      "sortOrder": -1
     },
     "preservation": {
       "type": "array",
@@ -492,7 +512,8 @@
       "range": "MY.preservations",
       "subject": "MF.preservation",
       "description": "Preservation methods and materials of the preparation/sample. It is possible to choose several",
-      "title": "Preparation/sample preservation"
+      "title": "Preparation/sample preservation",
+      "sortOrder": 5
     },
     "publication": {
       "type": "array",
@@ -504,7 +525,8 @@
       "range": "xsd:string",
       "subject": "MF.publication",
       "description": "Publication references or doi's that refer to this preparations/sample. For publications referring to the specimen, use publications field in the Other section (document level).",
-      "title": "Preparation/sample publication(s)"
+      "title": "Preparation/sample publication(s)",
+      "sortOrder": 20
     },
     "quality": {
       "type": "string",
@@ -523,14 +545,16 @@
       "range": "MF.qualityEnum",
       "subject": "MF.quality",
       "description": "DNA sample quality on a three step scale. The quality is defined by quality check measurements",
-      "title": "DNA sample quality"
+      "title": "DNA sample quality",
+      "sortOrder": 8
     },
     "qualityCheckDate": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MF.qualityCheckDate",
       "description": "Date of the latest quality check measurements",
-      "title": "DNA quality check date"
+      "title": "DNA quality check date",
+      "sortOrder": 7
     },
     "qualityCheckMethod": {
       "type": "array",
@@ -552,27 +576,31 @@
       "range": "MF.qualityCheckMethodEnum",
       "subject": "MF.qualityCheckMethod",
       "description": "Method or instrument used for quality measurements",
-      "title": "DNA quality check method"
+      "title": "DNA quality check method",
+      "sortOrder": 6
     },
     "qualityNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MF.qualityNotes",
       "description": "Additional information about the DNA sample quality",
-      "title": "DNA quality notes"
+      "title": "DNA quality notes",
+      "sortOrder": 9
     },
     "sampleLocation": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MF.sampleLocation",
       "description": "Location of the preparation/sample so that museum personnel can find it. E.g. room, freezer, shelf number etc.",
-      "title": "Preparation/sample location"
+      "title": "Preparation/sample location",
+      "sortOrder": 13
     },
     "specimenID": {
       "type": "string",
       "range": "MY.document",
       "subject": "MF.specimenID",
-      "title": "Specimen ID"
+      "title": "Specimen ID",
+      "sortOrder": -1
     },
     "status": {
       "type": "string",
@@ -617,14 +645,16 @@
       "range": "MY.statuses",
       "subject": "MF.status",
       "description": "Status of the preparation/sample. For specimen level status use the status field in the basic information section. Empty value means same as \"ok\" - that there is nothing special about the status of the sample.",
-      "title": "Preparation/sample status"
+      "title": "Preparation/sample status",
+      "sortOrder": 16
     },
     "isPartOf": {
       "type": "string",
       "range": "rdfs:Resource",
       "subject": "MY.isPartOf",
       "description": "Which parent or larger collection this is part of.",
-      "title": "Is part of"
+      "title": "Is part of",
+      "sortOrder": 34
     },
     "measurement": {
       "type": "object",
@@ -642,7 +672,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.DNAConcentrationNgPerMicroliter",
-          "title": "DNA concentration (ng/microliter)"
+          "title": "DNA concentration (ng/microliter)",
+          "sortOrder": 23
         },
         "DNARatioOfAbsorbance260And280": {
           "type": "array",
@@ -653,7 +684,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.DNARatioOfAbsorbance260And280",
-          "title": "DNA purity (ratio of absorbance 260/280 nm)"
+          "title": "DNA purity (ratio of absorbance 260/280 nm)",
+          "sortOrder": 21
         },
         "DNAVolumeMicroliters": {
           "type": "array",
@@ -664,7 +696,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.DNAVolumeMicroliters",
-          "title": "DNA volume (microliters)"
+          "title": "DNA volume (microliters)",
+          "sortOrder": 20
         },
         "beakMillimeters": {
           "type": "array",
@@ -675,7 +708,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.beakMillimeters",
-          "title": "Beak (mm)"
+          "title": "Beak (mm)",
+          "sortOrder": 2
         },
         "bodyCentimeters": {
           "type": "array",
@@ -686,7 +720,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.bodyCentimeters",
-          "title": "Body (cm)"
+          "title": "Body (cm)",
+          "sortOrder": 7
         },
         "bodyMillimeters": {
           "type": "array",
@@ -697,7 +732,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.bodyMillimeters",
-          "title": "Body (mm)"
+          "title": "Body (mm)",
+          "sortOrder": 6
         },
         "earLengthMillimeters": {
           "type": "array",
@@ -708,7 +744,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.earLengthMillimeters",
-          "title": "Ear length (mm)"
+          "title": "Ear length (mm)",
+          "sortOrder": 13
         },
         "embryoCount": {
           "type": "array",
@@ -719,7 +756,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.embryoCount",
-          "title": "Embryo count"
+          "title": "Embryo count",
+          "sortOrder": 15
         },
         "follicleDiameterMillimeters": {
           "type": "array",
@@ -730,7 +768,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.follicleDiameterMillimeters",
-          "title": "Follicle diameter (mm)"
+          "title": "Follicle diameter (mm)",
+          "sortOrder": 17
         },
         "footLengthMillimeters": {
           "type": "array",
@@ -741,7 +780,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.footLengthMillimeters",
-          "title": "Foot length (mm)"
+          "title": "Foot length (mm)",
+          "sortOrder": 14
         },
         "forearmMillimeters": {
           "type": "array",
@@ -752,7 +792,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.forearmMillimeters",
-          "title": "Forearm (mm)"
+          "title": "Forearm (mm)",
+          "sortOrder": 24
         },
         "gonadMillimeters": {
           "type": "array",
@@ -763,14 +804,16 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.gonadMillimeters",
-          "title": "Gonad (mm)"
+          "title": "Gonad (mm)",
+          "sortOrder": 3
         },
         "isPartOf": {
           "type": "string",
           "range": "rdfs:Resource",
           "subject": "MY.isPartOf",
           "description": "Which parent or larger collection this is part of.",
-          "title": "Is part of"
+          "title": "Is part of",
+          "sortOrder": 34
         },
         "tailCentimeters": {
           "type": "array",
@@ -781,7 +824,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.tailCentimeters",
-          "title": "Tail (cm)"
+          "title": "Tail (cm)",
+          "sortOrder": 9
         },
         "tailMillimeters": {
           "type": "array",
@@ -792,7 +836,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.tailMillimeters",
-          "title": "Tail (mm)"
+          "title": "Tail (mm)",
+          "sortOrder": 8
         },
         "tarsusLengthMillimeters": {
           "type": "array",
@@ -803,7 +848,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.tarsusLengthMillimeters",
-          "title": "Tarsus length (mm)"
+          "title": "Tarsus length (mm)",
+          "sortOrder": 1
         },
         "totalLengthCentimeters": {
           "type": "array",
@@ -814,7 +860,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.totalLengthCentimeters",
-          "title": "Length (cm)"
+          "title": "Length (cm)",
+          "sortOrder": 5
         },
         "totalLengthMillimeters": {
           "type": "array",
@@ -825,7 +872,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.totalLengthMillimeters",
-          "title": "Length (mm)"
+          "title": "Length (mm)",
+          "sortOrder": 4
         },
         "uterineScarCount": {
           "type": "array",
@@ -836,7 +884,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.uterineScarCount",
-          "title": "Uterine scar count"
+          "title": "Uterine scar count",
+          "sortOrder": 16
         },
         "weightGrams": {
           "type": "array",
@@ -847,7 +896,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.weightGrams",
-          "title": "Weight (g)"
+          "title": "Weight (g)",
+          "sortOrder": 10
         },
         "weightKilograms": {
           "type": "array",
@@ -858,7 +908,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.weightKilograms",
-          "title": "Weight (kg)"
+          "title": "Weight (kg)",
+          "sortOrder": 11
         },
         "wingMaxMillimeters": {
           "type": "array",
@@ -869,7 +920,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.wingMaxMillimeters",
-          "title": "Wing max (mm)"
+          "title": "Wing max (mm)",
+          "sortOrder": 18
         },
         "wingMillimeters": {
           "type": "array",
@@ -880,7 +932,8 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.wingMillimeters",
-          "title": "Wing (mm)"
+          "title": "Wing (mm)",
+          "sortOrder": 12
         },
         "wingMinMillimeters": {
           "type": "array",
@@ -891,43 +944,50 @@
           "minItems": 0,
           "range": "xsd:decimal",
           "subject": "MY.wingMinMillimeters",
-          "title": "Wing min (mm)"
+          "title": "Wing min (mm)",
+          "sortOrder": 19
         }
       },
-      "range": "MY.measurementClass"
+      "range": "MY.measurementClass",
+      "sortOrder": 24
     },
     "creator": {
       "type": "string",
       "range": "MA.person",
       "subject": "MZ.creator",
-      "title": "Creator"
+      "title": "Creator",
+      "sortOrder": -1
     },
     "dateCreated": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MZ.dateCreated",
-      "title": "Created"
+      "title": "Created",
+      "sortOrder": -1
     },
     "dateEdited": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MZ.dateEdited",
-      "title": "Edited"
+      "title": "Edited",
+      "sortOrder": -1
     },
     "editor": {
       "type": "string",
       "range": "MA.person",
       "subject": "MZ.editor",
-      "title": "Editor"
+      "title": "Editor",
+      "sortOrder": -1
     },
     "owner": {
       "type": "string",
       "range": "MOS.organization",
       "subject": "MZ.owner",
       "description": "Team or organisation that owns the record and can edit it.",
-      "title": "Owner of record"
+      "title": "Owner of record",
+      "sortOrder": 1
     }
   },
   "required": [

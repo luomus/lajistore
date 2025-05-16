@@ -28,19 +28,22 @@
       "type": "number",
       "range": "xsd:decimal",
       "subject": "TDF.baseConversion",
-      "title": "Conversion factor"
+      "title": "Conversion factor",
+      "sortOrder": -1
     },
     "baseUnit": {
       "type": "string",
       "range": "TDF.unitOfMeasurement",
       "subject": "TDF.baseUnit",
-      "title": "Base unit of measurement"
+      "title": "Base unit of measurement",
+      "sortOrder": -1
     },
     "isBaseUnit": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "TDF.isBaseUnit",
-      "title": "Is base unit?"
+      "title": "Is base unit?",
+      "sortOrder": -1
     },
     "rdfs:label": {
       "type": "object",
@@ -73,7 +76,8 @@
       },
       "range": "xsd:string",
       "subject": "rdfs:label",
-      "title": "label"
+      "title": "label",
+      "sortOrder": 1
     }
   },
   "required": [

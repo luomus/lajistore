@@ -29,7 +29,8 @@
       "range": "xsd:string",
       "subject": "HRX.IRCC",
       "description": "Internationally Recognized Certificate of Compliance. Kotka checks from the ABS Clearing House that the entered IRCC number exists and is valid.",
-      "title": "IRCC number"
+      "title": "IRCC number",
+      "sortOrder": -1
     },
     "attachments": {
       "type": "array",
@@ -40,7 +41,8 @@
       "minItems": 0,
       "range": "MM.pdf",
       "subject": "HRX.attachments",
-      "title": "Attachments"
+      "title": "Attachments",
+      "sortOrder": -1
     },
     "availableForGeneticResearch": {
       "type": "string",
@@ -59,14 +61,16 @@
       "range": "HRX.availableForGeneticResearchEnum",
       "subject": "HRX.availableForGeneticResearch",
       "description": "If you choose \"Yes, with restrictions\", explain the restrictions in the following field \"Rights and obligations\".",
-      "title": "Is genetic research allowed on the genetic resource(s)?"
+      "title": "Is genetic research allowed on the genetic resource(s)?",
+      "sortOrder": -1
     },
     "awayCount": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "HRX.awayCount",
-      "title": "Included in/On loan count"
+      "title": "Included in/On loan count",
+      "sortOrder": -1
     },
     "awayIDs": {
       "type": "array",
@@ -77,42 +81,48 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "HRX.awayIDs",
-      "title": "Included in/On loan IDs"
+      "title": "Included in/On loan IDs",
+      "sortOrder": -1
     },
     "collectionID": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.collectionID",
       "description": "For statistical purposes. The collection where the transaction is directed to. Record transactions directed to different collections as separate transactions if you use this field.",
-      "title": "Collection"
+      "title": "Collection",
+      "sortOrder": -1
     },
     "correspondentOrganization": {
       "type": "string",
       "range": "MOS.organization",
       "subject": "HRX.correspondentOrganization",
       "description": "Select the counterparty organisation from a list. If not found on the list, you need to add the new organisation first.",
-      "title": "Counterparty organization"
+      "title": "Counterparty organization",
+      "sortOrder": -1
     },
     "correspondentPerson": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.correspondentPerson",
       "description": "Name of the counterparty person. If the transaction goes to a private person, write their postal address here.",
-      "title": "Counterparty person/contact info"
+      "title": "Counterparty person/contact info",
+      "sortOrder": -1
     },
     "correspondentResearcher": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.correspondentResearcher",
       "description": "For outgoing transactions the receiving researcher in the counterparty organisation.",
-      "title": "Receiving researcher"
+      "title": "Receiving researcher",
+      "sortOrder": -1
     },
     "damagedCount": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "HRX.damagedCount",
-      "title": "Damaged count"
+      "title": "Damaged count",
+      "sortOrder": -1
     },
     "damagedIDs": {
       "type": "array",
@@ -123,7 +133,8 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "HRX.damagedIDs",
-      "title": "Damaged IDs"
+      "title": "Damaged IDs",
+      "sortOrder": -1
     },
     "dueDate": {
       "type": "string",
@@ -131,21 +142,24 @@
       "range": "xsd:date",
       "subject": "HRX.dueDate",
       "description": "Date when the loan needs to be returned.",
-      "title": "Due date"
+      "title": "Due date",
+      "sortOrder": -1
     },
     "externalID": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.externalID",
       "description": "Counterparty's ID for the transaction.",
-      "title": "Transaction ID by counterparty"
+      "title": "Transaction ID by counterparty",
+      "sortOrder": -1
     },
     "geneticResourceAcquisitionCountry": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.geneticResourceAcquisitionCountry",
       "description": "Country where the genetic resource or traditional knowledge was acquired from, provider country, country of origin. List of countries in Kotka is based on ISO 3166 Country Codes -standard and may differ from the country list in ABSCH.",
-      "title": "Acquisition country"
+      "title": "Acquisition country",
+      "sortOrder": -1
     },
     "geneticResourceAcquisitionDate": {
       "type": "string",
@@ -153,28 +167,32 @@
       "range": "xsd:date",
       "subject": "HRX.geneticResourceAcquisitionDate",
       "description": "Date when the genetic resource or traditional knowledge was acquired.",
-      "title": "Acquisition date"
+      "title": "Acquisition date",
+      "sortOrder": -1
     },
     "geneticResourceDescription": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.geneticResourceDescription",
       "description": "Description of the genetic resource or traditional knowledge (possible identifiers, taxa, number of specimens, region etc.). Instruction source EU DECLARE User manual and QA.",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": -1
     },
     "geneticResourceRightsAndObligations": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.geneticResourceRightsAndObligations",
       "description": "Presence or absence of rights and obligations relating to access and benefit sharing, including rights and obligations regarding subsequent applications and commercialization. Instruction source EU DECLARE user manual and QA.",
-      "title": "Rights and obligations"
+      "title": "Rights and obligations",
+      "sortOrder": -1
     },
     "geneticResourceSource": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.geneticResourceSource",
       "description": "Person or legal entity from whom the user obtained the genetic resources directly, i.e. the previous actor in the value chain. Often a museum or other organization. If a genetic resource is obtained directly from the provider country, the name of the country should be provided. Instruction source EU DECLARE User manual and QA.",
-      "title": "Source"
+      "title": "Source",
+      "sortOrder": -1
     },
     "geneticResourceType": {
       "type": "string",
@@ -199,21 +217,24 @@
       "range": "HRX.geneticResourceTypeEnum",
       "subject": "HRX.geneticResourceType",
       "description": "Choose the type of the genetic resource for statistical and reporting purposes.",
-      "title": "Type of resource"
+      "title": "Type of resource",
+      "sortOrder": -1
     },
     "harmonizedSystemCode": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.harmonizedSystemCode",
       "description": "Harmonized System code for the customs",
-      "title": "HS Code for customs"
+      "title": "HS Code for customs",
+      "sortOrder": -1
     },
     "hasIRCC": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "HRX.hasIRCC",
       "description": "Whether the resource has an IRCC number or not. If not, more information needs to be filled in.",
-      "title": "Do you have IRCC number?"
+      "title": "Do you have IRCC number?",
+      "sortOrder": -1
     },
     "incomingReceived": {
       "type": "string",
@@ -221,7 +242,8 @@
       "range": "xsd:date",
       "subject": "HRX.incomingReceived",
       "description": "Date when incoming transaction was received.",
-      "title": "Date received"
+      "title": "Date received",
+      "sortOrder": -1
     },
     "incomingReturned": {
       "type": "string",
@@ -229,70 +251,80 @@
       "range": "xsd:date",
       "subject": "HRX.incomingReturned",
       "description": "Date when the incoming loan was returned to the sender.",
-      "title": "Date returned"
+      "title": "Date returned",
+      "sortOrder": -1
     },
     "internalRemarks": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.internalRemarks",
       "description": "Private remarks that are shown only in Kotka and not to the counterparty organisation.",
-      "title": "Internal remarks"
+      "title": "Internal remarks",
+      "sortOrder": -1
     },
     "legacyID": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.legacyID",
       "description": "Loan/transaction number used in paper loan catalogs or old software (e.g. Curator)",
-      "title": "Old transaction number"
+      "title": "Old transaction number",
+      "sortOrder": -1
     },
     "localHandler": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localHandler",
       "description": "Person handling the transaction at local Kotka institution.",
-      "title": "Handler"
+      "title": "Handler",
+      "sortOrder": -1
     },
     "localHandlerEmail": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localHandlerEmail",
       "description": "Contact email for the person handling the transaction in our museum.",
-      "title": "Handler email"
+      "title": "Handler email",
+      "sortOrder": -1
     },
     "localPerson": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localPerson",
       "description": "Person responsible for the transaction in our museum/local Kotka institution.",
-      "title": "Person responsible"
+      "title": "Person responsible",
+      "sortOrder": -1
     },
     "localPersonEmail": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localPersonEmail",
       "description": "Contact email for the person responsible in our museum.",
-      "title": "Person responsible email"
+      "title": "Person responsible email",
+      "sortOrder": -1
     },
     "localResearcher": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.localResearcher",
       "description": "For incoming transactions, name of the researcher receiving the loan at our museum/ local Kotka institution.",
-      "title": "Receiving researcher"
+      "title": "Receiving researcher",
+      "sortOrder": -1
     },
     "material": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.material",
       "description": "Description of the material included in this transaction.",
-      "title": "Material description"
+      "title": "Material description",
+      "sortOrder": -1
     },
     "missingCount": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "HRX.missingCount",
-      "title": "Missing count"
+      "title": "Missing count",
+      "sortOrder": -1
     },
     "missingIDs": {
       "type": "array",
@@ -303,14 +335,16 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "HRX.missingIDs",
-      "title": "Missing IDs"
+      "title": "Missing IDs",
+      "sortOrder": -1
     },
     "numberOfParcels": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.numberOfParcels",
       "description": "In how many parcels was the transaction sent/carried.",
-      "title": "Number of parcels"
+      "title": "Number of parcels",
+      "sortOrder": -1
     },
     "outgoingReturned": {
       "type": "string",
@@ -318,7 +352,8 @@
       "range": "xsd:date",
       "subject": "HRX.outgoingReturned",
       "description": "Date when the outgoing loan was returned to us.",
-      "title": "Outgoing loan returned"
+      "title": "Outgoing loan returned",
+      "sortOrder": -1
     },
     "outgoingSent": {
       "type": "string",
@@ -326,7 +361,8 @@
       "range": "xsd:date",
       "subject": "HRX.outgoingSent",
       "description": "When the ougoing transaction was sent out from us.",
-      "title": "Outgoing transaction sent"
+      "title": "Outgoing transaction sent",
+      "sortOrder": -1
     },
     "permits": {
       "type": "array",
@@ -361,26 +397,30 @@
             "format": "date",
             "range": "xsd:date",
             "subject": "HRA.permitEndDate",
-            "title": "End date"
+            "title": "End date",
+            "sortOrder": 4
           },
           "permitFile": {
             "type": "string",
             "range": "xsd:string",
             "subject": "HRA.permitFile",
-            "title": "File"
+            "title": "File",
+            "sortOrder": 6
           },
           "permitNotes": {
             "type": "string",
             "range": "xsd:string",
             "subject": "HRA.permitNotes",
-            "title": "Notes"
+            "title": "Notes",
+            "sortOrder": 5
           },
           "permitStartDate": {
             "type": "string",
             "format": "date",
             "range": "xsd:date",
             "subject": "HRA.permitStartDate",
-            "title": "Start date"
+            "title": "Start date",
+            "sortOrder": 3
           },
           "permitStatus": {
             "type": "string",
@@ -396,7 +436,8 @@
             ],
             "range": "HRA.permitStatusEnum",
             "subject": "HRA.permitStatus",
-            "title": "Permit status"
+            "title": "Permit status",
+            "sortOrder": 2
           },
           "permitType": {
             "type": "string",
@@ -422,28 +463,32 @@
             ],
             "range": "HRA.permitTypeEnum",
             "subject": "HRA.permitType",
-            "title": "Permit type"
+            "title": "Permit type",
+            "sortOrder": 1
           },
           "isPartOf": {
             "type": "string",
             "range": "rdfs:Resource",
             "subject": "MY.isPartOf",
             "description": "Which parent or larger collection this is part of.",
-            "title": "Is part of"
+            "title": "Is part of",
+            "sortOrder": 34
           }
         }
       },
       "minItems": 0,
       "range": "HRA.permitClass",
       "subject": "HRX.permits",
-      "title": "Permits"
+      "title": "Permits",
+      "sortOrder": -1
     },
     "publicRemarks": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.publicRemarks",
       "description": "Remarks that are shown to both parties of the transaction on transaction PDFs.",
-      "title": "Public remarks"
+      "title": "Public remarks",
+      "sortOrder": -1
     },
     "receiptReturned": {
       "type": "string",
@@ -451,7 +496,8 @@
       "range": "xsd:date",
       "subject": "HRX.receiptReturned",
       "description": "When signed transaction receipt was received (outgoing) or sent (incoming).",
-      "title": "Receipt returned"
+      "title": "Receipt returned",
+      "sortOrder": -1
     },
     "requestReceived": {
       "type": "string",
@@ -459,7 +505,8 @@
       "range": "xsd:date",
       "subject": "HRX.requestReceived",
       "description": "When transaction request was received here.",
-      "title": "Date requested"
+      "title": "Date requested",
+      "sortOrder": -1
     },
     "resourceImported": {
       "type": "string",
@@ -478,14 +525,16 @@
       "range": "HRX.resourceImportedEnum",
       "subject": "HRX.resourceImported",
       "description": "Are you importing genetic resources, traditional knowledge associated to genetic resources or both?",
-      "title": "What are you importing?"
+      "title": "What are you importing?",
+      "sortOrder": -1
     },
     "returnedCount": {
       "type": "integer",
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "HRX.returnedCount",
-      "title": "Returned count"
+      "title": "Returned count",
+      "sortOrder": -1
     },
     "returnedIDs": {
       "type": "array",
@@ -496,7 +545,8 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "HRX.returnedIDs",
-      "title": "Returned IDs"
+      "title": "Returned IDs",
+      "sortOrder": -1
     },
     "status": {
       "type": "string",
@@ -517,7 +567,8 @@
       "range": "HRX.statusEnum",
       "subject": "HRX.status",
       "description": "Whether the transaction is closed, outstanding, in process or still on loan..",
-      "title": "Transaction status"
+      "title": "Transaction status",
+      "sortOrder": -1
     },
     "transactionEvents": {
       "type": "array",
@@ -535,21 +586,24 @@
             "range": "xsd:date",
             "subject": "HRX.eventDate",
             "description": "Date when the transaction event occurred.",
-            "title": "Date"
+            "title": "Date",
+            "sortOrder": -1
           },
           "eventHandler": {
             "type": "string",
             "range": "xsd:string",
             "subject": "HRX.eventHandler",
             "description": "Name of the person who handled the transaction event.",
-            "title": "Handler"
+            "title": "Handler",
+            "sortOrder": -1
           },
           "eventNotes": {
             "type": "string",
             "range": "xsd:string",
             "subject": "HRX.eventNotes",
             "description": "More information about the transactions event. You can e.g. list the specimens included in the event in this field.",
-            "title": "Notes"
+            "title": "Notes",
+            "sortOrder": -1
           },
           "eventType": {
             "type": "string",
@@ -564,7 +618,8 @@
             "range": "HRX.eventTypeEnum",
             "subject": "HRX.eventType",
             "description": "Type of the transaction event. Return for e.g. partial returns and addition e.g. for when more specimens are added to the transaction later.",
-            "title": "Event type"
+            "title": "Event type",
+            "sortOrder": -1
           }
         },
         "required": [
@@ -577,7 +632,8 @@
       "minItems": 0,
       "range": "HRX.specimenTransactionEvent",
       "subject": "HRX.transactionEvents",
-      "title": "Transaction events"
+      "title": "Transaction events",
+      "sortOrder": -1
     },
     "transportMethod": {
       "type": "string",
@@ -602,7 +658,8 @@
       "range": "HRX.transportMethodEnum",
       "subject": "HRX.transportMethod",
       "description": "Means of sending, mail, courier etc.",
-      "title": "Sent by"
+      "title": "Sent by",
+      "sortOrder": -1
     },
     "type": {
       "type": "string",
@@ -635,47 +692,54 @@
       "range": "HRX.typeEnum",
       "subject": "HRX.type",
       "description": "What kind of transaction this is.",
-      "title": "Transaction type"
+      "title": "Transaction type",
+      "sortOrder": -1
     },
     "underNagoya": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "HRX.underNagoya",
       "description": "Is it e.g. non-human genetic material that is going to be used for genetic research as is defined by the protocol?",
-      "title": "Does Nagoya protocol apply?"
+      "title": "Does Nagoya protocol apply?",
+      "sortOrder": -1
     },
     "creator": {
       "type": "string",
       "range": "MA.person",
       "subject": "MZ.creator",
-      "title": "Creator"
+      "title": "Creator",
+      "sortOrder": -1
     },
     "dateCreated": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MZ.dateCreated",
-      "title": "Created"
+      "title": "Created",
+      "sortOrder": -1
     },
     "dateEdited": {
       "type": "string",
       "format": "date-time",
       "range": "xsd:dateTime",
       "subject": "MZ.dateEdited",
-      "title": "Edited"
+      "title": "Edited",
+      "sortOrder": -1
     },
     "editor": {
       "type": "string",
       "range": "MA.person",
       "subject": "MZ.editor",
-      "title": "Editor"
+      "title": "Editor",
+      "sortOrder": -1
     },
     "owner": {
       "type": "string",
       "range": "MOS.organization",
       "subject": "MZ.owner",
       "description": "Team or organisation that owns the record and can edit it.",
-      "title": "Owner of record"
+      "title": "Owner of record",
+      "sortOrder": 1
     },
     "publicityRestrictions": {
       "type": "string",
@@ -694,7 +758,8 @@
       "range": "MZ.publicityRestrictionsEnum",
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
-      "title": "Publicity restrictions"
+      "title": "Publicity restrictions",
+      "sortOrder": 33
     }
   },
   "required": [

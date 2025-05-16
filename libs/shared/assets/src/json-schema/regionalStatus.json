@@ -28,7 +28,8 @@
       "type": "string",
       "range": "ML.area",
       "subject": "MKV.regionalStatusArea",
-      "title": "Area"
+      "title": "Area",
+      "sortOrder": -1
     },
     "regionalStatusStatus": {
       "type": "string",
@@ -128,7 +129,8 @@
       ],
       "range": "MX.typeOfOccurrenceEnum",
       "subject": "MKV.regionalStatusStatus",
-      "title": "regionalStatusStatus"
+      "title": "regionalStatusStatus",
+      "sortOrder": -1
     }
   },
   "required": [

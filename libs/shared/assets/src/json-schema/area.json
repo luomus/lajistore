@@ -51,45 +51,52 @@
       "range": "ML.areaTypeEnum",
       "subject": "ML.areaType",
       "description": "Aluetyyppi",
-      "title": "Area type"
+      "title": "Area type",
+      "sortOrder": 1
     },
     "countryCodeISOalpha2": {
       "type": "string",
       "range": "xsd:string",
       "subject": "ML.countryCodeISOalpha2",
       "description": "Country code ISO alpha 2",
-      "title": "Country code"
+      "title": "Country code",
+      "sortOrder": 3
     },
     "countryCodeISOalpha3": {
       "type": "string",
       "range": "xsd:string",
       "subject": "ML.countryCodeISOalpha3",
       "description": "country code ISO alpha 3",
-      "title": "country code"
+      "title": "country code",
+      "sortOrder": 4
     },
     "isPartOf": {
       "type": "string",
       "range": "ML.area",
       "subject": "ML.isPartOf",
-      "title": "Part of"
+      "title": "Part of",
+      "sortOrder": 5
     },
     "isPartOfBirdAssociationArea": {
       "type": "string",
       "range": "ML.area",
       "subject": "ML.isPartOfBirdAssociationArea",
-      "title": "Is part of bird assocation area"
+      "title": "Is part of bird assocation area",
+      "sortOrder": -1
     },
     "isPartOfEnvironmentalELY": {
       "type": "string",
       "range": "ML.area",
       "subject": "ML.isPartOfEnvironmentalELY",
-      "title": "Is part of Environmental ELY"
+      "title": "Is part of Environmental ELY",
+      "sortOrder": -1
     },
     "isPartOfProvince": {
       "type": "string",
       "range": "ML.area",
       "subject": "ML.isPartOfProvince",
-      "title": "Is part of province"
+      "title": "Is part of province",
+      "sortOrder": -1
     },
     "name": {
       "type": "object",
@@ -108,7 +115,8 @@
       "minProperties": 1,
       "range": "xsd:string",
       "subject": "ML.name",
-      "title": "name"
+      "title": "name",
+      "sortOrder": 2
     },
     "previouslyOfficialName": {
       "type": "array",
@@ -119,7 +127,8 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "ML.previouslyOfficialName",
-      "title": "Previously used name"
+      "title": "Previously used name",
+      "sortOrder": -1
     },
     "provinceCodeAlpha": {
       "type": "object",
@@ -137,25 +146,29 @@
       },
       "range": "xsd:string",
       "subject": "ML.provinceCodeAlpha",
-      "title": "Province code"
+      "title": "Province code",
+      "sortOrder": 6
     },
     "provinceCodeNumeric": {
       "type": "string",
       "range": "xsd:string",
       "subject": "ML.provinceCodeNumeric",
-      "title": "Province code numeric"
+      "title": "Province code numeric",
+      "sortOrder": 7
     },
     "ringingDepartmentBirdAssociationAreaCode": {
       "type": "string",
       "range": "xsd:string",
       "subject": "ML.ringingDepartmentBirdAssociationAreaCode",
-      "title": "ringingDepartmentBirdAssociationAreaCode"
+      "title": "ringingDepartmentBirdAssociationAreaCode",
+      "sortOrder": -1
     },
     "ringingDepartmentMunicipalityCode": {
       "type": "string",
       "range": "xsd:string",
       "subject": "ML.ringingDepartmentMunicipalityCode",
-      "title": "ringingDepartmentMunicipalityCode"
+      "title": "ringingDepartmentMunicipalityCode",
+      "sortOrder": -1
     }
   },
   "required": [

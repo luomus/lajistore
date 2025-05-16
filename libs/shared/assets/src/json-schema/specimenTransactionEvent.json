@@ -30,21 +30,24 @@
       "range": "xsd:date",
       "subject": "HRX.eventDate",
       "description": "Date when the transaction event occurred.",
-      "title": "Date"
+      "title": "Date",
+      "sortOrder": -1
     },
     "eventHandler": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.eventHandler",
       "description": "Name of the person who handled the transaction event.",
-      "title": "Handler"
+      "title": "Handler",
+      "sortOrder": -1
     },
     "eventNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "HRX.eventNotes",
       "description": "More information about the transactions event. You can e.g. list the specimens included in the event in this field.",
-      "title": "Notes"
+      "title": "Notes",
+      "sortOrder": -1
     },
     "eventType": {
       "type": "string",
@@ -59,7 +62,8 @@
       "range": "HRX.eventTypeEnum",
       "subject": "HRX.eventType",
       "description": "Type of the transaction event. Return for e.g. partial returns and addition e.g. for when more specimens are added to the transaction later.",
-      "title": "Event type"
+      "title": "Event type",
+      "sortOrder": -1
     }
   },
   "required": [

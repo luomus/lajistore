@@ -28,13 +28,15 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MP.URI",
-      "title": "URI"
+      "title": "URI",
+      "sortOrder": -1
     },
     "name": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MP.name",
-      "title": "Name"
+      "title": "Name",
+      "sortOrder": -1
     }
   }
 }

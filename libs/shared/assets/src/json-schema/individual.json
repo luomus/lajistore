@@ -40,7 +40,8 @@
       },
       "range": "xsd:string",
       "subject": "dc:bibliographicCitation",
-      "title": "Bibliographic Citation"
+      "title": "Bibliographic Citation",
+      "sortOrder": 4
     },
     "description": {
       "type": "object",
@@ -58,7 +59,8 @@
       },
       "range": "xsd:string",
       "subject": "MXA.description",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": 2
     },
     "descriptionURL": {
       "type": "object",
@@ -76,37 +78,43 @@
       },
       "range": "xsd:string",
       "subject": "MXA.descriptionURL",
-      "title": "URL for the description"
+      "title": "URL for the description",
+      "sortOrder": 5
     },
     "hasPublicLocations": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MXA.hasPublicLocations",
-      "title": "Does this have public locations"
+      "title": "Does this have public locations",
+      "sortOrder": 6
     },
     "nickname": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MXA.nickname",
-      "title": "Nickname for the individual"
+      "title": "Nickname for the individual",
+      "sortOrder": 2
     },
     "ringID": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MXA.ringID",
-      "title": "Ring ID"
+      "title": "Ring ID",
+      "sortOrder": -1
     },
     "taxon": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MXA.taxon",
-      "title": "Name or MX code"
+      "title": "Name or MX code",
+      "sortOrder": 1
     },
     "deleted": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MZ.deleted",
-      "title": "Soft delete"
+      "title": "Soft delete",
+      "sortOrder": 7
     },
     "images": {
       "type": "array",
@@ -117,7 +125,8 @@
       "minItems": 0,
       "range": "MM.image",
       "subject": "MZ.images",
-      "title": "Images"
+      "title": "Images",
+      "sortOrder": -1
     },
     "intellectualRights": {
       "type": "string",
@@ -173,7 +182,8 @@
       ],
       "range": "MZ.intellectualRightsEnum",
       "subject": "MZ.intellectualRights",
-      "title": "License"
+      "title": "License",
+      "sortOrder": -1
     },
     "ownerPerson": {
       "type": "array",
@@ -184,7 +194,8 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MZ.ownerPerson",
-      "title": "Has permissions to modify"
+      "title": "Has permissions to modify",
+      "sortOrder": -1
     }
   },
   "required": [

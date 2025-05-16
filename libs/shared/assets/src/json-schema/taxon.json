@@ -28,7 +28,8 @@
       "type": "integer",
       "range": "xsd:integer",
       "subject": "herbo:sortOrder",
-      "title": "herbo:sortOrder"
+      "title": "herbo:sortOrder",
+      "sortOrder": -1
     },
     "invasiveSpeciesMainGroup": {
       "type": "array",
@@ -83,14 +84,16 @@
       "minItems": 0,
       "range": "HBE.invasiveSpeciesMainGroups",
       "subject": "HBE.invasiveSpeciesMainGroup",
-      "title": "Main portal group"
+      "title": "Main portal group",
+      "sortOrder": -1
     },
     "primaryHabitat": {
       "type": "string",
       "range": "MKV.habitatObject",
       "subject": "MKV.primaryHabitat",
       "description": "<p>Lisämerkinnät:</p>\n<ul> \n<li><b>v - vanhat metsät</b> (myös yksittäiset vanhat puut ja runsaasti lahopuuta sisältävät nuoremmat metsät)</li>\n<li><b>h - harjumetsät</b>, myös puoliavoimet</li>\n<li><b>p - metsäpaloalueet</b> ja muut luontaisen sukkession alkuvaiheen metsät</li>\n<li><b>j - jalopuuesiintymä</b></li>\n<li><b>pa - paahteinen</b></li>\n<li><b>va - varjoinen</b></li>\n<li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>\n<li><b>ka - karut kalliot ja kivikot</b></li>\n<li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>\n<li><b>ca - kalkkivaikutteinen</b></li>\n</ul>",
-      "title": "Primary habitat"
+      "title": "Primary habitat",
+      "sortOrder": -1
     },
     "secondaryHabitat": {
       "type": "array",
@@ -101,7 +104,8 @@
       "minItems": 0,
       "range": "MKV.habitatObject",
       "subject": "MKV.secondaryHabitat",
-      "title": "Secondary habitat"
+      "title": "Secondary habitat",
+      "sortOrder": -1
     },
     "additionalID": {
       "type": "array",
@@ -113,14 +117,16 @@
       "range": "xsd:string",
       "subject": "MX.additionalID",
       "description": "Identifier of this taxon concept/name in other systems/sources",
-      "title": "Additional identifiers"
+      "title": "Additional identifiers",
+      "sortOrder": -1
     },
     "algalPartnerOfLichen": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.algalPartnerOfLichen",
       "description": "Leväosakkaiden kuvaus",
-      "title": "Algal partner"
+      "title": "Algal partner",
+      "sortOrder": -1
     },
     "alsoKnownAs": {
       "type": "array",
@@ -132,7 +138,8 @@
       "range": "xsd:string",
       "subject": "MX.alsoKnownAs",
       "description": "Names used in observations that are linked to taxonomy. (Eg names used in special cases and informal and slang names.)",
-      "title": "AKA names"
+      "title": "AKA names",
+      "sortOrder": -1
     },
     "alternativeVernacularName": {
       "type": "object",
@@ -166,26 +173,30 @@
       "range": "xsd:string",
       "subject": "MX.alternativeVernacularName",
       "description": "Commonly used names. (Eg names used in recent literature.)",
-      "title": "Other common names"
+      "title": "Other common names",
+      "sortOrder": 7
     },
     "autoNonWild": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MX.autoNonWild",
-      "title": "Automatically set occurrences as non-wild"
+      "title": "Automatically set occurrences as non-wild",
+      "sortOrder": -1
     },
     "behaviour": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.behaviour",
       "description": "Lajin elintavat",
-      "title": "Behaviour"
+      "title": "Behaviour",
+      "sortOrder": -1
     },
     "birdlifeCode": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.birdlifeCode",
-      "title": "BirdLife code"
+      "title": "BirdLife code",
+      "sortOrder": -1
     },
     "breedingSecureLevel": {
       "type": "string",
@@ -215,13 +226,15 @@
       ],
       "range": "MX.secureLevels",
       "subject": "MX.breedingSecureLevel",
-      "title": "Secure level during breeding season"
+      "title": "Secure level during breeding season",
+      "sortOrder": -1
     },
     "circumscription": {
       "type": "string",
       "range": "MC.taxonConcept",
       "subject": "MX.circumscription",
-      "title": "Circumscription"
+      "title": "Circumscription",
+      "sortOrder": -1
     },
     "colloquialVernacularName": {
       "type": "object",
@@ -255,219 +268,253 @@
       "range": "xsd:string",
       "subject": "MX.colloquialVernacularName",
       "description": "Informal but commonly used name. Name that is outdated, unofficial or non-recommended, but which is still commonly used for this taxon.",
-      "title": "Colloquial name"
+      "title": "Colloquial name",
+      "sortOrder": 7
     },
     "conservationStatusDescriptionFinland": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.conservationStatusDescriptionFinland",
-      "title": "Conservation status in Finland"
+      "title": "Conservation status in Finland",
+      "sortOrder": -1
     },
     "conservationStatusDescriptionWorld": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.conservationStatusDescriptionWorld",
-      "title": "Conservation status globally"
+      "title": "Conservation status globally",
+      "sortOrder": -1
     },
     "cultivationText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.cultivationText",
-      "title": "Cultivation"
+      "title": "Cultivation",
+      "sortOrder": -1
     },
     "customReportFormLink": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.customReportFormLink",
-      "title": "Custom observation report from link"
+      "title": "Custom observation report from link",
+      "sortOrder": -1
     },
     "descriptionCone": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionCone",
       "description": "Käpyjen kuvaus",
-      "title": "Cone"
+      "title": "Cone",
+      "sortOrder": -1
     },
     "descriptionFlower": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionFlower",
       "description": "Kukan kuvaus",
-      "title": "Flower"
+      "title": "Flower",
+      "sortOrder": -1
     },
     "descriptionFruitAndSeed": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionFruitAndSeed",
       "description": "Hedelmän/siemenen -kuvaus",
-      "title": "Fruit and seed"
+      "title": "Fruit and seed",
+      "sortOrder": -1
     },
     "descriptionFruitbody": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionFruitbody",
       "description": "Itiöemän kuvaus",
-      "title": "Fruitbody"
+      "title": "Fruitbody",
+      "sortOrder": -1
     },
     "descriptionHostParasite": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionHostParasite",
-      "title": "Host-parasite relationships"
+      "title": "Host-parasite relationships",
+      "sortOrder": -1
     },
     "descriptionLeaf": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionLeaf",
       "description": "Lehden kuvaus",
-      "title": "Leaf"
+      "title": "Leaf",
+      "sortOrder": -1
     },
     "descriptionMicroscopicIdentification": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionMicroscopicIdentification",
       "description": "Lajin mikroskooppiset tuntomerkit",
-      "title": "Microscopic identification"
+      "title": "Microscopic identification",
+      "sortOrder": -1
     },
     "descriptionOrganismSize": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionOrganismSize",
       "description": "Eliön koon kuvaus",
-      "title": "Size"
+      "title": "Size",
+      "sortOrder": -1
     },
     "descriptionReferences": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionReferences",
-      "title": "References"
+      "title": "References",
+      "sortOrder": -1
     },
     "descriptionRoot": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionRoot",
-      "title": "Root"
+      "title": "Root",
+      "sortOrder": -1
     },
     "descriptionSporangiumAndAsexualReproduction": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionSporangiumAndAsexualReproduction",
       "description": "Itiöpesäkkeet ja suvuton lisääntyminen",
-      "title": "Sporangium"
+      "title": "Sporangium",
+      "sortOrder": -1
     },
     "descriptionSpore": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionSpore",
       "description": "Itiöiden kuvaus",
-      "title": "Spores"
+      "title": "Spores",
+      "sortOrder": -1
     },
     "descriptionStem": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionStem",
       "description": "Kasvin varren kuvaus",
-      "title": "Stem"
+      "title": "Stem",
+      "sortOrder": -1
     },
     "descriptionText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionText",
-      "title": "Description"
+      "title": "Description",
+      "sortOrder": -1
     },
     "descriptionThallus": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionThallus",
       "description": "Sekovarren kuvaus",
-      "title": "Thallus"
+      "title": "Thallus",
+      "sortOrder": -1
     },
     "descriptionToxicity": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.descriptionToxicity",
-      "title": "Toxicity"
+      "title": "Toxicity",
+      "sortOrder": -1
     },
     "distributionFinland": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.distributionFinland",
-      "title": "Distribution in Finland"
+      "title": "Distribution in Finland",
+      "sortOrder": -1
     },
     "distributionMapFinland": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.distributionMapFinland",
-      "title": "Map of distribution in Finland"
+      "title": "Map of distribution in Finland",
+      "sortOrder": -1
     },
     "ecology": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.ecology",
       "description": "Lajin ekologian sekalainen kuvaus",
-      "title": "Ecological and economic importance"
+      "title": "Ecological and economic importance",
+      "sortOrder": -1
     },
     "economicUseText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.economicUseText",
-      "title": "Use"
+      "title": "Use",
+      "sortOrder": -1
     },
     "etymologyText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.etymologyText",
-      "title": "Etymology of names"
+      "title": "Etymology of names",
+      "sortOrder": -1
     },
     "euringCode": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.euringCode",
-      "title": "EURING code"
+      "title": "EURING code",
+      "sortOrder": -1
     },
     "euringNumber": {
       "type": "string",
       "range": "xsd:int",
       "subject": "MX.euringNumber",
-      "title": "EURING number"
+      "title": "EURING number",
+      "sortOrder": -1
     },
     "externalLinkURL": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.externalLinkURL",
-      "title": "Link to external information page"
+      "title": "Link to external information page",
+      "sortOrder": -1
     },
     "finnish": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MX.finnish",
-      "title": "Finnish taxon"
+      "title": "Finnish taxon",
+      "sortOrder": -1
     },
     "frequencyScoringPoints": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "MX.frequencyScoringPoints",
-      "title": "Frequency scoring points"
+      "title": "Frequency scoring points",
+      "sortOrder": -1
     },
     "growthFormAndGrowthHabit": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.growthFormAndGrowthHabit",
-      "title": "Growing form"
+      "title": "Growing form",
+      "sortOrder": -1
     },
     "habitat": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.habitat",
       "description": "Lajin elinympäristö",
-      "title": "Habitat"
+      "title": "Habitat",
+      "sortOrder": -1
     },
     "habitatSubstrate": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.habitatSubstrate",
       "description": "Lajin kasvialusta",
-      "title": "Substrate"
+      "title": "Substrate",
+      "sortOrder": -1
     },
     "hasAdminStatus": {
       "type": "array",
@@ -612,7 +659,8 @@
       "minItems": 0,
       "range": "MX.adminStatusEnum",
       "subject": "MX.hasAdminStatus",
-      "title": "Administrative status"
+      "title": "Administrative status",
+      "sortOrder": -1
     },
     "hasAlternativeName": {
       "type": "array",
@@ -623,7 +671,8 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MX.hasAlternativeName",
-      "title": "Alternative name"
+      "title": "Alternative name",
+      "sortOrder": -1
     },
     "hasBasionym": {
       "type": "array",
@@ -634,7 +683,8 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MX.hasBasionym",
-      "title": "Basionym / Original combination"
+      "title": "Basionym / Original combination",
+      "sortOrder": -1
     },
     "hasHeterotypicSynonym": {
       "type": "array",
@@ -645,7 +695,8 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MX.hasHeterotypicSynonym",
-      "title": "Heterotypic synonym"
+      "title": "Heterotypic synonym",
+      "sortOrder": -1
     },
     "hasHomotypicSynonym": {
       "type": "array",
@@ -656,7 +707,8 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MX.hasHomotypicSynonym",
-      "title": "Homotypic synonym"
+      "title": "Homotypic synonym",
+      "sortOrder": -1
     },
     "hasMisappliedName": {
       "type": "array",
@@ -667,7 +719,8 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MX.hasMisappliedName",
-      "title": "Misapplied name"
+      "title": "Misapplied name",
+      "sortOrder": -1
     },
     "hasMisspelledName": {
       "type": "array",
@@ -678,7 +731,8 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MX.hasMisspelledName",
-      "title": "Misspelled name"
+      "title": "Misspelled name",
+      "sortOrder": -1
     },
     "hasObjectiveSynonym": {
       "type": "array",
@@ -689,7 +743,8 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MX.hasObjectiveSynonym",
-      "title": "Objective synonym"
+      "title": "Objective synonym",
+      "sortOrder": -1
     },
     "hasOrthographicVariant": {
       "type": "array",
@@ -700,7 +755,8 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MX.hasOrthographicVariant",
-      "title": "Orthographic variant"
+      "title": "Orthographic variant",
+      "sortOrder": -1
     },
     "hasSubjectiveSynonym": {
       "type": "array",
@@ -711,7 +767,8 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MX.hasSubjectiveSynonym",
-      "title": "Subjective synonym"
+      "title": "Subjective synonym",
+      "sortOrder": -1
     },
     "hasSynonym": {
       "type": "array",
@@ -722,7 +779,8 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MX.hasSynonym",
-      "title": "Synonym"
+      "title": "Synonym",
+      "sortOrder": -1
     },
     "hasUncertainSynonym": {
       "type": "array",
@@ -733,44 +791,51 @@
       "minItems": 0,
       "range": "MX.taxon",
       "subject": "MX.hasUncertainSynonym",
-      "title": "Uncertain synonym"
+      "title": "Uncertain synonym",
+      "sortOrder": -1
     },
     "hiddenTaxon": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MX.hiddenTaxon",
       "description": "Should this taxon be hidden when showing contents of a checklist (publicly)?",
-      "title": "Hidden?"
+      "title": "Hidden?",
+      "sortOrder": -1
     },
     "identificationText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.identificationText",
-      "title": "Identification"
+      "title": "Identification",
+      "sortOrder": -1
     },
     "ingressText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.ingressText",
-      "title": "Ingress"
+      "title": "Ingress",
+      "sortOrder": -1
     },
     "invasiveCitizenActionsText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.invasiveCitizenActionsText",
-      "title": "What can I do?"
+      "title": "What can I do?",
+      "sortOrder": -1
     },
     "invasiveEffectText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.invasiveEffectText",
-      "title": "Harmfulness"
+      "title": "Harmfulness",
+      "sortOrder": -1
     },
     "invasivePreventionMethodsText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.invasivePreventionMethodsText",
-      "title": "Prevention methods"
+      "title": "Prevention methods",
+      "sortOrder": -1
     },
     "invasiveSpeciesCategory": {
       "type": "string",
@@ -788,19 +853,22 @@
       ],
       "range": "MX.invasiveSpeciesCategories",
       "subject": "MX.invasiveSpeciesCategory",
-      "title": "Invasive category"
+      "title": "Invasive category",
+      "sortOrder": -1
     },
     "invasiveSpeciesClassificationDescription": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.invasiveSpeciesClassificationDescription",
-      "title": "Classification"
+      "title": "Classification",
+      "sortOrder": -1
     },
     "invasiveSpeciesEarlyWarning": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MX.invasiveSpeciesEarlyWarning",
-      "title": "Send observation warning"
+      "title": "Send observation warning",
+      "sortOrder": -1
     },
     "invasiveSpeciesEstablishment": {
       "type": "string",
@@ -824,13 +892,15 @@
       ],
       "range": "MX.invasiveSpeciesEstablishmentStatuses",
       "subject": "MX.invasiveSpeciesEstablishment",
-      "title": "Establishment"
+      "title": "Establishment",
+      "sortOrder": -1
     },
     "isPartOf": {
       "type": "string",
       "range": "MX.taxon",
       "subject": "MX.isPartOf",
-      "title": "Parent taxon"
+      "title": "Parent taxon",
+      "sortOrder": 1
     },
     "isPartOfInformalTaxonGroup": {
       "type": "array",
@@ -841,7 +911,8 @@
       "minItems": 0,
       "range": "MVL.informalTaxonGroup",
       "subject": "MX.isPartOfInformalTaxonGroup",
-      "title": "Informal group"
+      "title": "Informal group",
+      "sortOrder": -1
     },
     "isPartOfSet": {
       "type": "array",
@@ -902,45 +973,52 @@
       "minItems": 0,
       "range": "MX.taxonSetEnum",
       "subject": "MX.isPartOfSet",
-      "title": "Is part of a set of various taxa"
+      "title": "Is part of a set of various taxa",
+      "sortOrder": -1
     },
     "lifeCycle": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.lifeCycle",
       "description": "Eliön elinkierto",
-      "title": "Life cycle"
+      "title": "Life cycle",
+      "sortOrder": -1
     },
     "management": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.management",
-      "title": "Instructions for habitat management"
+      "title": "Instructions for habitat management",
+      "sortOrder": -1
     },
     "miscText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.miscText",
-      "title": "Additional information"
+      "title": "Additional information",
+      "sortOrder": -1
     },
     "nameAccordingTo": {
       "type": "string",
       "range": "MR.checklist",
       "subject": "MX.nameAccordingTo",
-      "title": "Checklist"
+      "title": "Checklist",
+      "sortOrder": 4
     },
     "nameDecidedBy": {
       "type": "string",
       "range": "MA.person",
       "subject": "MX.nameDecidedBy",
-      "title": "Name decided by"
+      "title": "Name decided by",
+      "sortOrder": -1
     },
     "nameDecidedDate": {
       "type": "string",
       "format": "date",
       "range": "xsd:date",
       "subject": "MX.nameDecidedDate",
-      "title": "Date of decision"
+      "title": "Date of decision",
+      "sortOrder": -1
     },
     "naturaAreaSecureLevel": {
       "type": "string",
@@ -970,7 +1048,8 @@
       ],
       "range": "MX.secureLevels",
       "subject": "MX.naturaAreaSecureLevel",
-      "title": "Secure level in Natura-area"
+      "title": "Secure level in Natura-area",
+      "sortOrder": -1
     },
     "nestSiteSecureLevel": {
       "type": "string",
@@ -1000,13 +1079,15 @@
       ],
       "range": "MX.secureLevels",
       "subject": "MX.nestSiteSecureLevel",
-      "title": "Secure level for nest site"
+      "title": "Secure level for nest site",
+      "sortOrder": -1
     },
     "notes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.notes",
-      "title": "Notes on taxonomy"
+      "title": "Notes on taxonomy",
+      "sortOrder": -1
     },
     "obsoleteVernacularName": {
       "type": "object",
@@ -1040,7 +1121,8 @@
       "range": "xsd:string",
       "subject": "MX.obsoleteVernacularName",
       "description": "Names not recommended and no longer (for a long time) commonly used. (For example, names used in the literature in the 20th century, or names transferred to another taxon.",
-      "title": "Obsolete vernacular names"
+      "title": "Obsolete vernacular names",
+      "sortOrder": -1
     },
     "occurrenceInFinland": {
       "type": "string",
@@ -1070,7 +1152,8 @@
       ],
       "range": "MX.occurrenceInFinlandEnum",
       "subject": "MX.occurrenceInFinland",
-      "title": "Occurrence in Finland"
+      "title": "Occurrence in Finland",
+      "sortOrder": 9
     },
     "occurrenceInFinlandPublication": {
       "type": "array",
@@ -1081,25 +1164,29 @@
       "minItems": 0,
       "range": "MP.publication",
       "subject": "MX.occurrenceInFinlandPublication",
-      "title": "Publication of occurrence"
+      "title": "Publication of occurrence",
+      "sortOrder": -1
     },
     "occurrenceInFinlandSpecimenURI": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.occurrenceInFinlandSpecimenURI",
-      "title": "Specimen URI Identifier of occurrence in Finland"
+      "title": "Specimen URI Identifier of occurrence in Finland",
+      "sortOrder": -1
     },
     "originAndDistributionText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.originAndDistributionText",
-      "title": "Origin and general distribution"
+      "title": "Origin and general distribution",
+      "sortOrder": -1
     },
     "originalDescription": {
       "type": "string",
       "range": "MP.publication",
       "subject": "MX.originalDescription",
-      "title": "Nomenclatural reference"
+      "title": "Nomenclatural reference",
+      "sortOrder": -1
     },
     "originalPublication": {
       "type": "array",
@@ -1110,7 +1197,8 @@
       "minItems": 0,
       "range": "MP.publication",
       "subject": "MX.originalPublication",
-      "title": "Source of taxonomy"
+      "title": "Source of taxonomy",
+      "sortOrder": -1
     },
     "overridingTargetName": {
       "type": "array",
@@ -1121,19 +1209,22 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MX.overridingTargetName",
-      "title": "Observations reported using this name will be linked to this taxon"
+      "title": "Observations reported using this name will be linked to this taxon",
+      "sortOrder": -1
     },
     "privateNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.privateNotes",
-      "title": "Private notes"
+      "title": "Private notes",
+      "sortOrder": -1
     },
     "productionText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.productionText",
-      "title": "Production"
+      "title": "Production",
+      "sortOrder": -1
     },
     "redListStatus2000Finland": {
       "type": "string",
@@ -1167,7 +1258,8 @@
       ],
       "range": "MX.iucnStatuses",
       "subject": "MX.redListStatus2000Finland",
-      "title": "Red List 2000 IUCN category"
+      "title": "Red List 2000 IUCN category",
+      "sortOrder": -1
     },
     "redListStatus2010Finland": {
       "type": "string",
@@ -1201,7 +1293,8 @@
       ],
       "range": "MX.iucnStatuses",
       "subject": "MX.redListStatus2010Finland",
-      "title": "Red List 2010 IUCN category"
+      "title": "Red List 2010 IUCN category",
+      "sortOrder": -1
     },
     "redListStatus2015Finland": {
       "type": "string",
@@ -1235,7 +1328,8 @@
       ],
       "range": "MX.iucnStatuses",
       "subject": "MX.redListStatus2015Finland",
-      "title": "Red List 2015 IUCN category"
+      "title": "Red List 2015 IUCN category",
+      "sortOrder": -1
     },
     "redListStatus2019Finland": {
       "type": "string",
@@ -1269,39 +1363,45 @@
       ],
       "range": "MX.iucnStatuses",
       "subject": "MX.redListStatus2019Finland",
-      "title": "Red List 2019 IUCN category"
+      "title": "Red List 2019 IUCN category",
+      "sortOrder": -1
     },
     "reproduction": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.reproduction",
-      "title": "Reproduction"
+      "title": "Reproduction",
+      "sortOrder": -1
     },
     "reproductionFloweringTime": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.reproductionFloweringTime",
       "description": "Kukinta-aika",
-      "title": "Flowering time"
+      "title": "Flowering time",
+      "sortOrder": -1
     },
     "reproductionPollination": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.reproductionPollination",
       "description": "Pölytyksen kuvaus",
-      "title": "Pollination"
+      "title": "Pollination",
+      "sortOrder": -1
     },
     "scientificName": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.scientificName",
-      "title": "Scientific name"
+      "title": "Scientific name",
+      "sortOrder": 2
     },
     "scientificNameAuthorship": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.scientificNameAuthorship",
-      "title": "Authors"
+      "title": "Authors",
+      "sortOrder": 3
     },
     "secureLevel": {
       "type": "string",
@@ -1332,31 +1432,36 @@
       "range": "MX.secureLevels",
       "subject": "MX.secureLevel",
       "description": "Secure level (salaus-/karkeistustaso) for the data",
-      "title": "Secure level"
+      "title": "Secure level",
+      "sortOrder": 34
     },
     "speciesCardAuthors": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.speciesCardAuthors",
-      "title": "Description text authors"
+      "title": "Description text authors",
+      "sortOrder": -1
     },
     "stopInformalTaxonGroupInheritance": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MX.stopInformalTaxonGroupInheritance",
-      "title": "Stop informal taxon group inheritance"
+      "title": "Stop informal taxon group inheritance",
+      "sortOrder": -1
     },
     "stopOccurrenceInFinlandPublicationInheritance": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MX.stopOccurrenceInFinlandPublicationInheritance",
-      "title": "Stop occurrence in Finland publication inheritance"
+      "title": "Stop occurrence in Finland publication inheritance",
+      "sortOrder": -1
     },
     "stopOriginalPublicationInheritance": {
       "type": "boolean",
       "range": "xsd:boolean",
       "subject": "MX.stopOriginalPublicationInheritance",
-      "title": "Stop original publication inheritance"
+      "title": "Stop original publication inheritance",
+      "sortOrder": -1
     },
     "targetName": {
       "type": "array",
@@ -1367,7 +1472,8 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MX.targetName",
-      "title": "Target name in observations"
+      "title": "Target name in observations",
+      "sortOrder": -1
     },
     "taxonEditor": {
       "type": "array",
@@ -1378,7 +1484,8 @@
       "minItems": 0,
       "range": "MA.person",
       "subject": "MX.taxonEditor",
-      "title": "Checklist editors"
+      "title": "Checklist editors",
+      "sortOrder": 14
     },
     "taxonExpert": {
       "type": "array",
@@ -1389,7 +1496,8 @@
       "minItems": 0,
       "range": "MA.person",
       "subject": "MX.taxonExpert",
-      "title": "Experts"
+      "title": "Experts",
+      "sortOrder": 13
     },
     "taxonRank": {
       "type": "string",
@@ -1517,13 +1625,15 @@
       ],
       "range": "MX.taxonRankEnum",
       "subject": "MX.taxonRank",
-      "title": "Taxonomic rank"
+      "title": "Taxonomic rank",
+      "sortOrder": 0
     },
     "taxonomyText": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.taxonomyText",
-      "title": "Taxonomy"
+      "title": "Taxonomy",
+      "sortOrder": -1
     },
     "tradeName": {
       "type": "array",
@@ -1534,7 +1644,8 @@
       "minItems": 0,
       "range": "xsd:string",
       "subject": "MX.tradeName",
-      "title": "Trade name"
+      "title": "Trade name",
+      "sortOrder": -1
     },
     "typeOfOccurrenceInFinland": {
       "type": "array",
@@ -1641,19 +1752,22 @@
       "minItems": 0,
       "range": "MX.typeOfOccurrenceEnum",
       "subject": "MX.typeOfOccurrenceInFinland",
-      "title": "Type of occurrence"
+      "title": "Type of occurrence",
+      "sortOrder": -1
     },
     "typeOfOccurrenceInFinlandNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.typeOfOccurrenceInFinlandNotes",
-      "title": "Notes on occurrence in Finland"
+      "title": "Notes on occurrence in Finland",
+      "sortOrder": -1
     },
     "typeSpecimenURI": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MX.typeSpecimenURI",
-      "title": "Type specimen URI"
+      "title": "Type specimen URI",
+      "sortOrder": -1
     },
     "vernacularName": {
       "type": "object",
@@ -1672,7 +1786,8 @@
       "range": "xsd:string",
       "subject": "MX.vernacularName",
       "description": "Currently recommended name",
-      "title": "Recommended common name"
+      "title": "Recommended common name",
+      "sortOrder": 6
     },
     "winteringSecureLevel": {
       "type": "string",
@@ -1702,25 +1817,29 @@
       ],
       "range": "MX.secureLevels",
       "subject": "MX.winteringSecureLevel",
-      "title": "Secure level while wintering"
+      "title": "Secure level while wintering",
+      "sortOrder": -1
     },
     "createdAtTimestamp": {
       "type": "string",
       "range": "xsd:int",
       "subject": "MZ.createdAtTimestamp",
-      "title": "createdAtTimestamp"
+      "title": "createdAtTimestamp",
+      "sortOrder": -1
     },
     "sortOrder": {
       "type": "integer",
       "range": "xsd:integer",
       "subject": "sortOrder",
-      "title": "sortOrder"
+      "title": "sortOrder",
+      "sortOrder": -1
     },
     "skos:exactMatch": {
       "type": "string",
       "range": "skos:Concept",
       "subject": "skos:exactMatch",
-      "title": "Taxonid.org identifier"
+      "title": "Taxonid.org identifier",
+      "sortOrder": -1
     }
   }
 }

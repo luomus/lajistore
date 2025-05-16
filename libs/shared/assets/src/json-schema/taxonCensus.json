@@ -28,7 +28,8 @@
       "type": "string",
       "range": "MX.taxon",
       "subject": "MY.censusTaxonID",
-      "title": "Censused taxon"
+      "title": "Censused taxon",
+      "sortOrder": -1
     },
     "censusTaxonSetID": {
       "type": "string",
@@ -84,7 +85,8 @@
       ],
       "range": "MX.taxonSetEnum",
       "subject": "MY.censusTaxonSetID",
-      "title": "Censused taxon set"
+      "title": "Censused taxon set",
+      "sortOrder": -1
     },
     "taxonCensusType": {
       "type": "string",
@@ -100,7 +102,8 @@
       ],
       "range": "MY.taxonCensusEnum",
       "subject": "MY.taxonCensusType",
-      "title": "Completeness of census"
+      "title": "Completeness of census",
+      "sortOrder": -1
     }
   },
   "required": [

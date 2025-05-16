@@ -29,7 +29,8 @@
       "range": "xsd:boolean",
       "subject": "MVL.explicitlyDefinedRoot",
       "description": "If this is true, the group is considered a root even if it has parents. For example Fishes is part of Water animals but still is wanted to be a root by itself.",
-      "title": "Explicitly defined root"
+      "title": "Explicitly defined root",
+      "sortOrder": -1
     },
     "hasSubGroup": {
       "type": "array",
@@ -40,7 +41,8 @@
       "minItems": 0,
       "range": "MVL.informalTaxonGroup",
       "subject": "MVL.hasSubGroup",
-      "title": "Has subgroup"
+      "title": "Has subgroup",
+      "sortOrder": -1
     },
     "name": {
       "type": "object",
@@ -59,7 +61,8 @@
       "minProperties": 1,
       "range": "xsd:string",
       "subject": "MVL.name",
-      "title": "name"
+      "title": "name",
+      "sortOrder": -1
     }
   },
   "required": [

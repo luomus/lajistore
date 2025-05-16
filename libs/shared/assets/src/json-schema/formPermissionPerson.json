@@ -28,7 +28,8 @@
       "type": "string",
       "range": "MA.person",
       "subject": "MFP.personID",
-      "title": "Users person id"
+      "title": "Users person id",
+      "sortOrder": 1
     },
     "admins": {
       "type": "array",
@@ -39,7 +40,8 @@
       "minItems": 0,
       "range": "MY.collection",
       "subject": "MFPP.admins",
-      "title": "List of collections where person is admin"
+      "title": "List of collections where person is admin",
+      "sortOrder": 3
     },
     "editors": {
       "type": "array",
@@ -50,7 +52,8 @@
       "minItems": 0,
       "range": "MY.collection",
       "subject": "MFPP.editors",
-      "title": "List of collections where person is editor"
+      "title": "List of collections where person is editor",
+      "sortOrder": 2
     },
     "permissionRequests": {
       "type": "array",
@@ -61,7 +64,8 @@
       "minItems": 0,
       "range": "MY.collection",
       "subject": "MFPP.permissionRequests",
-      "title": "List of collections where person has permission requests"
+      "title": "List of collections where person has permission requests",
+      "sortOrder": 4
     }
   },
   "required": [

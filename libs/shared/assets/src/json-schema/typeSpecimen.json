@@ -29,49 +29,56 @@
       "range": "rdfs:Resource",
       "subject": "MY.isPartOf",
       "description": "Which parent or larger collection this is part of.",
-      "title": "Is part of"
+      "title": "Is part of",
+      "sortOrder": 34
     },
     "typeAuthor": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.typeAuthor",
       "description": "Author of the type species",
-      "title": "Type author"
+      "title": "Type author",
+      "sortOrder": 3
     },
     "typeBasionymePubl": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.typeBasionymePubl",
       "description": "Publication reference for original description or basionyme",
-      "title": "Original description publication"
+      "title": "Original description publication",
+      "sortOrder": 9
     },
     "typeNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.typeNotes",
       "description": "Additional information on the type",
-      "title": "Type notes"
+      "title": "Type notes",
+      "sortOrder": 11
     },
     "typePubl": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.typePubl",
       "description": "Publication reference for type publication",
-      "title": "Type publication"
+      "title": "Type publication",
+      "sortOrder": 10
     },
     "typeSeriesID": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.typeSeriesID",
       "description": "ID for the type series, if part of one",
-      "title": "Type series ID"
+      "title": "Type series ID",
+      "sortOrder": 12
     },
     "typeSpecies": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.typeSpecies",
       "description": "Name of the type species",
-      "title": "Type name"
+      "title": "Type name",
+      "sortOrder": 2
     },
     "typeStatus": {
       "type": "string",
@@ -134,21 +141,24 @@
       "range": "MY.typeStatuses",
       "subject": "MY.typeStatus",
       "description": "Is this holotype, paratype, syntype etc...",
-      "title": "Type of type"
+      "title": "Type of type",
+      "sortOrder": 1
     },
     "typeSubspecies": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.typeSubspecies",
       "description": "Name of the type subspecies",
-      "title": "Type ssp name"
+      "title": "Type ssp name",
+      "sortOrder": 4
     },
     "typeSubspeciesAuthor": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.typeSubspeciesAuthor",
       "description": "Author of the type subspecies",
-      "title": "Type ssp author"
+      "title": "Type ssp author",
+      "sortOrder": 13
     },
     "typeVerification": {
       "type": "string",
@@ -169,21 +179,24 @@
       "range": "MY.typeVerifications",
       "subject": "MY.typeVerification",
       "description": "Verification whether this really is a type?",
-      "title": "Type verification"
+      "title": "Type verification",
+      "sortOrder": 8
     },
     "typif": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.typif",
       "description": "Name of the person who chose the type, preferably in the format \"Lastname, firstname\"",
-      "title": "Typefier"
+      "title": "Typefier",
+      "sortOrder": 6
     },
     "typifDate": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.typifDate",
       "description": "Date when the specimen was chosen as a type",
-      "title": "Typifier date"
+      "title": "Typifier date",
+      "sortOrder": 7
     },
     "publicityRestrictions": {
       "type": "string",
@@ -202,7 +215,8 @@
       "range": "MZ.publicityRestrictionsEnum",
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
-      "title": "Publicity restrictions"
+      "title": "Publicity restrictions",
+      "sortOrder": 33
     }
   }
 }
