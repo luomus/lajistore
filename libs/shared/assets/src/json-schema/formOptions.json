@@ -8934,6 +8934,24 @@
                           "title": "Taxon ID selected from autocomplete",
                           "sortOrder": -1
                         },
+                        "detOnSite": {
+                          "type": "string",
+                          "enum": [
+                            "",
+                            "MY.duringObservation",
+                            "MY.afterObservation"
+                          ],
+                          "enumNames": [
+                            "",
+                            "During observation",
+                            "Later"
+                          ],
+                          "range": "MY.detOnSiteEnum",
+                          "subject": "MY.detOnSite",
+                          "description": "Tehtiinkö lajin määritys havaintotilanteessa vai myöhemmin esimerkiksi internetin tai muiden kanssa keskustelun perusteella?",
+                          "title": "Determination on site",
+                          "sortOrder": -1
+                        },
                         "distanceMeters": {
                           "type": "integer",
                           "range": "xsd:integer",
@@ -9143,6 +9161,14 @@
                           "title": "Tree species",
                           "sortOrder": -1
                         },
+                        "observationHours": {
+                          "type": "integer",
+                          "exclusiveMinimum": 0,
+                          "range": "xsd:positiveInteger",
+                          "subject": "MY.observationHours",
+                          "title": "Observation duration (h)",
+                          "sortOrder": -1
+                        },
                         "pairCountInner": {
                           "type": "integer",
                           "minimum": 0,
@@ -9171,6 +9197,14 @@
                           "range": "xsd:boolean",
                           "subject": "MY.runningWaterInVicinity",
                           "title": "Is the plant growing next to running water?",
+                          "sortOrder": -1
+                        },
+                        "taxonConfidenceDescription": {
+                          "type": "string",
+                          "range": "xsd:string",
+                          "subject": "MY.taxonConfidenceDescription",
+                          "description": "Oma arvio lajimäärityksen luotettavuudesta",
+                          "title": "Estimate on determination confidence",
                           "sortOrder": -1
                         },
                         "traits": {

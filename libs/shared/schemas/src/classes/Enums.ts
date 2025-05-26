@@ -2252,6 +2252,11 @@ export enum MYWildEnum {
   "wildUnknown" = "MY.wildUnknown",
   "wildNonWild" = "MY.wildNonWild"
 }
+export enum MYDetOnSiteEnum {
+  "empty" = "",
+  "duringObservation" = "MY.duringObservation",
+  "afterObservation" = "MY.afterObservation"
+}
 export enum MYGlowWormMicrohabitatEnum {
   "empty" = "",
   "glowWormMicrohabitatEnum1" = "MY.glowWormMicrohabitatEnum1",

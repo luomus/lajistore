@@ -1,3 +1,4 @@
+import { MYDetOnSiteEnum } from './';
 import { MYGlowWormMicrohabitatEnum } from './';
 import { MYLineTransectObsTypeEnum } from './';
 import { MYLineTransectRouteFieldTypeEnum } from './';
@@ -21,6 +22,10 @@ export class UnitFact {
   "@type"?: string;
   adultIndividualCount?: number;
   autocompleteSelectedTaxonID?: string;
+  /**
+   * Tehtiinkö lajin määritys havaintotilanteessa vai myöhemmin esimerkiksi internetin tai muiden kanssa keskustelun perusteella?
+   */
+  detOnSite?: MYDetOnSiteEnum;
   distanceMeters?: number;
   glowWormMicrohabitat?: MYGlowWormMicrohabitatEnum;
   individualCountFlock?: number;
@@ -33,10 +38,15 @@ export class UnitFact {
   lolifeDroppingsQuality?: MYLolifeDroppingsQualityEnum;
   lolifeDroppingsType?: MYLolifeDroppingsTypeEnum;
   lolifeNestTree?: MYLolifeNestTreeEnum;
+  observationHours?: number;
   pairCountInner?: number;
   pairCountOuter?: number;
   pointCountFlock?: string;
   runningWaterInVicinity?: boolean;
+  /**
+   * Oma arvio lajimäärityksen luotettavuudesta
+   */
+  taxonConfidenceDescription?: string;
   traits?: string;
   waterbirdFemale?: MYWaterbirdFemaleEnum;
   waterbirdJuvenileAgeClass?: MYWaterbirdJuvenileAgeClassEnum;

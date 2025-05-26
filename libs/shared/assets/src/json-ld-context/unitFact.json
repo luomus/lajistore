@@ -39,6 +39,10 @@
       "@id": "default:MY.autocompleteSelectedTaxonID",
       "@type": "xsd:string"
     },
+    "detOnSite": {
+      "@id": "default:MY.detOnSite",
+      "@type": "@id"
+    },
     "distanceMeters": {
       "@id": "default:MY.distanceMeters",
       "@type": "xsd:integer"
@@ -87,6 +91,10 @@
       "@id": "default:MY.lolifeNestTree",
       "@type": "@id"
     },
+    "observationHours": {
+      "@id": "default:MY.observationHours",
+      "@type": "xsd:positiveInteger"
+    },
     "pairCountInner": {
       "@id": "default:MY.pairCountInner",
       "@type": "xsd:nonNegativeInteger"
@@ -102,6 +110,10 @@
     "runningWaterInVicinity": {
       "@id": "default:MY.runningWaterInVicinity",
       "@type": "xsd:boolean"
+    },
+    "taxonConfidenceDescription": {
+      "@id": "default:MY.taxonConfidenceDescription",
+      "@type": "xsd:string"
     },
     "traits": {
       "@id": "default:MY.traits",

@@ -2092,6 +2092,10 @@ export type MYWildEnum =
   | "MY.wildWild"
   | "MY.wildUnknown"
   | "MY.wildNonWild";
+export type MYDetOnSiteEnum =
+  | ""
+  | "MY.duringObservation"
+  | "MY.afterObservation";
 export type MYGlowWormMicrohabitatEnum =
   | ""
   | "MY.glowWormMicrohabitatEnum1"

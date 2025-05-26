@@ -2617,6 +2617,10 @@
                         "ignore_above": 200,
                         "normalizer": "useLowercase"
                       },
+                      "detOnSite": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
                       "distanceMeters": {
                         "type": "integer"
                       },
@@ -2660,6 +2664,9 @@
                         "type": "keyword",
                         "ignore_above": 200
                       },
+                      "observationHours": {
+                        "type": "integer"
+                      },
                       "pairCountInner": {
                         "type": "integer"
                       },
@@ -2673,6 +2680,11 @@
                       },
                       "runningWaterInVicinity": {
                         "type": "boolean"
+                      },
+                      "taxonConfidenceDescription": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
                       },
                       "traits": {
                         "type": "keyword",
