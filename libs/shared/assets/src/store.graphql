@@ -7003,6 +7003,7 @@ type GatheringFact {
   cloudAndRain: CloudAndRain
   context: String
   descriptionBiotopeF: String
+  documentation: String
   feedingStationCount: Int
   feedingStationCountBiotopeA: Int
   feedingStationCountBiotopeB: Int
@@ -7026,7 +7027,10 @@ type GatheringFact {
   lineTransectSegmentMetersStart: Int
   lolifeSiteClassification: LolifeSiteClassification
   lolifeSiteClassificationComments: String
+  marineArea: String
+  marineMammalExpertise: String
   meanTemperature: Int
+  observationTools: String
   observedAreaHectares: Int
   observerCount: Int
   observerID: Int
@@ -9177,6 +9181,7 @@ type UnitFact {
   adultIndividualCount: Int
   autocompleteSelectedTaxonID: String
   context: String
+  distanceMeters: Int
   glowWormMicrohabitat: GlowWormMicrohabitat
   id: String
   individualCountBiotopeA: Int
@@ -9201,6 +9206,7 @@ type UnitFact {
   pairCountOuter: Int
   pointCountFlock: String
   runningWaterInVicinity: Boolean
+  traits: String
   type: String
   waterbirdFemale: WaterbirdFemale
   waterbirdJuvenileAgeClass: WaterbirdJuvenileAgeClass
@@ -27716,6 +27722,7 @@ input GatheringFactInput {
   cloudAndRain: CloudAndRain
   context: String
   descriptionBiotopeF: String
+  documentation: String
   feedingStationCount: Int
   feedingStationCountBiotopeA: Int
   feedingStationCountBiotopeB: Int
@@ -27739,7 +27746,10 @@ input GatheringFactInput {
   lineTransectSegmentMetersStart: Int
   lolifeSiteClassification: LolifeSiteClassification
   lolifeSiteClassificationComments: String
+  marineArea: String
+  marineMammalExpertise: String
   meanTemperature: Int
+  observationTools: String
   observedAreaHectares: Int
   observerCount: Int
   observerID: Int
@@ -28492,6 +28502,7 @@ input UnitFactInput {
   adultIndividualCount: Int
   autocompleteSelectedTaxonID: String
   context: String
+  distanceMeters: Int
   glowWormMicrohabitat: GlowWormMicrohabitat
   id: String
   individualCountBiotopeA: Int
@@ -28516,6 +28527,7 @@ input UnitFactInput {
   pairCountOuter: Int
   pointCountFlock: String
   runningWaterInVicinity: Boolean
+  traits: String
   type: String
   waterbirdFemale: WaterbirdFemale
   waterbirdJuvenileAgeClass: WaterbirdJuvenileAgeClass

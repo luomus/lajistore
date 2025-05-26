@@ -58612,6 +58612,10 @@
             "minimum": 0,
             "title": "Census area/ha"
           },
+          "documentation": {
+            "type": "string",
+            "title": "Observation documentation"
+          },
           "invasiveControlOtherExpensesInEuros": {
             "type": "integer",
             "minimum": 0,
@@ -58651,6 +58655,18 @@
           "lolifeSiteClassificationComments": {
             "type": "string",
             "title": "Classification comments"
+          },
+          "marineArea": {
+            "type": "string",
+            "title": "Marine area"
+          },
+          "marineMammalExpertise": {
+            "type": "string",
+            "title": "Observer's marine mammal expertise"
+          },
+          "observationTools": {
+            "type": "string",
+            "title": "Observation tools"
           },
           "observedAreaHectares": {
             "type": "integer",
@@ -67330,6 +67346,10 @@
             "type": "string",
             "title": "Taxon ID selected from autocomplete"
           },
+          "distanceMeters": {
+            "type": "integer",
+            "title": "Observation distance (m)"
+          },
           "glowWormMicrohabitat": {
             "type": "string",
             "enum": [
@@ -67455,6 +67475,10 @@
           "runningWaterInVicinity": {
             "type": "boolean",
             "title": "Is the plant growing next to running water?"
+          },
+          "traits": {
+            "type": "string",
+            "title": "Observed traits"
           },
           "waterbirdFemale": {
             "type": "string",

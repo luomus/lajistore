@@ -39,6 +39,10 @@
       "@id": "default:MY.autocompleteSelectedTaxonID",
       "@type": "xsd:string"
     },
+    "distanceMeters": {
+      "@id": "default:MY.distanceMeters",
+      "@type": "xsd:integer"
+    },
     "glowWormMicrohabitat": {
       "@id": "default:MY.glowWormMicrohabitat",
       "@type": "@id"
@@ -98,6 +102,10 @@
     "runningWaterInVicinity": {
       "@id": "default:MY.runningWaterInVicinity",
       "@type": "xsd:boolean"
+    },
+    "traits": {
+      "@id": "default:MY.traits",
+      "@type": "xsd:string"
     },
     "waterbirdFemale": {
       "@id": "default:MY.waterbirdFemale",

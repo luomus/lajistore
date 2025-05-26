@@ -21,6 +21,7 @@ export class UnitFact {
   "@type"?: string;
   adultIndividualCount?: number;
   autocompleteSelectedTaxonID?: string;
+  distanceMeters?: number;
   glowWormMicrohabitat?: MYGlowWormMicrohabitatEnum;
   individualCountFlock?: number;
   individualCountInner?: number;
@@ -36,6 +37,7 @@ export class UnitFact {
   pairCountOuter?: number;
   pointCountFlock?: string;
   runningWaterInVicinity?: boolean;
+  traits?: string;
   waterbirdFemale?: MYWaterbirdFemaleEnum;
   waterbirdJuvenileAgeClass?: MYWaterbirdJuvenileAgeClassEnum;
   waterbirdJuvenileCountAccurate?: boolean;

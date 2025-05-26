@@ -722,6 +722,13 @@
               "title": "Census area/ha",
               "sortOrder": -1
             },
+            "documentation": {
+              "type": "string",
+              "range": "xsd:string",
+              "subject": "MY.documentation",
+              "title": "Observation documentation",
+              "sortOrder": -1
+            },
             "invasiveControlOtherExpensesInEuros": {
               "type": "integer",
               "minimum": 0,
@@ -789,6 +796,27 @@
               "range": "xsd:string",
               "subject": "MY.lolifeSiteClassificationComments",
               "title": "Classification comments",
+              "sortOrder": -1
+            },
+            "marineArea": {
+              "type": "string",
+              "range": "xsd:string",
+              "subject": "MY.marineArea",
+              "title": "Marine area",
+              "sortOrder": -1
+            },
+            "marineMammalExpertise": {
+              "type": "string",
+              "range": "xsd:string",
+              "subject": "MY.marineMammalExpertise",
+              "title": "Observer's marine mammal expertise",
+              "sortOrder": -1
+            },
+            "observationTools": {
+              "type": "string",
+              "range": "xsd:string",
+              "subject": "MY.observationTools",
+              "title": "Observation tools",
               "sortOrder": -1
             },
             "observedAreaHectares": {
@@ -3074,6 +3102,13 @@
                 "title": "Census area/ha",
                 "sortOrder": -1
               },
+              "documentation": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MY.documentation",
+                "title": "Observation documentation",
+                "sortOrder": -1
+              },
               "invasiveControlOtherExpensesInEuros": {
                 "type": "integer",
                 "minimum": 0,
@@ -3141,6 +3176,27 @@
                 "range": "xsd:string",
                 "subject": "MY.lolifeSiteClassificationComments",
                 "title": "Classification comments",
+                "sortOrder": -1
+              },
+              "marineArea": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MY.marineArea",
+                "title": "Marine area",
+                "sortOrder": -1
+              },
+              "marineMammalExpertise": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MY.marineMammalExpertise",
+                "title": "Observer's marine mammal expertise",
+                "sortOrder": -1
+              },
+              "observationTools": {
+                "type": "string",
+                "range": "xsd:string",
+                "subject": "MY.observationTools",
+                "title": "Observation tools",
                 "sortOrder": -1
               },
               "observedAreaHectares": {
@@ -8108,6 +8164,13 @@
                       "title": "Taxon ID selected from autocomplete",
                       "sortOrder": -1
                     },
+                    "distanceMeters": {
+                      "type": "integer",
+                      "range": "xsd:integer",
+                      "subject": "MY.distanceMeters",
+                      "title": "Observation distance (m)",
+                      "sortOrder": -1
+                    },
                     "glowWormMicrohabitat": {
                       "type": "string",
                       "enum": [
@@ -8338,6 +8401,13 @@
                       "range": "xsd:boolean",
                       "subject": "MY.runningWaterInVicinity",
                       "title": "Is the plant growing next to running water?",
+                      "sortOrder": -1
+                    },
+                    "traits": {
+                      "type": "string",
+                      "range": "xsd:string",
+                      "subject": "MY.traits",
+                      "title": "Observed traits",
                       "sortOrder": -1
                     },
                     "waterbirdFemale": {

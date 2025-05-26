@@ -36,6 +36,9 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "distanceMeters": {
+        "type": "integer"
+      },
       "glowWormMicrohabitat": {
         "type": "keyword",
         "ignore_above": 200
@@ -89,6 +92,11 @@
       },
       "runningWaterInVicinity": {
         "type": "boolean"
+      },
+      "traits": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "waterbirdFemale": {
         "type": "keyword",

@@ -96,6 +96,11 @@
           "censusAreaHectares": {
             "type": "integer"
           },
+          "documentation": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
           "invasiveControlOtherExpensesInEuros": {
             "type": "integer"
           },
@@ -116,6 +121,21 @@
             "ignore_above": 200
           },
           "lolifeSiteClassificationComments": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "marineArea": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "marineMammalExpertise": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "observationTools": {
             "type": "keyword",
             "ignore_above": 200,
             "normalizer": "useLowercase"

@@ -29,6 +29,7 @@ export class GatheringFact {
   batCollector?: MYBatCollectorEnum;
   binocularsUsed?: boolean;
   censusAreaHectares?: number;
+  documentation?: string;
   invasiveControlOtherExpensesInEuros?: number;
   invasiveControlWorkHours?: number;
   lineTransectSegmentCounted?: boolean;
@@ -36,6 +37,9 @@ export class GatheringFact {
   lineTransectSegmentMetersStart?: number;
   lolifeSiteClassification?: MYLolifeSiteClassificationEnum;
   lolifeSiteClassificationComments?: string;
+  marineArea?: string;
+  marineMammalExpertise?: string;
+  observationTools?: string;
   observedAreaHectares?: number;
   pointCountHabitat?: MYPointCountHabitatEnum;
   shorelineLengthMeters?: number;

@@ -58,6 +58,13 @@
       "title": "Census area/ha",
       "sortOrder": -1
     },
+    "documentation": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.documentation",
+      "title": "Observation documentation",
+      "sortOrder": -1
+    },
     "invasiveControlOtherExpensesInEuros": {
       "type": "integer",
       "minimum": 0,
@@ -125,6 +132,27 @@
       "range": "xsd:string",
       "subject": "MY.lolifeSiteClassificationComments",
       "title": "Classification comments",
+      "sortOrder": -1
+    },
+    "marineArea": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.marineArea",
+      "title": "Marine area",
+      "sortOrder": -1
+    },
+    "marineMammalExpertise": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.marineMammalExpertise",
+      "title": "Observer's marine mammal expertise",
+      "sortOrder": -1
+    },
+    "observationTools": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.observationTools",
+      "title": "Observation tools",
       "sortOrder": -1
     },
     "observedAreaHectares": {
