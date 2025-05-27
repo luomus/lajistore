@@ -186,6 +186,11 @@
             "ignore_above": 200,
             "normalizer": "useLowercase"
           },
+          "gatheringDescription": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
           "invasiveControlOtherExpensesInEuros": {
             "type": "integer"
           },
@@ -1372,6 +1377,11 @@
               "lolifeNestTree": {
                 "type": "keyword",
                 "ignore_above": 200
+              },
+              "observationDuration": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
               },
               "observationHours": {
                 "type": "integer"

@@ -333,6 +333,11 @@
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
                   },
+                  "gatheringDescription": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
                   "invasiveControlOtherExpensesInEuros": {
                     "type": "integer"
                   },
@@ -1107,6 +1112,11 @@
                     "type": "integer"
                   },
                   "documentation": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "gatheringDescription": {
                     "type": "keyword",
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
@@ -2297,6 +2307,11 @@
                       "lolifeNestTree": {
                         "type": "keyword",
                         "ignore_above": 200
+                      },
+                      "observationDuration": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
                       },
                       "observationHours": {
                         "type": "integer"
@@ -3297,6 +3312,11 @@
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
                   },
+                  "gatheringDescription": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
                   "invasiveControlOtherExpensesInEuros": {
                     "type": "integer"
                   },
@@ -4071,6 +4091,11 @@
                     "type": "integer"
                   },
                   "documentation": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "gatheringDescription": {
                     "type": "keyword",
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
@@ -5261,6 +5286,11 @@
                       "lolifeNestTree": {
                         "type": "keyword",
                         "ignore_above": 200
+                      },
+                      "observationDuration": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
                       },
                       "observationHours": {
                         "type": "integer"

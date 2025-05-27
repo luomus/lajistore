@@ -7013,6 +7013,7 @@ type GatheringFact {
   feedingStationCountBiotopeF: Int
   feedingStationCountBiotopeG: Int
   feedingStationCountBiotopeH: Int
+  gatheringDescription: String
   iceCover: IceCover
   id: String
   invasiveControlOtherExpensesInEuros: Int
@@ -9207,6 +9208,7 @@ type UnitFact {
   lolifeDroppingsQuality: LolifeDroppingsQuality
   lolifeDroppingsType: LolifeDroppingsType
   lolifeNestTree: LolifeNestTree
+  observationDuration: String
   observationHours: Int
   pairCountInner: Int
   pairCountOuter: Int
@@ -27747,6 +27749,7 @@ input GatheringFactInput {
   feedingStationCountBiotopeF: Int
   feedingStationCountBiotopeG: Int
   feedingStationCountBiotopeH: Int
+  gatheringDescription: String
   iceCover: IceCover
   id: String
   invasiveControlOtherExpensesInEuros: Int
@@ -28543,6 +28546,7 @@ input UnitFactInput {
   lolifeDroppingsQuality: LolifeDroppingsQuality
   lolifeDroppingsType: LolifeDroppingsType
   lolifeNestTree: LolifeNestTree
+  observationDuration: String
   observationHours: Int
   pairCountInner: Int
   pairCountOuter: Int

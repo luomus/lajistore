@@ -47,6 +47,10 @@
       "@id": "default:MY.documentation",
       "@type": "xsd:string"
     },
+    "gatheringDescription": {
+      "@id": "default:MY.gatheringDescription",
+      "@type": "xsd:string"
+    },
     "invasiveControlOtherExpensesInEuros": {
       "@id": "default:MY.invasiveControlOtherExpensesInEuros",
       "@type": "xsd:nonNegativeInteger"

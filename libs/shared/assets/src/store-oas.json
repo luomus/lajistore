@@ -58616,6 +58616,10 @@
             "type": "string",
             "title": "Observation documentation"
           },
+          "gatheringDescription": {
+            "type": "string",
+            "title": "Gathering description"
+          },
           "invasiveControlOtherExpensesInEuros": {
             "type": "integer",
             "minimum": 0,
@@ -67467,6 +67471,10 @@
               "MY.lolifeNestTreeOther"
             ],
             "title": "Tree species"
+          },
+          "observationDuration": {
+            "type": "string",
+            "title": "Observation duration"
           },
           "observationHours": {
             "type": "integer",

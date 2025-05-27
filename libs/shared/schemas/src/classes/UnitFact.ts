@@ -38,6 +38,7 @@ export class UnitFact {
   lolifeDroppingsQuality?: MYLolifeDroppingsQualityEnum;
   lolifeDroppingsType?: MYLolifeDroppingsTypeEnum;
   lolifeNestTree?: MYLolifeNestTreeEnum;
+  observationDuration?: string;
   observationHours?: number;
   pairCountInner?: number;
   pairCountOuter?: number;

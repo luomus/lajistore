@@ -30,6 +30,7 @@ export interface GatheringFact {
   binocularsUsed?: boolean;
   censusAreaHectares?: number;
   documentation?: string;
+  gatheringDescription?: string;
   invasiveControlOtherExpensesInEuros?: number;
   invasiveControlWorkHours?: number;
   lineTransectSegmentCounted?: boolean;

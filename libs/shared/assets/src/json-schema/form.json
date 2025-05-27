@@ -2186,6 +2186,13 @@
                       "title": "Observation documentation",
                       "sortOrder": -1
                     },
+                    "gatheringDescription": {
+                      "type": "string",
+                      "range": "xsd:string",
+                      "subject": "MY.gatheringDescription",
+                      "title": "Gathering description",
+                      "sortOrder": -1
+                    },
                     "invasiveControlOtherExpensesInEuros": {
                       "type": "integer",
                       "minimum": 0,
@@ -4564,6 +4571,13 @@
                         "range": "xsd:string",
                         "subject": "MY.documentation",
                         "title": "Observation documentation",
+                        "sortOrder": -1
+                      },
+                      "gatheringDescription": {
+                        "type": "string",
+                        "range": "xsd:string",
+                        "subject": "MY.gatheringDescription",
+                        "title": "Gathering description",
                         "sortOrder": -1
                       },
                       "invasiveControlOtherExpensesInEuros": {
@@ -9846,6 +9860,13 @@
                               "range": "MY.lolifeNestTreeEnum",
                               "subject": "MY.lolifeNestTree",
                               "title": "Tree species",
+                              "sortOrder": -1
+                            },
+                            "observationDuration": {
+                              "type": "string",
+                              "range": "xsd:string",
+                              "subject": "MY.observationDuration",
+                              "title": "Observation duration",
                               "sortOrder": -1
                             },
                             "observationHours": {

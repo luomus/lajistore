@@ -265,6 +265,13 @@
       "title": "Tree species",
       "sortOrder": -1
     },
+    "observationDuration": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.observationDuration",
+      "title": "Observation duration",
+      "sortOrder": -1
+    },
     "observationHours": {
       "type": "integer",
       "exclusiveMinimum": 0,
