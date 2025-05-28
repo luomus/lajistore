@@ -1065,7 +1065,8 @@ export type MYInfraRanks =
   | "MY.infraRankUnknown"
   | "MY.infraRankNothosubspecies"
   | "MY.infraRankCultivarGroup"
-  | "MY.infraRankFsp";
+  | "MY.infraRankFsp"
+  | "MY.infraRankNothovar";
 export type MXTaxonRankEnum =
   | ""
   | "MX.superdomain"

@@ -59535,7 +59535,8 @@
               "MY.infraRankUnknown",
               "MY.infraRankNothosubspecies",
               "MY.infraRankCultivarGroup",
-              "MY.infraRankFsp"
+              "MY.infraRankFsp",
+              "MY.infraRankNothovar"
             ],
             "description": "Taxonomic level of the epithet below species level",
             "title": "Infra rank"

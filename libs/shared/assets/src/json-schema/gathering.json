@@ -6290,7 +6290,8 @@
                     "MY.infraRankUnknown",
                     "MY.infraRankNothosubspecies",
                     "MY.infraRankCultivarGroup",
-                    "MY.infraRankFsp"
+                    "MY.infraRankFsp",
+                    "MY.infraRankNothovar"
                   ],
                   "enumNames": [
                     "",
@@ -6308,7 +6309,8 @@
                     "Unknown",
                     "Nothosubspecies",
                     "Cultivar group",
-                    "f.sp."
+                    "f.sp.",
+                    "Nothovariety"
                   ],
                   "range": "MY.infraRanks",
                   "subject": "MY.infraRank",

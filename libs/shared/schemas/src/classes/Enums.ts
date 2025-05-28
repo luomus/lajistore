@@ -1139,7 +1139,8 @@ export enum MYInfraRanks {
   "infraRankUnknown" = "MY.infraRankUnknown",
   "infraRankNothosubspecies" = "MY.infraRankNothosubspecies",
   "infraRankCultivarGroup" = "MY.infraRankCultivarGroup",
-  "infraRankFsp" = "MY.infraRankFsp"
+  "infraRankFsp" = "MY.infraRankFsp",
+  "infraRankNothovar" = "MY.infraRankNothovar"
 }
 export enum MXTaxonRankEnum {
   "empty" = "",
