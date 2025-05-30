@@ -55165,11 +55165,11 @@
           },
           "emailAddress": {
             "type": "string",
-            "title": "Sähköposti"
+            "title": "Email address"
           },
           "inheritedName": {
             "type": "string",
-            "title": "Sukunimi"
+            "title": "Last name"
           },
           "preferredName": {
             "type": "string",
@@ -62329,7 +62329,7 @@
           },
           "emailAddress": {
             "type": "string",
-            "title": "Sähköposti"
+            "title": "Email address"
           },
           "facebookLoginName": {
             "type": "string",
@@ -62385,7 +62385,7 @@
           },
           "inheritedName": {
             "type": "string",
-            "title": "Sukunimi"
+            "title": "Last name"
           },
           "insectDatabaseLoginName": {
             "type": "array",

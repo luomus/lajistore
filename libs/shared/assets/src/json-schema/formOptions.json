@@ -973,14 +973,14 @@
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MA.emailAddress",
-                "title": "Sähköposti",
+                "title": "Email address",
                 "sortOrder": 3
               },
               "inheritedName": {
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MA.inheritedName",
-                "title": "Sukunimi",
+                "title": "Last name",
                 "sortOrder": 1
               },
               "preferredName": {
