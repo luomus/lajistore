@@ -333,11 +333,6 @@
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
                   },
-                  "gatheringDescription": {
-                    "type": "keyword",
-                    "ignore_above": 200,
-                    "normalizer": "useLowercase"
-                  },
                   "invasiveControlOtherExpensesInEuros": {
                     "type": "integer"
                   },
@@ -1112,11 +1107,6 @@
                     "type": "integer"
                   },
                   "documentation": {
-                    "type": "keyword",
-                    "ignore_above": 200,
-                    "normalizer": "useLowercase"
-                  },
-                  "gatheringDescription": {
                     "type": "keyword",
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
@@ -3312,11 +3302,6 @@
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
                   },
-                  "gatheringDescription": {
-                    "type": "keyword",
-                    "ignore_above": 200,
-                    "normalizer": "useLowercase"
-                  },
                   "invasiveControlOtherExpensesInEuros": {
                     "type": "integer"
                   },
@@ -4091,11 +4076,6 @@
                     "type": "integer"
                   },
                   "documentation": {
-                    "type": "keyword",
-                    "ignore_above": 200,
-                    "normalizer": "useLowercase"
-                  },
-                  "gatheringDescription": {
                     "type": "keyword",
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
@@ -5937,6 +5917,11 @@
         "normalizer": "useLowercase"
       },
       "taxonIDs": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "samplingMethodNotes": {
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"

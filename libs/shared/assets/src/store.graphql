@@ -7014,7 +7014,6 @@ type GatheringFact {
   feedingStationCountBiotopeF: Int
   feedingStationCountBiotopeG: Int
   feedingStationCountBiotopeH: Int
-  gatheringDescription: String
   iceCover: IceCover
   id: String
   invasiveControlOtherExpensesInEuros: Int
@@ -10966,6 +10965,7 @@ type NamedPlace2 {
   """Is the named place publicaly available. (Defaults to false)"""
   public: Boolean
   reserve: Reserve
+  samplingMethodNotes: String
   tags: [TagsListItem]
   taxonIDs: [String]
   type: String
@@ -27750,7 +27750,6 @@ input GatheringFactInput {
   feedingStationCountBiotopeF: Int
   feedingStationCountBiotopeG: Int
   feedingStationCountBiotopeH: Int
-  gatheringDescription: String
   iceCover: IceCover
   id: String
   invasiveControlOtherExpensesInEuros: Int
@@ -29665,6 +29664,7 @@ input NamedPlace2Input {
   """Is the named place publicaly available. (Defaults to false)"""
   public: Boolean
   reserve: ReserveInput
+  samplingMethodNotes: String
   tags: [TagsListItem]
   taxonIDs: [String]
   type: String

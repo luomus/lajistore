@@ -2186,13 +2186,6 @@
                       "title": "Observation documentation",
                       "sortOrder": -1
                     },
-                    "gatheringDescription": {
-                      "type": "string",
-                      "range": "xsd:string",
-                      "subject": "MY.gatheringDescription",
-                      "title": "Gathering description",
-                      "sortOrder": -1
-                    },
                     "invasiveControlOtherExpensesInEuros": {
                       "type": "integer",
                       "minimum": 0,
@@ -4571,13 +4564,6 @@
                         "range": "xsd:string",
                         "subject": "MY.documentation",
                         "title": "Observation documentation",
-                        "sortOrder": -1
-                      },
-                      "gatheringDescription": {
-                        "type": "string",
-                        "range": "xsd:string",
-                        "subject": "MY.gatheringDescription",
-                        "title": "Gathering description",
                         "sortOrder": -1
                       },
                       "invasiveControlOtherExpensesInEuros": {

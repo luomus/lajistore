@@ -754,13 +754,6 @@
                   "title": "Observation documentation",
                   "sortOrder": -1
                 },
-                "gatheringDescription": {
-                  "type": "string",
-                  "range": "xsd:string",
-                  "subject": "MY.gatheringDescription",
-                  "title": "Gathering description",
-                  "sortOrder": -1
-                },
                 "invasiveControlOtherExpensesInEuros": {
                   "type": "integer",
                   "minimum": 0,
@@ -3139,13 +3132,6 @@
                     "range": "xsd:string",
                     "subject": "MY.documentation",
                     "title": "Observation documentation",
-                    "sortOrder": -1
-                  },
-                  "gatheringDescription": {
-                    "type": "string",
-                    "range": "xsd:string",
-                    "subject": "MY.gatheringDescription",
-                    "title": "Gathering description",
                     "sortOrder": -1
                   },
                   "invasiveControlOtherExpensesInEuros": {
@@ -10598,7 +10584,7 @@
       "range": "ML.area",
       "subject": "MNP.birdAssociationArea",
       "title": "Bird assocation area",
-      "sortOrder": 17
+      "sortOrder": 16
     },
     "collectionID": {
       "type": "string",
@@ -11422,13 +11408,6 @@
                   "range": "xsd:string",
                   "subject": "MY.documentation",
                   "title": "Observation documentation",
-                  "sortOrder": -1
-                },
-                "gatheringDescription": {
-                  "type": "string",
-                  "range": "xsd:string",
-                  "subject": "MY.gatheringDescription",
-                  "title": "Gathering description",
                   "sortOrder": -1
                 },
                 "invasiveControlOtherExpensesInEuros": {
@@ -13809,13 +13788,6 @@
                     "range": "xsd:string",
                     "subject": "MY.documentation",
                     "title": "Observation documentation",
-                    "sortOrder": -1
-                  },
-                  "gatheringDescription": {
-                    "type": "string",
-                    "range": "xsd:string",
-                    "subject": "MY.gatheringDescription",
-                    "title": "Gathering description",
                     "sortOrder": -1
                   },
                   "invasiveControlOtherExpensesInEuros": {
@@ -21185,7 +21157,7 @@
         "gatherings"
       ],
       "range": "MY.document",
-      "sortOrder": 18
+      "sortOrder": 17
     },
     "priority": {
       "type": "string",
@@ -21302,6 +21274,13 @@
       "subject": "MNP.taxonIDs",
       "title": "Taxa",
       "sortOrder": 6
+    },
+    "samplingMethodNotes": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.samplingMethodNotes",
+      "title": "Sampling method notes",
+      "sortOrder": -1
     }
   },
   "required": [

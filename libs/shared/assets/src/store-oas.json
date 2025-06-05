@@ -58616,10 +58616,6 @@
             "type": "string",
             "title": "Observation documentation"
           },
-          "gatheringDescription": {
-            "type": "string",
-            "title": "Gathering description"
-          },
           "invasiveControlOtherExpensesInEuros": {
             "type": "integer",
             "minimum": 0,
@@ -61661,6 +61657,10 @@
             },
             "minItems": 0,
             "title": "Taxa"
+          },
+          "samplingMethodNotes": {
+            "type": "string",
+            "title": "Sampling method notes"
           }
         },
         "required": [

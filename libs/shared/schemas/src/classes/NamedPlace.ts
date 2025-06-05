@@ -58,4 +58,5 @@ export class NamedPlace {
   reserve?: Reserve;
   tags?: MNPTagEnum[];
   taxonIDs?: string[];
+  samplingMethodNotes?: string;
 }

@@ -58,4 +58,5 @@ export interface NamedPlace {
   reserve?: Reserve;
   tags?: MNPTagEnum[];
   taxonIDs?: string[];
+  samplingMethodNotes?: string;
 }
