@@ -155,6 +155,8 @@ import { TaxonInteraction } from './TaxonInteraction'
 export type { TaxonInteraction }
 import { TaxonSet } from './TaxonSet'
 export type { TaxonSet }
+import { Term } from './Term'
+export type { Term }
 import { Trait } from './Trait'
 export type { Trait }
 import { TraitEnumValue } from './TraitEnumValue'
@@ -264,6 +266,7 @@ export type StoreObject = BibliographicResource
    | TaxonGroupIucnEditors
    | TaxonInteraction
    | TaxonSet
+   | Term
    | Trait
    | TraitEnumValue
    | TraitGroup
@@ -682,6 +685,11 @@ export function isTaxonInteraction(data: unknown): data is TaxonInteraction {
 export function isTaxonSet(data: unknown): data is TaxonSet {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MX.taxonSet'
+  );
+}
+export function isTerm(data: unknown): data is Term {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'HBDF.term'
   );
 }
 export function isTrait(data: unknown): data is Trait {
