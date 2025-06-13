@@ -47,11 +47,6 @@
         "type": "keyword",
         "ignore_above": 200
       },
-      "ad": {
-        "type": "keyword",
-        "ignore_above": 200,
-        "normalizer": "useLowercase"
-      },
       "additionalIDs": {
         "type": "keyword",
         "ignore_above": 200,

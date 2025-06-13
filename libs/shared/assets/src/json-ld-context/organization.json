@@ -47,10 +47,6 @@
       "@id": "default:MOS.abbreviationExplanation",
       "@type": "@id"
     },
-    "ad": {
-      "@id": "default:MOS.ad",
-      "@type": "xsd:string"
-    },
     "additionalIDs": {
       "@id": "default:MOS.additionalIDs",
       "@type": "xsd:string"

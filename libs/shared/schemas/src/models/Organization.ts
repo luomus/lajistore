@@ -27,10 +27,6 @@ export interface Organization {
    */
   abbreviationExplanation?: MOSABBREVIATIONExplanations;
   /**
-   * Filled in by ICT team
-   */
-  ad?: string;
-  /**
    * Other identifiers this organization has
    */
   additionalIDs?: string[];
