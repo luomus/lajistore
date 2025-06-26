@@ -62,6 +62,13 @@
       "title": "Reference to external property",
       "sortOrder": 1
     },
+    "name": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HBDF.name",
+      "title": "Technical label/name",
+      "sortOrder": 1
+    },
     "notes": {
       "type": "string",
       "range": "xsd:string",

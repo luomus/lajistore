@@ -47,6 +47,10 @@
       "@id": "default:HBDF.externalProperty",
       "@type": "@id"
     },
+    "name": {
+      "@id": "default:HBDF.name",
+      "@type": "xsd:string"
+    },
     "notes": {
       "@id": "default:HBDF.notes",
       "@type": "xsd:string"

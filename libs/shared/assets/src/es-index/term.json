@@ -48,6 +48,11 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "name": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "notes": {
         "type": "keyword",
         "ignore_above": 200,

@@ -12,6 +12,7 @@ export class Term {
   definition: string;
   examples?: string[];
   externalProperty?: string;
+  name?: string;
   notes?: string;
   sortOrder?: number;
 }
