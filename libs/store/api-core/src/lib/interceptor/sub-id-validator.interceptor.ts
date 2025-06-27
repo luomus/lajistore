@@ -6,8 +6,7 @@ import { PROPERTY_ID } from '@luomus/store/interface';
 import { Injectable, ExecutionContext, UnprocessableEntityException, CallHandler, NestInterceptor } from '@nestjs/common';
 import { KeyOfUnion, StoreObject } from '@luomus/shared/models';
 import { JsonSchemaService } from '@luomus/store/shared';
-import { from, map, of, switchMap } from 'rxjs';
-import { Observable } from '@apollo/client/core';
+import { from, switchMap } from 'rxjs';
 
 const ignore = [
   "prepopulatedDocument",
