@@ -110,7 +110,7 @@ spec:
         annotations:
           pv.beta.kubernetes.io/gid: "1000720000"
       spec:
-        storageClassName: pomppa25-new
+        storageClassName: data-2
         accessModes: [ ReadWriteOnce ]
         resources:
           requests:

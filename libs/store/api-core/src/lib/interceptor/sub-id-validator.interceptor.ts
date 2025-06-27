@@ -9,6 +9,11 @@ import { JsonSchemaService } from '@luomus/store/shared';
 import { from, map, of, switchMap } from 'rxjs';
 import { Observable } from '@apollo/client/core';
 
+const ignore = [
+  "prepopulatedDocument",
+  "prepopulatedGathering",
+  "acceptedDocument",
+]
 @Injectable()
 export class SubIdValidator implements NestInterceptor {
   constructor(
@@ -63,8 +68,8 @@ export class SubIdValidator implements NestInterceptor {
   }
 
   private async checkArray(type: string, data: StoreObject[]) {
-    for (const resouce of data) {
-      await this.checkObject(type, resouce);
+    for (const resource of data) {
+      await this.checkObject(type, resource);
     }
   }
 
@@ -73,6 +78,7 @@ private async checkObject(
     data: StoreObject,
     subIds: string[] = [],
   ) {
+
     const embedded = await this.jsonSchema.getEmbedded(type);
     const embeddedProperties = <Array<KeyOfUnion<StoreObject>>>Object.keys(embedded);
 
@@ -85,7 +91,7 @@ private async checkObject(
     if (id) subIds.push(id);
 
     for (const property of embeddedProperties) {
-      if (!data[property]) {
+      if (!data[property] || ignore.includes(property)) {
         continue;
       }
       if (Array.isArray(data[property])) {

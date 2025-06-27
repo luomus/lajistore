@@ -134,7 +134,7 @@ spec:
         resources:
           requests:
             storage: 1Gi
-        storageClassName: pomppa25-new
+        storageClassName: data-2
         volumeMode: Filesystem
       status:
         phase: Pending
