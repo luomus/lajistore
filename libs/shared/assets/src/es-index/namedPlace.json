@@ -328,6 +328,11 @@
                   "censusAreaHectares": {
                     "type": "integer"
                   },
+                  "documentation": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
                   "invasiveControlOtherExpensesInEuros": {
                     "type": "integer"
                   },
@@ -348,6 +353,21 @@
                     "ignore_above": 200
                   },
                   "lolifeSiteClassificationComments": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "marineArea": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "marineMammalExpertise": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "observationTools": {
                     "type": "keyword",
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
@@ -1086,6 +1106,11 @@
                   "censusAreaHectares": {
                     "type": "integer"
                   },
+                  "documentation": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
                   "invasiveControlOtherExpensesInEuros": {
                     "type": "integer"
                   },
@@ -1106,6 +1131,21 @@
                     "ignore_above": 200
                   },
                   "lolifeSiteClassificationComments": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "marineArea": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "marineMammalExpertise": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "observationTools": {
                     "type": "keyword",
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
@@ -2211,6 +2251,13 @@
                         "ignore_above": 200,
                         "normalizer": "useLowercase"
                       },
+                      "detOnSite": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "distanceMeters": {
+                        "type": "integer"
+                      },
                       "glowWormMicrohabitat": {
                         "type": "keyword",
                         "ignore_above": 200
@@ -2251,6 +2298,14 @@
                         "type": "keyword",
                         "ignore_above": 200
                       },
+                      "observationDuration": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      },
+                      "observationHours": {
+                        "type": "integer"
+                      },
                       "pairCountInner": {
                         "type": "integer"
                       },
@@ -2264,6 +2319,16 @@
                       },
                       "runningWaterInVicinity": {
                         "type": "boolean"
+                      },
+                      "taxonConfidenceDescription": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      },
+                      "traits": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
                       },
                       "waterbirdFemale": {
                         "type": "keyword",
@@ -3232,6 +3297,11 @@
                   "censusAreaHectares": {
                     "type": "integer"
                   },
+                  "documentation": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
                   "invasiveControlOtherExpensesInEuros": {
                     "type": "integer"
                   },
@@ -3252,6 +3322,21 @@
                     "ignore_above": 200
                   },
                   "lolifeSiteClassificationComments": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "marineArea": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "marineMammalExpertise": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "observationTools": {
                     "type": "keyword",
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
@@ -3990,6 +4075,11 @@
                   "censusAreaHectares": {
                     "type": "integer"
                   },
+                  "documentation": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
                   "invasiveControlOtherExpensesInEuros": {
                     "type": "integer"
                   },
@@ -4010,6 +4100,21 @@
                     "ignore_above": 200
                   },
                   "lolifeSiteClassificationComments": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "marineArea": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "marineMammalExpertise": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
+                  "observationTools": {
                     "type": "keyword",
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
@@ -5115,6 +5220,13 @@
                         "ignore_above": 200,
                         "normalizer": "useLowercase"
                       },
+                      "detOnSite": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "distanceMeters": {
+                        "type": "integer"
+                      },
                       "glowWormMicrohabitat": {
                         "type": "keyword",
                         "ignore_above": 200
@@ -5155,6 +5267,14 @@
                         "type": "keyword",
                         "ignore_above": 200
                       },
+                      "observationDuration": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      },
+                      "observationHours": {
+                        "type": "integer"
+                      },
                       "pairCountInner": {
                         "type": "integer"
                       },
@@ -5168,6 +5288,16 @@
                       },
                       "runningWaterInVicinity": {
                         "type": "boolean"
+                      },
+                      "taxonConfidenceDescription": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      },
+                      "traits": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
                       },
                       "waterbirdFemale": {
                         "type": "keyword",
@@ -5787,6 +5917,11 @@
         "normalizer": "useLowercase"
       },
       "taxonIDs": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "samplingMethodNotes": {
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"

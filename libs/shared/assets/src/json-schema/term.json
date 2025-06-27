@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "subject": "HBDF.term",
+  "additionalProperties": false,
+  "title": "Terms of Occurrence Downloads",
+  "description": "",
+  "properties": {
+    "@context": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "@context",
+      "title": "Context for the Terms of Occurrence Downloads"
+    },
+    "id": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "id",
+      "title": "Id for the Terms of Occurrence Downloads"
+    },
+    "@type": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "@type",
+      "title": "Type for the Terms of Occurrence Downloads"
+    },
+    "apiField": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "HBDF.apiField",
+      "title": "API Field",
+      "sortOrder": 7
+    },
+    "definition": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HBDF.definition",
+      "title": "Definition",
+      "sortOrder": 3
+    },
+    "examples": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "HBDF.examples",
+      "title": "Examples",
+      "sortOrder": 5
+    },
+    "externalProperty": {
+      "type": "string",
+      "range": "rdf:Property",
+      "subject": "HBDF.externalProperty",
+      "title": "Reference to external property",
+      "sortOrder": 1
+    },
+    "name": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HBDF.name",
+      "title": "Technical label/name",
+      "sortOrder": 1
+    },
+    "notes": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HBDF.notes",
+      "title": "Notes",
+      "sortOrder": 4
+    },
+    "sortOrder": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "sortOrder",
+      "title": "sortOrder",
+      "sortOrder": -1
+    }
+  },
+  "required": [
+    "definition"
+  ]
+}

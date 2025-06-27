@@ -43,6 +43,10 @@
       "@id": "default:MY.censusAreaHectares",
       "@type": "xsd:nonNegativeInteger"
     },
+    "documentation": {
+      "@id": "default:MY.documentation",
+      "@type": "xsd:string"
+    },
     "invasiveControlOtherExpensesInEuros": {
       "@id": "default:MY.invasiveControlOtherExpensesInEuros",
       "@type": "xsd:nonNegativeInteger"
@@ -69,6 +73,18 @@
     },
     "lolifeSiteClassificationComments": {
       "@id": "default:MY.lolifeSiteClassificationComments",
+      "@type": "xsd:string"
+    },
+    "marineArea": {
+      "@id": "default:MY.marineArea",
+      "@type": "xsd:string"
+    },
+    "marineMammalExpertise": {
+      "@id": "default:MY.marineMammalExpertise",
+      "@type": "xsd:string"
+    },
+    "observationTools": {
+      "@id": "default:MY.observationTools",
       "@type": "xsd:string"
     },
     "observedAreaHectares": {

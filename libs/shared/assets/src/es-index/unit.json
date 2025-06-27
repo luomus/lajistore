@@ -557,6 +557,13 @@
             "ignore_above": 200,
             "normalizer": "useLowercase"
           },
+          "detOnSite": {
+            "type": "keyword",
+            "ignore_above": 200
+          },
+          "distanceMeters": {
+            "type": "integer"
+          },
           "glowWormMicrohabitat": {
             "type": "keyword",
             "ignore_above": 200
@@ -597,6 +604,14 @@
             "type": "keyword",
             "ignore_above": 200
           },
+          "observationDuration": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "observationHours": {
+            "type": "integer"
+          },
           "pairCountInner": {
             "type": "integer"
           },
@@ -610,6 +625,16 @@
           },
           "runningWaterInVicinity": {
             "type": "boolean"
+          },
+          "taxonConfidenceDescription": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "traits": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "waterbirdFemale": {
             "type": "keyword",
