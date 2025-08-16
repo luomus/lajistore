@@ -59,6 +59,10 @@
       "@id": "default:HBF.createdFileSize",
       "@type": "xsd:string"
     },
+    "createdFileVersion": {
+      "@id": "default:HBF.createdFileVersion",
+      "@type": "xsd:string"
+    },
     "dataUsePurpose": {
       "@id": "default:HBF.dataUsePurpose",
       "@type": "xsd:string"

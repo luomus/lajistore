@@ -79,6 +79,13 @@
       "title": "Size in MB",
       "sortOrder": -1
     },
+    "createdFileVersion": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "HBF.createdFileVersion",
+      "title": "Version",
+      "sortOrder": -1
+    },
     "dataUsePurpose": {
       "type": "string",
       "range": "xsd:string",

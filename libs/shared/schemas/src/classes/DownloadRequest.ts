@@ -15,6 +15,7 @@ export class DownloadRequest {
   created?: string;
   createdFile?: string;
   createdFileSize?: string;
+  createdFileVersion?: string;
   dataUsePurpose?: string;
   downloadFormat?: string;
   downloadInclude?: string[];

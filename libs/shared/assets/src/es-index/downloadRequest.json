@@ -57,6 +57,11 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "createdFileVersion": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "dataUsePurpose": {
         "type": "keyword",
         "ignore_above": 200,
