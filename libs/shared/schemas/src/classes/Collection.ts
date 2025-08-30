@@ -90,6 +90,7 @@ export class Collection {
     fi?: string;
     sv?: string;
   };
+  dataDownloadURL?: string[];
   /**
    * Where is the digitized data stored and backed up? Be exact, so that others can find the data. [not shown in public]
    */

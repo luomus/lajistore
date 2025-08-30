@@ -54,7 +54,7 @@
       "subject": "MX.secureLevel",
       "description": "Secure level (salaus-/karkeistustaso) for the data",
       "title": "Secure level",
-      "sortOrder": 34
+      "sortOrder": 33
     },
     "abbreviation": {
       "type": "string",
@@ -118,7 +118,7 @@
       "subject": "MY.citation",
       "description": "Example how to cite this collection in a scientific article, if using organization, name and abbreviation is not enough.",
       "title": "Citation recommendation",
-      "sortOrder": 24
+      "sortOrder": 23
     },
     "collectionCode": {
       "type": "string",
@@ -126,7 +126,7 @@
       "subject": "MY.collectionCode",
       "description": "Collection code for natural history specimen collection, such as H-BR",
       "title": "Specimen collection code",
-      "sortOrder": 44
+      "sortOrder": 43
     },
     "collectionLocation": {
       "type": "object",
@@ -146,7 +146,7 @@
       "subject": "MY.collectionLocation",
       "description": "Where is the collection physically located? E.g. building name and room number. [not shown in public]",
       "title": "Location of collection",
-      "sortOrder": 21
+      "sortOrder": 20
     },
     "collectionName": {
       "type": "object",
@@ -193,7 +193,7 @@
       "subject": "MY.collectionSize",
       "description": "How many specimens, records or such does the collection contain? Fill in approximate number, describe more in notes if necessary.",
       "title": "Size (approx.)",
-      "sortOrder": 19
+      "sortOrder": 18
     },
     "collectionType": {
       "type": "string",
@@ -259,7 +259,7 @@
       "subject": "MY.contactEmail",
       "description": "Personal or general (e.g. group of people in the organisation) email address to reach the person(s) responsible.",
       "title": "Contact email",
-      "sortOrder": 31
+      "sortOrder": 30
     },
     "coverageBasis": {
       "type": "object",
@@ -281,6 +281,18 @@
       "title": "Coverage basis",
       "sortOrder": 10
     },
+    "dataDownloadURL": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "MY.dataDownloadURL",
+      "title": "Data download URL",
+      "sortOrder": 61
+    },
     "dataLocation": {
       "type": "object",
       "additionalProperties": false,
@@ -299,7 +311,7 @@
       "subject": "MY.dataLocation",
       "description": "Where is the digitized data stored and backed up? Be exact, so that others can find the data. [not shown in public]",
       "title": "Location of data and backups",
-      "sortOrder": 23
+      "sortOrder": 22
     },
     "dataNotes": {
       "type": "string",
@@ -307,7 +319,7 @@
       "subject": "MY.dataNotes",
       "description": "Diary-like notes about the data, with date/time. For example \"2020-08-19: Changed country names Fönland to Finland\", or \"Specimens collected during 2019 are missing coordinates due to malfunctioning GPS\"",
       "title": "Notes about the data",
-      "sortOrder": 43
+      "sortOrder": 42
     },
     "dataQuality": {
       "type": "string",
@@ -333,7 +345,7 @@
       "subject": "MY.dataQuality",
       "description": "Quality estimation for the data in this collection",
       "title": "Data quality",
-      "sortOrder": 28
+      "sortOrder": 27
     },
     "dataQualityDescription": {
       "type": "object",
@@ -381,7 +393,7 @@
       "subject": "MY.dataUseTerms",
       "description": "Description of possible special terms for data use (for example not for commercial purposes etc.)",
       "title": "Special terms for data use",
-      "sortOrder": 33
+      "sortOrder": 35
     },
     "description": {
       "type": "object",
@@ -410,7 +422,7 @@
       "subject": "MY.digitizedSize",
       "description": "How many percent of the collection is in digital form, e.g. in a database or Excel file? Fill in approximate number, describe more in notes if necessary.",
       "title": "% digitized (approx.)",
-      "sortOrder": 20
+      "sortOrder": 19
     },
     "doi": {
       "type": "string",
@@ -438,7 +450,7 @@
       "subject": "MY.editNotes",
       "description": "Reason for this edit or notes about it.",
       "title": "Notes about this edit",
-      "sortOrder": 31
+      "sortOrder": 29
     },
     "gbifDoi": {
       "type": "string",
@@ -446,7 +458,7 @@
       "subject": "MY.gbifDoi",
       "description": "Admin field. DOI received from GBIF after the collection has been published.",
       "title": "Collection DOI from GBIF",
-      "sortOrder": 41
+      "sortOrder": 40
     },
     "geographicCoverage": {
       "type": "object",
@@ -474,7 +486,7 @@
       "subject": "MY.institutionCode",
       "description": "Institution code for natural history specimen collection holding institution, such as H, MHZ or TUR",
       "title": "Institution code",
-      "sortOrder": 45
+      "sortOrder": 44
     },
     "intellectualDescription": {
       "type": "object",
@@ -538,7 +550,7 @@
       "subject": "MY.isPartOf",
       "description": "Which parent or larger collection this is part of.",
       "title": "Is part of",
-      "sortOrder": 34
+      "sortOrder": 32
     },
     "language": {
       "type": "string",
@@ -546,7 +558,7 @@
       "subject": "MY.language",
       "description": "Language the data is (mainly) written in, if applicable.",
       "title": "Language",
-      "sortOrder": 28
+      "sortOrder": 26
     },
     "longName": {
       "type": "object",
@@ -594,7 +606,7 @@
       "subject": "MY.metadataStatus",
       "description": "Indication of how comprehensive the information on this form is.",
       "title": "Status of this metadata",
-      "sortOrder": 30
+      "sortOrder": 28
     },
     "methods": {
       "type": "object",
@@ -642,7 +654,7 @@
       "subject": "MY.onlineUrl",
       "description": "Web address (URL) with more info about the collection.",
       "title": "URL",
-      "sortOrder": 26
+      "sortOrder": 25
     },
     "personResponsible": {
       "type": "string",
@@ -650,7 +662,7 @@
       "subject": "MY.personResponsible",
       "description": "Person(s) responsible for the collection (Lastname, Firstname; Lastname, Firstname).",
       "title": "Person responsible",
-      "sortOrder": 22
+      "sortOrder": 21
     },
     "publicAccess": {
       "type": "boolean",
@@ -658,7 +670,7 @@
       "subject": "MY.publicAccess",
       "description": "Used for botanic garden collections. Is the collection/garden area accessible to public or not.",
       "title": "Accessibility to public",
-      "sortOrder": 42
+      "sortOrder": 41
     },
     "publicationDescription": {
       "type": "object",
@@ -727,7 +739,7 @@
       "range": "xsd:string",
       "subject": "MY.shareToFEO",
       "title": "Share to FEO",
-      "sortOrder": 40
+      "sortOrder": 45
     },
     "shareToGbif": {
       "type": "string",
@@ -755,7 +767,7 @@
       "subject": "MY.taxonomicCoverage",
       "description": "Lowest common taxon in the collection (for example, scientific name of an order).",
       "title": "Taxonomic coverage",
-      "sortOrder": 7
+      "sortOrder": 8
     },
     "temporalCoverage": {
       "type": "object",
@@ -775,7 +787,7 @@
       "subject": "MY.temporalCoverage",
       "description": "When were the specimens/data collected?",
       "title": "Temporal coverage",
-      "sortOrder": 8
+      "sortOrder": 9
     },
     "typesSize": {
       "type": "string",
@@ -783,7 +795,7 @@
       "subject": "MY.typesSize",
       "description": "How many TYPE specimens does the collection contain?  Fill in approximate number, describe more in notes if necessary.",
       "title": "Amount of type specimens (approx.)",
-      "sortOrder": 25
+      "sortOrder": 24
     },
     "creator": {
       "type": "string",
@@ -841,7 +853,7 @@
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
       "title": "Publicity restrictions",
-      "sortOrder": 33
+      "sortOrder": 31
     }
   },
   "required": [

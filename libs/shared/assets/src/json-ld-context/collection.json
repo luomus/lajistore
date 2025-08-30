@@ -103,6 +103,10 @@
       "@id": "default:MY.coverageBasis",
       "@container": "@language"
     },
+    "dataDownloadURL": {
+      "@id": "default:MY.dataDownloadURL",
+      "@type": "xsd:string"
+    },
     "dataLocation": {
       "@id": "default:MY.dataLocation",
       "@container": "@language"
