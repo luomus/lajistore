@@ -1405,6 +1405,7 @@ export type MFPreparationTypeEnum =
   | "MF.preparationTypeDNAExtract"
   | "MF.preparationTypeEgg"
   | "MF.preparationTypeNest"
+  | "MF.preparationTypeFrozenSpecimen"
   | "MF.preparationTypeOther";
 export type MFQualityEnum =
   | ""

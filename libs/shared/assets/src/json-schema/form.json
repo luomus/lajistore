@@ -11158,6 +11158,7 @@
                                   "MF.preparationTypeDNAExtract",
                                   "MF.preparationTypeEgg",
                                   "MF.preparationTypeNest",
+                                  "MF.preparationTypeFrozenSpecimen",
                                   "MF.preparationTypeOther"
                                 ],
                                 "enumNames": [
@@ -11171,6 +11172,7 @@
                                   "DNA extract",
                                   "Egg",
                                   "Nest",
+                                  "Frozen specimen(s)",
                                   "Other"
                                 ],
                                 "range": "MF.preparationTypeEnum",

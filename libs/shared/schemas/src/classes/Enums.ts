@@ -1508,6 +1508,7 @@ export enum MFPreparationTypeEnum {
   "preparationTypeDNAExtract" = "MF.preparationTypeDNAExtract",
   "preparationTypeEgg" = "MF.preparationTypeEgg",
   "preparationTypeNest" = "MF.preparationTypeNest",
+  "preparationTypeFrozenSpecimen" = "MF.preparationTypeFrozenSpecimen",
   "preparationTypeOther" = "MF.preparationTypeOther"
 }
 export enum MFQualityEnum {
