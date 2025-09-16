@@ -30,7 +30,7 @@
       "subject": "MY.age",
       "description": "Estimated or known age in calendar years, years, days or other relevant unit.",
       "title": "Age",
-      "sortOrder": 7
+      "sortOrder": 8
     },
     "individualCount": {
       "type": "integer",

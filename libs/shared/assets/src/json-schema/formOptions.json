@@ -832,7 +832,7 @@
           "subject": "MY.DNASampleLocation",
           "description": "Leave empty if no sample taken, or if the sample is recorded separately",
           "title": "DNA sample location",
-          "sortOrder": 30
+          "sortOrder": 28
         },
         "IPEN": {
           "type": "string",
@@ -897,7 +897,7 @@
           "subject": "MY.additionalIDs",
           "description": "Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)",
           "title": "Additional ID's",
-          "sortOrder": 22
+          "sortOrder": 20
         },
         "bold": {
           "type": "array",
@@ -3135,7 +3135,7 @@
           "subject": "MY.preservation",
           "description": "Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.",
           "title": "Preservation",
-          "sortOrder": 23
+          "sortOrder": 21
         },
         "primaryDataLocation": {
           "type": "string",
@@ -3434,7 +3434,7 @@
           "subject": "MZ.publicityRestrictions",
           "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
           "title": "Publicity restrictions",
-          "sortOrder": 31
+          "sortOrder": 30
         },
         "scheduledForDeletion": {
           "type": "boolean",
@@ -5535,7 +5535,7 @@
                 "subject": "MY.habitatDescription",
                 "description": "Informal description of the habitat.",
                 "title": "Habitat description",
-                "sortOrder": 5
+                "sortOrder": -1
               },
               "hasUnit": {
                 "type": "array",
@@ -5679,7 +5679,7 @@
                 "subject": "MY.isPartOf",
                 "description": "Which parent or larger collection this is part of.",
                 "title": "Is part of",
-                "sortOrder": 32
+                "sortOrder": 31
               },
               "keywords": {
                 "type": "array",
@@ -6052,7 +6052,7 @@
                 "subject": "MY.samplingMethod",
                 "description": "Main method for (usually intentional) sampling",
                 "title": "Sampling method",
-                "sortOrder": 31
+                "sortOrder": 29
               },
               "samplingMethodNotes": {
                 "type": "string",
@@ -6272,7 +6272,7 @@
                 "subject": "MZ.publicityRestrictions",
                 "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                 "title": "Publicity restrictions",
-                "sortOrder": 31
+                "sortOrder": 30
               },
               "units": {
                 "type": "array",
@@ -6308,7 +6308,7 @@
                       "subject": "MY.DBH",
                       "description": "Diameter at breast height, in centimeters",
                       "title": "DBH in centimeters",
-                      "sortOrder": 11
+                      "sortOrder": 10
                     },
                     "DNASampleLocation": {
                       "type": "string",
@@ -6316,7 +6316,7 @@
                       "subject": "MY.DNASampleLocation",
                       "description": "Leave empty if no sample taken, or if the sample is recorded separately",
                       "title": "DNA sample location",
-                      "sortOrder": 30
+                      "sortOrder": 28
                     },
                     "abundanceString": {
                       "type": "string",
@@ -6393,7 +6393,7 @@
                       "subject": "MY.additionalIDs",
                       "description": "Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)",
                       "title": "Additional ID's",
-                      "sortOrder": 22
+                      "sortOrder": 20
                     },
                     "adultIndividualCount": {
                       "type": "integer",
@@ -6408,7 +6408,7 @@
                       "subject": "MY.age",
                       "description": "Estimated or known age in calendar years, years, days or other relevant unit.",
                       "title": "Age",
-                      "sortOrder": 7
+                      "sortOrder": 8
                     },
                     "ageNotes": {
                       "type": "string",
@@ -6416,7 +6416,7 @@
                       "subject": "MY.ageNotes",
                       "description": "E.g. how age was determined, by whom and when.",
                       "title": "Age notes",
-                      "sortOrder": 21
+                      "sortOrder": 19
                     },
                     "alive": {
                       "type": "boolean",
@@ -6667,7 +6667,7 @@
                       "subject": "MY.chemistry",
                       "description": "Results of chemical reaction tests etc.",
                       "title": "Chemical properties",
-                      "sortOrder": 14
+                      "sortOrder": 13
                     },
                     "count": {
                       "type": "string",
@@ -6675,7 +6675,7 @@
                       "subject": "MY.count",
                       "description": "Numeric or other description on the amount of individuals (or sprouts, fruiting bodies or such) in the specimen. Sexes and juveniles can be specified like so: 1m2f3j (=1 male, 2 females, 3 juveniles)",
                       "title": "Count",
-                      "sortOrder": 10
+                      "sortOrder": 9
                     },
                     "decayStage": {
                       "type": "string",
@@ -6683,7 +6683,7 @@
                       "subject": "MY.decayStage",
                       "description": "Estimation of decay stage (lahoaste in Finnish) on the scale of 1 to 5 and/or description",
                       "title": "Decay stage",
-                      "sortOrder": 12
+                      "sortOrder": 11
                     },
                     "distance": {
                       "type": "string",
@@ -6746,7 +6746,7 @@
                       "subject": "MY.earliestEpochOrLowestSeries",
                       "description": "For palaeontological specimens, earliest possible geochronologic epoch or lowest chronostratigraphic series attributable to the stratigraphic horizon from which the specimen was collected",
                       "title": "Earliest epoch or lowest series",
-                      "sortOrder": 33
+                      "sortOrder": 35
                     },
                     "femaleIndividualCount": {
                       "type": "integer",
@@ -6802,7 +6802,7 @@
                       "subject": "MY.genotype",
                       "description": "Genotype of the microbial strain",
                       "title": "Genotype",
-                      "sortOrder": 25
+                      "sortOrder": 23
                     },
                     "gonadInMillimeters": {
                       "type": "array",
@@ -6822,7 +6822,7 @@
                       "subject": "MY.growthMediumName",
                       "description": "Microbial culture growth medium name, usually from a standard",
                       "title": "Growth medium name",
-                      "sortOrder": 28
+                      "sortOrder": 26
                     },
                     "growthOtherConditions": {
                       "type": "string",
@@ -6830,7 +6830,7 @@
                       "subject": "MY.growthOtherConditions",
                       "description": "Other growth conditions for the microbial culture, light etc.",
                       "title": "Other conditions for growth",
-                      "sortOrder": 31
+                      "sortOrder": 32
                     },
                     "growthTemperature": {
                       "type": "string",
@@ -6838,7 +6838,7 @@
                       "subject": "MY.growthTemperature",
                       "description": "Microbial culture growth temperature",
                       "title": "Growth temperature",
-                      "sortOrder": 27
+                      "sortOrder": 25
                     },
                     "habitat": {
                       "type": "array",
@@ -7296,7 +7296,7 @@
                       "subject": "MY.infrasubspecificSubdivision",
                       "description": "Pathovars, serovars and other infrasubspecific subdivisions of microbes.",
                       "title": "Infrasubspecific subdivision",
-                      "sortOrder": 26
+                      "sortOrder": 24
                     },
                     "isPartOf": {
                       "type": "string",
@@ -7304,7 +7304,7 @@
                       "subject": "MY.isPartOf",
                       "description": "Which parent or larger collection this is part of.",
                       "title": "Is part of",
-                      "sortOrder": 32
+                      "sortOrder": 31
                     },
                     "juvenileIndividualCount": {
                       "type": "integer",
@@ -7371,7 +7371,7 @@
                       "subject": "MY.latestEpochOrHighestSeries",
                       "description": "For palaeontological specimens, latest possible geochronologic epoch or highest chronostratigraphic series attributable to the stratigraphic horizon from which the specimen was collected.",
                       "title": "Latest epoch or highest series",
-                      "sortOrder": 35
+                      "sortOrder": 36
                     },
                     "lengthInMillimeters": {
                       "type": "array",
@@ -7462,7 +7462,7 @@
                       "subject": "MY.macroscopy",
                       "description": "Macroscopic features and measurements, if not recorded separately into measurement fields.",
                       "title": "Macroscopic characters",
-                      "sortOrder": 15
+                      "sortOrder": 14
                     },
                     "maleIndividualCount": {
                       "type": "integer",
@@ -7629,7 +7629,7 @@
                           "subject": "MY.isPartOf",
                           "description": "Which parent or larger collection this is part of.",
                           "title": "Is part of",
-                          "sortOrder": 32
+                          "sortOrder": 31
                         },
                         "tailCentimeters": {
                           "type": "array",
@@ -7765,7 +7765,7 @@
                         }
                       },
                       "range": "MY.measurementClass",
-                      "sortOrder": 24
+                      "sortOrder": 27
                     },
                     "microbiologicalRiskGroup": {
                       "type": "string",
@@ -7787,7 +7787,7 @@
                       "subject": "MY.microbiologicalRiskGroup",
                       "description": "According to German TRBA August 2015, which is more comprehensive than the EU or Finnish list for bacterial risk groups",
                       "title": "Risk group",
-                      "sortOrder": 36
+                      "sortOrder": 37
                     },
                     "microscopy": {
                       "type": "string",
@@ -7795,7 +7795,7 @@
                       "subject": "MY.microscopy",
                       "description": "Microscopic features and measurements, if not recorded separately into measurement fields.",
                       "title": "Microscopic characters",
-                      "sortOrder": 16
+                      "sortOrder": 15
                     },
                     "movingDirection": {
                       "type": "string",
@@ -8058,7 +8058,7 @@
                       "subject": "MY.plantStatusCode",
                       "description": "Status code for the plant (wild, alien etc.)",
                       "title": "Plant status code",
-                      "sortOrder": 34
+                      "sortOrder": 33
                     },
                     "populationAbundance": {
                       "type": "string",
@@ -8066,7 +8066,7 @@
                       "subject": "MY.populationAbundance",
                       "description": "Abundance of the taxon in the field",
                       "title": "Abundance in the field",
-                      "sortOrder": 13
+                      "sortOrder": 12
                     },
                     "preparations": {
                       "type": "string",
@@ -8074,7 +8074,7 @@
                       "subject": "MY.preparations",
                       "description": "Preparations/preparates made from the specimen, if not recorded as separate Preparations/samples in the designated section",
                       "title": "Preparations",
-                      "sortOrder": 17
+                      "sortOrder": 16
                     },
                     "preservation": {
                       "type": "array",
@@ -8167,7 +8167,7 @@
                       "subject": "MY.preservation",
                       "description": "Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.",
                       "title": "Preservation",
-                      "sortOrder": 23
+                      "sortOrder": 21
                     },
                     "primarySpecimen": {
                       "type": "boolean",
@@ -8205,7 +8205,7 @@
                       "subject": "MY.provenance",
                       "description": "Origin or source of the garden accession",
                       "title": "Provenance",
-                      "sortOrder": 32
+                      "sortOrder": 34
                     },
                     "recordBasis": {
                       "type": "string",
@@ -8360,7 +8360,7 @@
                       "subject": "MY.ring",
                       "description": "Bird or bat ring number, code, colour code or such",
                       "title": "Ring",
-                      "sortOrder": 19
+                      "sortOrder": 17
                     },
                     "samplingMethod": {
                       "type": "string",
@@ -8480,7 +8480,7 @@
                       "subject": "MY.samplingMethod",
                       "description": "Main method for (usually intentional) sampling",
                       "title": "Sampling method",
-                      "sortOrder": 31
+                      "sortOrder": 29
                     },
                     "samplingMethodNotes": {
                       "type": "string",
@@ -8585,7 +8585,7 @@
                       "subject": "MY.sexNotes",
                       "description": "E.g. how sex was determined, by whom and when.",
                       "title": "Sex notes",
-                      "sortOrder": 20
+                      "sortOrder": 18
                     },
                     "shortHandText": {
                       "type": "string",
@@ -9416,7 +9416,7 @@
                           "subject": "MY.habitatDescription",
                           "description": "Informal description of the habitat.",
                           "title": "Habitat description",
-                          "sortOrder": 5
+                          "sortOrder": -1
                         },
                         "habitatIUCN": {
                           "type": "string",
@@ -9534,7 +9534,7 @@
                       "subject": "MZ.publicityRestrictions",
                       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                       "title": "Publicity restrictions",
-                      "sortOrder": 31
+                      "sortOrder": 30
                     },
                     "identifications": {
                       "type": "array",
@@ -9756,7 +9756,7 @@
                             "subject": "MY.infrasubspecificSubdivision",
                             "description": "Pathovars, serovars and other infrasubspecific subdivisions of microbes.",
                             "title": "Infrasubspecific subdivision",
-                            "sortOrder": 26
+                            "sortOrder": 24
                           },
                           "isPartOf": {
                             "type": "string",
@@ -9764,7 +9764,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 32
+                            "sortOrder": 31
                           },
                           "isTaxonGroup": {
                             "type": "boolean",
@@ -9983,7 +9983,7 @@
                             "subject": "MZ.publicityRestrictions",
                             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                             "title": "Publicity restrictions",
-                            "sortOrder": 31
+                            "sortOrder": 30
                           },
                           "sortOrder": {
                             "type": "integer",
@@ -10034,7 +10034,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 32
+                            "sortOrder": 31
                           },
                           "typeAuthor": {
                             "type": "string",
@@ -10220,7 +10220,7 @@
                             "subject": "MZ.publicityRestrictions",
                             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                             "title": "Publicity restrictions",
-                            "sortOrder": 31
+                            "sortOrder": 30
                           }
                         }
                       },
@@ -10630,7 +10630,7 @@
                                   "subject": "MY.isPartOf",
                                   "description": "Which parent or larger collection this is part of.",
                                   "title": "Is part of",
-                                  "sortOrder": 32
+                                  "sortOrder": 31
                                 }
                               }
                             },
@@ -10872,7 +10872,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 32
+                            "sortOrder": 31
                           },
                           "measurement": {
                             "type": "object",
@@ -11031,7 +11031,7 @@
                                 "subject": "MY.isPartOf",
                                 "description": "Which parent or larger collection this is part of.",
                                 "title": "Is part of",
-                                "sortOrder": 32
+                                "sortOrder": 31
                               },
                               "tailCentimeters": {
                                 "type": "array",
@@ -11167,7 +11167,7 @@
                               }
                             },
                             "range": "MY.measurementClass",
-                            "sortOrder": 24
+                            "sortOrder": 27
                           },
                           "creator": {
                             "type": "string",
