@@ -1533,7 +1533,7 @@
       "subject": "MY.notes",
       "description": "Additional information to the data in each section.",
       "title": "Notes",
-      "sortOrder": 7
+      "sortOrder": 6
     },
     "rainIntensity": {
       "type": "string",

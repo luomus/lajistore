@@ -51,7 +51,7 @@
       "subject": "MY.habitatDescription",
       "description": "Informal description of the habitat.",
       "title": "Habitat description",
-      "sortOrder": -1
+      "sortOrder": 50
     },
     "habitatIUCN": {
       "type": "string",
