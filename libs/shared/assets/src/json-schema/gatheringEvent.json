@@ -238,14 +238,14 @@
       "range": "xsd:string",
       "subject": "MY.dateBegin",
       "title": "Start date",
-      "sortOrder": 2
+      "sortOrder": 1
     },
     "dateEnd": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateEnd",
       "title": "End date",
-      "sortOrder": 4
+      "sortOrder": 3
     },
     "gatheringFact": {
       "type": "object",

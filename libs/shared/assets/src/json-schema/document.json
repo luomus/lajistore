@@ -672,14 +672,14 @@
           "range": "xsd:string",
           "subject": "MY.dateBegin",
           "title": "Start date",
-          "sortOrder": 2
+          "sortOrder": 1
         },
         "dateEnd": {
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.dateEnd",
           "title": "End date",
-          "sortOrder": 4
+          "sortOrder": 3
         },
         "gatheringFact": {
           "type": "object",
@@ -2986,14 +2986,14 @@
             "range": "xsd:string",
             "subject": "MY.dateBegin",
             "title": "Start date",
-            "sortOrder": 2
+            "sortOrder": 1
           },
           "dateEnd": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.dateEnd",
             "title": "End date",
-            "sortOrder": 4
+            "sortOrder": 3
           },
           "dateVerbatim": {
             "type": "string",
@@ -4765,7 +4765,7 @@
             "subject": "MY.habitatDescription",
             "description": "Informal description of the habitat.",
             "title": "Habitat description",
-            "sortOrder": 50
+            "sortOrder": 5
           },
           "hasUnit": {
             "type": "array",
@@ -5319,7 +5319,7 @@
             "subject": "MY.substrate",
             "description": "Type of substrate or name of substrate species.",
             "title": "Substrate",
-            "sortOrder": 3
+            "sortOrder": 2
           },
           "taxonCensus": {
             "type": "array",
@@ -8624,14 +8624,14 @@
                       "range": "xsd:string",
                       "subject": "MY.dateBegin",
                       "title": "Start date",
-                      "sortOrder": 2
+                      "sortOrder": 1
                     },
                     "dateEnd": {
                       "type": "string",
                       "range": "xsd:string",
                       "subject": "MY.dateEnd",
                       "title": "End date",
-                      "sortOrder": 4
+                      "sortOrder": 3
                     },
                     "geometry": {
                       "type": "object",
@@ -8646,14 +8646,7 @@
                       "subject": "MY.habitatDescription",
                       "description": "Informal description of the habitat.",
                       "title": "Habitat description",
-                      "sortOrder": 50
-                    },
-                    "habitatIUCN": {
-                      "type": "string",
-                      "range": "xsd:string",
-                      "subject": "MY.habitatIUCN",
-                      "title": "Habitat",
-                      "sortOrder": 4
+                      "sortOrder": 5
                     },
                     "substrate": {
                       "type": "string",
@@ -8661,7 +8654,7 @@
                       "subject": "MY.substrate",
                       "description": "Type of substrate or name of substrate species.",
                       "title": "Substrate",
-                      "sortOrder": 3
+                      "sortOrder": 2
                     }
                   },
                   "range": "MZ.unitGathering",

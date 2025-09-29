@@ -47,10 +47,6 @@
       "@id": "default:MY.habitatDescription",
       "@type": "xsd:string"
     },
-    "habitatIUCN": {
-      "@id": "default:MY.habitatIUCN",
-      "@type": "xsd:string"
-    },
     "substrate": {
       "@id": "default:MY.substrate",
       "@type": "xsd:string"

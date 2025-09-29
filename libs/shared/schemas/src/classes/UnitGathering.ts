@@ -17,7 +17,6 @@ export class UnitGathering {
    * Informal description of the habitat.
    */
   habitatDescription?: string;
-  habitatIUCN?: string;
   /**
    * Type of substrate or name of substrate species.
    */

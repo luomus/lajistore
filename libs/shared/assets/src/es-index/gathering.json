@@ -1477,11 +1477,6 @@
                 "ignore_above": 200,
                 "normalizer": "useLowercase"
               },
-              "habitatIUCN": {
-                "type": "keyword",
-                "ignore_above": 200,
-                "normalizer": "useLowercase"
-              },
               "substrate": {
                 "type": "keyword",
                 "ignore_above": 200,
