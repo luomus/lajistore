@@ -119,6 +119,10 @@
       "@id": "default:MHL.hideDraftButton",
       "@type": "xsd:boolean"
     },
+    "hideFromSidebar": {
+      "@id": "default:MHL.hideFromSidebar",
+      "@type": "xsd:boolean"
+    },
     "hideSaveButton": {
       "@id": "default:MHL.hideSaveButton",
       "@type": "xsd:boolean"

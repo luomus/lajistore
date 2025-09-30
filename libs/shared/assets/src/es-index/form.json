@@ -492,6 +492,9 @@
           "hideDraftButton": {
             "type": "boolean"
           },
+          "hideFromSidebar": {
+            "type": "boolean"
+          },
           "hideSaveButton": {
             "type": "boolean"
           },

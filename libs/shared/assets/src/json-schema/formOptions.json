@@ -232,6 +232,14 @@
       "title": "hideDraftButton",
       "sortOrder": 26
     },
+    "hideFromSidebar": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "MHL.hideFromSidebar",
+      "description": "Defaults to false",
+      "title": "Hide from sidebar",
+      "sortOrder": 59
+    },
     "hideSaveButton": {
       "type": "boolean",
       "range": "xsd:boolean",

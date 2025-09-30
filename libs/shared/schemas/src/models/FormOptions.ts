@@ -98,6 +98,10 @@ export interface FormOptions {
   hideCancelButton?: boolean;
   hideDraftButton?: boolean;
   /**
+   * Defaults to false
+   */
+  hideFromSidebar?: boolean;
+  /**
    * Hides the save/edit button at form footer
    */
   hideSaveButton?: boolean;
