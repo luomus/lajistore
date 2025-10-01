@@ -1,4 +1,4 @@
-import { Document, GatheringEvent } from '@luomus/shared/models';
+import { Document } from '@luomus/shared/models';
 import { StoreService } from '@luomus/store/core';
 import { Command, Console } from 'nestjs-console';
 import { ConfigService } from '../services/config.service';
@@ -34,7 +34,8 @@ export class LinkUserCommand {
     
     spin.start('Fetching linked user ID:s')
 
-    let users: UserLink[] = []
+    let users: UserLink[] = [];
+    const userLookup: Record<string, string> = {};
 
     try {
       users = await lastValueFrom(this.lajiApiService.getLinkedUsers());
@@ -49,27 +50,27 @@ export class LinkUserCommand {
     let documentCount = 0;
 
     users = users.filter(user => {
-      return (/^((hatikka|vanhahatikka|lintuvaara|virtala):.*|.*@hatikka.fi)$/).test(user.userId)
-    })
+      return (/^((hatikka|vanhahatikka|lintuvaara|virtala|vihko):.*|.*@hatikka.fi)$/).test(user.userId)
+    });
+
+    users.forEach(user => {
+      userLookup[user.userId] = user.personId;
+    });
 
     spin.start('Cheking and updating documents...');
-    for (const user of users) {
-      const original = user.userId;
-      const replacer = user.personId;
 
-      try {
-        const documents = await this.linkUser(original, replacer, command.dryRun);
+    try {
+      const documents = await this.linkUsers(userLookup, command.dryRun);
 
-        if (documents.length) {
-          userCount++;
-          documentCount += documents.length;
-        }
-
-      } catch (e) {
-        failed = true;
-        console.log('');
-        console.log(e);
+      if (documents.length) {
+        userCount++;
+        documentCount += documents.length;
       }
+
+    } catch (e) {
+      failed = true;
+      console.log('');
+      console.log(e);
     }
 
     if (failed) {
@@ -87,106 +88,113 @@ export class LinkUserCommand {
     }
   }
 
-  async linkUser(original: string, replacer: string, dryRun?: boolean) {
+  async linkUsers(userLookup: Record<string, string>, dryRun?: boolean) {
     const sources = this.configService.get('DW_SOURCES').split(',').map(v => v.trim());
-
     const toReturn: Document[] = [];
 
     for (const source of sources) {
-      const documents = await this.storeService.search<Document>({
-        type: 'document',
-        source: source,
-        pageSize: 1000,
-        body: {
-          'query': {
-            'bool': {
-              'should': [
-                {
-                  'match': {
-                    'editors': `${original}`
-                  }
-                },
-                {
-                  'match': {
-                    'editor': `${original}`
-                  }
-                },
-                {
-                  'match': {
-                    'creator': `${original}`
-                  }
-                },
-                {
-                  'match': {
-                    'gatheringEvent.legUserID': `${original}`
-                  }
+      let lastPage;
+      let currentPage = 1;
+      try {
+        do {
+          const documents = await this.storeService.search<Document>({
+            type: 'document',
+            source: source,
+            page: currentPage,
+            pageSize: 1000,
+            body: {
+              'query': {
+                'bool': {
+                  'should': [
+                    {
+                      'regexp': {
+                        'creator': '((hatikka|vanhahatikka|lintuvaara|virtala|vihko):.*|.*@hatikka.fi)'
+                      }
+                    },
+                    {
+                      'regexp': {
+                        'editor': '((hatikka|vanhahatikka|lintuvaara|virtala|vihko):.*|.*@hatikka.fi)'
+                      }
+                    },
+                    {
+                      'regexp': {
+                        'editors': '((hatikka|vanhahatikka|lintuvaara|virtala|vihko):.*|.*@hatikka.fi)'
+                      }
+                    },
+                    {
+                      'regexp': {
+                        'gatheringEvent.legUserID': '((hatikka|vanhahatikka|lintuvaara|virtala|vihko):.*|.*@hatikka.fi)'
+                      }
+                    }
+                  ]
                 }
-              ]
+              }
             }
+          })
+          const toSend: {'document': Array<Document>} = {
+            'document': []
           }
-        }
-      })
 
-      const toSend: {'document': Array<Document>} = {
-        'document': []
-      }
+          currentPage += 1;
+          lastPage = documents.lastPage;
 
-      documents?.member.forEach((document: Document) => {
-        const docFields: Array<keyof Document> = ['creator','editor','editors'];
-  
-        let changed = false;
+          documents?.member.forEach((document: Document) => {
+            const docFields: Array<keyof Document> = ['creator','editor','editors'];
+            let changed = false;
+
+            docFields.forEach((field) => {
+              if (document[field]) {
+                const newVal = this.linkValue(document[field], userLookup);
+
+                if (newVal.changed) {
+                  changed = true;
+                  (document[field] as string | string[]) = newVal.value;
+                }
+              }
+            });
       
-        docFields.forEach((field) => {
-          if (document[field]) {
-            const newVal = this.linkValue(document[field], original, replacer);
-  
-            if (newVal.changed) {
-              changed = true;
-              (document[field] as string | string[]) = newVal.value;
+            const gatheringEvent = document.gatheringEvent;
+            if (gatheringEvent && gatheringEvent['legUserID']) {
+              const newVal = this.linkValue(gatheringEvent['legUserID'], userLookup);
+
+              if (newVal.changed) {
+                changed = true;
+                gatheringEvent['legUserID'] = newVal.value;
+              }
             }
-          }
-        });
-  
-        const gatheringEvent = document.gatheringEvent;
-        if (gatheringEvent) {
-          // if (gatheringEvent['leg']) {
-          //   gatheringEvent['leg'] = this.linkValue(gatheringEvent['leg'], original, target);
-          // }
-  
-          if (gatheringEvent['legUserID' ]) {
-            const newVal = this.linkValue(gatheringEvent['legUserID'], original, replacer);
-  
-            if (newVal.changed) {
-              changed = true;
-              (gatheringEvent['legUserID'] as string | string[]) = newVal.value;
+
+            if (changed) {
+              toSend['document'].push(document);
             }
+          });
+
+          if (toSend.document.length > 0 && !dryRun) {
+            await this.storeService.createOrUpdate(source, toSend);
+          } else if (toSend.document.length > 0 && dryRun) {
+            console.log(JSON.stringify(toSend, null, ' '))
           }
+
+          toReturn.push(...toSend.document);
+        } while (currentPage <= lastPage);
+      } catch (e: any) {
+        if (!(e.meta?.statusCode === 404 && e.meta?.body?.error?.type === 'index_not_found_exception')) {
+          throw e;
         }
-  
-        if (changed) {
-          toSend['document'].push(document);
-        }
-      });
-  
-      if (toSend.document.length > 0 && !dryRun) {
-        await this.storeService.createOrUpdate(source, toSend);
-      } else if (toSend.document.length > 0 && dryRun) {
-        console.log(JSON.stringify(toSend, null, ' '))
       }
-  
-      toReturn.push(...toSend.document);
     }
 
     return toReturn;
   }
 
-  linkValue(value: any, original: string, replacer: string) {
+  linkValue(value: any, userLookup: Record<string, string>) {
     let changed = false;
     if (Array.isArray(value)) {
       const newVal = value.map((val: string) => {
-        if (val === original) {
+        const user = userLookup[val];
+
+        if (user) {
           changed = true
-          return replacer;
+          return user;
         }
     
         return val;
@@ -198,10 +206,12 @@ export class LinkUserCommand {
       };
     }
 
-    if (value === original) {
+    const user = userLookup[value];
+
+    if (user) {
       return {
         changed: true, 
-        value: replacer
+        value: user
       };
     }
 
