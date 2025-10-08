@@ -3442,7 +3442,7 @@
           "subject": "MZ.publicityRestrictions",
           "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
           "title": "Publicity restrictions",
-          "sortOrder": 32
+          "sortOrder": 1
         },
         "scheduledForDeletion": {
           "type": "boolean",
@@ -6280,7 +6280,7 @@
                 "subject": "MZ.publicityRestrictions",
                 "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                 "title": "Publicity restrictions",
-                "sortOrder": 32
+                "sortOrder": 1
               },
               "units": {
                 "type": "array",
@@ -7447,7 +7447,7 @@
                       "subject": "MY.lifeStage",
                       "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
                       "title": "Life stage",
-                      "sortOrder": 2
+                      "sortOrder": 1
                     },
                     "lifeStageDescription": {
                       "type": "string",
@@ -8585,7 +8585,7 @@
                       "subject": "MY.sex",
                       "description": "Sex of the individual(s)",
                       "title": "Sex",
-                      "sortOrder": 3
+                      "sortOrder": 2
                     },
                     "sexNotes": {
                       "type": "string",
@@ -9535,7 +9535,7 @@
                       "subject": "MZ.publicityRestrictions",
                       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                       "title": "Publicity restrictions",
-                      "sortOrder": 32
+                      "sortOrder": 1
                     },
                     "identifications": {
                       "type": "array",
@@ -9984,7 +9984,7 @@
                             "subject": "MZ.publicityRestrictions",
                             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                             "title": "Publicity restrictions",
-                            "sortOrder": 32
+                            "sortOrder": 1
                           },
                           "sortOrder": {
                             "type": "integer",
@@ -10221,7 +10221,7 @@
                             "subject": "MZ.publicityRestrictions",
                             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                             "title": "Publicity restrictions",
-                            "sortOrder": 32
+                            "sortOrder": 1
                           }
                         }
                       },

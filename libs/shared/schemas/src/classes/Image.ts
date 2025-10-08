@@ -1,3 +1,4 @@
+import { MMLuomusIntellectualRightsEnum } from './';
 import { MMSideEnum } from './';
 import { MMTypeEnum } from './';
 import { MYLifeStages } from './';
@@ -17,6 +18,7 @@ export class Image {
   id?: string;
   "@type"?: string;
   "herbo:sortOrder"?: number;
+  LuomusIntellectualRights?: MMLuomusIntellectualRightsEnum;
   caption?: string;
   captureDateTime?: string;
   capturerVerbatim?: string[];

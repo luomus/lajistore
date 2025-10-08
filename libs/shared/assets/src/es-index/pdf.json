@@ -28,6 +28,10 @@
       "@type": {
         "type": "keyword"
       },
+      "LuomusIntellectualRights": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "caption": {
         "type": "keyword",
         "ignore_above": 200,

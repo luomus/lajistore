@@ -35,6 +35,10 @@
       "@id": "default:herbo:sortOrder",
       "@type": "xsd:integer"
     },
+    "LuomusIntellectualRights": {
+      "@id": "default:MM.LuomusIntellectualRights",
+      "@type": "@id"
+    },
     "caption": {
       "@id": "default:MM.caption",
       "@type": "xsd:string"

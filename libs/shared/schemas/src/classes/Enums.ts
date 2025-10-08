@@ -77,6 +77,11 @@ export enum MLAreaTypeEnum {
   "iucnEvaluationArea" = "ML.iucnEvaluationArea",
   "birdAssociationArea" = "ML.birdAssociationArea"
 }
+export enum MMLuomusIntellectualRightsEnum {
+  "empty" = "",
+  "LuomusRightsFreeToUse" = "MM.LuomusRightsFreeToUse",
+  "LuomusRightsInternalOnly" = "MM.LuomusRightsInternalOnly"
+}
 export enum MMTypeEnum {
   "empty" = "",
   "typeEnumLive" = "MM.typeEnumLive",

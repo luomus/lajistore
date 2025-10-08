@@ -1,3 +1,4 @@
+import { MMLuomusIntellectualRightsEnum } from './';
 import { MMTypeEnum } from './';
 import { MYLifeStages } from './';
 import { MYPlantLifeStageEnum } from './';
@@ -16,6 +17,7 @@ export class Model {
   id?: string;
   "@type"?: string;
   "herbo:sortOrder"?: number;
+  LuomusIntellectualRights?: MMLuomusIntellectualRightsEnum;
   caption?: string;
   captureDateTime?: string;
   capturerVerbatim?: string[];

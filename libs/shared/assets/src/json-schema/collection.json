@@ -853,7 +853,7 @@
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
       "title": "Publicity restrictions",
-      "sortOrder": 32
+      "sortOrder": 1
     }
   },
   "required": [
