@@ -14,6 +14,9 @@
     "type": "object",
     "additionalProperties": { "type": "string" }
   },
-  "MZ.keyAny": { "type": "object" },
+  "MZ.keyAny": {
+    "type": "object",
+    "additionalProperties": true
+  },
   "MZ.geometry": { "type" : "object" }
 }
