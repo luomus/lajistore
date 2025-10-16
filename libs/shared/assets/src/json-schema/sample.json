@@ -414,7 +414,7 @@
             "subject": "MY.isPartOf",
             "description": "Which parent or larger collection this is part of.",
             "title": "Is part of",
-            "sortOrder": 33
+            "sortOrder": 34
           }
         }
       },
@@ -656,7 +656,7 @@
       "subject": "MY.isPartOf",
       "description": "Which parent or larger collection this is part of.",
       "title": "Is part of",
-      "sortOrder": 33
+      "sortOrder": 34
     },
     "measurement": {
       "type": "object",
@@ -815,7 +815,7 @@
           "subject": "MY.isPartOf",
           "description": "Which parent or larger collection this is part of.",
           "title": "Is part of",
-          "sortOrder": 33
+          "sortOrder": 34
         },
         "tailCentimeters": {
           "type": "array",

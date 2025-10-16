@@ -672,14 +672,14 @@
           "range": "xsd:string",
           "subject": "MY.dateBegin",
           "title": "Start date",
-          "sortOrder": 1
+          "sortOrder": 3
         },
         "dateEnd": {
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.dateEnd",
           "title": "End date",
-          "sortOrder": 3
+          "sortOrder": 4
         },
         "gatheringFact": {
           "type": "object",
@@ -2664,7 +2664,7 @@
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
       "title": "Publicity restrictions",
-      "sortOrder": 32
+      "sortOrder": 33
     },
     "scheduledForDeletion": {
       "type": "boolean",
@@ -2753,7 +2753,7 @@
             "subject": "MY.associatedObservationTaxa",
             "description": "Write associated observation taxa names here, separated by a semicolon (;). E.g.: \"Betula pendula; Betula pubescens; Poaceae\". These will form their own units of the type observation.",
             "title": "Associated observation taxa",
-            "sortOrder": 34
+            "sortOrder": 35
           },
           "associatedSpecimenTaxa": {
             "type": "string",
@@ -2761,7 +2761,7 @@
             "subject": "MY.associatedSpecimenTaxa",
             "description": "Write associated specimen taxa names here, separated by a semicolon (;). E.g.: \"Betula pendula; Betula pubescens; Poaceae\". These will form their own units of the type Preserved specimen.",
             "title": "Associated specimen taxa",
-            "sortOrder": 39
+            "sortOrder": 40
           },
           "batHabitat": {
             "type": "array",
@@ -2863,7 +2863,7 @@
             "subject": "MY.collectingEventName",
             "description": "Name of an expedition or such.",
             "title": "Collecting event name",
-            "sortOrder": 36
+            "sortOrder": 39
           },
           "controlActivitiesNotes": {
             "type": "string",
@@ -2979,21 +2979,21 @@
             "subject": "MY.county",
             "description": "County (piirikunta, kreivikunta etc.)",
             "title": "County",
-            "sortOrder": 40
+            "sortOrder": 41
           },
           "dateBegin": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.dateBegin",
             "title": "Start date",
-            "sortOrder": 1
+            "sortOrder": 3
           },
           "dateEnd": {
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.dateEnd",
             "title": "End date",
-            "sortOrder": 3
+            "sortOrder": 4
           },
           "dateVerbatim": {
             "type": "string",
@@ -3001,7 +3001,7 @@
             "subject": "MY.dateVerbatim",
             "description": "Date just as it appears on the label or other original source, no interpretation, errors and all",
             "title": "Verbatim date from original source",
-            "sortOrder": 25
+            "sortOrder": 30
           },
           "depth": {
             "type": "string",
@@ -3059,7 +3059,7 @@
             "subject": "MY.forestVegetationZone",
             "description": "Finnish forest vegetation zone",
             "title": "Forest vegetation zone",
-            "sortOrder": 35
+            "sortOrder": 36
           },
           "gatheringFact": {
             "type": "object",
@@ -4765,7 +4765,7 @@
             "subject": "MY.habitatDescription",
             "description": "Informal description of the habitat.",
             "title": "Habitat description",
-            "sortOrder": 5
+            "sortOrder": 7
           },
           "hasUnit": {
             "type": "array",
@@ -4909,7 +4909,7 @@
             "subject": "MY.isPartOf",
             "description": "Which parent or larger collection this is part of.",
             "title": "Is part of",
-            "sortOrder": 33
+            "sortOrder": 34
           },
           "keywords": {
             "type": "array",
@@ -4963,7 +4963,7 @@
             "subject": "MY.legVerbatim",
             "description": "Leg just as it appears in the label or other original source, no interpretation, errors and all.",
             "title": "Verbatim leg from orginal source",
-            "sortOrder": 7
+            "sortOrder": 25
           },
           "locality": {
             "type": "string",
@@ -5028,7 +5028,7 @@
             "range": "MY.mothSamplingMethodEnum",
             "subject": "MY.mothSamplingMethod",
             "title": "Moth sampling method",
-            "sortOrder": 44
+            "sortOrder": 45
           },
           "municipality": {
             "type": "string",
@@ -5059,7 +5059,7 @@
             "subject": "MY.numberOfSampledIndividuals",
             "description": "For garden accessions/seed bank, number of individuals from which seeds were collected",
             "title": "Number of sampled individuals",
-            "sortOrder": 41
+            "sortOrder": 42
           },
           "observationDays": {
             "type": "integer",
@@ -5082,7 +5082,7 @@
             "subject": "MY.percentageGivingSeeds",
             "description": "For garden accessions/seed bank, what proportion of the population sampled was giving seeds",
             "title": "% of plant population giving seeds",
-            "sortOrder": 42
+            "sortOrder": 43
           },
           "predominantTree": {
             "type": "string",
@@ -5162,7 +5162,7 @@
             "subject": "MY.samplingAreaSizeInSquareMeters",
             "description": "For garden accessions/seed bank, estimated size of the area sampled, in square meters",
             "title": "Size of sampling area (m2)",
-            "sortOrder": 43
+            "sortOrder": 44
           },
           "samplingMethod": {
             "type": "string",
@@ -5282,7 +5282,7 @@
             "subject": "MY.samplingMethod",
             "description": "Main method for (usually intentional) sampling",
             "title": "Sampling method",
-            "sortOrder": 30
+            "sortOrder": 32
           },
           "samplingMethodNotes": {
             "type": "string",
@@ -5502,7 +5502,7 @@
             "subject": "MZ.publicityRestrictions",
             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
             "title": "Publicity restrictions",
-            "sortOrder": 32
+            "sortOrder": 33
           },
           "units": {
             "type": "array",
@@ -6534,7 +6534,7 @@
                   "subject": "MY.isPartOf",
                   "description": "Which parent or larger collection this is part of.",
                   "title": "Is part of",
-                  "sortOrder": 33
+                  "sortOrder": 34
                 },
                 "juvenileIndividualCount": {
                   "type": "integer",
@@ -6669,7 +6669,7 @@
                   "subject": "MY.lifeStage",
                   "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
                   "title": "Life stage",
-                  "sortOrder": 2
+                  "sortOrder": 1
                 },
                 "lifeStageDescription": {
                   "type": "string",
@@ -6859,7 +6859,7 @@
                       "subject": "MY.isPartOf",
                       "description": "Which parent or larger collection this is part of.",
                       "title": "Is part of",
-                      "sortOrder": 33
+                      "sortOrder": 34
                     },
                     "tailCentimeters": {
                       "type": "array",
@@ -7710,7 +7710,7 @@
                   "subject": "MY.samplingMethod",
                   "description": "Main method for (usually intentional) sampling",
                   "title": "Sampling method",
-                  "sortOrder": 30
+                  "sortOrder": 32
                 },
                 "samplingMethodNotes": {
                   "type": "string",
@@ -7807,7 +7807,7 @@
                   "subject": "MY.sex",
                   "description": "Sex of the individual(s)",
                   "title": "Sex",
-                  "sortOrder": 3
+                  "sortOrder": 2
                 },
                 "sexNotes": {
                   "type": "string",
@@ -8624,14 +8624,14 @@
                       "range": "xsd:string",
                       "subject": "MY.dateBegin",
                       "title": "Start date",
-                      "sortOrder": 1
+                      "sortOrder": 3
                     },
                     "dateEnd": {
                       "type": "string",
                       "range": "xsd:string",
                       "subject": "MY.dateEnd",
                       "title": "End date",
-                      "sortOrder": 3
+                      "sortOrder": 4
                     },
                     "geometry": {
                       "type": "object",
@@ -8646,7 +8646,7 @@
                       "subject": "MY.habitatDescription",
                       "description": "Informal description of the habitat.",
                       "title": "Habitat description",
-                      "sortOrder": 5
+                      "sortOrder": 7
                     },
                     "substrate": {
                       "type": "string",
@@ -8757,7 +8757,7 @@
                   "subject": "MZ.publicityRestrictions",
                   "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                   "title": "Publicity restrictions",
-                  "sortOrder": 32
+                  "sortOrder": 33
                 },
                 "identifications": {
                   "type": "array",
@@ -8800,7 +8800,7 @@
                         "subject": "MY.associatedObservationTaxa",
                         "description": "Write associated observation taxa names here, separated by a semicolon (;). E.g.: \"Betula pendula; Betula pubescens; Poaceae\". These will form their own units of the type observation.",
                         "title": "Associated observation taxa",
-                        "sortOrder": 34
+                        "sortOrder": 35
                       },
                       "author": {
                         "type": "string",
@@ -8987,7 +8987,7 @@
                         "subject": "MY.isPartOf",
                         "description": "Which parent or larger collection this is part of.",
                         "title": "Is part of",
-                        "sortOrder": 33
+                        "sortOrder": 34
                       },
                       "isTaxonGroup": {
                         "type": "boolean",
@@ -9206,7 +9206,7 @@
                         "subject": "MZ.publicityRestrictions",
                         "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                         "title": "Publicity restrictions",
-                        "sortOrder": 32
+                        "sortOrder": 33
                       },
                       "sortOrder": {
                         "type": "integer",
@@ -9257,7 +9257,7 @@
                         "subject": "MY.isPartOf",
                         "description": "Which parent or larger collection this is part of.",
                         "title": "Is part of",
-                        "sortOrder": 33
+                        "sortOrder": 34
                       },
                       "typeAuthor": {
                         "type": "string",
@@ -9443,7 +9443,7 @@
                         "subject": "MZ.publicityRestrictions",
                         "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                         "title": "Publicity restrictions",
-                        "sortOrder": 32
+                        "sortOrder": 33
                       }
                     }
                   },
@@ -9853,7 +9853,7 @@
                               "subject": "MY.isPartOf",
                               "description": "Which parent or larger collection this is part of.",
                               "title": "Is part of",
-                              "sortOrder": 33
+                              "sortOrder": 34
                             }
                           }
                         },
@@ -10095,7 +10095,7 @@
                         "subject": "MY.isPartOf",
                         "description": "Which parent or larger collection this is part of.",
                         "title": "Is part of",
-                        "sortOrder": 33
+                        "sortOrder": 34
                       },
                       "measurement": {
                         "type": "object",
@@ -10254,7 +10254,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 33
+                            "sortOrder": 34
                           },
                           "tailCentimeters": {
                             "type": "array",

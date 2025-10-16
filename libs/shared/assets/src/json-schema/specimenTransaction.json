@@ -472,7 +472,7 @@
             "subject": "MY.isPartOf",
             "description": "Which parent or larger collection this is part of.",
             "title": "Is part of",
-            "sortOrder": 33
+            "sortOrder": 34
           }
         }
       },
@@ -759,7 +759,7 @@
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
       "title": "Publicity restrictions",
-      "sortOrder": 32
+      "sortOrder": 33
     }
   },
   "required": [

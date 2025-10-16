@@ -819,12 +819,12 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -2613,7 +2613,7 @@ type ViewerBasicAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -5033,12 +5033,12 @@ type ViewerBasicAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -5426,15 +5426,15 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -6131,6 +6131,7 @@ type Audio2 {
   Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
   """
   lifeStage: LifeStage
+  luomusIntellectualRights: LuomusIntellectualRights
   modifiedBy: String
   modifiedDateTime: String
   mp3URL: String!
@@ -6206,6 +6207,12 @@ enum LifeStage {
   MY_LIFESTAGEMARKS
   MY_LIFESTAGETRIUNGULIN
   MY_LIFESTAGEEXUVIA
+}
+
+enum LuomusIntellectualRights {
+  _
+  MM_LUOMUSRIGHTSFREETOUSE
+  MM_LUOMUSRIGHTSINTERNALONLY
 }
 
 enum PlantLifeStage {
@@ -10226,6 +10233,7 @@ type Image2 {
   Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
   """
   lifeStage: LifeStage
+  luomusIntellectualRights: LuomusIntellectualRights
   modifiedBy: String
   modifiedDateTime: String
   originalFilename: String
@@ -10957,6 +10965,7 @@ type Model2 {
   """
   lifeStage: LifeStage
   lowDetailModelURL: String
+  luomusIntellectualRights: LuomusIntellectualRights
   modifiedBy: String
   modifiedDateTime: String
   originalFilename: String
@@ -11272,6 +11281,7 @@ type Pdf2 {
   intellectualRights: IntellectualRights!
   keyword: [String]
   largeURL: String!
+  luomusIntellectualRights: LuomusIntellectualRights
   modifiedBy: String
   modifiedDateTime: String
   originalFilename: String
@@ -12886,6 +12896,7 @@ type Video2 {
   Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
   """
   lifeStage: LifeStage
+  luomusIntellectualRights: LuomusIntellectualRights
   modifiedBy: String
   modifiedDateTime: String
   originalFilename: String
@@ -15231,12 +15242,12 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -17025,7 +17036,7 @@ type ViewerAnyAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -19445,12 +19456,12 @@ type ViewerAnyAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -19838,15 +19849,15 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -20865,12 +20876,12 @@ type MutationViewerBasicAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -24642,7 +24653,7 @@ type MutationViewerBasicAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -25671,7 +25682,7 @@ type MutationViewerBasicAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -26616,12 +26627,12 @@ type MutationViewerBasicAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
@@ -27246,6 +27257,7 @@ input Audio2Input {
   Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
   """
   lifeStage: LifeStage
+  luomusIntellectualRights: LuomusIntellectualRights
   modifiedBy: String
   modifiedDateTime: String
   mp3URL: String!
@@ -29343,6 +29355,7 @@ input Image2Input {
   Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
   """
   lifeStage: LifeStage
+  luomusIntellectualRights: LuomusIntellectualRights
   modifiedBy: String
   modifiedDateTime: String
   originalFilename: String
@@ -29821,6 +29834,7 @@ input Model2Input {
   """
   lifeStage: LifeStage
   lowDetailModelURL: String
+  luomusIntellectualRights: LuomusIntellectualRights
   modifiedBy: String
   modifiedDateTime: String
   originalFilename: String
@@ -30041,6 +30055,7 @@ input Pdf2Input {
   intellectualRights: IntellectualRights!
   keyword: [String]
   largeURL: String!
+  luomusIntellectualRights: LuomusIntellectualRights
   modifiedBy: String
   modifiedDateTime: String
   originalFilename: String
@@ -30930,6 +30945,7 @@ input Video2Input {
   Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.
   """
   lifeStage: LifeStage
+  luomusIntellectualRights: LuomusIntellectualRights
   modifiedBy: String
   modifiedDateTime: String
   originalFilename: String
@@ -33184,12 +33200,12 @@ type MutationViewerAnyAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -36961,7 +36977,7 @@ type MutationViewerAnyAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -37990,7 +38006,7 @@ type MutationViewerAnyAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -38935,12 +38951,12 @@ type MutationViewerAnyAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2

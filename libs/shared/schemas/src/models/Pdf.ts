@@ -1,3 +1,4 @@
+import { MMLuomusIntellectualRightsEnum } from './';
 import { MZIntellectualRightsEnum } from './';
 import { MZPublicityRestrictionsEnum } from './';
 
@@ -11,6 +12,7 @@ export interface Pdf {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  LuomusIntellectualRights?: MMLuomusIntellectualRightsEnum;
   caption?: string;
   documentURI?: string[];
   fullURL: string;

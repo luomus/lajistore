@@ -69,6 +69,10 @@ export type MLAreaTypeEnum =
   | "ML.continent"
   | "ML.iucnEvaluationArea"
   | "ML.birdAssociationArea";
+export type MMLuomusIntellectualRightsEnum =
+  | ""
+  | "MM.LuomusRightsFreeToUse"
+  | "MM.LuomusRightsInternalOnly";
 export type MMTypeEnum =
   | ""
   | "MM.typeEnumLive"
