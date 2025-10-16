@@ -149,6 +149,7 @@
                                         },
                                         "filters": {
                                           "type": "object",
+                                          "additionalProperties": true,
                                           "range": "MZ.keyAny",
                                           "subject": "MHLA.filters",
                                           "title": "filters",
@@ -163,6 +164,7 @@
                                         },
                                         "notices": {
                                           "type": "object",
+                                          "additionalProperties": true,
                                           "range": "MZ.keyAny",
                                           "subject": "MHLA.notices",
                                           "title": "Notice validators",
@@ -170,6 +172,7 @@
                                         },
                                         "options": {
                                           "type": "object",
+                                          "additionalProperties": true,
                                           "range": "MZ.keyAny",
                                           "subject": "MHLA.options",
                                           "title": "Options",
@@ -191,6 +194,7 @@
                                         },
                                         "ui": {
                                           "type": "object",
+                                          "additionalProperties": true,
                                           "range": "MZ.keyAny",
                                           "subject": "MHLA.ui",
                                           "title": "UI instructions to field",
@@ -198,6 +202,7 @@
                                         },
                                         "validators": {
                                           "type": "object",
+                                          "additionalProperties": true,
                                           "range": "MZ.keyAny",
                                           "subject": "MHLA.validators",
                                           "title": "validators",
@@ -212,6 +217,7 @@
                                         },
                                         "warnings": {
                                           "type": "object",
+                                          "additionalProperties": true,
                                           "range": "MZ.keyAny",
                                           "subject": "MHLA.warnings",
                                           "title": "warning validators",
@@ -227,6 +233,7 @@
                                   },
                                   "filters": {
                                     "type": "object",
+                                    "additionalProperties": true,
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.filters",
                                     "title": "filters",
@@ -241,6 +248,7 @@
                                   },
                                   "notices": {
                                     "type": "object",
+                                    "additionalProperties": true,
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.notices",
                                     "title": "Notice validators",
@@ -248,6 +256,7 @@
                                   },
                                   "options": {
                                     "type": "object",
+                                    "additionalProperties": true,
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.options",
                                     "title": "Options",
@@ -269,6 +278,7 @@
                                   },
                                   "ui": {
                                     "type": "object",
+                                    "additionalProperties": true,
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.ui",
                                     "title": "UI instructions to field",
@@ -276,6 +286,7 @@
                                   },
                                   "validators": {
                                     "type": "object",
+                                    "additionalProperties": true,
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.validators",
                                     "title": "validators",
@@ -290,6 +301,7 @@
                                   },
                                   "warnings": {
                                     "type": "object",
+                                    "additionalProperties": true,
                                     "range": "MZ.keyAny",
                                     "subject": "MHLA.warnings",
                                     "title": "warning validators",
@@ -305,6 +317,7 @@
                             },
                             "filters": {
                               "type": "object",
+                              "additionalProperties": true,
                               "range": "MZ.keyAny",
                               "subject": "MHLA.filters",
                               "title": "filters",
@@ -319,6 +332,7 @@
                             },
                             "notices": {
                               "type": "object",
+                              "additionalProperties": true,
                               "range": "MZ.keyAny",
                               "subject": "MHLA.notices",
                               "title": "Notice validators",
@@ -326,6 +340,7 @@
                             },
                             "options": {
                               "type": "object",
+                              "additionalProperties": true,
                               "range": "MZ.keyAny",
                               "subject": "MHLA.options",
                               "title": "Options",
@@ -347,6 +362,7 @@
                             },
                             "ui": {
                               "type": "object",
+                              "additionalProperties": true,
                               "range": "MZ.keyAny",
                               "subject": "MHLA.ui",
                               "title": "UI instructions to field",
@@ -354,6 +370,7 @@
                             },
                             "validators": {
                               "type": "object",
+                              "additionalProperties": true,
                               "range": "MZ.keyAny",
                               "subject": "MHLA.validators",
                               "title": "validators",
@@ -368,6 +385,7 @@
                             },
                             "warnings": {
                               "type": "object",
+                              "additionalProperties": true,
                               "range": "MZ.keyAny",
                               "subject": "MHLA.warnings",
                               "title": "warning validators",
@@ -383,6 +401,7 @@
                       },
                       "filters": {
                         "type": "object",
+                        "additionalProperties": true,
                         "range": "MZ.keyAny",
                         "subject": "MHLA.filters",
                         "title": "filters",
@@ -397,6 +416,7 @@
                       },
                       "notices": {
                         "type": "object",
+                        "additionalProperties": true,
                         "range": "MZ.keyAny",
                         "subject": "MHLA.notices",
                         "title": "Notice validators",
@@ -404,6 +424,7 @@
                       },
                       "options": {
                         "type": "object",
+                        "additionalProperties": true,
                         "range": "MZ.keyAny",
                         "subject": "MHLA.options",
                         "title": "Options",
@@ -425,6 +446,7 @@
                       },
                       "ui": {
                         "type": "object",
+                        "additionalProperties": true,
                         "range": "MZ.keyAny",
                         "subject": "MHLA.ui",
                         "title": "UI instructions to field",
@@ -432,6 +454,7 @@
                       },
                       "validators": {
                         "type": "object",
+                        "additionalProperties": true,
                         "range": "MZ.keyAny",
                         "subject": "MHLA.validators",
                         "title": "validators",
@@ -446,6 +469,7 @@
                       },
                       "warnings": {
                         "type": "object",
+                        "additionalProperties": true,
                         "range": "MZ.keyAny",
                         "subject": "MHLA.warnings",
                         "title": "warning validators",
@@ -461,6 +485,7 @@
                 },
                 "filters": {
                   "type": "object",
+                  "additionalProperties": true,
                   "range": "MZ.keyAny",
                   "subject": "MHLA.filters",
                   "title": "filters",
@@ -475,6 +500,7 @@
                 },
                 "notices": {
                   "type": "object",
+                  "additionalProperties": true,
                   "range": "MZ.keyAny",
                   "subject": "MHLA.notices",
                   "title": "Notice validators",
@@ -482,6 +508,7 @@
                 },
                 "options": {
                   "type": "object",
+                  "additionalProperties": true,
                   "range": "MZ.keyAny",
                   "subject": "MHLA.options",
                   "title": "Options",
@@ -503,6 +530,7 @@
                 },
                 "ui": {
                   "type": "object",
+                  "additionalProperties": true,
                   "range": "MZ.keyAny",
                   "subject": "MHLA.ui",
                   "title": "UI instructions to field",
@@ -510,6 +538,7 @@
                 },
                 "validators": {
                   "type": "object",
+                  "additionalProperties": true,
                   "range": "MZ.keyAny",
                   "subject": "MHLA.validators",
                   "title": "validators",
@@ -524,6 +553,7 @@
                 },
                 "warnings": {
                   "type": "object",
+                  "additionalProperties": true,
                   "range": "MZ.keyAny",
                   "subject": "MHLA.warnings",
                   "title": "warning validators",
@@ -539,6 +569,7 @@
           },
           "filters": {
             "type": "object",
+            "additionalProperties": true,
             "range": "MZ.keyAny",
             "subject": "MHLA.filters",
             "title": "filters",
@@ -553,6 +584,7 @@
           },
           "notices": {
             "type": "object",
+            "additionalProperties": true,
             "range": "MZ.keyAny",
             "subject": "MHLA.notices",
             "title": "Notice validators",
@@ -560,6 +592,7 @@
           },
           "options": {
             "type": "object",
+            "additionalProperties": true,
             "range": "MZ.keyAny",
             "subject": "MHLA.options",
             "title": "Options",
@@ -581,6 +614,7 @@
           },
           "ui": {
             "type": "object",
+            "additionalProperties": true,
             "range": "MZ.keyAny",
             "subject": "MHLA.ui",
             "title": "UI instructions to field",
@@ -588,6 +622,7 @@
           },
           "validators": {
             "type": "object",
+            "additionalProperties": true,
             "range": "MZ.keyAny",
             "subject": "MHLA.validators",
             "title": "validators",
@@ -602,6 +637,7 @@
           },
           "warnings": {
             "type": "object",
+            "additionalProperties": true,
             "range": "MZ.keyAny",
             "subject": "MHLA.warnings",
             "title": "warning validators",
@@ -617,6 +653,7 @@
     },
     "filters": {
       "type": "object",
+      "additionalProperties": true,
       "range": "MZ.keyAny",
       "subject": "MHLA.filters",
       "title": "filters",
@@ -631,6 +668,7 @@
     },
     "notices": {
       "type": "object",
+      "additionalProperties": true,
       "range": "MZ.keyAny",
       "subject": "MHLA.notices",
       "title": "Notice validators",
@@ -638,6 +676,7 @@
     },
     "options": {
       "type": "object",
+      "additionalProperties": true,
       "range": "MZ.keyAny",
       "subject": "MHLA.options",
       "title": "Options",
@@ -659,6 +698,7 @@
     },
     "ui": {
       "type": "object",
+      "additionalProperties": true,
       "range": "MZ.keyAny",
       "subject": "MHLA.ui",
       "title": "UI instructions to field",
@@ -666,6 +706,7 @@
     },
     "validators": {
       "type": "object",
+      "additionalProperties": true,
       "range": "MZ.keyAny",
       "subject": "MHLA.validators",
       "title": "validators",
@@ -680,6 +721,7 @@
     },
     "warnings": {
       "type": "object",
+      "additionalProperties": true,
       "range": "MZ.keyAny",
       "subject": "MHLA.warnings",
       "title": "warning validators",

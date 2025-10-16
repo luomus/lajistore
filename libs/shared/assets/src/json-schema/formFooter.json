@@ -34,6 +34,7 @@
     },
     "footerLogos": {
       "type": "object",
+      "additionalProperties": true,
       "range": "MZ.keyAny",
       "subject": "MHL.footerLogos",
       "description": "Key is an image URI, value is the URI of the page clicking the image opens",

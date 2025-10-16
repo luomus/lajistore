@@ -180,6 +180,7 @@
     },
     "settings": {
       "type": "object",
+      "additionalProperties": true,
       "range": "MZ.keyAny",
       "subject": "MA.settings",
       "title": "Settings for the user",

@@ -326,6 +326,7 @@
     },
     "prepopulatedDocumentFields": {
       "type": "object",
+      "additionalProperties": true,
       "range": "MZ.keyAny",
       "subject": "MHL.prepopulatedDocumentFields",
       "description": "When a new named place is created, the prepopulatedDocument will be populated according to this.",

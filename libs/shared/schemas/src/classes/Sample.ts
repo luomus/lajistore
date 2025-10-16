@@ -100,7 +100,7 @@ export class Sample {
    * Location of the preparation/sample so that museum personnel can find it. E.g. room, freezer, shelf number etc.
    */
   sampleLocation?: string;
-  specimenID: string;
+  specimenID?: string;
   /**
    * Status of the preparation/sample. For specimen level status use the status field in the basic information section. Empty value means same as "ok" - that there is nothing special about the status of the sample.
    */

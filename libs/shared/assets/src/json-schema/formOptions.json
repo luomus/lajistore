@@ -171,6 +171,7 @@
         },
         "footerLogos": {
           "type": "object",
+          "additionalProperties": true,
           "range": "MZ.keyAny",
           "subject": "MHL.footerLogos",
           "description": "Key is an image URI, value is the URI of the page clicking the image opens",
@@ -600,6 +601,7 @@
         },
         "prepopulatedDocumentFields": {
           "type": "object",
+          "additionalProperties": true,
           "range": "MZ.keyAny",
           "subject": "MHL.prepopulatedDocumentFields",
           "description": "When a new named place is created, the prepopulatedDocument will be populated according to this.",
@@ -862,7 +864,8 @@
           "type": "array",
           "uniqueItems": false,
           "items": {
-            "type": "object"
+            "type": "object",
+            "additionalProperties": true
           },
           "minItems": 0,
           "range": "MZ.keyAny",
@@ -5687,7 +5690,7 @@
                 "subject": "MY.isPartOf",
                 "description": "Which parent or larger collection this is part of.",
                 "title": "Is part of",
-                "sortOrder": 34
+                "sortOrder": 24
               },
               "keywords": {
                 "type": "array",
@@ -7312,7 +7315,7 @@
                       "subject": "MY.isPartOf",
                       "description": "Which parent or larger collection this is part of.",
                       "title": "Is part of",
-                      "sortOrder": 34
+                      "sortOrder": 24
                     },
                     "juvenileIndividualCount": {
                       "type": "integer",
@@ -7637,7 +7640,7 @@
                           "subject": "MY.isPartOf",
                           "description": "Which parent or larger collection this is part of.",
                           "title": "Is part of",
-                          "sortOrder": 34
+                          "sortOrder": 24
                         },
                         "tailCentimeters": {
                           "type": "array",
@@ -7773,7 +7776,7 @@
                         }
                       },
                       "range": "MY.measurementClass",
-                      "sortOrder": 27
+                      "sortOrder": 23
                     },
                     "microbiologicalRiskGroup": {
                       "type": "string",
@@ -9765,7 +9768,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 34
+                            "sortOrder": 24
                           },
                           "isTaxonGroup": {
                             "type": "boolean",
@@ -10035,7 +10038,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 34
+                            "sortOrder": 24
                           },
                           "typeAuthor": {
                             "type": "string",
@@ -10260,7 +10263,7 @@
                             "subject": "MF.additionalIDs",
                             "description": "Other identifiers this preparation/sample has, in format 'type:identifier'. For example: 'MZHtissue:123'. You can enter the type and colon and then click 'generate' to fetch the next free number for that prefix type.",
                             "title": "Preparation/sample additional sample IDs",
-                            "sortOrder": 21
+                            "sortOrder": 20
                           },
                           "bold": {
                             "type": "string",
@@ -10276,7 +10279,7 @@
                             "subject": "MF.collectionID",
                             "description": "The collection which this preparation/sample belongs to, if different from the collection of the specimen.",
                             "title": "Preparation/sample collection",
-                            "sortOrder": 22
+                            "sortOrder": 21
                           },
                           "condition": {
                             "type": "string",
@@ -10297,7 +10300,7 @@
                             "subject": "MF.datasetID",
                             "description": "Tag for the preparation/sample. For specimen level tags, use the tag field in the basic information section (document level).",
                             "title": "Preparation/sample tag(s)",
-                            "sortOrder": 19
+                            "sortOrder": 18
                           },
                           "elutionMedium": {
                             "type": "string",
@@ -10457,7 +10460,7 @@
                             "subject": "MF.notes",
                             "description": "Additional information about the preparation/sample",
                             "title": "Notes",
-                            "sortOrder": 23
+                            "sortOrder": 22
                           },
                           "preparationType": {
                             "type": "string",
@@ -10631,7 +10634,7 @@
                                   "subject": "MY.isPartOf",
                                   "description": "Which parent or larger collection this is part of.",
                                   "title": "Is part of",
-                                  "sortOrder": 34
+                                  "sortOrder": 24
                                 }
                               }
                             },
@@ -10745,7 +10748,7 @@
                             "subject": "MF.publication",
                             "description": "Publication references or doi's that refer to this preparations/sample. For publications referring to the specimen, use publications field in the Other section (document level).",
                             "title": "Preparation/sample publication(s)",
-                            "sortOrder": 20
+                            "sortOrder": 19
                           },
                           "quality": {
                             "type": "string",
@@ -10873,7 +10876,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 34
+                            "sortOrder": 24
                           },
                           "measurement": {
                             "type": "object",
@@ -11032,7 +11035,7 @@
                                 "subject": "MY.isPartOf",
                                 "description": "Which parent or larger collection this is part of.",
                                 "title": "Is part of",
-                                "sortOrder": 34
+                                "sortOrder": 24
                               },
                               "tailCentimeters": {
                                 "type": "array",
@@ -11168,7 +11171,7 @@
                               }
                             },
                             "range": "MY.measurementClass",
-                            "sortOrder": 27
+                            "sortOrder": 23
                           },
                           "creator": {
                             "type": "string",
@@ -11210,8 +11213,7 @@
                           }
                         },
                         "required": [
-                          "preparationType",
-                          "specimenID"
+                          "preparationType"
                         ]
                       },
                       "minItems": 0,
