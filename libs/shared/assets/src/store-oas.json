@@ -41287,10 +41287,10 @@
             }
           }
         ],
-        "description": "Return list of Taxon objects.",
+        "description": "Return list of taxon objects.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -41358,10 +41358,10 @@
             }
           }
         },
-        "description": "Store Taxon object(s)",
+        "description": "Store taxon object(s)",
         "responses": {
           "201": {
-            "description": "Stored Taxon object(s)",
+            "description": "Stored taxon object(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -41423,7 +41423,7 @@
         "description": "Patch taxon (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching taxon.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "example": {
@@ -41516,10 +41516,10 @@
             }
           }
         },
-        "description": "Return list of Taxon objects.",
+        "description": "Return list of taxon objects.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -41587,17 +41587,17 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -41622,7 +41622,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -41638,10 +41638,10 @@
             }
           }
         },
-        "description": "Store Taxon",
+        "description": "Store taxon",
         "responses": {
           "200": {
-            "description": "Stored Taxon",
+            "description": "Stored taxon",
             "content": {
               "application/json": {
                 "schema": {
@@ -41666,14 +41666,14 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Delete Taxon",
+        "description": "Delete taxon",
         "responses": {
           "200": {
             "description": "Deletion succeeded",
@@ -41705,7 +41705,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -41724,10 +41724,10 @@
         "tags": [
           "taxon"
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -41773,7 +41773,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -41782,17 +41782,17 @@
           {
             "name": "number",
             "in": "path",
-            "description": "Version number for the Taxon",
+            "description": "Version number for the taxon",
             "required": true,
             "schema": {
               "type": "number"
             }
           }
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -54393,7 +54393,8 @@
         "required": [
           "isPublic",
           "owner"
-        ]
+        ],
+        "additionalProperties": false
       },
       "Concept": {
         "type": "object",
@@ -54442,7 +54443,8 @@
           "skos:inScheme",
           "skos:narrower",
           "skos:note"
-        ]
+        ],
+        "additionalProperties": false
       },
       "Pinkka": {
         "type": "object",
@@ -54459,7 +54461,8 @@
             "type": "string",
             "title": "Type for the Instances of this describe one taxon description context (Pinkka eLearning enviroment)"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "administrativeStatus": {
         "type": "object",
@@ -54538,7 +54541,8 @@
             },
             "title": "Link"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "agent": {
         "type": "object",
@@ -54555,7 +54559,8 @@
             "type": "string",
             "title": "Type for the MY.agent"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "annotation": {
         "type": "object",
@@ -54761,7 +54766,8 @@
         },
         "required": [
           "rootID"
-        ]
+        ],
+        "additionalProperties": false
       },
       "annotationOccurrence": {
         "type": "object",
@@ -54814,7 +54820,8 @@
             "type": "number",
             "title": "Longitude (center point)"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "area": {
         "type": "object",
@@ -54904,7 +54911,8 @@
         "required": [
           "areaType",
           "name"
-        ]
+        ],
+        "additionalProperties": false
       },
       "audio": {
         "type": "object",
@@ -55183,7 +55191,8 @@
           "thumbnailURL",
           "intellectualOwner",
           "intellectualRights"
-        ]
+        ],
+        "additionalProperties": false
       },
       "birdSongRecognitionSkillLevel": {
         "type": "object",
@@ -55218,7 +55227,8 @@
         "required": [
           "birdSongRecognitionArea",
           "birdSongRecognitionSkillLevel"
-        ]
+        ],
+        "additionalProperties": false
       },
       "branch": {
         "type": "object",
@@ -55274,7 +55284,8 @@
         "required": [
           "accessionID",
           "collectionID"
-        ]
+        ],
+        "additionalProperties": false
       },
       "checklist": {
         "type": "object",
@@ -55315,7 +55326,8 @@
           "isPublic",
           "owner",
           "rootTaxon"
-        ]
+        ],
+        "additionalProperties": false
       },
       "checklistVersion": {
         "type": "object",
@@ -55347,7 +55359,8 @@
           "versionName": {
             "$ref": "#/components/schemas/multiLang"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "collection": {
         "type": "object",
@@ -55715,7 +55728,8 @@
           "description",
           "intellectualRights",
           "personResponsible"
-        ]
+        ],
+        "additionalProperties": false
       },
       "completeList": {
         "type": "object",
@@ -55746,7 +55760,8 @@
             ],
             "title": "Species list completeness"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "contact": {
         "type": "object",
@@ -55795,7 +55810,8 @@
             "type": "string",
             "title": "Street address"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "contentContextDescription": {
         "type": "object",
@@ -55812,7 +55828,8 @@
             "type": "string",
             "title": "Type for the Instances of this describe one taxon description context"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "dataField": {
         "type": "object",
@@ -55890,7 +55907,8 @@
           "name",
           "shortName",
           "technicalName"
-        ]
+        ],
+        "additionalProperties": false
       },
       "dataset": {
         "type": "object",
@@ -55981,7 +55999,8 @@
           "datasetType",
           "description",
           "personsResponsible"
-        ]
+        ],
+        "additionalProperties": false
       },
       "dateRange": {
         "type": "object",
@@ -56008,7 +56027,8 @@
             "format": "date",
             "title": "Start"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "device": {
         "type": "object",
@@ -56067,7 +56087,8 @@
         },
         "required": [
           "deviceManufacturerID"
-        ]
+        ],
+        "additionalProperties": false
       },
       "deviceIndividual": {
         "type": "object",
@@ -56111,7 +56132,8 @@
           "attached",
           "deviceID",
           "individualID"
-        ]
+        ],
+        "additionalProperties": false
       },
       "document": {
         "type": "object",
@@ -56659,7 +56681,8 @@
         },
         "required": [
           "gatherings"
-        ]
+        ],
+        "additionalProperties": false
       },
       "documentIdentification": {
         "type": "object",
@@ -56686,7 +56709,8 @@
             "description": "Date or year when the identification was done, preferably in format \"d.m.Y\" or \"Y\"",
             "title": "Det. date"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "downloadRequest": {
         "type": "object",
@@ -56823,7 +56847,8 @@
           "requested",
           "source",
           "warehouse"
-        ]
+        ],
+        "additionalProperties": false
       },
       "endangerment": {
         "type": "object",
@@ -56883,7 +56908,8 @@
         },
         "required": [
           "endangerment"
-        ]
+        ],
+        "additionalProperties": false
       },
       "event": {
         "type": "object",
@@ -57044,7 +57070,8 @@
         "required": [
           "branchID",
           "eventType"
-        ]
+        ],
+        "additionalProperties": false
       },
       "field": {
         "type": "object",
@@ -57117,7 +57144,8 @@
             "additionalProperties": true,
             "title": "warning validators"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "fieldset": {
         "type": "object",
@@ -57134,7 +57162,8 @@
             "type": "string",
             "title": "Type for the MHL.fieldset"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "form": {
         "type": "object",
@@ -57262,7 +57291,8 @@
             "additionalProperties": true,
             "title": "Specification for ui schema"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "formFooter": {
         "type": "object",
@@ -57290,7 +57320,8 @@
             "description": "Key is an image URI, value is the URI of the page clicking the image opens",
             "title": "Logos"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "formInstructions": {
         "type": "object",
@@ -57307,7 +57338,8 @@
             "type": "string",
             "title": "Type for the MHL.formInstructionsClass"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "formNamedPlaceOptions": {
         "type": "object",
@@ -57578,7 +57610,8 @@
             "description": "Named place chooser map is initialized with data fitted in view.",
             "title": "Zoom to data"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "formOptions": {
         "type": "object",
@@ -57919,7 +57952,8 @@
             "description": "Duration in ISO 8601 duration format. Defaults to P1W (one week)",
             "title": "Duration of editing old document warning"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "formPermission": {
         "type": "object",
@@ -57970,7 +58004,8 @@
         },
         "required": [
           "collectionID"
-        ]
+        ],
+        "additionalProperties": false
       },
       "formPermissionPerson": {
         "type": "object",
@@ -58021,7 +58056,8 @@
         },
         "required": [
           "personID"
-        ]
+        ],
+        "additionalProperties": false
       },
       "formPermissionSingle": {
         "type": "object",
@@ -58059,7 +58095,8 @@
         },
         "required": [
           "collectionID"
-        ]
+        ],
+        "additionalProperties": false
       },
       "formSeason": {
         "type": "object",
@@ -58086,7 +58123,8 @@
             "description": "Start of season",
             "title": "Start"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "gathering": {
         "type": "object",
@@ -58963,7 +59001,8 @@
               "$ref": "#/components/schemas/unit"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "gatheringEvent": {
         "type": "object",
@@ -59195,7 +59234,8 @@
             "type": "string",
             "title": "Start time"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "gatheringFact": {
         "type": "object",
@@ -59882,7 +59922,8 @@
             ],
             "title": "Tuuli"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "habitat": {
         "type": "object",
@@ -60032,7 +60073,8 @@
         },
         "required": [
           "habitat"
-        ]
+        ],
+        "additionalProperties": false
       },
       "identification": {
         "type": "object",
@@ -60289,7 +60331,8 @@
             "type": "integer",
             "title": "sortOrder"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "image": {
         "type": "object",
@@ -60578,7 +60621,8 @@
           "thumbnailURL",
           "intellectualOwner",
           "intellectualRights"
-        ]
+        ],
+        "additionalProperties": false
       },
       "individual": {
         "type": "object",
@@ -60674,7 +60718,8 @@
         },
         "required": [
           "intellectualRights"
-        ]
+        ],
+        "additionalProperties": false
       },
       "informalTaxonGroup": {
         "type": "object",
@@ -60711,7 +60756,8 @@
         },
         "required": [
           "name"
-        ]
+        ],
+        "additionalProperties": false
       },
       "informationSystem": {
         "type": "object",
@@ -60825,7 +60871,8 @@
           "state",
           "transactionApiURL",
           "type"
-        ]
+        ],
+        "additionalProperties": false
       },
       "iucnRedListEvaluation": {
         "type": "object",
@@ -61517,7 +61564,8 @@
           "evaluationYear",
           "redListStatus",
           "state"
-        ]
+        ],
+        "additionalProperties": false
       },
       "iucnRedListEvaluationYear": {
         "type": "object",
@@ -61545,7 +61593,8 @@
         },
         "required": [
           "evaluationYear"
-        ]
+        ],
+        "additionalProperties": false
       },
       "iucnRedListTaxonGroup": {
         "type": "object",
@@ -61595,7 +61644,8 @@
         },
         "required": [
           "name"
-        ]
+        ],
+        "additionalProperties": false
       },
       "measurement": {
         "type": "object",
@@ -61824,7 +61874,8 @@
             "minItems": 0,
             "title": "Wing min (mm)"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "model": {
         "type": "object",
@@ -62098,7 +62149,8 @@
           "videoURL",
           "intellectualOwner",
           "intellectualRights"
-        ]
+        ],
+        "additionalProperties": false
       },
       "multimedia": {
         "type": "object",
@@ -62115,7 +62167,8 @@
             "type": "string",
             "title": "Type for the MM.multimediaObject"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "namedPlace": {
         "type": "object",
@@ -62303,7 +62356,8 @@
         "required": [
           "geometry",
           "name"
-        ]
+        ],
+        "additionalProperties": false
       },
       "news": {
         "type": "object",
@@ -62371,7 +62425,8 @@
           "eventDate",
           "language",
           "title"
-        ]
+        ],
+        "additionalProperties": false
       },
       "notification": {
         "type": "object",
@@ -62425,7 +62480,8 @@
         "required": [
           "created",
           "toPerson"
-        ]
+        ],
+        "additionalProperties": false
       },
       "occurrence": {
         "type": "object",
@@ -62522,7 +62578,8 @@
           "area",
           "status",
           "taxon"
-        ]
+        ],
+        "additionalProperties": false
       },
       "organization": {
         "type": "object",
@@ -62712,7 +62769,8 @@
         },
         "required": [
           "organizationLevel1"
-        ]
+        ],
+        "additionalProperties": false
       },
       "pdf": {
         "type": "object",
@@ -62864,7 +62922,8 @@
           "thumbnailURL",
           "intellectualOwner",
           "intellectualRights"
-        ]
+        ],
+        "additionalProperties": false
       },
       "permit": {
         "type": "object",
@@ -62927,7 +62986,8 @@
             "description": "Which parent or larger collection this is part of.",
             "title": "Is part of"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "person": {
         "type": "object",
@@ -63158,7 +63218,8 @@
         },
         "required": [
           "fullName"
-        ]
+        ],
+        "additionalProperties": false
       },
       "preparation": {
         "type": "object",
@@ -63250,7 +63311,8 @@
             "description": "Which parent or larger collection this is part of.",
             "title": "Is part of"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "profile": {
         "type": "object",
@@ -63367,7 +63429,8 @@
         },
         "required": [
           "userID"
-        ]
+        ],
+        "additionalProperties": false
       },
       "publication": {
         "type": "object",
@@ -63392,7 +63455,8 @@
             "type": "string",
             "title": "Name"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "regionalStatus": {
         "type": "object",
@@ -63468,7 +63532,8 @@
         "required": [
           "regionalStatusArea",
           "regionalStatusStatus"
-        ]
+        ],
+        "additionalProperties": false
       },
       "reserve": {
         "type": "object",
@@ -63498,7 +63563,8 @@
         "required": [
           "reserver",
           "until"
-        ]
+        ],
+        "additionalProperties": false
       },
       "sample": {
         "type": "object",
@@ -63834,7 +63900,8 @@
         },
         "required": [
           "preparationType"
-        ]
+        ],
+        "additionalProperties": false
       },
       "satelliteTrackingProject": {
         "type": "object",
@@ -63869,7 +63936,8 @@
         },
         "required": [
           "name"
-        ]
+        ],
+        "additionalProperties": false
       },
       "specimenTransaction": {
         "type": "object",
@@ -64243,7 +64311,8 @@
         },
         "required": [
           "type"
-        ]
+        ],
+        "additionalProperties": false
       },
       "specimenTransactionEvent": {
         "type": "object",
@@ -64291,7 +64360,8 @@
           "eventHandler",
           "eventNotes",
           "eventType"
-        ]
+        ],
+        "additionalProperties": false
       },
       "subUnit": {
         "type": "object",
@@ -64334,7 +64404,8 @@
             "description": "Sex of the individual(s)",
             "title": "Sex"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "tag": {
         "type": "object",
@@ -64405,22 +64476,23 @@
             ],
             "title": "Type"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "taxon": {
         "type": "object",
         "properties": {
           "@context": {
             "type": "string",
-            "title": "Context for the Taxon"
+            "title": "Context for the taxon"
           },
           "id": {
             "type": "string",
-            "title": "Id for the Taxon"
+            "title": "Id for the taxon"
           },
           "@type": {
             "type": "string",
-            "title": "Type for the Taxon"
+            "title": "Type for the taxon"
           },
           "herbo:sortOrder": {
             "type": "integer",
@@ -65502,7 +65574,8 @@
             "type": "string",
             "title": "Taxonid.org identifier"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "taxonCensus": {
         "type": "object",
@@ -65564,7 +65637,8 @@
         },
         "required": [
           "taxonCensusType"
-        ]
+        ],
+        "additionalProperties": false
       },
       "taxonConcept": {
         "type": "object",
@@ -65617,7 +65691,8 @@
             "minItems": 0,
             "title": "overlaps"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "taxonGroupIucnEditors": {
         "type": "object",
@@ -65650,7 +65725,8 @@
         },
         "required": [
           "taxonGroup"
-        ]
+        ],
+        "additionalProperties": false
       },
       "taxonInteraction": {
         "type": "object",
@@ -65761,7 +65837,8 @@
           "interactionType",
           "objectTaxon",
           "subjectTaxon"
-        ]
+        ],
+        "additionalProperties": false
       },
       "taxonSet": {
         "type": "object",
@@ -65778,7 +65855,8 @@
             "type": "string",
             "title": "Type for the Instances of this class are a taxon sets"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "term": {
         "type": "object",
@@ -65836,7 +65914,8 @@
         },
         "required": [
           "definition"
-        ]
+        ],
+        "additionalProperties": false
       },
       "trait": {
         "type": "object",
@@ -65924,7 +66003,8 @@
           "description",
           "name",
           "partOfGroup"
-        ]
+        ],
+        "additionalProperties": false
       },
       "traitEnumValue": {
         "type": "object",
@@ -65966,7 +66046,8 @@
           "dataEntryName",
           "description",
           "name"
-        ]
+        ],
+        "additionalProperties": false
       },
       "traitGroup": {
         "type": "object",
@@ -65995,7 +66076,8 @@
         "required": [
           "description",
           "name"
-        ]
+        ],
+        "additionalProperties": false
       },
       "transaction": {
         "type": "object",
@@ -66343,7 +66425,8 @@
           "correspondentOrganization",
           "transactionRequestReceived",
           "transactionType"
-        ]
+        ],
+        "additionalProperties": false
       },
       "transactionEvent": {
         "type": "object",
@@ -66412,7 +66495,8 @@
           "eventHandler",
           "eventType",
           "items"
-        ]
+        ],
+        "additionalProperties": false
       },
       "transactionItem": {
         "type": "object",
@@ -66475,7 +66559,8 @@
           "itemCount",
           "itemType",
           "status"
-        ]
+        ],
+        "additionalProperties": false
       },
       "translation": {
         "type": "object",
@@ -66528,7 +66613,8 @@
             "minItems": 0,
             "title": "sv"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "typeSpecimen": {
         "type": "object",
@@ -66656,7 +66742,8 @@
             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
             "title": "Publicity restrictions"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "unit": {
         "type": "object",
@@ -68038,7 +68125,8 @@
               "$ref": "#/components/schemas/sample"
             }
           }
-        }
+        },
+        "additionalProperties": false
       },
       "unitFact": {
         "type": "object",
@@ -68306,7 +68394,8 @@
             "minimum": 0,
             "title": "Individual count reed"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "unitGathering": {
         "type": "object",
@@ -68344,7 +68433,8 @@
             "description": "Type of substrate or name of substrate species.",
             "title": "Substrate"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "unitOfMeasurement": {
         "type": "object",
@@ -68408,7 +68498,8 @@
         "required": [
           "baseConversion",
           "isBaseUnit"
-        ]
+        ],
+        "additionalProperties": false
       },
       "validator": {
         "type": "object",
@@ -68425,7 +68516,8 @@
             "type": "string",
             "title": "Type for the MHL.validator"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "video": {
         "type": "object",
@@ -68691,7 +68783,8 @@
           "videoURL",
           "intellectualOwner",
           "intellectualRights"
-        ]
+        ],
+        "additionalProperties": false
       },
       "patchObj": {
         "title": "JSONPatch",
@@ -69603,7 +69696,7 @@
     },
     {
       "name": "taxon",
-      "description": "Taxon"
+      "description": "taxon"
     },
     {
       "name": "taxonCensus",
