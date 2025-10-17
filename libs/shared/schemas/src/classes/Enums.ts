@@ -1749,6 +1749,16 @@ export enum MITaxonInteractionEnum {
   "taxonInteractionEctoparasitism" = "MI.taxonInteractionEctoparasitism",
   "taxonInteractionEndoparasitism" = "MI.taxonInteractionEndoparasitism"
 }
+export enum TDFRangeEnum {
+  "empty" = "",
+  "xsd:string" = "xsd:string",
+  "xsd:decimal" = "xsd:decimal",
+  "xsd:integer" = "xsd:integer",
+  "xsd:positiveInteger" = "xsd:positiveInteger",
+  "xsd:nonNegativeInteger" = "xsd:nonNegativeInteger",
+  "xsd:boolean" = "xsd:boolean",
+  "MX.taxon" = "MX.taxon"
+}
 export enum HRAAvailableForGeneticResearchEnum {
   "empty" = "",
   "availableForGeneticResearchYes" = "HRA.availableForGeneticResearchYes",

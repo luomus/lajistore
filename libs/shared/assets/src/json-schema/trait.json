@@ -90,6 +90,33 @@
       "title": "Part of trait group",
       "sortOrder": -1
     },
+    "range": {
+      "type": "string",
+      "enum": [
+        "",
+        "xsd:string",
+        "xsd:decimal",
+        "xsd:integer",
+        "xsd:positiveInteger",
+        "xsd:nonNegativeInteger",
+        "xsd:boolean",
+        "MX.taxon"
+      ],
+      "enumNames": [
+        "",
+        "string",
+        "decimal",
+        "integer",
+        "positive integer",
+        "non-negative integer",
+        "boolean",
+        "taxon"
+      ],
+      "range": "TDF.rangeEnum",
+      "subject": "TDF.range",
+      "title": "Datatype",
+      "sortOrder": -1
+    },
     "reference": {
       "type": "array",
       "uniqueItems": false,

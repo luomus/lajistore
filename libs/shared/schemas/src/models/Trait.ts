@@ -1,3 +1,5 @@
+import { TDFRangeEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
@@ -16,5 +18,6 @@ export interface Trait {
   hasEnumeration?: string[];
   name: string;
   partOfGroup: string;
+  range?: TDFRangeEnum;
   reference?: string[];
 }

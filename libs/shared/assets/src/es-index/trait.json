@@ -68,6 +68,10 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "range": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "reference": {
         "type": "keyword",
         "ignore_above": 200,

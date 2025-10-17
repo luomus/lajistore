@@ -63,6 +63,10 @@
       "@id": "default:TDF.partOfGroup",
       "@type": "@id"
     },
+    "range": {
+      "@id": "default:TDF.range",
+      "@type": "@id"
+    },
     "reference": {
       "@id": "default:TDF.reference",
       "@type": "xsd:string"

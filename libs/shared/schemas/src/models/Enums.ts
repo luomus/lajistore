@@ -1626,6 +1626,15 @@ export type MITaxonInteractionEnum =
   | "MI.taxonInteractionParasitism"
   | "MI.taxonInteractionEctoparasitism"
   | "MI.taxonInteractionEndoparasitism";
+export type TDFRangeEnum =
+  | ""
+  | "xsd:string"
+  | "xsd:decimal"
+  | "xsd:integer"
+  | "xsd:positiveInteger"
+  | "xsd:nonNegativeInteger"
+  | "xsd:boolean"
+  | "MX.taxon";
 export type HRAAvailableForGeneticResearchEnum =
   | ""
   | "HRA.availableForGeneticResearchYes"

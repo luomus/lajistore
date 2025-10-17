@@ -12557,8 +12557,20 @@ type Trait2 {
   id: String
   name: String!
   partOfGroup: String!
+  range: Range
   reference: [String]
   type: String
+}
+
+enum Range {
+  _
+  XSD_STRING
+  XSD_DECIMAL
+  XSD_INTEGER
+  XSD_POSITIVEINTEGER
+  XSD_NONNEGATIVEINTEGER
+  XSD_BOOLEAN
+  MX_TAXON
 }
 
 type TraitEnumValue2 {
@@ -30700,6 +30712,7 @@ input Trait2Input {
   id: String
   name: String!
   partOfGroup: String!
+  range: Range
   reference: [String]
   type: String
 }

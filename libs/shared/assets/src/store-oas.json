@@ -65895,6 +65895,20 @@
             "type": "string",
             "title": "Part of trait group"
           },
+          "range": {
+            "type": "string",
+            "enum": [
+              "",
+              "xsd:string",
+              "xsd:decimal",
+              "xsd:integer",
+              "xsd:positiveInteger",
+              "xsd:nonNegativeInteger",
+              "xsd:boolean",
+              "MX.taxon"
+            ],
+            "title": "Datatype"
+          },
           "reference": {
             "type": "array",
             "uniqueItems": false,
