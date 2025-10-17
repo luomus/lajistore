@@ -113,6 +113,7 @@ export class GenerateSwaggerService extends AbstractSchemaGenerateService {
       type,
       properties,
       required,
+      additionalProperties
     } = JsonSchemaService.removeExtraProperties(schema);
 
     this.bulk[normalized] = { type: 'array', items: { $ref: component } };
@@ -120,6 +121,7 @@ export class GenerateSwaggerService extends AbstractSchemaGenerateService {
       type,
       properties,
       required,
+      additionalProperties
     } as OpenAPIV3.NonArraySchemaObject;
     this.spec.paths[`${this.globalPrefix}/${normalized}`] = this.rootQueries(
       normalized,
