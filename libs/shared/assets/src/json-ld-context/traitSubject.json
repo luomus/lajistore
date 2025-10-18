@@ -1,0 +1,211 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "http://tun.fi/",
+    "@base": "http://tun.fi/",
+    "default": "http://tun.fi/",
+    "luomus": "http://id.luomus.fi/",
+    "zmuo": "http://id.zmuo.oulu.fi/",
+    "herbo": "http://id.herb.oulu.fi/",
+    "utu": "http://mus.utu.fi/",
+    "xsd": "https://www.w3.org/TR/xmlschema-2/#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xml": "http://www.w3.org/XML/1998/namespace#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dwc": "http://rs.tdwg.org/dwc/terms/",
+    "dc": "http://purl.org/dc/terms/",
+    "dwctype": "http://rs.tdwg.org/dwc/dwctype/",
+    "abcd": "http://www.tdwg.org/schemas/abcd/2.06#",
+    "naturforskaren": "http://naturforskaren.se/",
+    "eol": "http://eol.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dyntaxa": "http://dyntaxa.se/Taxon/Info/",
+    "taxonid": "http://taxonid.org/",
+    "@context": {
+      "@id": "default:@context",
+      "@type": "xsd:string"
+    },
+    "id": "@id",
+    "@type": {
+      "@id": "default:@type",
+      "@type": "xsd:string"
+    },
+    "scientificName": {
+      "@id": "default:MX.scientificName",
+      "@type": "xsd:string"
+    },
+    "country": {
+      "@id": "default:MY.country",
+      "@type": "xsd:string"
+    },
+    "dateBegin": {
+      "@id": "default:MY.dateBegin",
+      "@type": "xsd:string"
+    },
+    "dateEnd": {
+      "@id": "default:MY.dateEnd",
+      "@type": "xsd:string"
+    },
+    "habitat": {
+      "@id": "default:MY.habitat",
+      "@type": "@id"
+    },
+    "higherGeography": {
+      "@id": "default:MY.higherGeography",
+      "@type": "xsd:string"
+    },
+    "individualCount": {
+      "@id": "default:MY.individualCount",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "lifeStage": {
+      "@id": "default:MY.lifeStage",
+      "@type": "@id"
+    },
+    "locality": {
+      "@id": "default:MY.locality",
+      "@type": "xsd:string"
+    },
+    "municipality": {
+      "@id": "default:MY.municipality",
+      "@type": "xsd:string"
+    },
+    "sex": {
+      "@id": "default:MY.sex",
+      "@type": "@id"
+    },
+    "ageYears": {
+      "@id": "default:TDFX.ageYears",
+      "@type": "xsd:decimal"
+    },
+    "author": {
+      "@id": "default:TDFX.author",
+      "@type": "xsd:string"
+    },
+    "basisOfRecord": {
+      "@id": "default:TDFX.basisOfRecord",
+      "@type": "@id"
+    },
+    "coordinateAccuracy": {
+      "@id": "default:TDFX.coordinateAccuracy",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "created": {
+      "@id": "default:TDFX.created",
+      "@type": "xsd:date"
+    },
+    "createdBy": {
+      "@id": "default:TDFX.createdBy",
+      "@type": "xsd:string"
+    },
+    "datasetId": {
+      "@id": "default:TDFX.datasetId",
+      "@type": "@id"
+    },
+    "elevation": {
+      "@id": "default:TDFX.elevation",
+      "@type": "xsd:positiveInteger"
+    },
+    "finbifOccurrenceId": {
+      "@id": "default:TDFX.finbifOccurrenceId",
+      "@type": "xsd:string"
+    },
+    "functionalGroupName": {
+      "@id": "default:TDFX.functionalGroupName",
+      "@type": "xsd:string"
+    },
+    "gbifOccurrenceId": {
+      "@id": "default:TDFX.gbifOccurrenceId",
+      "@type": "xsd:string"
+    },
+    "gbifTaxonId": {
+      "@id": "default:TDFX.gbifTaxonId",
+      "@type": "xsd:integer"
+    },
+    "kingdom": {
+      "@id": "default:TDFX.kingdom",
+      "@type": "xsd:string"
+    },
+    "lat": {
+      "@id": "default:TDFX.lat",
+      "@type": "xsd:decimal"
+    },
+    "latMax": {
+      "@id": "default:TDFX.latMax",
+      "@type": "xsd:decimal"
+    },
+    "latMin": {
+      "@id": "default:TDFX.latMin",
+      "@type": "xsd:decimal"
+    },
+    "locationIdentifiers": {
+      "@id": "default:TDFX.locationIdentifiers",
+      "@type": "xsd:string"
+    },
+    "lon": {
+      "@id": "default:TDFX.lon",
+      "@type": "xsd:decimal"
+    },
+    "lonMax": {
+      "@id": "default:TDFX.lonMax",
+      "@type": "xsd:decimal"
+    },
+    "lonMin": {
+      "@id": "default:TDFX.lonMin",
+      "@type": "xsd:decimal"
+    },
+    "measurementDeterminedBy": {
+      "@id": "default:TDFX.measurementDeterminedBy",
+      "@type": "xsd:string"
+    },
+    "measurementDeterminedDate": {
+      "@id": "default:TDFX.measurementDeterminedDate",
+      "@type": "xsd:date"
+    },
+    "modified": {
+      "@id": "default:TDFX.modified",
+      "@type": "xsd:date"
+    },
+    "modifiedBy": {
+      "@id": "default:TDFX.modifiedBy",
+      "@type": "xsd:string"
+    },
+    "occurrenceRemarks": {
+      "@id": "default:TDFX.occurrenceRemarks",
+      "@type": "xsd:string"
+    },
+    "otherOccurrenceId": {
+      "@id": "default:TDFX.otherOccurrenceId",
+      "@type": "xsd:string"
+    },
+    "otherTaxonId": {
+      "@id": "default:TDFX.otherTaxonId",
+      "@type": "xsd:integer"
+    },
+    "seasonBegin": {
+      "@id": "default:TDFX.seasonBegin",
+      "@type": "xsd:positiveInteger"
+    },
+    "seasonEnd": {
+      "@id": "default:TDFX.seasonEnd",
+      "@type": "xsd:positiveInteger"
+    },
+    "taxonId": {
+      "@id": "default:TDFX.taxonId",
+      "@type": "@id"
+    },
+    "type": {
+      "@id": "default:TDFX.type",
+      "@type": "@id"
+    },
+    "yearBegin": {
+      "@id": "default:TDFX.yearBegin",
+      "@type": "xsd:positiveInteger"
+    },
+    "yearEnd": {
+      "@id": "default:TDFX.yearEnd",
+      "@type": "xsd:positiveInteger"
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "http://tun.fi/",
+    "@base": "http://tun.fi/",
+    "default": "http://tun.fi/",
+    "luomus": "http://id.luomus.fi/",
+    "zmuo": "http://id.zmuo.oulu.fi/",
+    "herbo": "http://id.herb.oulu.fi/",
+    "utu": "http://mus.utu.fi/",
+    "xsd": "https://www.w3.org/TR/xmlschema-2/#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xml": "http://www.w3.org/XML/1998/namespace#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dwc": "http://rs.tdwg.org/dwc/terms/",
+    "dc": "http://purl.org/dc/terms/",
+    "dwctype": "http://rs.tdwg.org/dwc/dwctype/",
+    "abcd": "http://www.tdwg.org/schemas/abcd/2.06#",
+    "naturforskaren": "http://naturforskaren.se/",
+    "eol": "http://eol.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dyntaxa": "http://dyntaxa.se/Taxon/Info/",
+    "taxonid": "http://taxonid.org/",
+    "@context": {
+      "@id": "default:@context",
+      "@type": "xsd:string"
+    },
+    "id": "@id",
+    "@type": {
+      "@id": "default:@type",
+      "@type": "xsd:string"
+    },
+    "dataset": {
+      "@id": "default:TDFX.dataset",
+      "@type": "@id"
+    },
+    "day": {
+      "@id": "default:TDFX.day",
+      "@type": "xsd:positiveInteger"
+    },
+    "eventDate": {
+      "@id": "default:TDFX.eventDate",
+      "@type": "xsd:date"
+    },
+    "geodeticDatum": {
+      "@id": "default:TDFX.geodeticDatum",
+      "@type": "xsd:string"
+    },
+    "license": {
+      "@id": "default:TDFX.license",
+      "@type": "@id"
+    },
+    "measurementAccuracy": {
+      "@id": "default:TDFX.measurementAccuracy",
+      "@type": "xsd:decimal"
+    },
+    "measurementRemarks": {
+      "@id": "default:TDFX.measurementRemarks",
+      "@type": "xsd:string"
+    },
+    "month": {
+      "@id": "default:TDFX.month",
+      "@type": "xsd:positiveInteger"
+    },
+    "objectFinBIFTaxon": {
+      "@id": "default:TDFX.objectFinBIFTaxon",
+      "@type": "@id"
+    },
+    "objectGBIFTaxon": {
+      "@id": "default:TDFX.objectGBIFTaxon",
+      "@type": "@id"
+    },
+    "objectTaxonLifeStage": {
+      "@id": "default:TDFX.objectTaxonLifeStage",
+      "@type": "@id"
+    },
+    "objectTaxonVerbatim": {
+      "@id": "default:TDFX.objectTaxonVerbatim",
+      "@type": "xsd:string"
+    },
+    "originalMeasurementAccuracy": {
+      "@id": "default:TDFX.originalMeasurementAccuracy",
+      "@type": "xsd:decimal"
+    },
+    "originalUnit": {
+      "@id": "default:TDFX.originalUnit",
+      "@type": "@id"
+    },
+    "originalValue": {
+      "@id": "default:TDFX.originalValue",
+      "@type": "xsd:string"
+    },
+    "originalValueNumeric": {
+      "@id": "default:TDFX.originalValueNumeric",
+      "@type": "xsd:decimal"
+    },
+    "reference": {
+      "@id": "default:TDFX.reference",
+      "@type": "xsd:string"
+    },
+    "statisticalMethod": {
+      "@id": "default:TDFX.statisticalMethod",
+      "@type": "@id"
+    },
+    "subject": {
+      "@id": "default:TDFX.subject",
+      "@type": "@id"
+    },
+    "subjectFinBIFTaxon": {
+      "@id": "default:TDFX.subjectFinBIFTaxon",
+      "@type": "@id"
+    },
+    "subjectGBIFTaxon": {
+      "@id": "default:TDFX.subjectGBIFTaxon",
+      "@type": "@id"
+    },
+    "trait": {
+      "@id": "default:TDFX.trait",
+      "@type": "@id"
+    },
+    "traitGroup": {
+      "@id": "default:TDFX.traitGroup",
+      "@type": "@id"
+    },
+    "unit": {
+      "@id": "default:TDFX.unit",
+      "@type": "@id"
+    },
+    "value": {
+      "@id": "default:TDFX.value",
+      "@type": "xsd:string"
+    },
+    "valueNumeric": {
+      "@id": "default:TDFX.valueNumeric",
+      "@type": "xsd:decimal"
+    },
+    "warnings": {
+      "@id": "default:TDFX.warnings",
+      "@type": "xsd:boolean"
+    },
+    "year": {
+      "@id": "default:TDFX.year",
+      "@type": "xsd:positiveInteger"
+    }
+  }
+}

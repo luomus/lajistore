@@ -1759,6 +1759,83 @@ export enum TDFRangeEnum {
   "xsd:boolean" = "xsd:boolean",
   "MX.taxon" = "MX.taxon"
 }
+export enum TDFUnitOfMeasurementEnum {
+  "empty" = "",
+  "umNM" = "TDF.umNM",
+  "umUM" = "TDF.umUM",
+  "umMM" = "TDF.umMM",
+  "umCM" = "TDF.umCM",
+  "umM" = "TDF.umM",
+  "umKM" = "TDF.umKM",
+  "umG" = "TDF.umG",
+  "umKG" = "TDF.umKG",
+  "umA" = "TDF.umA",
+  "umS" = "TDF.umS",
+  "umML" = "TDF.umML",
+  "umL" = "TDF.umL",
+  "umMOL" = "TDF.umMOL",
+  "umMMOL" = "TDF.umMMOL",
+  "umUMOL" = "TDF.umUMOL",
+  "umHZ" = "TDF.umHZ",
+  "umP" = "TDF.umP",
+  "umPPT" = "TDF.umPPT",
+  "umPPM" = "TDF.umPPM",
+  "umC" = "TDF.umC",
+  "umMM2" = "TDF.umMM2",
+  "umCM2" = "TDF.umCM2",
+  "umM2" = "TDF.umM2",
+  "umARE" = "TDF.umARE",
+  "umHA" = "TDF.umHA",
+  "umKM2" = "TDF.umKM2",
+  "umMM3" = "TDF.umMM3",
+  "umCM3" = "TDF.umCM3",
+  "umM3" = "TDF.umM3",
+  "umGMOL" = "TDF.umGMOL",
+  "umMOLL" = "TDF.umMOLL",
+  "umCM2H" = "TDF.umCM2H"
+}
+export enum TDFStatisticalMethodEnum {
+  "empty" = "",
+  "statisticalMethodMin" = "TDF.statisticalMethodMin",
+  "statisticalMethodMax" = "TDF.statisticalMethodMax",
+  "statisticalMethodAvg" = "TDF.statisticalMethodAvg",
+  "statisticalMethodMedian" = "TDF.statisticalMethodMedian",
+  "statisticalMethodSD" = "TDF.statisticalMethodSD",
+  "statisticalMethodMode" = "TDF.statisticalMethodMode"
+}
+export enum MYRecordBases {
+  "empty" = "",
+  "recordBasisPreservedSpecimen" = "MY.recordBasisPreservedSpecimen",
+  "recordBasisHumanObservation" = "MY.recordBasisHumanObservation",
+  "recordBasisHumanObservationSeen" = "MY.recordBasisHumanObservationSeen",
+  "recordBasisHumanObservationHeard" = "MY.recordBasisHumanObservationHeard",
+  "recordBasisHumanObservationHandled" = "MY.recordBasisHumanObservationHandled",
+  "recordBasisHumanObservationPhoto" = "MY.recordBasisHumanObservationPhoto",
+  "recordBasisHumanObservationAudio" = "MY.recordBasisHumanObservationAudio",
+  "recordBasisHumanObservationVideo" = "MY.recordBasisHumanObservationVideo",
+  "recordBasisHumanObservationIndirect" = "MY.recordBasisHumanObservationIndirect",
+  "recordBasisMachineObservation" = "MY.recordBasisMachineObservation",
+  "recordBasisMachineObservationPhoto" = "MY.recordBasisMachineObservationPhoto",
+  "recordBasisMachineObservationVideo" = "MY.recordBasisMachineObservationVideo",
+  "recordBasisMachineObservationAudio" = "MY.recordBasisMachineObservationAudio",
+  "recordBasisMachineObservationGeologger" = "MY.recordBasisMachineObservationGeologger",
+  "recordBasisMachineObservationSatelliteTransmitter" = "MY.recordBasisMachineObservationSatelliteTransmitter",
+  "recordBasisFossilSpecimen" = "MY.recordBasisFossilSpecimen",
+  "recordBasisSubfossilSpecimen" = "MY.recordBasisSubfossilSpecimen",
+  "recordBasisSubfossilSpecimenAmberInclusion" = "MY.recordBasisSubfossilSpecimenAmberInclusion",
+  "recordBasisMaterialSample" = "MY.recordBasisMaterialSample",
+  "recordBasisMaterialSampleAir" = "MY.recordBasisMaterialSampleAir",
+  "recordBasisMaterialSampleSoil" = "MY.recordBasisMaterialSampleSoil",
+  "recordBasisMaterialSampleWater" = "MY.recordBasisMaterialSampleWater",
+  "recordBasisMicrobialSpecimen" = "MY.recordBasisMicrobialSpecimen",
+  "recordBasisLivingSpecimen" = "MY.recordBasisLivingSpecimen",
+  "recordBasisLiterature" = "MY.recordBasisLiterature"
+}
+export enum TDFTypeEnum {
+  "typeIndividual" = "TDF.typeIndividual",
+  "typePopulationGroup" = "TDF.typePopulationGroup",
+  "typeTaxon" = "TDF.typeTaxon"
+}
 export enum HRAAvailableForGeneticResearchEnum {
   "empty" = "",
   "availableForGeneticResearchYes" = "HRA.availableForGeneticResearchYes",
@@ -2077,34 +2154,6 @@ export enum MYProvenanceEnum {
   "provenanceWildSourceUnsure" = "MY.provenanceWildSourceUnsure",
   "provenanceEscapedCultivated" = "MY.provenanceEscapedCultivated",
   "provenancePropagule" = "MY.provenancePropagule"
-}
-export enum MYRecordBases {
-  "empty" = "",
-  "recordBasisPreservedSpecimen" = "MY.recordBasisPreservedSpecimen",
-  "recordBasisHumanObservation" = "MY.recordBasisHumanObservation",
-  "recordBasisHumanObservationSeen" = "MY.recordBasisHumanObservationSeen",
-  "recordBasisHumanObservationHeard" = "MY.recordBasisHumanObservationHeard",
-  "recordBasisHumanObservationHandled" = "MY.recordBasisHumanObservationHandled",
-  "recordBasisHumanObservationPhoto" = "MY.recordBasisHumanObservationPhoto",
-  "recordBasisHumanObservationAudio" = "MY.recordBasisHumanObservationAudio",
-  "recordBasisHumanObservationVideo" = "MY.recordBasisHumanObservationVideo",
-  "recordBasisHumanObservationIndirect" = "MY.recordBasisHumanObservationIndirect",
-  "recordBasisMachineObservation" = "MY.recordBasisMachineObservation",
-  "recordBasisMachineObservationPhoto" = "MY.recordBasisMachineObservationPhoto",
-  "recordBasisMachineObservationVideo" = "MY.recordBasisMachineObservationVideo",
-  "recordBasisMachineObservationAudio" = "MY.recordBasisMachineObservationAudio",
-  "recordBasisMachineObservationGeologger" = "MY.recordBasisMachineObservationGeologger",
-  "recordBasisMachineObservationSatelliteTransmitter" = "MY.recordBasisMachineObservationSatelliteTransmitter",
-  "recordBasisFossilSpecimen" = "MY.recordBasisFossilSpecimen",
-  "recordBasisSubfossilSpecimen" = "MY.recordBasisSubfossilSpecimen",
-  "recordBasisSubfossilSpecimenAmberInclusion" = "MY.recordBasisSubfossilSpecimenAmberInclusion",
-  "recordBasisMaterialSample" = "MY.recordBasisMaterialSample",
-  "recordBasisMaterialSampleAir" = "MY.recordBasisMaterialSampleAir",
-  "recordBasisMaterialSampleSoil" = "MY.recordBasisMaterialSampleSoil",
-  "recordBasisMaterialSampleWater" = "MY.recordBasisMaterialSampleWater",
-  "recordBasisMicrobialSpecimen" = "MY.recordBasisMicrobialSpecimen",
-  "recordBasisLivingSpecimen" = "MY.recordBasisLivingSpecimen",
-  "recordBasisLiterature" = "MY.recordBasisLiterature"
 }
 export enum MYRecordPartsEnum {
   "empty" = "",

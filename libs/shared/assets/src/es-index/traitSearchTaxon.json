@@ -1,0 +1,80 @@
+{
+  "settings": {
+    "number_of_shards": 3,
+    "index.mapping.ignore_malformed": true,
+    "index.max_result_window": 1000000,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword",
+        "normalizer": "useLowercase"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "scientificName": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "author": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "cursiveName": {
+        "type": "boolean"
+      },
+      "habitatSpecifiers": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "iucnStatus": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "primaryHabitat": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "sensitive": {
+        "type": "boolean"
+      },
+      "taxonRank": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "taxonomicOrder": {
+        "type": "integer"
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

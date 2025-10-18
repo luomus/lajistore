@@ -46934,6 +46934,2856 @@
         }
       }
     },
+    "/traitSearchDataset": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchDataset"
+        ],
+        "operationId": "listtraitSearchDataset",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of traitSearchDataset objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitSearchDataset.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSearchDataset"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchDataset"
+        ],
+        "operationId": "storetraitSearchDataset",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/traitSearchDataset"
+              }
+            }
+          }
+        },
+        "description": "Store traitSearchDataset object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored traitSearchDataset object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSearchDataset"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchDataset"
+        ],
+        "operationId": "patchtraitSearchDataset",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch traitsearchdataset (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching traitsearchdataset.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitSearchDataset.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSearchDataset"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchDataset/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchDataset"
+        ],
+        "operationId": "searchtraitSearchDataset",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of traitSearchDataset objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitSearchDataset.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSearchDataset"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchDataset/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchDataset"
+        ],
+        "operationId": "gettraitSearchDataset",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchDataset",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a traitSearchDataset.",
+        "responses": {
+          "200": {
+            "description": "a traitSearchDataset.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSearchDataset"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchDataset"
+        ],
+        "operationId": "updatetraitSearchDataset",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchDataset",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/traitSearchDataset"
+              }
+            }
+          }
+        },
+        "description": "Store traitSearchDataset",
+        "responses": {
+          "200": {
+            "description": "Stored traitSearchDataset",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSearchDataset"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchDataset"
+        ],
+        "operationId": "deletetraitSearchDataset",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchDataset",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete traitSearchDataset",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchDataset/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOftraitSearchDataset",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchDataset",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "traitSearchDataset"
+        ],
+        "description": "Return a traitSearchDataset.",
+        "responses": {
+          "200": {
+            "description": "a traitSearchDataset.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchDataset/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchDataset"
+        ],
+        "operationId": "versiontraitSearchDataset",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchDataset",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the traitSearchDataset",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a traitSearchDataset.",
+        "responses": {
+          "200": {
+            "description": "a traitSearchDataset.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSearchDataset"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchRow": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchRow"
+        ],
+        "operationId": "listtraitSearchRow",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of traitSearchRow objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitSearchRow.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSearchRow"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchRow"
+        ],
+        "operationId": "storetraitSearchRow",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/traitSearchRow"
+              }
+            }
+          }
+        },
+        "description": "Store traitSearchRow object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored traitSearchRow object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSearchRow"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchRow"
+        ],
+        "operationId": "patchtraitSearchRow",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch traitsearchrow (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching traitsearchrow.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitSearchRow.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSearchRow"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchRow/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchRow"
+        ],
+        "operationId": "searchtraitSearchRow",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of traitSearchRow objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitSearchRow.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSearchRow"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchRow/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchRow"
+        ],
+        "operationId": "gettraitSearchRow",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchRow",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a traitSearchRow.",
+        "responses": {
+          "200": {
+            "description": "a traitSearchRow.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSearchRow"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchRow"
+        ],
+        "operationId": "updatetraitSearchRow",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchRow",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/traitSearchRow"
+              }
+            }
+          }
+        },
+        "description": "Store traitSearchRow",
+        "responses": {
+          "200": {
+            "description": "Stored traitSearchRow",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSearchRow"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchRow"
+        ],
+        "operationId": "deletetraitSearchRow",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchRow",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete traitSearchRow",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchRow/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOftraitSearchRow",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchRow",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "traitSearchRow"
+        ],
+        "description": "Return a traitSearchRow.",
+        "responses": {
+          "200": {
+            "description": "a traitSearchRow.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchRow/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchRow"
+        ],
+        "operationId": "versiontraitSearchRow",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchRow",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the traitSearchRow",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a traitSearchRow.",
+        "responses": {
+          "200": {
+            "description": "a traitSearchRow.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSearchRow"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchTaxon": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchTaxon"
+        ],
+        "operationId": "listtraitSearchTaxon",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of traitSearchTaxon objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitSearchTaxon.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSearchTaxon"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchTaxon"
+        ],
+        "operationId": "storetraitSearchTaxon",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/traitSearchTaxon"
+              }
+            }
+          }
+        },
+        "description": "Store traitSearchTaxon object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored traitSearchTaxon object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSearchTaxon"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchTaxon"
+        ],
+        "operationId": "patchtraitSearchTaxon",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch traitsearchtaxon (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching traitsearchtaxon.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitSearchTaxon.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSearchTaxon"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchTaxon/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchTaxon"
+        ],
+        "operationId": "searchtraitSearchTaxon",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of traitSearchTaxon objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitSearchTaxon.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSearchTaxon"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchTaxon/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchTaxon"
+        ],
+        "operationId": "gettraitSearchTaxon",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchTaxon",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a traitSearchTaxon.",
+        "responses": {
+          "200": {
+            "description": "a traitSearchTaxon.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSearchTaxon"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchTaxon"
+        ],
+        "operationId": "updatetraitSearchTaxon",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchTaxon",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/traitSearchTaxon"
+              }
+            }
+          }
+        },
+        "description": "Store traitSearchTaxon",
+        "responses": {
+          "200": {
+            "description": "Stored traitSearchTaxon",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSearchTaxon"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchTaxon"
+        ],
+        "operationId": "deletetraitSearchTaxon",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchTaxon",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete traitSearchTaxon",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchTaxon/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOftraitSearchTaxon",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchTaxon",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "traitSearchTaxon"
+        ],
+        "description": "Return a traitSearchTaxon.",
+        "responses": {
+          "200": {
+            "description": "a traitSearchTaxon.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSearchTaxon/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSearchTaxon"
+        ],
+        "operationId": "versiontraitSearchTaxon",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSearchTaxon",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the traitSearchTaxon",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a traitSearchTaxon.",
+        "responses": {
+          "200": {
+            "description": "a traitSearchTaxon.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSearchTaxon"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSubject": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSubject"
+        ],
+        "operationId": "listtraitSubject",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of traitSubject objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitSubject.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSubject"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSubject"
+        ],
+        "operationId": "storetraitSubject",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/traitSubject"
+              }
+            }
+          }
+        },
+        "description": "Store traitSubject object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored traitSubject object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSubject"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSubject"
+        ],
+        "operationId": "patchtraitSubject",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch traitsubject (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching traitsubject.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitSubject.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSubject"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSubject/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSubject"
+        ],
+        "operationId": "searchtraitSubject",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of traitSubject objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitSubject.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSubject"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSubject/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSubject"
+        ],
+        "operationId": "gettraitSubject",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSubject",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a traitSubject.",
+        "responses": {
+          "200": {
+            "description": "a traitSubject.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSubject"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSubject"
+        ],
+        "operationId": "updatetraitSubject",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSubject",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/traitSubject"
+              }
+            }
+          }
+        },
+        "description": "Store traitSubject",
+        "responses": {
+          "200": {
+            "description": "Stored traitSubject",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSubject"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSubject"
+        ],
+        "operationId": "deletetraitSubject",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSubject",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete traitSubject",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSubject/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOftraitSubject",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSubject",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "traitSubject"
+        ],
+        "description": "Return a traitSubject.",
+        "responses": {
+          "200": {
+            "description": "a traitSubject.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitSubject/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitSubject"
+        ],
+        "operationId": "versiontraitSubject",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitSubject",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the traitSubject",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a traitSubject.",
+        "responses": {
+          "200": {
+            "description": "a traitSubject.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitSubject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitValue": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitValue"
+        ],
+        "operationId": "listtraitValue",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of traitValue objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitValue.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitValue"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitValue"
+        ],
+        "operationId": "storetraitValue",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/traitValue"
+              }
+            }
+          }
+        },
+        "description": "Store traitValue object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored traitValue object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitValue"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitValue"
+        ],
+        "operationId": "patchtraitValue",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch traitvalue (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching traitvalue.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitValue.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitValue"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitValue/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitValue"
+        ],
+        "operationId": "searchtraitValue",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of traitValue objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  traitValue.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitValue"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitValue/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitValue"
+        ],
+        "operationId": "gettraitValue",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitValue",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a traitValue.",
+        "responses": {
+          "200": {
+            "description": "a traitValue.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitValue"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitValue"
+        ],
+        "operationId": "updatetraitValue",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitValue",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/traitValue"
+              }
+            }
+          }
+        },
+        "description": "Store traitValue",
+        "responses": {
+          "200": {
+            "description": "Stored traitValue",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitValue"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitValue"
+        ],
+        "operationId": "deletetraitValue",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitValue",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete traitValue",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitValue/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOftraitValue",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitValue",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "traitValue"
+        ],
+        "description": "Return a traitValue.",
+        "responses": {
+          "200": {
+            "description": "a traitValue.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/traitValue/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "traitValue"
+        ],
+        "operationId": "versiontraitValue",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the traitValue",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the traitValue",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a traitValue.",
+        "responses": {
+          "200": {
+            "description": "a traitValue.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/traitValue"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/transaction": {
       "get": {
         "security": [
@@ -53715,6 +56565,36 @@
                       "$ref": "#/components/schemas/traitGroup"
                     }
                   },
+                  "traitSearchDataset": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/traitSearchDataset"
+                    }
+                  },
+                  "traitSearchRow": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/traitSearchRow"
+                    }
+                  },
+                  "traitSearchTaxon": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/traitSearchTaxon"
+                    }
+                  },
+                  "traitSubject": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/traitSubject"
+                    }
+                  },
+                  "traitValue": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/traitValue"
+                    }
+                  },
                   "transaction": {
                     "type": "array",
                     "items": {
@@ -54287,6 +57167,36 @@
                       "type": "array",
                       "items": {
                         "$ref": "#/components/schemas/traitGroup"
+                      }
+                    },
+                    "traitSearchDataset": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSearchDataset"
+                      }
+                    },
+                    "traitSearchRow": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSearchRow"
+                      }
+                    },
+                    "traitSearchTaxon": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSearchTaxon"
+                      }
+                    },
+                    "traitSubject": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitSubject"
+                      }
+                    },
+                    "traitValue": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/traitValue"
                       }
                     },
                     "transaction": {
@@ -66079,6 +68989,1137 @@
         ],
         "additionalProperties": false
       },
+      "traitSearchDataset": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the TDFX.traitSearchDataset"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the TDFX.traitSearchDataset"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the TDFX.traitSearchDataset"
+          },
+          "additionalIdentifier": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "title": "Identifier of this dataset/collection in other databases"
+          },
+          "citation": {
+            "type": "string",
+            "description": "Example how to cite this collection in a scientific article, if using organization, name and abbreviation is not enough.",
+            "title": "Citation recommendation"
+          },
+          "contactEmail": {
+            "type": "string",
+            "description": "Personal or general (e.g. group of people in the organisation) email address to reach the person(s) responsible.",
+            "title": "Contact email"
+          },
+          "coverageBasis": {
+            "$ref": "#/components/schemas/multiLang"
+          },
+          "description": {
+            "$ref": "#/components/schemas/multiLang"
+          },
+          "doi": {
+            "type": "string",
+            "title": "DOI provided by FinBIF"
+          },
+          "gbifDoi": {
+            "type": "string",
+            "description": "Admin field. DOI received from GBIF after the collection has been published.",
+            "title": "Collection DOI from GBIF"
+          },
+          "geographicCoverage": {
+            "$ref": "#/components/schemas/multiLang"
+          },
+          "institutionCode": {
+            "type": "string",
+            "description": "Institution code for natural history specimen collection holding institution, such as H, MHZ or TUR",
+            "title": "Institution code"
+          },
+          "intellectualOwner": {
+            "type": "string",
+            "description": "Name of the institution or organisation publishing the data.",
+            "title": "Publisher name (en)"
+          },
+          "methods": {
+            "$ref": "#/components/schemas/multiLang"
+          },
+          "personResponsible": {
+            "type": "string",
+            "description": "Person(s) responsible for the collection (Lastname, Firstname; Lastname, Firstname).",
+            "title": "Person responsible"
+          },
+          "taxonomicCoverage": {
+            "$ref": "#/components/schemas/multiLang"
+          },
+          "temporalCoverage": {
+            "$ref": "#/components/schemas/multiLang"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "required": [
+          "contactEmail",
+          "description",
+          "personResponsible",
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "traitSearchRow": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the TDFX.traitSearchRow"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the TDFX.traitSearchRow"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the TDFX.traitSearchRow"
+          },
+          "dataset": {
+            "type": "string",
+            "title": "Dataset"
+          },
+          "day": {
+            "type": "integer",
+            "exclusiveMinimum": true,
+            "title": "Day",
+            "minimum": 0
+          },
+          "eventDate": {
+            "type": "string",
+            "format": "date",
+            "title": "Event Date"
+          },
+          "geodeticDatum": {
+            "type": "string",
+            "title": "Geodetic Datum (CRS)"
+          },
+          "license": {
+            "type": "string",
+            "enum": [
+              "MZ.intellectualRightsCC-BY-SA-4.0",
+              "MZ.intellectualRightsCC-BY-NC-4.0",
+              "MZ.intellectualRightsCC-BY-NC-SA-4.0",
+              "MZ.intellectualRightsCC-BY-4.0",
+              "MZ.intellectualRightsCC0-4.0",
+              "MZ.intellectualRightsODBL-1.0",
+              "MZ.intellectualRightsPD",
+              "MZ.intellectualRightsARR",
+              "MZ.intellectualRightsCC-BY-2.0",
+              "MZ.intellectualRightsCC-BY-SA-2.0",
+              "MZ.intellectualRightsCC-BY-SA-2.0-DE",
+              "MZ.intellectualRightsCC-BY-NC-2.0",
+              "MZ.intellectualRightsCC-BY-NC-SA-2.0",
+              "MZ.intellectualRightsCC-BY-NC-ND-2.0",
+              "MZ.intellectualRightsCC-BY-SA-2.5",
+              "MZ.intellectualRightsCC-BY-SA-2.5-SE",
+              "MZ.intellectualRightsCC-BY-3.0",
+              "MZ.intellectualRightsCC-BY-SA-3.0",
+              "MZ.intellectualRightsCC-BY-NC-SA-3.0",
+              "MZ.intellectualRightsCC-BY-ND-4.0",
+              "MZ.intellectualRightsCC-BY-NC-ND-4.0",
+              "MY.intellectualRightsCC-BY",
+              "MY.intellectualRightsCC0"
+            ],
+            "title": "License"
+          },
+          "measurementAccuracy": {
+            "type": "number",
+            "title": "Measurement Accuracy"
+          },
+          "measurementRemarks": {
+            "type": "string",
+            "title": "Measurement remarks"
+          },
+          "month": {
+            "type": "integer",
+            "exclusiveMinimum": true,
+            "title": "Month",
+            "minimum": 0
+          },
+          "objectFinBIFTaxon": {
+            "type": "string",
+            "title": "Object FinBIF taxon"
+          },
+          "objectGBIFTaxon": {
+            "type": "string",
+            "title": "Object GBIF taxon"
+          },
+          "objectTaxonLifeStage": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.lifeStageAdult",
+              "MY.lifeStageNymph",
+              "MY.lifeStageLarva",
+              "MY.lifeStageEgg",
+              "MY.lifeStagePupa",
+              "MY.lifeStageJuvenile",
+              "MY.lifeStageSubimago",
+              "MY.lifeStageImmature",
+              "MY.lifeStageFertile",
+              "MY.lifeStageSterile",
+              "MY.lifeStageTadpole",
+              "MY.lifeStageEmbryo",
+              "MY.lifeStageSubadult",
+              "MY.lifeStageMature",
+              "MY.lifeStagePullus",
+              "MY.lifeStageHatchedEgg",
+              "MY.lifeStageHatchedPupa",
+              "MY.lifeStageGall",
+              "MY.lifeStageMarks",
+              "MY.lifeStageTriungulin",
+              "MY.lifeStageExuvia"
+            ],
+            "title": "Object Life Stage"
+          },
+          "objectTaxonVerbatim": {
+            "type": "string",
+            "title": "Object Scientific Name"
+          },
+          "originalMeasurementAccuracy": {
+            "type": "number",
+            "title": "Measurement accuracy - original"
+          },
+          "originalUnit": {
+            "type": "string",
+            "enum": [
+              "",
+              "TDF.umNM",
+              "TDF.umUM",
+              "TDF.umMM",
+              "TDF.umCM",
+              "TDF.umM",
+              "TDF.umKM",
+              "TDF.umG",
+              "TDF.umKG",
+              "TDF.umA",
+              "TDF.umS",
+              "TDF.umML",
+              "TDF.umL",
+              "TDF.umMOL",
+              "TDF.umMMOL",
+              "TDF.umUMOL",
+              "TDF.umHZ",
+              "TDF.umP",
+              "TDF.umPPT",
+              "TDF.umPPM",
+              "TDF.umC",
+              "TDF.umMM2",
+              "TDF.umCM2",
+              "TDF.umM2",
+              "TDF.umARE",
+              "TDF.umHA",
+              "TDF.umKM2",
+              "TDF.umMM3",
+              "TDF.umCM3",
+              "TDF.umM3",
+              "TDF.umGMOL",
+              "TDF.umMOLL",
+              "TDF.umCM2H"
+            ],
+            "title": "Unit of Measurement - Original"
+          },
+          "originalValue": {
+            "type": "string",
+            "title": "Value - Original"
+          },
+          "originalValueNumeric": {
+            "type": "number",
+            "title": "Numeric Value - Original"
+          },
+          "reference": {
+            "type": "string",
+            "title": "Reference"
+          },
+          "statisticalMethod": {
+            "type": "string",
+            "enum": [
+              "",
+              "TDF.statisticalMethodMin",
+              "TDF.statisticalMethodMax",
+              "TDF.statisticalMethodAvg",
+              "TDF.statisticalMethodMedian",
+              "TDF.statisticalMethodSD",
+              "TDF.statisticalMethodMode"
+            ],
+            "title": "Statistical Method"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "subjectFinBIFTaxon": {
+            "type": "string",
+            "title": "Subject FinBIF taxon"
+          },
+          "subjectGBIFTaxon": {
+            "type": "string",
+            "title": "Subject GBIF taxon"
+          },
+          "trait": {
+            "type": "string",
+            "title": "Trait"
+          },
+          "traitGroup": {
+            "type": "string",
+            "title": "Trait group"
+          },
+          "unit": {
+            "type": "string",
+            "enum": [
+              "",
+              "TDF.umNM",
+              "TDF.umUM",
+              "TDF.umMM",
+              "TDF.umCM",
+              "TDF.umM",
+              "TDF.umKM",
+              "TDF.umG",
+              "TDF.umKG",
+              "TDF.umA",
+              "TDF.umS",
+              "TDF.umML",
+              "TDF.umL",
+              "TDF.umMOL",
+              "TDF.umMMOL",
+              "TDF.umUMOL",
+              "TDF.umHZ",
+              "TDF.umP",
+              "TDF.umPPT",
+              "TDF.umPPM",
+              "TDF.umC",
+              "TDF.umMM2",
+              "TDF.umCM2",
+              "TDF.umM2",
+              "TDF.umARE",
+              "TDF.umHA",
+              "TDF.umKM2",
+              "TDF.umMM3",
+              "TDF.umCM3",
+              "TDF.umM3",
+              "TDF.umGMOL",
+              "TDF.umMOLL",
+              "TDF.umCM2H"
+            ],
+            "title": "Unit of Measurement"
+          },
+          "value": {
+            "type": "string",
+            "title": "Value"
+          },
+          "valueNumeric": {
+            "type": "number",
+            "title": "Numeric value"
+          },
+          "warnings": {
+            "type": "boolean",
+            "title": "Flagged"
+          },
+          "year": {
+            "type": "integer",
+            "exclusiveMinimum": true,
+            "title": "Year",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "dataset",
+          "license",
+          "originalValue",
+          "subject",
+          "trait",
+          "traitGroup",
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "traitSearchTaxon": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the TDFX.traitSearchTaxon"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the TDFX.traitSearchTaxon"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the TDFX.traitSearchTaxon"
+          },
+          "scientificName": {
+            "type": "string",
+            "title": "Scientific name"
+          },
+          "author": {
+            "type": "string",
+            "title": "Author"
+          },
+          "cursiveName": {
+            "type": "boolean",
+            "title": "cursiveName"
+          },
+          "habitatSpecifiers": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string",
+              "enum": [
+                "",
+                "MKV.habitatSpecificTypeV",
+                "MKV.habitatSpecificTypeH",
+                "MKV.habitatSpecificTypeP",
+                "MKV.habitatSpecificTypeJ",
+                "MKV.habitatSpecificTypePAK",
+                "MKV.habitatSpecificTypeVAK",
+                "MKV.habitatSpecificTypeRA",
+                "MKV.habitatSpecificTypeKA",
+                "MKV.habitatSpecificTypeKE",
+                "MKV.habitatSpecificTypeCA"
+              ]
+            },
+            "minItems": 0,
+            "title": "Habitat"
+          },
+          "iucnStatus": {
+            "type": "string",
+            "enum": [
+              "",
+              "MX.iucnEX",
+              "MX.iucnEW",
+              "MX.iucnRE",
+              "MX.iucnCR",
+              "MX.iucnEN",
+              "MX.iucnVU",
+              "MX.iucnNT",
+              "MX.iucnLC",
+              "MX.iucnDD",
+              "MX.iucnNA",
+              "MX.iucnNE"
+            ],
+            "title": "IUCN status"
+          },
+          "primaryHabitat": {
+            "type": "string",
+            "enum": [
+              "",
+              "MKV.habitatM",
+              "MKV.habitatMk",
+              "MKV.habitatMkk",
+              "MKV.habitatMkt",
+              "MKV.habitatMl",
+              "MKV.habitatMlt",
+              "MKV.habitatMlk",
+              "MKV.habitatMt",
+              "MKV.habitatMtl",
+              "MKV.habitatS",
+              "MKV.habitatSl",
+              "MKV.habitatSla",
+              "MKV.habitatSlr",
+              "MKV.habitatSlk",
+              "MKV.habitatSn",
+              "MKV.habitatSnk",
+              "MKV.habitatSnr",
+              "MKV.habitatSr",
+              "MKV.habitatSrk",
+              "MKV.habitatSrr",
+              "MKV.habitatSk",
+              "MKV.habitatSkk",
+              "MKV.habitatSkr",
+              "MKV.habitatV",
+              "MKV.habitatVi",
+              "MKV.habitatVik",
+              "MKV.habitatVim",
+              "MKV.habitatVis",
+              "MKV.habitatVih",
+              "MKV.habitatVie",
+              "MKV.habitatVip",
+              "MKV.habitatVs",
+              "MKV.habitatVsk",
+              "MKV.habitatVsr",
+              "MKV.habitatVa",
+              "MKV.habitatVj",
+              "MKV.habitatVp",
+              "MKV.habitatVk",
+              "MKV.habitatVl",
+              "MKV.habitatR",
+              "MKV.habitatRi",
+              "MKV.habitatRim",
+              "MKV.habitatRimt",
+              "MKV.habitatRiml",
+              "MKV.habitatRip",
+              "MKV.habitatRin",
+              "MKV.habitatRil",
+              "MKV.habitatRir",
+              "MKV.habitatRis",
+              "MKV.habitatRih",
+              "MKV.habitatRit",
+              "MKV.habitatRj",
+              "MKV.habitatRjm",
+              "MKV.habitatRjmt",
+              "MKV.habitatRjml",
+              "MKV.habitatRjp",
+              "MKV.habitatRjn",
+              "MKV.habitatRjl",
+              "MKV.habitatRjr",
+              "MKV.habitatRjs",
+              "MKV.habitatRjh",
+              "MKV.habitatRjt",
+              "MKV.habitatK",
+              "MKV.habitatKk",
+              "MKV.habitatKs",
+              "MKV.habitatKr",
+              "MKV.habitatKl",
+              "MKV.habitatKm",
+              "MKV.habitatT",
+              "MKV.habitatTk",
+              "MKV.habitatTn",
+              "MKV.habitatTu",
+              "MKV.habitatTp",
+              "MKV.habitatTl",
+              "MKV.habitatTll",
+              "MKV.habitatTlk",
+              "MKV.habitatTls",
+              "MKV.habitatTlr",
+              "MKV.habitatTlä",
+              "MKV.habitatTs",
+              "MKV.habitatTj",
+              "MKV.habitatTv",
+              "MKV.habitatTa",
+              "MKV.habitatI",
+              "MKV.habitatIn",
+              "MKV.habitatIt",
+              "MKV.habitatIh",
+              "MKV.habitatIk",
+              "MKV.habitatIo",
+              "MKV.habitatIv",
+              "MKV.habitatIp",
+              "MKV.habitatIu",
+              "MKV.habitatIr",
+              "MKV.habitatU"
+            ],
+            "title": "Primary Habitat"
+          },
+          "sensitive": {
+            "type": "boolean",
+            "title": "Sensitive Taxon"
+          },
+          "taxonRank": {
+            "type": "string",
+            "title": "Taxon rank"
+          },
+          "taxonomicOrder": {
+            "type": "integer",
+            "title": "taxonomicOrder"
+          }
+        },
+        "additionalProperties": false
+      },
+      "traitSubject": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the TDFX.traitSubject"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the TDFX.traitSubject"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the TDFX.traitSubject"
+          },
+          "scientificName": {
+            "type": "string",
+            "title": "Scientific name"
+          },
+          "country": {
+            "type": "string",
+            "description": "Country name in English, or 2-letter country code, or name from label",
+            "title": "Country"
+          },
+          "dateBegin": {
+            "type": "string",
+            "title": "Start date"
+          },
+          "dateEnd": {
+            "type": "string",
+            "title": "End date"
+          },
+          "habitat": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string",
+              "enum": [
+                "",
+                "MY.habitatEnumValue1",
+                "MY.habitatEnumValue2",
+                "MY.habitatEnumValue3",
+                "MY.habitatEnumValue4",
+                "MY.habitatEnumValue5",
+                "MY.habitatEnumValue6",
+                "MY.habitatEnumValue7",
+                "MY.habitatEnumValue8",
+                "MY.habitatEnumValue9",
+                "MY.habitatEnumValue10",
+                "MY.habitatEnumValue11",
+                "MY.habitatEnumValue12",
+                "MY.habitatEnumValue13",
+                "MY.habitatEnumValue14",
+                "MY.habitatEnumValue15",
+                "MY.habitatEnumValue16",
+                "MY.habitatEnumValue17",
+                "MY.habitatEnumValue18",
+                "MY.habitatEnumValue19",
+                "MY.habitatEnumValue20",
+                "MY.habitatEnumValue21",
+                "MY.habitatEnumValue22",
+                "MY.habitatEnumValue23",
+                "MY.habitatEnumValue24",
+                "MY.habitatEnumValue25",
+                "MY.habitatEnumValue26",
+                "MY.habitatEnumValue27",
+                "MY.habitatEnumValue28",
+                "MY.habitatEnumValue29",
+                "MY.habitatEnumValue30",
+                "MY.habitatEnumValue31",
+                "MY.habitatEnumValue32",
+                "MY.habitatEnumValue33",
+                "MY.habitatEnumValue34",
+                "MY.habitatEnumValue35",
+                "MY.habitatEnumValue36",
+                "MY.habitatEnumValue87",
+                "MY.habitatEnumValue40",
+                "MY.habitatEnumValue41",
+                "MY.habitatEnumValue42",
+                "MY.habitatEnumValue43",
+                "MY.habitatEnumValue44",
+                "MY.habitatEnumValue45",
+                "MY.habitatEnumValue46",
+                "MY.habitatEnumValue47",
+                "MY.habitatEnumValue48",
+                "MY.habitatEnumValue49",
+                "MY.habitatEnumValue50",
+                "MY.habitatEnumValue51",
+                "MY.habitatEnumValue52",
+                "MY.habitatEnumValue53",
+                "MY.habitatEnumValue54",
+                "MY.habitatEnumValue56",
+                "MY.habitatEnumValue57",
+                "MY.habitatEnumValue58",
+                "MY.habitatEnumValue59",
+                "MY.habitatEnumValue60",
+                "MY.habitatEnumValue61",
+                "MY.habitatEnumValue62",
+                "MY.habitatEnumValue64",
+                "MY.habitatEnumValue66",
+                "MY.habitatEnumValue67",
+                "MY.habitatEnumValue68",
+                "MY.habitatEnumValue69",
+                "MY.habitatEnumValue70",
+                "MY.habitatEnumValue71",
+                "MY.habitatEnumValue72",
+                "MY.habitatEnumValue73",
+                "MY.habitatEnumValue74",
+                "MY.habitatEnumValue76",
+                "MY.habitatEnumValue77",
+                "MY.habitatEnumValue78",
+                "MY.habitatEnumValue79",
+                "MY.habitatEnumValue80",
+                "MY.habitatEnumValue81",
+                "MY.habitatEnumValue82",
+                "MY.habitatEnumValue83",
+                "MY.habitatEnumValue84",
+                "MY.habitatEnumValue85",
+                "MY.habitatEnumValue86",
+                "MY.habitatEnumValue88",
+                "MY.habitatEnumValue89",
+                "MY.habitatEnumValue90",
+                "MY.habitatEnumValue91",
+                "MY.habitatEnumValue92",
+                "MY.habitatEnumValue93",
+                "MY.habitatEnumValue94",
+                "MY.habitatEnumValue95",
+                "MY.habitatEnumValue96",
+                "MY.habitatEnumValue97",
+                "MY.habitatEnumValue98",
+                "MY.habitatEnumValue99",
+                "MY.habitatEnumValue100",
+                "MY.habitatEnumValue101",
+                "MY.habitatEnumValue102",
+                "MY.habitatEnumValue103",
+                "MY.habitatEnumValue104",
+                "MY.habitatEnumValue105",
+                "MY.habitatEnumValue106",
+                "MY.habitatEnumValue107",
+                "MY.habitatEnumValue108",
+                "MY.habitatEnumValue109",
+                "MY.habitatEnumValue110",
+                "MY.habitatEnumValue111",
+                "MY.habitatEnumValue112",
+                "MY.habitatEnumValue113",
+                "MY.habitatEnumValue114",
+                "MY.habitatEnumValue115",
+                "MY.habitatEnumValue116",
+                "MY.habitatEnumValue117",
+                "MY.habitatEnumValue118",
+                "MY.habitatEnumValue119",
+                "MY.habitatEnumValue120",
+                "MY.habitatEnumValue121",
+                "MY.habitatEnumValue122",
+                "MY.habitatEnumValue123",
+                "MY.habitatEnumValue124",
+                "MY.habitatEnumValue125",
+                "MY.habitatEnumValue126",
+                "MY.habitatEnumValue127",
+                "MY.habitatEnumValue128",
+                "MY.habitatEnumValue129",
+                "MY.habitatEnumValue130",
+                "MY.habitatEnumValue131",
+                "MY.habitatEnumValue132",
+                "MY.habitatEnumValue133",
+                "MY.habitatEnumValue134",
+                "MY.habitatEnumValue135",
+                "MY.habitatEnumValue136",
+                "MY.habitatEnumValue137",
+                "MY.habitatEnumValue138",
+                "MY.habitatEnumValue139",
+                "MY.habitatEnumValue140",
+                "MY.habitatEnumValue141",
+                "MY.habitatEnumValue142",
+                "MY.habitatEnumValue143",
+                "MY.habitatEnumValue144",
+                "MY.habitatEnumValue145",
+                "MY.habitatEnumValue146",
+                "MY.habitatEnumValue147",
+                "MY.habitatEnumValue148",
+                "MY.habitatEnumValue149",
+                "MY.habitatEnumValue150",
+                "MY.habitatEnumValue151",
+                "MY.habitatEnumValue152",
+                "MY.habitatEnumValue153",
+                "MY.habitatEnumValue154",
+                "MY.habitatEnumValue155",
+                "MY.habitatEnumValue156",
+                "MY.habitatEnumValue157",
+                "MY.habitatEnumValue158",
+                "MY.habitatEnumValue159",
+                "MY.habitatEnumValue160",
+                "MY.habitatEnumValue161",
+                "MY.habitatEnumValue162",
+                "MY.habitatEnumValue163",
+                "MY.habitatEnumValue164",
+                "MY.habitatEnumValue165",
+                "MY.habitatEnumValue166",
+                "MY.habitatEnumValue167",
+                "MY.habitatEnumValue168",
+                "MY.habitatEnumValue169",
+                "MY.habitatEnumValue170"
+              ]
+            },
+            "minItems": 0,
+            "title": "Habitat"
+          },
+          "higherGeography": {
+            "type": "string",
+            "description": "If country is not known or not applicable, for example continent, ocean or large island",
+            "title": "Higher geography"
+          },
+          "individualCount": {
+            "type": "integer",
+            "minimum": 0,
+            "title": "Individual count"
+          },
+          "lifeStage": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.lifeStageAdult",
+              "MY.lifeStageNymph",
+              "MY.lifeStageLarva",
+              "MY.lifeStageEgg",
+              "MY.lifeStagePupa",
+              "MY.lifeStageJuvenile",
+              "MY.lifeStageSubimago",
+              "MY.lifeStageImmature",
+              "MY.lifeStageFertile",
+              "MY.lifeStageSterile",
+              "MY.lifeStageTadpole",
+              "MY.lifeStageEmbryo",
+              "MY.lifeStageSubadult",
+              "MY.lifeStageMature",
+              "MY.lifeStagePullus",
+              "MY.lifeStageHatchedEgg",
+              "MY.lifeStageHatchedPupa",
+              "MY.lifeStageGall",
+              "MY.lifeStageMarks",
+              "MY.lifeStageTriungulin",
+              "MY.lifeStageExuvia"
+            ],
+            "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
+            "title": "Life stage"
+          },
+          "locality": {
+            "type": "string",
+            "description": "Official name of the locality in basic form. Separate multiple names with commas, from generic to specific. No informal description here.",
+            "title": "Locality names"
+          },
+          "municipality": {
+            "type": "string",
+            "description": "Municipality, commune, town, city or civil parish",
+            "title": "Municipality"
+          },
+          "sex": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.sexM",
+              "MY.sexF",
+              "MY.sexW",
+              "MY.sexU",
+              "MY.sexN",
+              "MY.sexX",
+              "MY.sexE",
+              "MY.sexC"
+            ],
+            "description": "Sex of the individual(s)",
+            "title": "Sex"
+          },
+          "ageYears": {
+            "type": "number",
+            "title": "Age in Years"
+          },
+          "author": {
+            "type": "string",
+            "title": "Author"
+          },
+          "basisOfRecord": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.recordBasisPreservedSpecimen",
+              "MY.recordBasisHumanObservation",
+              "MY.recordBasisHumanObservationSeen",
+              "MY.recordBasisHumanObservationHeard",
+              "MY.recordBasisHumanObservationHandled",
+              "MY.recordBasisHumanObservationPhoto",
+              "MY.recordBasisHumanObservationAudio",
+              "MY.recordBasisHumanObservationVideo",
+              "MY.recordBasisHumanObservationIndirect",
+              "MY.recordBasisMachineObservation",
+              "MY.recordBasisMachineObservationPhoto",
+              "MY.recordBasisMachineObservationVideo",
+              "MY.recordBasisMachineObservationAudio",
+              "MY.recordBasisMachineObservationGeologger",
+              "MY.recordBasisMachineObservationSatelliteTransmitter",
+              "MY.recordBasisFossilSpecimen",
+              "MY.recordBasisSubfossilSpecimen",
+              "MY.recordBasisSubfossilSpecimenAmberInclusion",
+              "MY.recordBasisMaterialSample",
+              "MY.recordBasisMaterialSampleAir",
+              "MY.recordBasisMaterialSampleSoil",
+              "MY.recordBasisMaterialSampleWater",
+              "MY.recordBasisMicrobialSpecimen",
+              "MY.recordBasisLivingSpecimen",
+              "MY.recordBasisLiterature"
+            ],
+            "title": "Basis of Record"
+          },
+          "coordinateAccuracy": {
+            "type": "integer",
+            "minimum": 0,
+            "title": "Coordinate Accuracy (m)"
+          },
+          "created": {
+            "type": "string",
+            "format": "date",
+            "title": "Created"
+          },
+          "createdBy": {
+            "type": "string",
+            "title": "Created By"
+          },
+          "datasetId": {
+            "type": "string",
+            "title": "Dataset ID"
+          },
+          "elevation": {
+            "type": "integer",
+            "exclusiveMinimum": true,
+            "title": "Elevation (m)",
+            "minimum": 0
+          },
+          "finbifOccurrenceId": {
+            "type": "string",
+            "title": "FinBIF Occurrence ID"
+          },
+          "functionalGroupName": {
+            "type": "string",
+            "title": "Functional Group"
+          },
+          "gbifOccurrenceId": {
+            "type": "string",
+            "title": "GBIF Occurrence ID"
+          },
+          "gbifTaxonId": {
+            "type": "integer",
+            "title": "GBIF Taxon ID"
+          },
+          "kingdom": {
+            "type": "string",
+            "title": "Kingdom"
+          },
+          "lat": {
+            "type": "number",
+            "title": "Latitude"
+          },
+          "latMax": {
+            "type": "number",
+            "title": "Latitude, max"
+          },
+          "latMin": {
+            "type": "number",
+            "title": "Latitude, min"
+          },
+          "locationIdentifiers": {
+            "type": "string",
+            "title": "Location Identifiers"
+          },
+          "lon": {
+            "type": "number",
+            "title": "Longitude"
+          },
+          "lonMax": {
+            "type": "number",
+            "title": "Longitude, max"
+          },
+          "lonMin": {
+            "type": "number",
+            "title": "Longitude, min"
+          },
+          "measurementDeterminedBy": {
+            "type": "string",
+            "title": "Measured By"
+          },
+          "measurementDeterminedDate": {
+            "type": "string",
+            "format": "date",
+            "title": "Measurement Determined Date"
+          },
+          "modified": {
+            "type": "string",
+            "format": "date",
+            "title": "Modified"
+          },
+          "modifiedBy": {
+            "type": "string",
+            "title": "Modified By"
+          },
+          "occurrenceRemarks": {
+            "type": "string",
+            "title": "Occurrence Remarks"
+          },
+          "otherOccurrenceId": {
+            "type": "string",
+            "title": "Other Occurrence ID"
+          },
+          "otherTaxonId": {
+            "type": "integer",
+            "title": "Other Taxon ID"
+          },
+          "seasonBegin": {
+            "type": "integer",
+            "exclusiveMinimum": true,
+            "title": "Season Begins",
+            "minimum": 0
+          },
+          "seasonEnd": {
+            "type": "integer",
+            "exclusiveMinimum": true,
+            "title": "Season Ends",
+            "minimum": 0
+          },
+          "taxonId": {
+            "type": "string",
+            "title": "Taxon ID"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "TDF.typeIndividual",
+              "TDF.typePopulationGroup",
+              "TDF.typeTaxon"
+            ],
+            "title": "Subject Type"
+          },
+          "yearBegin": {
+            "type": "integer",
+            "exclusiveMinimum": true,
+            "title": "Measurement period start",
+            "minimum": 0
+          },
+          "yearEnd": {
+            "type": "integer",
+            "exclusiveMinimum": true,
+            "title": "Measurement period end",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "createdBy",
+          "datasetId",
+          "type"
+        ],
+        "additionalProperties": false
+      },
+      "traitValue": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the TDFX.traitValue"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the TDFX.traitValue"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the TDFX.traitValue"
+          },
+          "measurementAccuracy": {
+            "type": "number",
+            "title": "Measurement Accuracy"
+          },
+          "measurementRemarks": {
+            "type": "string",
+            "title": "Measurement remarks"
+          },
+          "objectTaxonLifeStage": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.lifeStageAdult",
+              "MY.lifeStageNymph",
+              "MY.lifeStageLarva",
+              "MY.lifeStageEgg",
+              "MY.lifeStagePupa",
+              "MY.lifeStageJuvenile",
+              "MY.lifeStageSubimago",
+              "MY.lifeStageImmature",
+              "MY.lifeStageFertile",
+              "MY.lifeStageSterile",
+              "MY.lifeStageTadpole",
+              "MY.lifeStageEmbryo",
+              "MY.lifeStageSubadult",
+              "MY.lifeStageMature",
+              "MY.lifeStagePullus",
+              "MY.lifeStageHatchedEgg",
+              "MY.lifeStageHatchedPupa",
+              "MY.lifeStageGall",
+              "MY.lifeStageMarks",
+              "MY.lifeStageTriungulin",
+              "MY.lifeStageExuvia"
+            ],
+            "title": "Object Life Stage"
+          },
+          "reference": {
+            "type": "string",
+            "title": "Reference"
+          },
+          "statisticalMethod": {
+            "type": "string",
+            "enum": [
+              "",
+              "TDF.statisticalMethodMin",
+              "TDF.statisticalMethodMax",
+              "TDF.statisticalMethodAvg",
+              "TDF.statisticalMethodMedian",
+              "TDF.statisticalMethodSD",
+              "TDF.statisticalMethodMode"
+            ],
+            "title": "Statistical Method"
+          },
+          "traitId": {
+            "type": "string",
+            "title": "Trait ID"
+          },
+          "unit": {
+            "type": "string",
+            "enum": [
+              "",
+              "TDF.umNM",
+              "TDF.umUM",
+              "TDF.umMM",
+              "TDF.umCM",
+              "TDF.umM",
+              "TDF.umKM",
+              "TDF.umG",
+              "TDF.umKG",
+              "TDF.umA",
+              "TDF.umS",
+              "TDF.umML",
+              "TDF.umL",
+              "TDF.umMOL",
+              "TDF.umMMOL",
+              "TDF.umUMOL",
+              "TDF.umHZ",
+              "TDF.umP",
+              "TDF.umPPT",
+              "TDF.umPPM",
+              "TDF.umC",
+              "TDF.umMM2",
+              "TDF.umCM2",
+              "TDF.umM2",
+              "TDF.umARE",
+              "TDF.umHA",
+              "TDF.umKM2",
+              "TDF.umMM3",
+              "TDF.umCM3",
+              "TDF.umM3",
+              "TDF.umGMOL",
+              "TDF.umMOLL",
+              "TDF.umCM2H"
+            ],
+            "title": "Unit of Measurement"
+          },
+          "value": {
+            "type": "string",
+            "title": "Value"
+          },
+          "warnings": {
+            "type": "boolean",
+            "title": "Flagged"
+          }
+        },
+        "required": [
+          "traitId",
+          "value"
+        ],
+        "additionalProperties": false
+      },
       "transaction": {
         "type": "object",
         "properties": {
@@ -69733,6 +73774,26 @@
     {
       "name": "traitGroup",
       "description": "Trait value"
+    },
+    {
+      "name": "traitSearchDataset",
+      "description": "traitSearchDataset"
+    },
+    {
+      "name": "traitSearchRow",
+      "description": "traitSearchRow"
+    },
+    {
+      "name": "traitSearchTaxon",
+      "description": "traitSearchTaxon"
+    },
+    {
+      "name": "traitSubject",
+      "description": "traitSubject"
+    },
+    {
+      "name": "traitValue",
+      "description": "traitValue"
     },
     {
       "name": "transaction",

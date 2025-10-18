@@ -1,0 +1,217 @@
+{
+  "settings": {
+    "number_of_shards": 3,
+    "index.mapping.ignore_malformed": true,
+    "index.max_result_window": 1000000,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword",
+        "normalizer": "useLowercase"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "scientificName": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "country": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "dateBegin": {
+        "type": "date"
+      },
+      "dateEnd": {
+        "type": "date"
+      },
+      "habitat": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "higherGeography": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "individualCount": {
+        "type": "integer"
+      },
+      "lifeStage": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "locality": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "municipality": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "sex": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "ageYears": {
+        "type": "float"
+      },
+      "author": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "basisOfRecord": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "coordinateAccuracy": {
+        "type": "integer"
+      },
+      "created": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "datasetId": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "elevation": {
+        "type": "integer"
+      },
+      "finbifOccurrenceId": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "functionalGroupName": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "gbifOccurrenceId": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "gbifTaxonId": {
+        "type": "integer"
+      },
+      "kingdom": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "lat": {
+        "type": "float"
+      },
+      "latMax": {
+        "type": "float"
+      },
+      "latMin": {
+        "type": "float"
+      },
+      "locationIdentifiers": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "lon": {
+        "type": "float"
+      },
+      "lonMax": {
+        "type": "float"
+      },
+      "lonMin": {
+        "type": "float"
+      },
+      "measurementDeterminedBy": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "measurementDeterminedDate": {
+        "type": "date"
+      },
+      "modified": {
+        "type": "date"
+      },
+      "modifiedBy": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "occurrenceRemarks": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "otherOccurrenceId": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "otherTaxonId": {
+        "type": "integer"
+      },
+      "seasonBegin": {
+        "type": "integer"
+      },
+      "seasonEnd": {
+        "type": "integer"
+      },
+      "taxonId": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "type": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "yearBegin": {
+        "type": "integer"
+      },
+      "yearEnd": {
+        "type": "integer"
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

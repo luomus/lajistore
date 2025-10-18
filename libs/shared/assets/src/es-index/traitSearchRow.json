@@ -1,0 +1,160 @@
+{
+  "settings": {
+    "number_of_shards": 3,
+    "index.mapping.ignore_malformed": true,
+    "index.max_result_window": 1000000,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword",
+        "normalizer": "useLowercase"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "dataset": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "day": {
+        "type": "integer"
+      },
+      "eventDate": {
+        "type": "date"
+      },
+      "geodeticDatum": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "license": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "measurementAccuracy": {
+        "type": "float"
+      },
+      "measurementRemarks": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "month": {
+        "type": "integer"
+      },
+      "objectFinBIFTaxon": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "objectGBIFTaxon": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "objectTaxonLifeStage": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "objectTaxonVerbatim": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "originalMeasurementAccuracy": {
+        "type": "float"
+      },
+      "originalUnit": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "originalValue": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "originalValueNumeric": {
+        "type": "float"
+      },
+      "reference": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "statisticalMethod": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "subject": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "subjectFinBIFTaxon": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "subjectGBIFTaxon": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "trait": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "traitGroup": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "unit": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "value": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "valueNumeric": {
+        "type": "float"
+      },
+      "warnings": {
+        "type": "boolean"
+      },
+      "year": {
+        "type": "integer"
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}

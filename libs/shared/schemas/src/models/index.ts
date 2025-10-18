@@ -163,6 +163,16 @@ import { TraitEnumValue } from './TraitEnumValue'
 export type { TraitEnumValue }
 import { TraitGroup } from './TraitGroup'
 export type { TraitGroup }
+import { TraitSearchDataset } from './TraitSearchDataset'
+export type { TraitSearchDataset }
+import { TraitSearchRow } from './TraitSearchRow'
+export type { TraitSearchRow }
+import { TraitSearchTaxon } from './TraitSearchTaxon'
+export type { TraitSearchTaxon }
+import { TraitSubject } from './TraitSubject'
+export type { TraitSubject }
+import { TraitValue } from './TraitValue'
+export type { TraitValue }
 import { Transaction } from './Transaction'
 export type { Transaction }
 import { TransactionEvent } from './TransactionEvent'
@@ -270,6 +280,11 @@ export type StoreObject = BibliographicResource
    | Trait
    | TraitEnumValue
    | TraitGroup
+   | TraitSearchDataset
+   | TraitSearchRow
+   | TraitSearchTaxon
+   | TraitSubject
+   | TraitValue
    | Transaction
    | TransactionEvent
    | TransactionItem
@@ -705,6 +720,31 @@ export function isTraitEnumValue(data: unknown): data is TraitEnumValue {
 export function isTraitGroup(data: unknown): data is TraitGroup {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'TDF.traitGroup'
+  );
+}
+export function isTraitSearchDataset(data: unknown): data is TraitSearchDataset {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'TDFX.traitSearchDataset'
+  );
+}
+export function isTraitSearchRow(data: unknown): data is TraitSearchRow {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'TDFX.traitSearchRow'
+  );
+}
+export function isTraitSearchTaxon(data: unknown): data is TraitSearchTaxon {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'TDFX.traitSearchTaxon'
+  );
+}
+export function isTraitSubject(data: unknown): data is TraitSubject {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'TDFX.traitSubject'
+  );
+}
+export function isTraitValue(data: unknown): data is TraitValue {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'TDFX.traitValue'
   );
 }
 export function isTransaction(data: unknown): data is Transaction {

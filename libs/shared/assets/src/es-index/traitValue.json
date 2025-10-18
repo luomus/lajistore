@@ -1,0 +1,81 @@
+{
+  "settings": {
+    "number_of_shards": 3,
+    "index.mapping.ignore_malformed": true,
+    "index.max_result_window": 1000000,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword",
+        "normalizer": "useLowercase"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "measurementAccuracy": {
+        "type": "float"
+      },
+      "measurementRemarks": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "objectTaxonLifeStage": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "reference": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "statisticalMethod": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "traitId": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "unit": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "value": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "warnings": {
+        "type": "boolean"
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}
