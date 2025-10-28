@@ -1,0 +1,132 @@
+[
+  {
+    "formID": "JX.519",
+    "gatherings": [
+      {
+        "units": [
+          {
+            "unitGathering": {
+              "@type": "MZ.unitGathering"
+            },
+            "informalTaxonGroups": ["MVL.134", "MVL.1"],
+            "@type": "MY.unit",
+            "unitFact": {
+              "autocompleteSelectedTaxonID": "MX.26727"
+            },
+            "recordBasis": "MY.recordBasisHumanObservation",
+            "count": "1",
+            "identifications": [
+              {
+                "identificationBasis": ["MY.identificationBasisSeen"],
+                "@type": "MY.identification",
+                "taxon": "maakotka"
+              }
+            ],
+            "taxonConfidence": "MY.taxonConfidenceUnsure"
+          }
+        ]
+      },
+      {
+        "units": [
+          {
+            "unitGathering": {
+              "@type": "MZ.unitGathering"
+            },
+            "informalTaxonGroups": ["MVL.134", "MVL.1"],
+            "@type": "MY.unit",
+            "unitFact": {
+              "autocompleteSelectedTaxonID": "MX.26727"
+            },
+            "recordBasis": "MY.recordBasisHumanObservation",
+            "count": "1",
+            "identifications": [
+              {
+                "identificationBasis": ["MY.identificationBasisSeen"],
+                "@type": "MY.identification",
+                "taxon": "maakotka"
+              }
+            ],
+            "taxonConfidence": "MY.taxonConfidenceSure"
+          }
+        ]
+      }
+    ],
+    "creator": "MA.97",
+    "gatheringEvent": {
+      "dateBegin": "2016-12-25T11:30",
+      "leg": ["MA.97"]
+    },
+    "dateEdited": "2016-12-25T10:25:59+00:00",
+    "publicityRestrictions": "MZ.publicityRestrictionsPublic"
+  },
+  {
+    "formID": "JX.519",
+    "gatherings": [
+      {
+        "units": [
+          {
+            "images": ["MM.120826"],
+            "unitGathering": {
+              "@type": "MZ.unitGathering"
+            },
+            "informalTaxonGroups": ["MVL.21", "MVL.193"],
+            "@type": "MY.unit",
+            "unitFact": {
+              "autocompleteSelectedTaxonID": "MX.37819"
+            },
+            "recordBasis": "MY.recordBasisHumanObservation",
+            "identifications": [
+              {
+                "@type": "MY.identification",
+                "taxon": "mänty"
+              }
+            ],
+            "taxonConfidence": "MY.taxonConfidenceSure"
+          }
+        ]
+      }
+    ],
+    "creator": "MA.97",
+    "gatheringEvent": {
+      "dateBegin": "2016-12-23",
+      "leg": ["MA.97"]
+    },
+    "dateEdited": "2016-12-23T13:29:23+00:00",
+    "publicityRestrictions": "MZ.publicityRestrictionsPublic"
+  },
+  {
+    "formID": "JX.519",
+    "gatherings": [
+      {
+        "dateBegin": "2016-12-19",
+        "units": [
+          {
+            "unitGathering": {
+              "@type": "MZ.unitGathering"
+            },
+            "informalTaxonGroups": ["MVL.185", "MVL.2"],
+            "@type": "MY.unit",
+            "unitFact": {
+              "autocompleteSelectedTaxonID": "MX.49649"
+            },
+            "recordBasis": "MY.recordBasisHumanObservation",
+            "identifications": [
+              {
+                "@type": "MY.identification",
+                "taxon": "rotta"
+              }
+            ],
+            "taxonConfidence": "MY.taxonConfidenceSure"
+          }
+        ]
+      }
+    ],
+    "creator": "MA.97",
+    "gatheringEvent": {
+      "dateBegin": "2016-12-19",
+      "leg": ["MA.97"]
+    },
+    "dateEdited": "2016-12-21T07:24:57+00:00",
+    "publicityRestrictions": "MZ.publicityRestrictionsPublic"
+  }
+]

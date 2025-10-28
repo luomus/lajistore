@@ -92,6 +92,18 @@ requests:
       - jsonpath: content.uiSchema
         jsonschema: <$ uiSchemaValidate | dump | safe $>
 
+  error_when_trying_to_add_excisting:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/form/data.json
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 400
+
   error_when_field_has_id:
     request:
       url: <$ testUrl $>

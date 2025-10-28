@@ -10,6 +10,7 @@ export class DocumentService {
 
   private readonly generatedFieldsToType: string[];
   private readonly noGeneratedFieldsToChildren: string[];
+  private readonly generatedFieldsAndSecondaryIdsToType: string[];
 
   constructor(
     private readonly idService: IdService,
@@ -19,6 +20,7 @@ export class DocumentService {
   ) {
     this.generatedFieldsToType = this.configService.getList('ADD_GENERATED_FIELDS_FOR_EMBEDDED_TYPES');
     this.noGeneratedFieldsToChildren = this.configService.getList('NO_GENERATED_FIELDS_FOR_ANY_CHILDREN_OF');
+    this.generatedFieldsAndSecondaryIdsToType = this.configService.getList('ADD_GENERATED_FIELDS_WITH_SECONDARY_SEQ_FOR_EMBEDDED_TYPES');
   }
 
   async createOrUpdate(
@@ -132,7 +134,7 @@ export class DocumentService {
       data[PROPERTY_ID]
     );
     const doc = new Document();
-    const meta = { sequence: base.sequence ?? 1 };
+    const meta = { sequence: base.sequence ?? 1, secondary_sequence: base.secondary_sequence ?? 1, };
 
     // This is tmp workaround for removing _lajiFormId from gatheringEvent
     if (isDocument(data) && (data.gatheringEvent as any)?.['_lajiFormId']) {
@@ -148,6 +150,7 @@ export class DocumentService {
     doc.edited = new Date();
     doc.type = type;
     doc.sequence = meta.sequence;
+    doc.secondary_sequence = meta.secondary_sequence;
     doc.version = 1;
     doc.data = data;
 
@@ -194,7 +197,7 @@ export class DocumentService {
     type: string,
     data: StoreObject,
     baseId: string,
-    meta: { sequence: number },
+    meta: { sequence: number, secondary_sequence: number },
     isBase = true,
     addGenerated = true
   ) {
@@ -205,17 +208,21 @@ export class DocumentService {
     const typeProperty: keyof Pick<StoreObject, '@type'> = '@type';
     const contextProperty: keyof Pick<StoreObject, '@context'> = '@context';
     const typeQName = schema['subject'] || type;
+    const generateFieldsToType = this.generatedFieldsToType.includes(typeQName)
+    const generateFieldsAndSecondarySeqId = this.generatedFieldsAndSecondaryIdsToType.includes(typeQName)
 
-    if (isBase || (addGenerated && this.generatedFieldsToType.includes(typeQName))) {
+    if (isBase || (addGenerated && (generateFieldsToType || generateFieldsAndSecondarySeqId))) {
       const id = data[PROPERTY_ID];
       if (!id) {
         data[PROPERTY_ID] = isBase
           ? baseId
-          : this.idService.getChildId(baseId, meta.sequence++);
+          : await this.idService.getChildId(baseId, generateFieldsToType ? meta.sequence++ : meta.secondary_sequence++, type);
       } else {
         const sequence = this.idService.getSequenceNumberFromId(id);
-        if (sequence >= meta.sequence) {
+        if (generateFieldsToType && sequence >= meta.sequence) {
           meta.sequence = sequence + 1;
+        } else if (generateFieldsAndSecondarySeqId && sequence >= meta.secondary_sequence) {
+          meta.secondary_sequence = sequence + 1;
         }
       }
       if (schema['subject']) {

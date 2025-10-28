@@ -3,7 +3,7 @@ version: '3'
 services:
   redis:
     env_file:
-      - .env.e2e
+      - .env
     extends:
       file: tools/docker/docker-compose.shared.yml
       service: redis

@@ -3,34 +3,48 @@ version: 2
 variables:
   testUrl: http://store-api:3000/MY.document
   authorization: 'Basic S0UuMDA3OnBhc3N3b3Jk'
+  authorization_kotka: 'Basic S0UuMzpwYXNzd29yZA=='
 
 requests:
   clean_up1:
     request:
       url: <$ testUrl $>/JX.5833
       method: DELETE
-      json: apps/store-api/test/document/documents-data.json
+      json: apps/store-api/test/document/document-data-with-id.json
       headers:
         - name: Authorization
-          value: <$ authorization $>
+          value: <$ authorization_kotka $>
 
   clean_up2:
     request:
       url: <$ testUrl $>/JX.5806
       method: DELETE
-      json: apps/store-api/test/document/documents-data.json
+      json: apps/store-api/test/document/document-data-with-id.json
       headers:
         - name: Authorization
-          value: <$ authorization $>
+          value: <$ authorization_kotka $>
 
-  adding_multiple_documents:
+  adding_multiple_documents_with_id_fails:
     request:
       url: <$ testUrl $>
       method: POST
-      json: apps/store-api/test/document/documents-data.json
+      json: apps/store-api/test/document/document-data-with-id.json
       headers:
         - name: Authorization
           value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 400
+
+
+  adding_multiple_documents_with_id_as_KE3_succeeds:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/document/document-data-with-id.json
+      headers:
+        - name: Authorization
+          value: <$ authorization_kotka $>
     validate:
       - jsonpath: content[0].id
         expect: 'JX.5833'
@@ -55,6 +69,72 @@ requests:
       - jsonpath: content[2].gatherings[0].units[0].identifications[0].id
         expect: 'JX.5806#5'
 
+  adding_multiple_documents_without_id_succeeds:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/document/document-data.json
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content[0].id
+        type: [string]
+      - jsonpath: content[0].gatheringEvent.id
+        regex: JX\.\d+\#1
+      - jsonpath: content[0].gatheringEvent.leg[0]
+        expect: 'MA.97'
+      - jsonpath: content[0].gatherings[0].id
+        regex: JX\.\d+\#2
+      - jsonpath: content[0].gatherings[0].units[0].id
+        regex: JX\.\d+\#3
+      - jsonpath: content[0].gatherings[0].units[0].identifications[0].id
+        regex: JX\.\d+\#5
+      - jsonpath: content[0].gatherings[1].units[0].identifications[0].id
+        regex: JX\.\d+\#9
+      - jsonpath: content[0].gatherings[1].id
+        regex: JX\.\d+\#6
+      - jsonpath: content[1].id
+        type: [string]
+      - jsonpath: content[2].id
+        type: [string]
+      - jsonpath: content[2].gatherings[0].units[0].identifications[0].id
+        regex: JX\.\d+\#5
+
+  adding_documents_with_samples_succeeds:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/document/document-data-with-samples.json
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content[0].gatherings[0].units[0].samples[0].id
+        regex: JX\.\d+\#P1
+      - jsonpath: content[0].gatherings[0].units[0].samples[0].preparationType
+        expect: "MF.preparationTypeEgg"
+      - jsonpath: content[0].gatherings[0].units[0].samples[1].id
+        regex: JX\.\d+\#P2
+      - jsonpath: content[0].gatherings[0].units[0].samples[1].preparationType
+        expect: "MF.preparationTypeLiquid"
+      - jsonpath: content[0].gatherings[1].units[0].samples[0].id
+        regex: JX\.\d+\#P3
+      - jsonpath: content[0].gatherings[1].units[0].samples[0].preparationType
+        expect: "MF.preparationTypeDNAExtract"
+      - jsonpath: content[1].gatherings[0].units[0].samples[0].id
+        regex: JX\.\d+\#P1
+      - jsonpath: content[1].gatherings[0].units[0].samples[0].preparationType
+        expect: "MF.preparationTypeSkin"
+      - jsonpath: content[1].gatherings[0].units[0].samples[1].id
+        regex: JX\.\d+\#P2
+      - jsonpath: content[1].gatherings[0].units[0].samples[1].preparationType
+        expect: "MF.preparationTypeTissue"
+      - jsonpath: content[2].gatherings[0].units[0].samples[0].id
+        regex: JX\.\d+\#P1
+      - jsonpath: content[2].gatherings[0].units[0].samples[0].preparationType
+        expect: "MF.preparationTypeOther"
+
   updating_document:
     request:
       url: <$ testUrl $>/JX.5833
@@ -62,7 +142,7 @@ requests:
       json: apps/store-api/test/document/updated-document-data.json
       headers:
         - name: Authorization
-          value: <$ authorization $>
+          value: <$ authorization_kotka $>
     validate:
       - jsonpath: content.id
         expect: 'JX.5833'
@@ -81,20 +161,20 @@ requests:
       - jsonpath: content.gatherings[1].id
         expect: 'JX.5833#14'
 
-  get_versoins:
+  get_versions:
     request:
       url: <$ testUrl $>/JX.5833/_ver
       method: GET
       headers:
         - name: Authorization
-          value: <$ authorization $>
+          value: <$ authorization_kotka $>
     validate:
       - jsonpath: content[0].version
         expect: 1
       - jsonpath: content[1].version
         expect: 2
 
-  get_versoins_of_nonexisting:
+  get_versions_of_nonexisting:
     request:
       url: <$ testUrl $>/NON:EXISTING/_ver
       method: GET
@@ -111,7 +191,7 @@ requests:
       method: PATCH
       headers:
         - name: authorization
-          value: <$ authorization $>
+          value: <$ authorization_kotka $>
       json: apps/store-api/test/document/patch-data.json
     validate:
       - jsonpath: status
@@ -119,13 +199,13 @@ requests:
       - jsonpath: content.affected
         expect: 1
 
-  get_versoins_with_patch:
+  get_versions_with_patch:
     request:
       url: <$ testUrl $>/JX.5833/_ver?include_diff=true
       method: GET
       headers:
         - name: Authorization
-          value: <$ authorization $>
+          value: <$ authorization_kotka $>
     validate:
       - jsonpath: content[0].version
         expect: 1

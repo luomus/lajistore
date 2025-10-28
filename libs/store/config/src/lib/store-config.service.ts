@@ -40,9 +40,12 @@ interface Configuration {
   // comma separated list of types that will not generate fields for any embedded child object
   // generated properties are not removed from json-schema so that they can still be in the data
   NO_GENERATED_FIELDS_FOR_ANY_CHILDREN_OF: string;
+  //comma separated list of types that will have generated fields id and type, with id sequence from secondary sequence
+  ADD_GENERATED_FIELDS_WITH_SECONDARY_SEQ_FOR_EMBEDDED_TYPES: string;
   ID_LIST_SEPARATOR: string;
   ID_SEPARATOR: string;
   CONFIG_ID_TYPE_MAP_FILE: string;
+  CONFIG_SUBID_PREFIX_MAP_FILE: string;
   IS_WORKER: string;
   RABBITMQ_HOST?: string;
   RABBITMQ_USERNAME?: string;
@@ -72,6 +75,7 @@ const DEFAULT_VALUES: Configuration = {
     'MY.identification,' +
     'MY.typeSpecimen',
   NO_GENERATED_FIELDS_FOR_ANY_CHILDREN_OF: 'MHL.form,MNP.namedPlace,MHN.notification',
+  ADD_GENERATED_FIELDS_WITH_SECONDARY_SEQ_FOR_EMBEDDED_TYPES: 'MF.sample',
   ID_LIST_SEPARATOR: ',',
   ID_SEPARATOR: '#',
   RABBITMQ_PORT: '5672',
@@ -91,6 +95,8 @@ const DEFAULT_VALUES: Configuration = {
     'libs/store/generate/src/lib/config/spec-base.json',
   CONFIG_ID_TYPE_MAP_FILE:
     'libs/store/generate/src/lib/config/id-type-map.json',
+  CONFIG_SUBID_PREFIX_MAP_FILE:
+    'libs/store/generate/src/lib/config/subid-prefix-map.json',
   CONFIG_LANGUAGES_FILE:
     'libs/store/generate/src/lib/config/languages.json',
   CONFIG_BLACKLIST_CLASS_FILE:

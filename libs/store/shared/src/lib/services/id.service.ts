@@ -12,15 +12,20 @@ interface IdSeqValue {
   value: string;
 }
 
+interface SubIdPrefixMap {
+  [DEFAULT_TYPE]: string
+  [key: string]: string
+}
+
 interface IdTypeMap {
   [DEFAULT_TYPE]: IdSeqValue;
-
   [key: string]: IdSeqValue;
 }
 
 @Injectable()
 export class IdService {
   private idTypeMap?: IdTypeMap;
+  private subIdPrefixMap?: SubIdPrefixMap;
   private readonly idSeparator = this.configService.get('ID_SEPARATOR');
 
   constructor(
@@ -45,14 +50,17 @@ export class IdService {
     return idWrapping.replace('%value%', newID);
   }
 
-  getChildId(baseId: string, sequence: number) {
-    return `${baseId}${this.idSeparator}${sequence}`;
+  async getChildId(baseId: string, sequence: number, type = DEFAULT_TYPE) {
+    const prefixMap: SubIdPrefixMap = await this.getSubIdPrefixMap();
+    const prefix = prefixMap[type] ?? prefixMap[DEFAULT_TYPE];
+
+    return `${baseId}${this.idSeparator}${prefix}${sequence}`;
   }
 
   getSequenceNumberFromId(id: string): number {
     const parts = id.split(this.idSeparator, 2);
     if (parts[1]) {
-      return Number(parts[1]);
+      return Number(parts[1].replace(/\D/g, ''));
     }
     return 0;
   }
@@ -88,5 +96,24 @@ export class IdService {
         ));
     }
     return this.idTypeMap;
+  }
+
+  private async getSubIdPrefixMap() {
+    if (!this.subIdPrefixMap) {
+      this.subIdPrefixMap = await lastValueFrom(this.fileService
+        .readJsonFile<SubIdPrefixMap>(
+          this.configService.get('CONFIG_SUBID_PREFIX_MAP_FILE')
+        )
+        .pipe(
+          map((map: SubIdPrefixMap) => {
+            if (!map[DEFAULT_TYPE]) {
+              map[DEFAULT_TYPE] = '';
+            }
+            return map;
+          })
+        ));
+    }
+
+    return this.subIdPrefixMap;
   }
 }

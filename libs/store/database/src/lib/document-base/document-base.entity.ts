@@ -15,6 +15,9 @@ export abstract class DocumentBase {
   @Column({ name: 'SEQUENCE' })
   sequence?: number;
 
+  @Column({ name: 'SECONDARY_SEQUENCE' })
+  secondary_sequence?: number;
+
   @Column({ name: 'CREATED' })
   created: Date = new Date();
 

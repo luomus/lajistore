@@ -5,9 +5,22 @@ variables:
   authorization: 'Basic S0UuMDA3OnBhc3N3b3Jk'
   authorization_invalid_pw: 'Basic S0UuMDA3OnBhc3N3b3Jkcw=='
   authorization_no_access: 'Basic S0UuMDA2OnBhc3N3b3Jk'
+  authorization_kotka: 'Basic S0UuMzpwYXNzd29yZA=='
   knownID: 'FOOBAR:123'
 
 requests:
+  adding_dataset:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      json: apps/store-api/test/dataset/new-data.json
+      headers:
+        - name: Authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: content.id
+        type: [string]
+
   datasets_list_has_all_needed_fields:
     request:
       url: <$ testUrl $>
@@ -46,18 +59,6 @@ requests:
       - jsonpath: content.view.last
         type: [string]
 
-  adding_dataset:
-    request:
-      url: <$ testUrl $>
-      method: POST
-      json: apps/store-api/test/dataset/new-data.json
-      headers:
-        - name: Authorization
-          value: <$ authorization $>
-    validate:
-      - jsonpath: content.id
-        type: [string]
-
   finds_added_with_search:
     request:
       url: <$ testUrl $>
@@ -83,14 +84,6 @@ requests:
       - jsonpath: content.id
         type: [string]
 
-  clean_the_know_id:
-    request:
-      url: <$ testUrl $>/<$ knownID $>
-      method: DELETE
-      headers:
-        - name: authorization
-          value: <$ authorization $>
-
   406_on_invalid_verb:
     request:
       url: <$ testUrl $>
@@ -102,7 +95,7 @@ requests:
       - jsonpath: status
         expect: 406
 
-  add_with_id:
+  400_on_add_with_id:
     request:
       url: <$ testUrl $>
       method: POST
@@ -112,34 +105,45 @@ requests:
           value: <$ authorization $>
     validate:
       - jsonpath: status
-        expect: 201
+        expect: 400
 
-  finds_added_with_known_id:
+  clean_the_know_id-from-kotka:
     request:
       url: <$ testUrl $>/<$ knownID $>
-      method: GET
+      method: DELETE
       headers:
         - name: authorization
-          value: <$ authorization $>
-    validate:
-      - jsonpath: content.id
-        expect: <$ knownID $>
+          value: <$ authorization_kotka $>
 
-  finds_known_added_with_search:
+  clean_the_know_id-from-kotka-1:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: DELETE
+      headers:
+        - name: authorization
+          value: <$ authorization_kotka $>
+
+  clean_the_know_id-from-kotka-2:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: DELETE
+      headers:
+        - name: authorization
+          value: <$ authorization_kotka $>
+
+  kotka_KE.3_may_add_with_id:
     request:
       url: <$ testUrl $>
-      method: GET
-      queryString:
-        - name: q
-          value: 'id:"<$ knownID $>"'
+      method: POST
+      json: apps/store-api/test/dataset/new-with-id.json
       headers:
         - name: authorization
-          value: <$ authorization $>
+          value: <$ authorization_kotka $>
     validate:
-      - jsonpath: content.member[0].id
-        expect: <$ knownID $>
+      - jsonpath: status
+        expect: 201
 
-  user_without_creaentials_cannot_find_with_id:
+  user_without_credentials_cannot_find_with_id:
     request:
       url: <$ testUrl $>/<$ knownID $>
       method: GET
@@ -195,7 +199,7 @@ requests:
       - jsonpath: status
         expect: 401
 
-  user_with_invalid_creaentials_cannot_find_with_id:
+  user_with_invalid_credentials_cannot_find_with_id:
     request:
       url: <$ testUrl $>/<$ knownID $>
       method: GET
@@ -206,7 +210,7 @@ requests:
       - jsonpath: status
         expect: 401
 
-  user_with_invalid_creaentials_cannot_post_search:
+  user_with_invalid_credentials_cannot_post_search:
     request:
       url: <$ testUrl $>/_search
       method: POST
@@ -220,7 +224,7 @@ requests:
       - jsonpath: status
         expect: 401
 
-  user_with_invalid_creaentials_cannot_search:
+  user_with_invalid_credentials_cannot_search:
     request:
       url: <$ testUrl $>
       method: GET
@@ -275,7 +279,7 @@ requests:
       method: GET
       headers:
         - name: authorization
-          value: <$ authorization_no_access $>
+          value: <$ authorization $>
     validate:
       - jsonpath: status
         expect: 404
@@ -289,10 +293,21 @@ requests:
           value: 'id:"<$ knownID $>"'
       headers:
         - name: authorization
-          value: <$ authorization_no_access $>
+          value: <$ authorization $>
     validate:
       - jsonpath: content.totalItems
         expect: 0
+
+  other_without_index_gets_404_on_search:
+    request:
+      url: <$ testUrl $>/<$ knownID $>
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 404
 
   use_patch_to_update_document:
     request:
@@ -300,7 +315,7 @@ requests:
       method: PATCH
       headers:
         - name: authorization
-          value: <$ authorization $>
+          value: <$ authorization_kotka $>
       json: apps/store-api/test/dataset/patch-data.json
       queryString:
         - name: q
@@ -317,7 +332,7 @@ requests:
       method: GET
       headers:
         - name: authorization
-          value: <$ authorization $>
+          value: <$ authorization_kotka $>
     validate:
       - jsonpath: content.datasetName.sv
         expect: 'Testa datasetets namn'
@@ -334,7 +349,7 @@ requests:
       method: DELETE
       headers:
         - name: authorization
-          value: <$ authorization $>
+          value: <$ authorization_kotka $>
     validate:
       - jsonpath: status
         expect: 200
@@ -347,7 +362,7 @@ requests:
       method: GET
       headers:
         - name: authorization
-          value: <$ authorization $>
+          value: <$ authorization_kotka $>
     validate:
       - jsonpath: status
         expect: 404
@@ -361,32 +376,7 @@ requests:
           value: 'id:"<$ knownID $>"'
       headers:
         - name: authorization
-          value: <$ authorization $>
+          value: <$ authorization_kotka $>
     validate:
       - jsonpath: content.totalItems
         expect: 0
-
-  can_add_known_id_after_deleting:
-    request:
-      url: <$ testUrl $>
-      method: POST
-      json: apps/store-api/test/dataset/new-with-id.json
-      headers:
-        - name: authorization
-          value: <$ authorization $>
-    validate:
-      - jsonpath: status
-        expect: 201
-
-  cat_redelete_know_id:
-    request:
-      url: <$ testUrl $>/<$ knownID $>
-      method: DELETE
-      headers:
-        - name: authorization
-          value: <$ authorization $>
-    validate:
-      - jsonpath: status
-        expect: 200
-      - jsonpath: content.affected
-        expect: 1

@@ -10,5 +10,6 @@ npm run build:migrate:postgres
 npm run store:cli generate open-api
 npm run store:cli user KE.006 password
 npm run store:cli user KE.007 password
+npm run store:cli user KE.3 password
 
 exec "$@"
