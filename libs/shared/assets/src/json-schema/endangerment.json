@@ -24,13 +24,6 @@
       "subject": "@type",
       "title": "Type for the Endagerment object"
     },
-    "herbo:sortOrder": {
-      "type": "integer",
-      "range": "xsd:integer",
-      "subject": "herbo:sortOrder",
-      "title": "herbo:sortOrder",
-      "sortOrder": -1
-    },
     "endangerment": {
       "type": "string",
       "enum": [

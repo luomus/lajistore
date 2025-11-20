@@ -16,7 +16,6 @@ export class Video {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  "herbo:sortOrder"?: number;
   LuomusIntellectualRights?: MMLuomusIntellectualRightsEnum;
   caption?: string;
   captureDateTime?: string;

@@ -28,9 +28,6 @@
       "@type": {
         "type": "keyword"
       },
-      "herbo:sortOrder": {
-        "type": "integer"
-      },
       "invasiveSpeciesMainGroup": {
         "type": "keyword",
         "ignore_above": 200,

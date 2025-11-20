@@ -19,7 +19,6 @@ export interface Taxon {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  "herbo:sortOrder"?: number;
   invasiveSpeciesMainGroup?: HBEInvasiveSpeciesMainGroups[];
   /**
    * <p>Lisämerkinnät:</p>

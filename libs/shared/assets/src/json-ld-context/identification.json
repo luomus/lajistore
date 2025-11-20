@@ -31,10 +31,6 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
-    "herbo:sortOrder": {
-      "@id": "default:herbo:sortOrder",
-      "@type": "xsd:integer"
-    },
     "associatedObservationTaxa": {
       "@id": "default:MY.associatedObservationTaxa",
       "@type": "xsd:string"

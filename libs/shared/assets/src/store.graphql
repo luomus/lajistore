@@ -6160,7 +6160,6 @@ type Identification {
 
   """Additional qualifier or specifier at genus level (e.g. aff., cf.)"""
   genusQualifier: String
-  herboSortOrder: Int
   id: String
   identificationBasis: [IdentificationBasisListItem]
 
@@ -6421,7 +6420,6 @@ type Audio2 {
   flacURL: String
   fullResolutionMediaAvailable: Boolean
   fullURL: String!
-  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -9778,7 +9776,6 @@ type DownloadRequest2 {
 type Endangerment2 {
   context: String
   endangerment: Endangerment3!
-  herboSortOrder: Int
   id: String
   sortOrder: Int
   type: String
@@ -10397,7 +10394,6 @@ type Habitat3 {
   context: String
   habitat: ElinympRist!
   habitatSpecificType: [HabitatSpecificTypeListItem]
-  herboSortOrder: Int
   id: String
   sortOrder: Int
   type: String
@@ -10522,7 +10518,6 @@ type Image2 {
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
   fullURL: String!
-  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -11253,7 +11248,6 @@ type Model2 {
   context: String
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
-  herboSortOrder: Int
   highDetailModelURL: String
   id: String
   intellectualOwner: String!
@@ -12240,7 +12234,6 @@ type Taxon2 {
   hasSubjectiveSynonym: [String]
   hasSynonym: [String]
   hasUncertainSynonym: [String]
-  herboSortOrder: Int
 
   """
   Should this taxon be hidden when showing contents of a checklist (publicly)?
@@ -12877,7 +12870,6 @@ type TraitEnumValue2 {
   context: String
   dataEntryName: String!
   description: String!
-  herboSortOrder: Int
   id: String
   name: String!
   sortOrder: Int
@@ -13667,7 +13659,6 @@ type Video2 {
   context: String
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
-  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -28669,7 +28660,6 @@ input IdentificationInput {
 
   """Additional qualifier or specifier at genus level (e.g. aff., cf.)"""
   genusQualifier: String
-  herboSortOrder: Int
   id: String
   identificationBasis: [IdentificationBasisListItem]
 
@@ -28783,7 +28773,6 @@ input Audio2Input {
   flacURL: String
   fullResolutionMediaAvailable: Boolean
   fullURL: String!
-  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -30383,7 +30372,6 @@ input DownloadRequest2Input {
 input Endangerment2Input {
   context: String
   endangerment: Endangerment3!
-  herboSortOrder: Int
   id: String
   sortOrder: Int
   type: String
@@ -30866,7 +30854,6 @@ input Habitat3Input {
   context: String
   habitat: ElinympRist!
   habitatSpecificType: [HabitatSpecificTypeListItem]
-  herboSortOrder: Int
   id: String
   sortOrder: Int
   type: String
@@ -30880,7 +30867,6 @@ input Image2Input {
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
   fullURL: String!
-  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!
@@ -31358,7 +31344,6 @@ input Model2Input {
   context: String
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
-  herboSortOrder: Int
   highDetailModelURL: String
   id: String
   intellectualOwner: String!
@@ -32052,7 +32037,6 @@ input Taxon2Input {
   hasSubjectiveSynonym: [String]
   hasSynonym: [String]
   hasUncertainSynonym: [String]
-  herboSortOrder: Int
 
   """
   Should this taxon be hidden when showing contents of a checklist (publicly)?
@@ -32245,7 +32229,6 @@ input TraitEnumValue2Input {
   context: String
   dataEntryName: String!
   description: String!
-  herboSortOrder: Int
   id: String
   name: String!
   sortOrder: Int
@@ -32646,7 +32629,6 @@ input Video2Input {
   context: String
   documentURI: [String]
   fullResolutionMediaAvailable: Boolean
-  herboSortOrder: Int
   id: String
   intellectualOwner: String!
   intellectualRights: IntellectualRights!

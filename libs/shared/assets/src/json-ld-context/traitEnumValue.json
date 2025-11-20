@@ -31,10 +31,6 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
-    "herbo:sortOrder": {
-      "@id": "default:herbo:sortOrder",
-      "@type": "xsd:integer"
-    },
     "dataEntryName": {
       "@id": "default:TDF.dataEntryName",
       "@type": "xsd:string"

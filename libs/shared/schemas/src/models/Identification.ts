@@ -14,7 +14,6 @@ export interface Identification {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  "herbo:sortOrder"?: number;
   /**
    * Write associated observation taxa names here, separated by a semicolon (;). E.g.: "Betula pendula; Betula pubescens; Poaceae". These will form their own units of the type observation.
    */

@@ -8813,13 +8813,6 @@
                             "subject": "@context",
                             "title": "Context for the Identification"
                           },
-                          "herbo:sortOrder": {
-                            "type": "integer",
-                            "range": "xsd:integer",
-                            "subject": "herbo:sortOrder",
-                            "title": "herbo:sortOrder",
-                            "sortOrder": -1
-                          },
                           "associatedObservationTaxa": {
                             "type": "string",
                             "range": "xsd:string",
@@ -19455,13 +19448,6 @@
                             "range": "xsd:string",
                             "subject": "@context",
                             "title": "Context for the Identification"
-                          },
-                          "herbo:sortOrder": {
-                            "type": "integer",
-                            "range": "xsd:integer",
-                            "subject": "herbo:sortOrder",
-                            "title": "herbo:sortOrder",
-                            "sortOrder": -1
                           },
                           "associatedObservationTaxa": {
                             "type": "string",
