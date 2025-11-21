@@ -57839,10 +57839,6 @@
             "type": "string",
             "title": "Type for the Audio recording"
           },
-          "herbo:sortOrder": {
-            "type": "integer",
-            "title": "herbo:sortOrder"
-          },
           "LuomusIntellectualRights": {
             "type": "string",
             "enum": [
@@ -59774,10 +59770,6 @@
           "@type": {
             "type": "string",
             "title": "Type for the Endagerment object"
-          },
-          "herbo:sortOrder": {
-            "type": "integer",
-            "title": "herbo:sortOrder"
           },
           "endangerment": {
             "type": "string",
@@ -62850,10 +62842,6 @@
             "type": "string",
             "title": "Type for the IUCN Red List Evaluation Habitat"
           },
-          "herbo:sortOrder": {
-            "type": "integer",
-            "title": "herbo:sortOrder"
-          },
           "habitat": {
             "type": "string",
             "enum": [
@@ -63000,10 +62988,6 @@
           "@type": {
             "type": "string",
             "title": "Type for the Identification"
-          },
-          "herbo:sortOrder": {
-            "type": "integer",
-            "title": "herbo:sortOrder"
           },
           "associatedObservationTaxa": {
             "type": "string",
@@ -63258,10 +63242,6 @@
           "@type": {
             "type": "string",
             "title": "Type for the Image"
-          },
-          "herbo:sortOrder": {
-            "type": "integer",
-            "title": "herbo:sortOrder"
           },
           "LuomusIntellectualRights": {
             "type": "string",
@@ -64802,10 +64782,6 @@
             "type": "string",
             "title": "Type for the 3D model"
           },
-          "herbo:sortOrder": {
-            "type": "integer",
-            "title": "herbo:sortOrder"
-          },
           "LuomusIntellectualRights": {
             "type": "string",
             "enum": [
@@ -65243,7 +65219,13 @@
                 "MNP.tagHabitatFarmland",
                 "MNP.tagHabitatMire",
                 "MNP.tagHabitatMountain",
-                "MNP.tagSuitable"
+                "MNP.tagSuitable",
+                "MNP.tagTypeIsland",
+                "MNP.tagTypePartialIsland",
+                "MNP.tagTypeIslandGroup",
+                "MNP.tagTypeWater",
+                "MNP.tagTypeMixed",
+                "MNP.tagTypeUnknown"
               ]
             },
             "minItems": 0,
@@ -67404,10 +67386,6 @@
             "type": "string",
             "title": "Type for the taxon"
           },
-          "herbo:sortOrder": {
-            "type": "integer",
-            "title": "herbo:sortOrder"
-          },
           "invasiveSpeciesMainGroup": {
             "type": "array",
             "uniqueItems": false,
@@ -68930,10 +68908,6 @@
           "@type": {
             "type": "string",
             "title": "Type for the Trait enumeration"
-          },
-          "herbo:sortOrder": {
-            "type": "integer",
-            "title": "herbo:sortOrder"
           },
           "dataEntryName": {
             "type": "string",
@@ -72574,10 +72548,6 @@
           "@type": {
             "type": "string",
             "title": "Type for the Video"
-          },
-          "herbo:sortOrder": {
-            "type": "integer",
-            "title": "herbo:sortOrder"
           },
           "LuomusIntellectualRights": {
             "type": "string",

@@ -8813,13 +8813,6 @@
                             "subject": "@context",
                             "title": "Context for the Identification"
                           },
-                          "herbo:sortOrder": {
-                            "type": "integer",
-                            "range": "xsd:integer",
-                            "subject": "herbo:sortOrder",
-                            "title": "herbo:sortOrder",
-                            "sortOrder": -1
-                          },
                           "associatedObservationTaxa": {
                             "type": "string",
                             "range": "xsd:string",
@@ -19456,13 +19449,6 @@
                             "subject": "@context",
                             "title": "Context for the Identification"
                           },
-                          "herbo:sortOrder": {
-                            "type": "integer",
-                            "range": "xsd:integer",
-                            "subject": "herbo:sortOrder",
-                            "title": "herbo:sortOrder",
-                            "sortOrder": -1
-                          },
                           "associatedObservationTaxa": {
                             "type": "string",
                             "range": "xsd:string",
@@ -21216,7 +21202,13 @@
           "MNP.tagHabitatFarmland",
           "MNP.tagHabitatMire",
           "MNP.tagHabitatMountain",
-          "MNP.tagSuitable"
+          "MNP.tagSuitable",
+          "MNP.tagTypeIsland",
+          "MNP.tagTypePartialIsland",
+          "MNP.tagTypeIslandGroup",
+          "MNP.tagTypeWater",
+          "MNP.tagTypeMixed",
+          "MNP.tagTypeUnknown"
         ],
         "enumNames": [
           "",
@@ -21228,7 +21220,13 @@
           "Farmland",
           "Mire",
           "Mountain",
-          "Soveltuu liito-oravalle satelliittikuvan perusteella"
+          "Soveltuu liito-oravalle satelliittikuvan perusteella",
+          "Island",
+          "Partial island",
+          "Island group",
+          "Water area",
+          "Mixed",
+          "Unknown"
         ]
       },
       "minItems": 0,

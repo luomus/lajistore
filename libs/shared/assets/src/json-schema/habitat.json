@@ -24,13 +24,6 @@
       "subject": "@type",
       "title": "Type for the IUCN Red List Evaluation Habitat"
     },
-    "herbo:sortOrder": {
-      "type": "integer",
-      "range": "xsd:integer",
-      "subject": "herbo:sortOrder",
-      "title": "herbo:sortOrder",
-      "sortOrder": -1
-    },
     "habitat": {
       "type": "string",
       "enum": [

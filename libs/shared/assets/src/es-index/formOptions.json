@@ -2824,9 +2824,6 @@
                       "@context": {
                         "type": "keyword"
                       },
-                      "herbo:sortOrder": {
-                        "type": "integer"
-                      },
                       "associatedObservationTaxa": {
                         "type": "keyword",
                         "ignore_above": 200,

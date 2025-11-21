@@ -31,10 +31,6 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
-    "herbo:sortOrder": {
-      "@id": "default:herbo:sortOrder",
-      "@type": "xsd:integer"
-    },
     "endangerment": {
       "@id": "default:MKV.endangerment",
       "@type": "@id"

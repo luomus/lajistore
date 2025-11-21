@@ -1353,7 +1353,13 @@ export enum MNPTagEnum {
   "tagHabitatFarmland" = "MNP.tagHabitatFarmland",
   "tagHabitatMire" = "MNP.tagHabitatMire",
   "tagHabitatMountain" = "MNP.tagHabitatMountain",
-  "tagSuitable" = "MNP.tagSuitable"
+  "tagSuitable" = "MNP.tagSuitable",
+  "tagTypeIsland" = "MNP.tagTypeIsland",
+  "tagTypePartialIsland" = "MNP.tagTypePartialIsland",
+  "tagTypeIslandGroup" = "MNP.tagTypeIslandGroup",
+  "tagTypeWater" = "MNP.tagTypeWater",
+  "tagTypeMixed" = "MNP.tagTypeMixed",
+  "tagTypeUnknown" = "MNP.tagTypeUnknown"
 }
 export enum MHNNotificationReasonEnum {
   "empty" = "",

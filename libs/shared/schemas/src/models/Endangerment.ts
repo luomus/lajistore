@@ -10,7 +10,6 @@ export interface Endangerment {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  "herbo:sortOrder"?: number;
   endangerment: MKVEndangermentReasonEnum;
   sortOrder?: number;
 }

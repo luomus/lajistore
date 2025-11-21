@@ -28,9 +28,6 @@
       "@type": {
         "type": "keyword"
       },
-      "herbo:sortOrder": {
-        "type": "integer"
-      },
       "dataEntryName": {
         "type": "keyword",
         "ignore_above": 200,

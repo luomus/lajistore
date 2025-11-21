@@ -11,7 +11,6 @@ export interface Habitat {
   "@context"?: string;
   id?: string;
   "@type"?: string;
-  "herbo:sortOrder"?: number;
   habitat: MKVHabitatEnum;
   habitatSpecificType?: MKVHabitatSpecificTypeEnum[];
   sortOrder?: number;
