@@ -21202,7 +21202,13 @@
           "MNP.tagHabitatFarmland",
           "MNP.tagHabitatMire",
           "MNP.tagHabitatMountain",
-          "MNP.tagSuitable"
+          "MNP.tagSuitable",
+          "MNP.tagTypeIsland",
+          "MNP.tagTypePartialIsland",
+          "MNP.tagTypeIslandGroup",
+          "MNP.tagTypeWater",
+          "MNP.tagTypeMixed",
+          "MNP.tagTypeUnknown"
         ],
         "enumNames": [
           "",
@@ -21214,7 +21220,13 @@
           "Farmland",
           "Mire",
           "Mountain",
-          "Soveltuu liito-oravalle satelliittikuvan perusteella"
+          "Soveltuu liito-oravalle satelliittikuvan perusteella",
+          "Island",
+          "Partial island",
+          "Island group",
+          "Water area",
+          "Mixed",
+          "Unknown"
         ]
       },
       "minItems": 0,

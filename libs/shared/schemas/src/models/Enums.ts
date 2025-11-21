@@ -1263,7 +1263,13 @@ export type MNPTagEnum =
   | "MNP.tagHabitatFarmland"
   | "MNP.tagHabitatMire"
   | "MNP.tagHabitatMountain"
-  | "MNP.tagSuitable";
+  | "MNP.tagSuitable"
+  | "MNP.tagTypeIsland"
+  | "MNP.tagTypePartialIsland"
+  | "MNP.tagTypeIslandGroup"
+  | "MNP.tagTypeWater"
+  | "MNP.tagTypeMixed"
+  | "MNP.tagTypeUnknown";
 export type MHNNotificationReasonEnum =
   | ""
   | "MHN.notificationReasonOwnDocumentAnnotated"
