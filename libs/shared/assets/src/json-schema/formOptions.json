@@ -5054,7 +5054,9 @@
                   "MY.gatheringTypeLolifeHabitatZone",
                   "MY.gatheringTypeLolifeApplicableZone",
                   "MY.gatheringTypeWaterbirdPoint",
-                  "MY.gatheringTypeWaterbirdRound"
+                  "MY.gatheringTypeWaterbirdRound",
+                  "MY.gatheringTypeBoatCount",
+                  "MY.gatheringTypeNestCount"
                 ],
                 "enumNames": [
                   "",
@@ -5068,7 +5070,9 @@
                   "Habitat zone",
                   "Applicable zone",
                   "Point",
-                  "Round"
+                  "Round",
+                  "Boat count",
+                  "Nest count"
                 ],
                 "range": "MY.gatheringTypeEnum",
                 "subject": "MY.gatheringType",

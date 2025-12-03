@@ -61268,7 +61268,9 @@
               "MY.gatheringTypeLolifeHabitatZone",
               "MY.gatheringTypeLolifeApplicableZone",
               "MY.gatheringTypeWaterbirdPoint",
-              "MY.gatheringTypeWaterbirdRound"
+              "MY.gatheringTypeWaterbirdRound",
+              "MY.gatheringTypeBoatCount",
+              "MY.gatheringTypeNestCount"
             ],
             "title": "Gathering event type"
           },

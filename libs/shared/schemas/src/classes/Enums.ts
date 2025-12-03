@@ -498,7 +498,9 @@ export enum MYGatheringTypeEnum {
   "gatheringTypeLolifeHabitatZone" = "MY.gatheringTypeLolifeHabitatZone",
   "gatheringTypeLolifeApplicableZone" = "MY.gatheringTypeLolifeApplicableZone",
   "gatheringTypeWaterbirdPoint" = "MY.gatheringTypeWaterbirdPoint",
-  "gatheringTypeWaterbirdRound" = "MY.gatheringTypeWaterbirdRound"
+  "gatheringTypeWaterbirdRound" = "MY.gatheringTypeWaterbirdRound",
+  "gatheringTypeBoatCount" = "MY.gatheringTypeBoatCount",
+  "gatheringTypeNestCount" = "MY.gatheringTypeNestCount"
 }
 export enum MYGeoreferenceSources {
   "empty" = "",

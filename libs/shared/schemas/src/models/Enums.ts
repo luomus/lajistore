@@ -456,7 +456,9 @@ export type MYGatheringTypeEnum =
   | "MY.gatheringTypeLolifeHabitatZone"
   | "MY.gatheringTypeLolifeApplicableZone"
   | "MY.gatheringTypeWaterbirdPoint"
-  | "MY.gatheringTypeWaterbirdRound";
+  | "MY.gatheringTypeWaterbirdRound"
+  | "MY.gatheringTypeBoatCount"
+  | "MY.gatheringTypeNestCount";
 export type MYGeoreferenceSources =
   | ""
   | "MY.georeferenceSourceKotka"
