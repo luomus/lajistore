@@ -28,6 +28,7 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
   ) {
     super(configService, fileService);
     this.addGeneratedFieldsToType = this.configService.getList('ADD_GENERATED_FIELDS_FOR_EMBEDDED_TYPES');
+    this.addGeneratedFieldsToType = this.addGeneratedFieldsToType.concat(this.configService.getList('ADD_GENERATED_FIELDS_WITH_SECONDARY_SEQ_FOR_EMBEDDED_TYPES'))
   }
 
   /**
@@ -209,7 +210,7 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
 
     if (embeddedOverride[property.property]) {
       property.embedded = true;
-      property.range = [embeddedOverride[property.property]]; 
+      property.range = [embeddedOverride[property.property]];
       range = embeddedOverride[property.property];
     }
     if (this.formatMap[range]) {
