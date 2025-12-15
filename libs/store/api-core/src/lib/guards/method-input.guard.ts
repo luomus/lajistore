@@ -38,7 +38,7 @@ export class MethodInputGuard implements CanActivate {
 
     body.forEach(obj => {
       count++;
-      
+
       if (obj[PROPERTY_ID]) {
         countIDs++;
         ids.push(obj[PROPERTY_ID] as string);
@@ -63,7 +63,7 @@ export class MethodInputGuard implements CanActivate {
         throw new BadRequestException('Parameter ID must match ID in body for PUT-request.');
       }
     }
-  
+
     const base = await this.documentService.findMetadataByData(systemID, {[type]: body});
     const foundIDs = Object.keys(base);
     if (method === 'POST' && systemID !== 'KE.3' && type !== 'form' && countIDs) {

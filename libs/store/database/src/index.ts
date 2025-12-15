@@ -5,4 +5,6 @@ export * from './lib/document/document.entity';
 export * from './lib/document/document.repository';
 export * from './lib/document-history/document-history.entity';
 export * from './lib/document-history/document-history.repository';
+export * from './lib/sequence/sequence.entity';
+export * from './lib/sequence/sequence.repository';
 export * from './lib/store-database.module';

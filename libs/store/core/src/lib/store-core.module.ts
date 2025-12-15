@@ -18,6 +18,7 @@ import { DocumentHistoryService } from './services/document-history.service';
 import { AuthenticationService } from './services/authentication.service';
 import { StatusService } from './services/status.service';
 import { TerminusModule } from '@nestjs/terminus';
+import { SequenceService } from './services/sequence.service';
 
 @Module({
   providers: [
@@ -53,6 +54,7 @@ import { TerminusModule } from '@nestjs/terminus';
     UserService,
     StatusService,
     AuthenticationService,
+    SequenceService,
   ],
   exports: [
     BgWorkerService,
@@ -62,7 +64,8 @@ import { TerminusModule } from '@nestjs/terminus';
     PatchService,
     AuthenticationService,
     StoreConfigModule,
-    StatusService
+    StatusService,
+    SequenceService,
   ],
   imports: [
     HttpModule,

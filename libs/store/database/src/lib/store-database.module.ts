@@ -9,6 +9,8 @@ import { join } from 'path';
 import { DocumentHistory } from './document-history/document-history.entity';
 import { UserRepository } from './user/user.repository';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm/dist/interfaces/typeorm-options.interface';
+import { SequenceRepository } from './sequence/sequence.repository';
+import { Sequence } from './sequence/sequence.entity';
 
 const config = new StoreConfigService();
 const sync = config.get('DB_SYNC') === 'true';
@@ -38,7 +40,7 @@ const typeOrmConfig: TypeOrmModuleOptions = {
   username: config.get('DB_USERNAME'),
   password: config.get('DB_PASSWORD'),
   thickMode: true,
-  entities: [DocumentHistory, Document, User],
+  entities: [DocumentHistory, Document, User, Sequence],
   //logger: "advanced-console",
   //logging: "all",
   synchronize: sync,
@@ -57,6 +59,7 @@ const typeOrmConfig: TypeOrmModuleOptions = {
     UserRepository,
     DocumentRepository,
     DocumentHistoryRepository,
+    SequenceRepository
   ],
   imports: [
     TypeOrmModule.forRoot(typeOrmConfig)
@@ -65,6 +68,7 @@ const typeOrmConfig: TypeOrmModuleOptions = {
     UserRepository,
     DocumentRepository,
     DocumentHistoryRepository,
+    SequenceRepository
   ]
 })
 export class StoreDatabaseModule {}

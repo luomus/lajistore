@@ -162,3 +162,120 @@ requests:
         expect: 200
       - jsonpath: content.deviceType
         expect: "drone"
+
+  accessing_sequence_without_auth_returns_401:
+    request:
+      url: <$ testUrl $>/sequence/test/next
+      method: GET
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  requesting_next_for_nonexisting_seq_throws_404:
+    request:
+      url: <$ testUrl $>/sequence/test/next
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 404
+
+  requesting_next_with_createIfMissing_returns_1:
+    request:
+      url: <$ testUrl $>/sequence/test/next
+      method: GET
+      queryString:
+        - name: createIfMissing
+          value: "true"
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 200
+      - jsonpath: content
+        expect: 1
+
+  requesting_next_for_created_results_next_value:
+    request:
+      url: <$ testUrl $>/sequence/test/next
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 200
+      - jsonpath: content
+        expect: 2
+
+  trying_to_create_sequence_without_auth_gives_401:
+    request:
+      url: <$ testUrl $>/sequence
+      method: POST
+      postData:
+        mimeType: application/json
+        text:
+          key: "test2"
+    validate:
+      - jsonpath: status
+        expect: 401
+
+  trying_to_create_sequence_with_auth_results_in_204:
+    request:
+      url: <$ testUrl $>/sequence
+      method: POST
+      postData:
+        mimeType: application/json
+        text:
+          key: "test2"
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 204
+
+  getting_next_from_sequence_without_initial_value_gives_1:
+    request:
+      url: <$ testUrl $>/sequence/test2/next
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 200
+      - jsonpath: content
+        expect: 1
+
+  trying_to_create_sequence_with initial_value_204:
+    request:
+      url: <$ testUrl $>/sequence
+      method: POST
+      postData:
+        mimeType: application/json
+        text:
+          key: test3
+          next: 50
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 204
+
+  next_value_from_sequence_with initial_value_return_correct:
+    request:
+      url: <$ testUrl $>/sequence/test3/next
+      method: GET
+      headers:
+        - name: authorization
+          value: <$ authorization $>
+    validate:
+      - jsonpath: status
+        expect: 200
+      - jsonpath: content
+        expect: 50
