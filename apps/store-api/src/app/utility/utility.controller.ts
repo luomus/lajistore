@@ -2,7 +2,8 @@ import { Body, Controller, Get, Param, Post, Query, Redirect, UseGuards, HttpCod
 import { ApiUtilService, AuthGuard } from '@luomus/store/api-core';
 import { PARAM_TYPE } from '@luomus/store/interface';
 import { HealthCheck } from '@nestjs/terminus';
-import { StatusService, SequenceService, Sequence } from '@luomus/store/core';
+import { StatusService, SequenceService } from '@luomus/store/core';
+import type { Sequence } from '@luomus/store/database';
 
 @Controller()
 export class UtilityController {
