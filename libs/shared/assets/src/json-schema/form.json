@@ -10960,6 +10960,24 @@
                             "title": "Specimen sample",
                             "description": "",
                             "properties": {
+                              "id": {
+                                "type": "string",
+                                "range": "xsd:string",
+                                "subject": "id",
+                                "title": "Id for the Specimen sample"
+                              },
+                              "@type": {
+                                "type": "string",
+                                "range": "xsd:string",
+                                "subject": "@type",
+                                "title": "Type for the Specimen sample"
+                              },
+                              "@context": {
+                                "type": "string",
+                                "range": "xsd:string",
+                                "subject": "@context",
+                                "title": "Context for the Specimen sample"
+                              },
                               "DNAExtractionInstrument": {
                                 "type": "string",
                                 "range": "xsd:string",

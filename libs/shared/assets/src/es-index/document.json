@@ -2650,6 +2650,16 @@
               "samples": {
                 "type": "object",
                 "properties": {
+                  "id": {
+                    "type": "keyword",
+                    "normalizer": "useLowercase"
+                  },
+                  "@type": {
+                    "type": "keyword"
+                  },
+                  "@context": {
+                    "type": "keyword"
+                  },
                   "DNAExtractionInstrument": {
                     "type": "keyword",
                     "ignore_above": 200,
