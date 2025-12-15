@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm';
 
-@Entity({name: 'STORE_SEQUENCE'})
+@Entity({name: 'LAJI_SEQUENCE'})
 export abstract class Sequence {
   @PrimaryColumn({ name: 'KEY' })
   key?: string;
