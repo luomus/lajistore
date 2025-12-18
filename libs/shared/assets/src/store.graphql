@@ -819,12 +819,12 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
   ): Taxon2
 
@@ -2663,7 +2663,7 @@ type ViewerBasicAuth {
   ): Tag
 
   """
-  Return list of taxon objects.
+  Return list of Taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -5193,12 +5193,12 @@ type ViewerBasicAuth {
   ): [TagVerListItem]
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
 
     """
@@ -5661,15 +5661,15 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
 
-    """Version number for the taxon"""
+    """Version number for the Taxon"""
     number: Float!
   ): Taxon2
 
@@ -8585,6 +8585,9 @@ type Unit {
   Seed morphology of the collected seeds, used for botanical garden accessions/seed bank.
   """
   seedMorphology: SeedMorphology
+
+  """DNA sequence associated with the occurrence, stored in FASTA format."""
+  sequenceText: [String]
 
   """Sex of the individual(s)"""
   sex: Sex
@@ -16106,12 +16109,12 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
   ): Taxon2
 
@@ -17950,7 +17953,7 @@ type ViewerAnyAuth {
   ): Tag
 
   """
-  Return list of taxon objects.
+  Return list of Taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -20480,12 +20483,12 @@ type ViewerAnyAuth {
   ): [TagVerListItem]
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
 
     """
@@ -20948,15 +20951,15 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
 
-    """Version number for the taxon"""
+    """Version number for the Taxon"""
     number: Float!
   ): Taxon2
 
@@ -22040,12 +22043,12 @@ type MutationViewerBasicAuth {
   ): Tag3
 
   """
-  Delete taxon
+  Delete Taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
   ): Taxon3
 
@@ -25962,7 +25965,7 @@ type MutationViewerBasicAuth {
   ): TagSearch2
 
   """
-  Return list of taxon objects.
+  Return list of Taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -27116,7 +27119,7 @@ type MutationViewerBasicAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store taxon object(s)
+  Store Taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -28096,12 +28099,12 @@ type MutationViewerBasicAuth {
   ): Tag2
 
   """
-  Store taxon
+  Store Taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
@@ -30034,6 +30037,9 @@ input UnitInput {
   Seed morphology of the collected seeds, used for botanical garden accessions/seed bank.
   """
   seedMorphology: SeedMorphology
+
+  """DNA sequence associated with the occurrence, stored in FASTA format."""
+  sequenceText: [String]
 
   """Sex of the individual(s)"""
   sex: Sex
@@ -34980,12 +34986,12 @@ type MutationViewerAnyAuth {
   ): Tag3
 
   """
-  Delete taxon
+  Delete Taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
   ): Taxon3
 
@@ -38902,7 +38908,7 @@ type MutationViewerAnyAuth {
   ): TagSearch2
 
   """
-  Return list of taxon objects.
+  Return list of Taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -40056,7 +40062,7 @@ type MutationViewerAnyAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store taxon object(s)
+  Store Taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -41036,12 +41042,12 @@ type MutationViewerAnyAuth {
   ): Tag2
 
   """
-  Store taxon
+  Store Taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2

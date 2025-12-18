@@ -2159,6 +2159,11 @@
                     "type": "keyword",
                     "ignore_above": 200
                   },
+                  "sequenceText": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
+                  },
                   "sex": {
                     "type": "keyword",
                     "ignore_above": 200
@@ -5129,6 +5134,11 @@
                   "seedMorphology": {
                     "type": "keyword",
                     "ignore_above": 200
+                  },
+                  "sequenceText": {
+                    "type": "keyword",
+                    "ignore_above": 200,
+                    "normalizer": "useLowercase"
                   },
                   "sex": {
                     "type": "keyword",
