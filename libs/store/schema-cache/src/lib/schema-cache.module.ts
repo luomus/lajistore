@@ -26,7 +26,7 @@ import { REDIS_CACHE } from './schema-cache.constants';
       SchemaCacheService
     ],
     exports: [
-      SchemaCacheService      
+      SchemaCacheService
     ]
 })
 export class SchemaCacheModule {}

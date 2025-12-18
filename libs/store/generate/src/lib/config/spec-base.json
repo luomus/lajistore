@@ -103,6 +103,76 @@
         }
       }
     },
+    "%GLOBAL_PREFIX%/sequence": {
+      "post": {
+        "security": [{ "basic": [] }],
+        "tags": ["Utilities"],
+        "operationId": "postNewSequence",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": {},
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "key": { "type": "string" },
+                  "next": { "type": "number" }
+                }
+              }
+            }
+          }
+        },
+        "description": "Insert new sequence, next is optional, in case it is not included sequence starts from one",
+        "responses": {
+          "201": {
+            "description": "Created sequence",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "key": { "type": "string" },
+                    "next": { "type": "number" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%GLOBAL_PREFIX%/sequence/{key}/next": {
+      "get": {
+        "security": [{ "basic": [] }],
+        "tags": ["Utilities"],
+        "operationId": "getNextSequence",
+        "parameters": [{
+          "name": "key",
+          "in": "path",
+          "description": "Sequence name",
+          "required": true,
+          "schema": { "type": "string" }
+        },{
+          "name": "generateIfMissing",
+          "in": "query",
+          "description": "Generate new sequence for key if one not found yet, starting numbering from one",
+          "required": false,
+          "schema": { "type": "boolean" }
+        }],
+        "description": "Get next value from sequence",
+        "responses": {
+          "200": {
+            "description": "Next value for given sequence",
+            "content": {
+              "text/plain": {
+                "schema": { "type": "number" }
+              }
+            }
+          }
+        }
+      }
+    },
     "%GLOBAL_PREFIX%/status": {
       "get": {
         "security": [{}],

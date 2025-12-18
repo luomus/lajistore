@@ -11,6 +11,8 @@ export class SequenceRepository {
 
         const seq = repo.create({ key: sequence.key, next: sequence.next || 1 });
         await repo.insert(seq);
+
+        return seq;
   }
 
   async next(key: string, createIfMissing = false) {

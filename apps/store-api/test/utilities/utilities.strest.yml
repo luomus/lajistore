@@ -236,7 +236,11 @@ requests:
           value: <$ authorization $>
     validate:
       - jsonpath: status
-        expect: 204
+        expect: 201
+      - jsonpath: content.key
+        expect: "test2"
+      - jsonpath: content.next
+        expect: 1
 
   getting_next_from_sequence_without_initial_value_gives_1:
     request:
@@ -265,7 +269,12 @@ requests:
           value: <$ authorization $>
     validate:
       - jsonpath: status
-        expect: 204
+        expect: 201
+      - jsonpath: content.key
+        expect: "test3"
+      - jsonpath: content.next
+        expect: 50
+
 
   next_value_from_sequence_with initial_value_return_correct:
     request:

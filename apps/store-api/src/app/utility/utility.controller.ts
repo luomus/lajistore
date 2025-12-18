@@ -41,7 +41,7 @@ export class UtilityController {
   }
 
   @Post('/sequence/')
-  @HttpCode(204)
+  @HttpCode(201)
   @UseGuards(AuthGuard)
   postNewSequence(@Body() seq: Sequence) {
     return this.sequenceService.create(seq);

@@ -29,7 +29,7 @@ export class SequenceService {
    *
    * @param userData
    */
-  create(seq: Sequence): Promise<void> {
+  create(seq: Sequence): Promise<Sequence> {
     if (!seq.key) {
       throw new UnprocessableEntityException('New sequence needs a name specified.');
     }
