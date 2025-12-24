@@ -35,6 +35,8 @@ import { ContentContextDescription } from './ContentContextDescription'
 export type { ContentContextDescription }
 import { DataField } from './DataField'
 export type { DataField }
+import { DataManagementPlan } from './DataManagementPlan'
+export type { DataManagementPlan }
 import { Dataset } from './Dataset'
 export type { Dataset }
 import { DateRange } from './DateRange'
@@ -216,6 +218,7 @@ export type StoreObject = BibliographicResource
    | Contact
    | ContentContextDescription
    | DataField
+   | DataManagementPlan
    | Dataset
    | DateRange
    | Device
@@ -400,6 +403,11 @@ export function isContentContextDescription(data: unknown): data is ContentConte
 export function isDataField(data: unknown): data is DataField {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'DDF.dataField'
+  );
+}
+export function isDataManagementPlan(data: unknown): data is DataManagementPlan {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MZ.dataManagementPlan'
   );
 }
 export function isDataset(data: unknown): data is Dataset {
