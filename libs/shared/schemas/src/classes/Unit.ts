@@ -253,6 +253,10 @@ export class Unit {
    */
   seedMorphology?: MYSeedMorphologyEnum;
   /**
+   * DNA sequence associated with the occurrence, stored in FASTA format.
+   */
+  sequenceText?: string[];
+  /**
    * Sex of the individual(s)
    */
   sex?: MYSexes;

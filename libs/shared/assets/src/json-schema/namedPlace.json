@@ -7805,6 +7805,19 @@
                       "title": "Seed morphology",
                       "sortOrder": 40
                     },
+                    "sequenceText": {
+                      "type": "array",
+                      "uniqueItems": false,
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 0,
+                      "range": "xsd:string",
+                      "subject": "MY.sequenceText",
+                      "description": "DNA sequence associated with the occurrence, stored in FASTA format.",
+                      "title": "DNA sequence (FASTA)",
+                      "sortOrder": -1
+                    },
                     "sex": {
                       "type": "string",
                       "enum": [
@@ -18458,6 +18471,19 @@
                       "description": "Seed morphology of the collected seeds, used for botanical garden accessions/seed bank.",
                       "title": "Seed morphology",
                       "sortOrder": 40
+                    },
+                    "sequenceText": {
+                      "type": "array",
+                      "uniqueItems": false,
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 0,
+                      "range": "xsd:string",
+                      "subject": "MY.sequenceText",
+                      "description": "DNA sequence associated with the occurrence, stored in FASTA format.",
+                      "title": "DNA sequence (FASTA)",
+                      "sortOrder": -1
                     },
                     "sex": {
                       "type": "string",

@@ -367,6 +367,10 @@
       "@id": "default:MY.seedMorphology",
       "@type": "@id"
     },
+    "sequenceText": {
+      "@id": "default:MY.sequenceText",
+      "@type": "xsd:string"
+    },
     "sex": {
       "@id": "default:MY.sex",
       "@type": "@id"

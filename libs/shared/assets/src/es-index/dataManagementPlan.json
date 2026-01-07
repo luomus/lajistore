@@ -1,0 +1,43 @@
+{
+  "settings": {
+    "number_of_shards": 3,
+    "index.mapping.ignore_malformed": true,
+    "index.max_result_window": 1000000,
+    "index.mapping.total_fields.limit": 10000,
+    "index.mapping.nested_objects.limit": 100000,
+    "analysis": {
+      "normalizer": {
+        "useLowercase": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "@context": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword",
+        "normalizer": "useLowercase"
+      },
+      "@type": {
+        "type": "keyword"
+      },
+      "_meta": {
+        "properties": {
+          "created": {
+            "type": "date"
+          },
+          "edited": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}
