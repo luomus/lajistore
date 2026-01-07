@@ -32,12 +32,14 @@ export class SequenceRepository {
         seq.next = nextVal + 1
 
         await queryRunner.manager.save(seq);
-      } else if (createIfMissing) {
+      } else if (createIfMissing === true) {
         nextVal = 1;
 
-        const newSeq = queryRunner.manager.create(Sequence, { key, next: nextVal + 1});
-        await queryRunner.manager.save(newSeq);
+        const newSeq = queryRunner.manager.create(Sequence, { key: key, next: nextVal + 1 })
+
+        await queryRunner.manager.insert(Sequence, newSeq);
       }
+      await queryRunner.commitTransaction();
     } catch (e) {
       await queryRunner.rollbackTransaction();
       throw e;

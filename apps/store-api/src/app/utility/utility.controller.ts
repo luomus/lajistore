@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Query, Redirect, UseGuards, HttpCode } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Query, Redirect, UseGuards, HttpCode, ParseBoolPipe } from '@nestjs/common';
 import { ApiUtilService, AuthGuard } from '@luomus/store/api-core';
 import { PARAM_TYPE } from '@luomus/store/interface';
 import { HealthCheck } from '@nestjs/terminus';
@@ -49,7 +49,7 @@ export class UtilityController {
 
   @Get(`/sequence/:key/next`)
   @UseGuards(AuthGuard)
-  getNextSequence(@Param('key') key: string, @Query('createIfMissing') createIfMissing: boolean) {
+  getNextSequence(@Param('key') key: string, @Query('createIfMissing', ParseBoolPipe) createIfMissing: boolean) {
     return this.sequenceService.next(key, createIfMissing);
   }
 
