@@ -9616,13 +9616,16 @@ enum TypeVerification {
 type UnitFact {
   adultIndividualCount: Int
   autocompleteSelectedTaxonID: String
+  broodCount: Int
   context: String
+  destroyedNestCount: Int
 
   """
   Tehtiinkö lajin määritys havaintotilanteessa vai myöhemmin esimerkiksi internetin tai muiden kanssa keskustelun perusteella?
   """
   detOnSite: DetOnSite
   distanceMeters: Int
+  femalesWithBroodsCount: Int
   glowWormMicrohabitat: GlowWormMicrohabitat
   id: String
   individualCountBiotopeA: Int
@@ -30517,13 +30520,16 @@ input TypeSpecimenInput {
 input UnitFactInput {
   adultIndividualCount: Int
   autocompleteSelectedTaxonID: String
+  broodCount: Int
   context: String
+  destroyedNestCount: Int
 
   """
   Tehtiinkö lajin määritys havaintotilanteessa vai myöhemmin esimerkiksi internetin tai muiden kanssa keskustelun perusteella?
   """
   detOnSite: DetOnSite
   distanceMeters: Int
+  femalesWithBroodsCount: Int
   glowWormMicrohabitat: GlowWormMicrohabitat
   id: String
   individualCountBiotopeA: Int

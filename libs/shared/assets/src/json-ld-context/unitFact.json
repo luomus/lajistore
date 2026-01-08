@@ -39,6 +39,14 @@
       "@id": "default:MY.autocompleteSelectedTaxonID",
       "@type": "xsd:string"
     },
+    "broodCount": {
+      "@id": "default:MY.broodCount",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "destroyedNestCount": {
+      "@id": "default:MY.destroyedNestCount",
+      "@type": "xsd:nonNegativeInteger"
+    },
     "detOnSite": {
       "@id": "default:MY.detOnSite",
       "@type": "@id"
@@ -46,6 +54,10 @@
     "distanceMeters": {
       "@id": "default:MY.distanceMeters",
       "@type": "xsd:integer"
+    },
+    "femalesWithBroodsCount": {
+      "@id": "default:MY.femalesWithBroodsCount",
+      "@type": "xsd:nonNegativeInteger"
     },
     "glowWormMicrohabitat": {
       "@id": "default:MY.glowWormMicrohabitat",
