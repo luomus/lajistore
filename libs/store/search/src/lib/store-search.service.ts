@@ -219,8 +219,25 @@ export class StoreSearchService extends HealthIndicator {
     if (!base.sort) {
       base.sort = [];
     }
-    base.sort.push({ '_meta.created': 'desc' });
-    base.sort.push({ '_id': 'desc' });
+
+    let useDefaultIdSort = true;
+    let useDefaultCreatedSort = true;
+
+    base.sort.forEach((sort: Record<string, string>) => {
+      const sortKey = Object.keys(sort);
+
+      if (sortKey.includes(PROPERTY_ID) || sortKey.includes('_id')) useDefaultIdSort = false;
+      if (sortKey.includes('_meta.created')) useDefaultCreatedSort = false;
+    });
+
+    if (useDefaultCreatedSort) base.sort.push({ '_meta.created': 'desc' });
+    if (useDefaultIdSort) base.sort.push({ '_id': 'desc' });
+
+    if (base.search_after !== undefined) {
+      if (useDefaultCreatedSort) base.search_after.push(0);
+      if (useDefaultIdSort) base.search_after.push('');
+    }
+
     base.track_total_hits = true;
 
     if (query.fields) {

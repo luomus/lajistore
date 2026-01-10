@@ -54,7 +54,7 @@ const elasticResponse = {
       "skipped": 0,
       "failed": 0
   },
- "hits": {
+  "hits": {
     "total": {
       "value": 2,
       "relation": "eq"
@@ -185,7 +185,7 @@ describe('StoreSearchService', () => {
       const res = await storeSearchService.search(tempSearchQuery);
 
       expect(res.lastPage).toEqual(4);
-      expect(res.view.last).toEqual('http://localhost:3000/document?q=sourceID%3AKE.389&page=4&page_size=5'); 
+      expect(res.view.last).toEqual('http://localhost:3000/document?q=sourceID%3AKE.389&page=4&page_size=5');
     })
 
     it('check that searching first page will still result in correct next, prev, and last values', async () => {
@@ -241,7 +241,5 @@ describe('StoreSearchService', () => {
       expect(res.view.next).toEqual('http://localhost:3000/document?q=sourceID%3AKE.389&page=3&page_size=5');
       expect(res.view.previous).toEqual('http://localhost:3000/document?q=sourceID%3AKE.389&page=1&page_size=5');
     })
-
-    
   })
 });
