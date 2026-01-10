@@ -2256,11 +2256,20 @@
                         "ignore_above": 200,
                         "normalizer": "useLowercase"
                       },
+                      "broodCount": {
+                        "type": "integer"
+                      },
+                      "destroyedNestCount": {
+                        "type": "integer"
+                      },
                       "detOnSite": {
                         "type": "keyword",
                         "ignore_above": 200
                       },
                       "distanceMeters": {
+                        "type": "integer"
+                      },
+                      "femalesWithBroodsCount": {
                         "type": "integer"
                       },
                       "glowWormMicrohabitat": {
@@ -5232,11 +5241,20 @@
                         "ignore_above": 200,
                         "normalizer": "useLowercase"
                       },
+                      "broodCount": {
+                        "type": "integer"
+                      },
+                      "destroyedNestCount": {
+                        "type": "integer"
+                      },
                       "detOnSite": {
                         "type": "keyword",
                         "ignore_above": 200
                       },
                       "distanceMeters": {
+                        "type": "integer"
+                      },
+                      "femalesWithBroodsCount": {
                         "type": "integer"
                       },
                       "glowWormMicrohabitat": {

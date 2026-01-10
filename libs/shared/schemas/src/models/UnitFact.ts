@@ -22,11 +22,14 @@ export interface UnitFact {
   "@type"?: string;
   adultIndividualCount?: number;
   autocompleteSelectedTaxonID?: string;
+  broodCount?: number;
+  destroyedNestCount?: number;
   /**
    * Tehtiinkö lajin määritys havaintotilanteessa vai myöhemmin esimerkiksi internetin tai muiden kanssa keskustelun perusteella?
    */
   detOnSite?: MYDetOnSiteEnum;
   distanceMeters?: number;
+  femalesWithBroodsCount?: number;
   glowWormMicrohabitat?: MYGlowWormMicrohabitatEnum;
   individualCountFlock?: number;
   individualCountInner?: number;

@@ -5492,6 +5492,22 @@
                 "title": "Taxon ID selected from autocomplete",
                 "sortOrder": -1
               },
+              "broodCount": {
+                "type": "integer",
+                "minimum": 0,
+                "range": "xsd:nonNegativeInteger",
+                "subject": "MY.broodCount",
+                "title": "Brood count",
+                "sortOrder": -1
+              },
+              "destroyedNestCount": {
+                "type": "integer",
+                "minimum": 0,
+                "range": "xsd:nonNegativeInteger",
+                "subject": "MY.destroyedNestCount",
+                "title": "Destroyed nests count",
+                "sortOrder": -1
+              },
               "detOnSite": {
                 "type": "string",
                 "enum": [
@@ -5515,6 +5531,14 @@
                 "range": "xsd:integer",
                 "subject": "MY.distanceMeters",
                 "title": "Observation distance (m)",
+                "sortOrder": -1
+              },
+              "femalesWithBroodsCount": {
+                "type": "integer",
+                "minimum": 0,
+                "range": "xsd:nonNegativeInteger",
+                "subject": "MY.femalesWithBroodsCount",
+                "title": "Females with broods count",
                 "sortOrder": -1
               },
               "glowWormMicrohabitat": {

@@ -72775,6 +72775,16 @@
             "type": "string",
             "title": "Taxon ID selected from autocomplete"
           },
+          "broodCount": {
+            "type": "integer",
+            "minimum": 0,
+            "title": "Brood count"
+          },
+          "destroyedNestCount": {
+            "type": "integer",
+            "minimum": 0,
+            "title": "Destroyed nests count"
+          },
           "detOnSite": {
             "type": "string",
             "enum": [
@@ -72788,6 +72798,11 @@
           "distanceMeters": {
             "type": "integer",
             "title": "Observation distance (m)"
+          },
+          "femalesWithBroodsCount": {
+            "type": "integer",
+            "minimum": 0,
+            "title": "Females with broods count"
           },
           "glowWormMicrohabitat": {
             "type": "string",
