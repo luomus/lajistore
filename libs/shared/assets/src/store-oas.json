@@ -41857,10 +41857,10 @@
             }
           }
         ],
-        "description": "Return list of taxon objects.",
+        "description": "Return list of Taxon objects.",
         "responses": {
           "200": {
-            "description": "A list of  taxon.",
+            "description": "A list of  Taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -41928,10 +41928,10 @@
             }
           }
         },
-        "description": "Store taxon object(s)",
+        "description": "Store Taxon object(s)",
         "responses": {
           "201": {
-            "description": "Stored taxon object(s)",
+            "description": "Stored Taxon object(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -41993,7 +41993,7 @@
         "description": "Patch taxon (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching taxon.",
         "responses": {
           "200": {
-            "description": "A list of  taxon.",
+            "description": "A list of  Taxon.",
             "content": {
               "application/json": {
                 "example": {
@@ -42086,10 +42086,10 @@
             }
           }
         },
-        "description": "Return list of taxon objects.",
+        "description": "Return list of Taxon objects.",
         "responses": {
           "200": {
-            "description": "A list of  taxon.",
+            "description": "A list of  Taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42157,17 +42157,17 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the taxon",
+            "description": "Id for the Taxon",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Return a taxon.",
+        "description": "Return a Taxon.",
         "responses": {
           "200": {
-            "description": "a taxon.",
+            "description": "a Taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42192,7 +42192,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the taxon",
+            "description": "Id for the Taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -42208,10 +42208,10 @@
             }
           }
         },
-        "description": "Store taxon",
+        "description": "Store Taxon",
         "responses": {
           "200": {
-            "description": "Stored taxon",
+            "description": "Stored Taxon",
             "content": {
               "application/json": {
                 "schema": {
@@ -42236,14 +42236,14 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the taxon",
+            "description": "Id for the Taxon",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Delete taxon",
+        "description": "Delete Taxon",
         "responses": {
           "200": {
             "description": "Deletion succeeded",
@@ -42275,7 +42275,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the taxon",
+            "description": "Id for the Taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -42294,10 +42294,10 @@
         "tags": [
           "taxon"
         ],
-        "description": "Return a taxon.",
+        "description": "Return a Taxon.",
         "responses": {
           "200": {
-            "description": "a taxon.",
+            "description": "a Taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42343,7 +42343,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the taxon",
+            "description": "Id for the Taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -42352,17 +42352,17 @@
           {
             "name": "number",
             "in": "path",
-            "description": "Version number for the taxon",
+            "description": "Version number for the Taxon",
             "required": true,
             "schema": {
               "type": "number"
             }
           }
         ],
-        "description": "Return a taxon.",
+        "description": "Return a Taxon.",
         "responses": {
           "200": {
-            "description": "a taxon.",
+            "description": "a Taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -67977,15 +67977,15 @@
         "properties": {
           "@context": {
             "type": "string",
-            "title": "Context for the taxon"
+            "title": "Context for the Taxon"
           },
           "id": {
             "type": "string",
-            "title": "Id for the taxon"
+            "title": "Id for the Taxon"
           },
           "@type": {
             "type": "string",
-            "title": "Type for the taxon"
+            "title": "Type for the Taxon"
           },
           "invasiveSpeciesMainGroup": {
             "type": "array",
@@ -74335,7 +74335,7 @@
     },
     {
       "name": "taxon",
-      "description": "taxon"
+      "description": "Taxon"
     },
     {
       "name": "taxonCensus",
