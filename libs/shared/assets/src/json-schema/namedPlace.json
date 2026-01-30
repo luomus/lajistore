@@ -21317,6 +21317,7 @@
           "MNP.tagTypePartialIsland",
           "MNP.tagTypeIslandGroup",
           "MNP.tagTypeWater",
+          "MNP.tagTypeShoreline",
           "MNP.tagTypeMixed",
           "MNP.tagTypeUnknown"
         ],
@@ -21335,6 +21336,7 @@
           "Partial island",
           "Island group",
           "Water area",
+          "Shoreline",
           "Mixed",
           "Unknown"
         ]

@@ -1269,6 +1269,7 @@ export type MNPTagEnum =
   | "MNP.tagTypePartialIsland"
   | "MNP.tagTypeIslandGroup"
   | "MNP.tagTypeWater"
+  | "MNP.tagTypeShoreline"
   | "MNP.tagTypeMixed"
   | "MNP.tagTypeUnknown";
 export type MHNNotificationReasonEnum =

@@ -1359,6 +1359,7 @@ export enum MNPTagEnum {
   "tagTypePartialIsland" = "MNP.tagTypePartialIsland",
   "tagTypeIslandGroup" = "MNP.tagTypeIslandGroup",
   "tagTypeWater" = "MNP.tagTypeWater",
+  "tagTypeShoreline" = "MNP.tagTypeShoreline",
   "tagTypeMixed" = "MNP.tagTypeMixed",
   "tagTypeUnknown" = "MNP.tagTypeUnknown"
 }
