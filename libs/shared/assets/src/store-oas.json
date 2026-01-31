@@ -68573,7 +68573,16 @@
                 "MX.taxonSetBiomonCompleteListMacrolichens",
                 "MX.taxonSetBiomonCompleteListBracketFungi",
                 "MX.taxonSetBiomonCompleteListPracticalFungi",
-                "MX.taxonSetSykeMacrozoobenthos"
+                "MX.taxonSetSykeMacrozoobenthos",
+                "MX.taxonSetArchipelagoWaterbirds",
+                "MX.taxonSetArchipelagoWaders",
+                "MX.taxonSetArchipelagoGulls",
+                "MX.taxonSetArchipelagoPasserines",
+                "MX.taxonSetArchipelagoAlcids",
+                "MX.taxonSetArchipelagoRaptors",
+                "MX.taxonSetArchipelagoCormorants",
+                "MX.taxonSetArchipelagoEgrets",
+                "MX.taxonSetArchipelagoMammals"
               ]
             },
             "minItems": 0,
@@ -69111,7 +69120,16 @@
               "MX.taxonSetBiomonCompleteListMacrolichens",
               "MX.taxonSetBiomonCompleteListBracketFungi",
               "MX.taxonSetBiomonCompleteListPracticalFungi",
-              "MX.taxonSetSykeMacrozoobenthos"
+              "MX.taxonSetSykeMacrozoobenthos",
+              "MX.taxonSetArchipelagoWaterbirds",
+              "MX.taxonSetArchipelagoWaders",
+              "MX.taxonSetArchipelagoGulls",
+              "MX.taxonSetArchipelagoPasserines",
+              "MX.taxonSetArchipelagoAlcids",
+              "MX.taxonSetArchipelagoRaptors",
+              "MX.taxonSetArchipelagoCormorants",
+              "MX.taxonSetArchipelagoEgrets",
+              "MX.taxonSetArchipelagoMammals"
             ],
             "title": "Censused taxon set"
           },

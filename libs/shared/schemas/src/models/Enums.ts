@@ -1607,7 +1607,16 @@ export type MXTaxonSetEnum =
   | "MX.taxonSetBiomonCompleteListMacrolichens"
   | "MX.taxonSetBiomonCompleteListBracketFungi"
   | "MX.taxonSetBiomonCompleteListPracticalFungi"
-  | "MX.taxonSetSykeMacrozoobenthos";
+  | "MX.taxonSetSykeMacrozoobenthos"
+  | "MX.taxonSetArchipelagoWaterbirds"
+  | "MX.taxonSetArchipelagoWaders"
+  | "MX.taxonSetArchipelagoGulls"
+  | "MX.taxonSetArchipelagoPasserines"
+  | "MX.taxonSetArchipelagoAlcids"
+  | "MX.taxonSetArchipelagoRaptors"
+  | "MX.taxonSetArchipelagoCormorants"
+  | "MX.taxonSetArchipelagoEgrets"
+  | "MX.taxonSetArchipelagoMammals";
 export type MXOccurrenceInFinlandEnum =
   | ""
   | "MX.doesNotOccur"

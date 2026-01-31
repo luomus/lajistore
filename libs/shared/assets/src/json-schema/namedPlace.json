@@ -2088,7 +2088,16 @@
                       "MX.taxonSetBiomonCompleteListMacrolichens",
                       "MX.taxonSetBiomonCompleteListBracketFungi",
                       "MX.taxonSetBiomonCompleteListPracticalFungi",
-                      "MX.taxonSetSykeMacrozoobenthos"
+                      "MX.taxonSetSykeMacrozoobenthos",
+                      "MX.taxonSetArchipelagoWaterbirds",
+                      "MX.taxonSetArchipelagoWaders",
+                      "MX.taxonSetArchipelagoGulls",
+                      "MX.taxonSetArchipelagoPasserines",
+                      "MX.taxonSetArchipelagoAlcids",
+                      "MX.taxonSetArchipelagoRaptors",
+                      "MX.taxonSetArchipelagoCormorants",
+                      "MX.taxonSetArchipelagoEgrets",
+                      "MX.taxonSetArchipelagoMammals"
                     ],
                     "enumNames": [
                       "",
@@ -2113,7 +2122,16 @@
                       "Biomon: Macrolichens",
                       "Biomon: Bracket fungi",
                       "Biomon: Practical fungi",
-                      "Syke POHJE database taxonomy update"
+                      "Syke POHJE database taxonomy update",
+                      "MX.taxonSetArchipelagoWaterbirds",
+                      "MX.taxonSetArchipelagoWaders",
+                      "MX.taxonSetArchipelagoGulls",
+                      "MX.taxonSetArchipelagoPasserines",
+                      "MX.taxonSetArchipelagoAlcids",
+                      "MX.taxonSetArchipelagoRaptors",
+                      "MX.taxonSetArchipelagoCormorants",
+                      "MX.taxonSetArchipelagoEgrets",
+                      "MX.taxonSetArchipelagoMammals"
                     ],
                     "range": "MX.taxonSetEnum",
                     "subject": "MY.censusTaxonSetID",
@@ -5391,7 +5409,16 @@
                         "MX.taxonSetBiomonCompleteListMacrolichens",
                         "MX.taxonSetBiomonCompleteListBracketFungi",
                         "MX.taxonSetBiomonCompleteListPracticalFungi",
-                        "MX.taxonSetSykeMacrozoobenthos"
+                        "MX.taxonSetSykeMacrozoobenthos",
+                        "MX.taxonSetArchipelagoWaterbirds",
+                        "MX.taxonSetArchipelagoWaders",
+                        "MX.taxonSetArchipelagoGulls",
+                        "MX.taxonSetArchipelagoPasserines",
+                        "MX.taxonSetArchipelagoAlcids",
+                        "MX.taxonSetArchipelagoRaptors",
+                        "MX.taxonSetArchipelagoCormorants",
+                        "MX.taxonSetArchipelagoEgrets",
+                        "MX.taxonSetArchipelagoMammals"
                       ],
                       "enumNames": [
                         "",
@@ -5416,7 +5443,16 @@
                         "Biomon: Macrolichens",
                         "Biomon: Bracket fungi",
                         "Biomon: Practical fungi",
-                        "Syke POHJE database taxonomy update"
+                        "Syke POHJE database taxonomy update",
+                        "MX.taxonSetArchipelagoWaterbirds",
+                        "MX.taxonSetArchipelagoWaders",
+                        "MX.taxonSetArchipelagoGulls",
+                        "MX.taxonSetArchipelagoPasserines",
+                        "MX.taxonSetArchipelagoAlcids",
+                        "MX.taxonSetArchipelagoRaptors",
+                        "MX.taxonSetArchipelagoCormorants",
+                        "MX.taxonSetArchipelagoEgrets",
+                        "MX.taxonSetArchipelagoMammals"
                       ],
                       "range": "MX.taxonSetEnum",
                       "subject": "MY.censusTaxonSetID",
@@ -12779,7 +12815,16 @@
                       "MX.taxonSetBiomonCompleteListMacrolichens",
                       "MX.taxonSetBiomonCompleteListBracketFungi",
                       "MX.taxonSetBiomonCompleteListPracticalFungi",
-                      "MX.taxonSetSykeMacrozoobenthos"
+                      "MX.taxonSetSykeMacrozoobenthos",
+                      "MX.taxonSetArchipelagoWaterbirds",
+                      "MX.taxonSetArchipelagoWaders",
+                      "MX.taxonSetArchipelagoGulls",
+                      "MX.taxonSetArchipelagoPasserines",
+                      "MX.taxonSetArchipelagoAlcids",
+                      "MX.taxonSetArchipelagoRaptors",
+                      "MX.taxonSetArchipelagoCormorants",
+                      "MX.taxonSetArchipelagoEgrets",
+                      "MX.taxonSetArchipelagoMammals"
                     ],
                     "enumNames": [
                       "",
@@ -12804,7 +12849,16 @@
                       "Biomon: Macrolichens",
                       "Biomon: Bracket fungi",
                       "Biomon: Practical fungi",
-                      "Syke POHJE database taxonomy update"
+                      "Syke POHJE database taxonomy update",
+                      "MX.taxonSetArchipelagoWaterbirds",
+                      "MX.taxonSetArchipelagoWaders",
+                      "MX.taxonSetArchipelagoGulls",
+                      "MX.taxonSetArchipelagoPasserines",
+                      "MX.taxonSetArchipelagoAlcids",
+                      "MX.taxonSetArchipelagoRaptors",
+                      "MX.taxonSetArchipelagoCormorants",
+                      "MX.taxonSetArchipelagoEgrets",
+                      "MX.taxonSetArchipelagoMammals"
                     ],
                     "range": "MX.taxonSetEnum",
                     "subject": "MY.censusTaxonSetID",
@@ -16082,7 +16136,16 @@
                         "MX.taxonSetBiomonCompleteListMacrolichens",
                         "MX.taxonSetBiomonCompleteListBracketFungi",
                         "MX.taxonSetBiomonCompleteListPracticalFungi",
-                        "MX.taxonSetSykeMacrozoobenthos"
+                        "MX.taxonSetSykeMacrozoobenthos",
+                        "MX.taxonSetArchipelagoWaterbirds",
+                        "MX.taxonSetArchipelagoWaders",
+                        "MX.taxonSetArchipelagoGulls",
+                        "MX.taxonSetArchipelagoPasserines",
+                        "MX.taxonSetArchipelagoAlcids",
+                        "MX.taxonSetArchipelagoRaptors",
+                        "MX.taxonSetArchipelagoCormorants",
+                        "MX.taxonSetArchipelagoEgrets",
+                        "MX.taxonSetArchipelagoMammals"
                       ],
                       "enumNames": [
                         "",
@@ -16107,7 +16170,16 @@
                         "Biomon: Macrolichens",
                         "Biomon: Bracket fungi",
                         "Biomon: Practical fungi",
-                        "Syke POHJE database taxonomy update"
+                        "Syke POHJE database taxonomy update",
+                        "MX.taxonSetArchipelagoWaterbirds",
+                        "MX.taxonSetArchipelagoWaders",
+                        "MX.taxonSetArchipelagoGulls",
+                        "MX.taxonSetArchipelagoPasserines",
+                        "MX.taxonSetArchipelagoAlcids",
+                        "MX.taxonSetArchipelagoRaptors",
+                        "MX.taxonSetArchipelagoCormorants",
+                        "MX.taxonSetArchipelagoEgrets",
+                        "MX.taxonSetArchipelagoMammals"
                       ],
                       "range": "MX.taxonSetEnum",
                       "subject": "MY.censusTaxonSetID",

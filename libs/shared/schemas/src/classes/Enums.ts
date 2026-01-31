@@ -1726,7 +1726,16 @@ export enum MXTaxonSetEnum {
   "MX.taxonSetBiomonCompleteListMacrolichens" = "MX.taxonSetBiomonCompleteListMacrolichens",
   "MX.taxonSetBiomonCompleteListBracketFungi" = "MX.taxonSetBiomonCompleteListBracketFungi",
   "MX.taxonSetBiomonCompleteListPracticalFungi" = "MX.taxonSetBiomonCompleteListPracticalFungi",
-  "MX.taxonSetSykeMacrozoobenthos" = "MX.taxonSetSykeMacrozoobenthos"
+  "MX.taxonSetSykeMacrozoobenthos" = "MX.taxonSetSykeMacrozoobenthos",
+  "MX.taxonSetArchipelagoWaterbirds" = "MX.taxonSetArchipelagoWaterbirds",
+  "MX.taxonSetArchipelagoWaders" = "MX.taxonSetArchipelagoWaders",
+  "MX.taxonSetArchipelagoGulls" = "MX.taxonSetArchipelagoGulls",
+  "MX.taxonSetArchipelagoPasserines" = "MX.taxonSetArchipelagoPasserines",
+  "MX.taxonSetArchipelagoAlcids" = "MX.taxonSetArchipelagoAlcids",
+  "MX.taxonSetArchipelagoRaptors" = "MX.taxonSetArchipelagoRaptors",
+  "MX.taxonSetArchipelagoCormorants" = "MX.taxonSetArchipelagoCormorants",
+  "MX.taxonSetArchipelagoEgrets" = "MX.taxonSetArchipelagoEgrets",
+  "MX.taxonSetArchipelagoMammals" = "MX.taxonSetArchipelagoMammals"
 }
 export enum MXOccurrenceInFinlandEnum {
   "empty" = "",
