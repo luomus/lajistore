@@ -7311,6 +7311,7 @@ type GatheringEvent {
   acknowledgeNoUnitsInCensus: Boolean
   artificialLight: ArtificialLight
   breaksDuringCensusInMinutes: Int
+  censusCount: Int
   censusHinderedByEnviromentalFactors: Boolean
   censusHinderedByFog: Boolean
   censusHinderedByRain: Boolean
@@ -9625,6 +9626,7 @@ enum TypeVerification {
 type UnitFact {
   adultIndividualCount: Int
   autocompleteSelectedTaxonID: String
+  birdMultiplier: Boolean
   broodCount: Int
   context: String
   destroyedNestCount: Int
@@ -29683,6 +29685,7 @@ input GatheringEventInput {
   acknowledgeNoUnitsInCensus: Boolean
   artificialLight: ArtificialLight
   breaksDuringCensusInMinutes: Int
+  censusCount: Int
   censusHinderedByEnviromentalFactors: Boolean
   censusHinderedByFog: Boolean
   censusHinderedByRain: Boolean
@@ -30539,6 +30542,7 @@ input TypeSpecimenInput {
 input UnitFactInput {
   adultIndividualCount: Int
   autocompleteSelectedTaxonID: String
+  birdMultiplier: Boolean
   broodCount: Int
   context: String
   destroyedNestCount: Int

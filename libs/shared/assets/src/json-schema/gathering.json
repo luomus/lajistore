@@ -309,14 +309,14 @@
       "range": "xsd:string",
       "subject": "MY.dateBegin",
       "title": "Start date",
-      "sortOrder": 3
+      "sortOrder": 2
     },
     "dateEnd": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateEnd",
       "title": "End date",
-      "sortOrder": 4
+      "sortOrder": 3
     },
     "dateVerbatim": {
       "type": "string",
@@ -2376,7 +2376,7 @@
       "subject": "MY.notes",
       "description": "Additional information to the data in each section.",
       "title": "Notes",
-      "sortOrder": 6
+      "sortOrder": 5
     },
     "numberOfSampledIndividuals": {
       "type": "string",
@@ -4504,7 +4504,7 @@
             "subject": "MY.notes",
             "description": "Additional information to the data in each section.",
             "title": "Notes",
-            "sortOrder": 6
+            "sortOrder": 5
           },
           "pairCount": {
             "type": "integer",
@@ -5510,6 +5510,13 @@
                 "title": "Taxon ID selected from autocomplete",
                 "sortOrder": -1
               },
+              "birdMultiplier": {
+                "type": "boolean",
+                "range": "xsd:boolean",
+                "subject": "MY.birdMultiplier",
+                "title": "K-multiplier",
+                "sortOrder": -1
+              },
               "broodCount": {
                 "type": "integer",
                 "minimum": 0,
@@ -6002,14 +6009,14 @@
                 "range": "xsd:string",
                 "subject": "MY.dateBegin",
                 "title": "Start date",
-                "sortOrder": 3
+                "sortOrder": 2
               },
               "dateEnd": {
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MY.dateEnd",
                 "title": "End date",
-                "sortOrder": 4
+                "sortOrder": 3
               },
               "geometry": {
                 "type": "object",

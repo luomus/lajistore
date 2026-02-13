@@ -562,6 +562,9 @@
             "ignore_above": 200,
             "normalizer": "useLowercase"
           },
+          "birdMultiplier": {
+            "type": "boolean"
+          },
           "broodCount": {
             "type": "integer"
           },

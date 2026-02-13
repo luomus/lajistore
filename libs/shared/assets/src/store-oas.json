@@ -62543,6 +62543,11 @@
             "minimum": 0,
             "title": "Breaks kept in minutes"
           },
+          "censusCount": {
+            "type": "integer",
+            "minimum": 0,
+            "title": "Number of censuses"
+          },
           "censusHinderedByEnviromentalFactors": {
             "type": "boolean",
             "title": "Weather (etc) hindered the census"
@@ -72793,6 +72798,10 @@
           "autocompleteSelectedTaxonID": {
             "type": "string",
             "title": "Taxon ID selected from autocomplete"
+          },
+          "birdMultiplier": {
+            "type": "boolean",
+            "title": "K-multiplier"
           },
           "broodCount": {
             "type": "integer",

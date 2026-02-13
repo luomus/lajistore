@@ -38,6 +38,9 @@
       "breaksDuringCensusInMinutes": {
         "type": "integer"
       },
+      "censusCount": {
+        "type": "integer"
+      },
       "censusHinderedByEnviromentalFactors": {
         "type": "boolean"
       },

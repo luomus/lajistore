@@ -19,6 +19,7 @@ export class GatheringEvent {
   acknowledgeNoUnitsInCensus?: boolean;
   artificialLight?: MYArtificialLightEnum;
   breaksDuringCensusInMinutes?: number;
+  censusCount?: number;
   censusHinderedByEnviromentalFactors?: boolean;
   censusHinderedByFog?: boolean;
   censusHinderedByRain?: boolean;
