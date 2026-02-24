@@ -49,7 +49,7 @@ export class UtilityController {
 
   @Get(`/sequence/:key/next`)
   @UseGuards(AuthGuard)
-  getNextSequence(@Param('key') key: string, @Query('createIfMissing', ParseBoolPipe) createIfMissing: boolean) {
+  getNextSequence(@Param('key') key: string, @Query('createIfMissing', new ParseBoolPipe({ optional: true })) createIfMissing?: boolean) {
     return this.sequenceService.next(key, createIfMissing);
   }
 
