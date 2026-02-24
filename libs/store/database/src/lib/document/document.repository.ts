@@ -22,9 +22,9 @@ export class DocumentRepository {
   ) {}
 
 
-  find(where: Where<Document>, metaOnly: true): Promise<Required<Pick<Document, 'id'|'version'|'edited'|'created'|'sequence'>[]>>;
+  find(where: Where<Document>, metaOnly: true): Promise<Required<Pick<Document, 'id'|'version'|'edited'|'created'|'sequence'|'secondary_sequence'>[]>>;
   find(where: Where<Document>, metaOnly?: false): Promise<Required<Document>[]>;
-  find(where: Where<Document>, metaOnly: boolean): Promise<Required<Array<Document|Pick<Document, 'id'|'version'|'edited'|'created'|'sequence'>>>>;
+  find(where: Where<Document>, metaOnly: boolean): Promise<Required<Array<Document|Pick<Document, 'id'|'version'|'edited'|'created'|'sequence'|'secondary_sequence'>>>>;
   find(where: Where<Document>, metaOnly = false) {
     const huge = new Set<keyof Where<Document>>();
 

@@ -31,7 +31,7 @@ export class LinkUserCommand {
   })
   async link(command: LinkUserOptions) {
     const spin = ora();
-    
+
     spin.start('Fetching linked user ID:s')
 
     let users: UserLink[] = [];
@@ -152,7 +152,7 @@ export class LinkUserCommand {
                 }
               }
             });
-      
+
             const gatheringEvent = document.gatheringEvent;
             if (gatheringEvent && gatheringEvent['legUserID']) {
               const newVal = this.linkValue(gatheringEvent['legUserID'], userLookup);
@@ -196,7 +196,7 @@ export class LinkUserCommand {
           changed = true
           return user;
         }
-    
+
         return val;
       });
 
@@ -210,7 +210,7 @@ export class LinkUserCommand {
 
     if (user) {
       return {
-        changed: true, 
+        changed: true,
         value: user
       };
     }
