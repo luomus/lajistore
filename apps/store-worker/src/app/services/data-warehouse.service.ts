@@ -9,7 +9,8 @@ import {
   isAnnotation,
   isDocument,
   StoreObject,
-  Unit
+  Unit,
+  UnitFact
 } from '@luomus/shared/models';
 import { WorkerConfigService } from './worker-config.service';
 import { LajiApiTokenService } from './laji-api-token.service';
@@ -29,7 +30,7 @@ const taxonIdentificationFields: Array<keyof Identification> = [
   'taxonVerbatim'
 ];
 
-const countFields: Array<keyof Unit> = [
+const countFields: Array<keyof Unit | keyof UnitFact> = [
   'count',
   'individualCount',
   'pairCount',
@@ -37,7 +38,12 @@ const countFields: Array<keyof Unit> = [
   'maleIndividualCount',
   'femaleIndividualCount',
   'areaInSquareMeters',
-  'images'
+  'images',
+  'nestCount',
+  'destroyedNestCount',
+  'broodCount',
+  'femalesWithBroodsCount',
+  'juvenileIndividualCount',
 ];
 
 interface SourceData {
@@ -271,7 +277,10 @@ export class DataWarehouseService {
 
   private static isEmptyUnit(unit: Unit, removeUnitIfNoCount: boolean): boolean {
     if (removeUnitIfNoCount) {
-      return countFields.every(field => DataWarehouseService.isEmpty(unit[field]));
+      return countFields.every(field =>
+        DataWarehouseService.isEmpty((unit as any)[field])
+        && (!unit.unitFact || DataWarehouseService.isEmpty((unit.unitFact as any)[field]))
+      );
     } else {
       for (const field of taxonUnitFields) {
         if (
