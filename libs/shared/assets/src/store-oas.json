@@ -61450,7 +61450,7 @@
             "title": "warnEditingOldDocument"
           },
           "warnEditingOldDocumentDuration": {
-            "type": "boolean",
+            "type": "string",
             "description": "Duration in ISO 8601 duration format. Defaults to P1W (one week)",
             "title": "Duration of editing old document warning"
           }

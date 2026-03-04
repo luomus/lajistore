@@ -265,7 +265,7 @@
     },
     "warnEditingOldDocumentDuration": {
       "@id": "default:MHL.warnEditingOldDocumentDuration",
-      "@type": "xsd:boolean"
+      "@type": "xsd:string"
     }
   }
 }

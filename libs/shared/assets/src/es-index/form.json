@@ -3754,7 +3754,9 @@
             "type": "boolean"
           },
           "warnEditingOldDocumentDuration": {
-            "type": "boolean"
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },

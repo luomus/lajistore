@@ -10217,7 +10217,7 @@ type FormOptions {
   warnEditingOldDocument: Boolean
 
   """Duration in ISO 8601 duration format. Defaults to P1W (one week)"""
-  warnEditingOldDocumentDuration: Boolean
+  warnEditingOldDocumentDuration: String
 }
 
 type FormFooter {
@@ -30901,7 +30901,7 @@ input FormOptionsInput {
   warnEditingOldDocument: Boolean
 
   """Duration in ISO 8601 duration format. Defaults to P1W (one week)"""
-  warnEditingOldDocumentDuration: Boolean
+  warnEditingOldDocumentDuration: String
 }
 
 input FormFooterInput {

@@ -12285,8 +12285,8 @@
           "sortOrder": 8
         },
         "warnEditingOldDocumentDuration": {
-          "type": "boolean",
-          "range": "xsd:boolean",
+          "type": "string",
+          "range": "xsd:string",
           "subject": "MHL.warnEditingOldDocumentDuration",
           "description": "Duration in ISO 8601 duration format. Defaults to P1W (one week)",
           "title": "Duration of editing old document warning",
