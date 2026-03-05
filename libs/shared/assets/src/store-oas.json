@@ -66672,7 +66672,8 @@
                 "MA.speciesChallengeAdmin",
                 "MA.luomusSpaceCalendarUser",
                 "MA.luomusSpaceOpeningTimesUser",
-                "MA.taxonIdEditor"
+                "MA.taxonIdEditor",
+                "MA.3rdPartyDeveloper"
               ]
             },
             "minItems": 0,

@@ -1401,7 +1401,8 @@ export enum MARoles {
   "speciesChallengeAdmin" = "MA.speciesChallengeAdmin",
   "luomusSpaceCalendarUser" = "MA.luomusSpaceCalendarUser",
   "luomusSpaceOpeningTimesUser" = "MA.luomusSpaceOpeningTimesUser",
-  "taxonIdEditor" = "MA.taxonIdEditor"
+  "taxonIdEditor" = "MA.taxonIdEditor",
+  "3rdPartyDeveloper" = "MA.3rdPartyDeveloper"
 }
 export enum MARoleKotkaEnum {
   "empty" = "",

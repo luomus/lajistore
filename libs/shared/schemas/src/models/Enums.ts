@@ -1306,7 +1306,8 @@ export type MARoles =
   | "MA.speciesChallengeAdmin"
   | "MA.luomusSpaceCalendarUser"
   | "MA.luomusSpaceOpeningTimesUser"
-  | "MA.taxonIdEditor";
+  | "MA.taxonIdEditor"
+  | "MA.3rdPartyDeveloper";
 export type MARoleKotkaEnum =
   | ""
   | "MA.admin"
