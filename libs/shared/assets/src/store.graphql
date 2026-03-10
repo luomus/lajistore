@@ -829,12 +829,12 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
   ): Taxon2
 
@@ -2695,7 +2695,7 @@ type ViewerBasicAuth {
   ): Tag
 
   """
-  Return list of taxon objects.
+  Return list of Taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -5253,12 +5253,12 @@ type ViewerBasicAuth {
   ): [TagVerListItem]
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
 
     """
@@ -5721,15 +5721,15 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
 
-    """Version number for the taxon"""
+    """Version number for the Taxon"""
     number: Float!
   ): Taxon2
 
@@ -7311,6 +7311,7 @@ type GatheringEvent {
   acknowledgeNoUnitsInCensus: Boolean
   artificialLight: ArtificialLight
   breaksDuringCensusInMinutes: Int
+  censusCount: Int
   censusHinderedByEnviromentalFactors: Boolean
   censusHinderedByFog: Boolean
   censusHinderedByRain: Boolean
@@ -7809,6 +7810,15 @@ enum CensusTaxonSetID {
   MX_TAXONSETBIOMONCOMPLETELISTBRACKETFUNGI
   MX_TAXONSETBIOMONCOMPLETELISTPRACTICALFUNGI
   MX_TAXONSETSYKEMACROZOOBENTHOS
+  MX_TAXONSETARCHIPELAGOWATERBIRDS
+  MX_TAXONSETARCHIPELAGOWADERS
+  MX_TAXONSETARCHIPELAGOGULLS
+  MX_TAXONSETARCHIPELAGOPASSERINES
+  MX_TAXONSETARCHIPELAGOALCIDS
+  MX_TAXONSETARCHIPELAGORAPTORS
+  MX_TAXONSETARCHIPELAGOCORMORANTS
+  MX_TAXONSETARCHIPELAGOEGRETS
+  MX_TAXONSETARCHIPELAGOMAMMALS
 }
 
 enum TaxonCensusType {
@@ -9616,6 +9626,7 @@ enum TypeVerification {
 type UnitFact {
   adultIndividualCount: Int
   autocompleteSelectedTaxonID: String
+  birdMultiplier: Boolean
   broodCount: Int
   context: String
   destroyedNestCount: Int
@@ -10206,7 +10217,7 @@ type FormOptions {
   warnEditingOldDocument: Boolean
 
   """Duration in ISO 8601 duration format. Defaults to P1W (one week)"""
-  warnEditingOldDocumentDuration: Boolean
+  warnEditingOldDocumentDuration: String
 }
 
 type FormFooter {
@@ -11449,6 +11460,7 @@ enum TagsListItem {
   MNP_TAGTYPEPARTIALISLAND
   MNP_TAGTYPEISLANDGROUP
   MNP_TAGTYPEWATER
+  MNP_TAGTYPESHORELINE
   MNP_TAGTYPEMIXED
   MNP_TAGTYPEUNKNOWN
 }
@@ -11766,6 +11778,7 @@ enum RoleListItem {
   MA_LUOMUSSPACECALENDARUSER
   MA_LUOMUSSPACEOPENINGTIMESUSER
   MA_TAXONIDEDITOR
+  MA_3RDPARTYDEVELOPER
 }
 
 enum RoleAnnotation {
@@ -12572,6 +12585,15 @@ enum IsPartOfSetListItem {
   MX_TAXONSETBIOMONCOMPLETELISTBRACKETFUNGI
   MX_TAXONSETBIOMONCOMPLETELISTPRACTICALFUNGI
   MX_TAXONSETSYKEMACROZOOBENTHOS
+  MX_TAXONSETARCHIPELAGOWATERBIRDS
+  MX_TAXONSETARCHIPELAGOWADERS
+  MX_TAXONSETARCHIPELAGOGULLS
+  MX_TAXONSETARCHIPELAGOPASSERINES
+  MX_TAXONSETARCHIPELAGOALCIDS
+  MX_TAXONSETARCHIPELAGORAPTORS
+  MX_TAXONSETARCHIPELAGOCORMORANTS
+  MX_TAXONSETARCHIPELAGOEGRETS
+  MX_TAXONSETARCHIPELAGOMAMMALS
 }
 
 enum NaturaAreaSecureLevel {
@@ -16205,12 +16227,12 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
   ): Taxon2
 
@@ -18071,7 +18093,7 @@ type ViewerAnyAuth {
   ): Tag
 
   """
-  Return list of taxon objects.
+  Return list of Taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -20629,12 +20651,12 @@ type ViewerAnyAuth {
   ): [TagVerListItem]
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
 
     """
@@ -21097,15 +21119,15 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a taxon.
+  Return a Taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
 
-    """Version number for the taxon"""
+    """Version number for the Taxon"""
     number: Float!
   ): Taxon2
 
@@ -22199,12 +22221,12 @@ type MutationViewerBasicAuth {
   ): Tag3
 
   """
-  Delete taxon
+  Delete Taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
   ): Taxon3
 
@@ -26165,7 +26187,7 @@ type MutationViewerBasicAuth {
   ): TagSearch2
 
   """
-  Return list of taxon objects.
+  Return list of Taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -27326,7 +27348,7 @@ type MutationViewerBasicAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store taxon object(s)
+  Store Taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -28317,12 +28339,12 @@ type MutationViewerBasicAuth {
   ): Tag2
 
   """
-  Store taxon
+  Store Taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
@@ -29664,6 +29686,7 @@ input GatheringEventInput {
   acknowledgeNoUnitsInCensus: Boolean
   artificialLight: ArtificialLight
   breaksDuringCensusInMinutes: Int
+  censusCount: Int
   censusHinderedByEnviromentalFactors: Boolean
   censusHinderedByFog: Boolean
   censusHinderedByRain: Boolean
@@ -30520,6 +30543,7 @@ input TypeSpecimenInput {
 input UnitFactInput {
   adultIndividualCount: Int
   autocompleteSelectedTaxonID: String
+  birdMultiplier: Boolean
   broodCount: Int
   context: String
   destroyedNestCount: Int
@@ -30878,7 +30902,7 @@ input FormOptionsInput {
   warnEditingOldDocument: Boolean
 
   """Duration in ISO 8601 duration format. Defaults to P1W (one week)"""
-  warnEditingOldDocumentDuration: Boolean
+  warnEditingOldDocumentDuration: String
 }
 
 input FormFooterInput {
@@ -35241,12 +35265,12 @@ type MutationViewerAnyAuth {
   ): Tag3
 
   """
-  Delete taxon
+  Delete Taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
   ): Taxon3
 
@@ -39207,7 +39231,7 @@ type MutationViewerAnyAuth {
   ): TagSearch2
 
   """
-  Return list of taxon objects.
+  Return list of Taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -40368,7 +40392,7 @@ type MutationViewerAnyAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store taxon object(s)
+  Store Taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -41359,12 +41383,12 @@ type MutationViewerAnyAuth {
   ): Tag2
 
   """
-  Store taxon
+  Store Taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the taxon"""
+    """Id for the Taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2

@@ -22,6 +22,7 @@ export class UnitFact {
   "@type"?: string;
   adultIndividualCount?: number;
   autocompleteSelectedTaxonID?: string;
+  birdMultiplier?: boolean;
   broodCount?: number;
   destroyedNestCount?: number;
   /**

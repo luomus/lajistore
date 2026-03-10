@@ -39,6 +39,10 @@
       "@id": "default:MY.autocompleteSelectedTaxonID",
       "@type": "xsd:string"
     },
+    "birdMultiplier": {
+      "@id": "default:MY.birdMultiplier",
+      "@type": "xsd:boolean"
+    },
     "broodCount": {
       "@id": "default:MY.broodCount",
       "@type": "xsd:nonNegativeInteger"

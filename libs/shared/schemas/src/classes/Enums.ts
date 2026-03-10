@@ -1359,6 +1359,7 @@ export enum MNPTagEnum {
   "tagTypePartialIsland" = "MNP.tagTypePartialIsland",
   "tagTypeIslandGroup" = "MNP.tagTypeIslandGroup",
   "tagTypeWater" = "MNP.tagTypeWater",
+  "tagTypeShoreline" = "MNP.tagTypeShoreline",
   "tagTypeMixed" = "MNP.tagTypeMixed",
   "tagTypeUnknown" = "MNP.tagTypeUnknown"
 }
@@ -1400,7 +1401,8 @@ export enum MARoles {
   "speciesChallengeAdmin" = "MA.speciesChallengeAdmin",
   "luomusSpaceCalendarUser" = "MA.luomusSpaceCalendarUser",
   "luomusSpaceOpeningTimesUser" = "MA.luomusSpaceOpeningTimesUser",
-  "taxonIdEditor" = "MA.taxonIdEditor"
+  "taxonIdEditor" = "MA.taxonIdEditor",
+  "3rdPartyDeveloper" = "MA.3rdPartyDeveloper"
 }
 export enum MARoleKotkaEnum {
   "empty" = "",
@@ -1725,7 +1727,16 @@ export enum MXTaxonSetEnum {
   "MX.taxonSetBiomonCompleteListMacrolichens" = "MX.taxonSetBiomonCompleteListMacrolichens",
   "MX.taxonSetBiomonCompleteListBracketFungi" = "MX.taxonSetBiomonCompleteListBracketFungi",
   "MX.taxonSetBiomonCompleteListPracticalFungi" = "MX.taxonSetBiomonCompleteListPracticalFungi",
-  "MX.taxonSetSykeMacrozoobenthos" = "MX.taxonSetSykeMacrozoobenthos"
+  "MX.taxonSetSykeMacrozoobenthos" = "MX.taxonSetSykeMacrozoobenthos",
+  "MX.taxonSetArchipelagoWaterbirds" = "MX.taxonSetArchipelagoWaterbirds",
+  "MX.taxonSetArchipelagoWaders" = "MX.taxonSetArchipelagoWaders",
+  "MX.taxonSetArchipelagoGulls" = "MX.taxonSetArchipelagoGulls",
+  "MX.taxonSetArchipelagoPasserines" = "MX.taxonSetArchipelagoPasserines",
+  "MX.taxonSetArchipelagoAlcids" = "MX.taxonSetArchipelagoAlcids",
+  "MX.taxonSetArchipelagoRaptors" = "MX.taxonSetArchipelagoRaptors",
+  "MX.taxonSetArchipelagoCormorants" = "MX.taxonSetArchipelagoCormorants",
+  "MX.taxonSetArchipelagoEgrets" = "MX.taxonSetArchipelagoEgrets",
+  "MX.taxonSetArchipelagoMammals" = "MX.taxonSetArchipelagoMammals"
 }
 export enum MXOccurrenceInFinlandEnum {
   "empty" = "",

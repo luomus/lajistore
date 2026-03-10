@@ -1269,6 +1269,7 @@ export type MNPTagEnum =
   | "MNP.tagTypePartialIsland"
   | "MNP.tagTypeIslandGroup"
   | "MNP.tagTypeWater"
+  | "MNP.tagTypeShoreline"
   | "MNP.tagTypeMixed"
   | "MNP.tagTypeUnknown";
 export type MHNNotificationReasonEnum =
@@ -1305,7 +1306,8 @@ export type MARoles =
   | "MA.speciesChallengeAdmin"
   | "MA.luomusSpaceCalendarUser"
   | "MA.luomusSpaceOpeningTimesUser"
-  | "MA.taxonIdEditor";
+  | "MA.taxonIdEditor"
+  | "MA.3rdPartyDeveloper";
 export type MARoleKotkaEnum =
   | ""
   | "MA.admin"
@@ -1606,7 +1608,16 @@ export type MXTaxonSetEnum =
   | "MX.taxonSetBiomonCompleteListMacrolichens"
   | "MX.taxonSetBiomonCompleteListBracketFungi"
   | "MX.taxonSetBiomonCompleteListPracticalFungi"
-  | "MX.taxonSetSykeMacrozoobenthos";
+  | "MX.taxonSetSykeMacrozoobenthos"
+  | "MX.taxonSetArchipelagoWaterbirds"
+  | "MX.taxonSetArchipelagoWaders"
+  | "MX.taxonSetArchipelagoGulls"
+  | "MX.taxonSetArchipelagoPasserines"
+  | "MX.taxonSetArchipelagoAlcids"
+  | "MX.taxonSetArchipelagoRaptors"
+  | "MX.taxonSetArchipelagoCormorants"
+  | "MX.taxonSetArchipelagoEgrets"
+  | "MX.taxonSetArchipelagoMammals";
 export type MXOccurrenceInFinlandEnum =
   | ""
   | "MX.doesNotOccur"

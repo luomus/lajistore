@@ -38,6 +38,13 @@
       "title": "Taxon ID selected from autocomplete",
       "sortOrder": -1
     },
+    "birdMultiplier": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "MY.birdMultiplier",
+      "title": "K-multiplier",
+      "sortOrder": -1
+    },
     "broodCount": {
       "type": "integer",
       "minimum": 0,

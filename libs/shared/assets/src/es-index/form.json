@@ -999,6 +999,9 @@
                   "breaksDuringCensusInMinutes": {
                     "type": "integer"
                   },
+                  "censusCount": {
+                    "type": "integer"
+                  },
                   "censusHinderedByEnviromentalFactors": {
                     "type": "boolean"
                   },
@@ -2985,6 +2988,9 @@
                             "ignore_above": 200,
                             "normalizer": "useLowercase"
                           },
+                          "birdMultiplier": {
+                            "type": "boolean"
+                          },
                           "broodCount": {
                             "type": "integer"
                           },
@@ -3748,7 +3754,9 @@
             "type": "boolean"
           },
           "warnEditingOldDocumentDuration": {
-            "type": "boolean"
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           }
         }
       },

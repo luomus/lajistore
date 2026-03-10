@@ -522,6 +522,14 @@
               "title": "Breaks kept in minutes",
               "sortOrder": -1
             },
+            "censusCount": {
+              "type": "integer",
+              "minimum": 0,
+              "range": "xsd:nonNegativeInteger",
+              "subject": "MY.censusCount",
+              "title": "Number of censuses",
+              "sortOrder": -1
+            },
             "censusHinderedByEnviromentalFactors": {
               "type": "boolean",
               "range": "xsd:boolean",
@@ -698,14 +706,14 @@
               "range": "xsd:string",
               "subject": "MY.dateBegin",
               "title": "Start date",
-              "sortOrder": 3
+              "sortOrder": 2
             },
             "dateEnd": {
               "type": "string",
               "range": "xsd:string",
               "subject": "MY.dateEnd",
               "title": "End date",
-              "sortOrder": 4
+              "sortOrder": 3
             },
             "gatheringFact": {
               "type": "object",
@@ -1993,7 +2001,7 @@
               "subject": "MY.notes",
               "description": "Additional information to the data in each section.",
               "title": "Notes",
-              "sortOrder": 6
+              "sortOrder": 5
             },
             "rainIntensity": {
               "type": "string",
@@ -2023,7 +2031,7 @@
               "range": "xsd:boolean",
               "subject": "MY.routeDirectionAdhered",
               "title": "Adhered route direction",
-              "sortOrder": 6
+              "sortOrder": 7
             },
             "spottingScopeUsed": {
               "type": "boolean",
@@ -2044,7 +2052,7 @@
               "range": "xsd:integer",
               "subject": "MY.startPointDeviation",
               "title": "Start point deviation (m)",
-              "sortOrder": 5
+              "sortOrder": 6
             },
             "taxonCensus": {
               "type": "array",
@@ -2088,7 +2096,16 @@
                       "MX.taxonSetBiomonCompleteListMacrolichens",
                       "MX.taxonSetBiomonCompleteListBracketFungi",
                       "MX.taxonSetBiomonCompleteListPracticalFungi",
-                      "MX.taxonSetSykeMacrozoobenthos"
+                      "MX.taxonSetSykeMacrozoobenthos",
+                      "MX.taxonSetArchipelagoWaterbirds",
+                      "MX.taxonSetArchipelagoWaders",
+                      "MX.taxonSetArchipelagoGulls",
+                      "MX.taxonSetArchipelagoPasserines",
+                      "MX.taxonSetArchipelagoAlcids",
+                      "MX.taxonSetArchipelagoRaptors",
+                      "MX.taxonSetArchipelagoCormorants",
+                      "MX.taxonSetArchipelagoEgrets",
+                      "MX.taxonSetArchipelagoMammals"
                     ],
                     "enumNames": [
                       "",
@@ -2113,7 +2130,16 @@
                       "Biomon: Macrolichens",
                       "Biomon: Bracket fungi",
                       "Biomon: Practical fungi",
-                      "Syke POHJE database taxonomy update"
+                      "Syke POHJE database taxonomy update",
+                      "Archipelago bird census: Water birds",
+                      "Archipelago bird census: Waders",
+                      "Archipelago bird census: Gulls",
+                      "Archipelago bird census: Passerines",
+                      "Archipelago bird census: Alcids",
+                      "Archipelago bird census: Raptors",
+                      "Archipelago bird census: Cormorants",
+                      "Archipelago bird census: Egrets",
+                      "Archipelago bird census: Mammals"
                     ],
                     "range": "MX.taxonSetEnum",
                     "subject": "MY.censusTaxonSetID",
@@ -2275,7 +2301,7 @@
           "subject": "MY.notes",
           "description": "Additional information to the data in each section.",
           "title": "Notes",
-          "sortOrder": 6
+          "sortOrder": 5
         },
         "observationID": {
           "type": "string",
@@ -3012,14 +3038,14 @@
                 "range": "xsd:string",
                 "subject": "MY.dateBegin",
                 "title": "Start date",
-                "sortOrder": 3
+                "sortOrder": 2
               },
               "dateEnd": {
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MY.dateEnd",
                 "title": "End date",
-                "sortOrder": 4
+                "sortOrder": 3
               },
               "dateVerbatim": {
                 "type": "string",
@@ -5079,7 +5105,7 @@
                 "subject": "MY.notes",
                 "description": "Additional information to the data in each section.",
                 "title": "Notes",
-                "sortOrder": 6
+                "sortOrder": 5
               },
               "numberOfSampledIndividuals": {
                 "type": "string",
@@ -5391,7 +5417,16 @@
                         "MX.taxonSetBiomonCompleteListMacrolichens",
                         "MX.taxonSetBiomonCompleteListBracketFungi",
                         "MX.taxonSetBiomonCompleteListPracticalFungi",
-                        "MX.taxonSetSykeMacrozoobenthos"
+                        "MX.taxonSetSykeMacrozoobenthos",
+                        "MX.taxonSetArchipelagoWaterbirds",
+                        "MX.taxonSetArchipelagoWaders",
+                        "MX.taxonSetArchipelagoGulls",
+                        "MX.taxonSetArchipelagoPasserines",
+                        "MX.taxonSetArchipelagoAlcids",
+                        "MX.taxonSetArchipelagoRaptors",
+                        "MX.taxonSetArchipelagoCormorants",
+                        "MX.taxonSetArchipelagoEgrets",
+                        "MX.taxonSetArchipelagoMammals"
                       ],
                       "enumNames": [
                         "",
@@ -5416,7 +5451,16 @@
                         "Biomon: Macrolichens",
                         "Biomon: Bracket fungi",
                         "Biomon: Practical fungi",
-                        "Syke POHJE database taxonomy update"
+                        "Syke POHJE database taxonomy update",
+                        "Archipelago bird census: Water birds",
+                        "Archipelago bird census: Waders",
+                        "Archipelago bird census: Gulls",
+                        "Archipelago bird census: Passerines",
+                        "Archipelago bird census: Alcids",
+                        "Archipelago bird census: Raptors",
+                        "Archipelago bird census: Cormorants",
+                        "Archipelago bird census: Egrets",
+                        "Archipelago bird census: Mammals"
                       ],
                       "range": "MX.taxonSetEnum",
                       "subject": "MY.censusTaxonSetID",
@@ -7189,7 +7233,7 @@
                       "subject": "MY.notes",
                       "description": "Additional information to the data in each section.",
                       "title": "Notes",
-                      "sortOrder": 6
+                      "sortOrder": 5
                     },
                     "pairCount": {
                       "type": "integer",
@@ -8195,6 +8239,13 @@
                           "title": "Taxon ID selected from autocomplete",
                           "sortOrder": -1
                         },
+                        "birdMultiplier": {
+                          "type": "boolean",
+                          "range": "xsd:boolean",
+                          "subject": "MY.birdMultiplier",
+                          "title": "K-multiplier",
+                          "sortOrder": -1
+                        },
                         "broodCount": {
                           "type": "integer",
                           "minimum": 0,
@@ -8687,14 +8738,14 @@
                           "range": "xsd:string",
                           "subject": "MY.dateBegin",
                           "title": "Start date",
-                          "sortOrder": 3
+                          "sortOrder": 2
                         },
                         "dateEnd": {
                           "type": "string",
                           "range": "xsd:string",
                           "subject": "MY.dateEnd",
                           "title": "End date",
-                          "sortOrder": 4
+                          "sortOrder": 3
                         },
                         "geometry": {
                           "type": "object",
@@ -11213,6 +11264,14 @@
               "title": "Breaks kept in minutes",
               "sortOrder": -1
             },
+            "censusCount": {
+              "type": "integer",
+              "minimum": 0,
+              "range": "xsd:nonNegativeInteger",
+              "subject": "MY.censusCount",
+              "title": "Number of censuses",
+              "sortOrder": -1
+            },
             "censusHinderedByEnviromentalFactors": {
               "type": "boolean",
               "range": "xsd:boolean",
@@ -11389,14 +11448,14 @@
               "range": "xsd:string",
               "subject": "MY.dateBegin",
               "title": "Start date",
-              "sortOrder": 3
+              "sortOrder": 2
             },
             "dateEnd": {
               "type": "string",
               "range": "xsd:string",
               "subject": "MY.dateEnd",
               "title": "End date",
-              "sortOrder": 4
+              "sortOrder": 3
             },
             "gatheringFact": {
               "type": "object",
@@ -12684,7 +12743,7 @@
               "subject": "MY.notes",
               "description": "Additional information to the data in each section.",
               "title": "Notes",
-              "sortOrder": 6
+              "sortOrder": 5
             },
             "rainIntensity": {
               "type": "string",
@@ -12714,7 +12773,7 @@
               "range": "xsd:boolean",
               "subject": "MY.routeDirectionAdhered",
               "title": "Adhered route direction",
-              "sortOrder": 6
+              "sortOrder": 7
             },
             "spottingScopeUsed": {
               "type": "boolean",
@@ -12735,7 +12794,7 @@
               "range": "xsd:integer",
               "subject": "MY.startPointDeviation",
               "title": "Start point deviation (m)",
-              "sortOrder": 5
+              "sortOrder": 6
             },
             "taxonCensus": {
               "type": "array",
@@ -12779,7 +12838,16 @@
                       "MX.taxonSetBiomonCompleteListMacrolichens",
                       "MX.taxonSetBiomonCompleteListBracketFungi",
                       "MX.taxonSetBiomonCompleteListPracticalFungi",
-                      "MX.taxonSetSykeMacrozoobenthos"
+                      "MX.taxonSetSykeMacrozoobenthos",
+                      "MX.taxonSetArchipelagoWaterbirds",
+                      "MX.taxonSetArchipelagoWaders",
+                      "MX.taxonSetArchipelagoGulls",
+                      "MX.taxonSetArchipelagoPasserines",
+                      "MX.taxonSetArchipelagoAlcids",
+                      "MX.taxonSetArchipelagoRaptors",
+                      "MX.taxonSetArchipelagoCormorants",
+                      "MX.taxonSetArchipelagoEgrets",
+                      "MX.taxonSetArchipelagoMammals"
                     ],
                     "enumNames": [
                       "",
@@ -12804,7 +12872,16 @@
                       "Biomon: Macrolichens",
                       "Biomon: Bracket fungi",
                       "Biomon: Practical fungi",
-                      "Syke POHJE database taxonomy update"
+                      "Syke POHJE database taxonomy update",
+                      "Archipelago bird census: Water birds",
+                      "Archipelago bird census: Waders",
+                      "Archipelago bird census: Gulls",
+                      "Archipelago bird census: Passerines",
+                      "Archipelago bird census: Alcids",
+                      "Archipelago bird census: Raptors",
+                      "Archipelago bird census: Cormorants",
+                      "Archipelago bird census: Egrets",
+                      "Archipelago bird census: Mammals"
                     ],
                     "range": "MX.taxonSetEnum",
                     "subject": "MY.censusTaxonSetID",
@@ -12966,7 +13043,7 @@
           "subject": "MY.notes",
           "description": "Additional information to the data in each section.",
           "title": "Notes",
-          "sortOrder": 6
+          "sortOrder": 5
         },
         "observationID": {
           "type": "string",
@@ -13703,14 +13780,14 @@
                 "range": "xsd:string",
                 "subject": "MY.dateBegin",
                 "title": "Start date",
-                "sortOrder": 3
+                "sortOrder": 2
               },
               "dateEnd": {
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MY.dateEnd",
                 "title": "End date",
-                "sortOrder": 4
+                "sortOrder": 3
               },
               "dateVerbatim": {
                 "type": "string",
@@ -15770,7 +15847,7 @@
                 "subject": "MY.notes",
                 "description": "Additional information to the data in each section.",
                 "title": "Notes",
-                "sortOrder": 6
+                "sortOrder": 5
               },
               "numberOfSampledIndividuals": {
                 "type": "string",
@@ -16082,7 +16159,16 @@
                         "MX.taxonSetBiomonCompleteListMacrolichens",
                         "MX.taxonSetBiomonCompleteListBracketFungi",
                         "MX.taxonSetBiomonCompleteListPracticalFungi",
-                        "MX.taxonSetSykeMacrozoobenthos"
+                        "MX.taxonSetSykeMacrozoobenthos",
+                        "MX.taxonSetArchipelagoWaterbirds",
+                        "MX.taxonSetArchipelagoWaders",
+                        "MX.taxonSetArchipelagoGulls",
+                        "MX.taxonSetArchipelagoPasserines",
+                        "MX.taxonSetArchipelagoAlcids",
+                        "MX.taxonSetArchipelagoRaptors",
+                        "MX.taxonSetArchipelagoCormorants",
+                        "MX.taxonSetArchipelagoEgrets",
+                        "MX.taxonSetArchipelagoMammals"
                       ],
                       "enumNames": [
                         "",
@@ -16107,7 +16193,16 @@
                         "Biomon: Macrolichens",
                         "Biomon: Bracket fungi",
                         "Biomon: Practical fungi",
-                        "Syke POHJE database taxonomy update"
+                        "Syke POHJE database taxonomy update",
+                        "Archipelago bird census: Water birds",
+                        "Archipelago bird census: Waders",
+                        "Archipelago bird census: Gulls",
+                        "Archipelago bird census: Passerines",
+                        "Archipelago bird census: Alcids",
+                        "Archipelago bird census: Raptors",
+                        "Archipelago bird census: Cormorants",
+                        "Archipelago bird census: Egrets",
+                        "Archipelago bird census: Mammals"
                       ],
                       "range": "MX.taxonSetEnum",
                       "subject": "MY.censusTaxonSetID",
@@ -17880,7 +17975,7 @@
                       "subject": "MY.notes",
                       "description": "Additional information to the data in each section.",
                       "title": "Notes",
-                      "sortOrder": 6
+                      "sortOrder": 5
                     },
                     "pairCount": {
                       "type": "integer",
@@ -18886,6 +18981,13 @@
                           "title": "Taxon ID selected from autocomplete",
                           "sortOrder": -1
                         },
+                        "birdMultiplier": {
+                          "type": "boolean",
+                          "range": "xsd:boolean",
+                          "subject": "MY.birdMultiplier",
+                          "title": "K-multiplier",
+                          "sortOrder": -1
+                        },
                         "broodCount": {
                           "type": "integer",
                           "minimum": 0,
@@ -19378,14 +19480,14 @@
                           "range": "xsd:string",
                           "subject": "MY.dateBegin",
                           "title": "Start date",
-                          "sortOrder": 3
+                          "sortOrder": 2
                         },
                         "dateEnd": {
                           "type": "string",
                           "range": "xsd:string",
                           "subject": "MY.dateEnd",
                           "title": "End date",
-                          "sortOrder": 4
+                          "sortOrder": 3
                         },
                         "geometry": {
                           "type": "object",
@@ -21317,6 +21419,7 @@
           "MNP.tagTypePartialIsland",
           "MNP.tagTypeIslandGroup",
           "MNP.tagTypeWater",
+          "MNP.tagTypeShoreline",
           "MNP.tagTypeMixed",
           "MNP.tagTypeUnknown"
         ],
@@ -21335,6 +21438,7 @@
           "Partial island",
           "Island group",
           "Water area",
+          "Shoreline",
           "Mixed",
           "Unknown"
         ]

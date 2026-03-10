@@ -43,6 +43,10 @@
       "@id": "default:MY.breaksDuringCensusInMinutes",
       "@type": "xsd:nonNegativeInteger"
     },
+    "censusCount": {
+      "@id": "default:MY.censusCount",
+      "@type": "xsd:nonNegativeInteger"
+    },
     "censusHinderedByEnviromentalFactors": {
       "@id": "default:MY.censusHinderedByEnviromentalFactors",
       "@type": "xsd:boolean"

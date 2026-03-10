@@ -3,26 +3,26 @@
   "type": "object",
   "subject": "MX.taxon",
   "additionalProperties": false,
-  "title": "taxon",
+  "title": "Taxon",
   "description": "",
   "properties": {
     "@context": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@context",
-      "title": "Context for the taxon"
+      "title": "Context for the Taxon"
     },
     "id": {
       "type": "string",
       "range": "xsd:string",
       "subject": "id",
-      "title": "Id for the taxon"
+      "title": "Id for the Taxon"
     },
     "@type": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@type",
-      "title": "Type for the taxon"
+      "title": "Type for the Taxon"
     },
     "invasiveSpeciesMainGroup": {
       "type": "array",
@@ -935,7 +935,16 @@
           "MX.taxonSetBiomonCompleteListMacrolichens",
           "MX.taxonSetBiomonCompleteListBracketFungi",
           "MX.taxonSetBiomonCompleteListPracticalFungi",
-          "MX.taxonSetSykeMacrozoobenthos"
+          "MX.taxonSetSykeMacrozoobenthos",
+          "MX.taxonSetArchipelagoWaterbirds",
+          "MX.taxonSetArchipelagoWaders",
+          "MX.taxonSetArchipelagoGulls",
+          "MX.taxonSetArchipelagoPasserines",
+          "MX.taxonSetArchipelagoAlcids",
+          "MX.taxonSetArchipelagoRaptors",
+          "MX.taxonSetArchipelagoCormorants",
+          "MX.taxonSetArchipelagoEgrets",
+          "MX.taxonSetArchipelagoMammals"
         ],
         "enumNames": [
           "",
@@ -960,7 +969,16 @@
           "Biomon: Macrolichens",
           "Biomon: Bracket fungi",
           "Biomon: Practical fungi",
-          "Syke POHJE database taxonomy update"
+          "Syke POHJE database taxonomy update",
+          "Archipelago bird census: Water birds",
+          "Archipelago bird census: Waders",
+          "Archipelago bird census: Gulls",
+          "Archipelago bird census: Passerines",
+          "Archipelago bird census: Alcids",
+          "Archipelago bird census: Raptors",
+          "Archipelago bird census: Cormorants",
+          "Archipelago bird census: Egrets",
+          "Archipelago bird census: Mammals"
         ]
       },
       "minItems": 0,

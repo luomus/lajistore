@@ -224,5 +224,5 @@ export class FormOptions {
   /**
    * Duration in ISO 8601 duration format. Defaults to P1W (one week)
    */
-  warnEditingOldDocumentDuration?: boolean;
+  warnEditingOldDocumentDuration?: string;
 }
