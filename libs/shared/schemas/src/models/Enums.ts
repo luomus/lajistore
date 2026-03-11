@@ -1307,7 +1307,8 @@ export type MARoles =
   | "MA.luomusSpaceCalendarUser"
   | "MA.luomusSpaceOpeningTimesUser"
   | "MA.taxonIdEditor"
-  | "MA.3rdPartyDeveloper";
+  | "MA.3rdPartyDeveloper"
+  | "MA.reportAdmin";
 export type MARoleKotkaEnum =
   | ""
   | "MA.admin"

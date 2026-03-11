@@ -275,7 +275,8 @@
           "MA.luomusSpaceCalendarUser",
           "MA.luomusSpaceOpeningTimesUser",
           "MA.taxonIdEditor",
-          "MA.3rdPartyDeveloper"
+          "MA.3rdPartyDeveloper",
+          "MA.reportAdmin"
         ],
         "enumNames": [
           "",
@@ -291,7 +292,8 @@
           "Luomus space reservation calendar",
           "Luomuksen yleisökohteiden aukioloajat",
           "Taxonid.org Editoriin pääsyoikeus",
-          "3rd party developer"
+          "3rd party developer",
+          "Monitoring Scheme Report Admin"
         ]
       },
       "minItems": 0,
