@@ -922,6 +922,11 @@
                 "ignore_above": 200,
                 "normalizer": "useLowercase"
               },
+              "digitisers": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
               "documentIdentifications": {
                 "type": "object",
                 "properties": {

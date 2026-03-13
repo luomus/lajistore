@@ -38,7 +38,7 @@
       "subject": "MY.DNASampleLocation",
       "description": "Leave empty if no sample taken, or if the sample is recorded separately",
       "title": "DNA sample location",
-      "sortOrder": 28
+      "sortOrder": 30
     },
     "abundanceString": {
       "type": "string",
@@ -115,7 +115,7 @@
       "subject": "MY.additionalIDs",
       "description": "Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)",
       "title": "Additional ID's",
-      "sortOrder": 20
+      "sortOrder": 19
     },
     "adultIndividualCount": {
       "type": "integer",
@@ -3291,7 +3291,7 @@
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
       "title": "Publicity restrictions",
-      "sortOrder": 33
+      "sortOrder": 32
     },
     "identifications": {
       "type": "array",
@@ -3733,7 +3733,7 @@
             "subject": "MZ.publicityRestrictions",
             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
             "title": "Publicity restrictions",
-            "sortOrder": 33
+            "sortOrder": 32
           },
           "sortOrder": {
             "type": "integer",
@@ -3970,7 +3970,7 @@
             "subject": "MZ.publicityRestrictions",
             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
             "title": "Publicity restrictions",
-            "sortOrder": 33
+            "sortOrder": 32
           }
         }
       },

@@ -54,7 +54,7 @@
       "subject": "MX.secureLevel",
       "description": "Secure level (salaus-/karkeistustaso) for the data",
       "title": "Secure level",
-      "sortOrder": 33
+      "sortOrder": 34
     },
     "abbreviation": {
       "type": "string",
@@ -558,7 +558,7 @@
       "subject": "MY.language",
       "description": "Language the data is (mainly) written in, if applicable.",
       "title": "Language",
-      "sortOrder": 26
+      "sortOrder": 27
     },
     "longName": {
       "type": "object",
@@ -853,7 +853,7 @@
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
       "title": "Publicity restrictions",
-      "sortOrder": 33
+      "sortOrder": 32
     }
   },
   "required": [

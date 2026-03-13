@@ -123,6 +123,10 @@
       "@id": "default:MY.deviceID",
       "@type": "xsd:string"
     },
+    "digitisers": {
+      "@id": "default:MY.digitisers",
+      "@type": "xsd:string"
+    },
     "documentIdentifications": {
       "@id": "default:MY.documentIdentifications",
       "@container": "@set"
