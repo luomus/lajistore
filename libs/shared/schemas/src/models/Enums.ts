@@ -1618,7 +1618,9 @@ export type MXTaxonSetEnum =
   | "MX.taxonSetArchipelagoRaptors"
   | "MX.taxonSetArchipelagoCormorants"
   | "MX.taxonSetArchipelagoEgrets"
-  | "MX.taxonSetArchipelagoMammals";
+  | "MX.taxonSetArchipelagoMammals"
+  | "MX.taxonSetPriodiversityOldForestPolypores"
+  | "MX.taxonSetPriodiversityIndicatorLichens";
 export type MXOccurrenceInFinlandEnum =
   | ""
   | "MX.doesNotOccur"

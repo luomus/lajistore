@@ -3595,7 +3595,9 @@
                           "MX.taxonSetArchipelagoRaptors",
                           "MX.taxonSetArchipelagoCormorants",
                           "MX.taxonSetArchipelagoEgrets",
-                          "MX.taxonSetArchipelagoMammals"
+                          "MX.taxonSetArchipelagoMammals",
+                          "MX.taxonSetPriodiversityOldForestPolypores",
+                          "MX.taxonSetPriodiversityIndicatorLichens"
                         ],
                         "enumNames": [
                           "",
@@ -3629,7 +3631,9 @@
                           "Archipelago bird census: Raptors",
                           "Archipelago bird census: Cormorants",
                           "Archipelago bird census: Egrets",
-                          "Archipelago bird census: Mammals"
+                          "Archipelago bird census: Mammals",
+                          "Old-growth forest polypores, complete list",
+                          "Indicator lichens, complete list"
                         ],
                         "range": "MX.taxonSetEnum",
                         "subject": "MY.censusTaxonSetID",
@@ -6916,7 +6920,9 @@
                             "MX.taxonSetArchipelagoRaptors",
                             "MX.taxonSetArchipelagoCormorants",
                             "MX.taxonSetArchipelagoEgrets",
-                            "MX.taxonSetArchipelagoMammals"
+                            "MX.taxonSetArchipelagoMammals",
+                            "MX.taxonSetPriodiversityOldForestPolypores",
+                            "MX.taxonSetPriodiversityIndicatorLichens"
                           ],
                           "enumNames": [
                             "",
@@ -6950,7 +6956,9 @@
                             "Archipelago bird census: Raptors",
                             "Archipelago bird census: Cormorants",
                             "Archipelago bird census: Egrets",
-                            "Archipelago bird census: Mammals"
+                            "Archipelago bird census: Mammals",
+                            "Old-growth forest polypores, complete list",
+                            "Indicator lichens, complete list"
                           ],
                           "range": "MX.taxonSetEnum",
                           "subject": "MY.censusTaxonSetID",

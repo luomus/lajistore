@@ -1737,7 +1737,9 @@ export enum MXTaxonSetEnum {
   "MX.taxonSetArchipelagoRaptors" = "MX.taxonSetArchipelagoRaptors",
   "MX.taxonSetArchipelagoCormorants" = "MX.taxonSetArchipelagoCormorants",
   "MX.taxonSetArchipelagoEgrets" = "MX.taxonSetArchipelagoEgrets",
-  "MX.taxonSetArchipelagoMammals" = "MX.taxonSetArchipelagoMammals"
+  "MX.taxonSetArchipelagoMammals" = "MX.taxonSetArchipelagoMammals",
+  "MX.taxonSetPriodiversityOldForestPolypores" = "MX.taxonSetPriodiversityOldForestPolypores",
+  "MX.taxonSetPriodiversityIndicatorLichens" = "MX.taxonSetPriodiversityIndicatorLichens"
 }
 export enum MXOccurrenceInFinlandEnum {
   "empty" = "",
