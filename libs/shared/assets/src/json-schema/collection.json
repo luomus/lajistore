@@ -54,7 +54,7 @@
       "subject": "MX.secureLevel",
       "description": "Secure level (salaus-/karkeistustaso) for the data",
       "title": "Secure level",
-      "sortOrder": 34
+      "sortOrder": 33
     },
     "abbreviation": {
       "type": "string",
@@ -231,7 +231,7 @@
       "subject": "MY.collectionType",
       "description": "Type of the collection (specimen, monitoring etc).",
       "title": "Type",
-      "sortOrder": 5
+      "sortOrder": 6
     },
     "concealmentBasis": {
       "type": "object",
@@ -259,7 +259,7 @@
       "subject": "MY.contactEmail",
       "description": "Personal or general (e.g. group of people in the organisation) email address to reach the person(s) responsible.",
       "title": "Contact email",
-      "sortOrder": 30
+      "sortOrder": 31
     },
     "coverageBasis": {
       "type": "object",
@@ -291,7 +291,7 @@
       "range": "xsd:string",
       "subject": "MY.dataDownloadURL",
       "title": "Data download URL",
-      "sortOrder": 61
+      "sortOrder": 50
     },
     "dataLocation": {
       "type": "object",
@@ -345,7 +345,7 @@
       "subject": "MY.dataQuality",
       "description": "Quality estimation for the data in this collection",
       "title": "Data quality",
-      "sortOrder": 27
+      "sortOrder": 30
     },
     "dataQualityDescription": {
       "type": "object",
@@ -414,7 +414,7 @@
       "subject": "MY.description",
       "description": "Free-form description of the collection in different languages.",
       "title": "Description",
-      "sortOrder": 6
+      "sortOrder": 7
     },
     "digitizedSize": {
       "type": "string",
@@ -479,6 +479,24 @@
       "description": "Smallest common geographical area for the specimens/data in the collection (for example, country or continent name).",
       "title": "Geographic coverage",
       "sortOrder": 11
+    },
+    "hierarchyType": {
+      "type": "string",
+      "enum": [
+        "",
+        "MY.hierarchyTypeDocumentParent",
+        "MY.hierarchyTypeCollectionParent"
+      ],
+      "enumNames": [
+        "",
+        "Collection contains only documents",
+        "Collection contains only other collections"
+      ],
+      "range": "MY.hierarchyTypeEnum",
+      "subject": "MY.hierarchyType",
+      "description": "Type of the collection within the collcetion hierarchy tree.",
+      "title": "Hierarchical type",
+      "sortOrder": -1
     },
     "institutionCode": {
       "type": "string",
@@ -550,7 +568,7 @@
       "subject": "MY.isPartOf",
       "description": "Which parent or larger collection this is part of.",
       "title": "Is part of",
-      "sortOrder": 24
+      "sortOrder": 26
     },
     "language": {
       "type": "string",

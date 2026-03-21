@@ -54,7 +54,7 @@
       "subject": "MX.secureLevel",
       "description": "Secure level (salaus-/karkeistustaso) for the data",
       "title": "Secure level",
-      "sortOrder": 34
+      "sortOrder": 33
     },
     "DNASampleLocation": {
       "type": "string",
@@ -4954,7 +4954,7 @@
             "subject": "MY.isPartOf",
             "description": "Which parent or larger collection this is part of.",
             "title": "Is part of",
-            "sortOrder": 24
+            "sortOrder": 26
           },
           "keywords": {
             "type": "array",
@@ -6599,7 +6599,7 @@
                   "subject": "MY.isPartOf",
                   "description": "Which parent or larger collection this is part of.",
                   "title": "Is part of",
-                  "sortOrder": 24
+                  "sortOrder": 26
                 },
                 "juvenileIndividualCount": {
                   "type": "integer",
@@ -6924,7 +6924,7 @@
                       "subject": "MY.isPartOf",
                       "description": "Which parent or larger collection this is part of.",
                       "title": "Is part of",
-                      "sortOrder": 24
+                      "sortOrder": 26
                     },
                     "tailCentimeters": {
                       "type": "array",
@@ -9089,7 +9089,7 @@
                         "subject": "MY.isPartOf",
                         "description": "Which parent or larger collection this is part of.",
                         "title": "Is part of",
-                        "sortOrder": 24
+                        "sortOrder": 26
                       },
                       "isTaxonGroup": {
                         "type": "boolean",
@@ -9359,7 +9359,7 @@
                         "subject": "MY.isPartOf",
                         "description": "Which parent or larger collection this is part of.",
                         "title": "Is part of",
-                        "sortOrder": 24
+                        "sortOrder": 26
                       },
                       "typeAuthor": {
                         "type": "string",
@@ -9973,7 +9973,7 @@
                               "subject": "MY.isPartOf",
                               "description": "Which parent or larger collection this is part of.",
                               "title": "Is part of",
-                              "sortOrder": 24
+                              "sortOrder": 26
                             }
                           }
                         },
@@ -10215,7 +10215,7 @@
                         "subject": "MY.isPartOf",
                         "description": "Which parent or larger collection this is part of.",
                         "title": "Is part of",
-                        "sortOrder": 24
+                        "sortOrder": 26
                       },
                       "measurement": {
                         "type": "object",
@@ -10374,7 +10374,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 24
+                            "sortOrder": 26
                           },
                           "tailCentimeters": {
                             "type": "array",

@@ -2,6 +2,7 @@ import { MXSecureLevels } from './';
 import { MYCollectionQualityEnum } from './';
 import { MYCollectionTypes } from './';
 import { MYDataQualityEnum } from './';
+import { MYHierarchyTypeEnum } from './';
 import { MYIntellectualRightsEnum } from './';
 import { MYMetadataStatuses } from './';
 import { MYPublicationTermsEnum } from './';
@@ -160,6 +161,10 @@ export interface Collection {
     fi?: string;
     sv?: string;
   };
+  /**
+   * Type of the collection within the collcetion hierarchy tree.
+   */
+  hierarchyType?: MYHierarchyTypeEnum;
   /**
    * Institution code for natural history specimen collection holding institution, such as H, MHZ or TUR
    */

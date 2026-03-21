@@ -220,6 +220,11 @@ export enum MYDataQualityEnum {
   "dataQuality5" = "MY.dataQuality5",
   "dataQualityNA" = "MY.dataQualityNA"
 }
+export enum MYHierarchyTypeEnum {
+  "empty" = "",
+  "hierarchyTypeDocumentParent" = "MY.hierarchyTypeDocumentParent",
+  "hierarchyTypeCollectionParent" = "MY.hierarchyTypeCollectionParent"
+}
 export enum MYIntellectualRightsEnum {
   "intellectualRightsCC-BY" = "MY.intellectualRightsCC-BY",
   "intellectualRightsCC0" = "MY.intellectualRightsCC0",

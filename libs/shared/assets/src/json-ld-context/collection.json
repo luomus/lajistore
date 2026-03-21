@@ -159,6 +159,10 @@
       "@id": "default:MY.geographicCoverage",
       "@container": "@language"
     },
+    "hierarchyType": {
+      "@id": "default:MY.hierarchyType",
+      "@type": "@id"
+    },
     "institutionCode": {
       "@id": "default:MY.institutionCode",
       "@type": "xsd:string"
