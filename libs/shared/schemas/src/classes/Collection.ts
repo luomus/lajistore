@@ -162,7 +162,7 @@ export class Collection {
     sv?: string;
   };
   /**
-   * Type of the collection within the collcetion hierarchy tree.
+   * Type of the collection within the collection hierarchy tree.
    */
   hierarchyType?: MYHierarchyTypeEnum;
   /**

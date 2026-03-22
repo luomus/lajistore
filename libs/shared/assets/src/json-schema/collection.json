@@ -494,9 +494,9 @@
       ],
       "range": "MY.hierarchyTypeEnum",
       "subject": "MY.hierarchyType",
-      "description": "Type of the collection within the collcetion hierarchy tree.",
+      "description": "Type of the collection within the collection hierarchy tree.",
       "title": "Hierarchical type",
-      "sortOrder": -1
+      "sortOrder": 61
     },
     "institutionCode": {
       "type": "string",
