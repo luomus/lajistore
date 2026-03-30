@@ -59,6 +59,10 @@
       "@id": "default:MY.distanceMeters",
       "@type": "xsd:integer"
     },
+    "eggCount": {
+      "@id": "default:MY.eggCount",
+      "@type": "xsd:nonNegativeInteger"
+    },
     "femalesWithBroodsCount": {
       "@id": "default:MY.femalesWithBroodsCount",
       "@type": "xsd:nonNegativeInteger"
@@ -126,6 +130,10 @@
     "pointCountFlock": {
       "@id": "default:MY.pointCountFlock",
       "@type": "xsd:string"
+    },
+    "pullusIndividualCount": {
+      "@id": "default:MY.pullusIndividualCount",
+      "@type": "xsd:nonNegativeInteger"
     },
     "runningWaterInVicinity": {
       "@id": "default:MY.runningWaterInVicinity",

@@ -30,6 +30,7 @@ export interface UnitFact {
    */
   detOnSite?: MYDetOnSiteEnum;
   distanceMeters?: number;
+  eggCount?: number;
   femalesWithBroodsCount?: number;
   glowWormMicrohabitat?: MYGlowWormMicrohabitatEnum;
   individualCountFlock?: number;
@@ -47,6 +48,7 @@ export interface UnitFact {
   pairCountInner?: number;
   pairCountOuter?: number;
   pointCountFlock?: string;
+  pullusIndividualCount?: number;
   runningWaterInVicinity?: boolean;
   /**
    * Oma arvio lajimäärityksen luotettavuudesta

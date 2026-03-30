@@ -578,6 +578,9 @@
           "distanceMeters": {
             "type": "integer"
           },
+          "eggCount": {
+            "type": "integer"
+          },
           "femalesWithBroodsCount": {
             "type": "integer"
           },
@@ -639,6 +642,9 @@
             "type": "keyword",
             "ignore_above": 200,
             "normalizer": "useLowercase"
+          },
+          "pullusIndividualCount": {
+            "type": "integer"
           },
           "runningWaterInVicinity": {
             "type": "boolean"

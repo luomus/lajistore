@@ -86,6 +86,14 @@
       "title": "Observation distance (m)",
       "sortOrder": -1
     },
+    "eggCount": {
+      "type": "integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
+      "subject": "MY.eggCount",
+      "title": "Egg count",
+      "sortOrder": -1
+    },
     "femalesWithBroodsCount": {
       "type": "integer",
       "minimum": 0,
@@ -332,6 +340,14 @@
       "range": "xsd:string",
       "subject": "MY.pointCountFlock",
       "title": "Parvien koot",
+      "sortOrder": -1
+    },
+    "pullusIndividualCount": {
+      "type": "integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
+      "subject": "MY.pullusIndividualCount",
+      "title": "Pullus individual count",
       "sortOrder": -1
     },
     "runningWaterInVicinity": {
