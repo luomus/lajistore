@@ -162,7 +162,7 @@
       "range": "xsd:boolean",
       "subject": "MA.nameVisibleInKerttu",
       "title": "Name is visible to others in Kerttu",
-      "sortOrder": 15
+      "sortOrder": 14
     },
     "personalCollectionIdentifier": {
       "type": "string",
@@ -211,6 +211,13 @@
       "subject": "MA.userID",
       "title": "This users profile",
       "sortOrder": 2
+    },
+    "xenoCantoApiKey": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MA.xenoCantoApiKey",
+      "title": "Xeno-Canto API key",
+      "sortOrder": -1
     },
     "profileKey": {
       "type": "string",

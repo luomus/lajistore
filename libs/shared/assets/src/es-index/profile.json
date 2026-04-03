@@ -102,6 +102,11 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "xenoCantoApiKey": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "profileKey": {
         "type": "keyword",
         "ignore_above": 200,

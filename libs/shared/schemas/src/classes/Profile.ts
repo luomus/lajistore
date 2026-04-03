@@ -28,5 +28,6 @@ export class Profile {
   taxonExpertise?: string[];
   taxonExpertiseNotes?: string;
   userID: string;
+  xenoCantoApiKey?: string;
   profileKey?: string;
 }
