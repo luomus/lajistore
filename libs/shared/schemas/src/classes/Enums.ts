@@ -1366,7 +1366,8 @@ export enum MNPTagEnum {
   "tagTypeWater" = "MNP.tagTypeWater",
   "tagTypeShoreline" = "MNP.tagTypeShoreline",
   "tagTypeMixed" = "MNP.tagTypeMixed",
-  "tagTypeUnknown" = "MNP.tagTypeUnknown"
+  "tagTypeUnknown" = "MNP.tagTypeUnknown",
+  "tagWishedToBeCounted" = "MNP.tagWishedToBeCounted"
 }
 export enum MHNNotificationReasonEnum {
   "empty" = "",
@@ -2127,6 +2128,12 @@ export enum MYNativeStatusEnum {
   "empty" = "",
   "native" = "MY.native",
   "nonNative" = "MY.nonNative"
+}
+export enum MYNestSizeEnum {
+  "empty" = "",
+  "nestSizeEnum1" = "MY.nestSizeEnum1",
+  "nestSizeEnum2" = "MY.nestSizeEnum2",
+  "nestSizeEnum3" = "MY.nestSizeEnum3"
 }
 export enum MYNestTypeEnum {
   "empty" = "",

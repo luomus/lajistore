@@ -31,6 +31,10 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
+    "allObservedNestsRecorded": {
+      "@id": "default:MY.allObservedNestsRecorded",
+      "@type": "xsd:boolean"
+    },
     "batCollector": {
       "@id": "default:MY.batCollector",
       "@type": "@id"

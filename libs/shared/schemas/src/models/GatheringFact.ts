@@ -26,6 +26,7 @@ export interface GatheringFact {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  allObservedNestsRecorded?: boolean;
   batCollector?: MYBatCollectorEnum;
   binocularsUsed?: boolean;
   censusAreaHectares?: number;

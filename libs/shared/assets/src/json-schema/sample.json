@@ -951,7 +951,7 @@
         }
       },
       "range": "MY.measurementClass",
-      "sortOrder": 23
+      "sortOrder": 28
     },
     "creator": {
       "type": "string",

@@ -1275,7 +1275,8 @@ export type MNPTagEnum =
   | "MNP.tagTypeWater"
   | "MNP.tagTypeShoreline"
   | "MNP.tagTypeMixed"
-  | "MNP.tagTypeUnknown";
+  | "MNP.tagTypeUnknown"
+  | "MNP.tagWishedToBeCounted";
 export type MHNNotificationReasonEnum =
   | ""
   | "MHN.notificationReasonOwnDocumentAnnotated"
@@ -1975,6 +1976,11 @@ export type MYNativeStatusEnum =
   | ""
   | "MY.native"
   | "MY.nonNative";
+export type MYNestSizeEnum =
+  | ""
+  | "MY.nestSizeEnum1"
+  | "MY.nestSizeEnum2"
+  | "MY.nestSizeEnum3";
 export type MYNestTypeEnum =
   | ""
   | "MY.nestTypeTreeCavity"

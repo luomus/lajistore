@@ -13,6 +13,7 @@ import { Measurement } from './';
 import { MYMicrobiologicalRiskGroupEnum } from './';
 import { MYMovingDirectionEnum } from './';
 import { MYNativeStatusEnum } from './';
+import { MYNestSizeEnum } from './';
 import { MYNestTypeEnum } from './';
 import { MYPlantLifeStageEnum } from './';
 import { MYPlantStatusCodeEnum } from './';
@@ -193,7 +194,9 @@ export class Unit {
   mutant?: string;
   nativeStatus?: MYNativeStatusEnum;
   nestCount?: number;
+  nestDistanceFromLineTransectStartMeters?: number;
   nestNotes?: string;
+  nestSize?: MYNestSizeEnum;
   nestTreeDiameterInCentimeters?: number;
   nestType?: MYNestTypeEnum;
   /**

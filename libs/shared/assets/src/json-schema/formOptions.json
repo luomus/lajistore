@@ -842,7 +842,7 @@
           "subject": "MY.DNASampleLocation",
           "description": "Leave empty if no sample taken, or if the sample is recorded separately",
           "title": "DNA sample location",
-          "sortOrder": 30
+          "sortOrder": 29
         },
         "IPEN": {
           "type": "string",
@@ -1489,6 +1489,13 @@
               "title": "gatheringFact",
               "description": "",
               "properties": {
+                "allObservedNestsRecorded": {
+                  "type": "boolean",
+                  "range": "xsd:boolean",
+                  "subject": "MY.allObservedNestsRecorded",
+                  "title": "Kaikki havaitut pesäkolot ja pöntöt kirjattu",
+                  "sortOrder": -1
+                },
                 "batCollector": {
                   "type": "string",
                   "enum": [
@@ -3487,7 +3494,7 @@
           "subject": "MZ.publicityRestrictions",
           "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
           "title": "Publicity restrictions",
-          "sortOrder": 32
+          "sortOrder": 31
         },
         "scheduledForDeletion": {
           "type": "boolean",
@@ -3891,6 +3898,13 @@
                 "title": "gatheringFact",
                 "description": "",
                 "properties": {
+                  "allObservedNestsRecorded": {
+                    "type": "boolean",
+                    "range": "xsd:boolean",
+                    "subject": "MY.allObservedNestsRecorded",
+                    "title": "Kaikki havaitut pesäkolot ja pöntöt kirjattu",
+                    "sortOrder": -1
+                  },
                   "batCollector": {
                     "type": "string",
                     "enum": [
@@ -6107,7 +6121,7 @@
                 "subject": "MY.samplingMethod",
                 "description": "Main method for (usually intentional) sampling",
                 "title": "Sampling method",
-                "sortOrder": 32
+                "sortOrder": 30
               },
               "samplingMethodNotes": {
                 "type": "string",
@@ -6349,7 +6363,7 @@
                 "subject": "MZ.publicityRestrictions",
                 "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                 "title": "Publicity restrictions",
-                "sortOrder": 32
+                "sortOrder": 31
               },
               "units": {
                 "type": "array",
@@ -6393,7 +6407,7 @@
                       "subject": "MY.DNASampleLocation",
                       "description": "Leave empty if no sample taken, or if the sample is recorded separately",
                       "title": "DNA sample location",
-                      "sortOrder": 30
+                      "sortOrder": 29
                     },
                     "abundanceString": {
                       "type": "string",
@@ -6493,7 +6507,7 @@
                       "subject": "MY.ageNotes",
                       "description": "E.g. how age was determined, by whom and when.",
                       "title": "Age notes",
-                      "sortOrder": 19
+                      "sortOrder": 20
                     },
                     "alive": {
                       "type": "boolean",
@@ -6729,7 +6743,7 @@
                       "subject": "MY.causeOfDeath",
                       "description": "Cause of death, if not intentionally trapped on sampled",
                       "title": "Cause of Death",
-                      "sortOrder": 5
+                      "sortOrder": 6
                     },
                     "checklistID": {
                       "type": "string",
@@ -6899,7 +6913,7 @@
                       "subject": "MY.growthMediumName",
                       "description": "Microbial culture growth medium name, usually from a standard",
                       "title": "Growth medium name",
-                      "sortOrder": 26
+                      "sortOrder": 27
                     },
                     "growthOtherConditions": {
                       "type": "string",
@@ -7514,7 +7528,7 @@
                       "subject": "MY.lifeStage",
                       "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
                       "title": "Life stage",
-                      "sortOrder": 1
+                      "sortOrder": 3
                     },
                     "lifeStageDescription": {
                       "type": "string",
@@ -7840,7 +7854,7 @@
                         }
                       },
                       "range": "MY.measurementClass",
-                      "sortOrder": 23
+                      "sortOrder": 28
                     },
                     "microbiologicalRiskGroup": {
                       "type": "string",
@@ -7962,11 +7976,38 @@
                       "title": "Nest/cavity count",
                       "sortOrder": -1
                     },
+                    "nestDistanceFromLineTransectStartMeters": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "range": "xsd:nonNegativeInteger",
+                      "subject": "MY.nestDistanceFromLineTransectStartMeters",
+                      "title": "metrimäärä (linjan alusta), jolla pönttö/kolo on",
+                      "sortOrder": -1
+                    },
                     "nestNotes": {
                       "type": "string",
                       "range": "xsd:string",
                       "subject": "MY.nestNotes",
                       "title": "Nest notes",
+                      "sortOrder": -1
+                    },
+                    "nestSize": {
+                      "type": "string",
+                      "enum": [
+                        "",
+                        "MY.nestSizeEnum1",
+                        "MY.nestSizeEnum2",
+                        "MY.nestSizeEnum3"
+                      ],
+                      "enumNames": [
+                        "",
+                        "PPL = pieni pikkulintu, esim. tiaispönttö, hömötiaisen kaivertama kolo",
+                        "IPL = iso pikkulintu eli noin kottaraispönttö/käpytikan kolo",
+                        "pöllö = palokärjen kolon kokoluokka ja sitä suuremmat"
+                      ],
+                      "range": "MY.nestSizeEnum",
+                      "subject": "MY.nestSize",
+                      "title": "Pöntön kokoluokka",
                       "sortOrder": -1
                     },
                     "nestTreeDiameterInCentimeters": {
@@ -8427,7 +8468,7 @@
                       "subject": "MY.recordParts",
                       "description": "What parts of the record are / have been in storage.",
                       "title": "Record parts",
-                      "sortOrder": 6
+                      "sortOrder": 7
                     },
                     "ring": {
                       "type": "string",
@@ -8555,7 +8596,7 @@
                       "subject": "MY.samplingMethod",
                       "description": "Main method for (usually intentional) sampling",
                       "title": "Sampling method",
-                      "sortOrder": 32
+                      "sortOrder": 30
                     },
                     "samplingMethodNotes": {
                       "type": "string",
@@ -9662,7 +9703,7 @@
                       "subject": "MZ.publicityRestrictions",
                       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                       "title": "Publicity restrictions",
-                      "sortOrder": 32
+                      "sortOrder": 31
                     },
                     "identifications": {
                       "type": "array",
@@ -10104,7 +10145,7 @@
                             "subject": "MZ.publicityRestrictions",
                             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                             "title": "Publicity restrictions",
-                            "sortOrder": 32
+                            "sortOrder": 31
                           },
                           "sortOrder": {
                             "type": "integer",
@@ -10341,7 +10382,7 @@
                             "subject": "MZ.publicityRestrictions",
                             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                             "title": "Publicity restrictions",
-                            "sortOrder": 32
+                            "sortOrder": 31
                           }
                         }
                       },
@@ -11306,7 +11347,7 @@
                               }
                             },
                             "range": "MY.measurementClass",
-                            "sortOrder": 23
+                            "sortOrder": 28
                           },
                           "creator": {
                             "type": "string",
