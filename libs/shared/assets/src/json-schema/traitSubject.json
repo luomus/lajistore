@@ -465,7 +465,7 @@
       "subject": "MY.lifeStage",
       "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
       "title": "Life stage",
-      "sortOrder": 1
+      "sortOrder": 3
     },
     "locality": {
       "type": "string",

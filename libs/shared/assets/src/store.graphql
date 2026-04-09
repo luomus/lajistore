@@ -6750,6 +6750,9 @@ type Collection2 {
   """
   gbifDoi: String
   geographicCoverage: MultiLang
+
+  """Type of the collection within the collection hierarchy tree."""
+  hierarchyType: HierarchyType
   id: String
 
   """
@@ -6856,6 +6859,12 @@ enum DataQuality {
   MY_DATAQUALITY4
   MY_DATAQUALITY5
   MY_DATAQUALITYNA
+}
+
+enum HierarchyType {
+  _
+  MY_HIERARCHYTYPEDOCUMENTPARENT
+  MY_HIERARCHYTYPECOLLECTIONPARENT
 }
 
 enum LicenseForUse {
@@ -7124,6 +7133,7 @@ type Document2 {
   dateCreated: String
   dateEdited: String
   deviceID: String
+  digitisers: [String]
   documentIdentifications: [DocumentIdentification]
 
   """
@@ -7417,6 +7427,7 @@ type GatheringFact {
   abundanceBOMGAR: AbundanceBOMGAR
   abundancePINENU: AbundancePINENU
   abundanceTURPIL: AbundanceTURPIL
+  allObservedNestsRecorded: Boolean
   batCollector: BatCollector
   binocularsUsed: Boolean
   birdFeederCount: Int
@@ -7819,6 +7830,8 @@ enum CensusTaxonSetID {
   MX_TAXONSETARCHIPELAGOCORMORANTS
   MX_TAXONSETARCHIPELAGOEGRETS
   MX_TAXONSETARCHIPELAGOMAMMALS
+  MX_TAXONSETPRIODIVERSITYOLDFORESTPOLYPORES
+  MX_TAXONSETPRIODIVERSITYINDICATORLICHENS
 }
 
 enum TaxonCensusType {
@@ -8597,7 +8610,9 @@ type Unit {
   mutant: String
   nativeStatus: NativeStatus
   nestCount: Int
+  nestDistanceFromLineTransectStartMeters: Int
   nestNotes: String
+  nestSize: NestSize
   nestTreeDiameterInCentimeters: Int
   nestType: NestType
 
@@ -8927,6 +8942,13 @@ enum NativeStatus {
   _
   MY_NATIVE
   MY_NONNATIVE
+}
+
+enum NestSize {
+  _
+  MY_NESTSIZEENUM1
+  MY_NESTSIZEENUM2
+  MY_NESTSIZEENUM3
 }
 
 enum NestType {
@@ -9636,6 +9658,7 @@ type UnitFact {
   """
   detOnSite: DetOnSite
   distanceMeters: Int
+  eggCount: Int
   femalesWithBroodsCount: Int
   glowWormMicrohabitat: GlowWormMicrohabitat
   id: String
@@ -9662,6 +9685,7 @@ type UnitFact {
   pairCountInner: Int
   pairCountOuter: Int
   pointCountFlock: String
+  pullusIndividualCount: Int
   runningWaterInVicinity: Boolean
 
   """Oma arvio lajimäärityksen luotettavuudesta"""
@@ -11463,6 +11487,7 @@ enum TagsListItem {
   MNP_TAGTYPESHORELINE
   MNP_TAGTYPEMIXED
   MNP_TAGTYPEUNKNOWN
+  MNP_TAGWISHEDTOBECOUNTED
 }
 
 type News2 {
@@ -11779,6 +11804,7 @@ enum RoleListItem {
   MA_LUOMUSSPACEOPENINGTIMESUSER
   MA_TAXONIDEDITOR
   MA_3RDPARTYDEVELOPER
+  MA_REPORTADMIN
 }
 
 enum RoleAnnotation {
@@ -11817,6 +11843,7 @@ type Profile2 {
   taxonExpertiseNotes: String
   type: String
   userID: String!
+  xenoCantoApiKey: String
 }
 
 enum BirdwatchingActivityLevel {
@@ -12594,6 +12621,8 @@ enum IsPartOfSetListItem {
   MX_TAXONSETARCHIPELAGOCORMORANTS
   MX_TAXONSETARCHIPELAGOEGRETS
   MX_TAXONSETARCHIPELAGOMAMMALS
+  MX_TAXONSETPRIODIVERSITYOLDFORESTPOLYPORES
+  MX_TAXONSETPRIODIVERSITYINDICATORLICHENS
 }
 
 enum NaturaAreaSecureLevel {
@@ -29200,6 +29229,9 @@ input Collection2Input {
   """
   gbifDoi: String
   geographicCoverage: MultiLangInput
+
+  """Type of the collection within the collection hierarchy tree."""
+  hierarchyType: HierarchyType
   id: String
 
   """
@@ -29506,6 +29538,7 @@ input Document2Input {
   dateCreated: String
   dateEdited: String
   deviceID: String
+  digitisers: [String]
   documentIdentifications: [DocumentIdentificationInput]
 
   """
@@ -29741,6 +29774,7 @@ input GatheringFactInput {
   abundanceBOMGAR: AbundanceBOMGAR
   abundancePINENU: AbundancePINENU
   abundanceTURPIL: AbundanceTURPIL
+  allObservedNestsRecorded: Boolean
   batCollector: BatCollector
   binocularsUsed: Boolean
   birdFeederCount: Int
@@ -30222,7 +30256,9 @@ input UnitInput {
   mutant: String
   nativeStatus: NativeStatus
   nestCount: Int
+  nestDistanceFromLineTransectStartMeters: Int
   nestNotes: String
+  nestSize: NestSize
   nestTreeDiameterInCentimeters: Int
   nestType: NestType
 
@@ -30553,6 +30589,7 @@ input UnitFactInput {
   """
   detOnSite: DetOnSite
   distanceMeters: Int
+  eggCount: Int
   femalesWithBroodsCount: Int
   glowWormMicrohabitat: GlowWormMicrohabitat
   id: String
@@ -30579,6 +30616,7 @@ input UnitFactInput {
   pairCountInner: Int
   pairCountOuter: Int
   pointCountFlock: String
+  pullusIndividualCount: Int
   runningWaterInVicinity: Boolean
 
   """Oma arvio lajimäärityksen luotettavuudesta"""
@@ -31948,6 +31986,7 @@ input Profile2Input {
   taxonExpertiseNotes: String
   type: String
   userID: String!
+  xenoCantoApiKey: String
 }
 
 input Publication3Input {

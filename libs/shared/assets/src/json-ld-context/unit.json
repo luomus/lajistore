@@ -287,9 +287,17 @@
       "@id": "default:MY.nestCount",
       "@type": "xsd:nonNegativeInteger"
     },
+    "nestDistanceFromLineTransectStartMeters": {
+      "@id": "default:MY.nestDistanceFromLineTransectStartMeters",
+      "@type": "xsd:nonNegativeInteger"
+    },
     "nestNotes": {
       "@id": "default:MY.nestNotes",
       "@type": "xsd:string"
+    },
+    "nestSize": {
+      "@id": "default:MY.nestSize",
+      "@type": "@id"
     },
     "nestTreeDiameterInCentimeters": {
       "@id": "default:MY.nestTreeDiameterInCentimeters",

@@ -220,6 +220,11 @@ export enum MYDataQualityEnum {
   "dataQuality5" = "MY.dataQuality5",
   "dataQualityNA" = "MY.dataQualityNA"
 }
+export enum MYHierarchyTypeEnum {
+  "empty" = "",
+  "hierarchyTypeDocumentParent" = "MY.hierarchyTypeDocumentParent",
+  "hierarchyTypeCollectionParent" = "MY.hierarchyTypeCollectionParent"
+}
 export enum MYIntellectualRightsEnum {
   "intellectualRightsCC-BY" = "MY.intellectualRightsCC-BY",
   "intellectualRightsCC0" = "MY.intellectualRightsCC0",
@@ -1361,7 +1366,8 @@ export enum MNPTagEnum {
   "tagTypeWater" = "MNP.tagTypeWater",
   "tagTypeShoreline" = "MNP.tagTypeShoreline",
   "tagTypeMixed" = "MNP.tagTypeMixed",
-  "tagTypeUnknown" = "MNP.tagTypeUnknown"
+  "tagTypeUnknown" = "MNP.tagTypeUnknown",
+  "tagWishedToBeCounted" = "MNP.tagWishedToBeCounted"
 }
 export enum MHNNotificationReasonEnum {
   "empty" = "",
@@ -1402,7 +1408,8 @@ export enum MARoles {
   "luomusSpaceCalendarUser" = "MA.luomusSpaceCalendarUser",
   "luomusSpaceOpeningTimesUser" = "MA.luomusSpaceOpeningTimesUser",
   "taxonIdEditor" = "MA.taxonIdEditor",
-  "3rdPartyDeveloper" = "MA.3rdPartyDeveloper"
+  "3rdPartyDeveloper" = "MA.3rdPartyDeveloper",
+  "reportAdmin" = "MA.reportAdmin"
 }
 export enum MARoleKotkaEnum {
   "empty" = "",
@@ -1736,7 +1743,9 @@ export enum MXTaxonSetEnum {
   "MX.taxonSetArchipelagoRaptors" = "MX.taxonSetArchipelagoRaptors",
   "MX.taxonSetArchipelagoCormorants" = "MX.taxonSetArchipelagoCormorants",
   "MX.taxonSetArchipelagoEgrets" = "MX.taxonSetArchipelagoEgrets",
-  "MX.taxonSetArchipelagoMammals" = "MX.taxonSetArchipelagoMammals"
+  "MX.taxonSetArchipelagoMammals" = "MX.taxonSetArchipelagoMammals",
+  "MX.taxonSetPriodiversityOldForestPolypores" = "MX.taxonSetPriodiversityOldForestPolypores",
+  "MX.taxonSetPriodiversityIndicatorLichens" = "MX.taxonSetPriodiversityIndicatorLichens"
 }
 export enum MXOccurrenceInFinlandEnum {
   "empty" = "",
@@ -2119,6 +2128,12 @@ export enum MYNativeStatusEnum {
   "empty" = "",
   "native" = "MY.native",
   "nonNative" = "MY.nonNative"
+}
+export enum MYNestSizeEnum {
+  "empty" = "",
+  "nestSizeEnum1" = "MY.nestSizeEnum1",
+  "nestSizeEnum2" = "MY.nestSizeEnum2",
+  "nestSizeEnum3" = "MY.nestSizeEnum3"
 }
 export enum MYNestTypeEnum {
   "empty" = "",

@@ -50,7 +50,7 @@
       "subject": "MY.contactEmail",
       "description": "Personal or general (e.g. group of people in the organisation) email address to reach the person(s) responsible.",
       "title": "Contact email",
-      "sortOrder": 30
+      "sortOrder": 31
     },
     "coverageBasis": {
       "type": "object",
@@ -91,7 +91,7 @@
       "subject": "MY.description",
       "description": "Free-form description of the collection in different languages.",
       "title": "Description",
-      "sortOrder": 6
+      "sortOrder": 7
     },
     "doi": {
       "type": "string",

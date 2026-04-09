@@ -28,6 +28,9 @@
       "@type": {
         "type": "keyword"
       },
+      "allObservedNestsRecorded": {
+        "type": "boolean"
+      },
       "batCollector": {
         "type": "keyword",
         "ignore_above": 200

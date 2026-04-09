@@ -87,6 +87,10 @@
       "@id": "default:MA.userID",
       "@type": "@id"
     },
+    "xenoCantoApiKey": {
+      "@id": "default:MA.xenoCantoApiKey",
+      "@type": "xsd:string"
+    },
     "profileKey": {
       "@id": "default:MY.profileKey",
       "@type": "xsd:string"

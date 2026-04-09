@@ -24,6 +24,13 @@
       "subject": "@type",
       "title": "Type for the Keruutapahtuman faktat"
     },
+    "allObservedNestsRecorded": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "MY.allObservedNestsRecorded",
+      "title": "Kaikki havaitut pesäkolot ja pöntöt kirjattu",
+      "sortOrder": -1
+    },
     "batCollector": {
       "type": "string",
       "enum": [

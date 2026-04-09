@@ -87,7 +87,7 @@
           "subject": "MY.DNASampleLocation",
           "description": "Leave empty if no sample taken, or if the sample is recorded separately",
           "title": "DNA sample location",
-          "sortOrder": 28
+          "sortOrder": 29
         },
         "IPEN": {
           "type": "string",
@@ -103,7 +103,7 @@
           "subject": "MY.URL",
           "description": "URL where more information is available about the specimen",
           "title": "URL",
-          "sortOrder": 29
+          "sortOrder": 28
         },
         "acknowledgedWarnings": {
           "type": "array",
@@ -124,7 +124,7 @@
           "subject": "MY.acquiredFrom",
           "description": "From who/where the specimen was acquired (if not recorded as a transaction)",
           "title": "Acquired from",
-          "sortOrder": 25
+          "sortOrder": 24
         },
         "acquiredFromOrganization": {
           "type": "string",
@@ -132,7 +132,7 @@
           "subject": "MY.acquiredFromOrganization",
           "description": "Organization where the accession was acquired from. If the organization is not on the list, add it first.",
           "title": "Acquired from organization",
-          "sortOrder": 37
+          "sortOrder": 40
         },
         "acquisitionDate": {
           "type": "string",
@@ -140,7 +140,7 @@
           "subject": "MY.acquisitionDate",
           "description": "Date (d.m.yyyy) or year (yyyy) on which the specimen was acquired to the collection. Empty means an old specimen acquired on an unknown date.",
           "title": "Acquisition date",
-          "sortOrder": 26
+          "sortOrder": 25
         },
         "additionalIDs": {
           "type": "array",
@@ -153,7 +153,7 @@
           "subject": "MY.additionalIDs",
           "description": "Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)",
           "title": "Additional ID's",
-          "sortOrder": 20
+          "sortOrder": 19
         },
         "bold": {
           "type": "array",
@@ -166,7 +166,7 @@
           "subject": "MY.bold",
           "description": "BOLD identifier, usually BOLD Sample ID. You can include additonal comment by separating them with colon, e.g. \"AY123456:comments here\"",
           "title": "BOLD",
-          "sortOrder": 17
+          "sortOrder": 16
         },
         "caption": {
           "type": "string",
@@ -181,7 +181,7 @@
           "subject": "MY.cladBookID",
           "description": "Clad book id number or such",
           "title": "Clad book id",
-          "sortOrder": 10
+          "sortOrder": 9
         },
         "cladSpecimenID": {
           "type": "string",
@@ -189,7 +189,7 @@
           "subject": "MY.cladSpecimenID",
           "description": "Clad specimen id: usually color description and a number",
           "title": "Clad specimen id",
-          "sortOrder": 14
+          "sortOrder": 13
         },
         "cladVerbatim": {
           "type": "string",
@@ -197,7 +197,7 @@
           "subject": "MY.cladVerbatim",
           "description": "Verbatim specimen data from clad book",
           "title": "Clad data verbatim",
-          "sortOrder": 15
+          "sortOrder": 14
         },
         "collectionID": {
           "type": "string",
@@ -213,7 +213,7 @@
           "subject": "MY.condition",
           "description": "Notes on the defects of the specimen (missing parts or such). Empty value means same as \"good\" or \"hyvä\" - that there is nothing special to mention about the condition.",
           "title": "Condition (defects)",
-          "sortOrder": 6
+          "sortOrder": 7
         },
         "contacts": {
           "type": "array",
@@ -328,7 +328,7 @@
           "subject": "MY.dataSource",
           "description": "Where the data about this specimen or observation is from, in addition to labels. Eg. reference to a publication, field notes or an expedition.",
           "title": "Data source",
-          "sortOrder": 19
+          "sortOrder": 18
         },
         "datasetID": {
           "type": "array",
@@ -348,13 +348,25 @@
           "range": "xsd:string",
           "subject": "MY.datatype",
           "title": "Datatype",
-          "sortOrder": 38
+          "sortOrder": 37
         },
         "deviceID": {
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.deviceID",
           "title": "Device ID",
+          "sortOrder": -1
+        },
+        "digitisers": {
+          "type": "array",
+          "uniqueItems": false,
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0,
+          "range": "xsd:string",
+          "subject": "MY.digitisers",
+          "title": "Digitised by",
           "sortOrder": -1
         },
         "documentIdentifications": {
@@ -397,7 +409,7 @@
           "subject": "MY.documentLocation",
           "description": "Location of the specimen so that museum personnel can find it. E.g. taxon under which it is stored (if not clear from the identification), or shelf number",
           "title": "Specimen location",
-          "sortOrder": 12
+          "sortOrder": 11
         },
         "duplicatesIn": {
           "type": "string",
@@ -405,7 +417,7 @@
           "subject": "MY.duplicatesIn",
           "description": "Description where duplicates (specimens of the same individual) are located or have been sent to and by which ID's.",
           "title": "Duplicates",
-          "sortOrder": 24
+          "sortOrder": 23
         },
         "editNotes": {
           "type": "string",
@@ -428,7 +440,7 @@
           "subject": "MY.entered",
           "description": "Date the data was first transcribed into electronic format or paper registry",
           "title": "Date transcribed",
-          "sortOrder": 39
+          "sortOrder": 38
         },
         "event": {
           "type": "array",
@@ -441,7 +453,7 @@
           "subject": "MY.event",
           "description": "Free-text diary-style information about what has been done to the specimen and when.",
           "title": "Event",
-          "sortOrder": 32
+          "sortOrder": 31
         },
         "exsiccatum": {
           "type": "string",
@@ -449,7 +461,7 @@
           "subject": "MY.exsiccatum",
           "description": "Name of the exsiccatum this specimen belongs to and possible exsiccatum number.",
           "title": "Exsiccatum",
-          "sortOrder": 27
+          "sortOrder": 26
         },
         "formID": {
           "type": "string",
@@ -722,6 +734,13 @@
               "title": "gatheringFact",
               "description": "",
               "properties": {
+                "allObservedNestsRecorded": {
+                  "type": "boolean",
+                  "range": "xsd:boolean",
+                  "subject": "MY.allObservedNestsRecorded",
+                  "title": "Kaikki havaitut pesäkolot ja pöntöt kirjattu",
+                  "sortOrder": -1
+                },
                 "batCollector": {
                   "type": "string",
                   "enum": [
@@ -2105,7 +2124,9 @@
                       "MX.taxonSetArchipelagoRaptors",
                       "MX.taxonSetArchipelagoCormorants",
                       "MX.taxonSetArchipelagoEgrets",
-                      "MX.taxonSetArchipelagoMammals"
+                      "MX.taxonSetArchipelagoMammals",
+                      "MX.taxonSetPriodiversityOldForestPolypores",
+                      "MX.taxonSetPriodiversityIndicatorLichens"
                     ],
                     "enumNames": [
                       "",
@@ -2139,7 +2160,9 @@
                       "Archipelago bird census: Raptors",
                       "Archipelago bird census: Cormorants",
                       "Archipelago bird census: Egrets",
-                      "Archipelago bird census: Mammals"
+                      "Archipelago bird census: Mammals",
+                      "Old-growth forest polypores, complete list",
+                      "Indicator lichens, complete list"
                     ],
                     "range": "MX.taxonSetEnum",
                     "subject": "MY.censusTaxonSetID",
@@ -2224,7 +2247,7 @@
           "subject": "MY.genbank",
           "description": "Genbank identifier. You can include additonal comment by separating them with colon, e.g. \"AY123456:comments here\"",
           "title": "Genbank",
-          "sortOrder": 16
+          "sortOrder": 15
         },
         "hasGathering": {
           "type": "array",
@@ -2263,7 +2286,7 @@
           "subject": "MY.labelsVerbatim",
           "description": "All text from labels word-for-word, including spelling errors. Separate each label on its own row, starting from topmost label.",
           "title": "Verbatim labels",
-          "sortOrder": 7
+          "sortOrder": 8
         },
         "language": {
           "type": "string",
@@ -2271,7 +2294,7 @@
           "subject": "MY.language",
           "description": "Language the data is (mainly) written in, if applicable.",
           "title": "Language",
-          "sortOrder": 26
+          "sortOrder": 27
         },
         "legID": {
           "type": "string",
@@ -2279,7 +2302,7 @@
           "subject": "MY.legID",
           "description": "Collecting number (field identifier, keruunumero) for the specimen",
           "title": "Collecting number",
-          "sortOrder": 13
+          "sortOrder": 12
         },
         "locked": {
           "type": "boolean",
@@ -2446,7 +2469,7 @@
           "subject": "MY.publication",
           "description": "Publication references or doi's that refer to this specimen",
           "title": "Publications",
-          "sortOrder": 18
+          "sortOrder": 17
         },
         "rawOCRData": {
           "type": "string",
@@ -2482,7 +2505,7 @@
           "subject": "MY.separatedFrom",
           "description": "ID of the specimen from which this has been separated",
           "title": "Separated from specimen",
-          "sortOrder": 21
+          "sortOrder": 22
         },
         "separatedTo": {
           "type": "array",
@@ -2555,7 +2578,7 @@
           "subject": "MY.status",
           "description": "Empty value means same as \"ok\" - that there is not anything special about the status of the specimen.",
           "title": "Status",
-          "sortOrder": 5
+          "sortOrder": 6
         },
         "temp": {
           "type": "boolean",
@@ -2592,7 +2615,7 @@
           "subject": "MY.transferAgreement",
           "description": "Common name of agreement concerning the transfer, if any.",
           "title": "Transfer agreement",
-          "sortOrder": 41
+          "sortOrder": 42
         },
         "unreliableFields": {
           "type": "string",
@@ -2600,7 +2623,7 @@
           "subject": "MY.unreliableFields",
           "description": "List of those fields that contain unreliable data. The list is created automatically.",
           "title": "Unreliable fields",
-          "sortOrder": 42
+          "sortOrder": 41
         },
         "verificationStatus": {
           "type": "array",
@@ -2633,7 +2656,7 @@
           "subject": "MY.verificationStatus",
           "description": "Information about the quality of the specimen data. Possible to select several.",
           "title": "Verification status",
-          "sortOrder": 11
+          "sortOrder": 10
         },
         "voucherSpecimenID": {
           "type": "string",
@@ -2716,7 +2739,7 @@
           "subject": "MZ.publicityRestrictions",
           "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
           "title": "Publicity restrictions",
-          "sortOrder": 33
+          "sortOrder": 31
         },
         "scheduledForDeletion": {
           "type": "boolean",
@@ -3120,6 +3143,13 @@
                 "title": "gatheringFact",
                 "description": "",
                 "properties": {
+                  "allObservedNestsRecorded": {
+                    "type": "boolean",
+                    "range": "xsd:boolean",
+                    "subject": "MY.allObservedNestsRecorded",
+                    "title": "Kaikki havaitut pesäkolot ja pöntöt kirjattu",
+                    "sortOrder": -1
+                  },
                   "batCollector": {
                     "type": "string",
                     "enum": [
@@ -4963,7 +4993,7 @@
                 "subject": "MY.isPartOf",
                 "description": "Which parent or larger collection this is part of.",
                 "title": "Is part of",
-                "sortOrder": 24
+                "sortOrder": 26
               },
               "keywords": {
                 "type": "array",
@@ -5336,7 +5366,7 @@
                 "subject": "MY.samplingMethod",
                 "description": "Main method for (usually intentional) sampling",
                 "title": "Sampling method",
-                "sortOrder": 32
+                "sortOrder": 30
               },
               "samplingMethodNotes": {
                 "type": "string",
@@ -5426,7 +5456,9 @@
                         "MX.taxonSetArchipelagoRaptors",
                         "MX.taxonSetArchipelagoCormorants",
                         "MX.taxonSetArchipelagoEgrets",
-                        "MX.taxonSetArchipelagoMammals"
+                        "MX.taxonSetArchipelagoMammals",
+                        "MX.taxonSetPriodiversityOldForestPolypores",
+                        "MX.taxonSetPriodiversityIndicatorLichens"
                       ],
                       "enumNames": [
                         "",
@@ -5460,7 +5492,9 @@
                         "Archipelago bird census: Raptors",
                         "Archipelago bird census: Cormorants",
                         "Archipelago bird census: Egrets",
-                        "Archipelago bird census: Mammals"
+                        "Archipelago bird census: Mammals",
+                        "Old-growth forest polypores, complete list",
+                        "Indicator lichens, complete list"
                       ],
                       "range": "MX.taxonSetEnum",
                       "subject": "MY.censusTaxonSetID",
@@ -5574,7 +5608,7 @@
                 "subject": "MZ.publicityRestrictions",
                 "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                 "title": "Publicity restrictions",
-                "sortOrder": 33
+                "sortOrder": 31
               },
               "units": {
                 "type": "array",
@@ -5618,7 +5652,7 @@
                       "subject": "MY.DNASampleLocation",
                       "description": "Leave empty if no sample taken, or if the sample is recorded separately",
                       "title": "DNA sample location",
-                      "sortOrder": 28
+                      "sortOrder": 29
                     },
                     "abundanceString": {
                       "type": "string",
@@ -5695,7 +5729,7 @@
                       "subject": "MY.additionalIDs",
                       "description": "Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)",
                       "title": "Additional ID's",
-                      "sortOrder": 20
+                      "sortOrder": 19
                     },
                     "adultIndividualCount": {
                       "type": "integer",
@@ -5718,7 +5752,7 @@
                       "subject": "MY.ageNotes",
                       "description": "E.g. how age was determined, by whom and when.",
                       "title": "Age notes",
-                      "sortOrder": 19
+                      "sortOrder": 20
                     },
                     "alive": {
                       "type": "boolean",
@@ -5954,7 +5988,7 @@
                       "subject": "MY.causeOfDeath",
                       "description": "Cause of death, if not intentionally trapped on sampled",
                       "title": "Cause of Death",
-                      "sortOrder": 5
+                      "sortOrder": 6
                     },
                     "checklistID": {
                       "type": "string",
@@ -6124,7 +6158,7 @@
                       "subject": "MY.growthMediumName",
                       "description": "Microbial culture growth medium name, usually from a standard",
                       "title": "Growth medium name",
-                      "sortOrder": 26
+                      "sortOrder": 27
                     },
                     "growthOtherConditions": {
                       "type": "string",
@@ -6604,7 +6638,7 @@
                       "subject": "MY.isPartOf",
                       "description": "Which parent or larger collection this is part of.",
                       "title": "Is part of",
-                      "sortOrder": 24
+                      "sortOrder": 26
                     },
                     "juvenileIndividualCount": {
                       "type": "integer",
@@ -6739,7 +6773,7 @@
                       "subject": "MY.lifeStage",
                       "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
                       "title": "Life stage",
-                      "sortOrder": 1
+                      "sortOrder": 3
                     },
                     "lifeStageDescription": {
                       "type": "string",
@@ -6929,7 +6963,7 @@
                           "subject": "MY.isPartOf",
                           "description": "Which parent or larger collection this is part of.",
                           "title": "Is part of",
-                          "sortOrder": 24
+                          "sortOrder": 26
                         },
                         "tailCentimeters": {
                           "type": "array",
@@ -7065,7 +7099,7 @@
                         }
                       },
                       "range": "MY.measurementClass",
-                      "sortOrder": 23
+                      "sortOrder": 28
                     },
                     "microbiologicalRiskGroup": {
                       "type": "string",
@@ -7187,11 +7221,38 @@
                       "title": "Nest/cavity count",
                       "sortOrder": -1
                     },
+                    "nestDistanceFromLineTransectStartMeters": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "range": "xsd:nonNegativeInteger",
+                      "subject": "MY.nestDistanceFromLineTransectStartMeters",
+                      "title": "metrimäärä (linjan alusta), jolla pönttö/kolo on",
+                      "sortOrder": -1
+                    },
                     "nestNotes": {
                       "type": "string",
                       "range": "xsd:string",
                       "subject": "MY.nestNotes",
                       "title": "Nest notes",
+                      "sortOrder": -1
+                    },
+                    "nestSize": {
+                      "type": "string",
+                      "enum": [
+                        "",
+                        "MY.nestSizeEnum1",
+                        "MY.nestSizeEnum2",
+                        "MY.nestSizeEnum3"
+                      ],
+                      "enumNames": [
+                        "",
+                        "PPL = pieni pikkulintu, esim. tiaispönttö, hömötiaisen kaivertama kolo",
+                        "IPL = iso pikkulintu eli noin kottaraispönttö/käpytikan kolo",
+                        "pöllö = palokärjen kolon kokoluokka ja sitä suuremmat"
+                      ],
+                      "range": "MY.nestSizeEnum",
+                      "subject": "MY.nestSize",
+                      "title": "Pöntön kokoluokka",
                       "sortOrder": -1
                     },
                     "nestTreeDiameterInCentimeters": {
@@ -7652,7 +7713,7 @@
                       "subject": "MY.recordParts",
                       "description": "What parts of the record are / have been in storage.",
                       "title": "Record parts",
-                      "sortOrder": 6
+                      "sortOrder": 7
                     },
                     "ring": {
                       "type": "string",
@@ -7780,7 +7841,7 @@
                       "subject": "MY.samplingMethod",
                       "description": "Main method for (usually intentional) sampling",
                       "title": "Sampling method",
-                      "sortOrder": 32
+                      "sortOrder": 30
                     },
                     "samplingMethodNotes": {
                       "type": "string",
@@ -8287,6 +8348,14 @@
                           "title": "Observation distance (m)",
                           "sortOrder": -1
                         },
+                        "eggCount": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "range": "xsd:nonNegativeInteger",
+                          "subject": "MY.eggCount",
+                          "title": "Egg count",
+                          "sortOrder": -1
+                        },
                         "femalesWithBroodsCount": {
                           "type": "integer",
                           "minimum": 0,
@@ -8533,6 +8602,14 @@
                           "range": "xsd:string",
                           "subject": "MY.pointCountFlock",
                           "title": "Parvien koot",
+                          "sortOrder": -1
+                        },
+                        "pullusIndividualCount": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "range": "xsd:nonNegativeInteger",
+                          "subject": "MY.pullusIndividualCount",
+                          "title": "Pullus individual count",
                           "sortOrder": -1
                         },
                         "runningWaterInVicinity": {
@@ -8871,7 +8948,7 @@
                       "subject": "MZ.publicityRestrictions",
                       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                       "title": "Publicity restrictions",
-                      "sortOrder": 33
+                      "sortOrder": 31
                     },
                     "identifications": {
                       "type": "array",
@@ -9094,7 +9171,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 24
+                            "sortOrder": 26
                           },
                           "isTaxonGroup": {
                             "type": "boolean",
@@ -9313,7 +9390,7 @@
                             "subject": "MZ.publicityRestrictions",
                             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                             "title": "Publicity restrictions",
-                            "sortOrder": 33
+                            "sortOrder": 31
                           },
                           "sortOrder": {
                             "type": "integer",
@@ -9364,7 +9441,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 24
+                            "sortOrder": 26
                           },
                           "typeAuthor": {
                             "type": "string",
@@ -9550,7 +9627,7 @@
                             "subject": "MZ.publicityRestrictions",
                             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                             "title": "Publicity restrictions",
-                            "sortOrder": 33
+                            "sortOrder": 31
                           }
                         }
                       },
@@ -9978,7 +10055,7 @@
                                   "subject": "MY.isPartOf",
                                   "description": "Which parent or larger collection this is part of.",
                                   "title": "Is part of",
-                                  "sortOrder": 24
+                                  "sortOrder": 26
                                 }
                               }
                             },
@@ -10220,7 +10297,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 24
+                            "sortOrder": 26
                           },
                           "measurement": {
                             "type": "object",
@@ -10379,7 +10456,7 @@
                                 "subject": "MY.isPartOf",
                                 "description": "Which parent or larger collection this is part of.",
                                 "title": "Is part of",
-                                "sortOrder": 24
+                                "sortOrder": 26
                               },
                               "tailCentimeters": {
                                 "type": "array",
@@ -10515,7 +10592,7 @@
                               }
                             },
                             "range": "MY.measurementClass",
-                            "sortOrder": 23
+                            "sortOrder": 28
                           },
                           "creator": {
                             "type": "string",
@@ -10829,7 +10906,7 @@
           "subject": "MY.DNASampleLocation",
           "description": "Leave empty if no sample taken, or if the sample is recorded separately",
           "title": "DNA sample location",
-          "sortOrder": 28
+          "sortOrder": 29
         },
         "IPEN": {
           "type": "string",
@@ -10845,7 +10922,7 @@
           "subject": "MY.URL",
           "description": "URL where more information is available about the specimen",
           "title": "URL",
-          "sortOrder": 29
+          "sortOrder": 28
         },
         "acknowledgedWarnings": {
           "type": "array",
@@ -10866,7 +10943,7 @@
           "subject": "MY.acquiredFrom",
           "description": "From who/where the specimen was acquired (if not recorded as a transaction)",
           "title": "Acquired from",
-          "sortOrder": 25
+          "sortOrder": 24
         },
         "acquiredFromOrganization": {
           "type": "string",
@@ -10874,7 +10951,7 @@
           "subject": "MY.acquiredFromOrganization",
           "description": "Organization where the accession was acquired from. If the organization is not on the list, add it first.",
           "title": "Acquired from organization",
-          "sortOrder": 37
+          "sortOrder": 40
         },
         "acquisitionDate": {
           "type": "string",
@@ -10882,7 +10959,7 @@
           "subject": "MY.acquisitionDate",
           "description": "Date (d.m.yyyy) or year (yyyy) on which the specimen was acquired to the collection. Empty means an old specimen acquired on an unknown date.",
           "title": "Acquisition date",
-          "sortOrder": 26
+          "sortOrder": 25
         },
         "additionalIDs": {
           "type": "array",
@@ -10895,7 +10972,7 @@
           "subject": "MY.additionalIDs",
           "description": "Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)",
           "title": "Additional ID's",
-          "sortOrder": 20
+          "sortOrder": 19
         },
         "bold": {
           "type": "array",
@@ -10908,7 +10985,7 @@
           "subject": "MY.bold",
           "description": "BOLD identifier, usually BOLD Sample ID. You can include additonal comment by separating them with colon, e.g. \"AY123456:comments here\"",
           "title": "BOLD",
-          "sortOrder": 17
+          "sortOrder": 16
         },
         "caption": {
           "type": "string",
@@ -10923,7 +11000,7 @@
           "subject": "MY.cladBookID",
           "description": "Clad book id number or such",
           "title": "Clad book id",
-          "sortOrder": 10
+          "sortOrder": 9
         },
         "cladSpecimenID": {
           "type": "string",
@@ -10931,7 +11008,7 @@
           "subject": "MY.cladSpecimenID",
           "description": "Clad specimen id: usually color description and a number",
           "title": "Clad specimen id",
-          "sortOrder": 14
+          "sortOrder": 13
         },
         "cladVerbatim": {
           "type": "string",
@@ -10939,7 +11016,7 @@
           "subject": "MY.cladVerbatim",
           "description": "Verbatim specimen data from clad book",
           "title": "Clad data verbatim",
-          "sortOrder": 15
+          "sortOrder": 14
         },
         "collectionID": {
           "type": "string",
@@ -10955,7 +11032,7 @@
           "subject": "MY.condition",
           "description": "Notes on the defects of the specimen (missing parts or such). Empty value means same as \"good\" or \"hyvä\" - that there is nothing special to mention about the condition.",
           "title": "Condition (defects)",
-          "sortOrder": 6
+          "sortOrder": 7
         },
         "contacts": {
           "type": "array",
@@ -11070,7 +11147,7 @@
           "subject": "MY.dataSource",
           "description": "Where the data about this specimen or observation is from, in addition to labels. Eg. reference to a publication, field notes or an expedition.",
           "title": "Data source",
-          "sortOrder": 19
+          "sortOrder": 18
         },
         "datasetID": {
           "type": "array",
@@ -11090,13 +11167,25 @@
           "range": "xsd:string",
           "subject": "MY.datatype",
           "title": "Datatype",
-          "sortOrder": 38
+          "sortOrder": 37
         },
         "deviceID": {
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.deviceID",
           "title": "Device ID",
+          "sortOrder": -1
+        },
+        "digitisers": {
+          "type": "array",
+          "uniqueItems": false,
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0,
+          "range": "xsd:string",
+          "subject": "MY.digitisers",
+          "title": "Digitised by",
           "sortOrder": -1
         },
         "documentIdentifications": {
@@ -11139,7 +11228,7 @@
           "subject": "MY.documentLocation",
           "description": "Location of the specimen so that museum personnel can find it. E.g. taxon under which it is stored (if not clear from the identification), or shelf number",
           "title": "Specimen location",
-          "sortOrder": 12
+          "sortOrder": 11
         },
         "duplicatesIn": {
           "type": "string",
@@ -11147,7 +11236,7 @@
           "subject": "MY.duplicatesIn",
           "description": "Description where duplicates (specimens of the same individual) are located or have been sent to and by which ID's.",
           "title": "Duplicates",
-          "sortOrder": 24
+          "sortOrder": 23
         },
         "editNotes": {
           "type": "string",
@@ -11170,7 +11259,7 @@
           "subject": "MY.entered",
           "description": "Date the data was first transcribed into electronic format or paper registry",
           "title": "Date transcribed",
-          "sortOrder": 39
+          "sortOrder": 38
         },
         "event": {
           "type": "array",
@@ -11183,7 +11272,7 @@
           "subject": "MY.event",
           "description": "Free-text diary-style information about what has been done to the specimen and when.",
           "title": "Event",
-          "sortOrder": 32
+          "sortOrder": 31
         },
         "exsiccatum": {
           "type": "string",
@@ -11191,7 +11280,7 @@
           "subject": "MY.exsiccatum",
           "description": "Name of the exsiccatum this specimen belongs to and possible exsiccatum number.",
           "title": "Exsiccatum",
-          "sortOrder": 27
+          "sortOrder": 26
         },
         "formID": {
           "type": "string",
@@ -11464,6 +11553,13 @@
               "title": "gatheringFact",
               "description": "",
               "properties": {
+                "allObservedNestsRecorded": {
+                  "type": "boolean",
+                  "range": "xsd:boolean",
+                  "subject": "MY.allObservedNestsRecorded",
+                  "title": "Kaikki havaitut pesäkolot ja pöntöt kirjattu",
+                  "sortOrder": -1
+                },
                 "batCollector": {
                   "type": "string",
                   "enum": [
@@ -12847,7 +12943,9 @@
                       "MX.taxonSetArchipelagoRaptors",
                       "MX.taxonSetArchipelagoCormorants",
                       "MX.taxonSetArchipelagoEgrets",
-                      "MX.taxonSetArchipelagoMammals"
+                      "MX.taxonSetArchipelagoMammals",
+                      "MX.taxonSetPriodiversityOldForestPolypores",
+                      "MX.taxonSetPriodiversityIndicatorLichens"
                     ],
                     "enumNames": [
                       "",
@@ -12881,7 +12979,9 @@
                       "Archipelago bird census: Raptors",
                       "Archipelago bird census: Cormorants",
                       "Archipelago bird census: Egrets",
-                      "Archipelago bird census: Mammals"
+                      "Archipelago bird census: Mammals",
+                      "Old-growth forest polypores, complete list",
+                      "Indicator lichens, complete list"
                     ],
                     "range": "MX.taxonSetEnum",
                     "subject": "MY.censusTaxonSetID",
@@ -12966,7 +13066,7 @@
           "subject": "MY.genbank",
           "description": "Genbank identifier. You can include additonal comment by separating them with colon, e.g. \"AY123456:comments here\"",
           "title": "Genbank",
-          "sortOrder": 16
+          "sortOrder": 15
         },
         "hasGathering": {
           "type": "array",
@@ -13005,7 +13105,7 @@
           "subject": "MY.labelsVerbatim",
           "description": "All text from labels word-for-word, including spelling errors. Separate each label on its own row, starting from topmost label.",
           "title": "Verbatim labels",
-          "sortOrder": 7
+          "sortOrder": 8
         },
         "language": {
           "type": "string",
@@ -13013,7 +13113,7 @@
           "subject": "MY.language",
           "description": "Language the data is (mainly) written in, if applicable.",
           "title": "Language",
-          "sortOrder": 26
+          "sortOrder": 27
         },
         "legID": {
           "type": "string",
@@ -13021,7 +13121,7 @@
           "subject": "MY.legID",
           "description": "Collecting number (field identifier, keruunumero) for the specimen",
           "title": "Collecting number",
-          "sortOrder": 13
+          "sortOrder": 12
         },
         "locked": {
           "type": "boolean",
@@ -13188,7 +13288,7 @@
           "subject": "MY.publication",
           "description": "Publication references or doi's that refer to this specimen",
           "title": "Publications",
-          "sortOrder": 18
+          "sortOrder": 17
         },
         "rawOCRData": {
           "type": "string",
@@ -13224,7 +13324,7 @@
           "subject": "MY.separatedFrom",
           "description": "ID of the specimen from which this has been separated",
           "title": "Separated from specimen",
-          "sortOrder": 21
+          "sortOrder": 22
         },
         "separatedTo": {
           "type": "array",
@@ -13297,7 +13397,7 @@
           "subject": "MY.status",
           "description": "Empty value means same as \"ok\" - that there is not anything special about the status of the specimen.",
           "title": "Status",
-          "sortOrder": 5
+          "sortOrder": 6
         },
         "temp": {
           "type": "boolean",
@@ -13334,7 +13434,7 @@
           "subject": "MY.transferAgreement",
           "description": "Common name of agreement concerning the transfer, if any.",
           "title": "Transfer agreement",
-          "sortOrder": 41
+          "sortOrder": 42
         },
         "unreliableFields": {
           "type": "string",
@@ -13342,7 +13442,7 @@
           "subject": "MY.unreliableFields",
           "description": "List of those fields that contain unreliable data. The list is created automatically.",
           "title": "Unreliable fields",
-          "sortOrder": 42
+          "sortOrder": 41
         },
         "verificationStatus": {
           "type": "array",
@@ -13375,7 +13475,7 @@
           "subject": "MY.verificationStatus",
           "description": "Information about the quality of the specimen data. Possible to select several.",
           "title": "Verification status",
-          "sortOrder": 11
+          "sortOrder": 10
         },
         "voucherSpecimenID": {
           "type": "string",
@@ -13458,7 +13558,7 @@
           "subject": "MZ.publicityRestrictions",
           "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
           "title": "Publicity restrictions",
-          "sortOrder": 33
+          "sortOrder": 31
         },
         "scheduledForDeletion": {
           "type": "boolean",
@@ -13862,6 +13962,13 @@
                 "title": "gatheringFact",
                 "description": "",
                 "properties": {
+                  "allObservedNestsRecorded": {
+                    "type": "boolean",
+                    "range": "xsd:boolean",
+                    "subject": "MY.allObservedNestsRecorded",
+                    "title": "Kaikki havaitut pesäkolot ja pöntöt kirjattu",
+                    "sortOrder": -1
+                  },
                   "batCollector": {
                     "type": "string",
                     "enum": [
@@ -15705,7 +15812,7 @@
                 "subject": "MY.isPartOf",
                 "description": "Which parent or larger collection this is part of.",
                 "title": "Is part of",
-                "sortOrder": 24
+                "sortOrder": 26
               },
               "keywords": {
                 "type": "array",
@@ -16078,7 +16185,7 @@
                 "subject": "MY.samplingMethod",
                 "description": "Main method for (usually intentional) sampling",
                 "title": "Sampling method",
-                "sortOrder": 32
+                "sortOrder": 30
               },
               "samplingMethodNotes": {
                 "type": "string",
@@ -16168,7 +16275,9 @@
                         "MX.taxonSetArchipelagoRaptors",
                         "MX.taxonSetArchipelagoCormorants",
                         "MX.taxonSetArchipelagoEgrets",
-                        "MX.taxonSetArchipelagoMammals"
+                        "MX.taxonSetArchipelagoMammals",
+                        "MX.taxonSetPriodiversityOldForestPolypores",
+                        "MX.taxonSetPriodiversityIndicatorLichens"
                       ],
                       "enumNames": [
                         "",
@@ -16202,7 +16311,9 @@
                         "Archipelago bird census: Raptors",
                         "Archipelago bird census: Cormorants",
                         "Archipelago bird census: Egrets",
-                        "Archipelago bird census: Mammals"
+                        "Archipelago bird census: Mammals",
+                        "Old-growth forest polypores, complete list",
+                        "Indicator lichens, complete list"
                       ],
                       "range": "MX.taxonSetEnum",
                       "subject": "MY.censusTaxonSetID",
@@ -16316,7 +16427,7 @@
                 "subject": "MZ.publicityRestrictions",
                 "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                 "title": "Publicity restrictions",
-                "sortOrder": 33
+                "sortOrder": 31
               },
               "units": {
                 "type": "array",
@@ -16360,7 +16471,7 @@
                       "subject": "MY.DNASampleLocation",
                       "description": "Leave empty if no sample taken, or if the sample is recorded separately",
                       "title": "DNA sample location",
-                      "sortOrder": 28
+                      "sortOrder": 29
                     },
                     "abundanceString": {
                       "type": "string",
@@ -16437,7 +16548,7 @@
                       "subject": "MY.additionalIDs",
                       "description": "Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)",
                       "title": "Additional ID's",
-                      "sortOrder": 20
+                      "sortOrder": 19
                     },
                     "adultIndividualCount": {
                       "type": "integer",
@@ -16460,7 +16571,7 @@
                       "subject": "MY.ageNotes",
                       "description": "E.g. how age was determined, by whom and when.",
                       "title": "Age notes",
-                      "sortOrder": 19
+                      "sortOrder": 20
                     },
                     "alive": {
                       "type": "boolean",
@@ -16696,7 +16807,7 @@
                       "subject": "MY.causeOfDeath",
                       "description": "Cause of death, if not intentionally trapped on sampled",
                       "title": "Cause of Death",
-                      "sortOrder": 5
+                      "sortOrder": 6
                     },
                     "checklistID": {
                       "type": "string",
@@ -16866,7 +16977,7 @@
                       "subject": "MY.growthMediumName",
                       "description": "Microbial culture growth medium name, usually from a standard",
                       "title": "Growth medium name",
-                      "sortOrder": 26
+                      "sortOrder": 27
                     },
                     "growthOtherConditions": {
                       "type": "string",
@@ -17346,7 +17457,7 @@
                       "subject": "MY.isPartOf",
                       "description": "Which parent or larger collection this is part of.",
                       "title": "Is part of",
-                      "sortOrder": 24
+                      "sortOrder": 26
                     },
                     "juvenileIndividualCount": {
                       "type": "integer",
@@ -17481,7 +17592,7 @@
                       "subject": "MY.lifeStage",
                       "description": "Life stage of the specimen. If multiple present, select the one which was present at the time of collecting. Use Life stage description field for extra information.",
                       "title": "Life stage",
-                      "sortOrder": 1
+                      "sortOrder": 3
                     },
                     "lifeStageDescription": {
                       "type": "string",
@@ -17671,7 +17782,7 @@
                           "subject": "MY.isPartOf",
                           "description": "Which parent or larger collection this is part of.",
                           "title": "Is part of",
-                          "sortOrder": 24
+                          "sortOrder": 26
                         },
                         "tailCentimeters": {
                           "type": "array",
@@ -17807,7 +17918,7 @@
                         }
                       },
                       "range": "MY.measurementClass",
-                      "sortOrder": 23
+                      "sortOrder": 28
                     },
                     "microbiologicalRiskGroup": {
                       "type": "string",
@@ -17929,11 +18040,38 @@
                       "title": "Nest/cavity count",
                       "sortOrder": -1
                     },
+                    "nestDistanceFromLineTransectStartMeters": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "range": "xsd:nonNegativeInteger",
+                      "subject": "MY.nestDistanceFromLineTransectStartMeters",
+                      "title": "metrimäärä (linjan alusta), jolla pönttö/kolo on",
+                      "sortOrder": -1
+                    },
                     "nestNotes": {
                       "type": "string",
                       "range": "xsd:string",
                       "subject": "MY.nestNotes",
                       "title": "Nest notes",
+                      "sortOrder": -1
+                    },
+                    "nestSize": {
+                      "type": "string",
+                      "enum": [
+                        "",
+                        "MY.nestSizeEnum1",
+                        "MY.nestSizeEnum2",
+                        "MY.nestSizeEnum3"
+                      ],
+                      "enumNames": [
+                        "",
+                        "PPL = pieni pikkulintu, esim. tiaispönttö, hömötiaisen kaivertama kolo",
+                        "IPL = iso pikkulintu eli noin kottaraispönttö/käpytikan kolo",
+                        "pöllö = palokärjen kolon kokoluokka ja sitä suuremmat"
+                      ],
+                      "range": "MY.nestSizeEnum",
+                      "subject": "MY.nestSize",
+                      "title": "Pöntön kokoluokka",
                       "sortOrder": -1
                     },
                     "nestTreeDiameterInCentimeters": {
@@ -18394,7 +18532,7 @@
                       "subject": "MY.recordParts",
                       "description": "What parts of the record are / have been in storage.",
                       "title": "Record parts",
-                      "sortOrder": 6
+                      "sortOrder": 7
                     },
                     "ring": {
                       "type": "string",
@@ -18522,7 +18660,7 @@
                       "subject": "MY.samplingMethod",
                       "description": "Main method for (usually intentional) sampling",
                       "title": "Sampling method",
-                      "sortOrder": 32
+                      "sortOrder": 30
                     },
                     "samplingMethodNotes": {
                       "type": "string",
@@ -19029,6 +19167,14 @@
                           "title": "Observation distance (m)",
                           "sortOrder": -1
                         },
+                        "eggCount": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "range": "xsd:nonNegativeInteger",
+                          "subject": "MY.eggCount",
+                          "title": "Egg count",
+                          "sortOrder": -1
+                        },
                         "femalesWithBroodsCount": {
                           "type": "integer",
                           "minimum": 0,
@@ -19275,6 +19421,14 @@
                           "range": "xsd:string",
                           "subject": "MY.pointCountFlock",
                           "title": "Parvien koot",
+                          "sortOrder": -1
+                        },
+                        "pullusIndividualCount": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "range": "xsd:nonNegativeInteger",
+                          "subject": "MY.pullusIndividualCount",
+                          "title": "Pullus individual count",
                           "sortOrder": -1
                         },
                         "runningWaterInVicinity": {
@@ -19613,7 +19767,7 @@
                       "subject": "MZ.publicityRestrictions",
                       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                       "title": "Publicity restrictions",
-                      "sortOrder": 33
+                      "sortOrder": 31
                     },
                     "identifications": {
                       "type": "array",
@@ -19836,7 +19990,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 24
+                            "sortOrder": 26
                           },
                           "isTaxonGroup": {
                             "type": "boolean",
@@ -20055,7 +20209,7 @@
                             "subject": "MZ.publicityRestrictions",
                             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                             "title": "Publicity restrictions",
-                            "sortOrder": 33
+                            "sortOrder": 31
                           },
                           "sortOrder": {
                             "type": "integer",
@@ -20106,7 +20260,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 24
+                            "sortOrder": 26
                           },
                           "typeAuthor": {
                             "type": "string",
@@ -20292,7 +20446,7 @@
                             "subject": "MZ.publicityRestrictions",
                             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                             "title": "Publicity restrictions",
-                            "sortOrder": 33
+                            "sortOrder": 31
                           }
                         }
                       },
@@ -20720,7 +20874,7 @@
                                   "subject": "MY.isPartOf",
                                   "description": "Which parent or larger collection this is part of.",
                                   "title": "Is part of",
-                                  "sortOrder": 24
+                                  "sortOrder": 26
                                 }
                               }
                             },
@@ -20962,7 +21116,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 24
+                            "sortOrder": 26
                           },
                           "measurement": {
                             "type": "object",
@@ -21121,7 +21275,7 @@
                                 "subject": "MY.isPartOf",
                                 "description": "Which parent or larger collection this is part of.",
                                 "title": "Is part of",
-                                "sortOrder": 24
+                                "sortOrder": 26
                               },
                               "tailCentimeters": {
                                 "type": "array",
@@ -21257,7 +21411,7 @@
                               }
                             },
                             "range": "MY.measurementClass",
-                            "sortOrder": 23
+                            "sortOrder": 28
                           },
                           "creator": {
                             "type": "string",
@@ -21421,7 +21575,8 @@
           "MNP.tagTypeWater",
           "MNP.tagTypeShoreline",
           "MNP.tagTypeMixed",
-          "MNP.tagTypeUnknown"
+          "MNP.tagTypeUnknown",
+          "MNP.tagWishedToBeCounted"
         ],
         "enumNames": [
           "",
@@ -21440,7 +21595,8 @@
           "Water area",
           "Shoreline",
           "Mixed",
-          "Unknown"
+          "Unknown",
+          "Toivotaan laskettavaksi"
         ]
       },
       "minItems": 0,

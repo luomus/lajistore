@@ -200,6 +200,10 @@ export type MYDataQualityEnum =
   | "MY.dataQuality4"
   | "MY.dataQuality5"
   | "MY.dataQualityNA";
+export type MYHierarchyTypeEnum =
+  | ""
+  | "MY.hierarchyTypeDocumentParent"
+  | "MY.hierarchyTypeCollectionParent";
 export type MYIntellectualRightsEnum =
   | "MY.intellectualRightsCC-BY"
   | "MY.intellectualRightsCC0"
@@ -1271,7 +1275,8 @@ export type MNPTagEnum =
   | "MNP.tagTypeWater"
   | "MNP.tagTypeShoreline"
   | "MNP.tagTypeMixed"
-  | "MNP.tagTypeUnknown";
+  | "MNP.tagTypeUnknown"
+  | "MNP.tagWishedToBeCounted";
 export type MHNNotificationReasonEnum =
   | ""
   | "MHN.notificationReasonOwnDocumentAnnotated"
@@ -1307,7 +1312,8 @@ export type MARoles =
   | "MA.luomusSpaceCalendarUser"
   | "MA.luomusSpaceOpeningTimesUser"
   | "MA.taxonIdEditor"
-  | "MA.3rdPartyDeveloper";
+  | "MA.3rdPartyDeveloper"
+  | "MA.reportAdmin";
 export type MARoleKotkaEnum =
   | ""
   | "MA.admin"
@@ -1617,7 +1623,9 @@ export type MXTaxonSetEnum =
   | "MX.taxonSetArchipelagoRaptors"
   | "MX.taxonSetArchipelagoCormorants"
   | "MX.taxonSetArchipelagoEgrets"
-  | "MX.taxonSetArchipelagoMammals";
+  | "MX.taxonSetArchipelagoMammals"
+  | "MX.taxonSetPriodiversityOldForestPolypores"
+  | "MX.taxonSetPriodiversityIndicatorLichens";
 export type MXOccurrenceInFinlandEnum =
   | ""
   | "MX.doesNotOccur"
@@ -1968,6 +1976,11 @@ export type MYNativeStatusEnum =
   | ""
   | "MY.native"
   | "MY.nonNative";
+export type MYNestSizeEnum =
+  | ""
+  | "MY.nestSizeEnum1"
+  | "MY.nestSizeEnum2"
+  | "MY.nestSizeEnum3";
 export type MYNestTypeEnum =
   | ""
   | "MY.nestTypeTreeCavity"
