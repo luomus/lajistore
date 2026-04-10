@@ -113,6 +113,21 @@ type ViewerBasicAuth {
   ): Concept2
 
   """
+  Get next value from sequence
+  
+  Equivalent to GET /sequence/{key}/next
+  """
+  getNextSequence(
+    """
+    Generate new sequence for key if one not found yet, starting numbering from one
+    """
+    generateIfMissing: Boolean
+
+    """Sequence name"""
+    key: String!
+  ): String
+
+  """
   Return a Instances of this describe one taxon description context (Pinkka eLearning enviroment).
   
   Equivalent to GET /Pinkka/{id}
@@ -10321,6 +10336,9 @@ type FormNamedPlaceOptions {
   """The named place UI allows filtering by tags"""
   filterByTags: Boolean
 
+  """Affects "MHL.filterByTags" feature"""
+  filterByTagsWhitelist: [FilterByTagsWhitelistListItem]
+
   """
   When recording a document for a named place, the named place's data of these fields will be shown at the top of the page (defaults to ["alternativeIDs", "name", "municipality"]
   """
@@ -10395,6 +10413,9 @@ type FormNamedPlaceOptions {
 
   """Named place chooser view starts with map tab instead of list"""
   startWithMap: Boolean
+
+  """Affects "MHL.filterByTags" feature"""
+  tagsWhiteList: [TagsWhiteListListItem]
   type: String
 
   """
@@ -10407,6 +10428,48 @@ type FormNamedPlaceOptions {
 
   """Named place chooser map is initialized with data fitted in view."""
   zoomToData: Boolean
+}
+
+enum FilterByTagsWhitelistListItem {
+  _
+  MNP_TAGACCESSIBILITYEASY
+  MNP_TAGACCESSIBILITYMODERATE
+  MNP_TAGACCESSIBILITYDIFFICULT
+  MNP_TAGHABITATIMPORTANT
+  MNP_TAGCENSUSRARE
+  MNP_TAGHABITATFARMLAND
+  MNP_TAGHABITATMIRE
+  MNP_TAGHABITATMOUNTAIN
+  MNP_TAGSUITABLE
+  MNP_TAGTYPEISLAND
+  MNP_TAGTYPEPARTIALISLAND
+  MNP_TAGTYPEISLANDGROUP
+  MNP_TAGTYPEWATER
+  MNP_TAGTYPESHORELINE
+  MNP_TAGTYPEMIXED
+  MNP_TAGTYPEUNKNOWN
+  MNP_TAGWISHEDTOBECOUNTED
+}
+
+enum TagsWhiteListListItem {
+  _
+  MNP_TAGACCESSIBILITYEASY
+  MNP_TAGACCESSIBILITYMODERATE
+  MNP_TAGACCESSIBILITYDIFFICULT
+  MNP_TAGHABITATIMPORTANT
+  MNP_TAGCENSUSRARE
+  MNP_TAGHABITATFARMLAND
+  MNP_TAGHABITATMIRE
+  MNP_TAGHABITATMOUNTAIN
+  MNP_TAGSUITABLE
+  MNP_TAGTYPEISLAND
+  MNP_TAGTYPEPARTIALISLAND
+  MNP_TAGTYPEISLANDGROUP
+  MNP_TAGTYPEWATER
+  MNP_TAGTYPESHORELINE
+  MNP_TAGTYPEMIXED
+  MNP_TAGTYPEUNKNOWN
+  MNP_TAGWISHEDTOBECOUNTED
 }
 
 enum PrintType {
@@ -15538,6 +15601,21 @@ type ViewerAnyAuth {
     """Id for the Concept"""
     id: String!
   ): Concept2
+
+  """
+  Get next value from sequence
+  
+  Equivalent to GET /sequence/{key}/next
+  """
+  getNextSequence(
+    """
+    Generate new sequence for key if one not found yet, starting numbering from one
+    """
+    generateIfMissing: Boolean
+
+    """Sequence name"""
+    key: String!
+  ): String
 
   """
   Return a Instances of this describe one taxon description context (Pinkka eLearning enviroment).
@@ -24391,6 +24469,13 @@ type MutationViewerBasicAuth {
   ): JSON
 
   """
+  Insert new sequence, next is optional, in case it is not included sequence starts from one
+  
+  Equivalent to POST /sequence
+  """
+  postNewSequence(requestBody: SequenceInput): Sequence2
+
+  """
   Return list of Bibliographic Resource objects.
   
   Equivalent to POST /BibliographicResource/_search
@@ -31020,6 +31105,9 @@ input FormNamedPlaceOptionsInput {
   """The named place UI allows filtering by tags"""
   filterByTags: Boolean
 
+  """Affects "MHL.filterByTags" feature"""
+  filterByTagsWhitelist: [FilterByTagsWhitelistListItem]
+
   """
   When recording a document for a named place, the named place's data of these fields will be shown at the top of the page (defaults to ["alternativeIDs", "name", "municipality"]
   """
@@ -31094,6 +31182,9 @@ input FormNamedPlaceOptionsInput {
 
   """Named place chooser view starts with map tab instead of list"""
   startWithMap: Boolean
+
+  """Affects "MHL.filterByTags" feature"""
+  tagsWhiteList: [TagsWhiteListListItem]
   type: String
 
   """
@@ -33368,6 +33459,16 @@ type Video3 {
 input EsSearchObjInput {
   patch: [JSON]!
   query: JSON
+}
+
+type Sequence2 {
+  key: String
+  next: Float
+}
+
+input SequenceInput {
+  key: String
+  next: Float
 }
 
 type BibliographicResourceSearch2 {
@@ -37443,6 +37544,13 @@ type MutationViewerAnyAuth {
     q: String
     requestBody: EsSearchObjInput
   ): JSON
+
+  """
+  Insert new sequence, next is optional, in case it is not included sequence starts from one
+  
+  Equivalent to POST /sequence
+  """
+  postNewSequence(requestBody: SequenceInput): Sequence2
 
   """
   Return list of Bibliographic Resource objects.

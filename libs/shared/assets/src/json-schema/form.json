@@ -1168,6 +1168,59 @@
               "title": "Filter named places by tags",
               "sortOrder": 39
             },
+            "filterByTagsWhitelist": {
+              "type": "array",
+              "uniqueItems": false,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "",
+                  "MNP.tagAccessibilityEasy",
+                  "MNP.tagAccessibilityModerate",
+                  "MNP.tagAccessibilityDifficult",
+                  "MNP.tagHabitatImportant",
+                  "MNP.tagCensusRare",
+                  "MNP.tagHabitatFarmland",
+                  "MNP.tagHabitatMire",
+                  "MNP.tagHabitatMountain",
+                  "MNP.tagSuitable",
+                  "MNP.tagTypeIsland",
+                  "MNP.tagTypePartialIsland",
+                  "MNP.tagTypeIslandGroup",
+                  "MNP.tagTypeWater",
+                  "MNP.tagTypeShoreline",
+                  "MNP.tagTypeMixed",
+                  "MNP.tagTypeUnknown",
+                  "MNP.tagWishedToBeCounted"
+                ],
+                "enumNames": [
+                  "",
+                  "Easy accessibility",
+                  "Moderate accessibility",
+                  "Difficult accessibility",
+                  "Important habitat",
+                  "Rarely censused",
+                  "Farmland",
+                  "Mire",
+                  "Mountain",
+                  "Soveltuu liito-oravalle satelliittikuvan perusteella",
+                  "Island",
+                  "Partial island",
+                  "Island group",
+                  "Water area",
+                  "Shoreline",
+                  "Mixed",
+                  "Unknown",
+                  "Toivotaan laskettavaksi"
+                ]
+              },
+              "minItems": 0,
+              "range": "MNP.tagEnum",
+              "subject": "MHL.filterByTagsWhitelist",
+              "description": "Affects \"MHL.filterByTags\" feature",
+              "title": "Tags filter whitelist",
+              "sortOrder": 45
+            },
             "headerFields": {
               "type": "array",
               "uniqueItems": false,
@@ -1195,7 +1248,7 @@
               "subject": "MHL.includeDescendantCollections",
               "description": "True by default. The named places of this form includes the places of descendant collections also.",
               "title": "Include descendant collections",
-              "sortOrder": 44
+              "sortOrder": 46
             },
             "includeUnits": {
               "type": "boolean",
@@ -1248,14 +1301,14 @@
               "subject": "MHL.listColumns",
               "description": "List of columns visible in the list view",
               "title": "Columns in list",
-              "sortOrder": 42
+              "sortOrder": 43
             },
             "listColumnsMultisort": {
               "type": "boolean",
               "range": "xsd:boolean",
               "subject": "MHL.listColumnsMultisort",
               "title": "Columns multisort",
-              "sortOrder": 41
+              "sortOrder": 42
             },
             "listLabel": {
               "type": "string",
@@ -1270,7 +1323,7 @@
               "range": "xsd:boolean",
               "subject": "MHL.mapCluster",
               "title": "Cluster the map points",
-              "sortOrder": 43
+              "sortOrder": 44
             },
             "mapOverlayNames": {
               "type": "array",
@@ -1383,6 +1436,59 @@
               "description": "Named place chooser view starts with map tab instead of list",
               "title": "Start with map tab",
               "sortOrder": 28
+            },
+            "tagsWhiteList": {
+              "type": "array",
+              "uniqueItems": false,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "",
+                  "MNP.tagAccessibilityEasy",
+                  "MNP.tagAccessibilityModerate",
+                  "MNP.tagAccessibilityDifficult",
+                  "MNP.tagHabitatImportant",
+                  "MNP.tagCensusRare",
+                  "MNP.tagHabitatFarmland",
+                  "MNP.tagHabitatMire",
+                  "MNP.tagHabitatMountain",
+                  "MNP.tagSuitable",
+                  "MNP.tagTypeIsland",
+                  "MNP.tagTypePartialIsland",
+                  "MNP.tagTypeIslandGroup",
+                  "MNP.tagTypeWater",
+                  "MNP.tagTypeShoreline",
+                  "MNP.tagTypeMixed",
+                  "MNP.tagTypeUnknown",
+                  "MNP.tagWishedToBeCounted"
+                ],
+                "enumNames": [
+                  "",
+                  "Easy accessibility",
+                  "Moderate accessibility",
+                  "Difficult accessibility",
+                  "Important habitat",
+                  "Rarely censused",
+                  "Farmland",
+                  "Mire",
+                  "Mountain",
+                  "Soveltuu liito-oravalle satelliittikuvan perusteella",
+                  "Island",
+                  "Partial island",
+                  "Island group",
+                  "Water area",
+                  "Shoreline",
+                  "Mixed",
+                  "Unknown",
+                  "Toivotaan laskettavaksi"
+                ]
+              },
+              "minItems": 0,
+              "range": "MNP.tagEnum",
+              "subject": "MHL.tagsWhiteList",
+              "description": "Affects \"MHL.filterByTags\" feature",
+              "title": "Tags filter whitelist",
+              "sortOrder": 41
             },
             "useAcceptedDocument": {
               "type": "boolean",

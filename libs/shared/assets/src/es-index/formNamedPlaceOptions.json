@@ -97,6 +97,11 @@
       "filterByTags": {
         "type": "boolean"
       },
+      "filterByTagsWhitelist": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "headerFields": {
         "type": "keyword",
         "ignore_above": 200,
@@ -200,6 +205,11 @@
       },
       "startWithMap": {
         "type": "boolean"
+      },
+      "tagsWhiteList": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "useAcceptedDocument": {
         "type": "boolean"

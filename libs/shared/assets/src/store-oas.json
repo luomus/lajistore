@@ -115,6 +115,105 @@
         }
       }
     },
+    "/sequence": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "Utilities"
+        ],
+        "operationId": "postNewSequence",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": {},
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "next": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Insert new sequence, next is optional, in case it is not included sequence starts from one",
+        "responses": {
+          "201": {
+            "description": "Created sequence",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "next": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sequence/{key}/next": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "Utilities"
+        ],
+        "operationId": "getNextSequence",
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "description": "Sequence name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "generateIfMissing",
+            "in": "query",
+            "description": "Generate new sequence for key if one not found yet, starting numbering from one",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "description": "Get next value from sequence",
+        "responses": {
+          "200": {
+            "description": "Next value for given sequence",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/status": {
       "get": {
         "security": [
@@ -60972,6 +61071,36 @@
             "description": "The named place UI allows filtering by tags",
             "title": "Filter named places by tags"
           },
+          "filterByTagsWhitelist": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string",
+              "enum": [
+                "",
+                "MNP.tagAccessibilityEasy",
+                "MNP.tagAccessibilityModerate",
+                "MNP.tagAccessibilityDifficult",
+                "MNP.tagHabitatImportant",
+                "MNP.tagCensusRare",
+                "MNP.tagHabitatFarmland",
+                "MNP.tagHabitatMire",
+                "MNP.tagHabitatMountain",
+                "MNP.tagSuitable",
+                "MNP.tagTypeIsland",
+                "MNP.tagTypePartialIsland",
+                "MNP.tagTypeIslandGroup",
+                "MNP.tagTypeWater",
+                "MNP.tagTypeShoreline",
+                "MNP.tagTypeMixed",
+                "MNP.tagTypeUnknown",
+                "MNP.tagWishedToBeCounted"
+              ]
+            },
+            "minItems": 0,
+            "description": "Affects \"MHL.filterByTags\" feature",
+            "title": "Tags filter whitelist"
+          },
           "headerFields": {
             "type": "array",
             "uniqueItems": false,
@@ -61115,6 +61244,36 @@
             "type": "boolean",
             "description": "Named place chooser view starts with map tab instead of list",
             "title": "Start with map tab"
+          },
+          "tagsWhiteList": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string",
+              "enum": [
+                "",
+                "MNP.tagAccessibilityEasy",
+                "MNP.tagAccessibilityModerate",
+                "MNP.tagAccessibilityDifficult",
+                "MNP.tagHabitatImportant",
+                "MNP.tagCensusRare",
+                "MNP.tagHabitatFarmland",
+                "MNP.tagHabitatMire",
+                "MNP.tagHabitatMountain",
+                "MNP.tagSuitable",
+                "MNP.tagTypeIsland",
+                "MNP.tagTypePartialIsland",
+                "MNP.tagTypeIslandGroup",
+                "MNP.tagTypeWater",
+                "MNP.tagTypeShoreline",
+                "MNP.tagTypeMixed",
+                "MNP.tagTypeUnknown",
+                "MNP.tagWishedToBeCounted"
+              ]
+            },
+            "minItems": 0,
+            "description": "Affects \"MHL.filterByTags\" feature",
+            "title": "Tags filter whitelist"
           },
           "useAcceptedDocument": {
             "type": "boolean",
