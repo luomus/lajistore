@@ -15,6 +15,7 @@ import { MYMovingDirectionEnum } from './';
 import { MYNativeStatusEnum } from './';
 import { MYNestSizeEnum } from './';
 import { MYNestTypeEnum } from './';
+import { MYObservationStatusEnum } from './';
 import { MYPlantLifeStageEnum } from './';
 import { MYPlantStatusCodeEnum } from './';
 import { MYPreservations } from './';
@@ -203,6 +204,7 @@ export interface Unit {
    * Additional information to the data in each section.
    */
   notes?: string;
+  observationStatus?: MYObservationStatusEnum;
   pairCount?: number;
   pairCountOpinion?: number;
   plantLifeStage?: MYPlantLifeStageEnum;

@@ -1989,6 +1989,13 @@ export type MYNestTypeEnum =
   | "MY.nestTypeBuilding"
   | "MY.nestTypeGroundCavity"
   | "MY.nestTypeOther";
+export type MYObservationStatusEnum =
+  | ""
+  | "MY.observationStatusIgnored"
+  | "MY.observationStatusNotObserved"
+  | "MY.observationStatusObservedNoCount"
+  | "MY.observationStatusObservedPartialCount"
+  | "MY.observationStatusObservedCompleteCount";
 export type MYPlantStatusCodeEnum =
   | ""
   | "MY.plantStatusCodeL"

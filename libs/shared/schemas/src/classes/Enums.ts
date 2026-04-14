@@ -2144,6 +2144,14 @@ export enum MYNestTypeEnum {
   "nestTypeGroundCavity" = "MY.nestTypeGroundCavity",
   "nestTypeOther" = "MY.nestTypeOther"
 }
+export enum MYObservationStatusEnum {
+  "empty" = "",
+  "observationStatusIgnored" = "MY.observationStatusIgnored",
+  "observationStatusNotObserved" = "MY.observationStatusNotObserved",
+  "observationStatusObservedNoCount" = "MY.observationStatusObservedNoCount",
+  "observationStatusObservedPartialCount" = "MY.observationStatusObservedPartialCount",
+  "observationStatusObservedCompleteCount" = "MY.observationStatusObservedCompleteCount"
+}
 export enum MYPlantStatusCodeEnum {
   "empty" = "",
   "plantStatusCodeL" = "MY.plantStatusCodeL",

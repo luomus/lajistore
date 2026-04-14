@@ -4544,6 +4544,29 @@
             "title": "Notes",
             "sortOrder": 5
           },
+          "observationStatus": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.observationStatusIgnored",
+              "MY.observationStatusNotObserved",
+              "MY.observationStatusObservedNoCount",
+              "MY.observationStatusObservedPartialCount",
+              "MY.observationStatusObservedCompleteCount"
+            ],
+            "enumNames": [
+              "",
+              "Ignored",
+              "Not observed",
+              "Havaittu, ei laskettu",
+              "Observed, partially counted",
+              "Havaittu, kaikki yksilöt laskettu"
+            ],
+            "range": "MY.observationStatusEnum",
+            "subject": "MY.observationStatus",
+            "title": "Observation status",
+            "sortOrder": -1
+          },
           "pairCount": {
             "type": "integer",
             "minimum": 0,

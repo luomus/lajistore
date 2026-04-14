@@ -2101,6 +2101,10 @@
                 "ignore_above": 200,
                 "normalizer": "useLowercase"
               },
+              "observationStatus": {
+                "type": "keyword",
+                "ignore_above": 200
+              },
               "pairCount": {
                 "type": "integer"
               },

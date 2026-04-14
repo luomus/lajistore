@@ -311,6 +311,10 @@
       "@id": "default:MY.notes",
       "@type": "xsd:string"
     },
+    "observationStatus": {
+      "@id": "default:MY.observationStatus",
+      "@type": "@id"
+    },
     "pairCount": {
       "@id": "default:MY.pairCount",
       "@type": "xsd:nonNegativeInteger"
