@@ -1,0 +1,70 @@
+{
+  "formID": "JX.519",
+  "gatherings": [
+    {
+      "dateBegin": "2016-12-19",
+      "id": "JX.111#2",
+      "units": [
+        {
+          "unitGathering": {
+            "@type": "MZ.unitGathering",
+            "id": "JX.111#3"
+          },
+          "informalTaxonGroups": ["MVL.185", "MVL.2"],
+          "@type": "MY.unit",
+          "unitFact": {
+            "autocompleteSelectedTaxonID": "MX.49649"
+          },
+          "recordBasis": "MY.recordBasisHumanObservation",
+          "id": "JX.111#4",
+          "identifications": [
+            {
+              "@type": "MY.identification",
+              "taxon": "rotta",
+              "id": "JX.111#5"
+            }
+          ],
+          "taxonConfidence": "MY.taxonConfidenceSure"
+        }
+      ]
+    },
+    {
+      "dateBegin": "2016-12-19",
+      "id": "JX.111#6",
+      "units": [
+        {
+          "images": ["MM.120826"],
+          "unitGathering": {
+            "@type": "MZ.unitGathering",
+            "id": "JX.111#7"
+          },
+          "informalTaxonGroups": ["MVL.21", "MVL.193"],
+          "@type": "MY.unit",
+          "unitFact": {
+            "autocompleteSelectedTaxonID": "MX.37819"
+          },
+          "recordBasis": "MY.recordBasisHumanObservation",
+          "id": "JX.111#8",
+          "identifications": [
+            {
+              "@type": "MY.identification",
+              "taxon": "mänty",
+              "id": "JX.111#9"
+            }
+          ],
+          "taxonConfidence": "MY.taxonConfidenceSure"
+        }
+      ]
+    }
+  ],
+  "creator": "MA.97",
+  "gatheringEvent": {
+    "dateBegin": "2016-12-19",
+    "leg": ["MA.97"],
+    "id":"JX.111#1"
+  },
+  "dateEdited": "2016-12-21T07:24:57+00:00",
+  "id": "JX.111",
+  "publicityRestrictions": "MZ.publicityRestrictionsPublic"
+}
+

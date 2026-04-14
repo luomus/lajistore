@@ -141,6 +141,7 @@ export class DocumentService {
       delete (data.gatheringEvent as any)?.['_lajiFormId'];
     }
 
+    await this.updateSequenceMeta(type, data, id, meta);
     await this.addMetaProperties(type, data, id, meta);
 
     doc.id = id;
@@ -191,6 +192,84 @@ export class DocumentService {
     }
 
     return result;
+  }
+
+  private async updateSequenceMeta(
+    type: string,
+    data: StoreObject,
+    baseId: string,
+    meta: { sequence: number, secondary_sequence: number},
+    isBase = true,
+    addGenerated = true,
+    //ids: string[] = []
+  ) {
+    const schema = await this.jsonSchema.getSchema(type);
+    const embedded = await this.jsonSchema.getEmbedded(type);
+    const embeddedProperties = <Array<KeyOfUnion<StoreObject>>>Object.keys(embedded);
+    const typeQName = schema['subject'] || type;
+    const generateFieldsToType = this.generatedFieldsToType.includes(typeQName)
+    const generateFieldsAndSecondarySeqId = this.generatedFieldsAndSecondaryIdsToType.includes(typeQName)
+
+    if (isBase || (addGenerated && (generateFieldsToType || generateFieldsAndSecondarySeqId))) {
+      const id = data[PROPERTY_ID]
+
+      if (isBase && !id) return;
+
+      if (id) {
+        const sequence = this.idService.getSequenceNumberFromId(id);
+
+        /**
+         * TODO uncomment once unit/gathering duplication in Vihko has been figured out.
+        if (!ids.includes(id)) {
+          ids.push(id);
+        } else {
+          delete data[PROPERTY_ID];
+        }
+        */
+
+        if (generateFieldsToType && sequence >= meta.sequence) {
+          meta.sequence = sequence + 1;
+        } else if (generateFieldsAndSecondarySeqId && sequence >= meta.secondary_sequence) {
+          meta.secondary_sequence = sequence + 1;
+        }
+      }
+    }
+
+    if (this.noGeneratedFieldsToChildren.includes(typeQName)) {
+      addGenerated = false;
+    }
+
+    for (const property of embeddedProperties) {
+      if (!data[property]) {
+        continue;
+      }
+      if (Array.isArray(data[property])) {
+        for (const obj of (data[property] as StoreObject[])) {
+          if (!obj) {
+            continue;
+          }
+          await this.updateSequenceMeta(
+            embedded[property],
+            obj,
+            baseId,
+            meta,
+            false,
+            addGenerated,
+            //ids
+          );
+        }
+      } else {
+        await this.updateSequenceMeta(
+          embedded[property],
+          data[property],
+          baseId,
+          meta,
+          false,
+          addGenerated,
+          //ids
+        );
+      }
+    }
   }
 
   private async addMetaProperties(

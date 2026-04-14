@@ -161,6 +161,42 @@ requests:
       - jsonpath: content.gatherings[1].id
         expect: 'JX.5833#14'
 
+  post_document_for_sequence_mismatch_handling:
+    request:
+      url: <$ testUrl $>
+      method: POST
+      headers:
+      - name: authorization
+        value: <$ authorization_kotka $>
+      json: apps/store-api/test/document/patch-data-sequence-mismatch-original.json
+    validate:
+    - jsonpath: status
+      expect: 201
+    - jsonpath: content.id
+      type: [string]
+    - jsonpath: content.gatherings[0].units[0].id
+      expect: "JX.111#4"
+
+  update_document_with_subID_higher_than_sequence_should_results_in_sequence_fast-forwarding:
+    request:
+      url: <$ testUrl $>/JX.111
+      method: PUT
+      headers:
+        - name: authorization
+          value: <$ authorization_kotka $>
+      json: apps/store-api/test/document/patch-data-sequence-mismatch-patch.json
+    validate:
+      - jsonpath: status
+        expect: 200
+      - jsonpath: content.id
+        expect: 'JX.111'
+      - jsonpath: content.gatherings[0].units[1].id
+        expect: 'JX.111#20'
+      - jsonpath: content.gatherings[0].units[1].unitGathering.id
+        expect: 'JX.111#21'
+      - jsonpath: content.gatherings[0].units[1].identifications[0].id
+        expect: 'JX.111#22'
+
   get_versions:
     request:
       url: <$ testUrl $>/JX.5833/_ver
