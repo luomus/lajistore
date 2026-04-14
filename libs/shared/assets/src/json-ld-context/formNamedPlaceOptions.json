@@ -99,6 +99,10 @@
       "@id": "default:MHL.filterByTags",
       "@type": "xsd:boolean"
     },
+    "filterByTagsWhitelist": {
+      "@id": "default:MHL.filterByTagsWhitelist",
+      "@type": "@id"
+    },
     "headerFields": {
       "@id": "default:MHL.headerFields",
       "@type": "xsd:string"
@@ -194,6 +198,10 @@
     "startWithMap": {
       "@id": "default:MHL.startWithMap",
       "@type": "xsd:boolean"
+    },
+    "tagsWhiteList": {
+      "@id": "default:MHL.tagsWhiteList",
+      "@type": "@id"
     },
     "useAcceptedDocument": {
       "@id": "default:MHL.useAcceptedDocument",

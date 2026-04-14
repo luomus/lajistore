@@ -370,6 +370,25 @@ export type MZLanguageEnum =
   | "en"
   | "fi"
   | "sv";
+export type MNPTagEnum =
+  | ""
+  | "MNP.tagAccessibilityEasy"
+  | "MNP.tagAccessibilityModerate"
+  | "MNP.tagAccessibilityDifficult"
+  | "MNP.tagHabitatImportant"
+  | "MNP.tagCensusRare"
+  | "MNP.tagHabitatFarmland"
+  | "MNP.tagHabitatMire"
+  | "MNP.tagHabitatMountain"
+  | "MNP.tagSuitable"
+  | "MNP.tagTypeIsland"
+  | "MNP.tagTypePartialIsland"
+  | "MNP.tagTypeIslandGroup"
+  | "MNP.tagTypeWater"
+  | "MNP.tagTypeShoreline"
+  | "MNP.tagTypeMixed"
+  | "MNP.tagTypeUnknown"
+  | "MNP.tagWishedToBeCounted";
 export type MHLPrintTypeEnum =
   | ""
   | "MHL.printTypeLineTransect";
@@ -1258,25 +1277,6 @@ export type MNPPriorityEnum =
   | "MNP.priority3"
   | "MNP.priority4"
   | "MNP.priority5";
-export type MNPTagEnum =
-  | ""
-  | "MNP.tagAccessibilityEasy"
-  | "MNP.tagAccessibilityModerate"
-  | "MNP.tagAccessibilityDifficult"
-  | "MNP.tagHabitatImportant"
-  | "MNP.tagCensusRare"
-  | "MNP.tagHabitatFarmland"
-  | "MNP.tagHabitatMire"
-  | "MNP.tagHabitatMountain"
-  | "MNP.tagSuitable"
-  | "MNP.tagTypeIsland"
-  | "MNP.tagTypePartialIsland"
-  | "MNP.tagTypeIslandGroup"
-  | "MNP.tagTypeWater"
-  | "MNP.tagTypeShoreline"
-  | "MNP.tagTypeMixed"
-  | "MNP.tagTypeUnknown"
-  | "MNP.tagWishedToBeCounted";
 export type MHNNotificationReasonEnum =
   | ""
   | "MHN.notificationReasonOwnDocumentAnnotated"

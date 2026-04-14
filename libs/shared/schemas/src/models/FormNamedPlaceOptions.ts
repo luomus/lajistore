@@ -1,3 +1,5 @@
+import { MNPTagEnum } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
@@ -76,6 +78,10 @@ export interface FormNamedPlaceOptions {
    * The named place UI allows filtering by tags
    */
   filterByTags?: boolean;
+  /**
+   * Affects "MHL.filterByTags" feature
+   */
+  filterByTagsWhitelist?: MNPTagEnum[];
   /**
    * When recording a document for a named place, the named place's data of these fields will be shown at the top of the page (defaults to ["alternativeIDs", "name", "municipality"]
    */
@@ -161,6 +167,10 @@ export interface FormNamedPlaceOptions {
    * Named place chooser view starts with map tab instead of list
    */
   startWithMap?: boolean;
+  /**
+   * Affects "MHL.filterByTags" feature
+   */
+  tagsWhiteList?: MNPTagEnum[];
   /**
    * Instead of populating observation form with prepopulatedDocument, it is populated with acceptedDocument. Admin can change the acceptedDocument from observation list
    */

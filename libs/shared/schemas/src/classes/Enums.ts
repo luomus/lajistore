@@ -404,6 +404,26 @@ export enum MZLanguageEnum {
   "fi" = "fi",
   "sv" = "sv"
 }
+export enum MNPTagEnum {
+  "empty" = "",
+  "tagAccessibilityEasy" = "MNP.tagAccessibilityEasy",
+  "tagAccessibilityModerate" = "MNP.tagAccessibilityModerate",
+  "tagAccessibilityDifficult" = "MNP.tagAccessibilityDifficult",
+  "tagHabitatImportant" = "MNP.tagHabitatImportant",
+  "tagCensusRare" = "MNP.tagCensusRare",
+  "tagHabitatFarmland" = "MNP.tagHabitatFarmland",
+  "tagHabitatMire" = "MNP.tagHabitatMire",
+  "tagHabitatMountain" = "MNP.tagHabitatMountain",
+  "tagSuitable" = "MNP.tagSuitable",
+  "tagTypeIsland" = "MNP.tagTypeIsland",
+  "tagTypePartialIsland" = "MNP.tagTypePartialIsland",
+  "tagTypeIslandGroup" = "MNP.tagTypeIslandGroup",
+  "tagTypeWater" = "MNP.tagTypeWater",
+  "tagTypeShoreline" = "MNP.tagTypeShoreline",
+  "tagTypeMixed" = "MNP.tagTypeMixed",
+  "tagTypeUnknown" = "MNP.tagTypeUnknown",
+  "tagWishedToBeCounted" = "MNP.tagWishedToBeCounted"
+}
 export enum MHLPrintTypeEnum {
   "empty" = "",
   "printTypeLineTransect" = "MHL.printTypeLineTransect"
@@ -1348,26 +1368,6 @@ export enum MNPPriorityEnum {
   "priority3" = "MNP.priority3",
   "priority4" = "MNP.priority4",
   "priority5" = "MNP.priority5"
-}
-export enum MNPTagEnum {
-  "empty" = "",
-  "tagAccessibilityEasy" = "MNP.tagAccessibilityEasy",
-  "tagAccessibilityModerate" = "MNP.tagAccessibilityModerate",
-  "tagAccessibilityDifficult" = "MNP.tagAccessibilityDifficult",
-  "tagHabitatImportant" = "MNP.tagHabitatImportant",
-  "tagCensusRare" = "MNP.tagCensusRare",
-  "tagHabitatFarmland" = "MNP.tagHabitatFarmland",
-  "tagHabitatMire" = "MNP.tagHabitatMire",
-  "tagHabitatMountain" = "MNP.tagHabitatMountain",
-  "tagSuitable" = "MNP.tagSuitable",
-  "tagTypeIsland" = "MNP.tagTypeIsland",
-  "tagTypePartialIsland" = "MNP.tagTypePartialIsland",
-  "tagTypeIslandGroup" = "MNP.tagTypeIslandGroup",
-  "tagTypeWater" = "MNP.tagTypeWater",
-  "tagTypeShoreline" = "MNP.tagTypeShoreline",
-  "tagTypeMixed" = "MNP.tagTypeMixed",
-  "tagTypeUnknown" = "MNP.tagTypeUnknown",
-  "tagWishedToBeCounted" = "MNP.tagWishedToBeCounted"
 }
 export enum MHNNotificationReasonEnum {
   "empty" = "",

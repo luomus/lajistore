@@ -113,6 +113,21 @@ type ViewerBasicAuth {
   ): Concept2
 
   """
+  Get next value from sequence
+  
+  Equivalent to GET /sequence/{key}/next
+  """
+  getNextSequence(
+    """
+    Generate new sequence for key if one not found yet, starting numbering from one
+    """
+    generateIfMissing: Boolean
+
+    """Sequence name"""
+    key: String!
+  ): String
+
+  """
   Return a Instances of this describe one taxon description context (Pinkka eLearning enviroment).
   
   Equivalent to GET /Pinkka/{id}
@@ -829,12 +844,12 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -2695,7 +2710,7 @@ type ViewerBasicAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -5253,12 +5268,12 @@ type ViewerBasicAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -5721,15 +5736,15 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -10321,6 +10336,9 @@ type FormNamedPlaceOptions {
   """The named place UI allows filtering by tags"""
   filterByTags: Boolean
 
+  """Affects "MHL.filterByTags" feature"""
+  filterByTagsWhitelist: [FilterByTagsWhitelistListItem]
+
   """
   When recording a document for a named place, the named place's data of these fields will be shown at the top of the page (defaults to ["alternativeIDs", "name", "municipality"]
   """
@@ -10395,6 +10413,9 @@ type FormNamedPlaceOptions {
 
   """Named place chooser view starts with map tab instead of list"""
   startWithMap: Boolean
+
+  """Affects "MHL.filterByTags" feature"""
+  tagsWhiteList: [TagsWhiteListListItem]
   type: String
 
   """
@@ -10407,6 +10428,48 @@ type FormNamedPlaceOptions {
 
   """Named place chooser map is initialized with data fitted in view."""
   zoomToData: Boolean
+}
+
+enum FilterByTagsWhitelistListItem {
+  _
+  MNP_TAGACCESSIBILITYEASY
+  MNP_TAGACCESSIBILITYMODERATE
+  MNP_TAGACCESSIBILITYDIFFICULT
+  MNP_TAGHABITATIMPORTANT
+  MNP_TAGCENSUSRARE
+  MNP_TAGHABITATFARMLAND
+  MNP_TAGHABITATMIRE
+  MNP_TAGHABITATMOUNTAIN
+  MNP_TAGSUITABLE
+  MNP_TAGTYPEISLAND
+  MNP_TAGTYPEPARTIALISLAND
+  MNP_TAGTYPEISLANDGROUP
+  MNP_TAGTYPEWATER
+  MNP_TAGTYPESHORELINE
+  MNP_TAGTYPEMIXED
+  MNP_TAGTYPEUNKNOWN
+  MNP_TAGWISHEDTOBECOUNTED
+}
+
+enum TagsWhiteListListItem {
+  _
+  MNP_TAGACCESSIBILITYEASY
+  MNP_TAGACCESSIBILITYMODERATE
+  MNP_TAGACCESSIBILITYDIFFICULT
+  MNP_TAGHABITATIMPORTANT
+  MNP_TAGCENSUSRARE
+  MNP_TAGHABITATFARMLAND
+  MNP_TAGHABITATMIRE
+  MNP_TAGHABITATMOUNTAIN
+  MNP_TAGSUITABLE
+  MNP_TAGTYPEISLAND
+  MNP_TAGTYPEPARTIALISLAND
+  MNP_TAGTYPEISLANDGROUP
+  MNP_TAGTYPEWATER
+  MNP_TAGTYPESHORELINE
+  MNP_TAGTYPEMIXED
+  MNP_TAGTYPEUNKNOWN
+  MNP_TAGWISHEDTOBECOUNTED
 }
 
 enum PrintType {
@@ -15540,6 +15603,21 @@ type ViewerAnyAuth {
   ): Concept2
 
   """
+  Get next value from sequence
+  
+  Equivalent to GET /sequence/{key}/next
+  """
+  getNextSequence(
+    """
+    Generate new sequence for key if one not found yet, starting numbering from one
+    """
+    generateIfMissing: Boolean
+
+    """Sequence name"""
+    key: String!
+  ): String
+
+  """
   Return a Instances of this describe one taxon description context (Pinkka eLearning enviroment).
   
   Equivalent to GET /Pinkka/{id}
@@ -16256,12 +16334,12 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -18122,7 +18200,7 @@ type ViewerAnyAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -20680,12 +20758,12 @@ type ViewerAnyAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -21148,15 +21226,15 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -22250,12 +22328,12 @@ type MutationViewerBasicAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -24391,6 +24469,13 @@ type MutationViewerBasicAuth {
   ): JSON
 
   """
+  Insert new sequence, next is optional, in case it is not included sequence starts from one
+  
+  Equivalent to POST /sequence
+  """
+  postNewSequence(requestBody: SequenceInput): Sequence2
+
+  """
   Return list of Bibliographic Resource objects.
   
   Equivalent to POST /BibliographicResource/_search
@@ -26216,7 +26301,7 @@ type MutationViewerBasicAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -27377,7 +27462,7 @@ type MutationViewerBasicAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -28368,12 +28453,12 @@ type MutationViewerBasicAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
@@ -31020,6 +31105,9 @@ input FormNamedPlaceOptionsInput {
   """The named place UI allows filtering by tags"""
   filterByTags: Boolean
 
+  """Affects "MHL.filterByTags" feature"""
+  filterByTagsWhitelist: [FilterByTagsWhitelistListItem]
+
   """
   When recording a document for a named place, the named place's data of these fields will be shown at the top of the page (defaults to ["alternativeIDs", "name", "municipality"]
   """
@@ -31094,6 +31182,9 @@ input FormNamedPlaceOptionsInput {
 
   """Named place chooser view starts with map tab instead of list"""
   startWithMap: Boolean
+
+  """Affects "MHL.filterByTags" feature"""
+  tagsWhiteList: [TagsWhiteListListItem]
   type: String
 
   """
@@ -33370,6 +33461,16 @@ input EsSearchObjInput {
   query: JSON
 }
 
+type Sequence2 {
+  key: String
+  next: Float
+}
+
+input SequenceInput {
+  key: String
+  next: Float
+}
+
 type BibliographicResourceSearch2 {
   aggregations: JSON
   context: String!
@@ -35304,12 +35405,12 @@ type MutationViewerAnyAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -37445,6 +37546,13 @@ type MutationViewerAnyAuth {
   ): JSON
 
   """
+  Insert new sequence, next is optional, in case it is not included sequence starts from one
+  
+  Equivalent to POST /sequence
+  """
+  postNewSequence(requestBody: SequenceInput): Sequence2
+
+  """
   Return list of Bibliographic Resource objects.
   
   Equivalent to POST /BibliographicResource/_search
@@ -39270,7 +39378,7 @@ type MutationViewerAnyAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -40431,7 +40539,7 @@ type MutationViewerAnyAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -41422,12 +41530,12 @@ type MutationViewerAnyAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
