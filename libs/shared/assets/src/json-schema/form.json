@@ -8892,11 +8892,11 @@
                           ],
                           "enumNames": [
                             "",
-                            "Ignored",
-                            "Not observed",
-                            "Havaittu, ei laskettu",
-                            "Observed, partially counted",
-                            "Havaittu, kaikki yksilöt laskettu"
+                            "A - Ignored",
+                            "B - Not observed",
+                            "C - Observed, not counted",
+                            "D - Observed, partially counted",
+                            "E - Observed, completely counted"
                           ],
                           "range": "MY.observationStatusEnum",
                           "subject": "MY.observationStatus",

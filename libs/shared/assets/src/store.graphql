@@ -844,12 +844,12 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -2710,7 +2710,7 @@ type ViewerBasicAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -5268,12 +5268,12 @@ type ViewerBasicAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -5736,15 +5736,15 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -16344,12 +16344,12 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -18210,7 +18210,7 @@ type ViewerAnyAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -20768,12 +20768,12 @@ type ViewerAnyAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -21236,15 +21236,15 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -22338,12 +22338,12 @@ type MutationViewerBasicAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -26311,7 +26311,7 @@ type MutationViewerBasicAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -27472,7 +27472,7 @@ type MutationViewerBasicAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -28463,12 +28463,12 @@ type MutationViewerBasicAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
@@ -35416,12 +35416,12 @@ type MutationViewerAnyAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -39389,7 +39389,7 @@ type MutationViewerAnyAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -40550,7 +40550,7 @@ type MutationViewerAnyAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -41541,12 +41541,12 @@ type MutationViewerAnyAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
