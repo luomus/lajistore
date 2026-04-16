@@ -69,6 +69,7 @@ export class Gathering {
    * Name of an expedition or such.
    */
   collectingEventName?: string;
+  conditionNotes?: string;
   controlActivitiesNotes?: string;
   /**
    * Free-text notes about the coordinates.

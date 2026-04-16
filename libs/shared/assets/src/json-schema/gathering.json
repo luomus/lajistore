@@ -188,6 +188,13 @@
       "title": "Collecting event name",
       "sortOrder": 39
     },
+    "conditionNotes": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.conditionNotes",
+      "title": "Tämän laskentakerran lisätiedot",
+      "sortOrder": -1
+    },
     "controlActivitiesNotes": {
       "type": "string",
       "range": "xsd:string",
@@ -309,14 +316,14 @@
       "range": "xsd:string",
       "subject": "MY.dateBegin",
       "title": "Start date",
-      "sortOrder": 2
+      "sortOrder": 3
     },
     "dateEnd": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateEnd",
       "title": "End date",
-      "sortOrder": 3
+      "sortOrder": 4
     },
     "dateVerbatim": {
       "type": "string",
@@ -2241,7 +2248,7 @@
       "subject": "MY.isPartOf",
       "description": "Which parent or larger collection this is part of.",
       "title": "Is part of",
-      "sortOrder": 26
+      "sortOrder": 34
     },
     "keywords": {
       "type": "array",
@@ -2383,7 +2390,7 @@
       "subject": "MY.notes",
       "description": "Additional information to the data in each section.",
       "title": "Notes",
-      "sortOrder": 5
+      "sortOrder": 6
     },
     "numberOfSampledIndividuals": {
       "type": "string",
@@ -2614,7 +2621,7 @@
       "subject": "MY.samplingMethod",
       "description": "Main method for (usually intentional) sampling",
       "title": "Sampling method",
-      "sortOrder": 30
+      "sortOrder": 32
     },
     "samplingMethodNotes": {
       "type": "string",
@@ -2856,7 +2863,7 @@
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
       "title": "Publicity restrictions",
-      "sortOrder": 31
+      "sortOrder": 33
     },
     "units": {
       "type": "array",
@@ -3886,7 +3893,7 @@
             "subject": "MY.isPartOf",
             "description": "Which parent or larger collection this is part of.",
             "title": "Is part of",
-            "sortOrder": 26
+            "sortOrder": 34
           },
           "juvenileIndividualCount": {
             "type": "integer",
@@ -4211,7 +4218,7 @@
                 "subject": "MY.isPartOf",
                 "description": "Which parent or larger collection this is part of.",
                 "title": "Is part of",
-                "sortOrder": 26
+                "sortOrder": 34
               },
               "tailCentimeters": {
                 "type": "array",
@@ -4542,7 +4549,7 @@
             "subject": "MY.notes",
             "description": "Additional information to the data in each section.",
             "title": "Notes",
-            "sortOrder": 5
+            "sortOrder": 6
           },
           "observationStatus": {
             "type": "string",
@@ -5112,7 +5119,7 @@
             "subject": "MY.samplingMethod",
             "description": "Main method for (usually intentional) sampling",
             "title": "Sampling method",
-            "sortOrder": 30
+            "sortOrder": 32
           },
           "samplingMethodNotes": {
             "type": "string",
@@ -6086,14 +6093,14 @@
                 "range": "xsd:string",
                 "subject": "MY.dateBegin",
                 "title": "Start date",
-                "sortOrder": 2
+                "sortOrder": 3
               },
               "dateEnd": {
                 "type": "string",
                 "range": "xsd:string",
                 "subject": "MY.dateEnd",
                 "title": "End date",
-                "sortOrder": 3
+                "sortOrder": 4
               },
               "geometry": {
                 "type": "object",
@@ -6219,7 +6226,7 @@
             "subject": "MZ.publicityRestrictions",
             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
             "title": "Publicity restrictions",
-            "sortOrder": 31
+            "sortOrder": 33
           },
           "identifications": {
             "type": "array",
@@ -6442,7 +6449,7 @@
                   "subject": "MY.isPartOf",
                   "description": "Which parent or larger collection this is part of.",
                   "title": "Is part of",
-                  "sortOrder": 26
+                  "sortOrder": 34
                 },
                 "isTaxonGroup": {
                   "type": "boolean",
@@ -6661,7 +6668,7 @@
                   "subject": "MZ.publicityRestrictions",
                   "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                   "title": "Publicity restrictions",
-                  "sortOrder": 31
+                  "sortOrder": 33
                 },
                 "sortOrder": {
                   "type": "integer",
@@ -6712,7 +6719,7 @@
                   "subject": "MY.isPartOf",
                   "description": "Which parent or larger collection this is part of.",
                   "title": "Is part of",
-                  "sortOrder": 26
+                  "sortOrder": 34
                 },
                 "typeAuthor": {
                   "type": "string",
@@ -6898,7 +6905,7 @@
                   "subject": "MZ.publicityRestrictions",
                   "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                   "title": "Publicity restrictions",
-                  "sortOrder": 31
+                  "sortOrder": 33
                 }
               }
             },
@@ -7326,7 +7333,7 @@
                         "subject": "MY.isPartOf",
                         "description": "Which parent or larger collection this is part of.",
                         "title": "Is part of",
-                        "sortOrder": 26
+                        "sortOrder": 34
                       }
                     }
                   },
@@ -7568,7 +7575,7 @@
                   "subject": "MY.isPartOf",
                   "description": "Which parent or larger collection this is part of.",
                   "title": "Is part of",
-                  "sortOrder": 26
+                  "sortOrder": 34
                 },
                 "measurement": {
                   "type": "object",
@@ -7727,7 +7734,7 @@
                       "subject": "MY.isPartOf",
                       "description": "Which parent or larger collection this is part of.",
                       "title": "Is part of",
-                      "sortOrder": 26
+                      "sortOrder": 34
                     },
                     "tailCentimeters": {
                       "type": "array",

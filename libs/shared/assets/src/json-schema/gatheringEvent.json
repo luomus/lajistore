@@ -246,14 +246,14 @@
       "range": "xsd:string",
       "subject": "MY.dateBegin",
       "title": "Start date",
-      "sortOrder": 2
+      "sortOrder": 3
     },
     "dateEnd": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateEnd",
       "title": "End date",
-      "sortOrder": 3
+      "sortOrder": 4
     },
     "gatheringFact": {
       "type": "object",
@@ -1548,7 +1548,7 @@
       "subject": "MY.notes",
       "description": "Additional information to the data in each section.",
       "title": "Notes",
-      "sortOrder": 5
+      "sortOrder": 6
     },
     "rainIntensity": {
       "type": "string",

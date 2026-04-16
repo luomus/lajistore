@@ -1032,6 +1032,11 @@
                 "ignore_above": 200,
                 "normalizer": "useLowercase"
               },
+              "conditionNotes": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
               "controlActivitiesNotes": {
                 "type": "keyword",
                 "ignore_above": 200,
@@ -4047,6 +4052,11 @@
                 "type": "boolean"
               },
               "collectingEventName": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "conditionNotes": {
                 "type": "keyword",
                 "ignore_above": 200,
                 "normalizer": "useLowercase"

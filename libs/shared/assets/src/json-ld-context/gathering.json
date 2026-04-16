@@ -95,6 +95,10 @@
       "@id": "default:MY.collectingEventName",
       "@type": "xsd:string"
     },
+    "conditionNotes": {
+      "@id": "default:MY.conditionNotes",
+      "@type": "xsd:string"
+    },
     "controlActivitiesNotes": {
       "@id": "default:MY.controlActivitiesNotes",
       "@type": "xsd:string"
