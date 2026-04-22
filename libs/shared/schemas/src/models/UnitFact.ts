@@ -33,6 +33,7 @@ export interface UnitFact {
   eggCount?: number;
   femalesWithBroodsCount?: number;
   glowWormMicrohabitat?: MYGlowWormMicrohabitatEnum;
+  groundNestCount?: number;
   individualCountFlock?: number;
   individualCountInner?: number;
   individualCountOuter?: number;
@@ -55,6 +56,7 @@ export interface UnitFact {
    */
   taxonConfidenceDescription?: string;
   traits?: string;
+  treeNestCount?: number;
   waterbirdFemale?: MYWaterbirdFemaleEnum;
   waterbirdJuvenileAgeClass?: MYWaterbirdJuvenileAgeClassEnum;
   waterbirdJuvenileCountAccurate?: boolean;

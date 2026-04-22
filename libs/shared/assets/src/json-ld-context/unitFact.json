@@ -71,6 +71,10 @@
       "@id": "default:MY.glowWormMicrohabitat",
       "@type": "@id"
     },
+    "groundNestCount": {
+      "@id": "default:MY.groundNestCount",
+      "@type": "xsd:nonNegativeInteger"
+    },
     "individualCountFlock": {
       "@id": "default:MY.individualCountFlock",
       "@type": "xsd:nonNegativeInteger"
@@ -146,6 +150,10 @@
     "traits": {
       "@id": "default:MY.traits",
       "@type": "xsd:string"
+    },
+    "treeNestCount": {
+      "@id": "default:MY.treeNestCount",
+      "@type": "xsd:nonNegativeInteger"
     },
     "waterbirdFemale": {
       "@id": "default:MY.waterbirdFemale",

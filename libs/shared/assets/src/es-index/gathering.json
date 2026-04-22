@@ -1376,6 +1376,9 @@
                 "type": "keyword",
                 "ignore_above": 200
               },
+              "groundNestCount": {
+                "type": "integer"
+              },
               "individualCountFlock": {
                 "type": "integer"
               },
@@ -1446,6 +1449,9 @@
                 "type": "keyword",
                 "ignore_above": 200,
                 "normalizer": "useLowercase"
+              },
+              "treeNestCount": {
+                "type": "integer"
               },
               "waterbirdFemale": {
                 "type": "keyword",

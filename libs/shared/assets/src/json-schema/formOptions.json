@@ -9282,6 +9282,14 @@
                           "title": "Micro habitat",
                           "sortOrder": -1
                         },
+                        "groundNestCount": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "range": "xsd:nonNegativeInteger",
+                          "subject": "MY.groundNestCount",
+                          "title": "Ground nest count",
+                          "sortOrder": -1
+                        },
                         "individualCountFlock": {
                           "type": "integer",
                           "minimum": 0,
@@ -9523,6 +9531,14 @@
                           "range": "xsd:string",
                           "subject": "MY.traits",
                           "title": "Observed traits",
+                          "sortOrder": -1
+                        },
+                        "treeNestCount": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "range": "xsd:nonNegativeInteger",
+                          "subject": "MY.treeNestCount",
+                          "title": "Puupesien määrä",
                           "sortOrder": -1
                         },
                         "waterbirdFemale": {
