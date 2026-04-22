@@ -174,7 +174,7 @@
       "subject": "MY.isPartOf",
       "description": "Which parent or larger collection this is part of.",
       "title": "Is part of",
-      "sortOrder": 34
+      "sortOrder": 32
     },
     "tailCentimeters": {
       "type": "array",

@@ -201,7 +201,6 @@ export type MYDataQualityEnum =
   | "MY.dataQuality5"
   | "MY.dataQualityNA";
 export type MYHierarchyTypeEnum =
-  | ""
   | "MY.hierarchyTypeDocumentParent"
   | "MY.hierarchyTypeCollectionParent";
 export type MYIntellectualRightsEnum =

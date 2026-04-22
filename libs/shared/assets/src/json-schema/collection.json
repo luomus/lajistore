@@ -118,7 +118,7 @@
       "subject": "MY.citation",
       "description": "Example how to cite this collection in a scientific article, if using organization, name and abbreviation is not enough.",
       "title": "Citation recommendation",
-      "sortOrder": 23
+      "sortOrder": 22
     },
     "collectionCode": {
       "type": "string",
@@ -146,7 +146,7 @@
       "subject": "MY.collectionLocation",
       "description": "Where is the collection physically located? E.g. building name and room number. [not shown in public]",
       "title": "Location of collection",
-      "sortOrder": 20
+      "sortOrder": 19
     },
     "collectionName": {
       "type": "object",
@@ -193,7 +193,7 @@
       "subject": "MY.collectionSize",
       "description": "How many specimens, records or such does the collection contain? Fill in approximate number, describe more in notes if necessary.",
       "title": "Size (approx.)",
-      "sortOrder": 18
+      "sortOrder": 17
     },
     "collectionType": {
       "type": "string",
@@ -251,7 +251,7 @@
       "subject": "MY.concealmentBasis",
       "description": "Legal basis for concealment or embargo",
       "title": "Basis for concealment or embargo",
-      "sortOrder": 15
+      "sortOrder": 14
     },
     "contactEmail": {
       "type": "string",
@@ -259,7 +259,7 @@
       "subject": "MY.contactEmail",
       "description": "Personal or general (e.g. group of people in the organisation) email address to reach the person(s) responsible.",
       "title": "Contact email",
-      "sortOrder": 31
+      "sortOrder": 30
     },
     "coverageBasis": {
       "type": "object",
@@ -279,7 +279,7 @@
       "subject": "MY.coverageBasis",
       "description": "Concise definition of the coverage, if not clear from name or description. For example, 'Winter birds of Finland'.",
       "title": "Coverage basis",
-      "sortOrder": 10
+      "sortOrder": 9
     },
     "dataDownloadURL": {
       "type": "array",
@@ -311,7 +311,7 @@
       "subject": "MY.dataLocation",
       "description": "Where is the digitized data stored and backed up? Be exact, so that others can find the data. [not shown in public]",
       "title": "Location of data and backups",
-      "sortOrder": 22
+      "sortOrder": 21
     },
     "dataNotes": {
       "type": "string",
@@ -345,7 +345,7 @@
       "subject": "MY.dataQuality",
       "description": "Quality estimation for the data in this collection",
       "title": "Data quality",
-      "sortOrder": 30
+      "sortOrder": 29
     },
     "dataQualityDescription": {
       "type": "object",
@@ -422,7 +422,7 @@
       "subject": "MY.digitizedSize",
       "description": "How many percent of the collection is in digital form, e.g. in a database or Excel file? Fill in approximate number, describe more in notes if necessary.",
       "title": "% digitized (approx.)",
-      "sortOrder": 19
+      "sortOrder": 18
     },
     "doi": {
       "type": "string",
@@ -442,7 +442,7 @@
       "subject": "MY.downloadRequestHandler",
       "description": "Admin field. The identifier of the person responsible for handling requests for restricted data for this set (typically same person who's responsible for the collection)",
       "title": "Download request handler",
-      "sortOrder": 17
+      "sortOrder": 25
     },
     "editNotes": {
       "type": "string",
@@ -450,7 +450,7 @@
       "subject": "MY.editNotes",
       "description": "Reason for this edit or notes about it.",
       "title": "Notes about this edit",
-      "sortOrder": 29
+      "sortOrder": 28
     },
     "gbifDoi": {
       "type": "string",
@@ -478,17 +478,15 @@
       "subject": "MY.geographicCoverage",
       "description": "Smallest common geographical area for the specimens/data in the collection (for example, country or continent name).",
       "title": "Geographic coverage",
-      "sortOrder": 11
+      "sortOrder": 10
     },
     "hierarchyType": {
       "type": "string",
       "enum": [
-        "",
         "MY.hierarchyTypeDocumentParent",
         "MY.hierarchyTypeCollectionParent"
       ],
       "enumNames": [
-        "",
         "Collection contains only documents",
         "Collection contains only other collections"
       ],
@@ -496,7 +494,7 @@
       "subject": "MY.hierarchyType",
       "description": "Type of the collection within the collection hierarchy tree.",
       "title": "Hierarchical type",
-      "sortOrder": 61
+      "sortOrder": 51
     },
     "institutionCode": {
       "type": "string",
@@ -532,7 +530,7 @@
       "subject": "MY.intellectualOwner",
       "description": "Name of the institution or organisation publishing the data.",
       "title": "Publisher name (en)",
-      "sortOrder": 14
+      "sortOrder": 15
     },
     "intellectualRights": {
       "type": "string",
@@ -568,7 +566,7 @@
       "subject": "MY.isPartOf",
       "description": "Which parent or larger collection this is part of.",
       "title": "Is part of",
-      "sortOrder": 34
+      "sortOrder": 32
     },
     "language": {
       "type": "string",
@@ -576,7 +574,7 @@
       "subject": "MY.language",
       "description": "Language the data is (mainly) written in, if applicable.",
       "title": "Language",
-      "sortOrder": 27
+      "sortOrder": 26
     },
     "longName": {
       "type": "object",
@@ -624,7 +622,7 @@
       "subject": "MY.metadataStatus",
       "description": "Indication of how comprehensive the information on this form is.",
       "title": "Status of this metadata",
-      "sortOrder": 28
+      "sortOrder": 27
     },
     "methods": {
       "type": "object",
@@ -644,7 +642,7 @@
       "subject": "MY.methods",
       "description": "Methods used when creating this collection, if they are standardized. Includes information on items such as census methods, tools, instrument calibration and software.",
       "title": "Methods",
-      "sortOrder": 12
+      "sortOrder": 11
     },
     "notes": {
       "type": "string",
@@ -652,7 +650,7 @@
       "subject": "MY.notes",
       "description": "Additional information to the data in each section.",
       "title": "Notes",
-      "sortOrder": 6
+      "sortOrder": 5
     },
     "onlineUrl": {
       "type": "object",
@@ -672,7 +670,7 @@
       "subject": "MY.onlineUrl",
       "description": "Web address (URL) with more info about the collection.",
       "title": "URL",
-      "sortOrder": 25
+      "sortOrder": 24
     },
     "personResponsible": {
       "type": "string",
@@ -680,7 +678,7 @@
       "subject": "MY.personResponsible",
       "description": "Person(s) responsible for the collection (Lastname, Firstname; Lastname, Firstname).",
       "title": "Person responsible",
-      "sortOrder": 21
+      "sortOrder": 20
     },
     "publicAccess": {
       "type": "boolean",
@@ -805,7 +803,7 @@
       "subject": "MY.temporalCoverage",
       "description": "When were the specimens/data collected?",
       "title": "Temporal coverage",
-      "sortOrder": 9
+      "sortOrder": 12
     },
     "typesSize": {
       "type": "string",
@@ -813,7 +811,7 @@
       "subject": "MY.typesSize",
       "description": "How many TYPE specimens does the collection contain?  Fill in approximate number, describe more in notes if necessary.",
       "title": "Amount of type specimens (approx.)",
-      "sortOrder": 24
+      "sortOrder": 23
     },
     "creator": {
       "type": "string",
@@ -871,7 +869,7 @@
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
       "title": "Publicity restrictions",
-      "sortOrder": 33
+      "sortOrder": 31
     }
   },
   "required": [
@@ -880,6 +878,7 @@
     "collectionType",
     "contactEmail",
     "description",
+    "hierarchyType",
     "intellectualRights",
     "personResponsible"
   ]

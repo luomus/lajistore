@@ -164,7 +164,7 @@ export interface Collection {
   /**
    * Type of the collection within the collection hierarchy tree.
    */
-  hierarchyType?: MYHierarchyTypeEnum;
+  hierarchyType: MYHierarchyTypeEnum;
   /**
    * Institution code for natural history specimen collection holding institution, such as H, MHZ or TUR
    */

@@ -42,7 +42,7 @@
       "subject": "MY.citation",
       "description": "Example how to cite this collection in a scientific article, if using organization, name and abbreviation is not enough.",
       "title": "Citation recommendation",
-      "sortOrder": 23
+      "sortOrder": 22
     },
     "contactEmail": {
       "type": "string",
@@ -50,7 +50,7 @@
       "subject": "MY.contactEmail",
       "description": "Personal or general (e.g. group of people in the organisation) email address to reach the person(s) responsible.",
       "title": "Contact email",
-      "sortOrder": 31
+      "sortOrder": 30
     },
     "coverageBasis": {
       "type": "object",
@@ -70,7 +70,7 @@
       "subject": "MY.coverageBasis",
       "description": "Concise definition of the coverage, if not clear from name or description. For example, 'Winter birds of Finland'.",
       "title": "Coverage basis",
-      "sortOrder": 10
+      "sortOrder": 9
     },
     "description": {
       "type": "object",
@@ -126,7 +126,7 @@
       "subject": "MY.geographicCoverage",
       "description": "Smallest common geographical area for the specimens/data in the collection (for example, country or continent name).",
       "title": "Geographic coverage",
-      "sortOrder": 11
+      "sortOrder": 10
     },
     "institutionCode": {
       "type": "string",
@@ -142,7 +142,7 @@
       "subject": "MY.intellectualOwner",
       "description": "Name of the institution or organisation publishing the data.",
       "title": "Publisher name (en)",
-      "sortOrder": 14
+      "sortOrder": 15
     },
     "methods": {
       "type": "object",
@@ -162,7 +162,7 @@
       "subject": "MY.methods",
       "description": "Methods used when creating this collection, if they are standardized. Includes information on items such as census methods, tools, instrument calibration and software.",
       "title": "Methods",
-      "sortOrder": 12
+      "sortOrder": 11
     },
     "personResponsible": {
       "type": "string",
@@ -170,7 +170,7 @@
       "subject": "MY.personResponsible",
       "description": "Person(s) responsible for the collection (Lastname, Firstname; Lastname, Firstname).",
       "title": "Person responsible",
-      "sortOrder": 21
+      "sortOrder": 20
     },
     "taxonomicCoverage": {
       "type": "object",
@@ -210,7 +210,7 @@
       "subject": "MY.temporalCoverage",
       "description": "When were the specimens/data collected?",
       "title": "Temporal coverage",
-      "sortOrder": 9
+      "sortOrder": 12
     },
     "name": {
       "type": "string",

@@ -221,7 +221,6 @@ export enum MYDataQualityEnum {
   "dataQualityNA" = "MY.dataQualityNA"
 }
 export enum MYHierarchyTypeEnum {
-  "empty" = "",
   "hierarchyTypeDocumentParent" = "MY.hierarchyTypeDocumentParent",
   "hierarchyTypeCollectionParent" = "MY.hierarchyTypeCollectionParent"
 }
