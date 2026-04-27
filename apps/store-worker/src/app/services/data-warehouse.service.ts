@@ -44,6 +44,10 @@ const countFields: Array<keyof Unit | keyof UnitFact> = [
   'broodCount',
   'femalesWithBroodsCount',
   'juvenileIndividualCount',
+  'adultIndividualCount',
+  'pullusIndividualCount',
+  'treeNestCount',
+  'groundNestCount'
 ];
 
 interface SourceData {
