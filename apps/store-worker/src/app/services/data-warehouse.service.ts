@@ -280,6 +280,10 @@ export class DataWarehouseService {
   }
 
   private static isEmptyUnit(unit: Unit, removeUnitIfNoCount: boolean): boolean {
+    if (unit.observationStatus) {
+      return true;
+    }
+
     if (removeUnitIfNoCount) {
       return countFields.every(field =>
         DataWarehouseService.isEmpty((unit as any)[field])
