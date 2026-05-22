@@ -175,10 +175,12 @@ export type MXSecureLevels =
   | "MX.secureLevelHighest"
   | "MX.secureLevelNoShow";
 export type MYCollectionQualityEnum =
+  | ""
   | "MY.collectionQualityEnum3"
   | "MY.collectionQualityEnum2"
   | "MY.collectionQualityEnum1";
 export type MYCollectionTypes =
+  | ""
   | "MY.collectionTypeSpecimens"
   | "MY.collectionTypeLiving"
   | "MY.collectionTypeMonitoring"

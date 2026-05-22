@@ -62,7 +62,7 @@ export interface Collection {
   /**
    * Quality classification for the collection.
    */
-  collectionQuality: MYCollectionQualityEnum;
+  collectionQuality?: MYCollectionQualityEnum;
   /**
    * How many specimens, records or such does the collection contain? Fill in approximate number, describe more in notes if necessary.
    */
@@ -70,7 +70,7 @@ export interface Collection {
   /**
    * Type of the collection (specimen, monitoring etc).
    */
-  collectionType: MYCollectionTypes;
+  collectionType?: MYCollectionTypes;
   /**
    * Legal basis for concealment or embargo
    */

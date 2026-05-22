@@ -192,11 +192,13 @@ export enum MXSecureLevels {
   "MX.secureLevelNoShow" = "MX.secureLevelNoShow"
 }
 export enum MYCollectionQualityEnum {
+  "empty" = "",
   "collectionQualityEnum3" = "MY.collectionQualityEnum3",
   "collectionQualityEnum2" = "MY.collectionQualityEnum2",
   "collectionQualityEnum1" = "MY.collectionQualityEnum1"
 }
 export enum MYCollectionTypes {
+  "empty" = "",
   "collectionTypeSpecimens" = "MY.collectionTypeSpecimens",
   "collectionTypeLiving" = "MY.collectionTypeLiving",
   "collectionTypeMonitoring" = "MY.collectionTypeMonitoring",

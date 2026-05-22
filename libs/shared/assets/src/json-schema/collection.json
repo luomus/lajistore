@@ -172,11 +172,13 @@
     "collectionQuality": {
       "type": "string",
       "enum": [
+        "",
         "MY.collectionQualityEnum3",
         "MY.collectionQualityEnum2",
         "MY.collectionQualityEnum1"
       ],
       "enumNames": [
+        "",
         "Professional / professionally curated",
         "Expert hobbyists / expert curated",
         "Citizen science / mostly uncurated"
@@ -198,6 +200,7 @@
     "collectionType": {
       "type": "string",
       "enum": [
+        "",
         "MY.collectionTypeSpecimens",
         "MY.collectionTypeLiving",
         "MY.collectionTypeMonitoring",
@@ -213,6 +216,7 @@
         "MY.collectionTypeTrait"
       ],
       "enumNames": [
+        "",
         "Specimens",
         "Specimens from a living collection",
         "Monitoring scheme observations",
@@ -874,8 +878,6 @@
   },
   "required": [
     "collectionName",
-    "collectionQuality",
-    "collectionType",
     "contactEmail",
     "description",
     "hierarchyType",
