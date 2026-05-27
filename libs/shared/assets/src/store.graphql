@@ -844,12 +844,12 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -2710,7 +2710,7 @@ type ViewerBasicAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -5268,12 +5268,12 @@ type ViewerBasicAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -5736,15 +5736,15 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -7215,6 +7215,10 @@ type Document2 {
 
   """Additional information to the data in each section."""
   notes: String
+
+  """
+  ID for the observation in another system, e.g. Vihko/Notebook. Format System:identifier.
+  """
   observationID: String
 
   """
@@ -7248,6 +7252,10 @@ type Document2 {
   PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
   """
   publicityRestrictions: PublicityRestrictions
+
+  """
+  Optical character recognition or AI generated data in its raw format, errors and all.
+  """
   rawOCRData: String
 
   """
@@ -7348,7 +7356,11 @@ type GatheringEvent {
   cloudCoverStart: CloudCoverStart
   completeList: CompleteList2
   context: String
+
+  """Collection date as exact date or start date for a time period."""
   dateBegin: String
+
+  """End date for a collection time period, if exact date is not know."""
   dateEnd: String
   gatheringFact: GatheringFact
   geometry: JSON
@@ -7926,7 +7938,11 @@ type Gathering {
 
   """County (piirikunta, kreivikunta etc.)"""
   county: String
+
+  """Collection date as exact date or start date for a time period."""
   dateBegin: String
+
+  """End date for a collection time period, if exact date is not know."""
   dateEnd: String
 
   """
@@ -9831,7 +9847,11 @@ enum WaterbirdPairCountOpinionReasoning {
 
 type UnitGathering {
   context: String
+
+  """Collection date as exact date or start date for a time period."""
   dateBegin: String
+
+  """End date for a collection time period, if exact date is not know."""
   dateEnd: String
   geometry: JSON
 
@@ -13455,7 +13475,11 @@ type TraitSubject2 {
   created: String
   createdBy: String!
   datasetId: String!
+
+  """Collection date as exact date or start date for a time period."""
   dateBegin: String
+
+  """End date for a collection time period, if exact date is not know."""
   dateEnd: String
   elevation: Int
   finbifOccurrenceId: String
@@ -16348,12 +16372,12 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -18214,7 +18238,7 @@ type ViewerAnyAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -20772,12 +20796,12 @@ type ViewerAnyAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -21240,15 +21264,15 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -22342,12 +22366,12 @@ type MutationViewerBasicAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -26315,7 +26339,7 @@ type MutationViewerBasicAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -27476,7 +27500,7 @@ type MutationViewerBasicAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -28467,12 +28491,12 @@ type MutationViewerBasicAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
@@ -29703,6 +29727,10 @@ input Document2Input {
 
   """Additional information to the data in each section."""
   notes: String
+
+  """
+  ID for the observation in another system, e.g. Vihko/Notebook. Format System:identifier.
+  """
   observationID: String
 
   """
@@ -29736,6 +29764,10 @@ input Document2Input {
   PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.
   """
   publicityRestrictions: PublicityRestrictions
+
+  """
+  Optical character recognition or AI generated data in its raw format, errors and all.
+  """
   rawOCRData: String
 
   """
@@ -29829,7 +29861,11 @@ input GatheringEventInput {
   cloudCoverStart: CloudCoverStart
   completeList: CompleteList2Input
   context: String
+
+  """Collection date as exact date or start date for a time period."""
   dateBegin: String
+
+  """End date for a collection time period, if exact date is not know."""
   dateEnd: String
   gatheringFact: GatheringFactInput
   geometry: JSON
@@ -30048,7 +30084,11 @@ input GatheringInput {
 
   """County (piirikunta, kreivikunta etc.)"""
   county: String
+
+  """Collection date as exact date or start date for a time period."""
   dateBegin: String
+
+  """End date for a collection time period, if exact date is not know."""
   dateEnd: String
 
   """
@@ -30735,7 +30775,11 @@ input UnitFactInput {
 
 input UnitGatheringInput {
   context: String
+
+  """Collection date as exact date or start date for a time period."""
   dateBegin: String
+
+  """End date for a collection time period, if exact date is not know."""
   dateEnd: String
   geometry: JSON
 
@@ -32761,7 +32805,11 @@ input TraitSubject2Input {
   created: String
   createdBy: String!
   datasetId: String!
+
+  """Collection date as exact date or start date for a time period."""
   dateBegin: String
+
+  """End date for a collection time period, if exact date is not know."""
   dateEnd: String
   elevation: Int
   finbifOccurrenceId: String
@@ -35423,12 +35471,12 @@ type MutationViewerAnyAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -39396,7 +39444,7 @@ type MutationViewerAnyAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -40557,7 +40605,7 @@ type MutationViewerAnyAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -41548,12 +41596,12 @@ type MutationViewerAnyAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2

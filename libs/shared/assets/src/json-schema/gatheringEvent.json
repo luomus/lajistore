@@ -245,6 +245,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateBegin",
+      "description": "Collection date as exact date or start date for a time period.",
       "title": "Start date",
       "sortOrder": 3
     },
@@ -252,6 +253,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.dateEnd",
+      "description": "End date for a collection time period, if exact date is not know.",
       "title": "End date",
       "sortOrder": 4
     },

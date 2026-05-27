@@ -155,6 +155,9 @@ export interface Document {
    * Additional information to the data in each section.
    */
   notes?: string;
+  /**
+   * ID for the observation in another system, e.g. Vihko/Notebook. Format System:identifier.
+   */
   observationID?: string;
   /**
    * Original catalogue number or other  original identifier of the specimen. E.g. H9000000
@@ -180,6 +183,9 @@ export interface Document {
    * Publication references or doi's that refer to this specimen
    */
   publication?: string[];
+  /**
+   * Optical character recognition or AI generated data in its raw format, errors and all.
+   */
   rawOCRData?: string;
   /**
    * Relationship to another taxon OR specimen. Choose relationship type as prefix and give taxon name or specimen identifier thereafter, e.g. "parasite: Parasiticus specius" OR "host:http://tun.fi/JAA.123"

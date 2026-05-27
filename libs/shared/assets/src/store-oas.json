@@ -41956,10 +41956,10 @@
             }
           }
         ],
-        "description": "Return list of Taxon objects.",
+        "description": "Return list of taxon objects.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42027,10 +42027,10 @@
             }
           }
         },
-        "description": "Store Taxon object(s)",
+        "description": "Store taxon object(s)",
         "responses": {
           "201": {
-            "description": "Stored Taxon object(s)",
+            "description": "Stored taxon object(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -42092,7 +42092,7 @@
         "description": "Patch taxon (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching taxon.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "example": {
@@ -42185,10 +42185,10 @@
             }
           }
         },
-        "description": "Return list of Taxon objects.",
+        "description": "Return list of taxon objects.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42256,17 +42256,17 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42291,7 +42291,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -42307,10 +42307,10 @@
             }
           }
         },
-        "description": "Store Taxon",
+        "description": "Store taxon",
         "responses": {
           "200": {
-            "description": "Stored Taxon",
+            "description": "Stored taxon",
             "content": {
               "application/json": {
                 "schema": {
@@ -42335,14 +42335,14 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Delete Taxon",
+        "description": "Delete taxon",
         "responses": {
           "200": {
             "description": "Deletion succeeded",
@@ -42374,7 +42374,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -42393,10 +42393,10 @@
         "tags": [
           "taxon"
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42442,7 +42442,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -42451,17 +42451,17 @@
           {
             "name": "number",
             "in": "path",
-            "description": "Version number for the Taxon",
+            "description": "Version number for the taxon",
             "required": true,
             "schema": {
               "type": "number"
             }
           }
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -60044,6 +60044,7 @@
           },
           "observationID": {
             "type": "string",
+            "description": "ID for the observation in another system, e.g. Vihko/Notebook. Format System:identifier.",
             "title": "Observation ID"
           },
           "originalSpecimenID": {
@@ -60128,6 +60129,7 @@
           },
           "rawOCRData": {
             "type": "string",
+            "description": "Optical character recognition or AI generated data in its raw format, errors and all.",
             "title": "Raw OCR data"
           },
           "relationship": {
@@ -61990,10 +61992,12 @@
           },
           "dateBegin": {
             "type": "string",
+            "description": "Collection date as exact date or start date for a time period.",
             "title": "Start date"
           },
           "dateEnd": {
             "type": "string",
+            "description": "End date for a collection time period, if exact date is not know.",
             "title": "End date"
           },
           "dateVerbatim": {
@@ -62806,10 +62810,12 @@
           },
           "dateBegin": {
             "type": "string",
+            "description": "Collection date as exact date or start date for a time period.",
             "title": "Start date"
           },
           "dateEnd": {
             "type": "string",
+            "description": "End date for a collection time period, if exact date is not know.",
             "title": "End date"
           },
           "gatheringFact": {
@@ -68176,15 +68182,15 @@
         "properties": {
           "@context": {
             "type": "string",
-            "title": "Context for the Taxon"
+            "title": "Context for the taxon"
           },
           "id": {
             "type": "string",
-            "title": "Id for the Taxon"
+            "title": "Id for the taxon"
           },
           "@type": {
             "type": "string",
-            "title": "Type for the Taxon"
+            "title": "Type for the taxon"
           },
           "invasiveSpeciesMainGroup": {
             "type": "array",
@@ -70357,10 +70363,12 @@
           },
           "dateBegin": {
             "type": "string",
+            "description": "Collection date as exact date or start date for a time period.",
             "title": "Start date"
           },
           "dateEnd": {
             "type": "string",
+            "description": "End date for a collection time period, if exact date is not know.",
             "title": "End date"
           },
           "habitat": {
@@ -72320,7 +72328,7 @@
           "nestCount": {
             "type": "integer",
             "minimum": 0,
-            "title": "Nest/cavity count"
+            "title": "Nest count"
           },
           "nestDistanceFromLineTransectStartMeters": {
             "type": "integer",
@@ -73325,10 +73333,12 @@
           },
           "dateBegin": {
             "type": "string",
+            "description": "Collection date as exact date or start date for a time period.",
             "title": "Start date"
           },
           "dateEnd": {
             "type": "string",
+            "description": "End date for a collection time period, if exact date is not know.",
             "title": "End date"
           },
           "geometry": {
@@ -74607,7 +74617,7 @@
     },
     {
       "name": "taxon",
-      "description": "Taxon"
+      "description": "taxon"
     },
     {
       "name": "taxonCensus",

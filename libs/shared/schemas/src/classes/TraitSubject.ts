@@ -19,7 +19,13 @@ export class TraitSubject {
    * Country name in English, or 2-letter country code, or name from label
    */
   country?: string;
+  /**
+   * Collection date as exact date or start date for a time period.
+   */
   dateBegin?: string;
+  /**
+   * End date for a collection time period, if exact date is not know.
+   */
   dateEnd?: string;
   habitat?: MYHabitatEnum[];
   /**
