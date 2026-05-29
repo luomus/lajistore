@@ -28,6 +28,11 @@
       "@type": {
         "type": "keyword"
       },
+      "autocompleteSelectedTaxonID": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "lineTransectNestMeters": {
         "type": "integer"
       },

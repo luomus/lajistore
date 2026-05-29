@@ -256,7 +256,7 @@
       "subject": "MY.taxon",
       "description": "Taxon name",
       "title": "Species",
-      "sortOrder": 2
+      "sortOrder": 1
     },
     "taxonID": {
       "type": "string",

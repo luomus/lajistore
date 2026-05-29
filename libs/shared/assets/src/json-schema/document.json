@@ -785,6 +785,13 @@
                 "title": "Instances of this class are information about a nest on a line-transect route",
                 "description": "",
                 "properties": {
+                  "autocompleteSelectedTaxonID": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MY.autocompleteSelectedTaxonID",
+                    "title": "Taxon ID selected from autocomplete",
+                    "sortOrder": -1
+                  },
                   "lineTransectNestMeters": {
                     "type": "integer",
                     "minimum": 0,
@@ -868,7 +875,7 @@
                     "subject": "MY.taxon",
                     "description": "Taxon name",
                     "title": "Species",
-                    "sortOrder": 2
+                    "sortOrder": 1
                   }
                 }
               },
@@ -3308,6 +3315,13 @@
                   "title": "Instances of this class are information about a nest on a line-transect route",
                   "description": "",
                   "properties": {
+                    "autocompleteSelectedTaxonID": {
+                      "type": "string",
+                      "range": "xsd:string",
+                      "subject": "MY.autocompleteSelectedTaxonID",
+                      "title": "Taxon ID selected from autocomplete",
+                      "sortOrder": -1
+                    },
                     "lineTransectNestMeters": {
                       "type": "integer",
                       "minimum": 0,
@@ -3391,7 +3405,7 @@
                       "subject": "MY.taxon",
                       "description": "Taxon name",
                       "title": "Species",
-                      "sortOrder": 2
+                      "sortOrder": 1
                     }
                   }
                 },
@@ -9418,7 +9432,7 @@
                         "subject": "MY.taxon",
                         "description": "Taxon name",
                         "title": "Species",
-                        "sortOrder": 2
+                        "sortOrder": 1
                       },
                       "taxonID": {
                         "type": "string",

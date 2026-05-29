@@ -31,6 +31,10 @@
       "@id": "default:@type",
       "@type": "xsd:string"
     },
+    "autocompleteSelectedTaxonID": {
+      "@id": "default:MY.autocompleteSelectedTaxonID",
+      "@type": "xsd:string"
+    },
     "lineTransectNestMeters": {
       "@id": "default:MY.lineTransectNestMeters",
       "@type": "xsd:nonNegativeInteger"

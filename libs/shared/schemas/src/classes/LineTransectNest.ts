@@ -12,6 +12,7 @@ export class LineTransectNest {
   "@context"?: string;
   id?: string;
   "@type"?: string;
+  autocompleteSelectedTaxonID?: string;
   lineTransectNestMeters?: number;
   lineTransectRouteFieldType?: MYLineTransectRouteFieldTypeEnum;
   nestCount?: number;
