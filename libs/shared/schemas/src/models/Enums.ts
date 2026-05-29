@@ -1266,6 +1266,23 @@ export type MXTypeOfOccurrenceEnum =
   | "MX.typeOfOccurrenceBirdLifeCategoryD"
   | "MX.typeOfOccurrenceBirdLifeCategoryE"
   | "MX.typeOfOccurrenceOccursBasedOnOccurrences";
+export type MYLineTransectRouteFieldTypeEnum =
+  | ""
+  | "MY.lineTransectRouteFieldTypeInner"
+  | "MY.lineTransectRouteFieldTypeOuter";
+export type MYNestSizeEnum =
+  | ""
+  | "MY.nestSizeEnum1"
+  | "MY.nestSizeEnum2"
+  | "MY.nestSizeEnum3";
+export type MYNestTypeEnum =
+  | ""
+  | "MY.nestTypeTreeCavity"
+  | "MY.nestTypeTwig"
+  | "MY.nestTypeNestBox"
+  | "MY.nestTypeBuilding"
+  | "MY.nestTypeGroundCavity"
+  | "MY.nestTypeOther";
 export type MNPAccessibilityEnum =
   | ""
   | "MNP.accessibilityEasy"
@@ -1977,19 +1994,6 @@ export type MYNativeStatusEnum =
   | ""
   | "MY.native"
   | "MY.nonNative";
-export type MYNestSizeEnum =
-  | ""
-  | "MY.nestSizeEnum1"
-  | "MY.nestSizeEnum2"
-  | "MY.nestSizeEnum3";
-export type MYNestTypeEnum =
-  | ""
-  | "MY.nestTypeTreeCavity"
-  | "MY.nestTypeTwig"
-  | "MY.nestTypeNestBox"
-  | "MY.nestTypeBuilding"
-  | "MY.nestTypeGroundCavity"
-  | "MY.nestTypeOther";
 export type MYObservationStatusEnum =
   | ""
   | "MY.observationStatusIgnored"
@@ -2217,10 +2221,6 @@ export type MYLineTransectObsTypeEnum =
   | "MY.lineTransectObsTypeSeenBrood"
   | "MY.lineTransectObsTypeSeenNest"
   | "MY.lineTransectObsTypeUnknown";
-export type MYLineTransectRouteFieldTypeEnum =
-  | ""
-  | "MY.lineTransectRouteFieldTypeInner"
-  | "MY.lineTransectRouteFieldTypeOuter";
 export type MYLolifeDroppingsCountEnum =
   | ""
   | "MY.lolifeDroppingsCount0"

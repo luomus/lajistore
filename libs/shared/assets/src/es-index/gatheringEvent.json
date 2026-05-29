@@ -113,6 +113,11 @@
           "invasiveControlWorkHours": {
             "type": "integer"
           },
+          "lineTransectNests": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
           "lineTransectSegmentCounted": {
             "type": "boolean"
           },

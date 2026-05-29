@@ -59,6 +59,10 @@
       "@id": "default:MY.invasiveControlWorkHours",
       "@type": "xsd:nonNegativeInteger"
     },
+    "lineTransectNests": {
+      "@id": "default:MY.lineTransectNests",
+      "@type": "@id"
+    },
     "lineTransectSegmentCounted": {
       "@id": "default:MY.lineTransectSegmentCounted",
       "@type": "xsd:boolean"

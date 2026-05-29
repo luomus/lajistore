@@ -1356,6 +1356,26 @@ export enum MXTypeOfOccurrenceEnum {
   "MX.typeOfOccurrenceBirdLifeCategoryE" = "MX.typeOfOccurrenceBirdLifeCategoryE",
   "MX.typeOfOccurrenceOccursBasedOnOccurrences" = "MX.typeOfOccurrenceOccursBasedOnOccurrences"
 }
+export enum MYLineTransectRouteFieldTypeEnum {
+  "empty" = "",
+  "lineTransectRouteFieldTypeInner" = "MY.lineTransectRouteFieldTypeInner",
+  "lineTransectRouteFieldTypeOuter" = "MY.lineTransectRouteFieldTypeOuter"
+}
+export enum MYNestSizeEnum {
+  "empty" = "",
+  "nestSizeEnum1" = "MY.nestSizeEnum1",
+  "nestSizeEnum2" = "MY.nestSizeEnum2",
+  "nestSizeEnum3" = "MY.nestSizeEnum3"
+}
+export enum MYNestTypeEnum {
+  "empty" = "",
+  "nestTypeTreeCavity" = "MY.nestTypeTreeCavity",
+  "nestTypeTwig" = "MY.nestTypeTwig",
+  "nestTypeNestBox" = "MY.nestTypeNestBox",
+  "nestTypeBuilding" = "MY.nestTypeBuilding",
+  "nestTypeGroundCavity" = "MY.nestTypeGroundCavity",
+  "nestTypeOther" = "MY.nestTypeOther"
+}
 export enum MNPAccessibilityEnum {
   "empty" = "",
   "accessibilityEasy" = "MNP.accessibilityEasy",
@@ -2130,21 +2150,6 @@ export enum MYNativeStatusEnum {
   "native" = "MY.native",
   "nonNative" = "MY.nonNative"
 }
-export enum MYNestSizeEnum {
-  "empty" = "",
-  "nestSizeEnum1" = "MY.nestSizeEnum1",
-  "nestSizeEnum2" = "MY.nestSizeEnum2",
-  "nestSizeEnum3" = "MY.nestSizeEnum3"
-}
-export enum MYNestTypeEnum {
-  "empty" = "",
-  "nestTypeTreeCavity" = "MY.nestTypeTreeCavity",
-  "nestTypeTwig" = "MY.nestTypeTwig",
-  "nestTypeNestBox" = "MY.nestTypeNestBox",
-  "nestTypeBuilding" = "MY.nestTypeBuilding",
-  "nestTypeGroundCavity" = "MY.nestTypeGroundCavity",
-  "nestTypeOther" = "MY.nestTypeOther"
-}
 export enum MYObservationStatusEnum {
   "empty" = "",
   "observationStatusIgnored" = "MY.observationStatusIgnored",
@@ -2387,11 +2392,6 @@ export enum MYLineTransectObsTypeEnum {
   "lineTransectObsTypeSeenBrood" = "MY.lineTransectObsTypeSeenBrood",
   "lineTransectObsTypeSeenNest" = "MY.lineTransectObsTypeSeenNest",
   "lineTransectObsTypeUnknown" = "MY.lineTransectObsTypeUnknown"
-}
-export enum MYLineTransectRouteFieldTypeEnum {
-  "empty" = "",
-  "lineTransectRouteFieldTypeInner" = "MY.lineTransectRouteFieldTypeInner",
-  "lineTransectRouteFieldTypeOuter" = "MY.lineTransectRouteFieldTypeOuter"
 }
 export enum MYLolifeDroppingsCountEnum {
   "empty" = "",

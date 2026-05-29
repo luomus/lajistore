@@ -101,6 +101,8 @@ import { IucnRedListEvaluationYear } from './IucnRedListEvaluationYear'
 export type { IucnRedListEvaluationYear }
 import { IucnRedListTaxonGroup } from './IucnRedListTaxonGroup'
 export type { IucnRedListTaxonGroup }
+import { LineTransectNest } from './LineTransectNest'
+export type { LineTransectNest }
 import { Measurement } from './Measurement'
 export type { Measurement }
 import { Model } from './Model'
@@ -251,6 +253,7 @@ export type StoreObject = BibliographicResource
    | IucnRedListEvaluation
    | IucnRedListEvaluationYear
    | IucnRedListTaxonGroup
+   | LineTransectNest
    | Measurement
    | Model
    | Multimedia
@@ -568,6 +571,11 @@ export function isIucnRedListEvaluationYear(data: unknown): data is IucnRedListE
 export function isIucnRedListTaxonGroup(data: unknown): data is IucnRedListTaxonGroup {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MVL.iucnRedListTaxonGroup'
+  );
+}
+export function isLineTransectNest(data: unknown): data is LineTransectNest {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MY.lineTransectNestClass'
   );
 }
 export function isMeasurement(data: unknown): data is Measurement {

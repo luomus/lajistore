@@ -33,6 +33,7 @@ export interface GatheringFact {
   documentation?: string;
   invasiveControlOtherExpensesInEuros?: number;
   invasiveControlWorkHours?: number;
+  lineTransectNests?: string[];
   lineTransectSegmentCounted?: boolean;
   lineTransectSegmentMetersEnd?: number;
   lineTransectSegmentMetersStart?: number;

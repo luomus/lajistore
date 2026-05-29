@@ -88,6 +88,18 @@
       "title": "Work hours spent during the control",
       "sortOrder": -1
     },
+    "lineTransectNests": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "MY.lineTransectNestClass",
+      "subject": "MY.lineTransectNests",
+      "title": "Nests",
+      "sortOrder": -1
+    },
     "lineTransectSegmentCounted": {
       "type": "boolean",
       "range": "xsd:boolean",

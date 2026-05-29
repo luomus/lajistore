@@ -2384,6 +2384,18 @@
                       "title": "Work hours spent during the control",
                       "sortOrder": -1
                     },
+                    "lineTransectNests": {
+                      "type": "array",
+                      "uniqueItems": false,
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 0,
+                      "range": "MY.lineTransectNestClass",
+                      "subject": "MY.lineTransectNests",
+                      "title": "Nests",
+                      "sortOrder": -1
+                    },
                     "lineTransectSegmentCounted": {
                       "type": "boolean",
                       "range": "xsd:boolean",
@@ -4802,6 +4814,18 @@
                         "range": "xsd:nonNegativeInteger",
                         "subject": "MY.invasiveControlWorkHours",
                         "title": "Work hours spent during the control",
+                        "sortOrder": -1
+                      },
+                      "lineTransectNests": {
+                        "type": "array",
+                        "uniqueItems": false,
+                        "items": {
+                          "type": "string"
+                        },
+                        "minItems": 0,
+                        "range": "MY.lineTransectNestClass",
+                        "subject": "MY.lineTransectNests",
+                        "title": "Nests",
                         "sortOrder": -1
                       },
                       "lineTransectSegmentCounted": {
@@ -8818,38 +8842,11 @@
                           "title": "Nest count",
                           "sortOrder": -1
                         },
-                        "nestDistanceFromLineTransectStartMeters": {
-                          "type": "integer",
-                          "minimum": 0,
-                          "range": "xsd:nonNegativeInteger",
-                          "subject": "MY.nestDistanceFromLineTransectStartMeters",
-                          "title": "metrimäärä (linjan alusta), jolla pönttö/kolo on",
-                          "sortOrder": -1
-                        },
                         "nestNotes": {
                           "type": "string",
                           "range": "xsd:string",
                           "subject": "MY.nestNotes",
                           "title": "Nest notes",
-                          "sortOrder": -1
-                        },
-                        "nestSize": {
-                          "type": "string",
-                          "enum": [
-                            "",
-                            "MY.nestSizeEnum1",
-                            "MY.nestSizeEnum2",
-                            "MY.nestSizeEnum3"
-                          ],
-                          "enumNames": [
-                            "",
-                            "PPL = pieni pikkulintu, esim. tiaispönttö, hömötiaisen kaivertama kolo",
-                            "IPL = iso pikkulintu eli noin kottaraispönttö/käpytikan kolo",
-                            "pöllö = palokärjen kolon kokoluokka ja sitä suuremmat"
-                          ],
-                          "range": "MY.nestSizeEnum",
-                          "subject": "MY.nestSize",
-                          "title": "Pöntön kokoluokka",
                           "sortOrder": -1
                         },
                         "nestTreeDiameterInCentimeters": {

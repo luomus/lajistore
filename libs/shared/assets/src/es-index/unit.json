@@ -381,17 +381,10 @@
       "nestCount": {
         "type": "integer"
       },
-      "nestDistanceFromLineTransectStartMeters": {
-        "type": "integer"
-      },
       "nestNotes": {
         "type": "keyword",
         "ignore_above": 200,
         "normalizer": "useLowercase"
-      },
-      "nestSize": {
-        "type": "keyword",
-        "ignore_above": 200
       },
       "nestTreeDiameterInCentimeters": {
         "type": "integer"
