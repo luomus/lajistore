@@ -1090,9 +1090,32 @@
                         "type": "integer"
                       },
                       "lineTransectNests": {
-                        "type": "keyword",
-                        "ignore_above": 200,
-                        "normalizer": "useLowercase"
+                        "type": "object",
+                        "properties": {
+                          "lineTransectNestMeters": {
+                            "type": "integer"
+                          },
+                          "lineTransectRouteFieldType": {
+                            "type": "keyword",
+                            "ignore_above": 200
+                          },
+                          "nestCount": {
+                            "type": "integer"
+                          },
+                          "nestSize": {
+                            "type": "keyword",
+                            "ignore_above": 200
+                          },
+                          "nestType": {
+                            "type": "keyword",
+                            "ignore_above": 200
+                          },
+                          "taxon": {
+                            "type": "keyword",
+                            "ignore_above": 200,
+                            "normalizer": "useLowercase"
+                          }
+                        }
                       },
                       "lineTransectSegmentCounted": {
                         "type": "boolean"
@@ -1881,9 +1904,32 @@
                         "type": "integer"
                       },
                       "lineTransectNests": {
-                        "type": "keyword",
-                        "ignore_above": 200,
-                        "normalizer": "useLowercase"
+                        "type": "object",
+                        "properties": {
+                          "lineTransectNestMeters": {
+                            "type": "integer"
+                          },
+                          "lineTransectRouteFieldType": {
+                            "type": "keyword",
+                            "ignore_above": 200
+                          },
+                          "nestCount": {
+                            "type": "integer"
+                          },
+                          "nestSize": {
+                            "type": "keyword",
+                            "ignore_above": 200
+                          },
+                          "nestType": {
+                            "type": "keyword",
+                            "ignore_above": 200
+                          },
+                          "taxon": {
+                            "type": "keyword",
+                            "ignore_above": 200,
+                            "normalizer": "useLowercase"
+                          }
+                        }
                       },
                       "lineTransectSegmentCounted": {
                         "type": "boolean"

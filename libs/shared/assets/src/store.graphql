@@ -631,7 +631,7 @@ type ViewerBasicAuth {
     Id for the Instances of this class are information about a nest on a line-transect route
     """
     id: String!
-  ): LineTransectNest2
+  ): LineTransectNest
 
   """
   Return a measurement.
@@ -2257,7 +2257,7 @@ type ViewerBasicAuth {
 
     """Sort by"""
     sort: String
-  ): LineTransectNest
+  ): LineTransectNest2
 
   """
   Return list of measurement objects.
@@ -4003,7 +4003,7 @@ type ViewerBasicAuth {
     Version number for the Instances of this class are information about a nest on a line-transect route
     """
     number: Float!
-  ): LineTransectNest2
+  ): LineTransectNest
 
   """
   Return a measurement.
@@ -7563,7 +7563,7 @@ type GatheringFact {
   lOXIAonGround: Int
   lOXIAonPine: Int
   lOXIAonSpruce: Int
-  lineTransectNests: [String]
+  lineTransectNests: [LineTransectNest]
   lineTransectSegmentCounted: Boolean
   lineTransectSegmentMetersEnd: Int
   lineTransectSegmentMetersStart: Int
@@ -7667,6 +7667,43 @@ enum IceCover {
   WBC_ICECOVERENUM2
   WBC_ICECOVERENUM3
   WBC_ICECOVERENUM4
+}
+
+type LineTransectNest {
+  context: String
+  id: String
+  lineTransectNestMeters: Int
+  lineTransectRouteFieldType: LineTransectRouteFieldType
+  nestCount: Int
+  nestSize: NestSize
+  nestType: NestType
+
+  """Taxon name"""
+  taxon: String
+  type: String
+}
+
+enum LineTransectRouteFieldType {
+  _
+  MY_LINETRANSECTROUTEFIELDTYPEINNER
+  MY_LINETRANSECTROUTEFIELDTYPEOUTER
+}
+
+enum NestSize {
+  _
+  MY_NESTSIZEENUM1
+  MY_NESTSIZEENUM2
+  MY_NESTSIZEENUM3
+}
+
+enum NestType {
+  _
+  MY_NESTTYPETREECAVITY
+  MY_NESTTYPETWIG
+  MY_NESTTYPENESTBOX
+  MY_NESTTYPEBUILDING
+  MY_NESTTYPEGROUNDCAVITY
+  MY_NESTTYPEOTHER
 }
 
 enum LolifeSiteClassification {
@@ -9045,16 +9082,6 @@ enum NativeStatus {
   MY_NONNATIVE
 }
 
-enum NestType {
-  _
-  MY_NESTTYPETREECAVITY
-  MY_NESTTYPETWIG
-  MY_NESTTYPENESTBOX
-  MY_NESTTYPEBUILDING
-  MY_NESTTYPEGROUNDCAVITY
-  MY_NESTTYPEOTHER
-}
-
 enum ObservationStatus {
   _
   MY_OBSERVATIONSTATUSIGNORED
@@ -9835,12 +9862,6 @@ enum LineTransectObsType {
   MY_LINETRANSECTOBSTYPESEENBROOD
   MY_LINETRANSECTOBSTYPESEENNEST
   MY_LINETRANSECTOBSTYPEUNKNOWN
-}
-
-enum LineTransectRouteFieldType {
-  _
-  MY_LINETRANSECTROUTEFIELDTYPEINNER
-  MY_LINETRANSECTROUTEFIELDTYPEOUTER
 }
 
 enum LolifeDroppingsCount {
@@ -11504,27 +11525,6 @@ type IucnRedListTaxonGroup2 {
   includesTaxon: [String]
   name: MultiLang!
   type: String
-}
-
-type LineTransectNest2 {
-  context: String
-  id: String
-  lineTransectNestMeters: Int
-  lineTransectRouteFieldType: LineTransectRouteFieldType
-  nestCount: Int
-  nestSize: NestSize
-  nestType: NestType
-
-  """Taxon name"""
-  taxon: String
-  type: String
-}
-
-enum NestSize {
-  _
-  MY_NESTSIZEENUM1
-  MY_NESTSIZEENUM2
-  MY_NESTSIZEENUM3
 }
 
 type Model2 {
@@ -14577,11 +14577,11 @@ type IucnRedListTaxonGroup {
   view: PagedView!
 }
 
-type LineTransectNest {
+type LineTransectNest2 {
   context: String!
   currentPage: Int
   lastPage: Int!
-  member: [LineTransectNest2]!
+  member: [LineTransectNest]!
   pageSize: Int!
   totalItems: Int!
   type: String!
@@ -16257,7 +16257,7 @@ type ViewerAnyAuth {
     Id for the Instances of this class are information about a nest on a line-transect route
     """
     id: String!
-  ): LineTransectNest2
+  ): LineTransectNest
 
   """
   Return a measurement.
@@ -17883,7 +17883,7 @@ type ViewerAnyAuth {
 
     """Sort by"""
     sort: String
-  ): LineTransectNest
+  ): LineTransectNest2
 
   """
   Return list of measurement objects.
@@ -19629,7 +19629,7 @@ type ViewerAnyAuth {
     Version number for the Instances of this class are information about a nest on a line-transect route
     """
     number: Float!
-  ): LineTransectNest2
+  ): LineTransectNest
 
   """
   Return a measurement.
@@ -27572,7 +27572,7 @@ type MutationViewerBasicAuth {
   
   Equivalent to POST /lineTransectNest
   """
-  storelineTransectNest(requestBody: LineTransectNest2Input): LineTransectNest2
+  storelineTransectNest(requestBody: LineTransectNestInput): LineTransectNest
 
   """
   Store measurement object(s)
@@ -28485,8 +28485,8 @@ type MutationViewerBasicAuth {
     Id for the Instances of this class are information about a nest on a line-transect route
     """
     id: String!
-    requestBody: LineTransectNest2Input
-  ): LineTransectNest2
+    requestBody: LineTransectNestInput
+  ): LineTransectNest
 
   """
   Store measurement
@@ -29070,7 +29070,7 @@ type Bulk {
   iucnRedListEvaluation: [IucnRedListEvaluation2]
   iucnRedListEvaluationYear: [IucnRedListEvaluationYear2]
   iucnRedListTaxonGroup: [IucnRedListTaxonGroup2]
-  lineTransectNest: [LineTransectNest2]
+  lineTransectNest: [LineTransectNest]
   measurement: [Measurement]
   model: [Model2]
   multimedia: [Multimedia2]
@@ -29173,7 +29173,7 @@ input BulkInput {
   iucnRedListEvaluation: [IucnRedListEvaluation2Input]
   iucnRedListEvaluationYear: [IucnRedListEvaluationYear2Input]
   iucnRedListTaxonGroup: [IucnRedListTaxonGroup2Input]
-  lineTransectNest: [LineTransectNest2Input]
+  lineTransectNest: [LineTransectNestInput]
   measurement: [MeasurementInput]
   model: [Model2Input]
   multimedia: [Multimedia2Input]
@@ -30193,7 +30193,7 @@ input GatheringFactInput {
   lOXIAonGround: Int
   lOXIAonPine: Int
   lOXIAonSpruce: Int
-  lineTransectNests: [String]
+  lineTransectNests: [LineTransectNestInput]
   lineTransectSegmentCounted: Boolean
   lineTransectSegmentMetersEnd: Int
   lineTransectSegmentMetersStart: Int
@@ -30248,6 +30248,20 @@ input GatheringFactInput {
   wayOfTravelNotes: String
   wind: Wind
   ykjSquareNumber: String
+}
+
+input LineTransectNestInput {
+  context: String
+  id: String
+  lineTransectNestMeters: Int
+  lineTransectRouteFieldType: LineTransectRouteFieldType
+  nestCount: Int
+  nestSize: NestSize
+  nestType: NestType
+
+  """Taxon name"""
+  taxon: String
+  type: String
 }
 
 input TaxonCensus2Input {
@@ -32034,20 +32048,6 @@ input IucnRedListTaxonGroup2Input {
   includesInformalTaxonGroup: [String]
   includesTaxon: [String]
   name: MultiLangInput!
-  type: String
-}
-
-input LineTransectNest2Input {
-  context: String
-  id: String
-  lineTransectNestMeters: Int
-  lineTransectRouteFieldType: LineTransectRouteFieldType
-  nestCount: Int
-  nestSize: NestSize
-  nestType: NestType
-
-  """Taxon name"""
-  taxon: String
   type: String
 }
 
@@ -34415,7 +34415,7 @@ type LineTransectNestSearch2 {
   context: String!
   currentPage: Int
   lastPage: Int!
-  member: [LineTransectNest2]!
+  member: [LineTransectNest]!
   pageSize: Int!
   totalItems: Int!
   type: String!
@@ -40784,7 +40784,7 @@ type MutationViewerAnyAuth {
   
   Equivalent to POST /lineTransectNest
   """
-  storelineTransectNest(requestBody: LineTransectNest2Input): LineTransectNest2
+  storelineTransectNest(requestBody: LineTransectNestInput): LineTransectNest
 
   """
   Store measurement object(s)
@@ -41697,8 +41697,8 @@ type MutationViewerAnyAuth {
     Id for the Instances of this class are information about a nest on a line-transect route
     """
     id: String!
-    requestBody: LineTransectNest2Input
-  ): LineTransectNest2
+    requestBody: LineTransectNestInput
+  ): LineTransectNest
 
   """
   Store measurement

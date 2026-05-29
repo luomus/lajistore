@@ -92,7 +92,98 @@
       "type": "array",
       "uniqueItems": false,
       "items": {
-        "type": "string"
+        "type": "object",
+        "subject": "MY.lineTransectNestClass",
+        "additionalProperties": false,
+        "title": "Instances of this class are information about a nest on a line-transect route",
+        "description": "",
+        "properties": {
+          "lineTransectNestMeters": {
+            "type": "integer",
+            "minimum": 0,
+            "range": "xsd:nonNegativeInteger",
+            "subject": "MY.lineTransectNestMeters",
+            "title": "Nest position on the line: meters from the start of the line",
+            "sortOrder": -1
+          },
+          "lineTransectRouteFieldType": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.lineTransectRouteFieldTypeInner",
+              "MY.lineTransectRouteFieldTypeOuter"
+            ],
+            "enumNames": [
+              "",
+              "P - Inner route field",
+              "A - Outer route field"
+            ],
+            "range": "MY.lineTransectRouteFieldTypeEnum",
+            "subject": "MY.lineTransectRouteFieldType",
+            "title": "Field Area",
+            "sortOrder": -1
+          },
+          "nestCount": {
+            "type": "integer",
+            "minimum": 0,
+            "range": "xsd:nonNegativeInteger",
+            "subject": "MY.nestCount",
+            "title": "Nest count",
+            "sortOrder": -1
+          },
+          "nestSize": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.nestSizeEnum1",
+              "MY.nestSizeEnum2",
+              "MY.nestSizeEnum3"
+            ],
+            "enumNames": [
+              "",
+              "PPL = pieni pikkulintu, esim. tiaispönttö, hömötiaisen kaivertama kolo",
+              "IPL = iso pikkulintu eli noin kottaraispönttö/käpytikan kolo",
+              "pöllö = palokärjen kolon kokoluokka ja sitä suuremmat"
+            ],
+            "range": "MY.nestSizeEnum",
+            "subject": "MY.nestSize",
+            "title": "Nest Size",
+            "sortOrder": -1
+          },
+          "nestType": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.nestTypeTreeCavity",
+              "MY.nestTypeTwig",
+              "MY.nestTypeNestBox",
+              "MY.nestTypeBuilding",
+              "MY.nestTypeGroundCavity",
+              "MY.nestTypeOther"
+            ],
+            "enumNames": [
+              "",
+              "Cavity in tree",
+              "Twig nest in tree",
+              "Nestbox in tree",
+              "Building",
+              "Ground cavity",
+              "Other, which?"
+            ],
+            "range": "MY.nestTypeEnum",
+            "subject": "MY.nestType",
+            "title": "Nest type",
+            "sortOrder": -1
+          },
+          "taxon": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "MY.taxon",
+            "description": "Taxon name",
+            "title": "Species",
+            "sortOrder": 2
+          }
+        }
       },
       "minItems": 0,
       "range": "MY.lineTransectNestClass",

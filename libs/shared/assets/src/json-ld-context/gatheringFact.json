@@ -61,7 +61,7 @@
     },
     "lineTransectNests": {
       "@id": "default:MY.lineTransectNests",
-      "@type": "@id"
+      "@container": "@set"
     },
     "lineTransectSegmentCounted": {
       "@id": "default:MY.lineTransectSegmentCounted",

@@ -63569,12 +63569,9 @@
           },
           "lineTransectNests": {
             "type": "array",
-            "uniqueItems": false,
             "items": {
-              "type": "string"
-            },
-            "minItems": 0,
-            "title": "Nests"
+              "$ref": "#/components/schemas/lineTransectNest"
+            }
           },
           "lineTransectSegmentCounted": {
             "type": "boolean",
