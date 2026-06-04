@@ -406,7 +406,8 @@ export type MHLResultServiceTypeEnum =
   | "MHL.resultServiceTypeSykeInsectProjects"
   | "MHL.resultServiceTypeInvasiveControl"
   | "MHL.resultServiceTypeCompleteLists"
-  | "MHL.resultServiceTypeWaterBirdCount";
+  | "MHL.resultServiceTypeWaterBirdCount"
+  | "MHL.resultServiceTypeArchipelagoBirdCensus";
 export type MHLViewerTypeEnum =
   | ""
   | "MHL.viewerTypeLineTransect"

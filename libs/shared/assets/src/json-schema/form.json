@@ -12549,7 +12549,8 @@
             "MHL.resultServiceTypeSykeInsectProjects",
             "MHL.resultServiceTypeInvasiveControl",
             "MHL.resultServiceTypeCompleteLists",
-            "MHL.resultServiceTypeWaterBirdCount"
+            "MHL.resultServiceTypeWaterBirdCount",
+            "MHL.resultServiceTypeArchipelagoBirdCensus"
           ],
           "enumNames": [
             "",
@@ -12560,7 +12561,8 @@
             "MHL.resultServiceTypeSykeInsectProjects",
             "MHL.resultServiceTypeInvasiveControl",
             "MHL.resultServiceTypeCompleteLists",
-            "MHL.resultServiceTypeWaterBirdCount"
+            "MHL.resultServiceTypeWaterBirdCount",
+            "MHL.resultServiceTypeArchipelagoBirdCensus"
           ],
           "range": "MHL.resultServiceTypeEnum",
           "subject": "MHL.resultServiceType",

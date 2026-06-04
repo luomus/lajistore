@@ -443,7 +443,8 @@ export enum MHLResultServiceTypeEnum {
   "resultServiceTypeSykeInsectProjects" = "MHL.resultServiceTypeSykeInsectProjects",
   "resultServiceTypeInvasiveControl" = "MHL.resultServiceTypeInvasiveControl",
   "resultServiceTypeCompleteLists" = "MHL.resultServiceTypeCompleteLists",
-  "resultServiceTypeWaterBirdCount" = "MHL.resultServiceTypeWaterBirdCount"
+  "resultServiceTypeWaterBirdCount" = "MHL.resultServiceTypeWaterBirdCount",
+  "resultServiceTypeArchipelagoBirdCensus" = "MHL.resultServiceTypeArchipelagoBirdCensus"
 }
 export enum MHLViewerTypeEnum {
   "empty" = "",
