@@ -1034,6 +1034,7 @@ export enum MKVHabitatEnum {
   "habitatMlk" = "MKV.habitatMlk",
   "habitatMt" = "MKV.habitatMt",
   "habitatMtl" = "MKV.habitatMtl",
+  "habitatMtm" = "MKV.habitatMtm",
   "habitatS" = "MKV.habitatS",
   "habitatSl" = "MKV.habitatSl",
   "habitatSla" = "MKV.habitatSla",
@@ -1051,9 +1052,9 @@ export enum MKVHabitatEnum {
   "habitatV" = "MKV.habitatV",
   "habitatVi" = "MKV.habitatVi",
   "habitatVik" = "MKV.habitatVik",
-  "habitatVim" = "MKV.habitatVim",
   "habitatVis" = "MKV.habitatVis",
-  "habitatVih" = "MKV.habitatVih",
+  "habitatVim" = "MKV.habitatVim",
+  "habitatVia" = "MKV.habitatVia",
   "habitatVie" = "MKV.habitatVie",
   "habitatVip" = "MKV.habitatVip",
   "habitatVs" = "MKV.habitatVs",
@@ -1111,27 +1112,29 @@ export enum MKVHabitatEnum {
   "habitatI" = "MKV.habitatI",
   "habitatIn" = "MKV.habitatIn",
   "habitatIt" = "MKV.habitatIt",
-  "habitatIh" = "MKV.habitatIh",
   "habitatIk" = "MKV.habitatIk",
+  "habitatIh" = "MKV.habitatIh",
   "habitatIo" = "MKV.habitatIo",
   "habitatIv" = "MKV.habitatIv",
   "habitatIp" = "MKV.habitatIp",
-  "habitatIu" = "MKV.habitatIu",
+  "habitatIj" = "MKV.habitatIj",
   "habitatIr" = "MKV.habitatIr",
   "habitatU" = "MKV.habitatU"
 }
 export enum MKVHabitatSpecificTypeEnum {
   "empty" = "",
   "habitatSpecificTypeV" = "MKV.habitatSpecificTypeV",
+  "habitatSpecificTypeLU" = "MKV.habitatSpecificTypeLU",
   "habitatSpecificTypeH" = "MKV.habitatSpecificTypeH",
   "habitatSpecificTypeP" = "MKV.habitatSpecificTypeP",
   "habitatSpecificTypeJ" = "MKV.habitatSpecificTypeJ",
   "habitatSpecificTypePAK" = "MKV.habitatSpecificTypePAK",
   "habitatSpecificTypeVAK" = "MKV.habitatSpecificTypeVAK",
+  "habitatSpecificTypeCA" = "MKV.habitatSpecificTypeCA",
   "habitatSpecificTypeRA" = "MKV.habitatSpecificTypeRA",
+  "habitatSpecificTypeLK" = "MKV.habitatSpecificTypeLK",
   "habitatSpecificTypeKA" = "MKV.habitatSpecificTypeKA",
-  "habitatSpecificTypeKE" = "MKV.habitatSpecificTypeKE",
-  "habitatSpecificTypeCA" = "MKV.habitatSpecificTypeCA"
+  "habitatSpecificTypeKE" = "MKV.habitatSpecificTypeKE"
 }
 export enum MYDetMethodEnum {
   "empty" = "",

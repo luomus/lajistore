@@ -593,7 +593,7 @@
       "type": "string",
       "range": "MKV.habitatObject",
       "subject": "MKV.primaryHabitat",
-      "description": "<p>Lisämerkinnät:</p>\n<ul> \n<li><b>v - vanhat metsät</b> (myös yksittäiset vanhat puut ja runsaasti lahopuuta sisältävät nuoremmat metsät)</li>\n<li><b>h - harjumetsät</b>, myös puoliavoimet</li>\n<li><b>p - metsäpaloalueet</b> ja muut luontaisen sukkession alkuvaiheen metsät</li>\n<li><b>j - jalopuuesiintymä</b></li>\n<li><b>pa - paahteinen</b></li>\n<li><b>va - varjoinen</b></li>\n<li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>\n<li><b>ka - karut kalliot ja kivikot</b></li>\n<li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>\n<li><b>ca - kalkkivaikutteinen</b></li>\n</ul>",
+      "description": "<p>Lisämääreet:</p>\n<ul> \n<li><b>v - </b>yksittäiset <b>vanhat puut</b></li>\n<li><b>lu - luonnontilaiset</b> ja luonnontilaisen kaltaiset metsät</li>\n<li><b>h - harjumetsät</b></li>\n<li><b>p - metsäpaloalueet</b></li>\n<li><b>j - jalopuuesiintymä</b></li>\n<li><b>pa - paahteinen</b></li>\n<li><b>va - varjoinen</b></li>\n<li><b>ca - kalkkivaikutteinen</b></li>\n<li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>\n<li><b>lk - kalattomat lammet</b></li>\n<li><b>ka - karut kalliot ja kivikot</b></li>\n<li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>\n</ul>",
       "title": "Primary habitat",
       "sortOrder": -1
     },

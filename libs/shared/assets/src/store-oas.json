@@ -42526,10 +42526,10 @@
             }
           }
         ],
-        "description": "Return list of Taxon objects.",
+        "description": "Return list of taxon objects.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42597,10 +42597,10 @@
             }
           }
         },
-        "description": "Store Taxon object(s)",
+        "description": "Store taxon object(s)",
         "responses": {
           "201": {
-            "description": "Stored Taxon object(s)",
+            "description": "Stored taxon object(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -42662,7 +42662,7 @@
         "description": "Patch taxon (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching taxon.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "example": {
@@ -42755,10 +42755,10 @@
             }
           }
         },
-        "description": "Return list of Taxon objects.",
+        "description": "Return list of taxon objects.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42826,17 +42826,17 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42861,7 +42861,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -42877,10 +42877,10 @@
             }
           }
         },
-        "description": "Store Taxon",
+        "description": "Store taxon",
         "responses": {
           "200": {
-            "description": "Stored Taxon",
+            "description": "Stored taxon",
             "content": {
               "application/json": {
                 "schema": {
@@ -42905,14 +42905,14 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Delete Taxon",
+        "description": "Delete taxon",
         "responses": {
           "200": {
             "description": "Deletion succeeded",
@@ -42944,7 +42944,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -42963,10 +42963,10 @@
         "tags": [
           "taxon"
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -43012,7 +43012,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -43021,17 +43021,17 @@
           {
             "name": "number",
             "in": "path",
-            "description": "Version number for the Taxon",
+            "description": "Version number for the taxon",
             "required": true,
             "schema": {
               "type": "number"
             }
           }
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -64241,6 +64241,7 @@
               "MKV.habitatMlk",
               "MKV.habitatMt",
               "MKV.habitatMtl",
+              "MKV.habitatMtm",
               "MKV.habitatS",
               "MKV.habitatSl",
               "MKV.habitatSla",
@@ -64258,9 +64259,9 @@
               "MKV.habitatV",
               "MKV.habitatVi",
               "MKV.habitatVik",
-              "MKV.habitatVim",
               "MKV.habitatVis",
-              "MKV.habitatVih",
+              "MKV.habitatVim",
+              "MKV.habitatVia",
               "MKV.habitatVie",
               "MKV.habitatVip",
               "MKV.habitatVs",
@@ -64318,12 +64319,12 @@
               "MKV.habitatI",
               "MKV.habitatIn",
               "MKV.habitatIt",
-              "MKV.habitatIh",
               "MKV.habitatIk",
+              "MKV.habitatIh",
               "MKV.habitatIo",
               "MKV.habitatIv",
               "MKV.habitatIp",
-              "MKV.habitatIu",
+              "MKV.habitatIj",
               "MKV.habitatIr",
               "MKV.habitatU"
             ],
@@ -64337,19 +64338,21 @@
               "enum": [
                 "",
                 "MKV.habitatSpecificTypeV",
+                "MKV.habitatSpecificTypeLU",
                 "MKV.habitatSpecificTypeH",
                 "MKV.habitatSpecificTypeP",
                 "MKV.habitatSpecificTypeJ",
                 "MKV.habitatSpecificTypePAK",
                 "MKV.habitatSpecificTypeVAK",
+                "MKV.habitatSpecificTypeCA",
                 "MKV.habitatSpecificTypeRA",
+                "MKV.habitatSpecificTypeLK",
                 "MKV.habitatSpecificTypeKA",
-                "MKV.habitatSpecificTypeKE",
-                "MKV.habitatSpecificTypeCA"
+                "MKV.habitatSpecificTypeKE"
               ]
             },
             "minItems": 0,
-            "title": "Tarkenne"
+            "title": "Lisämääre"
           },
           "sortOrder": {
             "type": "integer",
@@ -65504,7 +65507,7 @@
           },
           "primaryHabitat": {
             "type": "string",
-            "description": "<p>Lisämerkinnät:</p>\n<ul> \n<li><b>v - vanhat metsät</b> (myös yksittäiset vanhat puut ja runsaasti lahopuuta sisältävät nuoremmat metsät)</li>\n<li><b>h - harjumetsät</b>, myös puoliavoimet</li>\n<li><b>p - metsäpaloalueet</b> ja muut luontaisen sukkession alkuvaiheen metsät</li>\n<li><b>j - jalopuuesiintymä</b></li>\n<li><b>pa - paahteinen</b></li>\n<li><b>va - varjoinen</b></li>\n<li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>\n<li><b>ka - karut kalliot ja kivikot</b></li>\n<li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>\n<li><b>ca - kalkkivaikutteinen</b></li>\n</ul>",
+            "description": "<p>Lisämääreet:</p>\n<ul> \n<li><b>v - </b>yksittäiset <b>vanhat puut</b></li>\n<li><b>lu - luonnontilaiset</b> ja luonnontilaisen kaltaiset metsät</li>\n<li><b>h - harjumetsät</b></li>\n<li><b>p - metsäpaloalueet</b></li>\n<li><b>j - jalopuuesiintymä</b></li>\n<li><b>pa - paahteinen</b></li>\n<li><b>va - varjoinen</b></li>\n<li><b>ca - kalkkivaikutteinen</b></li>\n<li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>\n<li><b>lk - kalattomat lammet</b></li>\n<li><b>ka - karut kalliot ja kivikot</b></li>\n<li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>\n</ul>",
             "title": "Primary habitat"
           },
           "publication": {
@@ -68840,15 +68843,15 @@
         "properties": {
           "@context": {
             "type": "string",
-            "title": "Context for the Taxon"
+            "title": "Context for the taxon"
           },
           "id": {
             "type": "string",
-            "title": "Id for the Taxon"
+            "title": "Id for the taxon"
           },
           "@type": {
             "type": "string",
-            "title": "Type for the Taxon"
+            "title": "Type for the taxon"
           },
           "invasiveSpeciesMainGroup": {
             "type": "array",
@@ -68883,7 +68886,7 @@
           },
           "primaryHabitat": {
             "type": "string",
-            "description": "<p>Lisämerkinnät:</p>\n<ul> \n<li><b>v - vanhat metsät</b> (myös yksittäiset vanhat puut ja runsaasti lahopuuta sisältävät nuoremmat metsät)</li>\n<li><b>h - harjumetsät</b>, myös puoliavoimet</li>\n<li><b>p - metsäpaloalueet</b> ja muut luontaisen sukkession alkuvaiheen metsät</li>\n<li><b>j - jalopuuesiintymä</b></li>\n<li><b>pa - paahteinen</b></li>\n<li><b>va - varjoinen</b></li>\n<li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>\n<li><b>ka - karut kalliot ja kivikot</b></li>\n<li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>\n<li><b>ca - kalkkivaikutteinen</b></li>\n</ul>",
+            "description": "<p>Lisämääreet:</p>\n<ul> \n<li><b>v - </b>yksittäiset <b>vanhat puut</b></li>\n<li><b>lu - luonnontilaiset</b> ja luonnontilaisen kaltaiset metsät</li>\n<li><b>h - harjumetsät</b></li>\n<li><b>p - metsäpaloalueet</b></li>\n<li><b>j - jalopuuesiintymä</b></li>\n<li><b>pa - paahteinen</b></li>\n<li><b>va - varjoinen</b></li>\n<li><b>ca - kalkkivaikutteinen</b></li>\n<li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>\n<li><b>lk - kalattomat lammet</b></li>\n<li><b>ka - karut kalliot ja kivikot</b></li>\n<li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>\n</ul>",
             "title": "Primary habitat"
           },
           "secondaryHabitat": {
@@ -70847,15 +70850,17 @@
               "enum": [
                 "",
                 "MKV.habitatSpecificTypeV",
+                "MKV.habitatSpecificTypeLU",
                 "MKV.habitatSpecificTypeH",
                 "MKV.habitatSpecificTypeP",
                 "MKV.habitatSpecificTypeJ",
                 "MKV.habitatSpecificTypePAK",
                 "MKV.habitatSpecificTypeVAK",
+                "MKV.habitatSpecificTypeCA",
                 "MKV.habitatSpecificTypeRA",
+                "MKV.habitatSpecificTypeLK",
                 "MKV.habitatSpecificTypeKA",
-                "MKV.habitatSpecificTypeKE",
-                "MKV.habitatSpecificTypeCA"
+                "MKV.habitatSpecificTypeKE"
               ]
             },
             "minItems": 0,
@@ -70892,6 +70897,7 @@
               "MKV.habitatMlk",
               "MKV.habitatMt",
               "MKV.habitatMtl",
+              "MKV.habitatMtm",
               "MKV.habitatS",
               "MKV.habitatSl",
               "MKV.habitatSla",
@@ -70909,9 +70915,9 @@
               "MKV.habitatV",
               "MKV.habitatVi",
               "MKV.habitatVik",
-              "MKV.habitatVim",
               "MKV.habitatVis",
-              "MKV.habitatVih",
+              "MKV.habitatVim",
+              "MKV.habitatVia",
               "MKV.habitatVie",
               "MKV.habitatVip",
               "MKV.habitatVs",
@@ -70969,12 +70975,12 @@
               "MKV.habitatI",
               "MKV.habitatIn",
               "MKV.habitatIt",
-              "MKV.habitatIh",
               "MKV.habitatIk",
+              "MKV.habitatIh",
               "MKV.habitatIo",
               "MKV.habitatIv",
               "MKV.habitatIp",
-              "MKV.habitatIu",
+              "MKV.habitatIj",
               "MKV.habitatIr",
               "MKV.habitatU"
             ],
@@ -75264,7 +75270,7 @@
     },
     {
       "name": "taxon",
-      "description": "Taxon"
+      "description": "taxon"
     },
     {
       "name": "taxonCensus",

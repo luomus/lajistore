@@ -856,12 +856,12 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -2744,7 +2744,7 @@ type ViewerBasicAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -5336,12 +5336,12 @@ type ViewerBasicAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -5804,15 +5804,15 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -10697,6 +10697,7 @@ enum ElinympRist {
   MKV_HABITATMLK
   MKV_HABITATMT
   MKV_HABITATMTL
+  MKV_HABITATMTM
   MKV_HABITATS
   MKV_HABITATSL
   MKV_HABITATSLA
@@ -10714,9 +10715,9 @@ enum ElinympRist {
   MKV_HABITATV
   MKV_HABITATVI
   MKV_HABITATVIK
-  MKV_HABITATVIM
   MKV_HABITATVIS
-  MKV_HABITATVIH
+  MKV_HABITATVIM
+  MKV_HABITATVIA
   MKV_HABITATVIE
   MKV_HABITATVIP
   MKV_HABITATVS
@@ -10774,12 +10775,12 @@ enum ElinympRist {
   MKV_HABITATI
   MKV_HABITATIN
   MKV_HABITATIT
-  MKV_HABITATIH
   MKV_HABITATIK
+  MKV_HABITATIH
   MKV_HABITATIO
   MKV_HABITATIV
   MKV_HABITATIP
-  MKV_HABITATIU
+  MKV_HABITATIJ
   MKV_HABITATIR
   MKV_HABITATU
 }
@@ -10787,15 +10788,17 @@ enum ElinympRist {
 enum HabitatSpecificTypeListItem {
   _
   MKV_HABITATSPECIFICTYPEV
+  MKV_HABITATSPECIFICTYPELU
   MKV_HABITATSPECIFICTYPEH
   MKV_HABITATSPECIFICTYPEP
   MKV_HABITATSPECIFICTYPEJ
   MKV_HABITATSPECIFICTYPEPAK
   MKV_HABITATSPECIFICTYPEVAK
+  MKV_HABITATSPECIFICTYPECA
   MKV_HABITATSPECIFICTYPERA
+  MKV_HABITATSPECIFICTYPELK
   MKV_HABITATSPECIFICTYPEKA
   MKV_HABITATSPECIFICTYPEKE
-  MKV_HABITATSPECIFICTYPECA
 }
 
 type Image2 {
@@ -11220,18 +11223,20 @@ type IucnRedListEvaluation2 {
   possiblyRENotes: String
 
   """
-  <p>Lisämerkinnät:</p>
+  <p>Lisämääreet:</p>
   <ul> 
-  <li><b>v - vanhat metsät</b> (myös yksittäiset vanhat puut ja runsaasti lahopuuta sisältävät nuoremmat metsät)</li>
-  <li><b>h - harjumetsät</b>, myös puoliavoimet</li>
-  <li><b>p - metsäpaloalueet</b> ja muut luontaisen sukkession alkuvaiheen metsät</li>
+  <li><b>v - </b>yksittäiset <b>vanhat puut</b></li>
+  <li><b>lu - luonnontilaiset</b> ja luonnontilaisen kaltaiset metsät</li>
+  <li><b>h - harjumetsät</b></li>
+  <li><b>p - metsäpaloalueet</b></li>
   <li><b>j - jalopuuesiintymä</b></li>
   <li><b>pa - paahteinen</b></li>
   <li><b>va - varjoinen</b></li>
+  <li><b>ca - kalkkivaikutteinen</b></li>
   <li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>
+  <li><b>lk - kalattomat lammet</b></li>
   <li><b>ka - karut kalliot ja kivikot</b></li>
   <li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>
-  <li><b>ca - kalkkivaikutteinen</b></li>
   </ul>
   """
   primaryHabitat: String
@@ -12577,18 +12582,20 @@ type Taxon2 {
   overridingTargetName: [String]
 
   """
-  <p>Lisämerkinnät:</p>
+  <p>Lisämääreet:</p>
   <ul> 
-  <li><b>v - vanhat metsät</b> (myös yksittäiset vanhat puut ja runsaasti lahopuuta sisältävät nuoremmat metsät)</li>
-  <li><b>h - harjumetsät</b>, myös puoliavoimet</li>
-  <li><b>p - metsäpaloalueet</b> ja muut luontaisen sukkession alkuvaiheen metsät</li>
+  <li><b>v - </b>yksittäiset <b>vanhat puut</b></li>
+  <li><b>lu - luonnontilaiset</b> ja luonnontilaisen kaltaiset metsät</li>
+  <li><b>h - harjumetsät</b></li>
+  <li><b>p - metsäpaloalueet</b></li>
   <li><b>j - jalopuuesiintymä</b></li>
   <li><b>pa - paahteinen</b></li>
   <li><b>va - varjoinen</b></li>
+  <li><b>ca - kalkkivaikutteinen</b></li>
   <li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>
+  <li><b>lk - kalattomat lammet</b></li>
   <li><b>ka - karut kalliot ja kivikot</b></li>
   <li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>
-  <li><b>ca - kalkkivaikutteinen</b></li>
   </ul>
   """
   primaryHabitat: String
@@ -13422,15 +13429,17 @@ type TraitSearchTaxon2 {
 enum HabitatSpecifiersListItem {
   _
   MKV_HABITATSPECIFICTYPEV
+  MKV_HABITATSPECIFICTYPELU
   MKV_HABITATSPECIFICTYPEH
   MKV_HABITATSPECIFICTYPEP
   MKV_HABITATSPECIFICTYPEJ
   MKV_HABITATSPECIFICTYPEPAK
   MKV_HABITATSPECIFICTYPEVAK
+  MKV_HABITATSPECIFICTYPECA
   MKV_HABITATSPECIFICTYPERA
+  MKV_HABITATSPECIFICTYPELK
   MKV_HABITATSPECIFICTYPEKA
   MKV_HABITATSPECIFICTYPEKE
-  MKV_HABITATSPECIFICTYPECA
 }
 
 enum IucnStatus {
@@ -13459,6 +13468,7 @@ enum PrimaryHabitat {
   MKV_HABITATMLK
   MKV_HABITATMT
   MKV_HABITATMTL
+  MKV_HABITATMTM
   MKV_HABITATS
   MKV_HABITATSL
   MKV_HABITATSLA
@@ -13476,9 +13486,9 @@ enum PrimaryHabitat {
   MKV_HABITATV
   MKV_HABITATVI
   MKV_HABITATVIK
-  MKV_HABITATVIM
   MKV_HABITATVIS
-  MKV_HABITATVIH
+  MKV_HABITATVIM
+  MKV_HABITATVIA
   MKV_HABITATVIE
   MKV_HABITATVIP
   MKV_HABITATVS
@@ -13536,12 +13546,12 @@ enum PrimaryHabitat {
   MKV_HABITATI
   MKV_HABITATIN
   MKV_HABITATIT
-  MKV_HABITATIH
   MKV_HABITATIK
+  MKV_HABITATIH
   MKV_HABITATIO
   MKV_HABITATIV
   MKV_HABITATIP
-  MKV_HABITATIU
+  MKV_HABITATIJ
   MKV_HABITATIR
   MKV_HABITATU
 }
@@ -16484,12 +16494,12 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -18372,7 +18382,7 @@ type ViewerAnyAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -20964,12 +20974,12 @@ type ViewerAnyAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -21432,15 +21442,15 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -22546,12 +22556,12 @@ type MutationViewerBasicAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -26563,7 +26573,7 @@ type MutationViewerBasicAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -27731,7 +27741,7 @@ type MutationViewerBasicAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -28735,12 +28745,12 @@ type MutationViewerBasicAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
@@ -31968,18 +31978,20 @@ input IucnRedListEvaluation2Input {
   possiblyRENotes: String
 
   """
-  <p>Lisämerkinnät:</p>
+  <p>Lisämääreet:</p>
   <ul> 
-  <li><b>v - vanhat metsät</b> (myös yksittäiset vanhat puut ja runsaasti lahopuuta sisältävät nuoremmat metsät)</li>
-  <li><b>h - harjumetsät</b>, myös puoliavoimet</li>
-  <li><b>p - metsäpaloalueet</b> ja muut luontaisen sukkession alkuvaiheen metsät</li>
+  <li><b>v - </b>yksittäiset <b>vanhat puut</b></li>
+  <li><b>lu - luonnontilaiset</b> ja luonnontilaisen kaltaiset metsät</li>
+  <li><b>h - harjumetsät</b></li>
+  <li><b>p - metsäpaloalueet</b></li>
   <li><b>j - jalopuuesiintymä</b></li>
   <li><b>pa - paahteinen</b></li>
   <li><b>va - varjoinen</b></li>
+  <li><b>ca - kalkkivaikutteinen</b></li>
   <li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>
+  <li><b>lk - kalattomat lammet</b></li>
   <li><b>ka - karut kalliot ja kivikot</b></li>
   <li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>
-  <li><b>ca - kalkkivaikutteinen</b></li>
   </ul>
   """
   primaryHabitat: String
@@ -32799,18 +32811,20 @@ input Taxon2Input {
   overridingTargetName: [String]
 
   """
-  <p>Lisämerkinnät:</p>
+  <p>Lisämääreet:</p>
   <ul> 
-  <li><b>v - vanhat metsät</b> (myös yksittäiset vanhat puut ja runsaasti lahopuuta sisältävät nuoremmat metsät)</li>
-  <li><b>h - harjumetsät</b>, myös puoliavoimet</li>
-  <li><b>p - metsäpaloalueet</b> ja muut luontaisen sukkession alkuvaiheen metsät</li>
+  <li><b>v - </b>yksittäiset <b>vanhat puut</b></li>
+  <li><b>lu - luonnontilaiset</b> ja luonnontilaisen kaltaiset metsät</li>
+  <li><b>h - harjumetsät</b></li>
+  <li><b>p - metsäpaloalueet</b></li>
   <li><b>j - jalopuuesiintymä</b></li>
   <li><b>pa - paahteinen</b></li>
   <li><b>va - varjoinen</b></li>
+  <li><b>ca - kalkkivaikutteinen</b></li>
   <li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>
+  <li><b>lk - kalattomat lammet</b></li>
   <li><b>ka - karut kalliot ja kivikot</b></li>
   <li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>
-  <li><b>ca - kalkkivaikutteinen</b></li>
   </ul>
   """
   primaryHabitat: String
@@ -35759,12 +35773,12 @@ type MutationViewerAnyAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -39776,7 +39790,7 @@ type MutationViewerAnyAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -40944,7 +40958,7 @@ type MutationViewerAnyAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -41948,12 +41962,12 @@ type MutationViewerAnyAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
