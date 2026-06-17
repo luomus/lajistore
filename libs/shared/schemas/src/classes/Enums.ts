@@ -349,6 +349,7 @@ export enum MKVEndangermentReasonEnum {
   "endangermentReasonO" = "MKV.endangermentReasonO",
   "endangermentReasonVr" = "MKV.endangermentReasonVr",
   "endangermentReasonKh" = "MKV.endangermentReasonKh",
+  "endangermentReasonRe" = "MKV.endangermentReasonRe",
   "endangermentReasonI" = "MKV.endangermentReasonI",
   "endangermentReasonS" = "MKV.endangermentReasonS",
   "endangermentReasonKil" = "MKV.endangermentReasonKil",

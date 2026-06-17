@@ -319,6 +319,7 @@ export type MKVEndangermentReasonEnum =
   | "MKV.endangermentReasonO"
   | "MKV.endangermentReasonVr"
   | "MKV.endangermentReasonKh"
+  | "MKV.endangermentReasonRe"
   | "MKV.endangermentReasonI"
   | "MKV.endangermentReasonS"
   | "MKV.endangermentReasonKil"
