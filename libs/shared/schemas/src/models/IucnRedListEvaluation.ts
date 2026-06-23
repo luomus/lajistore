@@ -50,7 +50,7 @@ export interface IucnRedListEvaluation {
    *
    * <p><b>a.</b> esiintyminen on voimakkaasti pirstoutunut TAI vain yksi CR, enintään viisi EN tai enintään kymmenen VU esiintymispaikkaa tunnetaan</p>
    *
-   * <p><b>b.</b> havaittu, arvioitu tai ennustettu jatkuva väheneminen joissakin seuraavista:</p>
+   * <p><b>b.</b> havaittu, päätelty tai ennustettu jatkuva väheneminen joissakin seuraavista:</p>
    * <ul>
    * <li><b>(i)</b> levinneisyysalue</li>
    * <li><b>(ii)</b> esiintymisalue</li>
@@ -71,7 +71,7 @@ export interface IucnRedListEvaluation {
    *
    * <p><b>a.</b> esiintyminen on voimakkaasti pirstoutunut TAI vain yksi CR, enintään viisi EN tai enintään kymmenen VU esiintymispaikkaa tunnetaan</p>
    *
-   * <p><b>b.</b> havaittu, arvioitu tai ennustettu jatkuva väheneminen joissakin seuraavista:</p>
+   * <p><b>b.</b> havaittu, päätelty tai ennustettu jatkuva väheneminen joissakin seuraavista:</p>
    * <ul>
    * <li><b>(i)</b> levinneisyysalue</li>
    * <li><b>(ii)</b> esiintymisalue</li>
@@ -259,7 +259,7 @@ export interface IucnRedListEvaluation {
   publication?: string[];
   /**
    * <p><b>Aito muutos (uusi):</b> muutos johtuu aidosta muutoksesta, joka on tapahtunut edellisen arvioinnin jälkeen (populaation tila huonontunut/ parantunut tms.)</p>
-<p><b>Aito muutos (ennen edellistä arviointia):</b> Aito muutos (ennen edellistä arviointia): luokkaa käytetään taksoneihin, jotka arvioidaan vähintään kolmatta kertaa ja joista lasketaan uhanalaisuusindeksi (Red List Index). Muutos on tapahtunut ennen edellistä arviointia, mutta ensimmäisen jälkeen. Muutos on havaittu uuden tiedon perusteella ja mikäli se olisi ollut käytettävissä aiemmin, uusi luokka olisi annettu jo aiemmalla kerralla (aiemmilla kerroilla). Muutoksen ajankohta on dokumentoitava.</p>
+<p><b>Aito muutos (ennen edellistä arviointia):</b> luokkaa käytetään taksoneihin, jotka arvioidaan vähintään kolmatta kertaa ja joista lasketaan uhanalaisuusindeksi (Red List Index). Muutos on tapahtunut ennen edellistä arviointia, mutta ensimmäisen jälkeen. Muutos on havaittu uuden tiedon perusteella ja mikäli se olisi ollut käytettävissä aiemmin, uusi luokka olisi annettu jo aiemmalla kerralla (aiemmilla kerroilla). Muutoksen ajankohta on dokumentoitava.</p>
 <p><b>Kriteerien muutos:</b> kategorian muutos johtuu arviointikriteerien muutoksista.</p>
 <p><b>Uusi tieto:</b> muutos johtuu siitä, että taksonin statuksesta on saatu uutta tietoa/tieto on lisääntynyt; esim. populaatio on osoittautunut aiempaa käsitystä suuremmaksi tai pienemmäksi.</p>
 <p><b>Taksonominen muutos:</b> kategorian muutos johtuu taksonomisen aseman muuttumisesta; taksoni on vastikään jaettu kahtia (alalajista laji) tai yhdistetty toisen kanssa tai kuvattu uutena tieteelle tai taksoni ei ole enää validi (pidetään nykyisin hybridinä, varianttina tms.).</p>
