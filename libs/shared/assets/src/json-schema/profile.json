@@ -219,6 +219,13 @@
       "title": "Xeno-Canto API key",
       "sortOrder": -1
     },
+    "xenoCantoUserName": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MA.xenoCantoUserName",
+      "title": "Xeno-Canto user name",
+      "sortOrder": -1
+    },
     "profileKey": {
       "type": "string",
       "range": "xsd:string",

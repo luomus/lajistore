@@ -107,6 +107,11 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "xenoCantoUserName": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "profileKey": {
         "type": "keyword",
         "ignore_above": 200,

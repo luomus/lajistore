@@ -67782,6 +67782,10 @@
             "type": "string",
             "title": "Xeno-Canto API key"
           },
+          "xenoCantoUserName": {
+            "type": "string",
+            "title": "Xeno-Canto user name"
+          },
           "profileKey": {
             "type": "string",
             "title": "profileKey"

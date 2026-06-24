@@ -11969,6 +11969,7 @@ type Profile2 {
   type: String
   userID: String!
   xenoCantoApiKey: String
+  xenoCantoUserName: String
 }
 
 enum BirdwatchingActivityLevel {
@@ -32291,6 +32292,7 @@ input Profile2Input {
   type: String
   userID: String!
   xenoCantoApiKey: String
+  xenoCantoUserName: String
 }
 
 input Publication3Input {

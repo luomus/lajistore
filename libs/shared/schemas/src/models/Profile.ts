@@ -29,5 +29,6 @@ export interface Profile {
   taxonExpertiseNotes?: string;
   userID: string;
   xenoCantoApiKey?: string;
+  xenoCantoUserName?: string;
   profileKey?: string;
 }
