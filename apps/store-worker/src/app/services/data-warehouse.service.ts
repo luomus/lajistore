@@ -281,7 +281,7 @@ export class DataWarehouseService {
 
   private static isEmptyUnit(unit: Unit, removeUnitIfNoCount: boolean): boolean {
     if (unit.observationStatus) {
-      return true;
+      return false;
     }
 
     if (removeUnitIfNoCount) {
