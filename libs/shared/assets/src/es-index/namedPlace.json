@@ -350,6 +350,39 @@
                   "invasiveControlWorkHours": {
                     "type": "integer"
                   },
+                  "lineTransectNests": {
+                    "type": "object",
+                    "properties": {
+                      "autocompleteSelectedTaxonID": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      },
+                      "lineTransectNestMeters": {
+                        "type": "integer"
+                      },
+                      "lineTransectRouteFieldType": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "nestCount": {
+                        "type": "integer"
+                      },
+                      "nestSize": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "nestType": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "taxon": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      }
+                    }
+                  },
                   "lineTransectSegmentCounted": {
                     "type": "boolean"
                   },
@@ -1135,6 +1168,39 @@
                   },
                   "invasiveControlWorkHours": {
                     "type": "integer"
+                  },
+                  "lineTransectNests": {
+                    "type": "object",
+                    "properties": {
+                      "autocompleteSelectedTaxonID": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      },
+                      "lineTransectNestMeters": {
+                        "type": "integer"
+                      },
+                      "lineTransectRouteFieldType": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "nestCount": {
+                        "type": "integer"
+                      },
+                      "nestSize": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "nestType": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "taxon": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      }
+                    }
                   },
                   "lineTransectSegmentCounted": {
                     "type": "boolean"
@@ -2094,17 +2160,10 @@
                   "nestCount": {
                     "type": "integer"
                   },
-                  "nestDistanceFromLineTransectStartMeters": {
-                    "type": "integer"
-                  },
                   "nestNotes": {
                     "type": "keyword",
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
-                  },
-                  "nestSize": {
-                    "type": "keyword",
-                    "ignore_above": 200
                   },
                   "nestTreeDiameterInCentimeters": {
                     "type": "integer"
@@ -3380,6 +3439,39 @@
                   "invasiveControlWorkHours": {
                     "type": "integer"
                   },
+                  "lineTransectNests": {
+                    "type": "object",
+                    "properties": {
+                      "autocompleteSelectedTaxonID": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      },
+                      "lineTransectNestMeters": {
+                        "type": "integer"
+                      },
+                      "lineTransectRouteFieldType": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "nestCount": {
+                        "type": "integer"
+                      },
+                      "nestSize": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "nestType": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "taxon": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      }
+                    }
+                  },
                   "lineTransectSegmentCounted": {
                     "type": "boolean"
                   },
@@ -4165,6 +4257,39 @@
                   },
                   "invasiveControlWorkHours": {
                     "type": "integer"
+                  },
+                  "lineTransectNests": {
+                    "type": "object",
+                    "properties": {
+                      "autocompleteSelectedTaxonID": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      },
+                      "lineTransectNestMeters": {
+                        "type": "integer"
+                      },
+                      "lineTransectRouteFieldType": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "nestCount": {
+                        "type": "integer"
+                      },
+                      "nestSize": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "nestType": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "taxon": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      }
+                    }
                   },
                   "lineTransectSegmentCounted": {
                     "type": "boolean"
@@ -5124,17 +5249,10 @@
                   "nestCount": {
                     "type": "integer"
                   },
-                  "nestDistanceFromLineTransectStartMeters": {
-                    "type": "integer"
-                  },
                   "nestNotes": {
                     "type": "keyword",
                     "ignore_above": 200,
                     "normalizer": "useLowercase"
-                  },
-                  "nestSize": {
-                    "type": "keyword",
-                    "ignore_above": 200
                   },
                   "nestTreeDiameterInCentimeters": {
                     "type": "integer"

@@ -54,7 +54,7 @@
       "subject": "MX.secureLevel",
       "description": "Secure level (salaus-/karkeistustaso) for the data",
       "title": "Secure level",
-      "sortOrder": 33
+      "sortOrder": 34
     },
     "DNASampleLocation": {
       "type": "string",
@@ -62,7 +62,7 @@
       "subject": "MY.DNASampleLocation",
       "description": "Leave empty if no sample taken, or if the sample is recorded separately",
       "title": "DNA sample location",
-      "sortOrder": 29
+      "sortOrder": 30
     },
     "IPEN": {
       "type": "string",
@@ -78,7 +78,7 @@
       "subject": "MY.URL",
       "description": "URL where more information is available about the specimen",
       "title": "URL",
-      "sortOrder": 28
+      "sortOrder": 27
     },
     "acknowledgedWarnings": {
       "type": "array",
@@ -99,7 +99,7 @@
       "subject": "MY.acquiredFrom",
       "description": "From who/where the specimen was acquired (if not recorded as a transaction)",
       "title": "Acquired from",
-      "sortOrder": 24
+      "sortOrder": 23
     },
     "acquiredFromOrganization": {
       "type": "string",
@@ -107,7 +107,7 @@
       "subject": "MY.acquiredFromOrganization",
       "description": "Organization where the accession was acquired from. If the organization is not on the list, add it first.",
       "title": "Acquired from organization",
-      "sortOrder": 40
+      "sortOrder": 41
     },
     "acquisitionDate": {
       "type": "string",
@@ -115,7 +115,7 @@
       "subject": "MY.acquisitionDate",
       "description": "Date (d.m.yyyy) or year (yyyy) on which the specimen was acquired to the collection. Empty means an old specimen acquired on an unknown date.",
       "title": "Acquisition date",
-      "sortOrder": 25
+      "sortOrder": 24
     },
     "additionalIDs": {
       "type": "array",
@@ -128,7 +128,7 @@
       "subject": "MY.additionalIDs",
       "description": "Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)",
       "title": "Additional ID's",
-      "sortOrder": 19
+      "sortOrder": 18
     },
     "bold": {
       "type": "array",
@@ -141,7 +141,7 @@
       "subject": "MY.bold",
       "description": "BOLD identifier, usually BOLD Sample ID. You can include additonal comment by separating them with colon, e.g. \"AY123456:comments here\"",
       "title": "BOLD",
-      "sortOrder": 16
+      "sortOrder": 29
     },
     "caption": {
       "type": "string",
@@ -156,7 +156,7 @@
       "subject": "MY.cladBookID",
       "description": "Clad book id number or such",
       "title": "Clad book id",
-      "sortOrder": 9
+      "sortOrder": 12
     },
     "cladSpecimenID": {
       "type": "string",
@@ -303,7 +303,7 @@
       "subject": "MY.dataSource",
       "description": "Where the data about this specimen or observation is from, in addition to labels. Eg. reference to a publication, field notes or an expedition.",
       "title": "Data source",
-      "sortOrder": 18
+      "sortOrder": 17
     },
     "datasetID": {
       "type": "array",
@@ -323,7 +323,7 @@
       "range": "xsd:string",
       "subject": "MY.datatype",
       "title": "Datatype",
-      "sortOrder": 37
+      "sortOrder": 36
     },
     "deviceID": {
       "type": "string",
@@ -384,7 +384,7 @@
       "subject": "MY.documentLocation",
       "description": "Location of the specimen so that museum personnel can find it. E.g. taxon under which it is stored (if not clear from the identification), or shelf number",
       "title": "Specimen location",
-      "sortOrder": 11
+      "sortOrder": 10
     },
     "duplicatesIn": {
       "type": "string",
@@ -392,7 +392,7 @@
       "subject": "MY.duplicatesIn",
       "description": "Description where duplicates (specimens of the same individual) are located or have been sent to and by which ID's.",
       "title": "Duplicates",
-      "sortOrder": 23
+      "sortOrder": 22
     },
     "editNotes": {
       "type": "string",
@@ -415,7 +415,7 @@
       "subject": "MY.entered",
       "description": "Date the data was first transcribed into electronic format or paper registry",
       "title": "Date transcribed",
-      "sortOrder": 38
+      "sortOrder": 37
     },
     "event": {
       "type": "array",
@@ -436,7 +436,7 @@
       "subject": "MY.exsiccatum",
       "description": "Name of the exsiccatum this specimen belongs to and possible exsiccatum number.",
       "title": "Exsiccatum",
-      "sortOrder": 26
+      "sortOrder": 25
     },
     "formID": {
       "type": "string",
@@ -692,6 +692,7 @@
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.dateBegin",
+          "description": "Collection date as exact date or start date for a time period.",
           "title": "Start date",
           "sortOrder": 3
         },
@@ -699,6 +700,7 @@
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.dateEnd",
+          "description": "End date for a collection time period, if exact date is not know.",
           "title": "End date",
           "sortOrder": 4
         },
@@ -771,6 +773,116 @@
               "range": "xsd:nonNegativeInteger",
               "subject": "MY.invasiveControlWorkHours",
               "title": "Work hours spent during the control",
+              "sortOrder": -1
+            },
+            "lineTransectNests": {
+              "type": "array",
+              "uniqueItems": false,
+              "items": {
+                "type": "object",
+                "subject": "MY.lineTransectNestClass",
+                "additionalProperties": false,
+                "title": "Instances of this class are information about a nest on a line-transect route",
+                "description": "",
+                "properties": {
+                  "autocompleteSelectedTaxonID": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MY.autocompleteSelectedTaxonID",
+                    "title": "Taxon ID selected from autocomplete",
+                    "sortOrder": -1
+                  },
+                  "lineTransectNestMeters": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "range": "xsd:nonNegativeInteger",
+                    "subject": "MY.lineTransectNestMeters",
+                    "title": "Nest position on the line: meters from the start of the line",
+                    "sortOrder": -1
+                  },
+                  "lineTransectRouteFieldType": {
+                    "type": "string",
+                    "enum": [
+                      "",
+                      "MY.lineTransectRouteFieldTypeInner",
+                      "MY.lineTransectRouteFieldTypeOuter"
+                    ],
+                    "enumNames": [
+                      "",
+                      "P - Inner route field",
+                      "A - Outer route field"
+                    ],
+                    "range": "MY.lineTransectRouteFieldTypeEnum",
+                    "subject": "MY.lineTransectRouteFieldType",
+                    "title": "Field Area",
+                    "sortOrder": -1
+                  },
+                  "nestCount": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "range": "xsd:nonNegativeInteger",
+                    "subject": "MY.nestCount",
+                    "title": "Nest count",
+                    "sortOrder": -1
+                  },
+                  "nestSize": {
+                    "type": "string",
+                    "enum": [
+                      "",
+                      "MY.nestSizeEnum1",
+                      "MY.nestSizeEnum2",
+                      "MY.nestSizeEnum3"
+                    ],
+                    "enumNames": [
+                      "",
+                      "PPL = pieni pikkulintu, esim. tiaispönttö, hömötiaisen kaivertama kolo",
+                      "IPL = iso pikkulintu eli noin kottaraispönttö/käpytikan kolo",
+                      "pöllö = palokärjen kolon kokoluokka ja sitä suuremmat"
+                    ],
+                    "range": "MY.nestSizeEnum",
+                    "subject": "MY.nestSize",
+                    "title": "Nest Size",
+                    "sortOrder": -1
+                  },
+                  "nestType": {
+                    "type": "string",
+                    "enum": [
+                      "",
+                      "MY.nestTypeTreeCavity",
+                      "MY.nestTypeTwig",
+                      "MY.nestTypeNestBox",
+                      "MY.nestTypeBuilding",
+                      "MY.nestTypeGroundCavity",
+                      "MY.nestTypeOther"
+                    ],
+                    "enumNames": [
+                      "",
+                      "Cavity in tree",
+                      "Twig nest in tree",
+                      "Nestbox in tree",
+                      "Building",
+                      "Ground cavity",
+                      "Other, which?"
+                    ],
+                    "range": "MY.nestTypeEnum",
+                    "subject": "MY.nestType",
+                    "title": "Nest type",
+                    "sortOrder": -1
+                  },
+                  "taxon": {
+                    "type": "string",
+                    "range": "xsd:string",
+                    "subject": "MY.taxon",
+                    "description": "Taxon name",
+                    "title": "Species",
+                    "sortOrder": 1
+                  }
+                }
+              },
+              "minItems": 0,
+              "range": "MY.lineTransectNestClass",
+              "subject": "MY.lineTransectNests",
+              "title": "Nests",
               "sortOrder": -1
             },
             "lineTransectSegmentCounted": {
@@ -2277,7 +2389,7 @@
       "subject": "MY.legID",
       "description": "Collecting number (field identifier, keruunumero) for the specimen",
       "title": "Collecting number",
-      "sortOrder": 12
+      "sortOrder": 11
     },
     "locked": {
       "type": "boolean",
@@ -2305,6 +2417,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.observationID",
+      "description": "ID for the observation in another system, e.g. Vihko/Notebook. Format System:identifier.",
       "title": "Observation ID",
       "sortOrder": 49
     },
@@ -2415,7 +2528,7 @@
       "subject": "MY.preservation",
       "description": "Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.",
       "title": "Preservation",
-      "sortOrder": 21
+      "sortOrder": 20
     },
     "primaryDataLocation": {
       "type": "string",
@@ -2444,12 +2557,13 @@
       "subject": "MY.publication",
       "description": "Publication references or doi's that refer to this specimen",
       "title": "Publications",
-      "sortOrder": 17
+      "sortOrder": 16
     },
     "rawOCRData": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MY.rawOCRData",
+      "description": "Optical character recognition or AI generated data in its raw format, errors and all.",
       "title": "Raw OCR data",
       "sortOrder": 50
     },
@@ -2472,7 +2586,7 @@
       "subject": "MY.sampleHistory",
       "description": "The history of the specimen, for example how it was acquired or in which museums it has been before.",
       "title": "Specimen history",
-      "sortOrder": 36
+      "sortOrder": 39
     },
     "separatedFrom": {
       "type": "string",
@@ -2480,7 +2594,7 @@
       "subject": "MY.separatedFrom",
       "description": "ID of the specimen from which this has been separated",
       "title": "Separated from specimen",
-      "sortOrder": 22
+      "sortOrder": 21
     },
     "separatedTo": {
       "type": "array",
@@ -2493,7 +2607,7 @@
       "subject": "MY.separatedTo",
       "description": "ID's of those new specimens that have been separated from this specimen",
       "title": "Separated to specimen(s)",
-      "sortOrder": 20
+      "sortOrder": 19
     },
     "serialNumber": {
       "type": "string",
@@ -2598,7 +2712,7 @@
       "subject": "MY.unreliableFields",
       "description": "List of those fields that contain unreliable data. The list is created automatically.",
       "title": "Unreliable fields",
-      "sortOrder": 41
+      "sortOrder": 40
     },
     "verificationStatus": {
       "type": "array",
@@ -2631,7 +2745,7 @@
       "subject": "MY.verificationStatus",
       "description": "Information about the quality of the specimen data. Possible to select several.",
       "title": "Verification status",
-      "sortOrder": 10
+      "sortOrder": 9
     },
     "voucherSpecimenID": {
       "type": "string",
@@ -2714,7 +2828,7 @@
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
       "title": "Publicity restrictions",
-      "sortOrder": 31
+      "sortOrder": 32
     },
     "scheduledForDeletion": {
       "type": "boolean",
@@ -3042,6 +3156,7 @@
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.dateBegin",
+            "description": "Collection date as exact date or start date for a time period.",
             "title": "Start date",
             "sortOrder": 3
           },
@@ -3049,6 +3164,7 @@
             "type": "string",
             "range": "xsd:string",
             "subject": "MY.dateEnd",
+            "description": "End date for a collection time period, if exact date is not know.",
             "title": "End date",
             "sortOrder": 4
           },
@@ -3187,6 +3303,116 @@
                 "range": "xsd:nonNegativeInteger",
                 "subject": "MY.invasiveControlWorkHours",
                 "title": "Work hours spent during the control",
+                "sortOrder": -1
+              },
+              "lineTransectNests": {
+                "type": "array",
+                "uniqueItems": false,
+                "items": {
+                  "type": "object",
+                  "subject": "MY.lineTransectNestClass",
+                  "additionalProperties": false,
+                  "title": "Instances of this class are information about a nest on a line-transect route",
+                  "description": "",
+                  "properties": {
+                    "autocompleteSelectedTaxonID": {
+                      "type": "string",
+                      "range": "xsd:string",
+                      "subject": "MY.autocompleteSelectedTaxonID",
+                      "title": "Taxon ID selected from autocomplete",
+                      "sortOrder": -1
+                    },
+                    "lineTransectNestMeters": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "range": "xsd:nonNegativeInteger",
+                      "subject": "MY.lineTransectNestMeters",
+                      "title": "Nest position on the line: meters from the start of the line",
+                      "sortOrder": -1
+                    },
+                    "lineTransectRouteFieldType": {
+                      "type": "string",
+                      "enum": [
+                        "",
+                        "MY.lineTransectRouteFieldTypeInner",
+                        "MY.lineTransectRouteFieldTypeOuter"
+                      ],
+                      "enumNames": [
+                        "",
+                        "P - Inner route field",
+                        "A - Outer route field"
+                      ],
+                      "range": "MY.lineTransectRouteFieldTypeEnum",
+                      "subject": "MY.lineTransectRouteFieldType",
+                      "title": "Field Area",
+                      "sortOrder": -1
+                    },
+                    "nestCount": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "range": "xsd:nonNegativeInteger",
+                      "subject": "MY.nestCount",
+                      "title": "Nest count",
+                      "sortOrder": -1
+                    },
+                    "nestSize": {
+                      "type": "string",
+                      "enum": [
+                        "",
+                        "MY.nestSizeEnum1",
+                        "MY.nestSizeEnum2",
+                        "MY.nestSizeEnum3"
+                      ],
+                      "enumNames": [
+                        "",
+                        "PPL = pieni pikkulintu, esim. tiaispönttö, hömötiaisen kaivertama kolo",
+                        "IPL = iso pikkulintu eli noin kottaraispönttö/käpytikan kolo",
+                        "pöllö = palokärjen kolon kokoluokka ja sitä suuremmat"
+                      ],
+                      "range": "MY.nestSizeEnum",
+                      "subject": "MY.nestSize",
+                      "title": "Nest Size",
+                      "sortOrder": -1
+                    },
+                    "nestType": {
+                      "type": "string",
+                      "enum": [
+                        "",
+                        "MY.nestTypeTreeCavity",
+                        "MY.nestTypeTwig",
+                        "MY.nestTypeNestBox",
+                        "MY.nestTypeBuilding",
+                        "MY.nestTypeGroundCavity",
+                        "MY.nestTypeOther"
+                      ],
+                      "enumNames": [
+                        "",
+                        "Cavity in tree",
+                        "Twig nest in tree",
+                        "Nestbox in tree",
+                        "Building",
+                        "Ground cavity",
+                        "Other, which?"
+                      ],
+                      "range": "MY.nestTypeEnum",
+                      "subject": "MY.nestType",
+                      "title": "Nest type",
+                      "sortOrder": -1
+                    },
+                    "taxon": {
+                      "type": "string",
+                      "range": "xsd:string",
+                      "subject": "MY.taxon",
+                      "description": "Taxon name",
+                      "title": "Species",
+                      "sortOrder": 1
+                    }
+                  }
+                },
+                "minItems": 0,
+                "range": "MY.lineTransectNestClass",
+                "subject": "MY.lineTransectNests",
+                "title": "Nests",
                 "sortOrder": -1
               },
               "lineTransectSegmentCounted": {
@@ -4975,7 +5201,7 @@
             "subject": "MY.isPartOf",
             "description": "Which parent or larger collection this is part of.",
             "title": "Is part of",
-            "sortOrder": 32
+            "sortOrder": 34
           },
           "keywords": {
             "type": "array",
@@ -5590,7 +5816,7 @@
             "subject": "MZ.publicityRestrictions",
             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
             "title": "Publicity restrictions",
-            "sortOrder": 31
+            "sortOrder": 32
           },
           "units": {
             "type": "array",
@@ -5634,7 +5860,7 @@
                   "subject": "MY.DNASampleLocation",
                   "description": "Leave empty if no sample taken, or if the sample is recorded separately",
                   "title": "DNA sample location",
-                  "sortOrder": 29
+                  "sortOrder": 30
                 },
                 "abundanceString": {
                   "type": "string",
@@ -5711,7 +5937,7 @@
                   "subject": "MY.additionalIDs",
                   "description": "Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)",
                   "title": "Additional ID's",
-                  "sortOrder": 19
+                  "sortOrder": 18
                 },
                 "adultIndividualCount": {
                   "type": "integer",
@@ -6620,7 +6846,7 @@
                   "subject": "MY.isPartOf",
                   "description": "Which parent or larger collection this is part of.",
                   "title": "Is part of",
-                  "sortOrder": 32
+                  "sortOrder": 34
                 },
                 "juvenileIndividualCount": {
                   "type": "integer",
@@ -6945,7 +7171,7 @@
                       "subject": "MY.isPartOf",
                       "description": "Which parent or larger collection this is part of.",
                       "title": "Is part of",
-                      "sortOrder": 32
+                      "sortOrder": 34
                     },
                     "tailCentimeters": {
                       "type": "array",
@@ -7200,15 +7426,7 @@
                   "minimum": 0,
                   "range": "xsd:nonNegativeInteger",
                   "subject": "MY.nestCount",
-                  "title": "Nest/cavity count",
-                  "sortOrder": -1
-                },
-                "nestDistanceFromLineTransectStartMeters": {
-                  "type": "integer",
-                  "minimum": 0,
-                  "range": "xsd:nonNegativeInteger",
-                  "subject": "MY.nestDistanceFromLineTransectStartMeters",
-                  "title": "metrimäärä (linjan alusta), jolla pönttö/kolo on",
+                  "title": "Nest count",
                   "sortOrder": -1
                 },
                 "nestNotes": {
@@ -7216,25 +7434,6 @@
                   "range": "xsd:string",
                   "subject": "MY.nestNotes",
                   "title": "Nest notes",
-                  "sortOrder": -1
-                },
-                "nestSize": {
-                  "type": "string",
-                  "enum": [
-                    "",
-                    "MY.nestSizeEnum1",
-                    "MY.nestSizeEnum2",
-                    "MY.nestSizeEnum3"
-                  ],
-                  "enumNames": [
-                    "",
-                    "PPL = pieni pikkulintu, esim. tiaispönttö, hömötiaisen kaivertama kolo",
-                    "IPL = iso pikkulintu eli noin kottaraispönttö/käpytikan kolo",
-                    "pöllö = palokärjen kolon kokoluokka ja sitä suuremmat"
-                  ],
-                  "range": "MY.nestSizeEnum",
-                  "subject": "MY.nestSize",
-                  "title": "Pöntön kokoluokka",
                   "sortOrder": -1
                 },
                 "nestTreeDiameterInCentimeters": {
@@ -7533,7 +7732,7 @@
                   "subject": "MY.preservation",
                   "description": "Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.",
                   "title": "Preservation",
-                  "sortOrder": 21
+                  "sortOrder": 20
                 },
                 "primarySpecimen": {
                   "type": "boolean",
@@ -8835,6 +9034,7 @@
                       "type": "string",
                       "range": "xsd:string",
                       "subject": "MY.dateBegin",
+                      "description": "Collection date as exact date or start date for a time period.",
                       "title": "Start date",
                       "sortOrder": 3
                     },
@@ -8842,6 +9042,7 @@
                       "type": "string",
                       "range": "xsd:string",
                       "subject": "MY.dateEnd",
+                      "description": "End date for a collection time period, if exact date is not know.",
                       "title": "End date",
                       "sortOrder": 4
                     },
@@ -8969,7 +9170,7 @@
                   "subject": "MZ.publicityRestrictions",
                   "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                   "title": "Publicity restrictions",
-                  "sortOrder": 31
+                  "sortOrder": 32
                 },
                 "identifications": {
                   "type": "array",
@@ -9192,7 +9393,7 @@
                         "subject": "MY.isPartOf",
                         "description": "Which parent or larger collection this is part of.",
                         "title": "Is part of",
-                        "sortOrder": 32
+                        "sortOrder": 34
                       },
                       "isTaxonGroup": {
                         "type": "boolean",
@@ -9231,7 +9432,7 @@
                         "subject": "MY.taxon",
                         "description": "Taxon name",
                         "title": "Species",
-                        "sortOrder": 2
+                        "sortOrder": 1
                       },
                       "taxonID": {
                         "type": "string",
@@ -9411,7 +9612,7 @@
                         "subject": "MZ.publicityRestrictions",
                         "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                         "title": "Publicity restrictions",
-                        "sortOrder": 31
+                        "sortOrder": 32
                       },
                       "sortOrder": {
                         "type": "integer",
@@ -9462,7 +9663,7 @@
                         "subject": "MY.isPartOf",
                         "description": "Which parent or larger collection this is part of.",
                         "title": "Is part of",
-                        "sortOrder": 32
+                        "sortOrder": 34
                       },
                       "typeAuthor": {
                         "type": "string",
@@ -9648,7 +9849,7 @@
                         "subject": "MZ.publicityRestrictions",
                         "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
                         "title": "Publicity restrictions",
-                        "sortOrder": 31
+                        "sortOrder": 32
                       }
                     }
                   },
@@ -10076,7 +10277,7 @@
                               "subject": "MY.isPartOf",
                               "description": "Which parent or larger collection this is part of.",
                               "title": "Is part of",
-                              "sortOrder": 32
+                              "sortOrder": 34
                             }
                           }
                         },
@@ -10318,7 +10519,7 @@
                         "subject": "MY.isPartOf",
                         "description": "Which parent or larger collection this is part of.",
                         "title": "Is part of",
-                        "sortOrder": 32
+                        "sortOrder": 34
                       },
                       "measurement": {
                         "type": "object",
@@ -10477,7 +10678,7 @@
                             "subject": "MY.isPartOf",
                             "description": "Which parent or larger collection this is part of.",
                             "title": "Is part of",
-                            "sortOrder": 32
+                            "sortOrder": 34
                           },
                           "tailCentimeters": {
                             "type": "array",

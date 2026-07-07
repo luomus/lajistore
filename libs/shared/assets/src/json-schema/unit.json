@@ -38,7 +38,7 @@
       "subject": "MY.DNASampleLocation",
       "description": "Leave empty if no sample taken, or if the sample is recorded separately",
       "title": "DNA sample location",
-      "sortOrder": 29
+      "sortOrder": 30
     },
     "abundanceString": {
       "type": "string",
@@ -115,7 +115,7 @@
       "subject": "MY.additionalIDs",
       "description": "Other identifiers this specimen has, in format 'type:identifier'. For example: 'mzhtypes:123' (old MAZ-type number)",
       "title": "Additional ID's",
-      "sortOrder": 19
+      "sortOrder": 18
     },
     "adultIndividualCount": {
       "type": "integer",
@@ -1024,7 +1024,7 @@
       "subject": "MY.isPartOf",
       "description": "Which parent or larger collection this is part of.",
       "title": "Is part of",
-      "sortOrder": 32
+      "sortOrder": 34
     },
     "juvenileIndividualCount": {
       "type": "integer",
@@ -1349,7 +1349,7 @@
           "subject": "MY.isPartOf",
           "description": "Which parent or larger collection this is part of.",
           "title": "Is part of",
-          "sortOrder": 32
+          "sortOrder": 34
         },
         "tailCentimeters": {
           "type": "array",
@@ -1604,15 +1604,7 @@
       "minimum": 0,
       "range": "xsd:nonNegativeInteger",
       "subject": "MY.nestCount",
-      "title": "Nest/cavity count",
-      "sortOrder": -1
-    },
-    "nestDistanceFromLineTransectStartMeters": {
-      "type": "integer",
-      "minimum": 0,
-      "range": "xsd:nonNegativeInteger",
-      "subject": "MY.nestDistanceFromLineTransectStartMeters",
-      "title": "metrimäärä (linjan alusta), jolla pönttö/kolo on",
+      "title": "Nest count",
       "sortOrder": -1
     },
     "nestNotes": {
@@ -1620,25 +1612,6 @@
       "range": "xsd:string",
       "subject": "MY.nestNotes",
       "title": "Nest notes",
-      "sortOrder": -1
-    },
-    "nestSize": {
-      "type": "string",
-      "enum": [
-        "",
-        "MY.nestSizeEnum1",
-        "MY.nestSizeEnum2",
-        "MY.nestSizeEnum3"
-      ],
-      "enumNames": [
-        "",
-        "PPL = pieni pikkulintu, esim. tiaispönttö, hömötiaisen kaivertama kolo",
-        "IPL = iso pikkulintu eli noin kottaraispönttö/käpytikan kolo",
-        "pöllö = palokärjen kolon kokoluokka ja sitä suuremmat"
-      ],
-      "range": "MY.nestSizeEnum",
-      "subject": "MY.nestSize",
-      "title": "Pöntön kokoluokka",
       "sortOrder": -1
     },
     "nestTreeDiameterInCentimeters": {
@@ -1937,7 +1910,7 @@
       "subject": "MY.preservation",
       "description": "Main method of preservation. If parts of the specimen are preserved in different ways, you can choose several methods.",
       "title": "Preservation",
-      "sortOrder": 21
+      "sortOrder": 20
     },
     "primarySpecimen": {
       "type": "boolean",
@@ -3239,6 +3212,7 @@
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.dateBegin",
+          "description": "Collection date as exact date or start date for a time period.",
           "title": "Start date",
           "sortOrder": 3
         },
@@ -3246,6 +3220,7 @@
           "type": "string",
           "range": "xsd:string",
           "subject": "MY.dateEnd",
+          "description": "End date for a collection time period, if exact date is not know.",
           "title": "End date",
           "sortOrder": 4
         },
@@ -3373,7 +3348,7 @@
       "subject": "MZ.publicityRestrictions",
       "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
       "title": "Publicity restrictions",
-      "sortOrder": 31
+      "sortOrder": 32
     },
     "identifications": {
       "type": "array",
@@ -3596,7 +3571,7 @@
             "subject": "MY.isPartOf",
             "description": "Which parent or larger collection this is part of.",
             "title": "Is part of",
-            "sortOrder": 32
+            "sortOrder": 34
           },
           "isTaxonGroup": {
             "type": "boolean",
@@ -3635,7 +3610,7 @@
             "subject": "MY.taxon",
             "description": "Taxon name",
             "title": "Species",
-            "sortOrder": 2
+            "sortOrder": 1
           },
           "taxonID": {
             "type": "string",
@@ -3815,7 +3790,7 @@
             "subject": "MZ.publicityRestrictions",
             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
             "title": "Publicity restrictions",
-            "sortOrder": 31
+            "sortOrder": 32
           },
           "sortOrder": {
             "type": "integer",
@@ -3866,7 +3841,7 @@
             "subject": "MY.isPartOf",
             "description": "Which parent or larger collection this is part of.",
             "title": "Is part of",
-            "sortOrder": 32
+            "sortOrder": 34
           },
           "typeAuthor": {
             "type": "string",
@@ -4052,7 +4027,7 @@
             "subject": "MZ.publicityRestrictions",
             "description": "PUBLIC: all data can be published; PROTECTED: exact locality is hidden (100*100km square); PRIVATE: most of the data is hidden. Empty value means same as public.",
             "title": "Publicity restrictions",
-            "sortOrder": 31
+            "sortOrder": 32
           }
         }
       },
@@ -4480,7 +4455,7 @@
                   "subject": "MY.isPartOf",
                   "description": "Which parent or larger collection this is part of.",
                   "title": "Is part of",
-                  "sortOrder": 32
+                  "sortOrder": 34
                 }
               }
             },
@@ -4722,7 +4697,7 @@
             "subject": "MY.isPartOf",
             "description": "Which parent or larger collection this is part of.",
             "title": "Is part of",
-            "sortOrder": 32
+            "sortOrder": 34
           },
           "measurement": {
             "type": "object",
@@ -4881,7 +4856,7 @@
                 "subject": "MY.isPartOf",
                 "description": "Which parent or larger collection this is part of.",
                 "title": "Is part of",
-                "sortOrder": 32
+                "sortOrder": 34
               },
               "tailCentimeters": {
                 "type": "array",

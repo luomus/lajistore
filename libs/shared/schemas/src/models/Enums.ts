@@ -175,10 +175,12 @@ export type MXSecureLevels =
   | "MX.secureLevelHighest"
   | "MX.secureLevelNoShow";
 export type MYCollectionQualityEnum =
+  | ""
   | "MY.collectionQualityEnum3"
   | "MY.collectionQualityEnum2"
   | "MY.collectionQualityEnum1";
 export type MYCollectionTypes =
+  | ""
   | "MY.collectionTypeSpecimens"
   | "MY.collectionTypeLiving"
   | "MY.collectionTypeMonitoring"
@@ -317,6 +319,7 @@ export type MKVEndangermentReasonEnum =
   | "MKV.endangermentReasonO"
   | "MKV.endangermentReasonVr"
   | "MKV.endangermentReasonKh"
+  | "MKV.endangermentReasonRe"
   | "MKV.endangermentReasonI"
   | "MKV.endangermentReasonS"
   | "MKV.endangermentReasonKil"
@@ -404,7 +407,8 @@ export type MHLResultServiceTypeEnum =
   | "MHL.resultServiceTypeSykeInsectProjects"
   | "MHL.resultServiceTypeInvasiveControl"
   | "MHL.resultServiceTypeCompleteLists"
-  | "MHL.resultServiceTypeWaterBirdCount";
+  | "MHL.resultServiceTypeWaterBirdCount"
+  | "MHL.resultServiceTypeArchipelagoBirdCensus";
 export type MHLViewerTypeEnum =
   | ""
   | "MHL.viewerTypeLineTransect"
@@ -958,6 +962,7 @@ export type MKVHabitatEnum =
   | "MKV.habitatMlk"
   | "MKV.habitatMt"
   | "MKV.habitatMtl"
+  | "MKV.habitatMtm"
   | "MKV.habitatS"
   | "MKV.habitatSl"
   | "MKV.habitatSla"
@@ -975,9 +980,9 @@ export type MKVHabitatEnum =
   | "MKV.habitatV"
   | "MKV.habitatVi"
   | "MKV.habitatVik"
-  | "MKV.habitatVim"
   | "MKV.habitatVis"
-  | "MKV.habitatVih"
+  | "MKV.habitatVim"
+  | "MKV.habitatVia"
   | "MKV.habitatVie"
   | "MKV.habitatVip"
   | "MKV.habitatVs"
@@ -1035,26 +1040,28 @@ export type MKVHabitatEnum =
   | "MKV.habitatI"
   | "MKV.habitatIn"
   | "MKV.habitatIt"
-  | "MKV.habitatIh"
   | "MKV.habitatIk"
+  | "MKV.habitatIh"
   | "MKV.habitatIo"
   | "MKV.habitatIv"
   | "MKV.habitatIp"
-  | "MKV.habitatIu"
+  | "MKV.habitatIj"
   | "MKV.habitatIr"
   | "MKV.habitatU";
 export type MKVHabitatSpecificTypeEnum =
   | ""
   | "MKV.habitatSpecificTypeV"
+  | "MKV.habitatSpecificTypeLU"
   | "MKV.habitatSpecificTypeH"
   | "MKV.habitatSpecificTypeP"
   | "MKV.habitatSpecificTypeJ"
   | "MKV.habitatSpecificTypePAK"
   | "MKV.habitatSpecificTypeVAK"
+  | "MKV.habitatSpecificTypeCA"
   | "MKV.habitatSpecificTypeRA"
+  | "MKV.habitatSpecificTypeLK"
   | "MKV.habitatSpecificTypeKA"
-  | "MKV.habitatSpecificTypeKE"
-  | "MKV.habitatSpecificTypeCA";
+  | "MKV.habitatSpecificTypeKE";
 export type MYDetMethodEnum =
   | ""
   | "MY.detMethodFreshSample"
@@ -1264,6 +1271,23 @@ export type MXTypeOfOccurrenceEnum =
   | "MX.typeOfOccurrenceBirdLifeCategoryD"
   | "MX.typeOfOccurrenceBirdLifeCategoryE"
   | "MX.typeOfOccurrenceOccursBasedOnOccurrences";
+export type MYLineTransectRouteFieldTypeEnum =
+  | ""
+  | "MY.lineTransectRouteFieldTypeInner"
+  | "MY.lineTransectRouteFieldTypeOuter";
+export type MYNestSizeEnum =
+  | ""
+  | "MY.nestSizeEnum1"
+  | "MY.nestSizeEnum2"
+  | "MY.nestSizeEnum3";
+export type MYNestTypeEnum =
+  | ""
+  | "MY.nestTypeTreeCavity"
+  | "MY.nestTypeTwig"
+  | "MY.nestTypeNestBox"
+  | "MY.nestTypeBuilding"
+  | "MY.nestTypeGroundCavity"
+  | "MY.nestTypeOther";
 export type MNPAccessibilityEnum =
   | ""
   | "MNP.accessibilityEasy"
@@ -1975,19 +1999,6 @@ export type MYNativeStatusEnum =
   | ""
   | "MY.native"
   | "MY.nonNative";
-export type MYNestSizeEnum =
-  | ""
-  | "MY.nestSizeEnum1"
-  | "MY.nestSizeEnum2"
-  | "MY.nestSizeEnum3";
-export type MYNestTypeEnum =
-  | ""
-  | "MY.nestTypeTreeCavity"
-  | "MY.nestTypeTwig"
-  | "MY.nestTypeNestBox"
-  | "MY.nestTypeBuilding"
-  | "MY.nestTypeGroundCavity"
-  | "MY.nestTypeOther";
 export type MYObservationStatusEnum =
   | ""
   | "MY.observationStatusIgnored"
@@ -2215,10 +2226,6 @@ export type MYLineTransectObsTypeEnum =
   | "MY.lineTransectObsTypeSeenBrood"
   | "MY.lineTransectObsTypeSeenNest"
   | "MY.lineTransectObsTypeUnknown";
-export type MYLineTransectRouteFieldTypeEnum =
-  | ""
-  | "MY.lineTransectRouteFieldTypeInner"
-  | "MY.lineTransectRouteFieldTypeOuter";
 export type MYLolifeDroppingsCountEnum =
   | ""
   | "MY.lolifeDroppingsCount0"

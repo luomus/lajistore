@@ -70,7 +70,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.criteriaA",
-      "description": "<p> <b>A1</b>\tHavaittu, arvioitu, päätelty tai epäilty populaation pieneneminen äärimmäisen uhanalaisilla vähintään 90 %:lla, erittäin uhanalaisilla vähintään 70 %:lla ja vaarantuneilla vähintään 50 %:lla viimeisten kymmenen vuoden tai kolmen sukupolven aikana (valitaan pitempi jakso) tilanteessa, jossa pienenemisen syyt ovat selvästi peruttavissa JA tunnettuja JA loppuneita, perustuen johonkin seuraavista vaihtoehdoista: </p> <ul><li><b>(a)</b> suora havainto</li> <li><b>(b)</b> taksonille käyttökelpoinen runsausindeksi</li> <li><b>(c)</b> esiintymisalueen tai levinneisyysalueen pieneneminen ja/tai elinympäristön laadun huonontuminen</li> <li><b>(d)</b> todellinen tai mahdollinen hyödyntäminen</li> <li><b>(e)</b> vieraiden taksonien, risteytymisen, tautien, saasteiden, kilpailijoiden tai loisten haitalliset vaikutukset.</li></ul> <p> <b>A2</b>\tHavaittu, arvioitu, päätelty tai epäilty populaation pieneneminen äärimmäisen uhanalaisilla vähintään 80 %:lla, erittäin uhanalaisilla vähintään 50 %:lla ja vaarantuneilla vähintään 30 %:lla viimeisten kymmenen vuoden tai kolmen sukupolven aikana (valitaan pitempi jakso) tilanteessa, jossa pieneneminen ja sen syyt eivät ehkä ole loppuneet TAI niitä ei tunneta TAI ne eivät ehkä ole peruttavissa, perustuen yllä oleviin vaihtoehtoihin <b>(a)–(e)</b>. </p> <p> <b>A3</b>\tÄärimmäisen uhanalaisilla vähintään 80 %, erittäin uhanalaisilla vähintään 50 % ja vaarantuneilla vähintään 30 % populaation pieneneminen, jonka ennustetaan tai epäillään tapahtuvan tulevien kymmenen vuoden tai kolmen sukupolven aikana (valitaan pitempi jakso, korkeintaan 100 vuotta), perustuen yllä oleviin vaihtoehtoihin <b>(b)–(e)</b>. </p> <p> <b>A4</b>\tHavaittu, arvioitu, päätelty, ennustettu tai epäilty populaation pieneneminen äärimmäisen uhanalaisilla vähintään 80 %:lla, erittäin uhanalaisilla vähintään 50 %:lla ja vaarantuneilla vähintään 30 %:lla kymmenen vuoden tai kolmen sukupolven ajanjaksolla (valitaan pitempi; tulevaisuuteen maksimi 100 vuotta), johon sisältyy sekä mennyttä että tulevaa, ja pieneneminen ja sen syyt eivät ole loppuneet TAI niitä ei tunneta TAI ne eivät ehkä ole peruttavissa, perustuen yllä oleviin vaihtoehtoihin <b>(a)–(e)</b>. </p>",
+      "description": "<p><b>Populaatiokoon pieneneminen minkä tahansa vaihtoehdon 1–4 mukaan:</b></p>\n\n<p> <b>A1</b> Havaittu, arvioitu, päätelty tai epäilty populaatiokoon pieneneminen CR vähintään 90 %, EN vähintään 70 % ja VU vähintään 50 % viimeisten kymmenen vuoden tai kolmen sukupolven aikana (valitaan pitempi jakso) tilanteessa, jossa pienenemisen syyt ovat selvästi peruttavissa JA tunnettuja JA loppuneita, perustuen johonkin seuraavista vaihtoehdoista (a–e): </p>\n\n<ul>\n<li><b>(a)</b> suora havainto</li>\n<li><b>(b)</b> taksonille käyttökelpoinen runsausindeksi</li>\n<li><b>(c)</b> esiintymisalueen tai levinneisyysalueen pieneneminen ja/tai elinympäristön laadun heikkeneminen</li>\n<li><b>(d)</b> todellinen tai mahdollinen hyödyntäminen</li>\n<li><b>(e)</b> vieraiden taksonien, risteytymisen, tautien, saasteiden, kilpailijoiden tai loisten haitalliset vaikutukset.</li>\n</ul>\n\n<p> <b>A2</b> Havaittu, arvioitu, päätelty tai epäilty populaatiokoon pieneneminen CR vähintään 80 %, EN vähintään 50 % ja VU vähintään 30 % viimeisten kymmenen vuoden tai kolmen sukupolven aikana (valitaan pitempi jakso) tilanteessa, jossa pieneneminen ja sen syyt eivät ehkä ole loppuneet TAI niitä ei tunneta TAI ne eivät ehkä ole peruttavissa, perustuen yllä oleviin vaihtoehtoihin (a–e). </p>\n\n<p> <b>A3</b> Populaatiokoon pieneneminen CR vähintään 80 %, EN vähintään 50 % ja VU vähintään 30 %, jonka ennustetaan tai epäillään tapahtuvan tulevien kymmenen vuoden tai kolmen sukupolven aikana (valitaan pitempi jakso, korkeintaan 100 vuotta), perustuen yllä oleviin vaihtoehtoihin (b–e). </p>\n\n<p> <b>A4</b> Havaittu, arvioitu, päätelty, ennustettu tai epäilty populaatiokoon pieneneminen CR vähintään 80 %, EN vähintään 50 % ja VU vähintään 30 % kymmenen vuoden tai kolmen sukupolven ajanjaksolla (valitaan pitempi; tulevaisuuteen maksimi 100 vuotta), johon sisältyy sekä mennyttä että tulevaa, ja pienenemisen syyt eivät ole loppuneet TAI niitä ei tunneta TAI ne eivät ehkä ole peruttavissa, perustuen yllä oleviin vaihtoehtoihin (a–e). </p>",
       "title": "Criterion A. Reduction of the population",
       "sortOrder": -1
     },
@@ -85,7 +85,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.criteriaB",
-      "description": "<p> Maantieteellinen alue tarkasteltuna joko\nlevinneisyysalueen (B1) tai esiintymisalueen (B2) tai\nmolempien mukaan.</p>\n\n<p>\n<b>B1</b>\tLevinneisyysalueen arvioidaan olevan äärimmäisen\nuhanalaisilla alle 100 km², erittäin uhanalaisilla alle 5 000\nkm², vaarantuneilla alle 20 000 km² ja vähintään kaksi kohdista\na–c täyttyy:\n</p>\n<p>\n<b>B1a.</b> esiintyminen on voimakkaasti pirstoutunut TAI äärimmäisen \nuhanalaisilla vain yksi tai erittäin uhanalaisilla enintään viisi tai \nvaarantuneilla enintään kymmenen esiintymispaikkaa tunnetaan\n</p>\n<p>\n<b>B1b.</b> havaittu, päätelty tai ennustettu jatkuva väheneminen\njoissakin seuraavista:\n</p>\n<ul><li><b>(i)</b> levinneisyysalue</li>\n<li><b>(ii)</b> esiintymisalue</li>\n<li><b>(iii)</b> soveliaan elinympäristön määrä ja/tai\nlaatu</li>\n<li><b>(iv)</b> esiintymien tai osapopulaatioiden määrä</li>\n<li><b>(v)</b> lisääntymiskykyisten yksilöiden määrä</li></ul>\n\n<p>\n<b>B1c.</b> erittäin suuret vaihtelut joissakin seuraavista:\n</p>\n<ul><li><b>(i)</b> levinneisyysalue</li>\n<li><b>(ii)</b> esiintymisalue</li>\n<li><b>(iii)</b> esiintymien tai osapopulaatioiden määrä</li>\n<li><b>(iv)</b> lisääntymiskykyisten yksilöiden määrä</li></ul>\n\n\n<p>\n<b>B2</b>\tEsiintymisalueen arvioidaan olevan äärimmäisen\nuhanalaisilla alle 10 km², erittäin uhanalaisilla alle 500 km²,\nvaarantuneilla alle 2 000 km² ja vähintään kaksi kohdista\na–c täyttyy:\n</p>\n<p>\n<b>B2a.</b> esiintyminen on voimakkaasti pirstoutunut TAI äärimmäisen \nuhanalaisilla vain yksi tai erittäin uhanalaisilla enintään viisi tai \nvaarantuneilla enintään kymmenen esiintymispaikkaa tunnetaan\n</p>\n<p>\n<b>B2b.</b> havaittu, päätelty tai ennustettu jatkuva väheneminen\njoissakin seuraavista:\n</p>\n<ul><li><b>(i)</b> levinneisyysalue</li>\n<li><b>(ii)</b> esiintymisalue</li>\n<li><b>(iii)</b> soveliaan elinympäristön määrä ja/tai laatu</li>\n<li><b>(iv)</b> esiintymien tai osapopulaatioiden määrä</li>\n<li><b>(v)</b> lisääntymiskykyisten yksilöiden määrä</li></ul>\n\n<p>\n<b>B2c.</b> erittäin suuret vaihtelut joissakin seuraavista:\n</p>\n<ul><li><b>(i)</b> levinneisyysalue</li>\n<li><b>(ii)</b> esiintymisalue</li>\n<li><b>(iii)</b> esiintymien tai osapopulaatioiden määrä</li>\n<li><b>(iv)</b> lisääntymiskykyisten yksilöiden määrä</li></ul>",
+      "description": "<p><b>Maantieteellinen alue tarkasteltuna joko levinneisyysalueen (B1) tai esiintymisalueen (B2) tai molempien mukaan.</b></p>\n\n<p><b>B1</b> Levinneisyysalueen arvioidaan olevan < 100 km² CR, < 5 000 km² EN, < 20 000 km² VU JA vähintään kaksi kohdista a–c täyttyy:</p>\n\n<p><b>a.</b> esiintyminen on voimakkaasti pirstoutunut TAI vain yksi CR, enintään viisi EN tai enintään kymmenen VU esiintymispaikkaa tunnetaan</p>\n\n<p><b>b.</b> havaittu, päätelty tai ennustettu jatkuva väheneminen joissakin seuraavista:</p>\n<ul>\n<li><b>(i)</b> levinneisyysalue</li>\n<li><b>(ii)</b> esiintymisalue</li>\n<li><b>(iii)</b> soveliaan elinympäristön määrä ja/tai laatu</li>\n<li><b>(iv)</b> esiintymien tai osapopulaatioiden määrä</li>\n<li><b>(v)</b> lisääntymiskykyisten yksilöiden määrä</li>\n</ul>\n\n<p><b>c.</b> erittäin suuret vaihtelut joissakin seuraavista:</p>\n<ul>\n<li><b>(i)</b> levinneisyysalue</li>\n<li><b>(ii)</b> esiintymisalue</li>\n<li><b>(iii)</b> esiintymien tai osapopulaatioiden määrä</li>\n<li><b>(iv)</b> lisääntymiskykyisten yksilöiden määrä</li>\n</ul>\n\n<p><b>B2</b> Esiintymisalueen arvioidaan olevan < 10 km² CR, < 500 km² EN, < 2 000 km² VU JA vähintään kaksi kohdista a–c täyttyy:</p>\n\n<p><b>a.</b> esiintyminen on voimakkaasti pirstoutunut TAI vain yksi CR, enintään viisi EN tai enintään kymmenen VU esiintymispaikkaa tunnetaan</p>\n\n<p><b>b.</b> havaittu, päätelty tai ennustettu jatkuva väheneminen joissakin seuraavista:</p>\n<ul>\n<li><b>(i)</b> levinneisyysalue</li>\n<li><b>(ii)</b> esiintymisalue</li>\n<li><b>(iii)</b> soveliaan elinympäristön määrä ja/tai laatu</li>\n<li><b>(iv)</b> esiintymien tai osapopulaatioiden määrä</li>\n<li><b>(v)</b> lisääntymiskykyisten yksilöiden määrä</li>\n</ul>\n\n<p><b>c.</b> erittäin suuret vaihtelut joissakin seuraavista:</p>\n<ul>\n<li><b>(i)</b> levinneisyysalue</li>\n<li><b>(ii)</b> esiintymisalue</li>\n<li><b>(iii)</b> esiintymien tai osapopulaatioiden määrä</li>\n<li><b>(iv)</b> lisääntymiskykyisten yksilöiden määrä</li>\n</ul>",
       "title": "Criterion B. Geographical area",
       "sortOrder": -1
     },
@@ -100,7 +100,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.criteriaC",
-      "description": "<p>Pieni ja jatkuvasti taantuva populaatio\tPopulaatio on arvioitu pienemmäksi kuin äärimmäisen\nuhanalaisilla 250, erittäin uhanalaisilla 2 500 ja vaarantuneilla\n10 000 lisääntymiskykyistä yksilöä sekä jompikumpi\nseuraavista:</p>\n\n<p>\n<b>C1</b>\tÄärimmäisen uhanalaisilla vähintään 25 %:n jatkuva\nväheneminen kolmen vuoden tai yhden sukupolven aikana\n(valitaan pitempi jakso, tulevaisuuteen korkeintaan\n100 vuotta), erittäin uhanalaisilla vähintään 20 %:n jatkuva\nväheneminen viiden vuoden tai kahden sukupolven aikana\n(valitaan pitempi jakso, tulevaisuuteen korkeintaan\n100 vuotta) ja vaarantuneilla vähintään 10 %:n jatkuva\nväheneminen kymmenen vuoden tai kolmen sukupolven\naikana (valitaan pitempi jakso, tulevaisuuteen korkeintaan\n100 vuotta)\n</p>\n\n<p>\n<b>C2</b>\tHavaittu, ennustettu tai päätelty lisääntymiskykyisten\nyksilöiden määrän jatkuva väheneminen JA vähintään\ntoinen seuraavista (a–b):\n</p>\n<p>\n<b>C2a.</b> populaation rakenne joko:\n</p>\n<ul><li>\n<b>(i)</b> missään osapopulaatiossa ei ole äärimmäisen\nuhanalaisilla yli 50, erittäin uhanalaisilla yli\n250 ja vaarantuneilla yli 1 000 lisääntymiskykyistä\nyksilöä</li>\n<li>\n<b>(ii)</b> äärimmäisen uhanalaisilla vähintään 90 % ja\nerittäin uhanalaisilla vähintään 95 % lisääntymiskykyisistä\nyksilöistä sekä vaarantuneilla\nkaikki yksilöt ovat yhdessä osapopulaatiossab. erittäin suuret vaihtelut lisääntymiskykyisten\nyksilöiden määrässä\n</li></ul>\n\n<p>\n<b>C2b.</b> erittäin suuret vaihtelut lisääntymiskykyisten\nyksilöiden määrässä\n</p>",
+      "description": "<p><b>Pieni ja jatkuvasti taantuva populaatio.</b> Populaatiokoko < 250 CR; < 2 500 EN; < 10 000 VU lisääntymiskykyistä yksilöä SEKÄ jompikumpi seuraavista C1 TAI C2:</p>\n\n<p><b>C1</b> Arvioitu jatkuva taantuminen:</p>\n\n<p>CR vähintään 25 %:n jatkuva väheneminen kolmen vuoden tai yhden sukupolven aikana (valitaan pitempi jakso, tulevaisuuteen korkeintaan 100 vuotta)</p>\n\n<p>EN vähintään 20 %:n jatkuva väheneminen viiden vuoden tai kahden sukupolven aikana (valitaan pitempi jakso, tulevaisuuteen korkeintaan 100 vuotta)</p>\n\n<p>VU vähintään 10 %:n jatkuva väheneminen kymmenen vuoden tai kolmen sukupolven aikana (valitaan pitempi jakso, tulevaisuuteen korkeintaan 100 vuotta)</p>\n\n<p><b>C2</b> Havaittu, ennustettu tai päätelty populaatiokoon jatkuva taantuminen JA vähintään a TAI b:</p>\n\n<p><b>a.</b> populaation rakenne joko i TAI ii:</p>\n\n<ul>\n<li><b>(i)</b> missään osapopulaatiossa ei ole yli 50 CR, yli 250 EN ja yli 1 000 VU lisääntymiskykyistä yksilöä</li>\n<li><b>(ii)</b> vähintään 90 % CR, vähintään 95 % EN tai kaikki VU lisääntymiskykyiset yksilöt ovat yhdessä osapopulaatiossa</li>\n</ul>\n\n<p><b>b.</b> erittäin suuret vaihtelut lisääntymiskykyisten yksilöiden määrässä</p>",
       "title": "Criterion C. Small and constantly decreasing population",
       "sortOrder": -1
     },
@@ -115,7 +115,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.criteriaD",
-      "description": "<p>Populaation arvioitu koko on äärimmäisen uhanalaisilla\nalle 50 ja erittäin uhanalaisilla alle 250 lisääntymiskykyistä\nyksilöä. Vaarantuneilla populaatio on hyvin pieni tai\nrajoittunut jommankumman vaihtoehdon mukaan:</p>\n<p>\n<b>D1</b>\tArvioitu populaatiokoko on alle 1 000 lisääntymiskykyistä\nyksilöä.\n</p>\n\n<p>\n<b>D2</b>\tPopulaatiolla on hyvin rajoittunut esiintymisalue\n(yleensä alle 20 km²) tai vähän esiintymispaikkoja (yleensä\nkorkeintaan viisi), ja populaatio on siten altis äkillisille\nja ennustamattomille ihmistoiminnan tai sattuman vaikutuksille\nja voi lyhyessä ajassa muuttua äärimmäisen\nuhanalaiseksi tai jopa hävitä.\n</p>",
+      "description": "<p><b>D1</b> Populaatiokoko (lisääntymiskykyiset yksilöt) < 50 CR; < 250 EN; < 1 000 VU</p>\n\n<p><b>D2</b> Populaatio on hyvin pieni tai rajoittunut. Esiintymisalue (AOO) yleensä alle 20 km² TAI populaatiolla yleensä korkeintaan 5 esiintymispaikkaa JA populaatio on siten altis äkillisille ja ennustamattomille ihmistoiminnan tai sattuman vaikutuksille ja voi lyhyessä ajassa muuttua äärimmäisen uhanalaiseksi tai jopa hävitä = VU.</p>\n\n<p>Jos luokka on jommankumman D-kriteerin mukaan CR tai EN, merkitään pelkkä D. Jos VU, merkitään D1 tai D2.</p>",
       "title": "Criterion D. Very small and restricted population",
       "sortOrder": -1
     },
@@ -130,8 +130,8 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.criteriaE",
-      "description": "<p>Kvantitatiivisen analyysin perusteella todennäköisyys\nhävitä luonnosta on äärimmäisen uhanalaisilla vähintään\n50 % kymmenen vuoden tai kolmen sukupolven aikana\n(valitaan pitempi, korkeintaan 100 vuotta), erittäin\nuhanalaisilla vähintään 20 % kahdenkymmenen vuoden\ntai viiden sukupolven aikana (valitaan pitempi, korkeintaan\n100 vuotta) ja vaarantuneilla vähintään 10 % sadan\nvuoden aikana.Kvantitatiivisen analyysin perusteella todennäköisyys\nhävitä luonnosta on äärimmäisen uhanalaisilla vähintään\n50 % kymmenen vuoden tai kolmen sukupolven aikana\n(valitaan pitempi, korkeintaan 100 vuotta), erittäin\nuhanalaisilla vähintään 20 % kahdenkymmenen vuoden\ntai viiden sukupolven aikana (valitaan pitempi, korkeintaan\n100 vuotta) ja vaarantuneilla vähintään 10 % sadan\nvuoden aikana.\n</p>",
-      "title": "Criterion D. Quantitative analysis",
+      "description": "<p><b>E</b> Kvantitatiivisen analyysin perusteella todennäköisyys hävitä luonnosta on CR vähintään 50 % kymmenen vuoden tai kolmen sukupolven aikana (valitaan pitempi, korkeintaan 100 vuotta); EN vähintään 20 % kahdenkymmenen vuoden tai viiden sukupolven aikana (valitaan pitempi, korkeintaan 100 vuotta) ja VU vähintään 10 % sadan vuoden aikana.</p>",
+      "title": "Criterion E. Quantitative analysis",
       "sortOrder": -1
     },
     "criteriaENotes": {
@@ -159,7 +159,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.criteriaNotes",
-      "title": "Comments on the criteria",
+      "title": "Additional information on the criteria",
       "sortOrder": -1
     },
     "ddReason": {
@@ -214,7 +214,7 @@
       "type": "string",
       "range": "xsd:int",
       "subject": "MKV.distributionAreaMin",
-      "description": "Merkitäksesi \"enintään\" jätä alaraja tyhjäksi. Merkitäksesi \"vähintään\" jätä yläraja tyhjäksi.",
+      "description": "EOO, esiintymispaikkojen ulkopuolelle vedetyn rajaviivan sisällä olevan alueen pinta-ala. Merkitäksesi \"enintään\" jätä alaraja tyhjäksi. Merkitäksesi \"vähintään\" jätä yläraja tyhjäksi. Täsmällinen luku merkitään molempiin.",
       "title": "Distribution range, min.",
       "sortOrder": -1
     },
@@ -286,7 +286,7 @@
       ],
       "range": "MKV.externalPopulationImpactOnRedListStatusEnum",
       "subject": "MKV.externalPopulationImpactOnRedListStatus",
-      "description": "<p>Arvioinnin viimeisessä vaiheessa otetaan huomioon Suomen ulkopuolella olevien populaatioiden mahdollinen vaikutus arvioitavaan Suomen populaatioon. Tarvittaessa alennetaan tai korotetaan luokkaa sen perusteella. Luokkaa alennetaan, jos ulkopuolelta saatava täydennys voi vähentää lajin häviämisriskiä. Alennettu tai korotettu luokka on lajin lopullinen uhanalaisuusluokka. </p>\n\n<p>Luokka-kenttään asetetaan alennuksen tai korotuksen aiheuttama lopputulos. Tähän kenttään asetetaan tieto tehdystä alennuksesta tai korotuksesta.</p>",
+      "description": "<p>Arvioinnin viimeisessä vaiheessa otetaan huomioon Suomen ulkopuolella olevien populaatioiden mahdollinen vaikutus arvioitavaan Suomen populaatioon. Tarvittaessa luokkaa alennetaan tai korotetaan sen perusteella (ks. IUCN-ohje). Luokkaa alennetaan esim., jos ulkopuolelta saatava täydennys voi vähentää lajin häviämisriskiä. Luokkaa korotetaan esim., jos Suomessa on alueellinen nielu, joka on riippuvainen ulkopuolisesta saavunnasta, joka on vähenemässä.</p>\n<p>Alennettu tai korotettu luokka on lajin lopullinen uhanalaisuusluokka.</p>",
       "title": "Reducing or increasing the Red List category",
       "sortOrder": -1
     },
@@ -316,7 +316,7 @@
       "type": "number",
       "range": "xsd:decimal",
       "subject": "MKV.generationAge",
-      "description": "Vuosissa. (Ks. IUCN-ohje, viimeksi syntyneiden yksilöiden vanhempien keskim. ikä)",
+      "description": "Vuosissa. (Ks. IUCN-ohje).",
       "title": "Generation",
       "sortOrder": -1
     },
@@ -331,14 +331,14 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.groundsForEvaluationNotes",
-      "title": "Comments on assessment criteria",
+      "title": "Additional information on the assessment criteria",
       "sortOrder": -1
     },
     "habitatGeneralNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.habitatGeneralNotes",
-      "title": "Comments on habitats",
+      "title": "Additional information on habitats",
       "sortOrder": -1
     },
     "habitatNotes": {
@@ -357,7 +357,7 @@
       "minItems": 0,
       "range": "MKV.endangermentObject",
       "subject": "MKV.hasEndangermentReason",
-      "description": "<ul> <li><b>P - Pyynti:</b> metsästys, kalastus ja laiton tappaminen, myös esimerkiksi muiden eläinten jääminen kalanpyydyksiin</li> <li><b>Ke - Keräily ja poiminta</b>, myös siirto puutarhaan</li> <li><b>H - Häirintä ja liikenne</b></li> <li><b>Ku - Kuluminen:</b> maa - ja kallioperän kuluminen, esimerkiksi tallaamisen, maastoajon, kalliokiipeilyn tai ylilaidunnuksen vuoksi</li> <li><b>R - Rakentaminen (maalla):</b> asutukseen, elinkeinoihin, liikenteeseen ja virkistyskäyttöön liittyvä rakentaminen tierakentaminen, rakentamiseen liittyvät maansiirrot ja läjitykset</li> <li><b>Ks - Kaivannaistoiminta:</b> maa - aineksen ja kalliokiviaineksen otto, kaivostoiminta</li> <li><b>Pm - Peltomaiden muutokset:</b> salaojitus, viljelytapojen muutokset, karjanhoidon muutokset (ei laidunten sulkeutuminen), koneiden käyttö ja viljeltävien lajien vaihdot (ei torjunta - aineet)</li> <li><b>Pr - Pellonraivaus:</b> metsien, soiden ja niittyjen muuttaminen pelloiksi</li> <li><b>N - Avoimien alueiden sulkeutuminen:</b> mm. niitty - ja hakamaiden sekä metsälaidunten sulkeutuminen laidunnuksen ja niiton loputtua, sorakuoppien ja muiden avointen kenttien metsittäminen ja umpeenkasvu</li> <li><b>M - Metsien uudistamis - ja hoitotoimet:</b> toimet, jotka eivät sisälly seuraaviin uhkatekijöihin, esim. maaperän muokkaus. Uhanalaisuuden syynä metsien käyttö. Tarkennetaan työdokumentoinnissa</li> <li><b>Mp - Metsien puulajisuhteiden muutokset:</b> mm. lehtipuiden väheneminen ja lehtojen kuusettuminen</li> <li><b>Mv - Vanhojen metsien väheneminen:</b> vanhojen metsien ja kookkaiden puiden väheneminen</li> <li><b>Mk - Kuloalueiden väheneminen:</b> Kuloalueiden ja muiden luontaisen sukkession alkuvaiheiden väheneminen</li> <li><b>Ml - Lahopuun väheneminen:</b> lahoavan puuaineksen, kuolleiden tai kuolevien puiden sekä oksien, lahoja kolopuiden väheneminen</li> <li><b>O - Ojitus ja turpeenotto</b>, (ei purojen perkaukset): myös kunnostusojitus ja aikaisemmin tehdyn ojituksen myöhäisemmät vaikutukset</li> <li><b>Vr - Vesirakentaminen:</b> voimalaitokset, saha - ja myllypadot, vesien säännöstely, ruoppaukset ja perkaukset (myös purojen), rantavyöhykkeen rakenteellinen muuttaminen (esim. pengerrykset), järvien laskut, tekoaltaiden rakentaminen, pohjaveden otto ja lähteiden hyödyntäminen, mm. pohjaveden pinnan laskun aiheuttamat muutokset</li> <li><b>Kh - Kemialliset haittavaikutukset:</b> ympäristömyrkyt, torjunta - aineet, ilman ja vesien saasteet, öljyvahingot sekä rehevöittävä laskeuma</li> <li><b>I - Ilmastonmuutos:</b> ennustettu ilmaston lämpeneminen, sademäärien lisääntyminen ja äärimmäisten sääilmiöiden yleistyminen seuraavien 20–30 vuoden aikana (käytetään vain, kun on erityisiä perusteita ko. lajiin kohdistuville vaikutuksille)</li> <li><b>S - Satunnaistekijät:</b> satunnaistekijöiden aiheuttama uhka kun kanta tai esiintymisalue on hyvin pieni, myös lyhytaikaiset ilmastonmuutokset</li> <li><b>Kil - Kilpailu:</b> muiden lajien aiheuttama kilpailu</li> <li><b>Ris - Risteytyminen:</b> muiden lajien aiheuttama risteytyminen</li> <li><b>Kv - Suuret kannan vaihtelut</b></li> <li><b>U - Muutokset Suomen ulkopuolella:</b> esim. elinympäristöjen muutokset lintujen talvehtimisalueilla tai muuton aikaisilla levähdysalueilla, ulkomailla tapahtuva pyynti/metsästys</li> <li><b>Vie - Vieraiden lajien aiheuttamat uhat</b>: kilpailu, risteytyminen, taudit, ekosysteemimuutokset</li> <li><b>Muu - Muu tunnettu syy:</b> määriteltyihin uhkatekijöihin sisältymätön tunnettu syy, tarkennetaan työdokumentoinnissa</li> <li><b>? - Syy tuntematon</b></li> </ul>",
+      "description": "Uhanalaisuuden syyt (aiemmat ja nykyiset syyt)",
       "title": "Causes of threat",
       "sortOrder": -1
     },
@@ -382,7 +382,7 @@
       "minItems": 0,
       "range": "MKV.endangermentObject",
       "subject": "MKV.hasThreat",
-      "description": "<ul> <li><b>P - Pyynti:</b> metsästys, kalastus ja laiton tappaminen, myös esimerkiksi muiden eläinten jääminen kalanpyydyksiin</li> <li><b>Ke - Keräily ja poiminta</b>, myös siirto puutarhaan</li> <li><b>H - Häirintä ja liikenne</b></li> <li><b>Ku - Kuluminen:</b> maa - ja kallioperän kuluminen, esimerkiksi tallaamisen, maastoajon, kalliokiipeilyn tai ylilaidunnuksen vuoksi</li> <li><b>R - Rakentaminen (maalla):</b> asutukseen, elinkeinoihin, liikenteeseen ja virkistyskäyttöön liittyvä rakentaminen tierakentaminen, rakentamiseen liittyvät maansiirrot ja läjitykset</li> <li><b>Ks - Kaivannaistoiminta:</b> maa - aineksen ja kalliokiviaineksen otto, kaivostoiminta</li> <li><b>Pm - Peltomaiden muutokset:</b> salaojitus, viljelytapojen muutokset, karjanhoidon muutokset (ei laidunten sulkeutuminen), koneiden käyttö ja viljeltävien lajien vaihdot (ei torjunta - aineet)</li> <li><b>Pr - Pellonraivaus:</b> metsien, soiden ja niittyjen muuttaminen pelloiksi</li> <li><b>N - Avoimien alueiden sulkeutuminen:</b> mm. niitty - ja hakamaiden sekä metsälaidunten sulkeutuminen laidunnuksen ja niiton loputtua, sorakuoppien ja muiden avointen kenttien metsittäminen ja umpeenkasvu</li> <li><b>M - Metsien uudistamis - ja hoitotoimet:</b> toimet, jotka eivät sisälly seuraaviin uhkatekijöihin, esim. maaperän muokkaus. Uhanalaisuuden syynä metsien käyttö. Tarkennetaan työdokumentoinnissa</li> <li><b>Mp - Metsien puulajisuhteiden muutokset:</b> mm. lehtipuiden väheneminen ja lehtojen kuusettuminen</li> <li><b>Mv - Vanhojen metsien väheneminen:</b> vanhojen metsien ja kookkaiden puiden väheneminen</li> <li><b>Mk - Kuloalueiden väheneminen:</b> Kuloalueiden ja muiden luontaisen sukkession alkuvaiheiden väheneminen</li> <li><b>Ml - Lahopuun väheneminen:</b> lahoavan puuaineksen, kuolleiden tai kuolevien puiden sekä oksien, lahoja kolopuiden väheneminen</li> <li><b>O - Ojitus ja turpeenotto</b>, (ei purojen perkaukset): myös kunnostusojitus ja aikaisemmin tehdyn ojituksen myöhäisemmät vaikutukset</li> <li><b>Vr - Vesirakentaminen:</b> voimalaitokset, saha - ja myllypadot, vesien säännöstely, ruoppaukset ja perkaukset (myös purojen), rantavyöhykkeen rakenteellinen muuttaminen (esim. pengerrykset), järvien laskut, tekoaltaiden rakentaminen, pohjaveden otto ja lähteiden hyödyntäminen, mm. pohjaveden pinnan laskun aiheuttamat muutokset</li> <li><b>Kh - Kemialliset haittavaikutukset:</b> ympäristömyrkyt, torjunta - aineet, ilman ja vesien saasteet, öljyvahingot sekä rehevöittävä laskeuma</li> <li><b>I - Ilmastonmuutos:</b> ennustettu ilmaston lämpeneminen, sademäärien lisääntyminen ja äärimmäisten sääilmiöiden yleistyminen seuraavien 20–30 vuoden aikana (käytetään vain, kun on erityisiä perusteita ko. lajiin kohdistuville vaikutuksille)</li> <li><b>S - Satunnaistekijät:</b> satunnaistekijöiden aiheuttama uhka kun kanta tai esiintymisalue on hyvin pieni, myös lyhytaikaiset ilmastonmuutokset</li> <li><b>Kil - Kilpailu:</b> muiden lajien aiheuttama kilpailu</li> <li><b>Ris - Risteytyminen:</b> muiden lajien aiheuttama risteytyminen</li> <li><b>Kv - Suuret kannan vaihtelut</b></li> <li><b>U - Muutokset Suomen ulkopuolella:</b> esim. elinympäristöjen muutokset lintujen talvehtimisalueilla tai muuton aikaisilla levähdysalueilla, ulkomailla tapahtuva pyynti/metsästys</li> <li><b>Vie - Vieraiden lajien aiheuttamat uhat</b>: kilpailu, risteytyminen, taudit, ekosysteemimuutokset</li> <li><b>Muu - Muu tunnettu syy:</b> määriteltyihin uhkatekijöihin sisältymätön tunnettu syy, tarkennetaan työdokumentoinnissa</li> <li><b>? - Syy tuntematon</b></li> </ul>",
+      "description": "Uhkatekijät (tulevat tekijät)",
       "title": "Threat factors",
       "sortOrder": -1
     },
@@ -398,7 +398,7 @@
       "type": "string",
       "range": "xsd:int",
       "subject": "MKV.individualCountMin",
-      "description": "Lisääntymiskykyisten yksilöiden määrä (ks. IUCN-ohje). Merkitäksesi \"enintään\" jätä alaraja tyhjäksi. Merkitäksesi \"vähintään\" jätä yläraja tyhjäksi.",
+      "description": "Lisääntymiskykyisten yksilöiden määrä (ks. IUCN-ohje). Merkitäksesi \"enintään\" jätä alaraja tyhjäksi. Merkitäksesi \"vähintään\" jätä yläraja tyhjäksi. Täsmällinen luku merkitään molempiin kohtiin.",
       "title": "Individual count, min.",
       "sortOrder": -1
     },
@@ -471,7 +471,7 @@
       "type": "string",
       "range": "xsd:int",
       "subject": "MKV.occurrenceAreaMin",
-      "description": "Merkitäksesi \"enintään\" jätä alaraja tyhjäksi. Merkitäksesi \"vähintään\" jätä yläraja tyhjäksi.",
+      "description": "AOO, asuttujen 2 x 2 km ruutujen pinta-ala. Merkitäksesi \"enintään\" jätä alaraja tyhjäksi. Merkitäksesi \"vähintään\" jätä yläraja tyhjäksi. Täsmällinen luku merkitään molempiin.",
       "title": "Size of area of occurence, min.",
       "sortOrder": -1
     },
@@ -486,14 +486,14 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.occurrenceNotes",
-      "title": "Comments on occurrence",
+      "title": "Additional information on occurrence",
       "sortOrder": -1
     },
     "occurrenceRegionsNotes": {
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.occurrenceRegionsNotes",
-      "title": "Comments on the area of occurrence",
+      "title": "Additional information on distribution areas",
       "sortOrder": -1
     },
     "occurrenceRegionsPrivateNotes": {
@@ -530,7 +530,7 @@
       "type": "string",
       "range": "xsd:int",
       "subject": "MKV.populationSizePeriodBeginning",
-      "description": "Kenttä on tarkoitettu ensisijaisesti A-kriteeriä varten. Jos on samaan aikaan käytössä myös C-kriteerin eri pituinen tarkastelujakso, merkitse sen alun ja lopun populaatiokoko kommenttikenttään. Kommenttikentän käyttö koskee myös tilannetta, jossa on käytössä useita A:n alakriteereitä (A1-A4). Ensisijaisesti lomakkeelle merkitään lopulliseen uhanalaisuusluokkaan johtaneet tiedot.",
+      "description": "Lisääntymiskykyisten yksilöiden määrä (ks. IUCN-ohje). Kenttä on tarkoitettu ensisijaisesti A-kriteeriä varten. Jos on samaan aikaan käytössä myös C-kriteerin eri pituinen tarkastelujakso, merkitse sen alun ja lopun populaatiokoko kommenttikenttään. Kommenttikentän käyttö koskee myös tilannetta, jossa on käytössä useita A:n alakriteereitä (A1-A4). Ensisijaisesti lomakkeelle merkitään lopulliseen uhanalaisuusluokkaan johtaneet tiedot.",
       "title": "Population size in the beginning of assessment period",
       "sortOrder": -1
     },
@@ -593,7 +593,7 @@
       "type": "string",
       "range": "MKV.habitatObject",
       "subject": "MKV.primaryHabitat",
-      "description": "<p>Lisämerkinnät:</p>\n<ul> \n<li><b>v - vanhat metsät</b> (myös yksittäiset vanhat puut ja runsaasti lahopuuta sisältävät nuoremmat metsät)</li>\n<li><b>h - harjumetsät</b>, myös puoliavoimet</li>\n<li><b>p - metsäpaloalueet</b> ja muut luontaisen sukkession alkuvaiheen metsät</li>\n<li><b>j - jalopuuesiintymä</b></li>\n<li><b>pa - paahteinen</b></li>\n<li><b>va - varjoinen</b></li>\n<li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>\n<li><b>ka - karut kalliot ja kivikot</b></li>\n<li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>\n<li><b>ca - kalkkivaikutteinen</b></li>\n</ul>",
+      "description": "<p>Lisämääreet:</p>\n<ul> \n<li><b>v - </b>yksittäiset <b>vanhat puut</b></li>\n<li><b>lu - luonnontilaiset</b> ja luonnontilaisen kaltaiset metsät</li>\n<li><b>h - harjumetsät</b></li>\n<li><b>p - metsäpaloalueet</b></li>\n<li><b>j - jalopuuesiintymä</b></li>\n<li><b>pa - paahteinen</b></li>\n<li><b>va - varjoinen</b></li>\n<li><b>ca - kalkkivaikutteinen</b></li>\n<li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>\n<li><b>lk - kalattomat lammet</b></li>\n<li><b>ka - karut kalliot ja kivikot</b></li>\n<li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>\n</ul>",
       "title": "Primary habitat",
       "sortOrder": -1
     },
@@ -732,7 +732,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.redListStatusAccuracyNotes",
-      "title": "Comments on the accuracy/reliability of the assessment",
+      "title": "Additional information on assessment accuracy/reliability",
       "sortOrder": -1
     },
     "redListStatusMax": {
@@ -816,7 +816,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.regionallyThreatenedNotes",
-      "title": "Comments on regional threat",
+      "title": "Additional information on regional threat status",
       "sortOrder": -1
     },
     "regionallyThreatenedPrivateNotes": {
@@ -1081,7 +1081,7 @@
       "type": "string",
       "range": "xsd:string",
       "subject": "MKV.taxonomicNotes",
-      "title": "Comments on the taxonomy used in the assessment",
+      "title": "Additional information on the taxonomic interpretation used in the assessment",
       "sortOrder": -1
     },
     "threatNotes": {

@@ -192,11 +192,13 @@ export enum MXSecureLevels {
   "MX.secureLevelNoShow" = "MX.secureLevelNoShow"
 }
 export enum MYCollectionQualityEnum {
+  "empty" = "",
   "collectionQualityEnum3" = "MY.collectionQualityEnum3",
   "collectionQualityEnum2" = "MY.collectionQualityEnum2",
   "collectionQualityEnum1" = "MY.collectionQualityEnum1"
 }
 export enum MYCollectionTypes {
+  "empty" = "",
   "collectionTypeSpecimens" = "MY.collectionTypeSpecimens",
   "collectionTypeLiving" = "MY.collectionTypeLiving",
   "collectionTypeMonitoring" = "MY.collectionTypeMonitoring",
@@ -347,6 +349,7 @@ export enum MKVEndangermentReasonEnum {
   "endangermentReasonO" = "MKV.endangermentReasonO",
   "endangermentReasonVr" = "MKV.endangermentReasonVr",
   "endangermentReasonKh" = "MKV.endangermentReasonKh",
+  "endangermentReasonRe" = "MKV.endangermentReasonRe",
   "endangermentReasonI" = "MKV.endangermentReasonI",
   "endangermentReasonS" = "MKV.endangermentReasonS",
   "endangermentReasonKil" = "MKV.endangermentReasonKil",
@@ -441,7 +444,8 @@ export enum MHLResultServiceTypeEnum {
   "resultServiceTypeSykeInsectProjects" = "MHL.resultServiceTypeSykeInsectProjects",
   "resultServiceTypeInvasiveControl" = "MHL.resultServiceTypeInvasiveControl",
   "resultServiceTypeCompleteLists" = "MHL.resultServiceTypeCompleteLists",
-  "resultServiceTypeWaterBirdCount" = "MHL.resultServiceTypeWaterBirdCount"
+  "resultServiceTypeWaterBirdCount" = "MHL.resultServiceTypeWaterBirdCount",
+  "resultServiceTypeArchipelagoBirdCensus" = "MHL.resultServiceTypeArchipelagoBirdCensus"
 }
 export enum MHLViewerTypeEnum {
   "empty" = "",
@@ -1031,6 +1035,7 @@ export enum MKVHabitatEnum {
   "habitatMlk" = "MKV.habitatMlk",
   "habitatMt" = "MKV.habitatMt",
   "habitatMtl" = "MKV.habitatMtl",
+  "habitatMtm" = "MKV.habitatMtm",
   "habitatS" = "MKV.habitatS",
   "habitatSl" = "MKV.habitatSl",
   "habitatSla" = "MKV.habitatSla",
@@ -1048,9 +1053,9 @@ export enum MKVHabitatEnum {
   "habitatV" = "MKV.habitatV",
   "habitatVi" = "MKV.habitatVi",
   "habitatVik" = "MKV.habitatVik",
-  "habitatVim" = "MKV.habitatVim",
   "habitatVis" = "MKV.habitatVis",
-  "habitatVih" = "MKV.habitatVih",
+  "habitatVim" = "MKV.habitatVim",
+  "habitatVia" = "MKV.habitatVia",
   "habitatVie" = "MKV.habitatVie",
   "habitatVip" = "MKV.habitatVip",
   "habitatVs" = "MKV.habitatVs",
@@ -1108,27 +1113,29 @@ export enum MKVHabitatEnum {
   "habitatI" = "MKV.habitatI",
   "habitatIn" = "MKV.habitatIn",
   "habitatIt" = "MKV.habitatIt",
-  "habitatIh" = "MKV.habitatIh",
   "habitatIk" = "MKV.habitatIk",
+  "habitatIh" = "MKV.habitatIh",
   "habitatIo" = "MKV.habitatIo",
   "habitatIv" = "MKV.habitatIv",
   "habitatIp" = "MKV.habitatIp",
-  "habitatIu" = "MKV.habitatIu",
+  "habitatIj" = "MKV.habitatIj",
   "habitatIr" = "MKV.habitatIr",
   "habitatU" = "MKV.habitatU"
 }
 export enum MKVHabitatSpecificTypeEnum {
   "empty" = "",
   "habitatSpecificTypeV" = "MKV.habitatSpecificTypeV",
+  "habitatSpecificTypeLU" = "MKV.habitatSpecificTypeLU",
   "habitatSpecificTypeH" = "MKV.habitatSpecificTypeH",
   "habitatSpecificTypeP" = "MKV.habitatSpecificTypeP",
   "habitatSpecificTypeJ" = "MKV.habitatSpecificTypeJ",
   "habitatSpecificTypePAK" = "MKV.habitatSpecificTypePAK",
   "habitatSpecificTypeVAK" = "MKV.habitatSpecificTypeVAK",
+  "habitatSpecificTypeCA" = "MKV.habitatSpecificTypeCA",
   "habitatSpecificTypeRA" = "MKV.habitatSpecificTypeRA",
+  "habitatSpecificTypeLK" = "MKV.habitatSpecificTypeLK",
   "habitatSpecificTypeKA" = "MKV.habitatSpecificTypeKA",
-  "habitatSpecificTypeKE" = "MKV.habitatSpecificTypeKE",
-  "habitatSpecificTypeCA" = "MKV.habitatSpecificTypeCA"
+  "habitatSpecificTypeKE" = "MKV.habitatSpecificTypeKE"
 }
 export enum MYDetMethodEnum {
   "empty" = "",
@@ -1353,6 +1360,26 @@ export enum MXTypeOfOccurrenceEnum {
   "MX.typeOfOccurrenceBirdLifeCategoryD" = "MX.typeOfOccurrenceBirdLifeCategoryD",
   "MX.typeOfOccurrenceBirdLifeCategoryE" = "MX.typeOfOccurrenceBirdLifeCategoryE",
   "MX.typeOfOccurrenceOccursBasedOnOccurrences" = "MX.typeOfOccurrenceOccursBasedOnOccurrences"
+}
+export enum MYLineTransectRouteFieldTypeEnum {
+  "empty" = "",
+  "lineTransectRouteFieldTypeInner" = "MY.lineTransectRouteFieldTypeInner",
+  "lineTransectRouteFieldTypeOuter" = "MY.lineTransectRouteFieldTypeOuter"
+}
+export enum MYNestSizeEnum {
+  "empty" = "",
+  "nestSizeEnum1" = "MY.nestSizeEnum1",
+  "nestSizeEnum2" = "MY.nestSizeEnum2",
+  "nestSizeEnum3" = "MY.nestSizeEnum3"
+}
+export enum MYNestTypeEnum {
+  "empty" = "",
+  "nestTypeTreeCavity" = "MY.nestTypeTreeCavity",
+  "nestTypeTwig" = "MY.nestTypeTwig",
+  "nestTypeNestBox" = "MY.nestTypeNestBox",
+  "nestTypeBuilding" = "MY.nestTypeBuilding",
+  "nestTypeGroundCavity" = "MY.nestTypeGroundCavity",
+  "nestTypeOther" = "MY.nestTypeOther"
 }
 export enum MNPAccessibilityEnum {
   "empty" = "",
@@ -2128,21 +2155,6 @@ export enum MYNativeStatusEnum {
   "native" = "MY.native",
   "nonNative" = "MY.nonNative"
 }
-export enum MYNestSizeEnum {
-  "empty" = "",
-  "nestSizeEnum1" = "MY.nestSizeEnum1",
-  "nestSizeEnum2" = "MY.nestSizeEnum2",
-  "nestSizeEnum3" = "MY.nestSizeEnum3"
-}
-export enum MYNestTypeEnum {
-  "empty" = "",
-  "nestTypeTreeCavity" = "MY.nestTypeTreeCavity",
-  "nestTypeTwig" = "MY.nestTypeTwig",
-  "nestTypeNestBox" = "MY.nestTypeNestBox",
-  "nestTypeBuilding" = "MY.nestTypeBuilding",
-  "nestTypeGroundCavity" = "MY.nestTypeGroundCavity",
-  "nestTypeOther" = "MY.nestTypeOther"
-}
 export enum MYObservationStatusEnum {
   "empty" = "",
   "observationStatusIgnored" = "MY.observationStatusIgnored",
@@ -2385,11 +2397,6 @@ export enum MYLineTransectObsTypeEnum {
   "lineTransectObsTypeSeenBrood" = "MY.lineTransectObsTypeSeenBrood",
   "lineTransectObsTypeSeenNest" = "MY.lineTransectObsTypeSeenNest",
   "lineTransectObsTypeUnknown" = "MY.lineTransectObsTypeUnknown"
-}
-export enum MYLineTransectRouteFieldTypeEnum {
-  "empty" = "",
-  "lineTransectRouteFieldTypeInner" = "MY.lineTransectRouteFieldTypeInner",
-  "lineTransectRouteFieldTypeOuter" = "MY.lineTransectRouteFieldTypeOuter"
 }
 export enum MYLolifeDroppingsCountEnum {
   "empty" = "",

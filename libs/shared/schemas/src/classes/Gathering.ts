@@ -100,7 +100,13 @@ export class Gathering {
    * County (piirikunta, kreivikunta etc.)
    */
   county?: string;
+  /**
+   * Collection date as exact date or start date for a time period.
+   */
   dateBegin?: string;
+  /**
+   * End date for a collection time period, if exact date is not know.
+   */
   dateEnd?: string;
   /**
    * Date just as it appears on the label or other original source, no interpretation, errors and all

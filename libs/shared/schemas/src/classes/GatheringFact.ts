@@ -1,4 +1,5 @@
 import { MYBatCollectorEnum } from './';
+import { LineTransectNest } from './';
 import { MYLolifeSiteClassificationEnum } from './';
 import { MYPointCountHabitatEnum } from './';
 import { MYSykeButterFlyCensusWindEnum } from './';
@@ -33,6 +34,7 @@ export class GatheringFact {
   documentation?: string;
   invasiveControlOtherExpensesInEuros?: number;
   invasiveControlWorkHours?: number;
+  lineTransectNests?: LineTransectNest[];
   lineTransectSegmentCounted?: boolean;
   lineTransectSegmentMetersEnd?: number;
   lineTransectSegmentMetersStart?: number;

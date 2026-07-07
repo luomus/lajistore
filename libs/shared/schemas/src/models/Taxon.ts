@@ -21,18 +21,20 @@ export interface Taxon {
   "@type"?: string;
   invasiveSpeciesMainGroup?: HBEInvasiveSpeciesMainGroups[];
   /**
-   * <p>Lisämerkinnät:</p>
+   * <p>Lisämääreet:</p>
    * <ul>
-   * <li><b>v - vanhat metsät</b> (myös yksittäiset vanhat puut ja runsaasti lahopuuta sisältävät nuoremmat metsät)</li>
-   * <li><b>h - harjumetsät</b>, myös puoliavoimet</li>
-   * <li><b>p - metsäpaloalueet</b> ja muut luontaisen sukkession alkuvaiheen metsät</li>
+   * <li><b>v - </b>yksittäiset <b>vanhat puut</b></li>
+   * <li><b>lu - luonnontilaiset</b> ja luonnontilaisen kaltaiset metsät</li>
+   * <li><b>h - harjumetsät</b></li>
+   * <li><b>p - metsäpaloalueet</b></li>
    * <li><b>j - jalopuuesiintymä</b></li>
    * <li><b>pa - paahteinen</b></li>
    * <li><b>va - varjoinen</b></li>
+   * <li><b>ca - kalkkivaikutteinen</b></li>
    * <li><b>ra - sijaitsee rannalla</b> (lajin esiintyminen on sidoksissa rannan läheisyyteen)</li>
+   * <li><b>lk - kalattomat lammet</b></li>
    * <li><b>ka - karut kalliot ja kivikot</b></li>
    * <li><b>ke - keskiravinteiset kalliot ja kivikot</b></li>
-   * <li><b>ca - kalkkivaikutteinen</b></li>
    * </ul>
    */
   primaryHabitat?: string;
