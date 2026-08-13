@@ -280,7 +280,6 @@
     }
   },
   "required": [
-    "branchID",
     "eventType"
   ]
 }

@@ -20,7 +20,7 @@ export interface Event {
   /**
    * ID for the accossiated branch
    */
-  branchID: string;
+  branchID?: string;
   date?: string;
   eRH?: string;
   estimatedSeedQuantity?: number;
