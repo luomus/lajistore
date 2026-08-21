@@ -45323,6 +45323,576 @@
         }
       }
     },
+    "/taxonReferenceSequence": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "taxonReferenceSequence"
+        ],
+        "operationId": "listtaxonReferenceSequence",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return list of Taxon Reference Sequence objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Taxon Reference Sequence.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/taxonReferenceSequence"
+                      }
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "taxonReferenceSequence"
+        ],
+        "operationId": "storetaxonReferenceSequence",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/taxonReferenceSequence"
+              }
+            }
+          }
+        },
+        "description": "Store Taxon Reference Sequence object(s)",
+        "responses": {
+          "201": {
+            "description": "Stored Taxon Reference Sequence object(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/taxonReferenceSequence"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "taxonReferenceSequence"
+        ],
+        "operationId": "patchtaxonReferenceSequence",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dry_run",
+            "in": "query",
+            "description": "Show result only without saving it",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Limit the change to this many items (MAX 10000)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/esSearchObj"
+              }
+            }
+          }
+        },
+        "description": "Patch taxon reference sequence (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching taxon reference sequence.",
+        "responses": {
+          "200": {
+            "description": "A list of  Taxon Reference Sequence.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "affected": 0
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "affected": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/taxonReferenceSequence"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/taxonReferenceSequence/_search": {
+      "post": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "taxonReferenceSequence"
+        ],
+        "operationId": "searchtaxonReferenceSequence",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Query string to search by.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma separated list of fields to return",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Elasticsearch search query"
+              }
+            }
+          }
+        },
+        "description": "Return list of Taxon Reference Sequence objects.",
+        "responses": {
+          "200": {
+            "description": "A list of  Taxon Reference Sequence.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "@context": {
+                      "type": "string"
+                    },
+                    "@type": {
+                      "type": "string"
+                    },
+                    "view": {
+                      "$ref": "#/components/schemas/pagedView"
+                    },
+                    "totalItems": {
+                      "type": "integer"
+                    },
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "currentPage": {
+                      "type": "integer"
+                    },
+                    "lastPage": {
+                      "type": "integer"
+                    },
+                    "member": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/taxonReferenceSequence"
+                      }
+                    },
+                    "aggregations": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "@context",
+                    "@type",
+                    "member",
+                    "view",
+                    "totalItems",
+                    "pageSize",
+                    "lastPage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/taxonReferenceSequence/{id}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "taxonReferenceSequence"
+        ],
+        "operationId": "gettaxonReferenceSequence",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Taxon Reference Sequence",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Return a Taxon Reference Sequence.",
+        "responses": {
+          "200": {
+            "description": "a Taxon Reference Sequence.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/taxonReferenceSequence"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "taxonReferenceSequence"
+        ],
+        "operationId": "updatetaxonReferenceSequence",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Taxon Reference Sequence",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/taxonReferenceSequence"
+              }
+            }
+          }
+        },
+        "description": "Store Taxon Reference Sequence",
+        "responses": {
+          "200": {
+            "description": "Stored Taxon Reference Sequence",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/taxonReferenceSequence"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "taxonReferenceSequence"
+        ],
+        "operationId": "deletetaxonReferenceSequence",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Taxon Reference Sequence",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Delete Taxon Reference Sequence",
+        "responses": {
+          "200": {
+            "description": "Deletion succeeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "affected": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/taxonReferenceSequence/{id}/_ver": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "operationId": "versionsOftaxonReferenceSequence",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Taxon Reference Sequence",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_diff",
+            "in": "query",
+            "description": "If this is true then the response will include json-patch that was generated by comparing the previous version.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "tags": [
+          "taxonReferenceSequence"
+        ],
+        "description": "Return a Taxon Reference Sequence.",
+        "responses": {
+          "200": {
+            "description": "a Taxon Reference Sequence.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "version",
+                      "created"
+                    ],
+                    "properties": {
+                      "version": {
+                        "type": "integer"
+                      },
+                      "created": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "patch": {
+                        "$ref": "#/components/schemas/patchObj"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/taxonReferenceSequence/{id}/_ver/{number}": {
+      "get": {
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "tags": [
+          "taxonReferenceSequence"
+        ],
+        "operationId": "versiontaxonReferenceSequence",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id for the Taxon Reference Sequence",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "path",
+            "description": "Version number for the Taxon Reference Sequence",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "description": "Return a Taxon Reference Sequence.",
+        "responses": {
+          "200": {
+            "description": "a Taxon Reference Sequence.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/taxonReferenceSequence"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/taxonSet": {
       "get": {
         "security": [
@@ -57786,6 +58356,12 @@
                       "$ref": "#/components/schemas/taxonInteraction"
                     }
                   },
+                  "taxonReferenceSequence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/taxonReferenceSequence"
+                    }
+                  },
                   "taxonSet": {
                     "type": "array",
                     "items": {
@@ -58400,6 +58976,12 @@
                       "type": "array",
                       "items": {
                         "$ref": "#/components/schemas/taxonInteraction"
+                      }
+                    },
+                    "taxonReferenceSequence": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/taxonReferenceSequence"
                       }
                     },
                     "taxonSet": {
@@ -70221,6 +70803,65 @@
         ],
         "additionalProperties": false
       },
+      "taxonReferenceSequence": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "title": "Context for the Taxon Reference Sequence"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id for the Taxon Reference Sequence"
+          },
+          "@type": {
+            "type": "string",
+            "title": "Type for the Taxon Reference Sequence"
+          },
+          "externalSequenceID": {
+            "type": "string",
+            "description": "Identifier of the external DNA sequence or sequencing record. This is a free-form identifier that may contain identifiers assigned by external sequence repositories or sequencing databases, and it identifies the sequence or sequencing event rather than the specimen itself. Example values: BOLD:ARIGB038-16.COI-5P, GenBank:KX283134",
+            "title": "External Sequence ID"
+          },
+          "sequenceLocus": {
+            "type": "string",
+            "enum": [
+              "",
+              "MX.sequenceLocusITS",
+              "MX.sequenceLocusCOI",
+              "MX.sequenceLocusMatK",
+              "MX.sequenceLocusRbcL",
+              "MX.sequenceLocusRpb2",
+              "MX.sequenceLocusTef1",
+              "MX.sequenceLocusHsp90"
+            ],
+            "title": "Sequence locus"
+          },
+          "sequenceSpecimenID": {
+            "type": "string",
+            "description": "Identifier of the specimen from which the reference sequence was obtained or with which the reference sequence is associated. This is a freeform identifier and may contain identifiers from external specimen or sequence databases. Example values: http://id.luomus.fi/GBC.1, http://id.herb.oulu.fi/GAL.32109, BIOUG51784-H10",
+            "title": "Reference Sequence Specimen ID"
+          },
+          "sequenceTaxonID": {
+            "type": "string",
+            "title": "Taxon ID"
+          },
+          "sequenceText": {
+            "type": "array",
+            "uniqueItems": false,
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "description": "DNA sequence stored in FASTA format.",
+            "title": "DNA sequence (FASTA)"
+          }
+        },
+        "required": [
+          "sequenceTaxonID"
+        ],
+        "additionalProperties": false
+      },
       "taxonSet": {
         "type": "object",
         "properties": {
@@ -73372,7 +74013,7 @@
               "type": "string"
             },
             "minItems": 0,
-            "description": "DNA sequence associated with the occurrence, stored in FASTA format.",
+            "description": "DNA sequence stored in FASTA format.",
             "title": "DNA sequence (FASTA)"
           },
           "sex": {
@@ -75291,6 +75932,10 @@
     {
       "name": "taxonInteraction",
       "description": "Taxon interaction"
+    },
+    {
+      "name": "taxonReferenceSequence",
+      "description": "Taxon Reference Sequence"
     },
     {
       "name": "taxonSet",

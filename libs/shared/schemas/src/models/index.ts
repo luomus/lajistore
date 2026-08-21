@@ -157,6 +157,8 @@ import { TaxonGroupIucnEditors } from './TaxonGroupIucnEditors'
 export type { TaxonGroupIucnEditors }
 import { TaxonInteraction } from './TaxonInteraction'
 export type { TaxonInteraction }
+import { TaxonReferenceSequence } from './TaxonReferenceSequence'
+export type { TaxonReferenceSequence }
 import { TaxonSet } from './TaxonSet'
 export type { TaxonSet }
 import { Term } from './Term'
@@ -281,6 +283,7 @@ export type StoreObject = BibliographicResource
    | TaxonConcept
    | TaxonGroupIucnEditors
    | TaxonInteraction
+   | TaxonReferenceSequence
    | TaxonSet
    | Term
    | Trait
@@ -711,6 +714,11 @@ export function isTaxonGroupIucnEditors(data: unknown): data is TaxonGroupIucnEd
 export function isTaxonInteraction(data: unknown): data is TaxonInteraction {
   return !!(
     data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MI.taxonInteraction'
+  );
+}
+export function isTaxonReferenceSequence(data: unknown): data is TaxonReferenceSequence {
+  return !!(
+    data && typeof data === 'object' && '@type' in data && (data as StoreObject)['@type'] === 'MX.taxonReferenceSequence'
   );
 }
 export function isTaxonSet(data: unknown): data is TaxonSet {

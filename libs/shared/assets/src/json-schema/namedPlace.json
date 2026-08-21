@@ -8148,7 +8148,7 @@
                       "minItems": 0,
                       "range": "xsd:string",
                       "subject": "MY.sequenceText",
-                      "description": "DNA sequence associated with the occurrence, stored in FASTA format.",
+                      "description": "DNA sequence stored in FASTA format.",
                       "title": "DNA sequence (FASTA)",
                       "sortOrder": -1
                     },
@@ -19214,7 +19214,7 @@
                       "minItems": 0,
                       "range": "xsd:string",
                       "subject": "MY.sequenceText",
-                      "description": "DNA sequence associated with the occurrence, stored in FASTA format.",
+                      "description": "DNA sequence stored in FASTA format.",
                       "title": "DNA sequence (FASTA)",
                       "sortOrder": -1
                     },

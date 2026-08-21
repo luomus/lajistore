@@ -1675,6 +1675,15 @@ export type MITaxonInteractionEnum =
   | "MI.taxonInteractionParasitism"
   | "MI.taxonInteractionEctoparasitism"
   | "MI.taxonInteractionEndoparasitism";
+export type MXSequenceLocusEnum =
+  | ""
+  | "MX.sequenceLocusITS"
+  | "MX.sequenceLocusCOI"
+  | "MX.sequenceLocusMatK"
+  | "MX.sequenceLocusRbcL"
+  | "MX.sequenceLocusRpb2"
+  | "MX.sequenceLocusTef1"
+  | "MX.sequenceLocusHsp90";
 export type TDFRangeEnum =
   | ""
   | "xsd:string"

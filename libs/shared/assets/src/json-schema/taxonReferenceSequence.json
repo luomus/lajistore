@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "subject": "MX.taxonReferenceSequence",
+  "additionalProperties": false,
+  "title": "Taxon Reference Sequence",
+  "description": "",
+  "properties": {
+    "@context": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "@context",
+      "title": "Context for the Taxon Reference Sequence"
+    },
+    "id": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "id",
+      "title": "Id for the Taxon Reference Sequence"
+    },
+    "@type": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "@type",
+      "title": "Type for the Taxon Reference Sequence"
+    },
+    "externalSequenceID": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MX.externalSequenceID",
+      "description": "Identifier of the external DNA sequence or sequencing record. This is a free-form identifier that may contain identifiers assigned by external sequence repositories or sequencing databases, and it identifies the sequence or sequencing event rather than the specimen itself. Example values: BOLD:ARIGB038-16.COI-5P, GenBank:KX283134",
+      "title": "External Sequence ID",
+      "sortOrder": -1
+    },
+    "sequenceLocus": {
+      "type": "string",
+      "enum": [
+        "",
+        "MX.sequenceLocusITS",
+        "MX.sequenceLocusCOI",
+        "MX.sequenceLocusMatK",
+        "MX.sequenceLocusRbcL",
+        "MX.sequenceLocusRpb2",
+        "MX.sequenceLocusTef1",
+        "MX.sequenceLocusHsp90"
+      ],
+      "enumNames": [
+        "",
+        "ITS",
+        "COI",
+        "matK",
+        "rbcL",
+        "rpb2",
+        "tef1",
+        "hsp90"
+      ],
+      "range": "MX.sequenceLocusEnum",
+      "subject": "MX.sequenceLocus",
+      "title": "Sequence locus",
+      "sortOrder": -1
+    },
+    "sequenceSpecimenID": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MX.sequenceSpecimenID",
+      "description": "Identifier of the specimen from which the reference sequence was obtained or with which the reference sequence is associated. This is a freeform identifier and may contain identifiers from external specimen or sequence databases. Example values: http://id.luomus.fi/GBC.1, http://id.herb.oulu.fi/GAL.32109, BIOUG51784-H10",
+      "title": "Reference Sequence Specimen ID",
+      "sortOrder": -1
+    },
+    "sequenceTaxonID": {
+      "type": "string",
+      "range": "MX.taxon",
+      "subject": "MX.sequenceTaxonID",
+      "title": "Taxon ID",
+      "sortOrder": -1
+    },
+    "sequenceText": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "range": "xsd:string",
+      "subject": "MY.sequenceText",
+      "description": "DNA sequence stored in FASTA format.",
+      "title": "DNA sequence (FASTA)",
+      "sortOrder": -1
+    }
+  },
+  "required": [
+    "sequenceTaxonID"
+  ]
+}

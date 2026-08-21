@@ -1802,6 +1802,16 @@ export enum MITaxonInteractionEnum {
   "taxonInteractionEctoparasitism" = "MI.taxonInteractionEctoparasitism",
   "taxonInteractionEndoparasitism" = "MI.taxonInteractionEndoparasitism"
 }
+export enum MXSequenceLocusEnum {
+  "empty" = "",
+  "MX.sequenceLocusITS" = "MX.sequenceLocusITS",
+  "MX.sequenceLocusCOI" = "MX.sequenceLocusCOI",
+  "MX.sequenceLocusMatK" = "MX.sequenceLocusMatK",
+  "MX.sequenceLocusRbcL" = "MX.sequenceLocusRbcL",
+  "MX.sequenceLocusRpb2" = "MX.sequenceLocusRpb2",
+  "MX.sequenceLocusTef1" = "MX.sequenceLocusTef1",
+  "MX.sequenceLocusHsp90" = "MX.sequenceLocusHsp90"
+}
 export enum TDFRangeEnum {
   "empty" = "",
   "xsd:string" = "xsd:string",

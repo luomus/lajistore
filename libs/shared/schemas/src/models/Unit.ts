@@ -255,7 +255,7 @@ export interface Unit {
    */
   seedMorphology?: MYSeedMorphologyEnum;
   /**
-   * DNA sequence associated with the occurrence, stored in FASTA format.
+   * DNA sequence stored in FASTA format.
    */
   sequenceText?: string[];
   /**
