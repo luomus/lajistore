@@ -16,7 +16,7 @@ data:
   RABBITMQ_USERNAME_API: store-api
   RABBITMQ_USERNAME_CLI: store-cli
   RABBITMQ_USERNAME_WORKER: store-worker
-  LAJI_API_URL: https://apitest.laji.fi/v0
+  LAJI_API_URL: https://apitest.laji.fi
   LAJI_API_DB_USERNAME: laji_api_staging
   DW_SOURCES: KE.388,KE.441
 
