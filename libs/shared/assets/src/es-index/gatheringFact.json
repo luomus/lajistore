@@ -125,6 +125,10 @@
         "type": "keyword",
         "ignore_above": 200
       },
+      "ringRecoveryFormDateAccuracy": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
       "shorelineLengthMeters": {
         "type": "integer"
       },

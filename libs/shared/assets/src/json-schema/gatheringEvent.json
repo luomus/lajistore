@@ -569,6 +569,37 @@
           "title": "Biotooppi",
           "sortOrder": -1
         },
+        "ringRecoveryFormDateAccuracy": {
+          "type": "string",
+          "enum": [
+            "",
+            "MY.ringRecoveryFormDateAccuracy0",
+            "MY.ringRecoveryFormDateAccuracy1",
+            "MY.ringRecoveryFormDateAccuracy2",
+            "MY.ringRecoveryFormDateAccuracy3",
+            "MY.ringRecoveryFormDateAccuracy4",
+            "MY.ringRecoveryFormDateAccuracy5",
+            "MY.ringRecoveryFormDateAccuracy6",
+            "MY.ringRecoveryFormDateAccuracy7",
+            "MY.ringRecoveryFormDateAccuracy8"
+          ],
+          "enumNames": [
+            "",
+            "Exact",
+            "+-1 days",
+            "+-3 days",
+            "1 week",
+            "2 weeks",
+            "6 weeks",
+            "3 months",
+            "6 months",
+            "Few years"
+          ],
+          "range": "MY.ringRecoveryFormDateAccuracyEnum",
+          "subject": "MY.ringRecoveryFormDateAccuracy",
+          "title": "Date accuracy",
+          "sortOrder": -1
+        },
         "shorelineLengthMeters": {
           "type": "integer",
           "minimum": 0,

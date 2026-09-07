@@ -62,6 +62,10 @@
     "wgs84Longitude": {
       "@id": "default:PUU.wgs84Longitude",
       "@type": "xsd:string"
+    },
+    "events": {
+      "@id": "default:PUU.events",
+      "@container": "@set"
     }
   }
 }

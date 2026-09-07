@@ -63,6 +63,9 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "ringerNumber": {
+        "type": "integer"
+      },
       "streetAddress": {
         "type": "keyword",
         "ignore_above": 200,

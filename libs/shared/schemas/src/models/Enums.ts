@@ -843,6 +843,17 @@ export type MYPointCountHabitatEnum =
   | "MY.pointCountHabitat15"
   | "MY.pointCountHabitat16"
   | "MY.pointCountHabitat17";
+export type MYRingRecoveryFormDateAccuracyEnum =
+  | ""
+  | "MY.ringRecoveryFormDateAccuracy0"
+  | "MY.ringRecoveryFormDateAccuracy1"
+  | "MY.ringRecoveryFormDateAccuracy2"
+  | "MY.ringRecoveryFormDateAccuracy3"
+  | "MY.ringRecoveryFormDateAccuracy4"
+  | "MY.ringRecoveryFormDateAccuracy5"
+  | "MY.ringRecoveryFormDateAccuracy6"
+  | "MY.ringRecoveryFormDateAccuracy7"
+  | "MY.ringRecoveryFormDateAccuracy8";
 export type MYSykeButterFlyCensusWindEnum =
   | ""
   | "MY.sykeButterFlyCensusWindEnumUnknown"
@@ -2221,6 +2232,15 @@ export type MYGlowWormMicrohabitatEnum =
   | "MY.glowWormMicrohabitatEnum5"
   | "MY.glowWormMicrohabitatEnum6"
   | "MY.glowWormMicrohabitatEnumOther";
+export type MYHerpFormPopulationChangeEnum =
+  | ""
+  | "MY.herpFormPopulationChangeNotEvaluated"
+  | "MY.herpFormPopulationChangeEnumLargeIncrease"
+  | "MY.herpFormPopulationChangeEnumSmallIncrease"
+  | "MY.herpFormPopulationChangeEnumStable"
+  | "MY.herpFormPopulationChangeEnumSmallDecrease"
+  | "MY.herpFormPopulationChangeEnumLargeDecrease"
+  | "MY.herpFormPopulationChangeEnumLocallyExtinct";
 export type MYLineTransectObsTypeEnum =
   | ""
   | "MY.lineTransectObsTypeSong"
@@ -2262,6 +2282,19 @@ export type MYLolifeNestTreeEnum =
   | "MX.38010"
   | "MX.38008"
   | "MY.lolifeNestTreeOther";
+export type MYRingRecoveryFormBirdStateEnum =
+  | ""
+  | "MY.ringRecoveryFormBirdState0"
+  | "MY.ringRecoveryFormBirdState1"
+  | "MY.ringRecoveryFormBirdState2"
+  | "MY.ringRecoveryFormBirdState3"
+  | "MY.ringRecoveryFormBirdState4"
+  | "MY.ringRecoveryFormBirdState5"
+  | "MY.ringRecoveryFormBirdState6"
+  | "MY.ringRecoveryFormBirdState7_1"
+  | "MY.ringRecoveryFormBirdState7_2"
+  | "MY.ringRecoveryFormBirdState8"
+  | "MY.ringRecoveryFormBirdState9";
 export type MYWaterbirdFemaleEnum =
   | ""
   | "MY.waterbirdFemaleEnumYes"

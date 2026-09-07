@@ -103,6 +103,10 @@
       "@id": "default:MY.pointCountHabitat",
       "@type": "@id"
     },
+    "ringRecoveryFormDateAccuracy": {
+      "@id": "default:MY.ringRecoveryFormDateAccuracy",
+      "@type": "@id"
+    },
     "shorelineLengthMeters": {
       "@id": "default:MY.shorelineLengthMeters",
       "@type": "xsd:nonNegativeInteger"

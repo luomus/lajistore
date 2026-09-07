@@ -73,6 +73,14 @@
       "title": "Postal code",
       "sortOrder": -1
     },
+    "ringerNumber": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "range": "xsd:positiveInteger",
+      "subject": "MZ.ringerNumber",
+      "title": "Ringer number",
+      "sortOrder": -1
+    },
     "streetAddress": {
       "type": "string",
       "range": "xsd:string",

@@ -50,6 +50,10 @@
     "sequenceText": {
       "@id": "default:MY.sequenceText",
       "@type": "xsd:string"
+    },
+    "sortOrder": {
+      "@id": "default:sortOrder",
+      "@type": "xsd:integer"
     }
   }
 }

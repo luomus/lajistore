@@ -15,5 +15,6 @@ export interface Contact {
   country?: string;
   phoneNumber?: string;
   postalCode?: string;
+  ringerNumber?: number;
   streetAddress?: string;
 }

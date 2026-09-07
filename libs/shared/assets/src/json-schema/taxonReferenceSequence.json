@@ -86,6 +86,13 @@
       "description": "DNA sequence stored in FASTA format.",
       "title": "DNA sequence (FASTA)",
       "sortOrder": -1
+    },
+    "sortOrder": {
+      "type": "integer",
+      "range": "xsd:integer",
+      "subject": "sortOrder",
+      "title": "sortOrder",
+      "sortOrder": -1
     }
   },
   "required": [

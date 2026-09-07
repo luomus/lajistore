@@ -42526,10 +42526,10 @@
             }
           }
         ],
-        "description": "Return list of Taxon objects.",
+        "description": "Return list of taxon objects.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42597,10 +42597,10 @@
             }
           }
         },
-        "description": "Store Taxon object(s)",
+        "description": "Store taxon object(s)",
         "responses": {
           "201": {
-            "description": "Stored Taxon object(s)",
+            "description": "Stored taxon object(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -42662,7 +42662,7 @@
         "description": "Patch taxon (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching taxon.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "example": {
@@ -42755,10 +42755,10 @@
             }
           }
         },
-        "description": "Return list of Taxon objects.",
+        "description": "Return list of taxon objects.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42826,17 +42826,17 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42861,7 +42861,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -42877,10 +42877,10 @@
             }
           }
         },
-        "description": "Store Taxon",
+        "description": "Store taxon",
         "responses": {
           "200": {
-            "description": "Stored Taxon",
+            "description": "Stored taxon",
             "content": {
               "application/json": {
                 "schema": {
@@ -42905,14 +42905,14 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Delete Taxon",
+        "description": "Delete taxon",
         "responses": {
           "200": {
             "description": "Deletion succeeded",
@@ -42944,7 +42944,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -42963,10 +42963,10 @@
         "tags": [
           "taxon"
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -43012,7 +43012,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -43021,17 +43021,17 @@
           {
             "name": "number",
             "in": "path",
-            "description": "Version number for the Taxon",
+            "description": "Version number for the taxon",
             "required": true,
             "schema": {
               "type": "number"
             }
           }
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -60030,6 +60030,12 @@
           "wgs84Longitude": {
             "type": "string",
             "title": "Longitude (WGS 84)"
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/event"
+            }
           }
         },
         "required": [
@@ -60566,6 +60572,12 @@
           "postalCode": {
             "type": "string",
             "title": "Postal code"
+          },
+          "ringerNumber": {
+            "type": "integer",
+            "exclusiveMinimum": true,
+            "title": "Ringer number",
+            "minimum": 0
           },
           "streetAddress": {
             "type": "string",
@@ -61210,6 +61222,12 @@
             "type": "string",
             "description": "ID for the observation in another system, e.g. Vihko/Notebook. Format System:identifier.",
             "title": "Observation ID"
+          },
+          "observerContacts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/contact"
+            }
           },
           "originalSpecimenID": {
             "type": "string",
@@ -64227,6 +64245,22 @@
               "MY.pointCountHabitat17"
             ],
             "title": "Biotooppi"
+          },
+          "ringRecoveryFormDateAccuracy": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.ringRecoveryFormDateAccuracy0",
+              "MY.ringRecoveryFormDateAccuracy1",
+              "MY.ringRecoveryFormDateAccuracy2",
+              "MY.ringRecoveryFormDateAccuracy3",
+              "MY.ringRecoveryFormDateAccuracy4",
+              "MY.ringRecoveryFormDateAccuracy5",
+              "MY.ringRecoveryFormDateAccuracy6",
+              "MY.ringRecoveryFormDateAccuracy7",
+              "MY.ringRecoveryFormDateAccuracy8"
+            ],
+            "title": "Date accuracy"
           },
           "shorelineLengthMeters": {
             "type": "integer",
@@ -69429,15 +69463,15 @@
         "properties": {
           "@context": {
             "type": "string",
-            "title": "Context for the Taxon"
+            "title": "Context for the taxon"
           },
           "id": {
             "type": "string",
-            "title": "Id for the Taxon"
+            "title": "Id for the taxon"
           },
           "@type": {
             "type": "string",
-            "title": "Type for the Taxon"
+            "title": "Type for the taxon"
           },
           "invasiveSpeciesMainGroup": {
             "type": "array",
@@ -70855,6 +70889,10 @@
             "minItems": 0,
             "description": "DNA sequence stored in FASTA format.",
             "title": "DNA sequence (FASTA)"
+          },
+          "sortOrder": {
+            "type": "integer",
+            "title": "sortOrder"
           }
         },
         "required": [
@@ -74321,6 +74359,10 @@
             "type": "integer",
             "title": "Adult individual count"
           },
+          "autocompleteSelectedInvasive": {
+            "type": "boolean",
+            "title": "autocompleteSelectedInvasive"
+          },
           "autocompleteSelectedTaxonID": {
             "type": "string",
             "title": "Taxon ID selected from autocomplete"
@@ -74381,6 +74423,24 @@
             "type": "integer",
             "minimum": 0,
             "title": "Ground nest count"
+          },
+          "herpFormPopulationChange": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.herpFormPopulationChangeNotEvaluated",
+              "MY.herpFormPopulationChangeEnumLargeIncrease",
+              "MY.herpFormPopulationChangeEnumSmallIncrease",
+              "MY.herpFormPopulationChangeEnumStable",
+              "MY.herpFormPopulationChangeEnumSmallDecrease",
+              "MY.herpFormPopulationChangeEnumLargeDecrease",
+              "MY.herpFormPopulationChangeEnumLocallyExtinct"
+            ],
+            "title": "Assessment of population change"
+          },
+          "herpFormPopulationChangeNotes": {
+            "type": "string",
+            "title": "Notes about population changes"
           },
           "individualCountFlock": {
             "type": "integer",
@@ -74504,6 +74564,32 @@
             "type": "integer",
             "minimum": 0,
             "title": "Pullus individual count"
+          },
+          "ringRecoveryFormBirdState": {
+            "type": "string",
+            "enum": [
+              "",
+              "MY.ringRecoveryFormBirdState0",
+              "MY.ringRecoveryFormBirdState1",
+              "MY.ringRecoveryFormBirdState2",
+              "MY.ringRecoveryFormBirdState3",
+              "MY.ringRecoveryFormBirdState4",
+              "MY.ringRecoveryFormBirdState5",
+              "MY.ringRecoveryFormBirdState6",
+              "MY.ringRecoveryFormBirdState7_1",
+              "MY.ringRecoveryFormBirdState7_2",
+              "MY.ringRecoveryFormBirdState8",
+              "MY.ringRecoveryFormBirdState9"
+            ],
+            "title": "Birds state when found"
+          },
+          "ringRecoveryFormNotes": {
+            "type": "string",
+            "title": "Description of the found ring"
+          },
+          "ringRecoveryFormRecoveryNotes": {
+            "type": "string",
+            "title": "Manner of discovery or death of the bird"
           },
           "runningWaterInVicinity": {
             "type": "boolean",
@@ -75915,7 +76001,7 @@
     },
     {
       "name": "taxon",
-      "description": "Taxon"
+      "description": "taxon"
     },
     {
       "name": "taxonCensus",

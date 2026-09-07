@@ -211,6 +211,10 @@
       "@id": "default:MY.observationID",
       "@type": "xsd:string"
     },
+    "observerContacts": {
+      "@id": "default:MY.observerContacts",
+      "@container": "@set"
+    },
     "originalSpecimenID": {
       "@id": "default:MY.originalSpecimenID",
       "@type": "xsd:string"

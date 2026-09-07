@@ -66,6 +66,98 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "events": {
+        "type": "object",
+        "properties": {
+          "agent": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "amount": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "amountEstimationUnit": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "branchID": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "date": {
+            "type": "date"
+          },
+          "eRH": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "estimatedSeedQuantity": {
+            "type": "integer"
+          },
+          "eventType": {
+            "type": "keyword",
+            "ignore_above": 200
+          },
+          "germinationConditions": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "germinationPercentage": {
+            "type": "integer"
+          },
+          "germinationRate": {
+            "type": "float"
+          },
+          "lifeStage": {
+            "type": "keyword",
+            "ignore_above": 200
+          },
+          "notes": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "numberOfSeedsEmpty": {
+            "type": "integer"
+          },
+          "numberOfSeedsFull": {
+            "type": "integer"
+          },
+          "numberOfSeedsInfested": {
+            "type": "integer"
+          },
+          "numberOfSeedsMouldy": {
+            "type": "integer"
+          },
+          "numberOfSeedsPartFull": {
+            "type": "integer"
+          },
+          "numberOfSeedsTested": {
+            "type": "integer"
+          },
+          "percentageSeedsFull": {
+            "type": "integer"
+          },
+          "seedsExchangedInstitution": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
+          "testPassed": {
+            "type": "boolean"
+          },
+          "viabilityPercentage": {
+            "type": "integer"
+          }
+        }
+      },
       "_meta": {
         "properties": {
           "created": {

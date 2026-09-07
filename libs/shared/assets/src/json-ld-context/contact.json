@@ -59,6 +59,10 @@
       "@id": "default:MZ.postalCode",
       "@type": "xsd:string"
     },
+    "ringerNumber": {
+      "@id": "default:MZ.ringerNumber",
+      "@type": "xsd:positiveInteger"
+    },
     "streetAddress": {
       "@id": "default:MZ.streetAddress",
       "@type": "xsd:string"

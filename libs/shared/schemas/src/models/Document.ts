@@ -159,6 +159,7 @@ export interface Document {
    * ID for the observation in another system, e.g. Vihko/Notebook. Format System:identifier.
    */
   observationID?: string;
+  observerContacts?: Contact[];
   /**
    * Original catalogue number or other  original identifier of the specimen. E.g. H9000000
    */

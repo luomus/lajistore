@@ -1,11 +1,13 @@
 import { MYDetOnSiteEnum } from './';
 import { MYGlowWormMicrohabitatEnum } from './';
+import { MYHerpFormPopulationChangeEnum } from './';
 import { MYLineTransectObsTypeEnum } from './';
 import { MYLineTransectRouteFieldTypeEnum } from './';
 import { MYLolifeDroppingsCountEnum } from './';
 import { MYLolifeDroppingsQualityEnum } from './';
 import { MYLolifeDroppingsTypeEnum } from './';
 import { MYLolifeNestTreeEnum } from './';
+import { MYRingRecoveryFormBirdStateEnum } from './';
 import { MYWaterbirdFemaleEnum } from './';
 import { MYWaterbirdJuvenileAgeClassEnum } from './';
 import { MYWaterbirdPairCountOpinionReasoningEnum } from './';
@@ -21,6 +23,7 @@ export class UnitFact {
   id?: string;
   "@type"?: string;
   adultIndividualCount?: number;
+  autocompleteSelectedInvasive?: boolean;
   autocompleteSelectedTaxonID?: string;
   birdMultiplier?: boolean;
   broodCount?: number;
@@ -34,6 +37,8 @@ export class UnitFact {
   femalesWithBroodsCount?: number;
   glowWormMicrohabitat?: MYGlowWormMicrohabitatEnum;
   groundNestCount?: number;
+  herpFormPopulationChange?: MYHerpFormPopulationChangeEnum;
+  herpFormPopulationChangeNotes?: string;
   individualCountFlock?: number;
   individualCountInner?: number;
   individualCountOuter?: number;
@@ -50,6 +55,9 @@ export class UnitFact {
   pairCountOuter?: number;
   pointCountFlock?: string;
   pullusIndividualCount?: number;
+  ringRecoveryFormBirdState?: MYRingRecoveryFormBirdStateEnum;
+  ringRecoveryFormNotes?: string;
+  ringRecoveryFormRecoveryNotes?: string;
   runningWaterInVicinity?: boolean;
   /**
    * Oma arvio lajimäärityksen luotettavuudesta

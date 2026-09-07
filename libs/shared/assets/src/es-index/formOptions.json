@@ -535,6 +535,9 @@
                 "ignore_above": 200,
                 "normalizer": "useLowercase"
               },
+              "ringerNumber": {
+                "type": "integer"
+              },
               "streetAddress": {
                 "type": "keyword",
                 "ignore_above": 200,
@@ -799,6 +802,10 @@
                     "type": "integer"
                   },
                   "pointCountHabitat": {
+                    "type": "keyword",
+                    "ignore_above": 200
+                  },
+                  "ringRecoveryFormDateAccuracy": {
                     "type": "keyword",
                     "ignore_above": 200
                   },
@@ -1223,6 +1230,54 @@
             "ignore_above": 200,
             "normalizer": "useLowercase"
           },
+          "observerContacts": {
+            "type": "object",
+            "properties": {
+              "emailAddress": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "inheritedName": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "preferredName": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "city": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "country": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "phoneNumber": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "postalCode": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              },
+              "ringerNumber": {
+                "type": "integer"
+              },
+              "streetAddress": {
+                "type": "keyword",
+                "ignore_above": 200,
+                "normalizer": "useLowercase"
+              }
+            }
+          },
           "originalSpecimenID": {
             "type": "keyword",
             "ignore_above": 200,
@@ -1618,6 +1673,10 @@
                     "type": "integer"
                   },
                   "pointCountHabitat": {
+                    "type": "keyword",
+                    "ignore_above": 200
+                  },
+                  "ringRecoveryFormDateAccuracy": {
                     "type": "keyword",
                     "ignore_above": 200
                   },
@@ -2719,6 +2778,9 @@
                       "adultIndividualCount": {
                         "type": "integer"
                       },
+                      "autocompleteSelectedInvasive": {
+                        "type": "boolean"
+                      },
                       "autocompleteSelectedTaxonID": {
                         "type": "keyword",
                         "ignore_above": 200,
@@ -2752,6 +2814,15 @@
                       },
                       "groundNestCount": {
                         "type": "integer"
+                      },
+                      "herpFormPopulationChange": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "herpFormPopulationChangeNotes": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
                       },
                       "individualCountFlock": {
                         "type": "integer"
@@ -2810,6 +2881,20 @@
                       },
                       "pullusIndividualCount": {
                         "type": "integer"
+                      },
+                      "ringRecoveryFormBirdState": {
+                        "type": "keyword",
+                        "ignore_above": 200
+                      },
+                      "ringRecoveryFormNotes": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
+                      },
+                      "ringRecoveryFormRecoveryNotes": {
+                        "type": "keyword",
+                        "ignore_above": 200,
+                        "normalizer": "useLowercase"
                       },
                       "runningWaterInVicinity": {
                         "type": "boolean"

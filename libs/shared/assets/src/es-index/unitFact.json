@@ -31,6 +31,9 @@
       "adultIndividualCount": {
         "type": "integer"
       },
+      "autocompleteSelectedInvasive": {
+        "type": "boolean"
+      },
       "autocompleteSelectedTaxonID": {
         "type": "keyword",
         "ignore_above": 200,
@@ -64,6 +67,15 @@
       },
       "groundNestCount": {
         "type": "integer"
+      },
+      "herpFormPopulationChange": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "herpFormPopulationChangeNotes": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "individualCountFlock": {
         "type": "integer"
@@ -122,6 +134,20 @@
       },
       "pullusIndividualCount": {
         "type": "integer"
+      },
+      "ringRecoveryFormBirdState": {
+        "type": "keyword",
+        "ignore_above": 200
+      },
+      "ringRecoveryFormNotes": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "ringRecoveryFormRecoveryNotes": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "runningWaterInVicinity": {
         "type": "boolean"

@@ -35,6 +35,10 @@
       "@id": "default:MY.adultIndividualCount",
       "@type": "xsd:integer"
     },
+    "autocompleteSelectedInvasive": {
+      "@id": "default:MY.autocompleteSelectedInvasive",
+      "@type": "xsd:boolean"
+    },
     "autocompleteSelectedTaxonID": {
       "@id": "default:MY.autocompleteSelectedTaxonID",
       "@type": "xsd:string"
@@ -74,6 +78,14 @@
     "groundNestCount": {
       "@id": "default:MY.groundNestCount",
       "@type": "xsd:nonNegativeInteger"
+    },
+    "herpFormPopulationChange": {
+      "@id": "default:MY.herpFormPopulationChange",
+      "@type": "@id"
+    },
+    "herpFormPopulationChangeNotes": {
+      "@id": "default:MY.herpFormPopulationChangeNotes",
+      "@type": "xsd:string"
     },
     "individualCountFlock": {
       "@id": "default:MY.individualCountFlock",
@@ -138,6 +150,18 @@
     "pullusIndividualCount": {
       "@id": "default:MY.pullusIndividualCount",
       "@type": "xsd:nonNegativeInteger"
+    },
+    "ringRecoveryFormBirdState": {
+      "@id": "default:MY.ringRecoveryFormBirdState",
+      "@type": "@id"
+    },
+    "ringRecoveryFormNotes": {
+      "@id": "default:MY.ringRecoveryFormNotes",
+      "@type": "xsd:string"
+    },
+    "ringRecoveryFormRecoveryNotes": {
+      "@id": "default:MY.ringRecoveryFormRecoveryNotes",
+      "@type": "xsd:string"
     },
     "runningWaterInVicinity": {
       "@id": "default:MY.runningWaterInVicinity",

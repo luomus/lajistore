@@ -1,3 +1,5 @@
+import { Event } from './';
+
 /* tslint:disable */
 /*
 * This file was automatically generated.
@@ -25,4 +27,5 @@ export class Branch {
   notes?: string;
   wgs84Latitude?: string;
   wgs84Longitude?: string;
+  events?: Event[];
 }

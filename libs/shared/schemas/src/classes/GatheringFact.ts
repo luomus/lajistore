@@ -2,6 +2,7 @@ import { MYBatCollectorEnum } from './';
 import { LineTransectNest } from './';
 import { MYLolifeSiteClassificationEnum } from './';
 import { MYPointCountHabitatEnum } from './';
+import { MYRingRecoveryFormDateAccuracyEnum } from './';
 import { MYSykeButterFlyCensusWindEnum } from './';
 import { MYWaterbirdCensusPeriodEnum } from './';
 import { MYWaterbirdHabitatEnum } from './';
@@ -45,6 +46,7 @@ export class GatheringFact {
   observationTools?: string;
   observedAreaHectares?: number;
   pointCountHabitat?: MYPointCountHabitatEnum;
+  ringRecoveryFormDateAccuracy?: MYRingRecoveryFormDateAccuracyEnum;
   shorelineLengthMeters?: number;
   spottingScopeUsed?: boolean;
   sunniness?: number;

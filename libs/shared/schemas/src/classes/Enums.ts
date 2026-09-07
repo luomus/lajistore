@@ -902,6 +902,18 @@ export enum MYPointCountHabitatEnum {
   "pointCountHabitat16" = "MY.pointCountHabitat16",
   "pointCountHabitat17" = "MY.pointCountHabitat17"
 }
+export enum MYRingRecoveryFormDateAccuracyEnum {
+  "empty" = "",
+  "ringRecoveryFormDateAccuracy0" = "MY.ringRecoveryFormDateAccuracy0",
+  "ringRecoveryFormDateAccuracy1" = "MY.ringRecoveryFormDateAccuracy1",
+  "ringRecoveryFormDateAccuracy2" = "MY.ringRecoveryFormDateAccuracy2",
+  "ringRecoveryFormDateAccuracy3" = "MY.ringRecoveryFormDateAccuracy3",
+  "ringRecoveryFormDateAccuracy4" = "MY.ringRecoveryFormDateAccuracy4",
+  "ringRecoveryFormDateAccuracy5" = "MY.ringRecoveryFormDateAccuracy5",
+  "ringRecoveryFormDateAccuracy6" = "MY.ringRecoveryFormDateAccuracy6",
+  "ringRecoveryFormDateAccuracy7" = "MY.ringRecoveryFormDateAccuracy7",
+  "ringRecoveryFormDateAccuracy8" = "MY.ringRecoveryFormDateAccuracy8"
+}
 export enum MYSykeButterFlyCensusWindEnum {
   "empty" = "",
   "sykeButterFlyCensusWindEnumUnknown" = "MY.sykeButterFlyCensusWindEnumUnknown",
@@ -2393,6 +2405,16 @@ export enum MYGlowWormMicrohabitatEnum {
   "glowWormMicrohabitatEnum6" = "MY.glowWormMicrohabitatEnum6",
   "glowWormMicrohabitatEnumOther" = "MY.glowWormMicrohabitatEnumOther"
 }
+export enum MYHerpFormPopulationChangeEnum {
+  "empty" = "",
+  "herpFormPopulationChangeNotEvaluated" = "MY.herpFormPopulationChangeNotEvaluated",
+  "herpFormPopulationChangeEnumLargeIncrease" = "MY.herpFormPopulationChangeEnumLargeIncrease",
+  "herpFormPopulationChangeEnumSmallIncrease" = "MY.herpFormPopulationChangeEnumSmallIncrease",
+  "herpFormPopulationChangeEnumStable" = "MY.herpFormPopulationChangeEnumStable",
+  "herpFormPopulationChangeEnumSmallDecrease" = "MY.herpFormPopulationChangeEnumSmallDecrease",
+  "herpFormPopulationChangeEnumLargeDecrease" = "MY.herpFormPopulationChangeEnumLargeDecrease",
+  "herpFormPopulationChangeEnumLocallyExtinct" = "MY.herpFormPopulationChangeEnumLocallyExtinct"
+}
 export enum MYLineTransectObsTypeEnum {
   "empty" = "",
   "lineTransectObsTypeSong" = "MY.lineTransectObsTypeSong",
@@ -2438,6 +2460,20 @@ export enum MYLolifeNestTreeEnum {
   "MX.38010" = "MX.38010",
   "MX.38008" = "MX.38008",
   "lolifeNestTreeOther" = "MY.lolifeNestTreeOther"
+}
+export enum MYRingRecoveryFormBirdStateEnum {
+  "empty" = "",
+  "ringRecoveryFormBirdState0" = "MY.ringRecoveryFormBirdState0",
+  "ringRecoveryFormBirdState1" = "MY.ringRecoveryFormBirdState1",
+  "ringRecoveryFormBirdState2" = "MY.ringRecoveryFormBirdState2",
+  "ringRecoveryFormBirdState3" = "MY.ringRecoveryFormBirdState3",
+  "ringRecoveryFormBirdState4" = "MY.ringRecoveryFormBirdState4",
+  "ringRecoveryFormBirdState5" = "MY.ringRecoveryFormBirdState5",
+  "ringRecoveryFormBirdState6" = "MY.ringRecoveryFormBirdState6",
+  "ringRecoveryFormBirdState7_1" = "MY.ringRecoveryFormBirdState7_1",
+  "ringRecoveryFormBirdState7_2" = "MY.ringRecoveryFormBirdState7_2",
+  "ringRecoveryFormBirdState8" = "MY.ringRecoveryFormBirdState8",
+  "ringRecoveryFormBirdState9" = "MY.ringRecoveryFormBirdState9"
 }
 export enum MYWaterbirdFemaleEnum {
   "empty" = "",

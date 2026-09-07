@@ -24,4 +24,5 @@ export interface TaxonReferenceSequence {
    * DNA sequence stored in FASTA format.
    */
   sequenceText?: string[];
+  sortOrder?: number;
 }

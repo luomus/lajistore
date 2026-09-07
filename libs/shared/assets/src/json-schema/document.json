@@ -249,6 +249,14 @@
             "title": "Postal code",
             "sortOrder": -1
           },
+          "ringerNumber": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "range": "xsd:positiveInteger",
+            "subject": "MZ.ringerNumber",
+            "title": "Ringer number",
+            "sortOrder": -1
+          },
           "streetAddress": {
             "type": "string",
             "range": "xsd:string",
@@ -1014,6 +1022,37 @@
               "range": "MY.pointCountHabitatEnum",
               "subject": "MY.pointCountHabitat",
               "title": "Biotooppi",
+              "sortOrder": -1
+            },
+            "ringRecoveryFormDateAccuracy": {
+              "type": "string",
+              "enum": [
+                "",
+                "MY.ringRecoveryFormDateAccuracy0",
+                "MY.ringRecoveryFormDateAccuracy1",
+                "MY.ringRecoveryFormDateAccuracy2",
+                "MY.ringRecoveryFormDateAccuracy3",
+                "MY.ringRecoveryFormDateAccuracy4",
+                "MY.ringRecoveryFormDateAccuracy5",
+                "MY.ringRecoveryFormDateAccuracy6",
+                "MY.ringRecoveryFormDateAccuracy7",
+                "MY.ringRecoveryFormDateAccuracy8"
+              ],
+              "enumNames": [
+                "",
+                "Exact",
+                "+-1 days",
+                "+-3 days",
+                "1 week",
+                "2 weeks",
+                "6 weeks",
+                "3 months",
+                "6 months",
+                "Few years"
+              ],
+              "range": "MY.ringRecoveryFormDateAccuracyEnum",
+              "subject": "MY.ringRecoveryFormDateAccuracy",
+              "title": "Date accuracy",
               "sortOrder": -1
             },
             "shorelineLengthMeters": {
@@ -2421,6 +2460,88 @@
       "title": "Observation ID",
       "sortOrder": 49
     },
+    "observerContacts": {
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "type": "object",
+        "subject": "MZ.contact",
+        "additionalProperties": false,
+        "title": "Contact",
+        "description": "",
+        "properties": {
+          "emailAddress": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "MA.emailAddress",
+            "title": "Email address",
+            "sortOrder": 3
+          },
+          "inheritedName": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "MA.inheritedName",
+            "title": "Last name",
+            "sortOrder": 1
+          },
+          "preferredName": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "MA.preferredName",
+            "title": "Kutsumanimi",
+            "sortOrder": 2
+          },
+          "city": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "MZ.city",
+            "title": "City",
+            "sortOrder": -1
+          },
+          "country": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "MZ.country",
+            "title": "Country",
+            "sortOrder": -1
+          },
+          "phoneNumber": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "MZ.phoneNumber",
+            "title": "Phone number",
+            "sortOrder": -1
+          },
+          "postalCode": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "MZ.postalCode",
+            "title": "Postal code",
+            "sortOrder": -1
+          },
+          "ringerNumber": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "range": "xsd:positiveInteger",
+            "subject": "MZ.ringerNumber",
+            "title": "Ringer number",
+            "sortOrder": -1
+          },
+          "streetAddress": {
+            "type": "string",
+            "range": "xsd:string",
+            "subject": "MZ.streetAddress",
+            "title": "Street address",
+            "sortOrder": -1
+          }
+        }
+      },
+      "minItems": 0,
+      "range": "MZ.contact",
+      "subject": "MY.observerContacts",
+      "title": "Observer contacts",
+      "sortOrder": -1
+    },
     "originalSpecimenID": {
       "type": "string",
       "range": "xsd:string",
@@ -3544,6 +3665,37 @@
                 "range": "MY.pointCountHabitatEnum",
                 "subject": "MY.pointCountHabitat",
                 "title": "Biotooppi",
+                "sortOrder": -1
+              },
+              "ringRecoveryFormDateAccuracy": {
+                "type": "string",
+                "enum": [
+                  "",
+                  "MY.ringRecoveryFormDateAccuracy0",
+                  "MY.ringRecoveryFormDateAccuracy1",
+                  "MY.ringRecoveryFormDateAccuracy2",
+                  "MY.ringRecoveryFormDateAccuracy3",
+                  "MY.ringRecoveryFormDateAccuracy4",
+                  "MY.ringRecoveryFormDateAccuracy5",
+                  "MY.ringRecoveryFormDateAccuracy6",
+                  "MY.ringRecoveryFormDateAccuracy7",
+                  "MY.ringRecoveryFormDateAccuracy8"
+                ],
+                "enumNames": [
+                  "",
+                  "Exact",
+                  "+-1 days",
+                  "+-3 days",
+                  "1 week",
+                  "2 weeks",
+                  "6 weeks",
+                  "3 months",
+                  "6 months",
+                  "Few years"
+                ],
+                "range": "MY.ringRecoveryFormDateAccuracyEnum",
+                "subject": "MY.ringRecoveryFormDateAccuracy",
+                "title": "Date accuracy",
                 "sortOrder": -1
               },
               "shorelineLengthMeters": {
@@ -8497,6 +8649,13 @@
                       "title": "Adult individual count",
                       "sortOrder": -1
                     },
+                    "autocompleteSelectedInvasive": {
+                      "type": "boolean",
+                      "range": "xsd:boolean",
+                      "subject": "MY.autocompleteSelectedInvasive",
+                      "title": "autocompleteSelectedInvasive",
+                      "sortOrder": -1
+                    },
                     "autocompleteSelectedTaxonID": {
                       "type": "string",
                       "range": "xsd:string",
@@ -8601,6 +8760,40 @@
                       "range": "xsd:nonNegativeInteger",
                       "subject": "MY.groundNestCount",
                       "title": "Ground nest count",
+                      "sortOrder": -1
+                    },
+                    "herpFormPopulationChange": {
+                      "type": "string",
+                      "enum": [
+                        "",
+                        "MY.herpFormPopulationChangeNotEvaluated",
+                        "MY.herpFormPopulationChangeEnumLargeIncrease",
+                        "MY.herpFormPopulationChangeEnumSmallIncrease",
+                        "MY.herpFormPopulationChangeEnumStable",
+                        "MY.herpFormPopulationChangeEnumSmallDecrease",
+                        "MY.herpFormPopulationChangeEnumLargeDecrease",
+                        "MY.herpFormPopulationChangeEnumLocallyExtinct"
+                      ],
+                      "enumNames": [
+                        "",
+                        "I can't say",
+                        "Population increased significantly",
+                        "Population increased somewhat",
+                        "Population remained unchanged",
+                        "Population decreased somewhat",
+                        "Population decreased somewhat",
+                        "Population disappeared completely"
+                      ],
+                      "range": "MY.herpFormPopulationChangeEnum",
+                      "subject": "MY.herpFormPopulationChange",
+                      "title": "Assessment of population change",
+                      "sortOrder": -1
+                    },
+                    "herpFormPopulationChangeNotes": {
+                      "type": "string",
+                      "range": "xsd:string",
+                      "subject": "MY.herpFormPopulationChangeNotes",
+                      "title": "Notes about population changes",
                       "sortOrder": -1
                     },
                     "individualCountFlock": {
@@ -8822,6 +9015,55 @@
                       "range": "xsd:nonNegativeInteger",
                       "subject": "MY.pullusIndividualCount",
                       "title": "Pullus individual count",
+                      "sortOrder": -1
+                    },
+                    "ringRecoveryFormBirdState": {
+                      "type": "string",
+                      "enum": [
+                        "",
+                        "MY.ringRecoveryFormBirdState0",
+                        "MY.ringRecoveryFormBirdState1",
+                        "MY.ringRecoveryFormBirdState2",
+                        "MY.ringRecoveryFormBirdState3",
+                        "MY.ringRecoveryFormBirdState4",
+                        "MY.ringRecoveryFormBirdState5",
+                        "MY.ringRecoveryFormBirdState6",
+                        "MY.ringRecoveryFormBirdState7_1",
+                        "MY.ringRecoveryFormBirdState7_2",
+                        "MY.ringRecoveryFormBirdState8",
+                        "MY.ringRecoveryFormBirdState9"
+                      ],
+                      "enumNames": [
+                        "",
+                        "Unknown (no information whether the bird was alive or dead when found)",
+                        "Dead (time of death unknown)",
+                        "Recently dead (within the previous week)",
+                        "Certainly dead for a long time (specify duration below)",
+                        "Sick or injured AND definitely released or left in the wild",
+                        "Sick or injured, taken into care, not released",
+                        "Healthy bird, taken into captivity",
+                        "Ring read remotely (with binoculars or spotting scope)",
+                        "Healthy bird, released",
+                        "Controlled by the ringer",
+                        "Alive, fate unknown"
+                      ],
+                      "range": "MY.ringRecoveryFormBirdStateEnum",
+                      "subject": "MY.ringRecoveryFormBirdState",
+                      "title": "Birds state when found",
+                      "sortOrder": -1
+                    },
+                    "ringRecoveryFormNotes": {
+                      "type": "string",
+                      "range": "xsd:string",
+                      "subject": "MY.ringRecoveryFormNotes",
+                      "title": "Description of the found ring",
+                      "sortOrder": -1
+                    },
+                    "ringRecoveryFormRecoveryNotes": {
+                      "type": "string",
+                      "range": "xsd:string",
+                      "subject": "MY.ringRecoveryFormRecoveryNotes",
+                      "title": "Manner of discovery or death of the bird",
                       "sortOrder": -1
                     },
                     "runningWaterInVicinity": {

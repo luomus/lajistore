@@ -389,7 +389,7 @@ type ViewerBasicAuth {
   getevent(
     """Id for the event"""
     id: String!
-  ): Event3
+  ): Event
 
   """
   Return a field.
@@ -856,12 +856,12 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -1739,7 +1739,7 @@ type ViewerBasicAuth {
 
     """Sort by"""
     sort: String
-  ): Event2
+  ): Event3
 
   """
   Return list of field objects.
@@ -2754,7 +2754,7 @@ type ViewerBasicAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -3719,7 +3719,7 @@ type ViewerBasicAuth {
 
     """Version number for the event"""
     number: Float!
-  ): Event3
+  ): Event
 
   """
   Return a field.
@@ -5368,12 +5368,12 @@ type ViewerBasicAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -5851,15 +5851,15 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -6776,6 +6776,7 @@ type Branch2 {
   """Garden area"""
   collectionID: String!
   context: String
+  events: [Event]
 
   """Is the branch alive or not?"""
   exists: Boolean
@@ -6788,6 +6789,88 @@ type Branch2 {
   type: String
   wgs84Latitude: String
   wgs84Longitude: String
+}
+
+type Event {
+  agent: String
+
+  """
+  Enter the amount in the branch as n, addition to the previously given amount as +n or reduction as -n
+  """
+  amount: String
+  amountEstimationUnit: String
+
+  """ID for the accossiated branch"""
+  branchID: String
+  context: String
+  date: String
+  eRH: String
+  estimatedSeedQuantity: Int
+  eventType: EventType!
+  germinationConditions: String
+  germinationPercentage: Int
+  germinationRate: Float
+  id: String
+  lifeStage: LifeStage2
+  notes: String
+  numberOfSeedsEmpty: Int
+  numberOfSeedsFull: Int
+  numberOfSeedsInfested: Int
+  numberOfSeedsMouldy: Int
+  numberOfSeedsPartFull: Int
+  numberOfSeedsTested: Int
+  percentageSeedsFull: Int
+  seedsExchangedInstitution: String
+  testPassed: Boolean
+  type: String
+  viabilityPercentage: Int
+}
+
+enum EventType {
+  MY_EVENTTYPEDISCARDED
+  MY_EVENTTYPEDONATING
+  MY_EVENTTYPEINVENTORY
+  MY_EVENTTYPEMARKEDDEAD
+  MY_EVENTTYPEOCCASIONALREMARK
+  MY_EVENTTYPETEMPORARYPLACEMENT
+  MY_EVENTTYPEPLANTING
+  MY_EVENTTYPEPLANTEDBACKTOWILD
+  MY_EVENTTYPEPOLLINATION
+  MY_EVENTTYPEPRICKINGOUT
+  MY_EVENTTYPEPOTTING
+  MY_EVENTTYPEPROPAGATION
+  MY_EVENTTYPEPROPAGATIONMATERIALCOLLECTED
+  MY_EVENTTYPEPRUNING
+  MY_EVENTTYPESOWING
+  MY_EVENTTYPESTORING
+  MY_EVENTTYPETRANSFERRING
+  MY_EVENTTYPEOTHER
+  MY_EVENTTYPEATLANTIS
+  MY_EVENTTYPECLEANING
+  MY_EVENTTYPEQUANTITYESTIMATION
+  MY_EVENTTYPECUTTESTING
+  MY_EVENTTYPEDRYING
+  MY_EVENTTYPEGERMINATIONTESTING
+  MY_EVENTTYPEGERMINATIONRETESTING
+  MY_EVENTTYPEGERMINATIONCONTROLLING
+  MY_EVENTTYPETZTESTING
+  MY_EVENTTYPESEEDEXCHANGE
+  MY_EVENTTYPETPUSKA
+}
+
+enum LifeStage2 {
+  _
+  MY_PLANTLIFESTAGESTERILE
+  MY_PLANTLIFESTAGEFERTILE
+  MY_PLANTLIFESTAGESEED
+  MY_PLANTLIFESTAGESPROUT
+  MY_PLANTLIFESTAGEBUD
+  MY_PLANTLIFESTAGEFLOWER
+  MY_PLANTLIFESTAGEWITHEREDFLOWER
+  MY_PLANTLIFESTAGERIPENINGFRUIT
+  MY_PLANTLIFESTAGERIPEFRUIT
+  MY_PLANTLIFESTAGEDEADSPROUT
+  MY_PLANTLIFESTAGESUBTERRANEAN
 }
 
 type Checklist2 {
@@ -7072,6 +7155,7 @@ type Contact2 {
   phoneNumber: String
   postalCode: String
   preferredName: String
+  ringerNumber: Int
   streetAddress: String
   type: String
 }
@@ -7348,6 +7432,7 @@ type Document2 {
   ID for the observation in another system, e.g. Vihko/Notebook. Format System:identifier.
   """
   observationID: String
+  observerContacts: [Contact2]
 
   """
   Original catalogue number or other  original identifier of the specimen. E.g. H9000000
@@ -7638,6 +7723,7 @@ type GatheringFact {
   observerID: Int
   pineConesAtCensus: PineConesAtCensus
   pointCountHabitat: PointCountHabitat
+  ringRecoveryFormDateAccuracy: RingRecoveryFormDateAccuracy
   routeID: Int
   routeLength: Int
   routeLengthBiotopeA: Int
@@ -7807,6 +7893,19 @@ enum PointCountHabitat {
   MY_POINTCOUNTHABITAT15
   MY_POINTCOUNTHABITAT16
   MY_POINTCOUNTHABITAT17
+}
+
+enum RingRecoveryFormDateAccuracy {
+  _
+  MY_RINGRECOVERYFORMDATEACCURACY0
+  MY_RINGRECOVERYFORMDATEACCURACY1
+  MY_RINGRECOVERYFORMDATEACCURACY2
+  MY_RINGRECOVERYFORMDATEACCURACY3
+  MY_RINGRECOVERYFORMDATEACCURACY4
+  MY_RINGRECOVERYFORMDATEACCURACY5
+  MY_RINGRECOVERYFORMDATEACCURACY6
+  MY_RINGRECOVERYFORMDATEACCURACY7
+  MY_RINGRECOVERYFORMDATEACCURACY8
 }
 
 enum SnowAndIceOnTrees {
@@ -9838,6 +9937,7 @@ enum TypeVerification {
 
 type UnitFact {
   adultIndividualCount: Int
+  autocompleteSelectedInvasive: Boolean
   autocompleteSelectedTaxonID: String
   birdMultiplier: Boolean
   broodCount: Int
@@ -9853,6 +9953,8 @@ type UnitFact {
   femalesWithBroodsCount: Int
   glowWormMicrohabitat: GlowWormMicrohabitat
   groundNestCount: Int
+  herpFormPopulationChange: HerpFormPopulationChange
+  herpFormPopulationChangeNotes: String
   id: String
   individualCountBiotopeA: Int
   individualCountBiotopeB: Int
@@ -9878,6 +9980,9 @@ type UnitFact {
   pairCountOuter: Int
   pointCountFlock: String
   pullusIndividualCount: Int
+  ringRecoveryFormBirdState: RingRecoveryFormBirdState
+  ringRecoveryFormNotes: String
+  ringRecoveryFormRecoveryNotes: String
   runningWaterInVicinity: Boolean
 
   """Oma arvio lajimäärityksen luotettavuudesta"""
@@ -9907,6 +10012,17 @@ enum GlowWormMicrohabitat {
   MY_GLOWWORMMICROHABITATENUM5
   MY_GLOWWORMMICROHABITATENUM6
   MY_GLOWWORMMICROHABITATENUMOTHER
+}
+
+enum HerpFormPopulationChange {
+  _
+  MY_HERPFORMPOPULATIONCHANGENOTEVALUATED
+  MY_HERPFORMPOPULATIONCHANGEENUMLARGEINCREASE
+  MY_HERPFORMPOPULATIONCHANGEENUMSMALLINCREASE
+  MY_HERPFORMPOPULATIONCHANGEENUMSTABLE
+  MY_HERPFORMPOPULATIONCHANGEENUMSMALLDECREASE
+  MY_HERPFORMPOPULATIONCHANGEENUMLARGEDECREASE
+  MY_HERPFORMPOPULATIONCHANGEENUMLOCALLYEXTINCT
 }
 
 enum LineTransectObsType {
@@ -9958,6 +10074,21 @@ enum LolifeNestTree {
   MX_38010
   MX_38008
   MY_LOLIFENESTTREEOTHER
+}
+
+enum RingRecoveryFormBirdState {
+  _
+  MY_RINGRECOVERYFORMBIRDSTATE0
+  MY_RINGRECOVERYFORMBIRDSTATE1
+  MY_RINGRECOVERYFORMBIRDSTATE2
+  MY_RINGRECOVERYFORMBIRDSTATE3
+  MY_RINGRECOVERYFORMBIRDSTATE4
+  MY_RINGRECOVERYFORMBIRDSTATE5
+  MY_RINGRECOVERYFORMBIRDSTATE6
+  MY_RINGRECOVERYFORMBIRDSTATE7_1
+  MY_RINGRECOVERYFORMBIRDSTATE7_2
+  MY_RINGRECOVERYFORMBIRDSTATE8
+  MY_RINGRECOVERYFORMBIRDSTATE9
 }
 
 enum WaterbirdFemale {
@@ -10108,88 +10239,6 @@ enum Endangerment3 {
   MKV_ENDANGERMENTREASONVIE
   MKV_ENDANGERMENTREASONMUU
   MKV_ENDANGERMENTREASONT
-}
-
-type Event3 {
-  agent: String
-
-  """
-  Enter the amount in the branch as n, addition to the previously given amount as +n or reduction as -n
-  """
-  amount: String
-  amountEstimationUnit: String
-
-  """ID for the accossiated branch"""
-  branchID: String
-  context: String
-  date: String
-  eRH: String
-  estimatedSeedQuantity: Int
-  eventType: EventType!
-  germinationConditions: String
-  germinationPercentage: Int
-  germinationRate: Float
-  id: String
-  lifeStage: LifeStage2
-  notes: String
-  numberOfSeedsEmpty: Int
-  numberOfSeedsFull: Int
-  numberOfSeedsInfested: Int
-  numberOfSeedsMouldy: Int
-  numberOfSeedsPartFull: Int
-  numberOfSeedsTested: Int
-  percentageSeedsFull: Int
-  seedsExchangedInstitution: String
-  testPassed: Boolean
-  type: String
-  viabilityPercentage: Int
-}
-
-enum EventType {
-  MY_EVENTTYPEDISCARDED
-  MY_EVENTTYPEDONATING
-  MY_EVENTTYPEINVENTORY
-  MY_EVENTTYPEMARKEDDEAD
-  MY_EVENTTYPEOCCASIONALREMARK
-  MY_EVENTTYPETEMPORARYPLACEMENT
-  MY_EVENTTYPEPLANTING
-  MY_EVENTTYPEPLANTEDBACKTOWILD
-  MY_EVENTTYPEPOLLINATION
-  MY_EVENTTYPEPRICKINGOUT
-  MY_EVENTTYPEPOTTING
-  MY_EVENTTYPEPROPAGATION
-  MY_EVENTTYPEPROPAGATIONMATERIALCOLLECTED
-  MY_EVENTTYPEPRUNING
-  MY_EVENTTYPESOWING
-  MY_EVENTTYPESTORING
-  MY_EVENTTYPETRANSFERRING
-  MY_EVENTTYPEOTHER
-  MY_EVENTTYPEATLANTIS
-  MY_EVENTTYPECLEANING
-  MY_EVENTTYPEQUANTITYESTIMATION
-  MY_EVENTTYPECUTTESTING
-  MY_EVENTTYPEDRYING
-  MY_EVENTTYPEGERMINATIONTESTING
-  MY_EVENTTYPEGERMINATIONRETESTING
-  MY_EVENTTYPEGERMINATIONCONTROLLING
-  MY_EVENTTYPETZTESTING
-  MY_EVENTTYPESEEDEXCHANGE
-  MY_EVENTTYPETPUSKA
-}
-
-enum LifeStage2 {
-  _
-  MY_PLANTLIFESTAGESTERILE
-  MY_PLANTLIFESTAGEFERTILE
-  MY_PLANTLIFESTAGESEED
-  MY_PLANTLIFESTAGESPROUT
-  MY_PLANTLIFESTAGEBUD
-  MY_PLANTLIFESTAGEFLOWER
-  MY_PLANTLIFESTAGEWITHEREDFLOWER
-  MY_PLANTLIFESTAGERIPENINGFRUIT
-  MY_PLANTLIFESTAGERIPEFRUIT
-  MY_PLANTLIFESTAGEDEADSPROUT
-  MY_PLANTLIFESTAGESUBTERRANEAN
 }
 
 type Field2 {
@@ -13156,6 +13205,7 @@ type TaxonReferenceSequence2 {
 
   """DNA sequence stored in FASTA format."""
   sequenceText: [String]
+  sortOrder: Int
   type: String
 }
 
@@ -14358,11 +14408,11 @@ type Endangerment {
   view: PagedView!
 }
 
-type Event2 {
+type Event3 {
   context: String!
   currentPage: Int
   lastPage: Int!
-  member: [Event3]!
+  member: [Event]!
   pageSize: Int!
   totalItems: Int!
   type: String!
@@ -16077,7 +16127,7 @@ type ViewerAnyAuth {
   getevent(
     """Id for the event"""
     id: String!
-  ): Event3
+  ): Event
 
   """
   Return a field.
@@ -16544,12 +16594,12 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -17427,7 +17477,7 @@ type ViewerAnyAuth {
 
     """Sort by"""
     sort: String
-  ): Event2
+  ): Event3
 
   """
   Return list of field objects.
@@ -18442,7 +18492,7 @@ type ViewerAnyAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -19407,7 +19457,7 @@ type ViewerAnyAuth {
 
     """Version number for the event"""
     number: Float!
-  ): Event3
+  ): Event
 
   """
   Return a field.
@@ -21056,12 +21106,12 @@ type ViewerAnyAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -21539,15 +21589,15 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -22666,12 +22716,12 @@ type MutationViewerBasicAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -26712,7 +26762,7 @@ type MutationViewerBasicAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -27580,7 +27630,7 @@ type MutationViewerBasicAuth {
   
   Equivalent to POST /event
   """
-  storeevent(requestBody: Event3Input): Event3
+  storeevent(requestBody: EventInput): Event
 
   """
   Store field object(s)
@@ -27905,7 +27955,7 @@ type MutationViewerBasicAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -28402,8 +28452,8 @@ type MutationViewerBasicAuth {
   updateevent(
     """Id for the event"""
     id: String!
-    requestBody: Event3Input
-  ): Event3
+    requestBody: EventInput
+  ): Event
 
   """
   Store field
@@ -28916,12 +28966,12 @@ type MutationViewerBasicAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
@@ -29240,7 +29290,7 @@ type Bulk {
   documentIdentification: [DocumentIdentification]
   downloadRequest: [DownloadRequest2]
   endangerment: [Endangerment2]
-  event: [Event3]
+  event: [Event]
   field: [Field2]
   fieldset: [Fieldset2]
   form: [Form2]
@@ -29344,7 +29394,7 @@ input BulkInput {
   documentIdentification: [DocumentIdentificationInput]
   downloadRequest: [DownloadRequest2Input]
   endangerment: [Endangerment2Input]
-  event: [Event3Input]
+  event: [EventInput]
   field: [Field2Input]
   fieldset: [Fieldset2Input]
   form: [Form2Input]
@@ -29675,6 +29725,7 @@ input Branch2Input {
   """Garden area"""
   collectionID: String!
   context: String
+  events: [EventInput]
 
   """Is the branch alive or not?"""
   exists: Boolean
@@ -29687,6 +29738,41 @@ input Branch2Input {
   type: String
   wgs84Latitude: String
   wgs84Longitude: String
+}
+
+input EventInput {
+  agent: String
+
+  """
+  Enter the amount in the branch as n, addition to the previously given amount as +n or reduction as -n
+  """
+  amount: String
+  amountEstimationUnit: String
+
+  """ID for the accossiated branch"""
+  branchID: String
+  context: String
+  date: String
+  eRH: String
+  estimatedSeedQuantity: Int
+  eventType: EventType!
+  germinationConditions: String
+  germinationPercentage: Int
+  germinationRate: Float
+  id: String
+  lifeStage: LifeStage2
+  notes: String
+  numberOfSeedsEmpty: Int
+  numberOfSeedsFull: Int
+  numberOfSeedsInfested: Int
+  numberOfSeedsMouldy: Int
+  numberOfSeedsPartFull: Int
+  numberOfSeedsTested: Int
+  percentageSeedsFull: Int
+  seedsExchangedInstitution: String
+  testPassed: Boolean
+  type: String
+  viabilityPercentage: Int
 }
 
 input Checklist2Input {
@@ -29901,6 +29987,7 @@ input Contact2Input {
   phoneNumber: String
   postalCode: String
   preferredName: String
+  ringerNumber: Int
   streetAddress: String
   type: String
 }
@@ -30172,6 +30259,7 @@ input Document2Input {
   ID for the observation in another system, e.g. Vihko/Notebook. Format System:identifier.
   """
   observationID: String
+  observerContacts: [Contact2Input]
 
   """
   Original catalogue number or other  original identifier of the specimen. E.g. H9000000
@@ -30404,6 +30492,7 @@ input GatheringFactInput {
   observerID: Int
   pineConesAtCensus: PineConesAtCensus
   pointCountHabitat: PointCountHabitat
+  ringRecoveryFormDateAccuracy: RingRecoveryFormDateAccuracy
   routeID: Int
   routeLength: Int
   routeLengthBiotopeA: Int
@@ -31173,6 +31262,7 @@ input TypeSpecimenInput {
 
 input UnitFactInput {
   adultIndividualCount: Int
+  autocompleteSelectedInvasive: Boolean
   autocompleteSelectedTaxonID: String
   birdMultiplier: Boolean
   broodCount: Int
@@ -31188,6 +31278,8 @@ input UnitFactInput {
   femalesWithBroodsCount: Int
   glowWormMicrohabitat: GlowWormMicrohabitat
   groundNestCount: Int
+  herpFormPopulationChange: HerpFormPopulationChange
+  herpFormPopulationChangeNotes: String
   id: String
   individualCountBiotopeA: Int
   individualCountBiotopeB: Int
@@ -31213,6 +31305,9 @@ input UnitFactInput {
   pairCountOuter: Int
   pointCountFlock: String
   pullusIndividualCount: Int
+  ringRecoveryFormBirdState: RingRecoveryFormBirdState
+  ringRecoveryFormNotes: String
+  ringRecoveryFormRecoveryNotes: String
   runningWaterInVicinity: Boolean
 
   """Oma arvio lajimäärityksen luotettavuudesta"""
@@ -31280,41 +31375,6 @@ input Endangerment2Input {
   id: String
   sortOrder: Int
   type: String
-}
-
-input Event3Input {
-  agent: String
-
-  """
-  Enter the amount in the branch as n, addition to the previously given amount as +n or reduction as -n
-  """
-  amount: String
-  amountEstimationUnit: String
-
-  """ID for the accossiated branch"""
-  branchID: String
-  context: String
-  date: String
-  eRH: String
-  estimatedSeedQuantity: Int
-  eventType: EventType!
-  germinationConditions: String
-  germinationPercentage: Int
-  germinationRate: Float
-  id: String
-  lifeStage: LifeStage2
-  notes: String
-  numberOfSeedsEmpty: Int
-  numberOfSeedsFull: Int
-  numberOfSeedsInfested: Int
-  numberOfSeedsMouldy: Int
-  numberOfSeedsPartFull: Int
-  numberOfSeedsTested: Int
-  percentageSeedsFull: Int
-  seedsExchangedInstitution: String
-  testPassed: Boolean
-  type: String
-  viabilityPercentage: Int
 }
 
 input Field2Input {
@@ -33064,6 +33124,7 @@ input TaxonReferenceSequence2Input {
 
   """DNA sequence stored in FASTA format."""
   sequenceText: [String]
+  sortOrder: Int
   type: String
 }
 
@@ -34293,7 +34354,7 @@ type EventSearch2 {
   context: String!
   currentPage: Int
   lastPage: Int!
-  member: [Event3]!
+  member: [Event]!
   pageSize: Int!
   totalItems: Int!
   type: String!
@@ -35934,12 +35995,12 @@ type MutationViewerAnyAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -39980,7 +40041,7 @@ type MutationViewerAnyAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -40848,7 +40909,7 @@ type MutationViewerAnyAuth {
   
   Equivalent to POST /event
   """
-  storeevent(requestBody: Event3Input): Event3
+  storeevent(requestBody: EventInput): Event
 
   """
   Store field object(s)
@@ -41173,7 +41234,7 @@ type MutationViewerAnyAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -41670,8 +41731,8 @@ type MutationViewerAnyAuth {
   updateevent(
     """Id for the event"""
     id: String!
-    requestBody: Event3Input
-  ): Event3
+    requestBody: EventInput
+  ): Event
 
   """
   Store field
@@ -42184,12 +42245,12 @@ type MutationViewerAnyAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
