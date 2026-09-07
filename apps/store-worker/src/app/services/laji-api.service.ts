@@ -34,7 +34,8 @@ export class LajiApiService {
       this.forms$ = this.httpService
         .get<{ results: Form[] }>(this.getApiUrl(ENDPOINT_FORMS), {
           headers: {
-            authorization: this.configService.get('LAJI_API_TOKEN'),
+          'Authorization': `Bearer ${this.configService.get('LAJI_API_TOKEN')}`,
+          'API-Version': 1,
           },
         })
         .pipe(
@@ -50,7 +51,8 @@ export class LajiApiService {
     return this.httpService
       .post(this.getApiUrl(ENDPOINT_DW_PUSH), payload, {
         headers: {
-          authorization: token,
+          'Authorization': `Bearer ${token}`,
+          'API-Version': 1,
           'content-type': type,
         },
       }).pipe(

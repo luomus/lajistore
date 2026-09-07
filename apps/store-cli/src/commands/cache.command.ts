@@ -35,7 +35,7 @@ export class CacheCommand {
     description: `Generates updated schemas, like <generate>, and sets them to redis cache.`
   })
   async updateCache() {
-    const spin = ora();    
+    const spin = ora();
     let result;
 
     const genServices = [
@@ -43,7 +43,7 @@ export class CacheCommand {
       this.generateSwaggerService,
       this.generateJsonLdContextService,
       this.generateEsIndexService,
-      this.generateGraphQLService,      
+      this.generateGraphQLService,
     ]
 
     spin.start(`Generating...`)
@@ -64,7 +64,7 @@ export class CacheCommand {
       spin.fail(`Cache update failed`)
       throw new Error('Generating failed!');
     }
-  
+
     spin.succeed(`done`);
   }
 
@@ -81,7 +81,7 @@ export class CacheCommand {
     try {
       const classes = await this.getClasses()
       const hashes: {[prop: string]: string} = {};
-  
+
       for (const className of classes.sort((a, b) => a.localeCompare(b))) {
         const schema = await lastValueFrom(this.fileService
           .readJsonFile<JSONSchema4>(this.fileService.getFilename(className)));
@@ -89,7 +89,7 @@ export class CacheCommand {
         const embedded = await this.jsonSchemaService.getEmbeddedFromSchema(schema);
 
         hashes[className] = createHash('md5').update(JSON.stringify(schema)).digest('hex');
-    
+
         await this.schemaCacheService.setCachedJsonSchema(className, schema);
         await this.schemaCacheService.setCachedEmbeddedSchema(className, embedded);
         await this.schemaCacheService.setCachedTypes(classes);

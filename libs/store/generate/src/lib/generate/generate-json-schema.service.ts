@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { AbstractGenerateService } from './abstract-generate.service';
-import { LajiGraphQlService, PropertyData } from '@luomus/laji/client';
+import { LajiApiService, PropertyData, ClassData, AltData, Alt } from '@luomus/laji/client';
 import { JSONSchema4 } from 'json-schema';
 import { StoreConfigService } from '@luomus/store/config';
 import { FileService, UtilityService } from '@luomus/store/shared';
@@ -20,11 +20,14 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
   private languages: string[] = [];
   private written = new Set<string>();
   private addGeneratedFieldsToType: string[];
+  private classData: ClassData[] = [];
+  private propertyData: PropertyData[] = [];
+  private altData: AltData = {};
 
   constructor(
     configService: StoreConfigService,
     fileService: FileService,
-    private lajiGraphQlService: LajiGraphQlService
+    private LajiApiService: LajiApiService,
   ) {
     super(configService, fileService);
     this.addGeneratedFieldsToType = this.configService.getList('ADD_GENERATED_FIELDS_FOR_EMBEDDED_TYPES');
@@ -48,8 +51,12 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
       ));
     let result = true;
 
+    this.classData = await lastValueFrom(this.LajiApiService.getAllClasses());
+    this.propertyData = await lastValueFrom(this.LajiApiService.getProperties());
+    this.altData = await lastValueFrom(this.LajiApiService.getAlts());
+
     if (!classes) {
-      classes = await this.lajiGraphQlService.getAllClasses();
+      classes = this.classData.map(c => c.class);
     }
 
     classes.sort((a, b) => a.localeCompare(b));
@@ -60,6 +67,12 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     }
 
     return result;
+  }
+
+  private prepareClassData(className: string) {
+    const propertyData = this.propertyData.filter(p => p.domain?.includes(className)).map(p => ({ ...p, alts: p.range ? this.altData[p.range] : undefined }));
+    const classData = { ...(this.classData.find(c => c.class === className) || {}), properties: propertyData };
+    return classData;
   }
 
   private async generateClassSchema(
@@ -73,7 +86,8 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     };
     const properties: Record<string, JSONSchema4> = {};
     const required: string[] = [];
-    const classData = await this.lajiGraphQlService.getClassData(className);
+    const classData = this.prepareClassData(className);
+
     const normalizedClassName = UtilityService.normalize(className);
 
     if (depth >= MAX_NESTED_DEPTH) {
@@ -85,8 +99,8 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
       return false;
     }
 
-    schema.title = classData.label;
-    schema.description = classData.comment ?? '';
+    schema.title = classData.label || '';
+    schema.description = classData.comment?.en || classData.comment?.fi || classData.comment?.sv || '';
 
     if (depth === 0 || this.addGeneratedFieldsToType.includes(className)) {
       // Add id property to all classes
@@ -115,11 +129,11 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     }
 
     for (const property of classData.properties) {
-      if (property?.range?.length !== 1) {
+      if (!property?.range || property.range === 'rdf:Resource') {
         continue;
       }
       const propertySchema = await this.generatePropertySchema(
-        property.range[0],
+        property.range,
         property,
         required,
         depth
@@ -209,13 +223,13 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     }
 
     if (embeddedOverride[property.property]) {
-      property.embedded = true;
-      property.range = [embeddedOverride[property.property]];
+      property.isEmbeddable = true;
+      property.range = embeddedOverride[property.property];
       range = embeddedOverride[property.property];
     }
     if (this.formatMap[range]) {
       propSchema = { ...this.formatMap[range] };
-    } else if (property.embedded) {
+    } else if (property.isEmbeddable) {
       const embedded = await this.generateClassSchema(range, depth + 1);
       if (embedded === false) {
         return false;
@@ -224,12 +238,10 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
     } else if (property?.alts?.length) {
       const enums: string[] = property.required ? [] : [''];
       const names: string[] = property.required ? [] : [''];
-      property.alts.forEach((alt) =>
-        alt.options.forEach((option) => {
-          enums.push(option.id);
-          names.push(option.value);
-        })
-      );
+      property.alts.forEach((alt) => {
+          enums.push(alt.id);
+          names.push(alt.value || alt.id);
+      });
       if (enums.length) {
         propSchema.enum = enums;
         propSchema.enumNames = names;
@@ -247,7 +259,7 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
       }
     }
 
-    if (property.multiLang) {
+    if (property.multiLanguage) {
       propSchema = {
         type: 'object',
         additionalProperties: false,
@@ -267,12 +279,17 @@ export class GenerateJsonSchemaService extends AbstractGenerateService {
 
     propSchema.range = range;
     propSchema.subject = property.property;
-    if (property.comment) {
-      propSchema.description = property.comment;
+
+    const comment = property.comment?.en || property.comment?.fi || property.comment?.sv;
+    if (comment) {
+      propSchema.description = comment;
     }
-    if (property.label) {
-      propSchema.title = property.label;
+
+    const title = property.label || property.shortName || property.property;
+    if (title) {
+      propSchema.title = title;
     }
+
     propSchema.sortOrder = property.sortOrder;
     return { ...propSchema };
   }

@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
-import { LajiGraphQlService } from './laji-graph-ql.service';
+import { HttpModule } from '@nestjs/axios';
+import { LajiApiService } from './laji-api.service';
 
 @Module({
-  providers: [LajiGraphQlService],
-  exports: [LajiGraphQlService],
+  imports: [ HttpModule ],
+  providers: [ LajiApiService],
+  exports: [ LajiApiService],
 })
 export class LajiClientModule {}

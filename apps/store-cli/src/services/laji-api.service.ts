@@ -16,16 +16,17 @@ export class LajiApiService {
   private userLinks$?: Observable<UserLink[]>;
 
   constructor(
-     private configService: ConfigService,
-     private httpService: HttpService
+    private configService: ConfigService,
+    private httpService: HttpService
   ) {}
-  
+
   getLinkedUsers(): Observable<UserLink[]> {
     if (!this.userLinks$) {
       this.userLinks$ = this.httpService
         .get<UserLink[]>(this.getApiUrl(ENDPOINT_USER_LINKS), {
           headers: {
-            authorization: this.configService.get('LAJI_API_TOKEN'),
+            'Authorization': `Bearer ${this.configService.get('LAJI_API_TOKEN')}`,
+            'API-Version': 1,
           },
         })
         .pipe(
