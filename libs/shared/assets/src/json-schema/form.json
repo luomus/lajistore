@@ -12878,6 +12878,14 @@
           "title": "Secondary copy",
           "sortOrder": 11
         },
+        "sendToWarehouse": {
+          "type": "boolean",
+          "range": "xsd:boolean",
+          "subject": "MHL.sendToWarehouse",
+          "description": "Defaults to true. If false, the resource is not sent to warehouse.",
+          "title": "Send to warehouse",
+          "sortOrder": -1
+        },
         "shortTitleFromCollectionName": {
           "type": "boolean",
           "range": "xsd:boolean",

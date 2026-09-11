@@ -192,6 +192,10 @@ export class FormOptions {
    */
   secondaryCopy?: boolean;
   /**
+   * Defaults to true. If false, the resource is not sent to warehouse.
+   */
+  sendToWarehouse?: boolean;
+  /**
    * Overrides MHL.shortTitle usage
    */
   shortTitleFromCollectionName?: boolean;

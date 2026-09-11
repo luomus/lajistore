@@ -138,6 +138,9 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "darkTaxon": {
+        "type": "boolean"
+      },
       "descriptionCone": {
         "type": "keyword",
         "ignore_above": 200,

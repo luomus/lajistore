@@ -227,6 +227,10 @@
       "@id": "default:MHL.secondaryCopy",
       "@type": "xsd:boolean"
     },
+    "sendToWarehouse": {
+      "@id": "default:MHL.sendToWarehouse",
+      "@type": "xsd:boolean"
+    },
     "shortTitleFromCollectionName": {
       "@id": "default:MHL.shortTitleFromCollectionName",
       "@type": "xsd:boolean"

@@ -3554,6 +3554,9 @@
       "secondaryCopy": {
         "type": "boolean"
       },
+      "sendToWarehouse": {
+        "type": "boolean"
+      },
       "shortTitleFromCollectionName": {
         "type": "boolean"
       },
