@@ -369,6 +369,11 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "newObservationLabel": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "openForm": {
         "type": "boolean"
       },

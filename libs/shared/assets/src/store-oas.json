@@ -62636,6 +62636,11 @@
             "description": "The title label for theme form sidebar",
             "title": "Navigation title"
           },
+          "newObservationLabel": {
+            "type": "string",
+            "description": "Shown on the about page for forms with MHL.mobile",
+            "title": "New observation label"
+          },
           "openForm": {
             "type": "boolean",
             "description": "Allows creating documents without a person token. Utilizes open form login system, hides navbar.",

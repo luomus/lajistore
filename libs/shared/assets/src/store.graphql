@@ -10404,6 +10404,9 @@ type FormOptions {
   """The title label for theme form sidebar"""
   navigationTitle: String
 
+  """Shown on the about page for forms with MHL.mobile"""
+  newObservationLabel: String
+
   """
   Allows creating documents without a person token. Utilizes open form login system, hides navbar.
   """
@@ -31530,6 +31533,9 @@ input FormOptionsInput {
 
   """The title label for theme form sidebar"""
   navigationTitle: String
+
+  """Shown on the about page for forms with MHL.mobile"""
+  newObservationLabel: String
 
   """
   Allows creating documents without a person token. Utilizes open form login system, hides navbar.

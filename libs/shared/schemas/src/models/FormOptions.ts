@@ -128,6 +128,10 @@ export interface FormOptions {
    */
   navigationTitle?: string;
   /**
+   * Shown on the about page for forms with MHL.mobile
+   */
+  newObservationLabel?: string;
+  /**
    * Allows creating documents without a person token. Utilizes open form login system, hides navbar.
    */
   openForm?: boolean;

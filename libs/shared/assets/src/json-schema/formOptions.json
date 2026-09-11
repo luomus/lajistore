@@ -803,6 +803,14 @@
       "title": "Navigation title",
       "sortOrder": 36
     },
+    "newObservationLabel": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MHL.newObservationLabel",
+      "description": "Shown on the about page for forms with MHL.mobile",
+      "title": "New observation label",
+      "sortOrder": -1
+    },
     "openForm": {
       "type": "boolean",
       "range": "xsd:boolean",
