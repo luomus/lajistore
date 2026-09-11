@@ -1,10 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { LajiApiService } from './laji-api.service';
-import {
-  StoreService,
-  WorkerData,
-  WorkerMessagePattern,
-} from '@luomus/store/core';
+import { StoreService, WorkerData, WorkerMessagePattern } from '@luomus/store/core';
 import {
   Annotation,
   Document,
@@ -14,7 +10,7 @@ import {
   isDocument,
   StoreObject,
   Unit,
-  UnitFact,
+  UnitFact
 } from '@luomus/shared/models';
 import { WorkerConfigService } from './worker-config.service';
 import { LajiApiTokenService } from './laji-api-token.service';
@@ -25,13 +21,13 @@ const BATCH_SIZE = 50;
 const taxonUnitFields: Array<keyof Unit> = [
   'informalNameString',
   'informalTaxonGroups',
-  'images',
+  'images'
 ];
 
 const taxonIdentificationFields: Array<keyof Identification> = [
   'taxon',
   'taxonID',
-  'taxonVerbatim',
+  'taxonVerbatim'
 ];
 
 const countFields: Array<keyof Unit | keyof UnitFact> = [
@@ -51,11 +47,11 @@ const countFields: Array<keyof Unit | keyof UnitFact> = [
   'adultIndividualCount',
   'pullusIndividualCount',
   'treeNestCount',
-  'groundNestCount',
+  'groundNestCount'
 ];
 
 interface SourceData {
-  [source: string]: DWPayload[];
+  [source: string]: DWPayload[]
 }
 
 type DWPayload = DocumentPayload | AnnotationPayload;
@@ -70,10 +66,8 @@ interface AnnotationPayload {
 
 @Injectable()
 export class DataWarehouseService {
-  private sources: string[] = this.configService
-    .get('DW_SOURCES')
-    .split(',')
-    .map((v) => v.trim());
+
+  private sources: string[] = this.configService.get('DW_SOURCES').split(',').map(v => v.trim());
   private sendTypes = ['document', 'annotation'];
 
   constructor(
@@ -137,7 +131,7 @@ export class DataWarehouseService {
     );
     for (const document of documents) {
       const source = this.getSourceID(document);
-      let payload: DocumentPayload | AnnotationPayload | undefined = undefined;
+      let payload: any = false;
       if (isDocument(document)) {
         payload = await this.prepareDocumentPayload(action, document);
       } else if (isAnnotation(document)) {
@@ -153,12 +147,9 @@ export class DataWarehouseService {
     return payloadData;
   }
 
-  private async prepareAnnotationPayload(
-    action: WorkerMessagePattern,
-    annotation: Annotation
-  ): Promise<AnnotationPayload> {
+  private async prepareAnnotationPayload(action: WorkerMessagePattern, annotation: Annotation): Promise<AnnotationPayload> {
     if (action === WorkerMessagePattern.documentDelete) {
-      return { annotation: this.deletePayload(annotation) };
+      return {annotation: this.deletePayload(annotation)};
     }
     return { annotation: annotation };
   }
@@ -166,20 +157,17 @@ export class DataWarehouseService {
   private async prepareDocumentPayload(
     action: WorkerMessagePattern,
     document: Document
-  ): Promise<DocumentPayload | undefined> {
-    const form = document.formID
-      ? await lastValueFrom(this.lajiApiService.getForm(document.formID))
-      : null;
-    if (form?.options?.sendToWarehouse === false) {
-      return undefined;
-    }
+  ): Promise<DocumentPayload> {
     if (
       action === WorkerMessagePattern.documentDelete ||
       document.publicityRestrictions === 'MZ.publicityRestrictionsPrivate'
     ) {
-      return { document: this.deletePayload(document) };
+      return {document: this.deletePayload(document)};
     }
 
+    const form = document.formID
+      ? await lastValueFrom(this.lajiApiService.getForm(document.formID))
+      : null;
     if (!form) {
       return { document };
     }
@@ -193,14 +181,12 @@ export class DataWarehouseService {
     const sources = Object.keys(sourceData);
     for (const source of sources) {
       const accessToken = await this.lajiApiTokenService.getToken(source);
-      const deleted =
-        action === WorkerMessagePattern.documentDelete
-          ? sourceData[source]
-          : sourceData[source].filter((d) => this.isDeletePayload(d));
-      const update =
-        action !== WorkerMessagePattern.documentDelete
-          ? sourceData[source].filter((d) => !this.isDeletePayload(d))
-          : [];
+      const deleted = action === WorkerMessagePattern.documentDelete ?
+        sourceData[source] :
+        sourceData[source].filter(d => this.isDeletePayload(d));
+      const update = action !== WorkerMessagePattern.documentDelete ?
+        sourceData[source].filter(d => !this.isDeletePayload(d)) :
+        [];
 
       if (deleted.length) {
         let batch = [];
@@ -211,24 +197,14 @@ export class DataWarehouseService {
           batch.push(toDelete);
 
           if (cnt >= BATCH_SIZE) {
-            await lastValueFrom(
-              this.lajiApiService.sendToWarehouse(
-                this.prepareDeletePayload(batch),
-                accessToken
-              )
-            );
+            await lastValueFrom(this.lajiApiService.sendToWarehouse(this.prepareDeletePayload(batch), accessToken));
             batch = [];
             cnt = 0;
           }
         }
 
         if (cnt > 0) {
-          await lastValueFrom(
-            this.lajiApiService.sendToWarehouse(
-              this.prepareDeletePayload(batch),
-              accessToken
-            )
-          );
+          await lastValueFrom(this.lajiApiService.sendToWarehouse(this.prepareDeletePayload(batch), accessToken));
         }
       }
 
@@ -241,24 +217,14 @@ export class DataWarehouseService {
           batch.push(toUpdate);
 
           if (cnt >= BATCH_SIZE) {
-            await lastValueFrom(
-              this.lajiApiService.sendToWarehouse(
-                { schema: 'lajistore', roots: batch },
-                accessToken
-              )
-            );
-            batch = [];
+            await lastValueFrom(this.lajiApiService.sendToWarehouse({ 'schema': 'lajistore', 'roots': batch }, accessToken));
+            batch= [];
             cnt = 0;
           }
         }
 
         if (cnt > 0) {
-          await lastValueFrom(
-            this.lajiApiService.sendToWarehouse(
-              { schema: 'lajistore', roots: batch },
-              accessToken
-            )
-          );
+          await lastValueFrom(this.lajiApiService.sendToWarehouse({ 'schema': 'lajistore', 'roots': batch }, accessToken));
         }
       }
     }
@@ -271,13 +237,13 @@ export class DataWarehouseService {
   }
 
   private deletePayload(obj: StoreObject) {
-    return { id: obj.id };
+    return {id: obj.id};
   }
 
   private getSourceID(document?: StoreObject): string {
-    return isDocument(document)
-      ? document.sourceID || this.configService.get('SOURCE_ID')
-      : this.configService.get('SOURCE_ID');
+    return isDocument(document) ?
+      (document.sourceID || this.configService.get('SOURCE_ID')) :
+      this.configService.get('SOURCE_ID');
   }
 
   private prepareDocument(document: Document, form: Partial<Form>): Document {
@@ -291,10 +257,10 @@ export class DataWarehouseService {
       if (!gathering.units) {
         return document;
       }
-      gathering.units = gathering.units.filter(
-        (unit) => !DataWarehouseService.isEmptyUnit(unit, removeUnitIfNoCount)
-      );
+      gathering.units = gathering.units
+        .filter(unit => !DataWarehouseService.isEmptyUnit(unit, removeUnitIfNoCount));
     }
+
 
     return document;
   }
@@ -306,39 +272,31 @@ export class DataWarehouseService {
     for (const data of sourceDatum) {
       const keys = Object.keys(data) as Array<keyof DWPayload>;
       for (const key of keys) {
-        result += `DELETE ${resolver}${(data[key] as any).id}\n`;
+        result += `DELETE ${resolver}${(data[key] as any).id}\n`
       }
     }
 
     return result;
   }
 
-  private static isEmptyUnit(
-    unit: Unit,
-    removeUnitIfNoCount: boolean
-  ): boolean {
+  private static isEmptyUnit(unit: Unit, removeUnitIfNoCount: boolean): boolean {
     if (unit.observationStatus) {
       return false;
     }
 
     if (removeUnitIfNoCount) {
-      return countFields.every(
-        (field) =>
-          DataWarehouseService.isEmpty((unit as any)[field]) &&
-          (!unit.unitFact ||
-            DataWarehouseService.isEmpty((unit.unitFact as any)[field]))
+      return countFields.every(field =>
+        DataWarehouseService.isEmpty((unit as any)[field])
+        && (!unit.unitFact || DataWarehouseService.isEmpty((unit.unitFact as any)[field]))
       );
     } else {
       for (const field of taxonUnitFields) {
         if (
-          !DataWarehouseService.isEmpty(unit[field]) ||
-          (Array.isArray(unit.identifications) &&
-            unit.identifications.length > 0 &&
-            unit.identifications.some(
-              (identification) =>
-                !DataWarehouseService.isEmptyIdentification(identification)
-            ))
-        ) {
+          !DataWarehouseService.isEmpty(unit[field]) || (
+          Array.isArray(unit.identifications) &&
+          unit.identifications.length > 0 &&
+          unit.identifications.some(identification => !DataWarehouseService.isEmptyIdentification(identification))
+        )) {
           return false;
         }
       }
@@ -346,12 +304,9 @@ export class DataWarehouseService {
     return true;
   }
 
-  private static isEmptyIdentification(
-    identification: Identification
-  ): boolean {
-    return taxonIdentificationFields.every((field) =>
-      DataWarehouseService.isEmpty(identification[field])
-    );
+  private static isEmptyIdentification(identification: Identification): boolean {
+    return taxonIdentificationFields
+      .every(field => DataWarehouseService.isEmpty(identification[field]));
   }
 
   private static isEmpty(value: unknown) {
