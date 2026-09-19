@@ -132,7 +132,7 @@ export interface FormOptions {
    */
   newObservationLabel?: string;
   /**
-   * Allows creating documents without a person token. Utilizes open form login system, hides navbar.
+   * Allows creating documents without a person token. Utilizes open form login system.
    */
   openForm?: boolean;
   /**
