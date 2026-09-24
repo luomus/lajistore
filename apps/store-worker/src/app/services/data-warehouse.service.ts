@@ -131,7 +131,7 @@ export class DataWarehouseService {
     );
     for (const document of documents) {
       const source = this.getSourceID(document);
-      let payload: any = false;
+      let payload: DocumentPayload | AnnotationPayload | undefined = undefined;
       if (isDocument(document)) {
         payload = await this.prepareDocumentPayload(action, document);
       } else if (isAnnotation(document)) {
@@ -157,7 +157,13 @@ export class DataWarehouseService {
   private async prepareDocumentPayload(
     action: WorkerMessagePattern,
     document: Document
-  ): Promise<DocumentPayload> {
+  ): Promise<DocumentPayload | undefined> {
+    const form = document.formID
+      ? await lastValueFrom(this.lajiApiService.getForm(document.formID))
+      : null;
+    if (form?.options?.sendToWarehouse === false) {
+      return undefined;
+    }
     if (
       action === WorkerMessagePattern.documentDelete ||
       document.publicityRestrictions === 'MZ.publicityRestrictionsPrivate'
@@ -165,9 +171,6 @@ export class DataWarehouseService {
       return {document: this.deletePayload(document)};
     }
 
-    const form = document.formID
-      ? await lastValueFrom(this.lajiApiService.getForm(document.formID))
-      : null;
     if (!form) {
       return { document };
     }
