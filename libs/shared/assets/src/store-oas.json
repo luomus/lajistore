@@ -72049,7 +72049,7 @@
             "title": "GBIF Occurrence ID"
           },
           "gbifTaxonId": {
-            "type": "integer",
+            "type": "string",
             "title": "GBIF Taxon ID"
           },
           "kingdom": {

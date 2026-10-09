@@ -13672,7 +13672,7 @@ type TraitSubject2 {
   finbifOccurrenceId: String
   functionalGroupName: String
   gbifOccurrenceId: String
-  gbifTaxonId: Int
+  gbifTaxonId: String
   habitat: [HabitatListItem]
 
   """
@@ -33317,7 +33317,7 @@ input TraitSubject2Input {
   finbifOccurrenceId: String
   functionalGroupName: String
   gbifOccurrenceId: String
-  gbifTaxonId: Int
+  gbifTaxonId: String
   habitat: [HabitatListItem]
 
   """

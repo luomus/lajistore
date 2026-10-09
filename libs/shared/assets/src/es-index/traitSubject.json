@@ -122,7 +122,9 @@
         "normalizer": "useLowercase"
       },
       "gbifTaxonId": {
-        "type": "integer"
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
       },
       "kingdom": {
         "type": "keyword",

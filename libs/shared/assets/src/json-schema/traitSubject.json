@@ -652,8 +652,8 @@
       "sortOrder": -1
     },
     "gbifTaxonId": {
-      "type": "integer",
-      "range": "xsd:integer",
+      "type": "string",
+      "range": "xsd:string",
       "subject": "TDFX.gbifTaxonId",
       "title": "GBIF Taxon ID",
       "sortOrder": -1
