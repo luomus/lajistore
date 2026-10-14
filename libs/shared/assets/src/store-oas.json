@@ -64517,6 +64517,11 @@
             "minimum": 0,
             "title": "Ruovikon lintulaudat"
           },
+          "birdFeederCountBiotopeI": {
+            "type": "integer",
+            "minimum": 0,
+            "title": "Vesistön lintulaiudat"
+          },
           "cloudAndRain": {
             "type": "string",
             "enum": [
@@ -64577,6 +64582,11 @@
             "type": "integer",
             "minimum": 0,
             "title": "Ruovikon ruokintapaikat"
+          },
+          "feedingStationCountBiotopeI": {
+            "type": "integer",
+            "minimum": 0,
+            "title": "Vesistön ruokintapaikat"
           },
           "iceCover": {
             "type": "string",
@@ -64669,6 +64679,11 @@
             "minimum": 0,
             "title": "Route length reed"
           },
+          "routeLengthBiotopeI": {
+            "type": "integer",
+            "minimum": 0,
+            "title": "Route length body of water"
+          },
           "routeLengthChange": {
             "type": "integer",
             "title": "Reitin muutokset (m)"
@@ -64704,6 +64719,10 @@
           "routeLengthChangeBiotopeH": {
             "type": "integer",
             "title": "Reitin muutokset ruovikko"
+          },
+          "routeLengthChangeBiotopeI": {
+            "type": "integer",
+            "title": "Reitin muutokset vesistö"
           },
           "snowAndIceOnTrees": {
             "type": "string",

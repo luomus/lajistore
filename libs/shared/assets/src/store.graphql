@@ -7680,6 +7680,7 @@ type GatheringFact {
   birdFeederCountBiotopeF: Int
   birdFeederCountBiotopeG: Int
   birdFeederCountBiotopeH: Int
+  birdFeederCountBiotopeI: Int
   cARSPIonAlder: Int
   cARSPIonBirch: Int
   cARSPIonGround: Int
@@ -7699,6 +7700,7 @@ type GatheringFact {
   feedingStationCountBiotopeF: Int
   feedingStationCountBiotopeG: Int
   feedingStationCountBiotopeH: Int
+  feedingStationCountBiotopeI: Int
   iceCover: IceCover
   id: String
   invasiveControlOtherExpensesInEuros: Int
@@ -7734,6 +7736,7 @@ type GatheringFact {
   routeLengthBiotopeF: Int
   routeLengthBiotopeG: Int
   routeLengthBiotopeH: Int
+  routeLengthBiotopeI: Int
   routeLengthChange: Int
   routeLengthChangeBiotopeA: Int
   routeLengthChangeBiotopeB: Int
@@ -7743,6 +7746,7 @@ type GatheringFact {
   routeLengthChangeBiotopeF: Int
   routeLengthChangeBiotopeG: Int
   routeLengthChangeBiotopeH: Int
+  routeLengthChangeBiotopeI: Int
   shorelineLengthMeters: Int
   snowAndIceOnTrees: SnowAndIceOnTrees
   snowCover: SnowCover
@@ -30460,6 +30464,7 @@ input GatheringFactInput {
   birdFeederCountBiotopeF: Int
   birdFeederCountBiotopeG: Int
   birdFeederCountBiotopeH: Int
+  birdFeederCountBiotopeI: Int
   cARSPIonAlder: Int
   cARSPIonBirch: Int
   cARSPIonGround: Int
@@ -30479,6 +30484,7 @@ input GatheringFactInput {
   feedingStationCountBiotopeF: Int
   feedingStationCountBiotopeG: Int
   feedingStationCountBiotopeH: Int
+  feedingStationCountBiotopeI: Int
   iceCover: IceCover
   id: String
   invasiveControlOtherExpensesInEuros: Int
@@ -30514,6 +30520,7 @@ input GatheringFactInput {
   routeLengthBiotopeF: Int
   routeLengthBiotopeG: Int
   routeLengthBiotopeH: Int
+  routeLengthBiotopeI: Int
   routeLengthChange: Int
   routeLengthChangeBiotopeA: Int
   routeLengthChangeBiotopeB: Int
@@ -30523,6 +30530,7 @@ input GatheringFactInput {
   routeLengthChangeBiotopeF: Int
   routeLengthChangeBiotopeG: Int
   routeLengthChangeBiotopeH: Int
+  routeLengthChangeBiotopeI: Int
   shorelineLengthMeters: Int
   snowAndIceOnTrees: SnowAndIceOnTrees
   snowCover: SnowCover

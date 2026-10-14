@@ -1483,6 +1483,14 @@
               "title": "Ruovikon lintulaudat",
               "sortOrder": -1
             },
+            "birdFeederCountBiotopeI": {
+              "type": "integer",
+              "minimum": 0,
+              "range": "xsd:nonNegativeInteger",
+              "subject": "WBC.birdFeederCountBiotopeI",
+              "title": "Vesistön lintulaiudat",
+              "sortOrder": -1
+            },
             "cloudAndRain": {
               "type": "string",
               "enum": [
@@ -1583,6 +1591,14 @@
               "range": "xsd:nonNegativeInteger",
               "subject": "WBC.feedingStationCountBiotopeH",
               "title": "Ruovikon ruokintapaikat",
+              "sortOrder": -1
+            },
+            "feedingStationCountBiotopeI": {
+              "type": "integer",
+              "minimum": 0,
+              "range": "xsd:nonNegativeInteger",
+              "subject": "WBC.feedingStationCountBiotopeI",
+              "title": "Vesistön ruokintapaikat",
               "sortOrder": -1
             },
             "iceCover": {
@@ -1738,6 +1754,14 @@
               "title": "Route length reed",
               "sortOrder": -1
             },
+            "routeLengthBiotopeI": {
+              "type": "integer",
+              "minimum": 0,
+              "range": "xsd:nonNegativeInteger",
+              "subject": "WBC.routeLengthBiotopeI",
+              "title": "Route length body of water",
+              "sortOrder": -1
+            },
             "routeLengthChange": {
               "type": "integer",
               "range": "xsd:integer",
@@ -1799,6 +1823,13 @@
               "range": "xsd:integer",
               "subject": "WBC.routeLengthChangeBiotopeH",
               "title": "Reitin muutokset ruovikko",
+              "sortOrder": -1
+            },
+            "routeLengthChangeBiotopeI": {
+              "type": "integer",
+              "range": "xsd:integer",
+              "subject": "WBC.routeLengthChangeBiotopeI",
+              "title": "Reitin muutokset vesistö",
               "sortOrder": -1
             },
             "snowAndIceOnTrees": {
@@ -4126,6 +4157,14 @@
                 "title": "Ruovikon lintulaudat",
                 "sortOrder": -1
               },
+              "birdFeederCountBiotopeI": {
+                "type": "integer",
+                "minimum": 0,
+                "range": "xsd:nonNegativeInteger",
+                "subject": "WBC.birdFeederCountBiotopeI",
+                "title": "Vesistön lintulaiudat",
+                "sortOrder": -1
+              },
               "cloudAndRain": {
                 "type": "string",
                 "enum": [
@@ -4226,6 +4265,14 @@
                 "range": "xsd:nonNegativeInteger",
                 "subject": "WBC.feedingStationCountBiotopeH",
                 "title": "Ruovikon ruokintapaikat",
+                "sortOrder": -1
+              },
+              "feedingStationCountBiotopeI": {
+                "type": "integer",
+                "minimum": 0,
+                "range": "xsd:nonNegativeInteger",
+                "subject": "WBC.feedingStationCountBiotopeI",
+                "title": "Vesistön ruokintapaikat",
                 "sortOrder": -1
               },
               "iceCover": {
@@ -4381,6 +4428,14 @@
                 "title": "Route length reed",
                 "sortOrder": -1
               },
+              "routeLengthBiotopeI": {
+                "type": "integer",
+                "minimum": 0,
+                "range": "xsd:nonNegativeInteger",
+                "subject": "WBC.routeLengthBiotopeI",
+                "title": "Route length body of water",
+                "sortOrder": -1
+              },
               "routeLengthChange": {
                 "type": "integer",
                 "range": "xsd:integer",
@@ -4442,6 +4497,13 @@
                 "range": "xsd:integer",
                 "subject": "WBC.routeLengthChangeBiotopeH",
                 "title": "Reitin muutokset ruovikko",
+                "sortOrder": -1
+              },
+              "routeLengthChangeBiotopeI": {
+                "type": "integer",
+                "range": "xsd:integer",
+                "subject": "WBC.routeLengthChangeBiotopeI",
+                "title": "Reitin muutokset vesistö",
                 "sortOrder": -1
               },
               "snowAndIceOnTrees": {

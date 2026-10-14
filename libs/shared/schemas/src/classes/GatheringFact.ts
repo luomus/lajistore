@@ -83,6 +83,7 @@ export class GatheringFact {
   birdFeederCountBiotopeF?: number;
   birdFeederCountBiotopeG?: number;
   birdFeederCountBiotopeH?: number;
+  birdFeederCountBiotopeI?: number;
   cloudAndRain?: WBCCloudAndRainEnum;
   descriptionBiotopeF?: string;
   feedingStationCount?: number;
@@ -94,6 +95,7 @@ export class GatheringFact {
   feedingStationCountBiotopeF?: number;
   feedingStationCountBiotopeG?: number;
   feedingStationCountBiotopeH?: number;
+  feedingStationCountBiotopeI?: number;
   iceCover?: WBCIceCoverEnum;
   meanTemperature?: number;
   observerCount?: number;
@@ -109,6 +111,7 @@ export class GatheringFact {
   routeLengthBiotopeF?: number;
   routeLengthBiotopeG?: number;
   routeLengthBiotopeH?: number;
+  routeLengthBiotopeI?: number;
   routeLengthChange?: number;
   routeLengthChangeBiotopeA?: number;
   routeLengthChangeBiotopeB?: number;
@@ -118,6 +121,7 @@ export class GatheringFact {
   routeLengthChangeBiotopeF?: number;
   routeLengthChangeBiotopeG?: number;
   routeLengthChangeBiotopeH?: number;
+  routeLengthChangeBiotopeI?: number;
   snowAndIceOnTrees?: WBCSnowAndIceOnTreesEnum;
   snowCover?: WBCSnowCoverEnum;
   sorbusBerriesAtCensus?: WBCBerriesAndConesEnum;
