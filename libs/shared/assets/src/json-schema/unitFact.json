@@ -624,6 +624,14 @@
       "subject": "WBC.individualCountBiotopeH",
       "title": "Individual count reed",
       "sortOrder": -1
+    },
+    "individualCountBiotopeI": {
+      "type": "integer",
+      "minimum": 0,
+      "range": "xsd:nonNegativeInteger",
+      "subject": "WBC.individualCountBiotopeI",
+      "title": "Individual count water body",
+      "sortOrder": -1
     }
   }
 }

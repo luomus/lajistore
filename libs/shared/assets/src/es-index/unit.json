@@ -736,6 +736,9 @@
           },
           "individualCountBiotopeH": {
             "type": "integer"
+          },
+          "individualCountBiotopeI": {
+            "type": "integer"
           }
         }
       },
