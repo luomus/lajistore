@@ -1,6 +1,6 @@
 {
   "name": "store-api",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/store-api/src",
   "projectType": "application",
   "prefix": "store-api",
