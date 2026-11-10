@@ -88,6 +88,8 @@ oc apply -f tools/kubernetes/store-api-statefulset.yaml
 oc apply -f tools/kubernetes/store-cli-statefulset.yaml
 oc apply -f tools/kubernetes/store-worker-statefulset.yaml
 
+oc exec -i -t store-cli-0 -- node main.js update-cache
+
 echo "Restarting pods"
 PODS="$( oc get pods | grep store- | awk '{print $1}' )"
 for pod in $PODS
