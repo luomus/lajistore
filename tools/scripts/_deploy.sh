@@ -88,6 +88,7 @@ oc apply -f tools/kubernetes/store-api-statefulset.yaml
 oc apply -f tools/kubernetes/store-cli-statefulset.yaml
 oc apply -f tools/kubernetes/store-worker-statefulset.yaml
 
+echo "Updating caches"
 oc exec -i -t store-cli-0 -- node main.js update-cache
 
 echo "Restarting pods"
