@@ -1,17 +1,19 @@
-import { Command, Console } from 'nestjs-console';
+import { Command, CommandRunner } from 'nest-commander';
 import { StatusService } from '@luomus/store/core';
 
-@Console()
-export class StatusCommand {
-  constructor(
-    private status: StatusService
-  ) {}
-
   @Command({
-    command: 'status',
+    name: 'status',
     description: 'Get the status ',
   })
-  async add() {
+  export class StatusCommand extends CommandRunner {
+  constructor(
+    private status: StatusService
+  ) {
+    super();
+  }
+
+
+  async run() {
     const status = await this.status.check(['database', 'search', 'workers']);
     console.log(status);
   }

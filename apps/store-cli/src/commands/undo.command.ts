@@ -2,7 +2,7 @@ import {
   DocumentHistoryService,
   DocumentService, StoreService
 } from '@luomus/store/core';
-import { Command, Console } from 'nestjs-console';
+import { Command, CommandRunner, Option } from 'nest-commander';
 import { ValidatorService } from '@luomus/store/shared';
 import ora from 'ora';
 
@@ -12,36 +12,50 @@ interface JobOptions {
   source: string;
 }
 
-@Console()
-export class UndoCommand {
+@Command({
+  name: 'undo-delete',
+  description: 'Undo document deletion',
+})
+export class UndoCommand extends CommandRunner {
 
   constructor(
     private readonly storeService: StoreService,
     private readonly documentService: DocumentService,
     private readonly documentHistoryService: DocumentHistoryService,
     private readonly validatorService: ValidatorService
-  ) {}
+  ) {
+    super();
+  }
 
-  @Command({
-    command: 'undo-delete',
-    description: 'Undo document deletion',
-    options: [
-      {
-        flags: '--source <source>',
-        description: 'Source id',
-        required: true
-      },{
-        flags: '--type <type>',
-        description: 'Type of the document',
-        required: true
-      },{
-        flags: '--id <id...>',
-        description: 'ID for the document',
-        required: true
-      }
-    ],
+
+  @Option({
+    flags: '--source <source>',
+    description: 'Source id',
+    required: true
   })
-  async undoDeletion(options: JobOptions) {
+  source(source: string): string {
+    return source;
+  }
+
+  @Option({
+    flags: '--type <type>',
+    description: 'Type of the document',
+    required: true
+  })
+  type(type: string): string {
+    return type;
+  }
+
+  @Option({
+    flags: '--id <id...>',
+    description: 'ID for the document',
+    required: true
+  })
+  id(id: string): string[] {
+    return id.split(',');
+  }
+
+  async run(passedParams: string[], options: JobOptions) {
     const spin = ora();
     let done = 0;
 

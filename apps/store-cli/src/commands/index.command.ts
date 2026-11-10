@@ -1,32 +1,21 @@
 import { DocumentHistoryService, DocumentService, StoreService } from '@luomus/store/core';
-import { Command, Console } from 'nestjs-console';
+import { Command, CommandRunner, Option } from 'nest-commander';
 import { StoreSearchService } from '@luomus/store/search';
 import type { Document } from '@luomus/store/database';
 import ora from 'ora';
 
-interface IndexOptions {
-  id?: string[];
-  type?: string;
-  source?: string;
-  removeDeleted?: boolean;
-  size?: string;
-  skip?: string;
-}
-
-@Console()
-export class IndexCommand {
-
-  constructor(
-    private readonly searchService: StoreSearchService,
-    private readonly documentService: DocumentService,
-    private readonly documentHistoryService: DocumentHistoryService,
-  ) {}
-
   @Command({
-    command: 'index-update',
+    name: 'index-update',
     description: 'Update all indexes to new mappings'
   })
-  async updateIndexes() {
+export class UpdateIndexCommand extends CommandRunner {
+  constructor(
+    private readonly searchService: StoreSearchService,
+  ) {
+    super();
+  }
+
+  async run() {
     const failed = [];
     const spin = ora();
     const indexes = await this.searchService.getAllIndexes();
@@ -48,47 +37,99 @@ export class IndexCommand {
     }
     spin.succeed(`All updated`);
   }
+}
 
-  @Command({
-    command: 'index',
-    description: 'Reindex documents to search index',
-    options: [
-      {
-        flags: '--source <source>',
-        description: 'Source id',
-        required: false
-      },{
-        flags: '--type <type>',
-        description: 'Type of the document',
-        required: false
-      },{
-        flags: '--id <id...>',
-        description: 'ID for the document',
-        required: false
-      },{
-        flags: '--edited <edited>',
-        description: 'Edited after this date. Give date time in ISO 8601 format (for example 2021-05-31T10:00).',
-        required: false
-      },{
-        flags: '--remove-deleted',
-        description: 'Remove deleted documents from the index. Please note that this is quite slow operation',
-        required: false
-      },{
-        flags: '--size <size>',
-        description: 'The size of the batch to be send for indexing at ones (defaults to 200)',
-        required: false
-      },{
-        flags: '--skip <skip>',
-        description: 'Skips the first n documents (defaults to 0). Internally this is flooring to the batch that would have the next document',
-        required: false
-      },
-    ],
+interface IndexOptions {
+  id?: string[];
+  type?: string;
+  source?: string;
+  removeDeleted?: boolean;
+  size?: number;
+  skip?: number;
+}
+
+@Command ({
+  name: 'index',
+  description: 'Reindex documents to search index',
+})
+export class IndexCommand extends CommandRunner {
+  constructor(
+    private readonly searchService: StoreSearchService,
+    private readonly documentService: DocumentService,
+    private readonly documentHistoryService: DocumentHistoryService,
+  ) {
+    super();
+  }
+
+  @Option({
+    flags: '--source <source>',
+    description: 'Source id',
+    required: false
   })
-  async indexAll(command: IndexOptions) {
+  source(source: string) {
+    return source;
+  }
+
+  @Option({
+    flags: '--type <type>',
+    description: 'Type of the document',
+    required: false
+  })
+  type(type: string) {
+    return type;
+  }
+
+  @Option({
+    flags: '--id <id...>',
+    description: 'ID for the document',
+    required: false
+  })
+  id(id: string) {
+    return id.split(',');
+  }
+
+  @Option({
+    flags: '--edited <edited>',
+    description: 'Edited after this date. Give date time in ISO 8601 format (for example 2021-05-31T10:00).',
+    required: false
+  })
+  edited(edited: string) {
+    return edited;
+  }
+
+  @Option({
+    flags: '--remove-deleted',
+    description: 'Remove deleted documents from the index. Please note that this is quite slow operation',
+    required: false
+  })
+  remove(removeDeleted: string) {
+    return Boolean(removeDeleted);
+  }
+
+  @Option({
+    flags: '--size <size>',
+    description: 'The size of the batch to be send for indexing at ones (defaults to 200)',
+    required: false
+  })
+  size(size: string): number {
+    return Number(size);
+  }
+
+  @Option({
+    flags: '--skip <skip>',
+    description: 'Skips the first n documents (defaults to 0). Internally this is flooring to the batch that would have the next document',
+    required: false
+  })
+  skip(skip: string): number {
+    return Number(skip);
+  }
+
+
+  async run(passedParams: string[], command: IndexOptions) {
     const {removeDeleted, size, skip, ...where} = command;
     const spin = ora();
-    const batchSize = Math.max(Number(size) || 200, 1);
-    const startPage = Math.floor(Math.max(Number(skip) || 0, 0) / batchSize);
+    const batchSize = Math.max(size || 200, 1);
+    const startPage = Math.floor(Math.max(skip || 0, 0) / batchSize);
 
     spin.start(`Indexing`);
 

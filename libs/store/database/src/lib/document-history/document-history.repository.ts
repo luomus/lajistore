@@ -1,4 +1,4 @@
-import { Connection, FindManyOptions } from 'typeorm';
+import { DataSource, FindManyOptions, FindOptionsSelect } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { DocumentHistory } from './document-history.entity';
 import { Where } from '../utility/utility-public';
@@ -8,17 +8,17 @@ import { Document } from '../document/document.entity';
 @Injectable()
 export class DocumentHistoryRepository {
   constructor(
-    private connection: Connection
+    private connection: DataSource
   ) {}
 
   find(where: Where<DocumentHistory>, metaOnly: true): Promise<Required<Pick<DocumentHistory, 'id'|'version'|'edited'|'created'>[]>>;
   find(where: Where<DocumentHistory>, metaOnly?: false): Promise<Required<DocumentHistory>[]>;
   find(where: Where<DocumentHistory>, metaOnly: boolean): Promise<Required<Array<DocumentHistory|Pick<DocumentHistory, 'id'|'version'|'edited'|'created'>>>>;
   find(where: Where<DocumentHistory>, metaOnly = false) {
-    const options: FindManyOptions = { where: toDbWhere(where), order: {'version': 'ASC'} };
+    const options: FindManyOptions<DocumentHistory> = { where: toDbWhere(where), order: {'version': 'ASC'} };
 
     if (metaOnly) {
-      options.select = ['id', 'version', 'edited', 'created'];
+      options.select = { id: true, version: true, edited: true, created: true } as FindOptionsSelect<DocumentHistory>;
     }
 
     return this.connection.getRepository(DocumentHistory).find(options);

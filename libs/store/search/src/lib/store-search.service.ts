@@ -2,8 +2,7 @@ import { Injectable, UnprocessableEntityException } from '@nestjs/common';
 import { ElasticsearchService } from '@nestjs/elasticsearch';
 import { StoreConfigService } from '@luomus/store/config';
 import {
-  HealthCheckError,
-  HealthIndicator,
+  HealthIndicatorService,
   HealthIndicatorResult,
 } from '@nestjs/terminus';
 import {
@@ -22,14 +21,9 @@ import { SchemaCacheService } from '@luomus/store/schema-cache';
 import { ResponseError } from '@elastic/elasticsearch/lib/errors';
 
 @Injectable()
-export class StoreSearchService extends HealthIndicator {
+export class StoreSearchService {
   private indexChecked: { [index: string]: boolean } = {};
-  private readonly domainBase: string = [
-    this.configService.get('PUBLIC_ADDRESS'),
-    this.configService.get('GLOBAL_PREFIX'),
-  ]
-    .filter((v) => !!v)
-    .join('/');
+  private readonly domainBase: string;
 
   private static getIndexName(source: string, type: string) {
     return `${UtilityService.normalize(
@@ -45,9 +39,15 @@ export class StoreSearchService extends HealthIndicator {
     private readonly configService: StoreConfigService,
     private readonly fileService: FileService,
     private readonly es: ElasticsearchService,
-    private readonly schemaCacheService: SchemaCacheService
+    private readonly schemaCacheService: SchemaCacheService,
+    private readonly healthIndicatorService: HealthIndicatorService,
   ) {
-    super();
+    this.domainBase = [
+      this.configService.get('PUBLIC_ADDRESS'),
+      this.configService.get('GLOBAL_PREFIX'),
+    ]
+      .filter((v) => !!v)
+      .join('/');
   }
 
   /**
@@ -56,7 +56,10 @@ export class StoreSearchService extends HealthIndicator {
    * @param key
    */
   async isHealthy(key: string): Promise<HealthIndicatorResult> {
+    const indicator = this.healthIndicatorService.check(key);
+
     let isHealthy = false;
+
     try {
       const { body } = await this.es.cluster.health();
       isHealthy = body.status === 'green' || body.status === 'yellow';
@@ -64,14 +67,11 @@ export class StoreSearchService extends HealthIndicator {
       // pass
     }
 
-    const respose: HealthIndicatorResult = {
-      [key]: { status: isHealthy ? 'up' : 'down' },
-    };
-
     if (isHealthy) {
-      return respose;
+      return indicator.up();
     }
-    throw new HealthCheckError('Elasticsearch failed', respose);
+
+    return indicator.down();
   }
 
   /**

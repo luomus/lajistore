@@ -1,10 +1,11 @@
-import { Operation } from 'fast-json-patch/module/core';
-import { StoreObject } from '@apollo/client/cache/inmemory/types';
+import { Operation } from 'fast-json-patch';
+import { StoreObject } from '@apollo/client';
 
 export const PARAM_QUERY = 'q';
 export const PARAM_PAGE = 'page';
 export const PARAM_PAGE_SIZE = 'page_size';
 export const PARAM_TYPE = 'type';
+export const PARAM_ID = 'id';
 export const PARAM_SORT = 'sort';
 export const PARAM_DRY_RUN = 'dry_run';
 export const PARAM_LIMIT = 'limit';

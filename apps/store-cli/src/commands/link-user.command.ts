@@ -1,6 +1,6 @@
 import { Document } from '@luomus/shared/models';
 import { StoreService } from '@luomus/store/core';
-import { Command, Console } from 'nestjs-console';
+import { Command, CommandRunner, Option } from 'nest-commander';
 import { ConfigService } from '../services/config.service';
 import { LajiApiService, UserLink } from '../services/laji-api.service'
 import { lastValueFrom } from 'rxjs';
@@ -10,26 +10,29 @@ interface LinkUserOptions {
   dryRun: boolean
 }
 
-@Console()
-export class LinkUserCommand {
+@Command({
+  name: 'link-user',
+  description: 'Link laji-user to documents with outside user acounts.'
+})
+export class LinkUserCommand extends CommandRunner {
   constructor(
     private readonly lajiApiService: LajiApiService,
     private readonly storeService: StoreService,
     private readonly configService: ConfigService
-  ) {}
+  ) {
+    super();
+  }
 
-  @Command({
-    command: 'link-user',
-    description: 'Link laji-user to documents with outside user acounts.',
-    options: [
-      {
-        flags: '--dry-run',
-        description: 'Test linking without sending changes, print out changed documents.',
-        required: false
-      }
-    ]
+  @Option({
+    flags: '--dry-run',
+    description: 'Test linking without sending changes, print out changed documents.',
+    required: false
   })
-  async link(command: LinkUserOptions) {
+  dryRun(dryRun: string): boolean {
+    return Boolean(dryRun);
+  }
+
+  async run(passedParams: string[], command: LinkUserOptions) {
     const spin = ora();
 
     spin.start('Fetching linked user ID:s')

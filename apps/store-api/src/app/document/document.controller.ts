@@ -31,6 +31,7 @@ import { StoreObject } from '@luomus/shared/models';
 import {
   PARAM_DRY_RUN,
   PARAM_FIELDS,
+  PARAM_ID,
   PARAM_INCLUDE_DIFF,
   PARAM_PAGE,
   PARAM_PAGE_SIZE,
@@ -134,21 +135,21 @@ export class DocumentController {
     });
   }
 
-  @Get(`/:type/*/${PARAM_VERSIONS}`)
+  @Get(`/:type/:id/${PARAM_VERSIONS}`)
   getDocumentVersions(
     @CurrentSystemID() source: string,
     @Param(PARAM_TYPE, TypeExistsPipe) type: string,
-    @Param('0') id: string,
+    @Param(PARAM_ID) id: string,
     @Query(PARAM_INCLUDE_DIFF) includeDiff: string
   ) {
     return this.storeService.versions(source, type, id, includeDiff === 'true');
   }
 
-  @Get(`/:type/*/${PARAM_VERSIONS}/:number`)
+  @Get(`/:type/:id/${PARAM_VERSIONS}/:number`)
   getDocumentVersion(
     @CurrentSystemID() source: string,
     @Param(PARAM_TYPE, TypeExistsPipe) type: string,
-    @Param('0') id: string,
+    @Param(PARAM_ID) id: string,
     @Param(PARAM_VERSION_NUMBER) number: number
   ) {
     return this.storeService.findVersionById(
@@ -159,11 +160,11 @@ export class DocumentController {
     );
   }
 
-  @Get('/:type/*')
+  @Get('/:type/:id')
   getDocument(
     @CurrentSystemID() source: string,
     @Param(PARAM_TYPE, TypeExistsPipe) type: string,
-    @Param('0') id: string
+    @Param(PARAM_ID) id: string
   ) {
     return this.storeService
       .findById(source, type, id)
@@ -175,13 +176,13 @@ export class DocumentController {
       });
   }
 
-  @Put('/:type/*')
+  @Put('/:type/:id')
   @UseGuards(MethodInputGuard)
   @UseInterceptors(ValidatorInterceptor, SubIdValidator)
   putDocument(
     @CurrentSystemID() source: string,
     @Param(PARAM_TYPE, TypeExistsPipe) type: string,
-    @Param('0') id: string,
+    @Param(PARAM_ID) id: string,
     @Body() body: StoreObject
   ) {
     return this.storeService
@@ -189,11 +190,11 @@ export class DocumentController {
       .then((success) => DocumentController.analyzeResponse(!!success, body));
   }
 
-  @Delete('/:type/*')
+  @Delete('/:type/:id')
   deleteDocument(
     @CurrentSystemID() source: string,
     @Param(PARAM_TYPE, TypeExistsPipe) type: string,
-    @Param('0') id: string
+    @Param(PARAM_ID) id: string
   ) {
     return this.storeService.deleteById(source, id, type);
   }

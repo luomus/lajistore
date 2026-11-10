@@ -1,0 +1,66 @@
+{
+  "name": "store-cli",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/store-cli/src",
+  "projectType": "application",
+  "prefix": "store-cli",
+  "schematics": {},
+  "tags": ["type:app", "scope:cli"],
+  "targets": {
+    "build": {
+      "executor": "@mx/webpack:webpack",
+      "options": {
+        "outputPath": "dist/apps/store-cli",
+        "main": "apps/store-cli/src/cli.ts",
+        "tsConfig": "apps/store-cli/tsconfig.app.json",
+        "target": "node",
+        "compiler": "tsc",
+        "assets": [
+          {
+            "glob": "*.json",
+            "input": "libs/store/generate/src/lib/config/",
+            "output": "libs/store/generate/src/lib/config/"
+          },
+          {
+            "glob": "**/*.json",
+            "input": "libs/shared/assets/src/",
+            "output": "libs/shared/assets/src/"
+          }
+        ]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "sourceMap": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/store-cli/src/environments/environment.ts",
+              "with": "apps/store-cli/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nz/js:node",
+      "options": {
+        "buildTarget": "store-cli:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/store-cli/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "apps/store-cli/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "store-api",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/store-api/src",
+  "projectType": "application",
+  "prefix": "store-api",
+  "tags": ["type:app", "scope:node-app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "options": {
+        "webpackConfig": "apps/store-api/webpack.config.js",
+        "outputPath": "dist/apps/store-api",
+        "main": "apps/store-api/src/main.ts",
+        "tsConfig": "apps/store-api/tsconfig.app.json",
+        "target": "node",
+        "compiler": "tsc",
+        "assets": [
+          {
+            "glob": "*.json",
+            "input": "libs/store/generate/src/lib/config/",
+            "output": "libs/store/generate/src/lib/config/"
+          },
+          {
+            "glob": "**/*.json",
+            "input": "libs/shared/assets/src/",
+            "output": "libs/shared/assets/src/"
+          }
+        ]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/store-api/src/environments/environment.ts",
+              "with": "apps/store-api/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "store-api:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "store-api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/store-api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/store-api"],
+      "options": {
+        "jestConfig": "apps/store-api/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

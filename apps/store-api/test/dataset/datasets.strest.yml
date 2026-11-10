@@ -162,7 +162,7 @@ requests:
       - jsonpath: status
         expect: 401
 
-  user_without_creaentials_cannot_search:
+  user_without_credentials_cannot_search:
     request:
       url: <$ testUrl $>
       method: GET

@@ -1,0 +1,23 @@
+{
+  "name": "store-config",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/store/config/src",
+  "projectType": "library",
+  "tags": ["scope:node-shared"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/store/config/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/store/config"],
+      "options": {
+        "jestConfig": "libs/store/config/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

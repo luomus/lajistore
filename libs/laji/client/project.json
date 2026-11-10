@@ -1,0 +1,21 @@
+{
+  "name": "laji-client",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/laji/client/src",
+  "projectType": "library",
+  "prefix": "laji-client",
+  "tags": ["scope:node"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/laji/client"],
+      "options": {
+        "jestConfig": "libs/laji/client/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

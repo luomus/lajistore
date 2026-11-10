@@ -26,12 +26,14 @@ interface IdTypeMap {
 export class IdService {
   private idTypeMap?: IdTypeMap;
   private subIdPrefixMap?: SubIdPrefixMap;
-  private readonly idSeparator = this.configService.get('ID_SEPARATOR');
+  private readonly idSeparator: string;
 
   constructor(
     private readonly fileService: FileService,
     private readonly configService: StoreConfigService
-  ) {}
+  ) {
+    this.idSeparator = this.configService.get('ID_SEPARATOR');
+  }
 
   async getBaseId(
     type: string,

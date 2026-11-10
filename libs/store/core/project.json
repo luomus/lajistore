@@ -1,0 +1,23 @@
+{
+  "name": "store-core",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/store/core/src",
+  "projectType": "library",
+  "schematics": {},
+  "tags": ["scope:node"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/store/core/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "libs/store/core/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

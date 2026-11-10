@@ -1,4 +1,4 @@
-import { Connection } from 'typeorm';
+import { DataSource, FindManyOptions } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { v4 as uuid } from 'uuid';
 import { Document } from './document.entity';
@@ -12,13 +12,13 @@ export interface FindManyDocumentOptions {
   where: Where<Document>;
   skip?: number;
   take?: number;
-  select?: Array<keyof Document>;
+  select?: Partial<Record<keyof Document, boolean>>;
 }
 
 @Injectable()
 export class DocumentRepository {
   constructor(
-    private connection: Connection
+    private connection: DataSource
   ) {}
 
 
@@ -80,18 +80,18 @@ export class DocumentRepository {
     const options: FindManyDocumentOptions = { where };
 
     if (metaOnly) {
-      options.select = ['id', 'version', 'edited', 'created', 'sequence'];
+      options.select = { id: true, version: true, edited: true, created: true, sequence: true };
     }
 
     return this.findAll(options);
   }
 
   findAll(options: FindManyDocumentOptions): Promise<Required<Document>[]> {
-    return this.connection.getRepository(Document).find({...options, where: toDbWhere(options.where)}) as any;
+    return this.connection.getRepository(Document).find({...options as FindManyOptions<Document>, where: toDbWhere<Document>(options.where)}) as any;
   }
 
   count(options: FindManyDocumentOptions) {
-    return this.connection.getRepository(Document).count({where: toDbWhere(options.where)});
+    return this.connection.getRepository(Document).count({where: toDbWhere<Document>(options.where)});
   }
 
   async deleteById(

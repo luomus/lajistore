@@ -1,0 +1,24 @@
+{
+  "name": "store-api-core",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/store/api-core/src",
+  "projectType": "library",
+  "prefix": "store-api-core",
+  "tags": ["scope:node"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/store/api-core/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/store/api-core"],
+      "options": {
+        "jestConfig": "libs/store/api-core/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

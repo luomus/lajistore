@@ -1,4 +1,4 @@
-import { Command, Console } from 'nestjs-console';
+import { Command, CommandRunner } from 'nest-commander';
 import {
   GenerateEsIndexService,
   GenerateGraphQLService,
@@ -16,8 +16,11 @@ import { createHash } from 'crypto'
 import { lastValueFrom } from 'rxjs';
 import ora from 'ora';
 
-@Console()
-export class CacheCommand {
+  @Command({
+    name: 'update-cache',
+    description: `Generates updated schemas, like <generate>, and sets them to redis cache.`
+  })
+  export class CacheCommand extends CommandRunner{
   constructor(
     private generateSwaggerService: GenerateSwaggerService,
     private generateEsIndexService: GenerateEsIndexService,
@@ -28,13 +31,11 @@ export class CacheCommand {
     private fileService: FileService,
     private configService: StoreConfigService,
     private schemaCacheService: SchemaCacheService
-  ) {}
+  ) {
+    super();
+  }
 
-  @Command({
-    command: 'update-cache',
-    description: `Generates updated schemas, like <generate>, and sets them to redis cache.`
-  })
-  async updateCache() {
+  async run() {
     const spin = ora();
     let result;
 
@@ -77,6 +78,7 @@ export class CacheCommand {
       )
     ));
   }
+
   async addSharesToCache() {
     try {
       const classes = await this.getClasses()

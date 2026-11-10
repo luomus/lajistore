@@ -1,0 +1,23 @@
+{
+  "name": "store-shared",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/store/shared/src",
+  "projectType": "library",
+  "tags": ["scope:node-shared"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/store/shared/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/store/shared"],
+      "options": {
+        "jestConfig": "libs/store/shared/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

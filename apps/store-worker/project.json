@@ -1,0 +1,67 @@
+{
+  "name": "store-worker",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/store-worker/src",
+  "projectType": "application",
+  "prefix": "store-worker",
+  "tags": ["type:app", "scope:node-app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "webpackConfig": "apps/store-api/webpack.config.js",
+        "outputPath": "dist/apps/store-worker",
+        "main": "apps/store-worker/src/main.ts",
+        "tsConfig": "apps/store-worker/tsconfig.app.json",
+        "target": "node",
+        "compiler": "tsc",
+        "assets": [
+          {
+            "glob": "*.json",
+            "input": "libs/store/generate/src/lib/config/",
+            "output": "libs/store/generate/src/lib/config/"
+          },
+          {
+            "glob": "**/*.json",
+            "input": "libs/shared/assets/src/",
+            "output": "libs/shared/assets/src/"
+          }
+        ]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/store-worker/src/environments/environment.ts",
+              "with": "apps/store-worker/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "store-worker:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/store-worker/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/store-worker"],
+      "options": {
+        "jestConfig": "apps/store-worker/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

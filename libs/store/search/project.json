@@ -1,0 +1,23 @@
+{
+  "name": "store-search",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/store/search/src",
+  "projectType": "library",
+  "tags": ["scope:data"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/store/search/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/store/search"],
+      "options": {
+        "jestConfig": "libs/store/search/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { Command, Console } from 'nestjs-console';
+import { Command, CommandRunner, Option } from 'nest-commander';
 import {
   GenerateEsIndexService,
   GenerateGraphQLService,
@@ -9,8 +9,12 @@ import {
 } from '@luomus/store/generate';
 import ora from 'ora';
 
-@Console()
-export class GenerateCommand {
+@Command({
+  name: 'generate',
+  arguments: '<type>',
+  description: 'Generate content. Should be either: json-schema, interface, open-api, json-ld-context, es-index, graphql'
+})
+export class GenerateCommand extends CommandRunner {
   constructor(
     private generateSwaggerService: GenerateSwaggerService,
     private generateEsIndexService: GenerateEsIndexService,
@@ -18,17 +22,18 @@ export class GenerateCommand {
     private generateJsonSchemaService: GenerateJsonSchemaService,
     private generateGraphQLService: GenerateGraphQLService,
     private generateJsonLdContextService: GenerateJsonLdContextService
-  ) {}
+  ) {
+    super();
+  }
 
-  @Command({
-    command: 'generate <type>',
-    description: `Generate content. Should be either: json-schema, interface, open-api, json-ld-context, es-index, graphql`
-  })
-  async generate(type: string) {
+
+  async run(passedParams: string[]) {
     const spin = ora();
     let result;
 
     spin.start(`Generating...`)
+
+    const type = passedParams[0];
 
     switch (type) {
       case 'json-schema':

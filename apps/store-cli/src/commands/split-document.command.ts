@@ -1,6 +1,6 @@
 import { Document } from '@luomus/shared/models';
 import { StoreService } from '@luomus/store/core';
-import { Command, Console } from 'nestjs-console';
+import { Command, CommandRunner, Option } from 'nest-commander';
 import { set } from 'lodash';
 import ora from 'ora';
 
@@ -11,39 +11,54 @@ interface SplitDocumentOptions {
   limit: number,
 }
 
-@Console()
-export class SplitDocumentCommand {
+@Command({
+  name: 'split-document',
+  description: 'Split oversized document into smaller documents.'
+})
+export class SplitDocumentCommand extends CommandRunner {
   constructor(
     private readonly storeService: StoreService,
-  ) {}
+  ) {
+    super();
+  }
 
-  @Command({
-    command: 'split-document',
-    description: 'Split oversized document into smaller documents.',
-    options: [
-      {
-        flags: '--id <id>',
-        description: 'ID for the document',
-        required: true
-      },
-      {
-        flags: '--source <source>',
-        description: 'Source id',
-        required: true
-      },
-      {
-        flags: '--dry-run',
-        description: 'Test splitting without sending changes, print out changed documents.',
-        required: false
-      },
-      {
-        flags: '--limit <limit>',
-        description: 'Maximum number of gatherings allowed per deocument',
-        defaultValue: 1000
-      }
-    ]
+  @Option({
+    flags: '--id <id>',
+    description: 'ID for the document',
+    required: true
   })
-  async splitDocuments(options: SplitDocumentOptions) {
+  id(id: string): string {
+    return id;
+  }
+
+  @Option({
+    flags: '--source <source>',
+    description: 'Source id',
+    required: true
+  })
+  source(source: string): string {
+    return source;
+  }
+
+  @Option({
+    flags: '--dry-run',
+    description: 'Test splitting without sending changes, print out changed documents.',
+    required: false
+  })
+  dryRun(dryRun: string): boolean {
+    return Boolean(dryRun);
+  }
+
+  @Option({
+    flags: '--limit <limit>',
+    description: 'Maximum number of gatherings allowed per deocument',
+    defaultValue: 1000
+  })
+  limit(limit: string): number {
+    return Number(limit);
+  }
+
+  async run(passedParams: string[], options: SplitDocumentOptions) {
     let output = '';
     const spin = ora();
 
@@ -69,7 +84,7 @@ export class SplitDocumentCommand {
         }
 
         set(doc, 'gatherings', doc.gatherings.slice(0, limit));
-    
+
         docs.push(doc)
 
         const { gatherings, ...baseDoc } = doc;
@@ -100,7 +115,7 @@ export class SplitDocumentCommand {
 
         for (const doc of updatedDocs['document'] as Document[]) {
           if (doc.id === id) continue;
-          
+
           output += `${doc.id}, `;
         }
 
@@ -115,7 +130,7 @@ export class SplitDocumentCommand {
       return value.map(val => {
         return this.omitIdClone(val, idList);
       })
-    } else if (typeof value === 'object' && value !== undefined) { 
+    } else if (typeof value === 'object' && value !== undefined) {
       const toRetun: Record<string, any> = {};
       Object.keys(value).forEach(key => {
         if (key === 'id'

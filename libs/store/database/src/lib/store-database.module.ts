@@ -8,7 +8,7 @@ import { User } from './user/user.entity';
 import { join } from 'path';
 import { DocumentHistory } from './document-history/document-history.entity';
 import { UserRepository } from './user/user.repository';
-import { TypeOrmModuleOptions } from '@nestjs/typeorm/dist/interfaces/typeorm-options.interface';
+import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { SequenceRepository } from './sequence/sequence.repository';
 import { Sequence } from './sequence/sequence.entity';
 

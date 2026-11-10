@@ -1,8 +1,5 @@
-import {
-  DocumentHistoryService,
-  DocumentService, StoreService
-} from '@luomus/store/core';
-import { Command, Console } from 'nestjs-console';
+import { DocumentService } from '@luomus/store/core';
+import { Command, CommandRunner, Option } from 'nest-commander';
 import { ValidatorService } from '@luomus/store/shared';
 import ora from 'ora';
 
@@ -12,33 +9,45 @@ interface JobOptions {
   source?: string;
 }
 
-@Console()
-export class ValidateCommand {
+@Command({
+  name: 'validate',
+  description: 'Validate documents against current schema',
+})
+export class ValidateCommand extends CommandRunner {
 
   constructor(
-    private readonly storeService: StoreService,
     private readonly documentService: DocumentService,
-    private readonly documentHistoryService: DocumentHistoryService,
     private readonly validatorService: ValidatorService
-  ) {}
+  ) {
+    super();
+  }
 
-  @Command({
-    command: 'validate',
-    description: 'Validate documents against current schema',
-    options: [
-      {
-        flags: '--source <source>',
-        description: 'Source id'
-      },{
-        flags: '--type <type>',
-        description: 'Type of the document'
-      },{
-        flags: '--id <id...>',
-        description: 'ID for the document'
-      }
-    ],
+  @Option({
+    flags: '--source <source>',
+    description: 'Source id'
   })
-  async validate(where: JobOptions) {
+  source(source: string): string {
+    return source;
+  }
+
+  @Option({
+    flags: '--type <type>',
+    description: 'Type of the document',
+    required: true
+  })
+  type(type: string): string {
+    return type;
+  }
+
+  @Option({
+    flags: '--id <id...>',
+    description: 'ID for the document'
+  })
+  id(id: string): string[] {
+    return id.split(',');
+  }
+
+  async run(passedParams: string[], where: JobOptions) {
     const spin = ora();
     const batchSize = 100;
 

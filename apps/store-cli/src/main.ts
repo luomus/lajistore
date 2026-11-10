@@ -1,9 +1,8 @@
-import { NestFactory } from '@nestjs/core';
+import { CommandFactory } from 'nest-commander';
 import { StoreCliModule } from './store-cli.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(StoreCliModule);
-  await app.listen(3000);
+  await CommandFactory.run(StoreCliModule);
 }
 
 bootstrap();

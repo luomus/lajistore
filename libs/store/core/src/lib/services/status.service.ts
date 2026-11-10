@@ -3,7 +3,7 @@ import {
   HttpHealthIndicator,
   TypeOrmHealthIndicator,
   HealthCheckService,
-  MicroserviceHealthIndicator, HealthCheckError, HealthIndicatorFunction
+  MicroserviceHealthIndicator, HealthIndicatorFunction
 } from '@nestjs/terminus';
 import { Transport } from '@nestjs/microservices';
 import { StoreConfigService } from '@luomus/store/config';
@@ -25,11 +25,7 @@ export class StatusService {
   ) {
     this.checks = {
       documentation: () => this.http.pingCheck('documentation', this.config.get('INTERNAL_ADDRESS')),
-      database: () => this.db.pingCheck('database').catch(e => {
-        throw new HealthCheckError('Database failed', {
-          database: { status: 'down', message: e.causes ?? e.message },
-        });
-      }),
+      database: () => this.db.pingCheck('database'),
       search: () => this.search.isHealthy('search'),
       workers: () =>
         this.micro.pingCheck('workers', {
@@ -44,10 +40,6 @@ export class StatusService {
             ],
             queue: 'heartbeat',
           },
-        }).catch(e => {
-          throw new HealthCheckError('Workers failed', {
-            workers: { status: 'down', message: e.causes ?? e.message },
-          });
         })
     }
   }

@@ -17,7 +17,7 @@ import { concatMap, toArray } from 'rxjs/operators';
 
 @Injectable()
 export class StoreService {
-  readonly idListSeparator = this.configService.get('ID_LIST_SEPARATOR');
+  readonly idListSeparator: string;
 
   static metaDataToStoreObject(documents: Document[]): Record<string, StoreSearchObject[]> {
     const result: Record<string, StoreSearchObject[]> = {};
@@ -45,7 +45,9 @@ export class StoreService {
     private configService: StoreConfigService,
     private documentService: DocumentService,
     private documentHistoryService: DocumentHistoryService
-  ) {}
+  ) {
+    this.idListSeparator = this.configService.get('ID_LIST_SEPARATOR');
+  }
 
   /**
    * Search for specific store documents

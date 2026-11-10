@@ -1,4 +1,4 @@
-FROM node:18 as builder
+FROM node:24 AS builder
 ENV NODE_ENV build
 
 WORKDIR /app
@@ -23,12 +23,14 @@ RUN npm run nx build --configuration=production store-api \
  && npm run nx build --configuration=production store-worker
 
 
-FROM node:18 as dev
+FROM node:24 AS dev
 
 EXPOSE 3000
 
 ENV NODE_ENV development
 ENV ORACLE_CLIENT_FILENAME oracle-instantclient-basiclite-21.1.0.0.0-1.x86_64.rpm
+ENV NX_CACHE_DIRECTORY=/tmp/.nx/cache
+ENV NX_WORKSPACE_DATA_DIRECTORY=/tmp/.nx/workspace-data
 
 # Install Oracle instanclient so that oracle db can be accessed from node
 # to find versions available you can go to https://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient21/x86_64/
@@ -47,11 +49,13 @@ WORKDIR /app
 RUN chown -Rh node:node /app
 USER node
 
+RUN rm -rf /tmp/.nx/workspace-data
+
 # To run this you need to mount ./ (with corrent node_modules included) to this image
 CMD [ "npm", "run", "nx", "--", "serve", "store-api" ]
 
 
-FROM dev as api
+FROM dev AS api
 ENV NODE_ENV production
 
 COPY --chown=node:node --from=builder /app/dist/apps/store-api /app/package*.json ./
@@ -60,10 +64,10 @@ COPY --chown=node:node --from=builder /app/dist/apps/store-api /app/package*.jso
 RUN npm ci --only=production \
  && npm cache clean --force
 
-CMD [ "node", "main.js" ]
+CMD ["node", "main.js" ]
 
 
-FROM api as cli
+FROM api AS cli
 ENV NODE_ENV production
 
 COPY --chown=node:node --from=builder /app/dist/apps/store-cli ./
@@ -73,7 +77,7 @@ COPY --chown=node:node --chmod=777 --from=builder /app/dist/apps/store-cli/libs/
 CMD [ "tail", "-f", "/dev/null"]
 
 
-FROM cli as worker
+FROM cli AS worker
 ENV NODE_ENV production
 
 # Worker need cli runtime also since that is used to monitor the state of the worker process

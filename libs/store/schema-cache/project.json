@@ -1,0 +1,24 @@
+{
+  "name": "schema-cache",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/store/schema-cache/src",
+  "projectType": "library",
+  "prefix": "schema-cache",
+  "tags": ["scope:shared"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/store/schema-cache/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/store/schema-cache"],
+      "options": {
+        "jestConfig": "libs/store/schema-cache/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

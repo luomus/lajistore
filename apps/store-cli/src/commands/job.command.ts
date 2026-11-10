@@ -3,7 +3,7 @@ import {
   DocumentService,
   WorkerMessagePattern
 } from '@luomus/store/core';
-import { Command, Console } from 'nestjs-console';
+import { Command, CommandRunner, Option } from 'nest-commander';
 import ora from 'ora';
 
 const PAGE_SIZE = 1000;
@@ -15,43 +15,66 @@ interface JobOptions {
   removeDeleted?: boolean;
 }
 
-@Console()
-export class JobCommand {
+@Command({
+  name: 'job',
+  description: 'Add commands to job queue'
+})
+export class JobCommand extends CommandRunner {
 
   constructor(
     private readonly bgWorkerService: BgWorkerService,
     private readonly documentService: DocumentService,
     private readonly documentHistoryService: DocumentHistoryService,
-  ) {}
+  ) {
+    super();
+  }
 
-  @Command({
-    command: 'job',
-    description: 'Add documents to job queue',
-    options: [
-      {
-        flags: '--source <source>',
-        description: 'Source id',
-        required: false
-      },{
-        flags: '--type <type>',
-        description: 'Type of the document',
-        required: false
-      },{
-        flags: '--id <id...>',
-        description: 'ID for the document',
-        required: false
-      },{
-        flags: '--edited <edited>',
-        description: 'Edited after this date. Give date time in ISO 8601 format (for example 2021-05-31T10:00).',
-        required: false
-      },{
-        flags: '--remove-deleted',
-        description: 'Remove deleted documents from the index',
-        required: false
-      }
-    ],
+  @Option({
+    flags: '--source <source>',
+    description: 'Source id',
+    required: false
   })
-  async jobsAll(options: JobOptions) {
+  parseSource(source: string): string {
+    return source;
+  }
+
+@Option({
+    flags: '--type <type>',
+    description: 'Type of the document',
+    required: false
+  })
+  parseType(type: string): string {
+    return type;
+  }
+
+  @Option({
+    flags: '--id <id...>',
+    description: 'ID for the document',
+    required: false
+  })
+  parseId(id: string): string[] {
+    return id.split(',');
+  }
+
+  @Option({
+    flags: '--edited <edited>',
+    description: 'Edited after this date. Give date time in ISO 8601 format (for example 2021-05-31T10:00).',
+    required: false
+  })
+  parseEdited(edited: string): string {
+    return edited;
+  }
+
+  @Option({
+    flags: '--remove-deleted',
+    description: 'Remove deleted documents from the index',
+    required: false
+  })
+  parseRemoveDeleted(removeDeleted: string): string {
+    return removeDeleted;
+  }
+
+  async run(passedParams: string[], options: JobOptions) {
     const spin = ora();
     const {removeDeleted, ...where} = options;
 
@@ -68,7 +91,7 @@ export class JobCommand {
           where,
           skip: page * PAGE_SIZE,
           take: PAGE_SIZE,
-          select: ['id', 'type', 'source']
+          select: { id: true, type: true, source: true }
         });
 
         if (documents.length > 0) {

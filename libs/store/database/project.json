@@ -1,0 +1,23 @@
+{
+  "name": "store-database",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/store/database/src",
+  "projectType": "library",
+  "tags": ["scope:data"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/store/database/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/store/database"],
+      "options": {
+        "jestConfig": "libs/store/database/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -26,9 +26,9 @@ export class StoreApiCoreModule {
     const apiConfigService = context.get(ApiConfigService, { strict: true });
     const {
       globalPrefix,
-      swagger,
-      schema,
-    } = await apiConfigService.getApiConfig();
+      getSwagger,
+      getSchema,
+    } = apiConfigService.getApiConfig();
 
     if (globalPrefix) {
       app.setGlobalPrefix(globalPrefix);
@@ -36,11 +36,17 @@ export class StoreApiCoreModule {
     app.use(json({ limit: '1000mb' }));
     app.use(urlencoded({ extended: true, limit: '1000mb' }));
 
+    const swagger = await getSwagger();
+    const schema = await getSchema();
+
     SwaggerModule.setup('documentation', app, swagger, {
       customSiteTitle: 'Store',
       swaggerOptions: {
         docExpansion: 'none',
       },
+      patchDocumentOnRequest: async (req, res, document) => {
+        return await getSwagger();
+      }
     });
 
     app.enableCors({

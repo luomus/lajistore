@@ -1,10 +1,10 @@
-import { Connection, FindOptionsWhere } from 'typeorm';
+import { DataSource, FindOptionsWhere } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { User } from './user.entity';
 
 @Injectable()
 export class UserRepository {
-  constructor(private connection: Connection) {}
+  constructor(private connection: DataSource) {}
 
   create(user: User) {
     const repo = this.connection.getRepository(User);

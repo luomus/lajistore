@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { HttpModule } from '@nestjs/axios';
-import { ConsoleModule } from 'nestjs-console';
+import { CommandRunnerModule } from 'nest-commander';
 import { TerminusModule } from '@nestjs/terminus';
 import { StoreCoreModule } from '@luomus/store/core';
 import { StoreSharedModule } from '@luomus/store/shared';
@@ -22,7 +22,7 @@ import { SchemaCacheModule } from '@luomus/store/schema-cache';
 
 @Module({
   imports: [
-    ConsoleModule,
+    CommandRunnerModule,
     StoreCoreModule,
     StoreGenerateModule,
     StoreSharedModule,

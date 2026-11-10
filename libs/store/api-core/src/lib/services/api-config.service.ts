@@ -11,10 +11,9 @@ export class ApiConfigService {
     private fileService: FileService,
     private configService: StoreConfigService,
     private schemaCacheService: SchemaCacheService
-  ) {}
+  ) { }
 
-  async getApiConfig() {
-    const globalPrefix = this.configService.get('GLOBAL_PREFIX');
+  async getFullSwaggerDocument() {
     let swagger = await this.schemaCacheService.getCachedOpenAPI();
 
     if (!swagger) {
@@ -22,19 +21,34 @@ export class ApiConfigService {
       .readJsonFile<any>(this.configService.get('OPENAPI_SPEC_FILE')));
     }
 
+    return swagger;
+  }
+
+  async getPrunedSwaggerDocument() {
+    console.log()
+    const swagger = await this.getFullSwaggerDocument();
+
     const { schema } = await createGraphQLSchema(
       JsonSchemaService.removeExtraProperties(swagger, [
         '$id',
         '$schema',
         'notes',
         'enumNames',
-      ]) as any,
-      {
+      ]) as any, {
         operationIdFieldNames: true,
         genericPayloadArgName: true,
       }
     );
 
-    return { globalPrefix, schema, swagger };
+    return schema
+  }
+
+  getApiConfig() {
+    const globalPrefix = this.configService.get('GLOBAL_PREFIX');
+
+    const getSchema = () => this.getPrunedSwaggerDocument();
+    const getSwagger = () => this.getFullSwaggerDocument();
+
+    return { globalPrefix, getSwagger, getSchema };
   }
 }

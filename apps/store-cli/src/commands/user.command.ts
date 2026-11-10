@@ -1,22 +1,24 @@
 import { AuthenticationService } from '@luomus/store/core';
-import { Command, Console } from 'nestjs-console';
+import { Command, CommandRunner, Option } from 'nest-commander';
 import ora from 'ora';
 
-@Console()
-export class UserCommand {
-  constructor(private authenticationService: AuthenticationService) {}
-
   @Command({
-    command: 'user <systemID> <password>',
+    name: 'user',
+    arguments: '<systemID> <password>',
     description: 'Add or update user',
   })
-  async add(
-    systemID: string,
-    password: string
-  ) {
+  export class UserCommand extends CommandRunner {
+  constructor(private authenticationService: AuthenticationService) {
+    super();
+  }
+
+
+  async run(passedParams: string[]) {
+    const [systemID, password] = passedParams;
     const spin = ora();
+
     spin.start(`Adding ${systemID}...`)
-    return this.authenticationService
+    await this.authenticationService
       .register({
         systemID,
         password,

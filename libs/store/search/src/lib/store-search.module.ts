@@ -4,6 +4,7 @@ import { StoreConfigModule, StoreConfigService } from '@luomus/store/config';
 import { StoreSharedModule } from '@luomus/store/shared';
 import { StoreSearchService } from './store-search.service';
 import { SchemaCacheModule } from '@luomus/store/schema-cache';
+import { TerminusModule } from '@nestjs/terminus';
 
 @Module({
   providers: [StoreSearchService],
@@ -20,7 +21,8 @@ import { SchemaCacheModule } from '@luomus/store/schema-cache';
       }),
       inject: [StoreConfigService],
     }),
-    SchemaCacheModule
+    SchemaCacheModule,
+    TerminusModule
   ]
 })
 export class StoreSearchModule {}

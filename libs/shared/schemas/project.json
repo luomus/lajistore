@@ -1,0 +1,24 @@
+{
+  "name": "shared-schemas",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/schemas/src",
+  "projectType": "library",
+  "prefix": "shared-schemas",
+  "tags": ["scope:shared"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/schemas/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/schemas"],
+      "options": {
+        "jestConfig": "libs/shared/schemas/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

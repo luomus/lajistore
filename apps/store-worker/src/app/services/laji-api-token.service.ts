@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Connection } from 'typeorm';
+import { DataSource } from 'typeorm';
 import { InjectConnection } from '@nestjs/typeorm';
 import { WorkerConfigService } from './worker-config.service';
 
@@ -9,7 +9,7 @@ export class LajiApiTokenService {
 
   constructor(
     @InjectConnection('laji-api')
-    private connection: Connection,
+    private connection: DataSource,
     private configService: WorkerConfigService
   ) {}
 
