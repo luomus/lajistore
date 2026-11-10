@@ -18,9 +18,9 @@ COPY --chown=node:node ./apps ./apps
 COPY --chown=node:node ./libs ./libs
 
 # Build all versions of store so that they can be cherry-picked in other targets as needed
-RUN npm run nx build --configuration=production store-api \
- && npm run nx build --configuration=production store-cli \
- && npm run nx build --configuration=production store-worker
+RUN npm run nx build -- --configuration=production store-api \
+ && npm run nx build -- --configuration=production store-cli \
+ && npm run nx build -- --configuration=production store-worker
 
 
 FROM node:24 AS dev
