@@ -8,7 +8,7 @@
   "tags": ["type:app", "scope:cli"],
   "targets": {
     "build": {
-      "executor": "@mx/webpack:webpack",
+      "executor": "@nx/webpack:webpack",
       "options": {
         "outputPath": "dist/apps/store-cli",
         "main": "apps/store-cli/src/cli.ts",
