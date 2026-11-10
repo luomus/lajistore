@@ -13,7 +13,7 @@ RUN npm ci --ignore-scripts \
  && npm cache clean --force
 
 # Copy to image only the files that are really needed
-COPY --chown=node:node ./tsconfig.base.json ./nx.json ./angular.json ./
+COPY --chown=node:node ./tsconfig.base.json ./nx.json ./
 COPY --chown=node:node ./apps ./apps
 COPY --chown=node:node ./libs ./libs
 
