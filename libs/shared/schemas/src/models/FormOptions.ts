@@ -128,7 +128,11 @@ export interface FormOptions {
    */
   navigationTitle?: string;
   /**
-   * Allows creating documents without a person token. Utilizes open form login system, hides navbar.
+   * Shown on the about page for forms with MHL.mobile
+   */
+  newObservationLabel?: string;
+  /**
+   * Allows creating documents without a person token. Utilizes open form login system.
    */
   openForm?: boolean;
   /**
@@ -191,6 +195,10 @@ export interface FormOptions {
    * Makes the documents reported with the form secondary
    */
   secondaryCopy?: boolean;
+  /**
+   * Defaults to true. If false, the resource is not sent to warehouse.
+   */
+  sendToWarehouse?: boolean;
   /**
    * Overrides MHL.shortTitle usage
    */

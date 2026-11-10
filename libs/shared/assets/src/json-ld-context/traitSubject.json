@@ -121,7 +121,7 @@
     },
     "gbifTaxonId": {
       "@id": "default:TDFX.gbifTaxonId",
-      "@type": "xsd:integer"
+      "@type": "xsd:string"
     },
     "kingdom": {
       "@id": "default:TDFX.kingdom",

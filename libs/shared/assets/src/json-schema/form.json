@@ -1526,11 +1526,19 @@
           "title": "Navigation title",
           "sortOrder": 36
         },
+        "newObservationLabel": {
+          "type": "string",
+          "range": "xsd:string",
+          "subject": "MHL.newObservationLabel",
+          "description": "Shown on the about page for forms with MHL.mobile",
+          "title": "New observation label",
+          "sortOrder": -1
+        },
         "openForm": {
           "type": "boolean",
           "range": "xsd:boolean",
           "subject": "MHL.openForm",
-          "description": "Allows creating documents without a person token. Utilizes open form login system, hides navbar.",
+          "description": "Allows creating documents without a person token. Utilizes open form login system.",
           "title": "Open form",
           "sortOrder": 57
         },
@@ -3092,6 +3100,14 @@
                       "title": "Ruovikon lintulaudat",
                       "sortOrder": -1
                     },
+                    "birdFeederCountBiotopeI": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "range": "xsd:nonNegativeInteger",
+                      "subject": "WBC.birdFeederCountBiotopeI",
+                      "title": "Vesistön lintulaiudat",
+                      "sortOrder": -1
+                    },
                     "cloudAndRain": {
                       "type": "string",
                       "enum": [
@@ -3192,6 +3208,14 @@
                       "range": "xsd:nonNegativeInteger",
                       "subject": "WBC.feedingStationCountBiotopeH",
                       "title": "Ruovikon ruokintapaikat",
+                      "sortOrder": -1
+                    },
+                    "feedingStationCountBiotopeI": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "range": "xsd:nonNegativeInteger",
+                      "subject": "WBC.feedingStationCountBiotopeI",
+                      "title": "Vesistön ruokintapaikat",
                       "sortOrder": -1
                     },
                     "iceCover": {
@@ -3347,6 +3371,14 @@
                       "title": "Route length reed",
                       "sortOrder": -1
                     },
+                    "routeLengthBiotopeI": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "range": "xsd:nonNegativeInteger",
+                      "subject": "WBC.routeLengthBiotopeI",
+                      "title": "Route length body of water",
+                      "sortOrder": -1
+                    },
                     "routeLengthChange": {
                       "type": "integer",
                       "range": "xsd:integer",
@@ -3408,6 +3440,13 @@
                       "range": "xsd:integer",
                       "subject": "WBC.routeLengthChangeBiotopeH",
                       "title": "Reitin muutokset ruovikko",
+                      "sortOrder": -1
+                    },
+                    "routeLengthChangeBiotopeI": {
+                      "type": "integer",
+                      "range": "xsd:integer",
+                      "subject": "WBC.routeLengthChangeBiotopeI",
+                      "title": "Reitin muutokset vesistö",
                       "sortOrder": -1
                     },
                     "snowAndIceOnTrees": {
@@ -5735,6 +5774,14 @@
                         "title": "Ruovikon lintulaudat",
                         "sortOrder": -1
                       },
+                      "birdFeederCountBiotopeI": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "range": "xsd:nonNegativeInteger",
+                        "subject": "WBC.birdFeederCountBiotopeI",
+                        "title": "Vesistön lintulaiudat",
+                        "sortOrder": -1
+                      },
                       "cloudAndRain": {
                         "type": "string",
                         "enum": [
@@ -5835,6 +5882,14 @@
                         "range": "xsd:nonNegativeInteger",
                         "subject": "WBC.feedingStationCountBiotopeH",
                         "title": "Ruovikon ruokintapaikat",
+                        "sortOrder": -1
+                      },
+                      "feedingStationCountBiotopeI": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "range": "xsd:nonNegativeInteger",
+                        "subject": "WBC.feedingStationCountBiotopeI",
+                        "title": "Vesistön ruokintapaikat",
                         "sortOrder": -1
                       },
                       "iceCover": {
@@ -5990,6 +6045,14 @@
                         "title": "Route length reed",
                         "sortOrder": -1
                       },
+                      "routeLengthBiotopeI": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "range": "xsd:nonNegativeInteger",
+                        "subject": "WBC.routeLengthBiotopeI",
+                        "title": "Route length body of water",
+                        "sortOrder": -1
+                      },
                       "routeLengthChange": {
                         "type": "integer",
                         "range": "xsd:integer",
@@ -6051,6 +6114,13 @@
                         "range": "xsd:integer",
                         "subject": "WBC.routeLengthChangeBiotopeH",
                         "title": "Reitin muutokset ruovikko",
+                        "sortOrder": -1
+                      },
+                      "routeLengthChangeBiotopeI": {
+                        "type": "integer",
+                        "range": "xsd:integer",
+                        "subject": "WBC.routeLengthChangeBiotopeI",
+                        "title": "Reitin muutokset vesistö",
                         "sortOrder": -1
                       },
                       "snowAndIceOnTrees": {
@@ -10851,6 +10921,14 @@
                               "subject": "WBC.individualCountBiotopeH",
                               "title": "Individual count reed",
                               "sortOrder": -1
+                            },
+                            "individualCountBiotopeI": {
+                              "type": "integer",
+                              "minimum": 0,
+                              "range": "xsd:nonNegativeInteger",
+                              "subject": "WBC.individualCountBiotopeI",
+                              "title": "Individuell räkning vattnen",
+                              "sortOrder": -1
                             }
                           },
                           "range": "MY.unitFactClass",
@@ -12877,6 +12955,14 @@
           "description": "Makes the documents reported with the form secondary",
           "title": "Secondary copy",
           "sortOrder": 11
+        },
+        "sendToWarehouse": {
+          "type": "boolean",
+          "range": "xsd:boolean",
+          "subject": "MHL.sendToWarehouse",
+          "description": "Defaults to true. If false, the resource is not sent to warehouse.",
+          "title": "Send to warehouse",
+          "sortOrder": -1
         },
         "shortTitleFromCollectionName": {
           "type": "boolean",

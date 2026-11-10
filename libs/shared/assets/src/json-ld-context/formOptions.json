@@ -151,6 +151,10 @@
       "@id": "default:MHL.navigationTitle",
       "@type": "xsd:string"
     },
+    "newObservationLabel": {
+      "@id": "default:MHL.newObservationLabel",
+      "@type": "xsd:string"
+    },
     "openForm": {
       "@id": "default:MHL.openForm",
       "@type": "xsd:boolean"
@@ -225,6 +229,10 @@
     },
     "secondaryCopy": {
       "@id": "default:MHL.secondaryCopy",
+      "@type": "xsd:boolean"
+    },
+    "sendToWarehouse": {
+      "@id": "default:MHL.sendToWarehouse",
       "@type": "xsd:boolean"
     },
     "shortTitleFromCollectionName": {

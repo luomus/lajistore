@@ -251,6 +251,10 @@
       "@id": "default:WBC.birdFeederCountBiotopeH",
       "@type": "xsd:nonNegativeInteger"
     },
+    "birdFeederCountBiotopeI": {
+      "@id": "default:WBC.birdFeederCountBiotopeI",
+      "@type": "xsd:nonNegativeInteger"
+    },
     "cloudAndRain": {
       "@id": "default:WBC.cloudAndRain",
       "@type": "@id"
@@ -293,6 +297,10 @@
     },
     "feedingStationCountBiotopeH": {
       "@id": "default:WBC.feedingStationCountBiotopeH",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "feedingStationCountBiotopeI": {
+      "@id": "default:WBC.feedingStationCountBiotopeI",
       "@type": "xsd:nonNegativeInteger"
     },
     "iceCover": {
@@ -355,6 +363,10 @@
       "@id": "default:WBC.routeLengthBiotopeH",
       "@type": "xsd:nonNegativeInteger"
     },
+    "routeLengthBiotopeI": {
+      "@id": "default:WBC.routeLengthBiotopeI",
+      "@type": "xsd:nonNegativeInteger"
+    },
     "routeLengthChange": {
       "@id": "default:WBC.routeLengthChange",
       "@type": "xsd:integer"
@@ -389,6 +401,10 @@
     },
     "routeLengthChangeBiotopeH": {
       "@id": "default:WBC.routeLengthChangeBiotopeH",
+      "@type": "xsd:integer"
+    },
+    "routeLengthChangeBiotopeI": {
+      "@id": "default:WBC.routeLengthChangeBiotopeI",
       "@type": "xsd:integer"
     },
     "snowAndIceOnTrees": {

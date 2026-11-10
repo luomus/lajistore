@@ -207,6 +207,9 @@
       "individualCountBiotopeH": {
         "type": "integer"
       },
+      "individualCountBiotopeI": {
+        "type": "integer"
+      },
       "_meta": {
         "properties": {
           "created": {

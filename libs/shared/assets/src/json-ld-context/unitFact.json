@@ -230,6 +230,10 @@
     "individualCountBiotopeH": {
       "@id": "default:WBC.individualCountBiotopeH",
       "@type": "xsd:nonNegativeInteger"
+    },
+    "individualCountBiotopeI": {
+      "@id": "default:WBC.individualCountBiotopeI",
+      "@type": "xsd:nonNegativeInteger"
     }
   }
 }

@@ -80,6 +80,10 @@ export class Taxon {
   cultivationText?: string;
   customReportFormLink?: string;
   /**
+   * Indicates whether this taxon is a dark taxon: a taxonomic concept that does not yet have a formally published scientific name and is currently represented by a provisional or placeholder name.
+   */
+  darkTaxon?: boolean;
+  /**
    * Käpyjen kuvaus
    */
   descriptionCone?: string;

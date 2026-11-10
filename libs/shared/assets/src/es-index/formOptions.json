@@ -369,6 +369,11 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "newObservationLabel": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "openForm": {
         "type": "boolean"
       },
@@ -927,6 +932,9 @@
                   "birdFeederCountBiotopeH": {
                     "type": "integer"
                   },
+                  "birdFeederCountBiotopeI": {
+                    "type": "integer"
+                  },
                   "cloudAndRain": {
                     "type": "keyword",
                     "ignore_above": 200
@@ -961,6 +969,9 @@
                     "type": "integer"
                   },
                   "feedingStationCountBiotopeH": {
+                    "type": "integer"
+                  },
+                  "feedingStationCountBiotopeI": {
                     "type": "integer"
                   },
                   "iceCover": {
@@ -1010,6 +1021,9 @@
                   "routeLengthBiotopeH": {
                     "type": "integer"
                   },
+                  "routeLengthBiotopeI": {
+                    "type": "integer"
+                  },
                   "routeLengthChange": {
                     "type": "integer"
                   },
@@ -1035,6 +1049,9 @@
                     "type": "integer"
                   },
                   "routeLengthChangeBiotopeH": {
+                    "type": "integer"
+                  },
+                  "routeLengthChangeBiotopeI": {
                     "type": "integer"
                   },
                   "snowAndIceOnTrees": {
@@ -1798,6 +1815,9 @@
                   "birdFeederCountBiotopeH": {
                     "type": "integer"
                   },
+                  "birdFeederCountBiotopeI": {
+                    "type": "integer"
+                  },
                   "cloudAndRain": {
                     "type": "keyword",
                     "ignore_above": 200
@@ -1832,6 +1852,9 @@
                     "type": "integer"
                   },
                   "feedingStationCountBiotopeH": {
+                    "type": "integer"
+                  },
+                  "feedingStationCountBiotopeI": {
                     "type": "integer"
                   },
                   "iceCover": {
@@ -1881,6 +1904,9 @@
                   "routeLengthBiotopeH": {
                     "type": "integer"
                   },
+                  "routeLengthBiotopeI": {
+                    "type": "integer"
+                  },
                   "routeLengthChange": {
                     "type": "integer"
                   },
@@ -1906,6 +1932,9 @@
                     "type": "integer"
                   },
                   "routeLengthChangeBiotopeH": {
+                    "type": "integer"
+                  },
+                  "routeLengthChangeBiotopeI": {
                     "type": "integer"
                   },
                   "snowAndIceOnTrees": {
@@ -2953,6 +2982,9 @@
                       },
                       "individualCountBiotopeH": {
                         "type": "integer"
+                      },
+                      "individualCountBiotopeI": {
+                        "type": "integer"
                       }
                     }
                   },
@@ -3552,6 +3584,9 @@
         }
       },
       "secondaryCopy": {
+        "type": "boolean"
+      },
+      "sendToWarehouse": {
         "type": "boolean"
       },
       "shortTitleFromCollectionName": {

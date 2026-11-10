@@ -99,6 +99,10 @@
       "@id": "default:MX.customReportFormLink",
       "@type": "xsd:string"
     },
+    "darkTaxon": {
+      "@id": "default:MX.darkTaxon",
+      "@type": "xsd:boolean"
+    },
     "descriptionCone": {
       "@id": "default:MX.descriptionCone",
       "@type": "xsd:string"

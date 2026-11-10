@@ -78,4 +78,5 @@ export interface UnitFact {
   individualCountBiotopeF?: number;
   individualCountBiotopeG?: number;
   individualCountBiotopeH?: number;
+  individualCountBiotopeI?: number;
 }

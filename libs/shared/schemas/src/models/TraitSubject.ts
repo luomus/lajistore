@@ -60,7 +60,7 @@ export interface TraitSubject {
   finbifOccurrenceId?: string;
   functionalGroupName?: string;
   gbifOccurrenceId?: string;
-  gbifTaxonId?: number;
+  gbifTaxonId?: string;
   kingdom?: string;
   lat?: number;
   latMax?: number;

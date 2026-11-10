@@ -3,26 +3,26 @@
   "type": "object",
   "subject": "MX.taxon",
   "additionalProperties": false,
-  "title": "taxon",
+  "title": "Taxon",
   "description": "",
   "properties": {
     "@context": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@context",
-      "title": "Context for the taxon"
+      "title": "Context for the Taxon"
     },
     "id": {
       "type": "string",
       "range": "xsd:string",
       "subject": "id",
-      "title": "Id for the taxon"
+      "title": "Id for the Taxon"
     },
     "@type": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@type",
-      "title": "Type for the taxon"
+      "title": "Type for the Taxon"
     },
     "invasiveSpeciesMainGroup": {
       "type": "array",
@@ -290,6 +290,14 @@
       "range": "xsd:string",
       "subject": "MX.customReportFormLink",
       "title": "Custom observation report from link",
+      "sortOrder": -1
+    },
+    "darkTaxon": {
+      "type": "boolean",
+      "range": "xsd:boolean",
+      "subject": "MX.darkTaxon",
+      "description": "Indicates whether this taxon is a dark taxon: a taxonomic concept that does not yet have a formally published scientific name and is currently represented by a provisional or placeholder name.",
+      "title": "Dark taxon",
       "sortOrder": -1
     },
     "descriptionCone": {

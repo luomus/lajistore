@@ -78,4 +78,5 @@ export class UnitFact {
   individualCountBiotopeF?: number;
   individualCountBiotopeG?: number;
   individualCountBiotopeH?: number;
+  individualCountBiotopeI?: number;
 }
