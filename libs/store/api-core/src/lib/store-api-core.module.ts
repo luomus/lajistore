@@ -33,6 +33,7 @@ export class StoreApiCoreModule {
     if (globalPrefix) {
       app.setGlobalPrefix(globalPrefix);
     }
+    app.useLogger(['error', 'warn']);
     app.use(json({ limit: '1000mb' }));
     app.use(urlencoded({ extended: true, limit: '1000mb' }));
 
