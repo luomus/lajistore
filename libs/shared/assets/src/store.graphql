@@ -856,12 +856,12 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -2754,7 +2754,7 @@ type ViewerBasicAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -5368,12 +5368,12 @@ type ViewerBasicAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -5851,15 +5851,15 @@ type ViewerBasicAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -11249,6 +11249,10 @@ type IucnRedListEvaluation2 {
   locked: Boolean
   lsaRecommendation: Boolean
   lsaRecommendationNotes: String
+
+  """TODO"""
+  numberOfOccurrenceSites: String
+  numberOfOccurrenceSitesNotes: String
   occurrenceAreaMax: String
 
   """
@@ -12765,7 +12769,6 @@ enum HasAdminStatusListItem {
   MX_EUREGULATION_CITES_APPENDIXB
   MX_EUREGULATION_CITES_APPENDIXD
   MX_FINNISHENVIRONMENTINSTITUTE2020PROTECTIONPRIORITYSPECIES
-  MX_FINNISHENVIRONMENTINSTITUTE2010PROTECTIONPRIORITYSPECIES
   MX_GAMEBIRD
   MX_GAMEMAMMAL
   MX_UNPROTECTEDSPECIES
@@ -12778,11 +12781,11 @@ enum HasAdminStatusListItem {
   MX_OTHERINVASIVESPECIESLIST
   MX_CONTROLLINGRISKSOFINVASIVEALIENSPECIES
   MX_CONCERNINVASIVESPECIESNOTONOTHERLISTS
-  MX_FINNISHENVIRONMENTINSTITUTE20072010FORESTSPECIES
   MX_FINNISHENVIRONMENTINSTITUTE2020CONSERVATIONPROJECTSPECIES
   MX_FINNISHENVIRONMENTINSTITUTE2020CONSERVATIONPROJECTAAPAMIRESPECIES
   MX_FINNISHENVIRONMENTINSTITUTE2020CONSERVATIONPROJECTVASCULARSPECIES
   MX_FINNISHENVIRONMENTINSTITUTE20192021FORESTSPECIES
+  MX_NIEMELA_2025_FORESTCONSERVATIONINDICATORFUNGI
   MX_CROPWILDRELATIVE
   MX_REGIONALLYTHREATENED2020_1A
   MX_REGIONALLYTHREATENED2020_1B
@@ -12796,9 +12799,22 @@ enum HasAdminStatusListItem {
   MX_REGIONALLYTHREATENED2020_4C
   MX_REGIONALLYTHREATENED2020_4D
   MX_FORESTCENTRESPECIES
+  MX_ALAND_2023_88_APPENDIXA_SPECIALINTEREST
+  MX_ALAND_2023_88_APPENDIXA_PROTECTED
+  MX_ALAND_2023_88_APPENDIXB_SPECIALINTEREST
+  MX_ALAND_2023_88_APPENDIXB_PROTECTED
+  MX_REGIONALRESPONSIBLESPECIESVARSINAISSUOMI
+  MX_REGIONALRESPONSIBLESPECIESETELAKARJALAKYMENLAAKSO
+  MX_REGIONALRESPONSIBLESPECIESSATAKUNTA
+  MX_REGIONALRESPONSIBLESPECIESPIRKANMAA
+  MX_REGIONALRESPONSIBLESPECIESPOHJOISSAVO
+  MX_REGIONALRESPONSIBLESPECIESPOHJOISPOHJANMAA
+  MX_REGIONALRESPONSIBLESPECIESLAPPI
   MX_FINLEX160_1997_APPENDIX1
   MX_FINLEX160_1997_APPENDIX4
   MX_FINLEX160_1997_APPENDIX4_SPECIALINTEREST
+  MX_FINNISHENVIRONMENTINSTITUTE20072010FORESTSPECIES
+  MX_FINNISHENVIRONMENTINSTITUTE2010PROTECTIONPRIORITYSPECIES
 }
 
 enum InvasiveSpeciesCategory {
@@ -16610,12 +16626,12 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}
   """
   gettaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon2
 
@@ -18508,7 +18524,7 @@ type ViewerAnyAuth {
   ): Tag
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to GET /taxon
   """
@@ -21122,12 +21138,12 @@ type ViewerAnyAuth {
   ): [TagVerListItem]
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver
   """
   versionsOftaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
     """
@@ -21605,15 +21621,15 @@ type ViewerAnyAuth {
   ): Tag2
 
   """
-  Return a Taxon.
+  Return a taxon.
   
   Equivalent to GET /taxon/{id}/_ver/{number}
   """
   versiontaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
 
-    """Version number for the Taxon"""
+    """Version number for the taxon"""
     number: Float!
   ): Taxon2
 
@@ -22732,12 +22748,12 @@ type MutationViewerBasicAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -26778,7 +26794,7 @@ type MutationViewerBasicAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -27971,7 +27987,7 @@ type MutationViewerBasicAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -28982,12 +28998,12 @@ type MutationViewerBasicAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2
@@ -32154,6 +32170,10 @@ input IucnRedListEvaluation2Input {
   locked: Boolean
   lsaRecommendation: Boolean
   lsaRecommendationNotes: String
+
+  """TODO"""
+  numberOfOccurrenceSites: String
+  numberOfOccurrenceSitesNotes: String
   occurrenceAreaMax: String
 
   """
@@ -36027,12 +36047,12 @@ type MutationViewerAnyAuth {
   ): Tag3
 
   """
-  Delete Taxon
+  Delete taxon
   
   Equivalent to DELETE /taxon/{id}
   """
   deletetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
   ): Taxon3
 
@@ -40073,7 +40093,7 @@ type MutationViewerAnyAuth {
   ): TagSearch2
 
   """
-  Return list of Taxon objects.
+  Return list of taxon objects.
   
   Equivalent to POST /taxon/_search
   """
@@ -41266,7 +41286,7 @@ type MutationViewerAnyAuth {
   storetag(requestBody: Tag2Input): Tag2
 
   """
-  Store Taxon object(s)
+  Store taxon object(s)
   
   Equivalent to POST /taxon
   """
@@ -42277,12 +42297,12 @@ type MutationViewerAnyAuth {
   ): Tag2
 
   """
-  Store Taxon
+  Store taxon
   
   Equivalent to PUT /taxon/{id}
   """
   updatetaxon(
-    """Id for the Taxon"""
+    """Id for the taxon"""
     id: String!
     requestBody: Taxon2Input
   ): Taxon2

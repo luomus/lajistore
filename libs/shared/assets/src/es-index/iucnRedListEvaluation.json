@@ -284,6 +284,16 @@
         "ignore_above": 200,
         "normalizer": "useLowercase"
       },
+      "numberOfOccurrenceSites": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
+      "numberOfOccurrenceSitesNotes": {
+        "type": "keyword",
+        "ignore_above": 200,
+        "normalizer": "useLowercase"
+      },
       "occurrenceAreaMax": {
         "type": "keyword",
         "ignore_above": 200,

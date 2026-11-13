@@ -3,26 +3,26 @@
   "type": "object",
   "subject": "MX.taxon",
   "additionalProperties": false,
-  "title": "Taxon",
+  "title": "taxon",
   "description": "",
   "properties": {
     "@context": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@context",
-      "title": "Context for the Taxon"
+      "title": "Context for the taxon"
     },
     "id": {
       "type": "string",
       "range": "xsd:string",
       "subject": "id",
-      "title": "Id for the Taxon"
+      "title": "Id for the taxon"
     },
     "@type": {
       "type": "string",
       "range": "xsd:string",
       "subject": "@type",
-      "title": "Type for the Taxon"
+      "title": "Type for the taxon"
     },
     "invasiveSpeciesMainGroup": {
       "type": "array",
@@ -554,7 +554,6 @@
           "MX.euRegulation_cites_appendixB",
           "MX.euRegulation_cites_appendixD",
           "MX.finnishEnvironmentInstitute2020protectionPrioritySpecies",
-          "MX.finnishEnvironmentInstitute2010protectionPrioritySpecies",
           "MX.gameBird",
           "MX.gameMammal",
           "MX.unprotectedSpecies",
@@ -567,11 +566,11 @@
           "MX.otherInvasiveSpeciesList",
           "MX.controllingRisksOfInvasiveAlienSpecies",
           "MX.concernInvasiveSpeciesNotOnOtherLists",
-          "MX.finnishEnvironmentInstitute20072010forestSpecies",
           "MX.finnishEnvironmentInstitute2020conservationProjectSpecies",
           "MX.finnishEnvironmentInstitute2020conservationProjectAapamireSpecies",
           "MX.finnishEnvironmentInstitute2020conservationProjectVascularSpecies",
           "MX.finnishEnvironmentInstitute20192021forestSpecies",
+          "MX.niemela_2025_forestConservationIndicatorFungi",
           "MX.cropWildRelative",
           "MX.regionallyThreatened2020_1a",
           "MX.regionallyThreatened2020_1b",
@@ -585,9 +584,22 @@
           "MX.regionallyThreatened2020_4c",
           "MX.regionallyThreatened2020_4d",
           "MX.forestCentreSpecies",
+          "MX.aland_2023_88_appendixA_specialInterest",
+          "MX.aland_2023_88_appendixA_protected",
+          "MX.aland_2023_88_appendixB_specialInterest",
+          "MX.aland_2023_88_appendixB_protected",
+          "MX.regionalResponsibleSpeciesVarsinaisSuomi",
+          "MX.regionalResponsibleSpeciesEtelaKarjalaKymenlaakso",
+          "MX.regionalResponsibleSpeciesSatakunta",
+          "MX.regionalResponsibleSpeciesPirkanmaa",
+          "MX.regionalResponsibleSpeciesPohjoisSavo",
+          "MX.regionalResponsibleSpeciesPohjoisPohjanmaa",
+          "MX.regionalResponsibleSpeciesLappi",
           "MX.finlex160_1997_appendix1",
           "MX.finlex160_1997_appendix4",
-          "MX.finlex160_1997_appendix4_specialInterest"
+          "MX.finlex160_1997_appendix4_specialInterest",
+          "MX.finnishEnvironmentInstitute20072010forestSpecies",
+          "MX.finnishEnvironmentInstitute2010protectionPrioritySpecies"
         ],
         "enumNames": [
           "",
@@ -621,7 +633,6 @@
           "EU regulation regarding CITES, Appendix B",
           "EU regulation regarding CITES, Appendix D",
           "Species to be protected urgently (Finnish Environment Institute 2020)",
-          "OUTDATED Species to be protected urgently (Finnish Environment Institute 2010-2011)",
           "Game bird (Hunting law 1993/615)",
           "Game mammal (Hunting law 1993/615; 2019/683)",
           "Unprotected animal (Hunting law 1993/615)",
@@ -634,11 +645,11 @@
           "Other invasive species",
           "Government Decree on Managing the Risk Caused by Alien Species (704/2019, VN 912/2023)",
           "Other invasive alien species of concern (not included on the national or EU list)",
-          "OUTDATED Safeguarding Endangered Species in Forestry – Project 2007-2010",
           "Connectivity of forest conservation areas – SUMI Project 2020",
           "Aapamire species – SUMI Project 2020",
           "Vascular plants – SUMI Project 2022",
           "Safeguarding Endangered Species in Forestry – Lajiturva Project 2019–2021",
+          "Indicator fungi of forest conservation value",
           "Crop wild relative (CWR Priority species)",
           "Regionally Threatened 2020 - 1a Hemiboreal, Åland",
           "Regionally Threatened 2020 - 1b Hemiboreal, Oak zone",
@@ -652,9 +663,22 @@
           "Regionally Threatened 2020 - 4c Northern boreal, Forest Lapland",
           "Regionally Threatened 2020 - 4d Northern boreal, Fjeld Lapland",
           "Species used in the automatic procedure for forest use notifications (MKI-OHKE 2023)",
+          "Specially protected animal species in Åland (Åland Government Decree 2023:88, Appendix A)",
+          "Protected animal species in Åland (Åland Government Decree 2023:88, Appendix A)",
+          "Specially protected plant and fungal species in Åland (Åland Government Decree 2023:88, Appendix B)",
+          "Protected plant and fungal species in Åland (Åland Government Decree 2023:88, Appendix B)",
+          "Responsibility species of Southwest Finland",
+          "Etelä-Karjalan ja Kymenlaakson maakunnalliset vastuulajit",
+          "Satakunnan maakunnalliset vastuulajit",
+          "Pirkanmaan maakunnalliset vastuulajit",
+          "Pohjois-Savon maakunnalliset vastuulajit",
+          "Pohjois-Pohjanmaan maakunnalliset vastuulajit",
+          "Lapin maakunnalliset vastuulajit",
           "OUTDATED Fish species subject to the Nature Conservation Act (NCD 1997/160, Appendix 1)",
           "OUTDATED Threatened species (NCD 1997/160, Appendix 4 2013/471)",
-          "OUTDATED Species under strict protection (NCD 1997/160, Appendix 4 2013/471)"
+          "OUTDATED Species under strict protection (NCD 1997/160, Appendix 4 2013/471)",
+          "OUTDATED Safeguarding Endangered Species in Forestry – Project 2007-2010",
+          "OUTDATED Species to be protected urgently (Finnish Environment Institute 2010-2011)"
         ]
       },
       "minItems": 0,

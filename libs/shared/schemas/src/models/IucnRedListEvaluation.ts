@@ -202,6 +202,11 @@ export interface IucnRedListEvaluation {
   locked?: boolean;
   lsaRecommendation?: boolean;
   lsaRecommendationNotes?: string;
+  /**
+   * TODO
+   */
+  numberOfOccurrenceSites?: string;
+  numberOfOccurrenceSitesNotes?: string;
   occurrenceAreaMax?: string;
   /**
    * AOO, asuttujen 2 x 2 km ruutujen pinta-ala. Merkitäksesi "enintään" jätä alaraja tyhjäksi. Merkitäksesi "vähintään" jätä yläraja tyhjäksi. Täsmällinen luku merkitään molempiin.

@@ -460,6 +460,21 @@
       "title": "Yksityiset muistiinpanot Lsa ehdotuksesta",
       "sortOrder": -1
     },
+    "numberOfOccurrenceSites": {
+      "type": "string",
+      "range": "xsd:int",
+      "subject": "MKV.numberOfOccurrenceSites",
+      "description": "TODO",
+      "title": "Number of occurrence sites",
+      "sortOrder": -1
+    },
+    "numberOfOccurrenceSitesNotes": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MKV.numberOfOccurrenceSitesNotes",
+      "title": "Yksityiset muistiinpanot esiintymisp. lkm.",
+      "sortOrder": -1
+    },
     "occurrenceAreaMax": {
       "type": "string",
       "range": "xsd:int",

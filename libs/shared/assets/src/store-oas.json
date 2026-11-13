@@ -42526,10 +42526,10 @@
             }
           }
         ],
-        "description": "Return list of Taxon objects.",
+        "description": "Return list of taxon objects.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42597,10 +42597,10 @@
             }
           }
         },
-        "description": "Store Taxon object(s)",
+        "description": "Store taxon object(s)",
         "responses": {
           "201": {
-            "description": "Stored Taxon object(s)",
+            "description": "Stored taxon object(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -42662,7 +42662,7 @@
         "description": "Patch taxon (MAX 10000).\n        You can use Elasticsearch [search query](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/search-your-data.html) with property patch for json patch [operations](http://jsonpatch.com/)\n        to update every matching taxon.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "example": {
@@ -42755,10 +42755,10 @@
             }
           }
         },
-        "description": "Return list of Taxon objects.",
+        "description": "Return list of taxon objects.",
         "responses": {
           "200": {
-            "description": "A list of  Taxon.",
+            "description": "A list of  taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42826,17 +42826,17 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -42861,7 +42861,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -42877,10 +42877,10 @@
             }
           }
         },
-        "description": "Store Taxon",
+        "description": "Store taxon",
         "responses": {
           "200": {
-            "description": "Stored Taxon",
+            "description": "Stored taxon",
             "content": {
               "application/json": {
                 "schema": {
@@ -42905,14 +42905,14 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "description": "Delete Taxon",
+        "description": "Delete taxon",
         "responses": {
           "200": {
             "description": "Deletion succeeded",
@@ -42944,7 +42944,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -42963,10 +42963,10 @@
         "tags": [
           "taxon"
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -43012,7 +43012,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id for the Taxon",
+            "description": "Id for the taxon",
             "required": true,
             "schema": {
               "type": "string"
@@ -43021,17 +43021,17 @@
           {
             "name": "number",
             "in": "path",
-            "description": "Version number for the Taxon",
+            "description": "Version number for the taxon",
             "required": true,
             "schema": {
               "type": "number"
             }
           }
         ],
-        "description": "Return a Taxon.",
+        "description": "Return a taxon.",
         "responses": {
           "200": {
-            "description": "a Taxon.",
+            "description": "a taxon.",
             "content": {
               "application/json": {
                 "schema": {
@@ -66075,6 +66075,15 @@
             "type": "string",
             "title": "Yksityiset muistiinpanot Lsa ehdotuksesta"
           },
+          "numberOfOccurrenceSites": {
+            "type": "string",
+            "description": "TODO",
+            "title": "Number of occurrence sites"
+          },
+          "numberOfOccurrenceSitesNotes": {
+            "type": "string",
+            "title": "Yksityiset muistiinpanot esiintymisp. lkm."
+          },
           "occurrenceAreaMax": {
             "type": "string",
             "title": "Size of area of occurrence, max."
@@ -69492,15 +69501,15 @@
         "properties": {
           "@context": {
             "type": "string",
-            "title": "Context for the Taxon"
+            "title": "Context for the taxon"
           },
           "id": {
             "type": "string",
-            "title": "Id for the Taxon"
+            "title": "Id for the taxon"
           },
           "@type": {
             "type": "string",
-            "title": "Type for the Taxon"
+            "title": "Type for the taxon"
           },
           "invasiveSpeciesMainGroup": {
             "type": "array",
@@ -69857,7 +69866,6 @@
                 "MX.euRegulation_cites_appendixB",
                 "MX.euRegulation_cites_appendixD",
                 "MX.finnishEnvironmentInstitute2020protectionPrioritySpecies",
-                "MX.finnishEnvironmentInstitute2010protectionPrioritySpecies",
                 "MX.gameBird",
                 "MX.gameMammal",
                 "MX.unprotectedSpecies",
@@ -69870,11 +69878,11 @@
                 "MX.otherInvasiveSpeciesList",
                 "MX.controllingRisksOfInvasiveAlienSpecies",
                 "MX.concernInvasiveSpeciesNotOnOtherLists",
-                "MX.finnishEnvironmentInstitute20072010forestSpecies",
                 "MX.finnishEnvironmentInstitute2020conservationProjectSpecies",
                 "MX.finnishEnvironmentInstitute2020conservationProjectAapamireSpecies",
                 "MX.finnishEnvironmentInstitute2020conservationProjectVascularSpecies",
                 "MX.finnishEnvironmentInstitute20192021forestSpecies",
+                "MX.niemela_2025_forestConservationIndicatorFungi",
                 "MX.cropWildRelative",
                 "MX.regionallyThreatened2020_1a",
                 "MX.regionallyThreatened2020_1b",
@@ -69888,9 +69896,22 @@
                 "MX.regionallyThreatened2020_4c",
                 "MX.regionallyThreatened2020_4d",
                 "MX.forestCentreSpecies",
+                "MX.aland_2023_88_appendixA_specialInterest",
+                "MX.aland_2023_88_appendixA_protected",
+                "MX.aland_2023_88_appendixB_specialInterest",
+                "MX.aland_2023_88_appendixB_protected",
+                "MX.regionalResponsibleSpeciesVarsinaisSuomi",
+                "MX.regionalResponsibleSpeciesEtelaKarjalaKymenlaakso",
+                "MX.regionalResponsibleSpeciesSatakunta",
+                "MX.regionalResponsibleSpeciesPirkanmaa",
+                "MX.regionalResponsibleSpeciesPohjoisSavo",
+                "MX.regionalResponsibleSpeciesPohjoisPohjanmaa",
+                "MX.regionalResponsibleSpeciesLappi",
                 "MX.finlex160_1997_appendix1",
                 "MX.finlex160_1997_appendix4",
-                "MX.finlex160_1997_appendix4_specialInterest"
+                "MX.finlex160_1997_appendix4_specialInterest",
+                "MX.finnishEnvironmentInstitute20072010forestSpecies",
+                "MX.finnishEnvironmentInstitute2010protectionPrioritySpecies"
               ]
             },
             "minItems": 0,
@@ -74730,7 +74751,7 @@
           "individualCountBiotopeI": {
             "type": "integer",
             "minimum": 0,
-            "title": "Individual count water body"
+            "title": "Individuell räkning vattnen"
           }
         },
         "additionalProperties": false
@@ -76040,7 +76061,7 @@
     },
     {
       "name": "taxon",
-      "description": "Taxon"
+      "description": "taxon"
     },
     {
       "name": "taxonCensus",

@@ -247,6 +247,14 @@
       "@id": "default:MKV.lsaRecommendationNotes",
       "@type": "xsd:string"
     },
+    "numberOfOccurrenceSites": {
+      "@id": "default:MKV.numberOfOccurrenceSites",
+      "@type": "xsd:int"
+    },
+    "numberOfOccurrenceSitesNotes": {
+      "@id": "default:MKV.numberOfOccurrenceSitesNotes",
+      "@type": "xsd:string"
+    },
     "occurrenceAreaMax": {
       "@id": "default:MKV.occurrenceAreaMax",
       "@type": "xsd:int"
