@@ -74751,7 +74751,7 @@
           "individualCountBiotopeI": {
             "type": "integer",
             "minimum": 0,
-            "title": "Individual count water body"
+            "title": "Individuell räkning vattnen"
           }
         },
         "additionalProperties": false
