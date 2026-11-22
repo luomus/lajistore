@@ -9335,7 +9335,7 @@
                           "minimum": 0,
                           "range": "xsd:nonNegativeInteger",
                           "subject": "WBC.individualCountBiotopeI",
-                          "title": "Individuell räkning vattnen",
+                          "title": "Individual count water body",
                           "sortOrder": -1
                         }
                       },
@@ -20713,7 +20713,7 @@
                           "minimum": 0,
                           "range": "xsd:nonNegativeInteger",
                           "subject": "WBC.individualCountBiotopeI",
-                          "title": "Individuell räkning vattnen",
+                          "title": "Individual count water body",
                           "sortOrder": -1
                         }
                       },
