@@ -24,6 +24,10 @@ export class Document {
    */
   secureLevel?: MXSecureLevels;
   /**
+   * List fields that have been transcribed by AI, separated by semicolons, so that it is easy to map them later to another solution. Use same formatting for fields as Excel import sheet first row headers.
+   */
+  AITranscriptionNotes?: string;
+  /**
    * Leave empty if no sample taken, or if the sample is recorded separately
    */
   DNASampleLocation?: string;

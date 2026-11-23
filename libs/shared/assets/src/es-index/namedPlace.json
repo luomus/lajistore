@@ -44,6 +44,11 @@
             "type": "keyword",
             "ignore_above": 200
           },
+          "AITranscriptionNotes": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
+          },
           "DNASampleLocation": {
             "type": "keyword",
             "ignore_above": 200,
@@ -3244,6 +3249,11 @@
           "secureLevel": {
             "type": "keyword",
             "ignore_above": 200
+          },
+          "AITranscriptionNotes": {
+            "type": "keyword",
+            "ignore_above": 200,
+            "normalizer": "useLowercase"
           },
           "DNASampleLocation": {
             "type": "keyword",

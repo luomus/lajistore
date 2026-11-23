@@ -56,6 +56,14 @@
       "title": "Secure level",
       "sortOrder": 34
     },
+    "AITranscriptionNotes": {
+      "type": "string",
+      "range": "xsd:string",
+      "subject": "MY.AITranscriptionNotes",
+      "description": "List fields that have been transcribed by AI, separated by semicolons, so that it is easy to map them later to another solution. Use same formatting for fields as Excel import sheet first row headers.",
+      "title": "Fields transcribed by AI",
+      "sortOrder": 78
+    },
     "DNASampleLocation": {
       "type": "string",
       "range": "xsd:string",
@@ -9310,7 +9318,7 @@
                       "minimum": 0,
                       "range": "xsd:nonNegativeInteger",
                       "subject": "WBC.individualCountBiotopeI",
-                      "title": "Individual count water body",
+                      "title": "Individuell räkning vattnen",
                       "sortOrder": -1
                     }
                   },

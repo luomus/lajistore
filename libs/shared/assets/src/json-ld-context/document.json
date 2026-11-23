@@ -35,6 +35,10 @@
       "@id": "default:MX.secureLevel",
       "@type": "@id"
     },
+    "AITranscriptionNotes": {
+      "@id": "default:MY.AITranscriptionNotes",
+      "@type": "xsd:string"
+    },
     "DNASampleLocation": {
       "@id": "default:MY.DNASampleLocation",
       "@type": "xsd:string"
