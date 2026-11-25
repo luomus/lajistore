@@ -87,6 +87,8 @@ export enum MMTypeEnum {
   "typeEnumLive" = "MM.typeEnumLive",
   "typeEnumSpecimen" = "MM.typeEnumSpecimen",
   "typeEnumGenitalia" = "MM.typeEnumGenitalia",
+  "typeEnumStylized" = "MM.typeEnumStylized",
+  "typeEnumIllustration" = "MM.typeEnumIllustration",
   "typeEnumMicroscopy" = "MM.typeEnumMicroscopy",
   "typeEnumCarcass" = "MM.typeEnumCarcass",
   "typeEnumSkeletal" = "MM.typeEnumSkeletal",

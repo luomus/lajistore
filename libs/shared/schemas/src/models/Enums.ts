@@ -78,6 +78,8 @@ export type MMTypeEnum =
   | "MM.typeEnumLive"
   | "MM.typeEnumSpecimen"
   | "MM.typeEnumGenitalia"
+  | "MM.typeEnumStylized"
+  | "MM.typeEnumIllustration"
   | "MM.typeEnumMicroscopy"
   | "MM.typeEnumCarcass"
   | "MM.typeEnumSkeletal"
